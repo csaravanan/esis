@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_audits_en.xml *** -->
+<entity name="audits" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<audit_menu_printselect_screen>screen datas</audit_menu_printselect_screen>
+<audit_menu_printselect_audit>selected audit</audit_menu_printselect_audit>
+<audit_menu_printselect_report>selected report</audit_menu_printselect_report>
+<audit_menu_printselect_recommendation>selected recommendation</audit_menu_printselect_recommendation>
+<audit_menu_printselect_action>selected action</audit_menu_printselect_action>
+<audit_menu_printselect_interview>selected interview</audit_menu_printselect_interview>
+<audit_menu_printselect_title>Print</audit_menu_printselect_title>
+<audit_menu_printselect_submit>OK</audit_menu_printselect_submit>
+<audit_menu_calendar>Calendar</audit_menu_calendar>
+<audit_menu_tasks_my>my tasks</audit_menu_tasks_my>
+<audit_menu_tasks_raci>RACI tasks</audit_menu_tasks_raci>
+<audit_raci_auditdocumenttitle>RACI for audit document $1</audit_raci_auditdocumenttitle>
+<audit_raci_recomdocumenttitle>RACI for recommendation document $1</audit_raci_recomdocumenttitle>
+<audit_raci_auditdocument_title>Audit document RACI</audit_raci_auditdocument_title>
+<audit_raci_recomdocument_title>Recommendation document RACI</audit_raci_recomdocument_title>
+<audit_raci_auditdocument_edit>Edit</audit_raci_auditdocument_edit>
+<audit_raci_datas_auditdocument_user>Stakeholders</audit_raci_datas_auditdocument_user>
+<audit_raci_datas_auditdocument_add>Add a stakeholder</audit_raci_datas_auditdocument_add>
+<audit_auditupdate_documents>Audit documents linked</audit_auditupdate_documents>
+<audit_recommendation_documents>Documents</audit_recommendation_documents>
+<!-- Audit Documents -->
+<audit_auditdocuments_title>List of audit documents</audit_auditdocuments_title>
+<audit_auditdocuments_audit_reference>Audit reference</audit_auditdocuments_audit_reference>
+<audit_auditdocuments_datas_title>Title</audit_auditdocuments_datas_title>
+<audit_auditdocuments_datas_reference>Reference</audit_auditdocuments_datas_reference>
+<audit_auditdocuments_datas_description>Description</audit_auditdocuments_datas_description>
+<audit_auditdocuments_datas_owner>Responsible</audit_auditdocuments_datas_owner>
+<audit_auditdocuments_datas_verified>Verified</audit_auditdocuments_datas_verified>
+<audit_auditdocuments_datas_type>Type</audit_auditdocuments_datas_type>
+<audit_auditdocuments_datas_confidentiality>Confidentiality</audit_auditdocuments_datas_confidentiality>
+<audit_auditdocuments_datas_add>Add an audit document</audit_auditdocuments_datas_add>
+<!-- Audit Document -->
+<audit_auditdocument_title_add>New audit document</audit_auditdocument_title_add>
+<audit_recomdocument_title_add>New recommendation document</audit_recomdocument_title_add>
+<audit_auditdocument_title_update>View/update audit document</audit_auditdocument_title_update>
+<audit_recomdocument_title_update>View/update recommendation document</audit_recomdocument_title_update>
+<audit_auditdocument_documenttitle>Title</audit_auditdocument_documenttitle>
+<audit_auditdocument_description>Description</audit_auditdocument_description>
+<audit_auditdocument_reference>Reference</audit_auditdocument_reference>
+<audit_auditdocument_verified>Verified</audit_auditdocument_verified>
+<audit_auditdocument_type>Type</audit_auditdocument_type>
+<audit_auditdocument_confidentiality>Confidentiality</audit_auditdocument_confidentiality>
+<audit_auditdocument_creationdate>created on $1</audit_auditdocument_creationdate>
+<audit_auditdocument_download>Download file</audit_auditdocument_download>
+<audit_auditdocument_upload>Select the document file to upload</audit_auditdocument_upload>
+<audit_auditdocument_upload_uploading>Uploading file $1.</audit_auditdocument_upload_uploading>
+<audit_auditdocument_upload_select>Attempting to upload file $1.</audit_auditdocument_upload_select>
+<audit_auditdocument_upload_maxsize>The file $1 has exceeded the authorized maximum size of $2 octets.</audit_auditdocument_upload_maxsize>
+<audit_auditdocument_upload_httperror>HTTP error $1 reached when uploading file $2.</audit_auditdocument_upload_httperror>
+<audit_auditdocument_upload_ioerror>Input/Output error when uploading file $1.</audit_auditdocument_upload_ioerror>
+<audit_auditdocument_upload_securityerror>Security error ($1) reached when uploading file $2.</audit_auditdocument_upload_securityerror>
+<audit_auditdocument_upload_finished>Upload of file $1 finished.</audit_auditdocument_upload_finished>
+<audit_auditdocument_files>Documents files</audit_auditdocument_files>
+<audit_auditdocument_add>Create</audit_auditdocument_add>
+<audit_auditdocument_update>Update</audit_auditdocument_update>
+<audit_auditdocument_cancel>Cancel</audit_auditdocument_cancel>
+<audit_auditdocument_close>Close</audit_auditdocument_close>
+<audit_auditdocument_history>History</audit_auditdocument_history>
+<audit_auditdocument_error_documenttitle>'Title' must be filled.</audit_auditdocument_error_documenttitle>
+<!-- Audit Document History -->
+<audit_auditdocumenthistory_title>Audit document history</audit_auditdocumenthistory_title>
+<audit_recomdocumenthistory_title>Recommendation document history</audit_recomdocumenthistory_title>
+<audit_auditdocumenthistory_datas_history_changedate>Change date</audit_auditdocumenthistory_datas_history_changedate>
+<audit_auditdocumenthistory_datas_history_modifier>Modifier</audit_auditdocumenthistory_datas_history_modifier>
+<audit_auditdocumenthistory_datas_history_owner>Responsible</audit_auditdocumenthistory_datas_history_owner>
+<audit_auditdocumenthistory_datas_history_revisionnumber>Revision #</audit_auditdocumenthistory_datas_history_revisionnumber>
+<!-- Recom. Documents -->
+<audit_recommendation_documents_datas_title>Title</audit_recommendation_documents_datas_title>
+<audit_recommendation_documents_datas_reference>Reference</audit_recommendation_documents_datas_reference>
+<audit_recommendation_documents_datas_description>Description</audit_recommendation_documents_datas_description>
+<audit_recommendation_documents_datas_owner>Responsible</audit_recommendation_documents_datas_owner>
+<audit_recommendation_documents_datas_verified>Verified</audit_recommendation_documents_datas_verified>
+<audit_recommendation_documents_datas_type>Type</audit_recommendation_documents_datas_type>
+<audit_recommendation_documents_datas_confidentiality>Confidentiality</audit_recommendation_documents_datas_confidentiality>
+<audit_recommendation_documents_datas_add>Add a recommendation document</audit_recommendation_documents_datas_add>
+<audit_default_month_jan_short>Jan</audit_default_month_jan_short>
+<audit_default_month_feb_short>Feb</audit_default_month_feb_short>
+<audit_default_month_mar_short>Mar</audit_default_month_mar_short>
+<audit_default_month_apr_short>Apr</audit_default_month_apr_short>
+<audit_default_month_may_short>May</audit_default_month_may_short>
+<audit_default_month_jun_short>Jun</audit_default_month_jun_short>
+<audit_default_month_jul_short>Jul</audit_default_month_jul_short>
+<audit_default_month_aug_short>Aug</audit_default_month_aug_short>
+<audit_default_month_sep_short>Sep</audit_default_month_sep_short>
+<audit_default_month_oct_short>Oct</audit_default_month_oct_short>
+<audit_default_month_nov_short>Nov</audit_default_month_nov_short>
+<audit_default_month_dec_short>Dec</audit_default_month_dec_short>
+<audit_default_day_sun_long>Sun</audit_default_day_sun_long>
+<audit_default_day_mon_long>Mon</audit_default_day_mon_long>
+<audit_default_day_tue_long>Tue</audit_default_day_tue_long>
+<audit_default_day_wed_long>Wed</audit_default_day_wed_long>
+<audit_default_day_thu_long>Thu</audit_default_day_thu_long>
+<audit_default_day_fri_long>Fri</audit_default_day_fri_long>
+<audit_default_day_sat_long>Sat</audit_default_day_sat_long>
+<audit_raci_update_user>Current stakeholder</audit_raci_update_user>
+<!-- Calendar -->
+<audit_calendar_title>Tasks calendar</audit_calendar_title>
+<audit_calendar_week>Week #</audit_calendar_week>
+<audit_calendar_view_week>per Week</audit_calendar_view_week>
+<audit_calendar_view_month>per Month</audit_calendar_view_month>
+<audit_calendar_nodate>No selected date.</audit_calendar_nodate>
+<audit_calendar_error_nodate>No selected date.</audit_calendar_error_nodate>
+<audit_calendar_error_noview>No selected period.</audit_calendar_error_noview>
+<audit_calendar_task_title>Task informations</audit_calendar_task_title>
+<audit_calendar_task_datas_name>Task</audit_calendar_task_datas_name>
+<audit_calendar_task_datas_type>Type</audit_calendar_task_datas_type>
+<audit_calendar_task_datas_startdate>Start date</audit_calendar_task_datas_startdate>
+<audit_calendar_task_datas_enddate>End date</audit_calendar_task_datas_enddate>
+<audit_menu_filter_interval_all>ever since</audit_menu_filter_interval_all>
+<audit_menu_filter_interval_twelvemonths>12 months</audit_menu_filter_interval_twelvemonths>
+<audit_menu_filter_interval_from>from</audit_menu_filter_interval_from>
+<audit_menu_filter_interval_title>Time period</audit_menu_filter_interval_title>
+<audit_menu_filter_interval_submit>OK</audit_menu_filter_interval_submit>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<audit_menu_filter_intervalraci_all>ever since</audit_menu_filter_intervalraci_all>
+<audit_menu_filter_intervalraci_twelvemonths>12 months</audit_menu_filter_intervalraci_twelvemonths>
+<audit_menu_filter_intervalraci_from>from</audit_menu_filter_intervalraci_from>
+<audit_menu_filter_intervalraci_title>Time period</audit_menu_filter_intervalraci_title>
+<audit_menu_filter_intervalraci_submit>OK</audit_menu_filter_intervalraci_submit>
+</removed>
+
+</entity>
+</esis>

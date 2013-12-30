@@ -1,0 +1,127 @@
+#!/bin/sh
+#   
+#  ESIS
+#  
+#  Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+#  
+#  Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+#                          Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+#  
+#  
+#  This file is part of ESIS.
+#  
+#  ESIS is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation version 3 of the License.
+#  
+#  ESIS is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+#  
+#  $Id: esis_install_web 13 2009-07-07 15:15:32Z tburdairon $
+#
+
+#
+# Install / reinstall Tomcat
+#
+. `dirname $0`/esis_env
+
+TOMCATVER=5.5.26
+TOMCATDIR=apache-tomcat-$TOMCATVER
+
+( test -x $GUNZIP ) || { echo "Missing gunzip." && exit 1; }
+( test -x $TAR ) || { echo "Missing tar." && exit 1; }
+( test -x $PERL ) || { echo "Missing perl." && exit 1; }
+
+( test -d ${ESIS_HOME}/appsvr || (
+	echo "Creating the ${ESIS_HOME}/appsvr directory."
+	mkdir -p ${ESIS_HOME}/appsvr
+)
+
+(
+	echo "Installing ESIS application server.";
+
+	cd ${ESIS_HOME}/appsvr
+
+	echo "Tomcat..."
+	$GUNZIP -c ${ESIS_HOME}/share/OpenSource/apache-tomcat-$TOMCATVER.tar.gz | $TAR xf -
+	(
+	 	if [ "`uname -s`" = "SunOS" ]; then
+            echo "Patching catalina.sh (Solaris)"	
+            (
+                cd $TOMCATDIR/bin
+                patch -i ${ESIS_HOME}/share/ESIS/patch_catalina_sh
+            )
+        else
+            echo "Patching catalina.sh"	
+            (
+                cd $TOMCATDIR/bin
+                patch -p0 < ${ESIS_HOME}/share/ESIS/patch_catalina_sh
+            )
+        fi
+	)
+	(
+	 	echo "Deploying ESIS web.xml and server.xml"
+		cd $TOMCATDIR/conf
+		cp ${ESIS_HOME}/share/ESIS/web.xml-customer web.xml
+		cp ${ESIS_HOME}/share/ESIS/server.xml-customer server.xml
+	)
+	(
+	 	echo "Copying logging jars"
+	 	cd $TOMCATDIR/common/lib/
+		cp ${ESIS_HOME}/share/OpenSource/commons-logging.jar commons-logging.jar
+		cp ${ESIS_HOME}/share/OpenSource/log4j-1.2.9.jar log4j.jar
+	)
+	(
+	 	echo "Setting up logging configuration"
+	 	cd $TOMCATDIR
+		cp ${ESIS_HOME}/share/ESIS/tomcat_log4j.properties common/classes/log4j.properties
+		rm conf/logging.properties
+	)
+	(
+	 	echo "Deploying war files"
+		rm -rf $TOMCATDIR/webapps/*
+		cd $TOMCATDIR/webapps
+		for f in ${ESIS_HOME}/webapps/*.war ; do
+		    ln -s $f ./
+		done
+	)
+    (
+	 	echo "Cleaning up"
+       cd $TOMCATDIR/server/webapps
+        rm -rf *
+    )
+    (
+       cd $TOMCATDIR/conf/Catalina/localhost
+       rm -rf *
+      )
+	(
+      cd $TOMCATDIR/bin
+       rm *.bat
+	   rm *.exe
+	cp ${ESIS_HOME}/share/ESIS/setenv_sh_catalina setenv.sh
+ 	)
+	(
+		CATALINA_HOME=${ESIS_HOME}/appsvr/$TOMCATDIR
+
+		[ `uname -s` = "SunOS" ] && (
+			echo "Fix tomcat to use nohup..."
+
+			# 1 - run java from nohup command
+			cat >> $CATALINA_HOME/bin/setclasspath.sh<<SOLARISHACK
+_RUNJAVA="/usr/bin/nohup \$_RUNJAVA"
+SOLARISHACK
+
+			# 2 - edit the catalina startup script
+			perl -pi.orig -e 's/\"\$_RUNJAVA\"/\$_RUNJAVA/g;' $CATALINA_HOME/bin/catalina.sh
+
+		)
+		
+	)
+
+));
+exit 0

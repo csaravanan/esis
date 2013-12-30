@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+ <globalConfiguration>
+  <parameter name="sendMultiRefs" value="false"/>
+  <parameter name="disablePrettyXML" value="true"/>
+  <parameter name="adminPassword" value="admin"/>
+  <parameter name="attachments.Directory" value="/home/rplb/esis/branches/1_0_1/.build/apache-tomcat-5.5.26/webapps/esis/WEB-INF/attachments"/>
+  <parameter name="enable2DArrayEncoding" value="true"/>
+  <parameter name="axis.enableListQuery" value="false"/>
+  <parameter name="axis.development.system" value="true"/>
+  <parameter name="axis.sendMinimizedElements" value="true"/>
+  <parameter name="enableNamespacePrefixOptimization" value="true"/>
+  <parameter name="sendXMLDeclaration" value="true"/>
+  <parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <parameter name="sendXsiTypes" value="true"/>
+ </globalConfiguration>
+ <chain name="ESIS_chain_request">
+  <handler type="Session"/>
+ </chain>
+ <handler name="Session" type="java:com.entelience.soap.SessionHandler"/>
+ <chain name="ESIS_chain_response">
+  <handler type="Session"/>
+ </chain>
+ <handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder"/>
+ <handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper"/>
+ <handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
+ <service name="Calendar" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.entelience.soap.soapCalendar"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.Id" qname="ns1:Id" xmlns:ns1="urn:com.entelience.soap.soapCalendar"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns2:LoginResult" xmlns:ns2="urn:com.entelience.soap.soapCalendar"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.DropDown" qname="ns3:DropDown" xmlns:ns3="urn:com.entelience.soap.soapCalendar"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.calendar.EsisCalendar" qname="ns4:EsisCalendar" xmlns:ns4="urn:com.entelience.soap.soapCalendar"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.calendar.CalendarEvent" qname="ns5:CalendarEvent" xmlns:ns5="urn:com.entelience.soap.soapCalendar"/>
+  <namespace>urn:com.entelience.soap.soapCalendar</namespace>
+ </service>
+ <service name="EsisVersion" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.entelience.soap.soapEsisVersion"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.VersionInfoLine" qname="ns6:VersionInfoLine" xmlns:ns6="urn:com.entelience.soap.soapEsisVersion"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns7:LoginResult" xmlns:ns7="urn:com.entelience.soap.soapEsisVersion"/>
+  <namespace>urn:com.entelience.soap.soapEsisVersion</namespace>
+ </service>
+ <service name="MS_Patch" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.entelience.soap.soapMS_Patch"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns8:LoginResult" xmlns:ns8="urn:com.entelience.soap.soapMS_Patch"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.mspatch.ProductPatch" qname="ns9:ProductPatch" xmlns:ns9="urn:com.entelience.soap.soapMS_Patch"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.mspatch.PatchListItem" qname="ns10:PatchListItem" xmlns:ns10="urn:com.entelience.soap.soapMS_Patch"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.mspatch.ServicePackInfo" qname="ns11:ServicePackInfo" xmlns:ns11="urn:com.entelience.soap.soapMS_Patch"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.mspatch.ProductInfo" qname="ns12:ProductInfo" xmlns:ns12="urn:com.entelience.soap.soapMS_Patch"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.mspatch.PatchInfo" qname="ns13:PatchInfo" xmlns:ns13="urn:com.entelience.soap.soapMS_Patch"/>
+  <namespace>urn:com.entelience.soap.soapMS_Patch</namespace>
+ </service>
+ <service name="PortalReferentiel" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.entelience.soap.soapPortalReferentiel"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns14:LoginResult" xmlns:ns14="urn:com.entelience.soap.soapPortalReferentiel"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.PageCounter" qname="ns15:PageCounter" xmlns:ns15="urn:com.entelience.soap.soapPortalReferentiel"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.Filter" qname="ns16:Filter" xmlns:ns16="urn:com.entelience.soap.soapPortalReferentiel"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.Malware" qname="ns17:Malware" xmlns:ns17="urn:com.entelience.soap.soapPortalReferentiel"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.Site" qname="ns18:Site" xmlns:ns18="urn:com.entelience.soap.soapPortalReferentiel"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.Domain" qname="ns19:Domain" xmlns:ns19="urn:com.entelience.soap.soapPortalReferentiel"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.SiteDetail" qname="ns20:SiteDetail" xmlns:ns20="urn:com.entelience.soap.soapPortalReferentiel"/>
+  <namespace>urn:com.entelience.soap.soapPortalReferentiel</namespace>
+ </service>
+ <service name="Incidents" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="extraClasses" value="com.entelience.objects.directory.PeopleInfoLine"/>
+  <parameter name="className" value="com.entelience.soap.soapIncidents"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns21:LoginResult" xmlns:ns21="urn:com.entelience.soap.soapIncidents"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.IncidentSummary" qname="ns22:IncidentSummary" xmlns:ns22="urn:com.entelience.soap.soapIncidents"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.IncidentDetail" qname="ns23:IncidentDetail" xmlns:ns23="urn:com.entelience.soap.soapIncidents"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.FileInformation" qname="ns24:FileInformation" xmlns:ns24="urn:com.entelience.soap.soapIncidents"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.raci.RaciException" qname="ns25:RaciException" xmlns:ns25="urn:com.entelience.soap.soapIncidents"/>
+  <namespace>urn:com.entelience.soap.soapPreferences</namespace>
+ </service>
+ <service name="Probes" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="extraClasses" value="com.entelience.objects.chart.TwoDDatum"/>
+  <parameter name="className" value="com.entelience.soap.soapProbes"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns26:LoginResult" xmlns:ns26="urn:com.entelience.soap.soapProbes"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.probes.ProbeStatus" qname="ns27:ProbeStatus" xmlns:ns27="urn:com.entelience.soap.soapProbes"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.probes.ProbeDetail" qname="ns28:ProbeDetail" xmlns:ns28="urn:com.entelience.soap.soapProbes"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.probes.ProbeHistory" qname="ns29:ProbeHistory" xmlns:ns29="urn:com.entelience.soap.soapProbes"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.probes.FileProbeHistory" qname="ns30:FileProbeHistory" xmlns:ns30="urn:com.entelience.soap.soapProbes"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.probes.DatabaseProbeHistory" qname="ns31:DatabaseProbeHistory" xmlns:ns31="urn:com.entelience.soap.soapProbes"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.probes.ProbeParameter" qname="ns32:ProbeParameter" xmlns:ns32="urn:com.entelience.soap.soapProbes"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.probes.ProbeSnail" qname="ns33:ProbeSnail" xmlns:ns33="urn:com.entelience.soap.soapProbes"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.probes.ProbeSnailElement" qname="ns34:ProbeSnailElement" xmlns:ns34="urn:com.entelience.soap.soapProbes"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.TimeSeries" qname="ns35:TimeSeries" xmlns:ns35="urn:com.entelience.soap.soapProbes"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.TwoDDatum" qname="ns36:TwoDDatum" xmlns:ns36="urn:com.entelience.soap.soapProbes"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.module.Preference" qname="ns37:Preference" xmlns:ns37="urn:com.entelience.soap.soapProbes"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.PageCounter" qname="ns38:PageCounter" xmlns:ns38="urn:com.entelience.soap.soapProbes"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.TwoDate" qname="ns39:TwoDate" xmlns:ns39="urn:com.entelience.soap.soapProbes"/>
+  <namespace>urn:com.entelience.soap.soapProbes</namespace>
+ </service>
+ <service name="Preferences" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.entelience.soap.soapPreferences"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.PeopleInfoLine" qname="ns40:PeopleInfoLine" xmlns:ns40="urn:com.entelience.soap.soapPreferences"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns41:LoginResult" xmlns:ns41="urn:com.entelience.soap.soapPreferences"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.GroupInformation" qname="ns42:GroupInformation" xmlns:ns42="urn:com.entelience.soap.soapPreferences"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.Expertise" qname="ns43:Expertise" xmlns:ns43="urn:com.entelience.soap.soapPreferences"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.raci.RaciInfoLine" qname="ns44:RaciInfoLine" xmlns:ns44="urn:com.entelience.soap.soapPreferences"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.PageCounter" qname="ns45:PageCounter" xmlns:ns45="urn:com.entelience.soap.soapPreferences"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.Incident" qname="ns46:Incident" xmlns:ns46="urn:com.entelience.soap.soapPreferences"/>
+  <namespace>urn:com.entelience.soap.soapPreferences</namespace>
+ </service>
+ <service name="VulnerabilityReview" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="extraClasses" value="com.entelience.objects.chart.TwoDDatum,com.entelience.objects.chart.GanttElement,com.entelience.objects.directory.PeopleInfoLine,com.entelience.objects.vrt.AliasInfoLine"/>
+  <parameter name="className" value="com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns47:LoginResult" xmlns:ns47="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.Id" qname="ns48:Id" xmlns:ns48="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vuln.VulnId" qname="ns49:VulnId" xmlns:ns49="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vuln.VulnActionId" qname="ns50:VulnActionId" xmlns:ns50="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vuln.VulnCommentId" qname="ns51:VulnCommentId" xmlns:ns51="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vuln.VRTId" qname="ns52:VRTId" xmlns:ns52="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.VulnerabilityInfoLine" qname="ns53:VulnerabilityInfoLine" xmlns:ns53="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.MAVInfoLine" qname="ns54:MAVInfoLine" xmlns:ns54="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.CommentInfoLine" qname="ns55:CommentInfoLine" xmlns:ns55="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.CommentHistory" qname="ns56:CommentHistory" xmlns:ns56="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.MeetingInfoLine" qname="ns57:MeetingInfoLine" xmlns:ns57="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.VulnerabilityInformation" qname="ns58:VulnerabilityInformation" xmlns:ns58="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.VulnerabilityStatusInformation" qname="ns59:VulnerabilityStatusInformation" xmlns:ns59="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.VulnerabilityAliasInformation" qname="ns60:VulnerabilityAliasInformation" xmlns:ns60="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.AffectedVPV" qname="ns61:AffectedVPV" xmlns:ns61="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.QuickVulnAnalysis" qname="ns62:QuickVulnAnalysis" xmlns:ns62="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.VulnerabilityAnalysis" qname="ns63:VulnerabilityAnalysis" xmlns:ns63="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.VRTMeetingStats" qname="ns64:VRTMeetingStats" xmlns:ns64="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.VulnerabilityHistory" qname="ns65:VulnerabilityHistory" xmlns:ns65="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.OpenVulnStats" qname="ns66:OpenVulnStats" xmlns:ns66="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.DropDown" qname="ns67:DropDown" xmlns:ns67="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.PeopleInfoLine" qname="ns68:PeopleInfoLine" xmlns:ns68="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.metrics.MetricDetail" qname="ns69:MetricDetail" xmlns:ns69="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.metrics.TargetDetail" qname="ns70:TargetDetail" xmlns:ns70="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.TimeSeries" qname="ns71:TimeSeries" xmlns:ns71="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.TwoDDatum" qname="ns72:TwoDDatum" xmlns:ns72="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.SearchedVulnerabilityInfoLine" qname="ns73:SearchedVulnerabilityInfoLine" xmlns:ns73="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.PageCounter" qname="ns74:PageCounter" xmlns:ns74="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.VulnerabilityAction" qname="ns75:VulnerabilityAction" xmlns:ns75="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.ActionHistory" qname="ns76:ActionHistory" xmlns:ns76="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.GanttChart" qname="ns77:GanttChart" xmlns:ns77="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.GanttElement" qname="ns78:GanttElement" xmlns:ns78="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.Filter" qname="ns79:Filter" xmlns:ns79="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.VotedVulnerability" qname="ns80:VotedVulnerability" xmlns:ns80="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.raci.RaciException" qname="ns81:RaciException" xmlns:ns81="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.AdvisoryHistory" qname="ns82:AdvisoryHistory" xmlns:ns82="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.AliasInfoLine" qname="ns83:AliasInfoLine" xmlns:ns83="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.VulnReportInfoLine" qname="ns84:VulnReportInfoLine" xmlns:ns84="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.VulnGroupReportInfoLine" qname="ns85:VulnGroupReportInfoLine" xmlns:ns85="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vrt.AdvReportInfoLine" qname="ns86:AdvReportInfoLine" xmlns:ns86="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.GroupInformation" qname="ns87:GroupInformation" xmlns:ns87="urn:com.entelience.soap.soapVulnerabilityReview"/>
+  <namespace>urn:com.entelience.soap.soapVulnerabilityReview</namespace>
+ </service>
+ <service name="Compliance" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.entelience.soap.soapCompliance"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.Id" qname="ns88:Id" xmlns:ns88="urn:com.entelience.soap.soapCompliance"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns89:LoginResult" xmlns:ns89="urn:com.entelience.soap.soapCompliance"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.DropDown" qname="ns90:DropDown" xmlns:ns90="urn:com.entelience.soap.soapCompliance"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.compliance.Standard" qname="ns91:Standard" xmlns:ns91="urn:com.entelience.soap.soapCompliance"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.compliance.StandardDetail" qname="ns92:StandardDetail" xmlns:ns92="urn:com.entelience.soap.soapCompliance"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.compliance.ComplianceStandardId" qname="ns93:ComplianceStandardId" xmlns:ns93="urn:com.entelience.soap.soapCompliance"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.compliance.Topic" qname="ns94:Topic" xmlns:ns94="urn:com.entelience.soap.soapCompliance"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.compliance.ComplianceTopicId" qname="ns95:ComplianceTopicId" xmlns:ns95="urn:com.entelience.soap.soapCompliance"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.raci.RaciException" qname="ns96:RaciException" xmlns:ns96="urn:com.entelience.soap.soapCompliance"/>
+  <namespace>urn:com.entelience.soap.soapCompliance</namespace>
+ </service>
+ <service name="Asset" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.Id" qname="ns97:Id" xmlns:ns97="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns98:LoginResult" xmlns:ns98="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.AssetId" qname="ns99:AssetId" xmlns:ns99="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.VendorId" qname="ns100:VendorId" xmlns:ns100="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.ProductId" qname="ns101:ProductId" xmlns:ns101="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.VersionId" qname="ns102:VersionId" xmlns:ns102="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.DropDown" qname="ns103:DropDown" xmlns:ns103="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.PageCounter" qname="ns104:PageCounter" xmlns:ns104="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.TabSummary" qname="ns105:TabSummary" xmlns:ns105="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.Breakdown" qname="ns106:Breakdown" xmlns:ns106="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.GroupInformation" qname="ns107:GroupInformation" xmlns:ns107="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.PeopleInfoLine" qname="ns108:PeopleInfoLine" xmlns:ns108="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.Vendor" qname="ns109:Vendor" xmlns:ns109="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.Product" qname="ns110:Product" xmlns:ns110="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.Version" qname="ns111:Version" xmlns:ns111="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.VendorHistory" qname="ns112:VendorHistory" xmlns:ns112="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.ProductHistory" qname="ns113:ProductHistory" xmlns:ns113="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.VersionHistory" qname="ns114:VersionHistory" xmlns:ns114="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.SupportContract" qname="ns115:SupportContract" xmlns:ns115="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.Technology" qname="ns116:Technology" xmlns:ns116="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.VPV" qname="ns117:VPV" xmlns:ns117="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.AliasInfoLine" qname="ns118:AliasInfoLine" xmlns:ns118="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.raci.RaciException" qname="ns119:RaciException" xmlns:ns119="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.CompositeProduct" qname="ns120:CompositeProduct" xmlns:ns120="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.CompositeVersion" qname="ns121:CompositeVersion" xmlns:ns121="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.CompositeVersionId" qname="ns122:CompositeVersionId" xmlns:ns122="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.CompositeProductId" qname="ns123:CompositeProductId" xmlns:ns123="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.ProductVersion" qname="ns124:ProductVersion" xmlns:ns124="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.AssetInfoLine" qname="ns125:AssetInfoLine" xmlns:ns125="urn:com.entelience.soap.soapAsset"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.asset.AssetDetail" qname="ns126:AssetDetail" xmlns:ns126="urn:com.entelience.soap.soapAsset"/>
+  <namespace>urn:com.entelience.soap.soapAsset</namespace>
+ </service>
+ <service name="BugTests" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.entelience.soap.soapBugTests"/>
+  <namespace>urn:com.entelience.soap.soapBugTests</namespace>
+ </service>
+ <service name="VulnStats" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="extraClasses" value="com.entelience.objects.chart.OneDDatum,com.entelience.objects.chart.Chart"/>
+  <parameter name="className" value="com.entelience.soap.soapVulnStats"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns127:LoginResult" xmlns:ns127="urn:com.entelience.soap.soapVulnStats"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vulnstats.VendorInformation" qname="ns128:VendorInformation" xmlns:ns128="urn:com.entelience.soap.soapVulnStats"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vulnstats.ProductInformation" qname="ns129:ProductInformation" xmlns:ns129="urn:com.entelience.soap.soapVulnStats"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vulnstats.ProductVulnerability" qname="ns130:ProductVulnerability" xmlns:ns130="urn:com.entelience.soap.soapVulnStats"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.vulnstats.Vulnerability" qname="ns131:Vulnerability" xmlns:ns131="urn:com.entelience.soap.soapVulnStats"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.OneDChartControl" qname="ns132:OneDChartControl" xmlns:ns132="urn:com.entelience.soap.soapVulnStats"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.OneDChart" qname="ns133:OneDChart" xmlns:ns133="urn:com.entelience.soap.soapVulnStats"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.OneDDatum" qname="ns134:OneDDatum" xmlns:ns134="urn:com.entelience.soap.soapVulnStats"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.ChartControls" qname="ns135:ChartControls" xmlns:ns135="urn:com.entelience.soap.soapVulnStats"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.Chart" qname="ns136:Chart" xmlns:ns136="urn:com.entelience.soap.soapVulnStats"/>
+  <namespace>urn:com.entelience.soap.soapVulnStats</namespace>
+ </service>
+ <service name="Version" provider="java:RPC">
+  <parameter name="allowedMethods" value="getVersion"/>
+  <parameter name="className" value="org.apache.axis.Version"/>
+ </service>
+ <service name="RiskRegister" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="extraClasses" value="com.entelience.objects.risk.CauseNode,com.entelience.objects.risk.EventNode"/>
+  <parameter name="className" value="com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns137:LoginResult" xmlns:ns137="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.DropDown" qname="ns138:DropDown" xmlns:ns138="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.PageCounter" qname="ns139:PageCounter" xmlns:ns139="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.Id" qname="ns140:Id" xmlns:ns140="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskId" qname="ns141:RiskId" xmlns:ns141="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskCauseId" qname="ns142:RiskCauseId" xmlns:ns142="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskEventId" qname="ns143:RiskEventId" xmlns:ns143="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskNode" qname="ns144:RiskNode" xmlns:ns144="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.CauseNode" qname="ns145:CauseNode" xmlns:ns145="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.EventNode" qname="ns146:EventNode" xmlns:ns146="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.Event" qname="ns147:Event" xmlns:ns147="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.Cause" qname="ns148:Cause" xmlns:ns148="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.CauseHistory" qname="ns149:CauseHistory" xmlns:ns149="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.Risk" qname="ns150:Risk" xmlns:ns150="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskHistory" qname="ns151:RiskHistory" xmlns:ns151="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskComment" qname="ns152:RiskComment" xmlns:ns152="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskCommentId" qname="ns153:RiskCommentId" xmlns:ns153="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskCommentHistory" qname="ns154:RiskCommentHistory" xmlns:ns154="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.Criteria" qname="ns155:Criteria" xmlns:ns155="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskCriteriaId" qname="ns156:RiskCriteriaId" xmlns:ns156="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.Group" qname="ns157:Group" xmlns:ns157="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskGroupId" qname="ns158:RiskGroupId" xmlns:ns158="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskLevelMatrix" qname="ns159:RiskLevelMatrix" xmlns:ns159="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.Likelihood" qname="ns160:Likelihood" xmlns:ns160="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.Organisation" qname="ns161:Organisation" xmlns:ns161="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.GroupInformation" qname="ns162:GroupInformation" xmlns:ns162="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.LocationInfoLine" qname="ns163:LocationInfoLine" xmlns:ns163="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.BusinessZone" qname="ns164:BusinessZone" xmlns:ns164="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.compliance.ComplianceTopicId" qname="ns165:ComplianceTopicId" xmlns:ns165="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.compliance.Topic" qname="ns166:Topic" xmlns:ns166="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.compliance.Standard" qname="ns167:Standard" xmlns:ns167="urn:com.entelience.soap.soapRiskRegister"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.compliance.ComplianceStandardId" qname="ns168:ComplianceStandardId" xmlns:ns168="urn:com.entelience.soap.soapRiskRegister"/>
+  <namespace>urn:com.entelience.soap.soapRiskRegister</namespace>
+ </service>
+ <service name="NessusScan" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="extraClasses" value="com.entelience.objects.chart.TwoDDatum,com.entelience.objects.chart.TwoDChart"/>
+  <parameter name="className" value="com.entelience.soap.soapNessusScan"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns169:LoginResult" xmlns:ns169="urn:com.entelience.soap.soapNessusScan"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.nessus.FileListItem" qname="ns170:FileListItem" xmlns:ns170="urn:com.entelience.soap.soapNessusScan"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.nessus.AssetListItem" qname="ns171:AssetListItem" xmlns:ns171="urn:com.entelience.soap.soapNessusScan"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.nessus.VulnListItem" qname="ns172:VulnListItem" xmlns:ns172="urn:com.entelience.soap.soapNessusScan"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.OneDChartControl" qname="ns173:OneDChartControl" xmlns:ns173="urn:com.entelience.soap.soapNessusScan"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.OneDChart" qname="ns174:OneDChart" xmlns:ns174="urn:com.entelience.soap.soapNessusScan"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.OneDDatum" qname="ns175:OneDDatum" xmlns:ns175="urn:com.entelience.soap.soapNessusScan"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.ChartControls" qname="ns176:ChartControls" xmlns:ns176="urn:com.entelience.soap.soapNessusScan"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.ManyTwoDChartControl" qname="ns177:ManyTwoDChartControl" xmlns:ns177="urn:com.entelience.soap.soapNessusScan"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.ManyTwoDCharts" qname="ns178:ManyTwoDCharts" xmlns:ns178="urn:com.entelience.soap.soapNessusScan"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.TwoDChart" qname="ns179:TwoDChart" xmlns:ns179="urn:com.entelience.soap.soapNessusScan"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.TwoDDatum" qname="ns180:TwoDDatum" xmlns:ns180="urn:com.entelience.soap.soapNessusScan"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.Chart" qname="ns181:Chart" xmlns:ns181="urn:com.entelience.soap.soapNessusScan"/>
+  <namespace>urn:com.entelience.soap.soapNessusScan</namespace>
+ </service>
+ <service name="Authentication" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.entelience.soap.soapAuthentication"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.ExtendedAuthentication" qname="ns182:ExtendedAuthentication" xmlns:ns182="urn:com.entelience.soap.soapAuthentication"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns183:LoginResult" xmlns:ns183="urn:com.entelience.soap.soapAuthentication"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LostPasswordResult" qname="ns184:LostPasswordResult" xmlns:ns184="urn:com.entelience.soap.soapAuthentication"/>
+  <namespace>urn:com.entelience.soap.soapAuthentication</namespace>
+ </service>
+ <service name="Module" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="extraClasses" value="com.entelience.objects.directory.PeopleInfoLine"/>
+  <parameter name="className" value="com.entelience.soap.soapModule"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns185:LoginResult" xmlns:ns185="urn:com.entelience.soap.soapModule"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.module.ModuleDetail" qname="ns186:ModuleDetail" xmlns:ns186="urn:com.entelience.soap.soapModule"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.module.ModuleInfoLine" qname="ns187:ModuleInfoLine" xmlns:ns187="urn:com.entelience.soap.soapModule"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.raci.RaciException" qname="ns188:RaciException" xmlns:ns188="urn:com.entelience.soap.soapModule"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.PeopleInfoLine" qname="ns189:PeopleInfoLine" xmlns:ns189="urn:com.entelience.soap.soapModule"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.module.Preference" qname="ns190:Preference" xmlns:ns190="urn:com.entelience.soap.soapModule"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.module.PreferenceHistory" qname="ns191:PreferenceHistory" xmlns:ns191="urn:com.entelience.soap.soapModule"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.module.ModuleReport" qname="ns192:ModuleReport" xmlns:ns192="urn:com.entelience.soap.soapModule"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.PageCounter" qname="ns193:PageCounter" xmlns:ns193="urn:com.entelience.soap.soapModule"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.DropDown" qname="ns194:DropDown" xmlns:ns194="urn:com.entelience.soap.soapModule"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.module.ModuleMetric" qname="ns195:ModuleMetric" xmlns:ns195="urn:com.entelience.soap.soapModule"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.GeneratedDocument" qname="ns196:GeneratedDocument" xmlns:ns196="urn:com.entelience.soap.soapModule"/>
+  <namespace>urn:com.entelience.soap.soapModule</namespace>
+ </service>
+ <service name="RiskAssessment" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns197:LoginResult" xmlns:ns197="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.DropDown" qname="ns198:DropDown" xmlns:ns198="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.PageCounter" qname="ns199:PageCounter" xmlns:ns199="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.Id" qname="ns200:Id" xmlns:ns200="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskId" qname="ns201:RiskId" xmlns:ns201="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.Risk" qname="ns202:Risk" xmlns:ns202="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskHistory" qname="ns203:RiskHistory" xmlns:ns203="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.ConsequenceLevel" qname="ns204:ConsequenceLevel" xmlns:ns204="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskReview" qname="ns205:RiskReview" xmlns:ns205="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskReviewId" qname="ns206:RiskReviewId" xmlns:ns206="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskReviewHistory" qname="ns207:RiskReviewHistory" xmlns:ns207="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.Evaluation" qname="ns208:Evaluation" xmlns:ns208="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.EvaluationHistory" qname="ns209:EvaluationHistory" xmlns:ns209="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskCriteriaId" qname="ns210:RiskCriteriaId" xmlns:ns210="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.CriteriaEvaluation" qname="ns211:CriteriaEvaluation" xmlns:ns211="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskImpactId" qname="ns212:RiskImpactId" xmlns:ns212="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.Impact" qname="ns213:Impact" xmlns:ns213="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskConsequenceId" qname="ns214:RiskConsequenceId" xmlns:ns214="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.Consequence" qname="ns215:Consequence" xmlns:ns215="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskControlId" qname="ns216:RiskControlId" xmlns:ns216="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskControl" qname="ns217:RiskControl" xmlns:ns217="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.RiskActionId" qname="ns218:RiskActionId" xmlns:ns218="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.Action" qname="ns219:Action" xmlns:ns219="urn:com.entelience.soap.soapRiskAssessment"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.risk.ActionHistory" qname="ns220:ActionHistory" xmlns:ns220="urn:com.entelience.soap.soapRiskAssessment"/>
+  <namespace>urn:com.entelience.soap.soapRiskAssessment</namespace>
+ </service>
+ <service name="IdentityManagement" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="extraClasses" value="com.entelience.objects.mim.SnailPortion,com.entelience.objects.chart.TwoDDatum,com.entelience.objects.directory.PeopleInfoLine"/>
+  <parameter name="className" value="com.entelience.soap.soapIdentityManagement"/>
+  <namespace>urn:com.entelience.soap.soapIdentityManagement</namespace>
+ </service>
+ <service name="AdminService" provider="java:MSG">
+  <parameter name="allowedMethods" value="AdminService"/>
+  <parameter name="enableRemoteAdmin" value="false"/>
+  <parameter name="className" value="org.apache.axis.utils.Admin"/>
+  <namespace>http://xml.apache.org/axis/wsdd/</namespace>
+  <namespace>http://xml.apache.org/axis/wsdd/</namespace>
+  <namespace>http://xml.apache.org/axis/wsdd/</namespace>
+ </service>
+ <service name="Portal" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="extraClasses" value="com.entelience.objects.portal.TopLine,com.entelience.objects.portal.PieData,com.entelience.objects.portal.TimeSeries,com.entelience.objects.chart.TwoDDatum,com.entelience.objects.portal.ErrorObject, com.entelience.objects.portal.Top, com.entelience.objects.portal.VBar, com.entelience.objects.portal.HBar, com.entelience.objects.portal.ManyTwoDCharts, com.entelience.objects.portal.MultiBar, com.entelience.objects.chart.ChartGridLine, com.entelience.objects.portal.Text"/>
+  <parameter name="className" value="com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns221:LoginResult" xmlns:ns221="urn:com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.TopLine" qname="ns222:TopLine" xmlns:ns222="urn:com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.Top" qname="ns223:Top" xmlns:ns223="urn:com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.HBar" qname="ns224:HBar" xmlns:ns224="urn:com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.VBar" qname="ns225:VBar" xmlns:ns225="urn:com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.PieData" qname="ns226:PieData" xmlns:ns226="urn:com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.StackedBar" qname="ns227:StackedBar" xmlns:ns227="urn:com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.TimeSeries" qname="ns228:TimeSeries" xmlns:ns228="urn:com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.TwoDDatum" qname="ns229:TwoDDatum" xmlns:ns229="urn:com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.ChartGridLine" qname="ns230:ChartGridLine" xmlns:ns230="urn:com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.ManyTwoDCharts" qname="ns231:ManyTwoDCharts" xmlns:ns231="urn:com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.MultiBar" qname="ns232:MultiBar" xmlns:ns232="urn:com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.ErrorObject" qname="ns233:ErrorObject" xmlns:ns233="urn:com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.PortalObject" qname="ns234:PortalObject" xmlns:ns234="urn:com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.Text" qname="ns235:Text" xmlns:ns235="urn:com.entelience.soap.soapPortal"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.DropDown" qname="ns236:DropDown" xmlns:ns236="urn:com.entelience.soap.soapPortal"/>
+  <namespace>urn:com.entelience.soap.soapPortal</namespace>
+ </service>
+ <service name="Geography" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.entelience.soap.soapGeography"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns237:LoginResult" xmlns:ns237="urn:com.entelience.soap.soapGeography"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.geography.Continent" qname="ns238:Continent" xmlns:ns238="urn:com.entelience.soap.soapGeography"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.geography.SubContinent" qname="ns239:SubContinent" xmlns:ns239="urn:com.entelience.soap.soapGeography"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.geography.Country" qname="ns240:Country" xmlns:ns240="urn:com.entelience.soap.soapGeography"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.geography.Region" qname="ns241:Region" xmlns:ns241="urn:com.entelience.soap.soapGeography"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.geography.Timezone" qname="ns242:Timezone" xmlns:ns242="urn:com.entelience.soap.soapGeography"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.raci.RaciException" qname="ns243:RaciException" xmlns:ns243="urn:com.entelience.soap.soapGeography"/>
+  <namespace>urn:com.entelience.soap.soapGeography</namespace>
+ </service>
+ <service name="Raci" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="extraClasses" value="com.entelience.objects.directory.PeopleInfoLine"/>
+  <parameter name="className" value="com.entelience.soap.soapRaci"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns244:LoginResult" xmlns:ns244="urn:com.entelience.soap.soapRaci"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.raci.RACI" qname="ns245:RACI" xmlns:ns245="urn:com.entelience.soap.soapRaci"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.raci.RaciInfoLine" qname="ns246:RaciInfoLine" xmlns:ns246="urn:com.entelience.soap.soapRaci"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.PeopleInfoLine" qname="ns247:PeopleInfoLine" xmlns:ns247="urn:com.entelience.soap.soapRaci"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.PageCounter" qname="ns248:PageCounter" xmlns:ns248="urn:com.entelience.soap.soapRaci"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.raci.RaciChangeRequest" qname="ns249:RaciChangeRequest" xmlns:ns249="urn:com.entelience.soap.soapRaci"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.raci.RaciException" qname="ns250:RaciException" xmlns:ns250="urn:com.entelience.soap.soapRaci"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.raci.RaciHistory" qname="ns251:RaciHistory" xmlns:ns251="urn:com.entelience.soap.soapRaci"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.TwoDate" qname="ns252:TwoDate" xmlns:ns252="urn:com.entelience.soap.soapRaci"/>
+  <namespace>urn:com.entelience.soap.soapRaci</namespace>
+ </service>
+ <service name="Sun_Patch" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.entelience.soap.soapSun_Patch"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns253:LoginResult" xmlns:ns253="urn:com.entelience.soap.soapSun_Patch"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.sunpatch.ProductPatch" qname="ns254:ProductPatch" xmlns:ns254="urn:com.entelience.soap.soapSun_Patch"/>
+  <namespace>urn:com.entelience.soap.soapSun_Patch</namespace>
+ </service>
+ <service name="Directory" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.entelience.soap.soapDirectory"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns255:LoginResult" xmlns:ns255="urn:com.entelience.soap.soapDirectory"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.PeopleInfoLine" qname="ns256:PeopleInfoLine" xmlns:ns256="urn:com.entelience.soap.soapDirectory"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.PeopleHistory" qname="ns257:PeopleHistory" xmlns:ns257="urn:com.entelience.soap.soapDirectory"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.PeopleLoginHistory" qname="ns258:PeopleLoginHistory" xmlns:ns258="urn:com.entelience.soap.soapDirectory"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.GroupInformation" qname="ns259:GroupInformation" xmlns:ns259="urn:com.entelience.soap.soapDirectory"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.Expertise" qname="ns260:Expertise" xmlns:ns260="urn:com.entelience.soap.soapDirectory"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.CompanyInfoLine" qname="ns261:CompanyInfoLine" xmlns:ns261="urn:com.entelience.soap.soapDirectory"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.LocationInfoLine" qname="ns262:LocationInfoLine" xmlns:ns262="urn:com.entelience.soap.soapDirectory"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.LocationNetwork" qname="ns263:LocationNetwork" xmlns:ns263="urn:com.entelience.soap.soapDirectory"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.LocationDetail" qname="ns264:LocationDetail" xmlns:ns264="urn:com.entelience.soap.soapDirectory"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.geography.Region" qname="ns265:Region" xmlns:ns265="urn:com.entelience.soap.soapDirectory"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.geography.Timezone" qname="ns266:Timezone" xmlns:ns266="urn:com.entelience.soap.soapDirectory"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.BusinessZone" qname="ns267:BusinessZone" xmlns:ns267="urn:com.entelience.soap.soapDirectory"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.raci.RaciException" qname="ns268:RaciException" xmlns:ns268="urn:com.entelience.soap.soapDirectory"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.DropDown" qname="ns269:DropDown" xmlns:ns269="urn:com.entelience.soap.soapDirectory"/>
+  <namespace>urn:com.entelience.soap.soapDirectory</namespace>
+ </service>
+ <service name="Audit" provider="java:RPC">
+  <requestFlow>
+   <chain type="ESIS_chain_request"/>
+  </requestFlow>
+  <responseFlow>
+   <chain type="ESIS_chain_response"/>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="extraClasses" value="com.entelience.objects.chart.GanttElement,com.entelience.objects.directory.PeopleInfoLine"/>
+  <parameter name="className" value="com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.Id" qname="ns270:Id" xmlns:ns270="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns271:LoginResult" xmlns:ns271="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.AuditActionId" qname="ns272:AuditActionId" xmlns:ns272="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.AuditDocumentId" qname="ns273:AuditDocumentId" xmlns:ns273="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.AuditId" qname="ns274:AuditId" xmlns:ns274="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.AuditInterviewId" qname="ns275:AuditInterviewId" xmlns:ns275="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.AuditRecCommentId" qname="ns276:AuditRecCommentId" xmlns:ns276="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.AuditRecId" qname="ns277:AuditRecId" xmlns:ns277="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.AuditRecAuditeeId" qname="ns278:AuditRecAuditeeId" xmlns:ns278="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.AuditReportId" qname="ns279:AuditReportId" xmlns:ns279="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.AuditLabelsSet" qname="ns280:AuditLabelsSet" xmlns:ns280="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.Audit" qname="ns281:Audit" xmlns:ns281="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.AuditStats" qname="ns282:AuditStats" xmlns:ns282="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.AuditHistory" qname="ns283:AuditHistory" xmlns:ns283="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.Interview" qname="ns284:Interview" xmlns:ns284="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.Document" qname="ns285:Document" xmlns:ns285="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.DocumentHistory" qname="ns286:DocumentHistory" xmlns:ns286="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.FileMeta" qname="ns287:FileMeta" xmlns:ns287="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.DocumentMeta" qname="ns288:DocumentMeta" xmlns:ns288="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.DropDown" qname="ns289:DropDown" xmlns:ns289="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.PieStats" qname="ns290:PieStats" xmlns:ns290="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.Comment" qname="ns291:Comment" xmlns:ns291="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.CommentHistory" qname="ns292:CommentHistory" xmlns:ns292="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.Action" qname="ns293:Action" xmlns:ns293="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.Report" qname="ns294:Report" xmlns:ns294="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.ExtReport" qname="ns295:ExtReport" xmlns:ns295="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.Recommendation" qname="ns296:Recommendation" xmlns:ns296="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.RecommendationAuditor" qname="ns297:RecommendationAuditor" xmlns:ns297="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.RecommendationAuditee" qname="ns298:RecommendationAuditee" xmlns:ns298="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.ActionHistory" qname="ns299:ActionHistory" xmlns:ns299="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.RecommendationHistory" qname="ns300:RecommendationHistory" xmlns:ns300="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.ReportHistory" qname="ns301:ReportHistory" xmlns:ns301="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.Planning" qname="ns302:Planning" xmlns:ns302="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.ListReports" qname="ns303:ListReports" xmlns:ns303="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.portal.PieData" qname="ns304:PieData" xmlns:ns304="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.PageCounter" qname="ns305:PageCounter" xmlns:ns305="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.GanttChart" qname="ns306:GanttChart" xmlns:ns306="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.chart.GanttElement" qname="ns307:GanttElement" xmlns:ns307="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.PeopleInfoLine" qname="ns308:PeopleInfoLine" xmlns:ns308="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.raci.RaciException" qname="ns309:RaciException" xmlns:ns309="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.compliance.ComplianceStandardId" qname="ns310:ComplianceStandardId" xmlns:ns310="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.compliance.Topic" qname="ns311:Topic" xmlns:ns311="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.compliance.Standard" qname="ns312:Standard" xmlns:ns312="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.compliance.ComplianceStandardId" qname="ns313:ComplianceStandardId" xmlns:ns313="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.compliance.ComplianceTopicId" qname="ns314:ComplianceTopicId" xmlns:ns314="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.Organisation" qname="ns315:Organisation" xmlns:ns315="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.LocationInfoLine" qname="ns316:LocationInfoLine" xmlns:ns316="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.GroupInformation" qname="ns317:GroupInformation" xmlns:ns317="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.directory.BusinessZone" qname="ns318:BusinessZone" xmlns:ns318="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.Compliance" qname="ns319:Compliance" xmlns:ns319="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.AuditComplianceId" qname="ns320:AuditComplianceId" xmlns:ns320="urn:com.entelience.soap.soapAudit"/>
+  <beanMapping languageSpecificType="java:com.entelience.objects.audit.RecComplianceHistory" qname="ns321:RecComplianceHistory" xmlns:ns321="urn:com.entelience.soap.soapAudit"/>
+  <namespace>urn:com.entelience.soap.soapAudit</namespace>
+ </service>
+ <transport name="http">
+  <requestFlow>
+   <handler type="URLMapper"/>
+   <handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler"/>
+  </requestFlow>
+  <parameter name="qs.m3th0d" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <parameter name="qs:list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <parameter name="qs:wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+  <parameter name="qs.list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <parameter name="qs.method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <parameter name="qs:method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <parameter name="qs.wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+ </transport>
+ <transport name="local">
+  <responseFlow>
+   <handler type="LocalResponder"/>
+  </responseFlow>
+ </transport>
+ <beanMapping languageSpecificType="java:com.entelience.objects.chart.TimeSeries" qname="ns322:TimeSeries" xmlns:ns322="urn:com.entelience.soap.soapIdentityManagement"/>
+ <beanMapping languageSpecificType="java:com.entelience.objects.mim.SnailData" qname="ns323:SnailData" xmlns:ns323="urn:com.entelience.soap.soapIdentityManagement"/>
+ <beanMapping languageSpecificType="java:com.entelience.objects.FileImportHistory" qname="ns324:FileImportHistory" xmlns:ns324="urn:com.entelience.soap.soapIdentityManagement"/>
+ <beanMapping languageSpecificType="java:com.entelience.objects.PageCounter" qname="ns325:PageCounter" xmlns:ns325="urn:com.entelience.soap.soapIdentityManagement"/>
+ <beanMapping languageSpecificType="java:com.entelience.objects.mim.AslStatsElement" qname="ns326:AslStatsElement" xmlns:ns326="urn:com.entelience.soap.soapIdentityManagement"/>
+ <beanMapping languageSpecificType="java:com.entelience.objects.mim.SnailDataJsp" qname="ns327:SnailDataJsp" xmlns:ns327="urn:com.entelience.soap.soapIdentityManagement"/>
+ <beanMapping languageSpecificType="java:com.entelience.objects.LoginResult" qname="ns328:LoginResult" xmlns:ns328="urn:com.entelience.soap.soapIdentityManagement"/>
+ <beanMapping languageSpecificType="java:com.entelience.objects.mim.UserMetrics" qname="ns329:UserMetrics" xmlns:ns329="urn:com.entelience.soap.soapIdentityManagement"/>
+ <beanMapping languageSpecificType="java:com.entelience.objects.raci.RaciException" qname="ns330:RaciException" xmlns:ns330="urn:com.entelience.soap.soapIdentityManagement"/>
+ <beanMapping languageSpecificType="java:com.entelience.objects.mim.AnomalyStats" qname="ns331:AnomalyStats" xmlns:ns331="urn:com.entelience.soap.soapIdentityManagement"/>
+ <beanMapping languageSpecificType="java:com.entelience.objects.directory.PeopleInfoLine" qname="ns332:PeopleInfoLine" xmlns:ns332="urn:com.entelience.soap.soapIdentityManagement"/>
+ <beanMapping languageSpecificType="java:com.entelience.objects.metrics.KeyMetricDetail" qname="ns333:KeyMetricDetail" xmlns:ns333="urn:com.entelience.soap.soapIdentityManagement"/>
+ <beanMapping languageSpecificType="java:com.entelience.objects.mim.UserDetail" qname="ns334:UserDetail" xmlns:ns334="urn:com.entelience.soap.soapIdentityManagement"/>
+ <beanMapping languageSpecificType="java:com.entelience.objects.mim.SnailPortion" qname="ns335:SnailPortion" xmlns:ns335="urn:com.entelience.soap.soapIdentityManagement"/>
+ <beanMapping languageSpecificType="java:com.entelience.objects.chart.TwoDDatum" qname="ns336:TwoDDatum" xmlns:ns336="urn:com.entelience.soap.soapIdentityManagement"/>
+</deployment>

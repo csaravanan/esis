@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_risks_en.xml *** -->
+<entity name="risks" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<risks_default_month_jan_short>Jan</risks_default_month_jan_short>
+<risks_default_month_feb_short>Feb</risks_default_month_feb_short>
+<risks_default_month_mar_short>Mar</risks_default_month_mar_short>
+<risks_default_month_apr_short>Apr</risks_default_month_apr_short>
+<risks_default_month_may_short>May</risks_default_month_may_short>
+<risks_default_month_jun_short>Jun</risks_default_month_jun_short>
+<risks_default_month_jul_short>Jul</risks_default_month_jul_short>
+<risks_default_month_aug_short>Aug</risks_default_month_aug_short>
+<risks_default_month_sep_short>Sep</risks_default_month_sep_short>
+<risks_default_month_oct_short>Oct</risks_default_month_oct_short>
+<risks_default_month_nov_short>Nov</risks_default_month_nov_short>
+<risks_default_month_dec_short>Dec</risks_default_month_dec_short>
+<risks_default_day_sun_long>Sun</risks_default_day_sun_long>
+<risks_default_day_mon_long>Mon</risks_default_day_mon_long>
+<risks_default_day_tue_long>Tue</risks_default_day_tue_long>
+<risks_default_day_wed_long>Wed</risks_default_day_wed_long>
+<risks_default_day_thu_long>Thu</risks_default_day_thu_long>
+<risks_default_day_fri_long>Fri</risks_default_day_fri_long>
+<risks_default_day_sat_long>Sat</risks_default_day_sat_long>
+<risks_calendar_title>Tasks calendar</risks_calendar_title>
+<risks_calendar_week>Week #</risks_calendar_week>
+<risks_calendar_view_week>per Week</risks_calendar_view_week>
+<risks_calendar_view_month>per Month</risks_calendar_view_month>
+<risks_calendar_nodate>No selected date.</risks_calendar_nodate>
+<risks_calendar_error_nodate>No selected date.</risks_calendar_error_nodate>
+<risks_calendar_error_noview>No selected period.</risks_calendar_error_noview>
+<risks_calendar_task_title>Task informations</risks_calendar_task_title>
+<risks_calendar_task_datas_name>Task</risks_calendar_task_datas_name>
+<risks_calendar_task_datas_type>Type</risks_calendar_task_datas_type>
+<risks_calendar_task_datas_startdate>Start date</risks_calendar_task_datas_startdate>
+<risks_calendar_task_datas_enddate>End date</risks_calendar_task_datas_enddate>
+<risks_racichangerequest_title>List of RACI change requests for module</risks_racichangerequest_title>
+<risks_racichangerequest_text>At least a RACI change for the module request your validation. Select a change in the list and apply your modification.</risks_racichangerequest_text>
+<risks_racichangerequest_warning>Warning: validating the changes on your own informations in the RACI of the module will cause your disconnection from module.</risks_racichangerequest_warning>
+<risks_racichangerequest_validate>Validate</risks_racichangerequest_validate>
+<risks_racichangerequest_discard>Discard</risks_racichangerequest_discard>
+<risks_racichangerequest_dolater>Do later</risks_racichangerequest_dolater>
+<risks_racichangerequest_datas_request_date>Date</risks_racichangerequest_datas_request_date>
+<risks_racichangerequest_datas_request_modifier>Modifier</risks_racichangerequest_datas_request_modifier>
+<risks_racichangerequest_datas_request_modification>Modification</risks_racichangerequest_datas_request_modification>
+<risks_racichangerequest_datas_request_modification_add>Add</risks_racichangerequest_datas_request_modification_add>
+<risks_racichangerequest_datas_request_modification_update>Update</risks_racichangerequest_datas_request_modification_update>
+<risks_racichangerequest_datas_request_modification_delete>Delete</risks_racichangerequest_datas_request_modification_delete>
+<risks_racichangerequest_datas_request_modification_forced>Forced update</risks_racichangerequest_datas_request_modification_forced>
+<risks_racichangerequest_datas_request_substitute>Substitute</risks_racichangerequest_datas_request_substitute>
+<risks_racichangerequest_datas_request_stakeholder>Stakeholder</risks_racichangerequest_datas_request_stakeholder>
+<risks_racichangerequest_moduleraci>Current module RACI</risks_racichangerequest_moduleraci>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+</removed>
+</entity>
+</esis>

@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="asset" lang="en">
+<!-- the # char is used for variables -->
+<!-- in html texts : add <br /> for return line -and- CDATA if use html code -->
+
+<!-- default texts -->
+<asset_default_viewall>View All</asset_default_viewall>
+<asset_default_viewactive>View Active</asset_default_viewactive>
+<asset_default_viewhidden>View Hidden</asset_default_viewhidden>
+<asset_default_viewna>View N/A</asset_default_viewna>
+<asset_default_month_jan>January</asset_default_month_jan>
+<asset_default_month_feb>Febuary</asset_default_month_feb>
+<asset_default_month_mar>March</asset_default_month_mar>
+<asset_default_month_apr>April</asset_default_month_apr>
+<asset_default_month_may>May</asset_default_month_may>
+<asset_default_month_jun>June</asset_default_month_jun>
+<asset_default_month_jul>July</asset_default_month_jul>
+<asset_default_month_aug>August</asset_default_month_aug>
+<asset_default_month_sep>September</asset_default_month_sep>
+<asset_default_month_oct>October</asset_default_month_oct>
+<asset_default_month_nov>November</asset_default_month_nov>
+<asset_default_month_dec>December</asset_default_month_dec>
+<asset_default_day_sun>S</asset_default_day_sun>
+<asset_default_day_mon>M</asset_default_day_mon>
+<asset_default_day_tue>T</asset_default_day_tue>
+<asset_default_day_wed>W</asset_default_day_wed>
+<asset_default_day_thu>T</asset_default_day_thu>
+<asset_default_day_fri>F</asset_default_day_fri>
+<asset_default_day_sat>S</asset_default_day_sat>
+<asset_default_active>Active</asset_default_active>
+<asset_default_ignore>Ignore</asset_default_ignore>
+<asset_default_supported>Supported</asset_default_supported>
+<asset_default_obsoleted>Obsoleted</asset_default_obsoleted>
+<asset_default_yes>Yes</asset_default_yes>
+<asset_default_no>No</asset_default_no>
+<asset_default_r>R</asset_default_r>
+<asset_default_a>A</asset_default_a>
+<asset_default_c>C</asset_default_c>
+<asset_default_i>I</asset_default_i>
+<asset_default_nc>N.C.</asset_default_nc>
+
+<!-- Errors texts --> 
+<asset_errors_default_title>Error</asset_errors_default_title>
+<asset_errors_default_text>Error unknown</asset_errors_default_text><!-- html -->
+<asset_errors_wsnotexist_title>WebService Error</asset_errors_wsnotexist_title>
+<asset_errors_wsnotexist_text>The webservice '$1' doesn't exist. Please contact your administrator.</asset_errors_wsnotexist_text><!-- html -->
+<asset_errors_raci_title>RACI Violation</asset_errors_raci_title>
+<asset_errors_raci_text>The current RACI matrix of the item $1 doesn't allow you to perform this action.</asset_errors_raci_text>
+<asset_errors_raci_persons>Please contact the Responsible or Accountable person(s) of the item $1.</asset_errors_raci_persons>
+<asset_errors_raci_accountables>Accountable(s)</asset_errors_raci_accountables>
+<asset_errors_raci_responsibles>Responsible(s)</asset_errors_raci_responsibles>
+<asset_errors_raci_noaccountable>No accountable person.</asset_errors_raci_noaccountable>
+<asset_errors_raci_noresponsible>No responsible person.</asset_errors_raci_noresponsible>
+<asset_errors_vendors_title>Vendor update</asset_errors_vendors_title>
+<asset_errors_products_title>Product update</asset_errors_products_title>
+<asset_errors_versions_title>Version update</asset_errors_versions_title>
+<asset_errors_vendors_active>Cannot update $1 because its products are in use by active assets.</asset_errors_vendors_active>
+<asset_errors_products_active>Cannot update $1 because it is in use by active assets.</asset_errors_products_active>
+<asset_errors_versions_active>Cannot update $1 because it is in use by active assets.</asset_errors_versions_active>
+<asset_errors_vendors_cascademin>To update $1 we also need to update its products and versions. Continue ?</asset_errors_vendors_cascademin>
+<asset_errors_products_cascademin>To update $1 we also need to update its vendor and versions. Continue ?</asset_errors_products_cascademin>
+<asset_errors_versions_cascademin>To update $1 we also need to update its vendor and product. Continue ?</asset_errors_versions_cascademin>
+<asset_errors_vendors_cascademax>Update all the $1 products and versions at the same time ?</asset_errors_vendors_cascademax>
+<asset_errors_products_cascademax>Update all the $1 versions at the same time ?</asset_errors_products_cascademax>
+<asset_errors_vendors_novendor>There is no vendor selected.</asset_errors_vendors_novendor>
+<asset_errors_vendors_novendortext>A vendor name must be filled.</asset_errors_vendors_novendortext>
+<asset_errors_products_noproduct>There is no product selected.</asset_errors_products_noproduct>
+<asset_errors_products_noproducttext>A product name must be filled.</asset_errors_products_noproducttext>
+<asset_errors_versions_noversion>There is no version selected.</asset_errors_versions_noversion>
+<asset_errors_versions_noversiontext>A version name must be filled.</asset_errors_versions_noversiontext>
+<asset_errors_compositeapplications_title>Composite application update</asset_errors_compositeapplications_title>
+<asset_errors_compositeapplications_noapplication>There is no composite application selected.</asset_errors_compositeapplications_noapplication>
+<asset_errors_compositeapplications_cascademin>To update $1 we also need to update its vendor and versions. Continue ?</asset_errors_compositeapplications_cascademin>
+<asset_errors_compositeapplications_active>Cannot update $1 because it is in use by active assets.</asset_errors_compositeapplications_active>
+<asset_errors_compositeapplications_cascademax>Update all the $1 versions at the same time ?</asset_errors_compositeapplications_cascademax>
+<asset_errors_compositeapplicationversions_title>Composite application version update</asset_errors_compositeapplicationversions_title>
+<asset_errors_compositeapplicationversions_noversion>There is no composite application version selected.</asset_errors_compositeapplicationversions_noversion>
+<asset_errors_compositeapplicationversions_cascademin>To update $1 we also need to update its composite application. Continue ?</asset_errors_compositeapplicationversions_cascademin>
+<asset_errors_compositeapplicationversions_active>Cannot update $1 because it is in use by active assets.</asset_errors_compositeapplicationversions_active>
+<asset_errors_concurrency_title>Concurrent access error</asset_errors_concurrency_title>
+<asset_errors_concurrency_text><![CDATA[Operation refused: you're not allowed to finalize this operation because $1 has been updated by another user.<br />Refresh the principal screen to update the selected object before start again the operation.]]></asset_errors_concurrency_text>
+<asset_errors_concurrency_textgeneric><![CDATA[Operation refused: you're not allowed to finalize this operation because the specified object has been updated by another user.<br />Refresh the principal screen to update the selected object before start again the operation.]]></asset_errors_concurrency_textgeneric>
+
+<!-- RACI -->
+<asset_raci_title>RACI</asset_raci_title>
+<asset_raci_compositeapplicationtitle>RACI for $1</asset_raci_compositeapplicationtitle>
+<asset_raci_composite_application_title>Composite application RACI</asset_raci_composite_application_title>
+<asset_raci_edit>Edit privileges</asset_raci_edit>
+<asset_raci_update_title>RACI for $1</asset_raci_update_title>
+<asset_raci_add_title>Add a stakeholder RACI</asset_raci_add_title>
+<asset_raci_add_datas_users>Stakeholders</asset_raci_add_datas_users>
+<asset_raci_add_datas_nousers>No active stakeholder available.</asset_raci_add_datas_nousers>
+<asset_raci_update_user>Current stakeholder</asset_raci_update_user>
+<asset_raci_update_currentraci>Current RACI</asset_raci_update_currentraci>
+<asset_raci_update_newraci>New RACI</asset_raci_update_newraci>
+<asset_raci_add_newraci>RACI</asset_raci_add_newraci>
+<asset_raci_r>R</asset_raci_r>
+<asset_raci_a>A</asset_raci_a>
+<asset_raci_c>C</asset_raci_c>
+<asset_raci_i>I</asset_raci_i>
+<asset_raci_add>Add</asset_raci_add>
+<asset_raci_update>Update</asset_raci_update>
+<asset_raci_cancel>Cancel</asset_raci_cancel>
+<asset_raci_update_error>A stakeholder must be selected.</asset_raci_update_error>
+<asset_raci_update_error_add>At least one RACI right must be selected.</asset_raci_update_error_add>
+<asset_raci_datas_composite_user>Stakeholders</asset_raci_datas_composite_user>
+<asset_raci_datas_composite_add>Add a stakeholder</asset_raci_datas_composite_add>
+<asset_raci_infos_raci>RACI</asset_raci_infos_raci>
+<asset_raci_infos_r>R : responsible</asset_raci_infos_r>
+<asset_raci_infos_a>A : accountable</asset_raci_infos_a>
+<asset_raci_infos_c>C : consulted</asset_raci_infos_c>
+<asset_raci_infos_i>I : informed</asset_raci_infos_i>
+
+<!-- RACI History -->
+<asset_raci_history>History</asset_raci_history>
+<asset_racihistory_title>RACI history</asset_racihistory_title>
+<asset_racihistory_matrix_title>Current RACI</asset_racihistory_matrix_title>
+<asset_racihistory_close>Close</asset_racihistory_close>
+<asset_racihistory_datas_user>Stakeholder</asset_racihistory_datas_user>
+<asset_racihistory_datas_modifier>Modifier</asset_racihistory_datas_modifier>
+<asset_racihistory_datas_modificationdate>Modif. date</asset_racihistory_datas_modificationdate>
+<asset_racihistory_pages>page $1 of $2 ( $3 modifications )</asset_racihistory_pages>
+<asset_racihistory_pageempty>0 modification</asset_racihistory_pageempty>
+
+<!-- Assets -->
+<asset_assets_title>Assets management</asset_assets_title>
+<asset_assets_all>All</asset_assets_all>
+<asset_assets_active>Actives</asset_assets_active>
+<asset_assets_inactive>Inactives</asset_assets_inactive>
+<asset_assets_data_assets_ip>Main IP address</asset_assets_data_assets_ip>
+<asset_assets_data_assets_fqdn>Fully qualified domain name</asset_assets_data_assets_fqdn>
+<asset_assets_data_assets_host>Host name</asset_assets_data_assets_host>
+<asset_assets_data_assets_active>Activated</asset_assets_data_assets_active>
+<asset_assets_data_assets_add>Add a new asset</asset_assets_data_assets_add>
+<asset_assets_data_pageempty>0 asset</asset_assets_data_pageempty>
+<asset_assets_data_pages>page $1 of $2 ( $3 assets )</asset_assets_data_pages>
+<asset_assets_data_details>Asset informations</asset_assets_data_details>
+<asset_assets_data_details_ip>Main IP address</asset_assets_data_details_ip>
+<asset_assets_data_details_ips>Others IP addresses</asset_assets_data_details_ips>
+<asset_assets_data_details_fqdn>Fully qualified domain name</asset_assets_data_details_fqdn>
+<asset_assets_data_details_serial>Serial number</asset_assets_data_details_serial>
+<asset_assets_data_details_active>Activated</asset_assets_data_details_active>
+<asset_assets_data_details_classification>Security classification</asset_assets_data_details_classification>
+<asset_assets_data_details_businessline>Business line</asset_assets_data_details_businessline>
+<asset_assets_data_details_availability>Availability</asset_assets_data_details_availability>
+<asset_assets_data_details_type>Type</asset_assets_data_details_type>
+<asset_assets_data_details_os>Operating system</asset_assets_data_details_os>
+<asset_assets_data_details_macaddress>Main MAC address</asset_assets_data_details_macaddress>
+<asset_assets_data_details_macaddresses>Others MAC addresses</asset_assets_data_details_macaddresses>
+<asset_assets_data_details_dhcp>Use DHCP</asset_assets_data_details_dhcp>
+<asset_assets_data_details_host>Host name</asset_assets_data_details_host>
+<asset_assets_data_details_domain>Domain name</asset_assets_data_details_domain>
+<asset_assets_data_details_timezone>Timezone</asset_assets_data_details_timezone>
+<asset_assets_data_details_applications>Applications</asset_assets_data_details_applications>
+
+<!-- Asset -->
+<asset_asset_title>Asset informations</asset_asset_title>
+<asset_asset_ips>IP addresses</asset_asset_ips>
+<asset_asset_macaddresses>MAC addresses</asset_asset_macaddresses>
+<asset_asset_products>Applications</asset_asset_products>
+<asset_asset_dhcp>Use DHCP</asset_asset_dhcp>
+<asset_asset_ip>Main IP address</asset_asset_ip>
+<asset_asset_macaddress>Main MAC address</asset_asset_macaddress>
+<asset_asset_fqdn>Full qualified domain name</asset_asset_fqdn>
+<asset_asset_host>Host name</asset_asset_host>
+<asset_asset_domain>Domain name</asset_asset_domain>
+<asset_asset_serialnumber>Serial number</asset_asset_serialnumber>
+<asset_asset_classification>Security classification</asset_asset_classification>
+<asset_asset_business>Business line</asset_asset_business>
+<asset_asset_availability>Availability</asset_asset_availability>
+<asset_asset_type>Type</asset_asset_type>
+<asset_asset_active>Is active</asset_asset_active>
+<asset_asset_os>Operating system</asset_asset_os>
+<asset_asset_timezone>System timezone</asset_asset_timezone>
+<asset_asset_ips_add>Add an IP address</asset_asset_ips_add>
+<asset_asset_ips_main>Main IP</asset_asset_ips_main>
+<asset_asset_macaddresses_add>Add a MAC address</asset_asset_macaddresses_add>
+<asset_asset_macaddresses_main>Main MAC</asset_asset_macaddresses_main>
+<asset_asset_products_add>Add a product</asset_asset_products_add>
+<asset_asset_add>Add</asset_asset_add>
+<asset_asset_update>Update</asset_asset_update>
+<asset_asset_cancel>Cancel</asset_asset_cancel>
+<asset_asset_changeos>change</asset_asset_changeos>
+<asset_asset_deleteos>delete</asset_asset_deleteos>
+<asset_asset_notimezone>No timezone defined</asset_asset_notimezone>
+<asset_asset_notype>No type defined</asset_asset_notype>
+<asset_asset_noclassification>No security classification defined</asset_asset_noclassification>
+<asset_asset_noavailability>No availability defined</asset_asset_noavailability>
+<asset_asset_nobusiness>No business line defined</asset_asset_nobusiness>
+<asset_asset_error_data>One of this field is required: main IP, FQDN, host name or serial number.</asset_asset_error_data>
+
+<!-- Asset Ip & MAC address -->
+<asset_asset_mac_title>Add a new MAC address</asset_asset_mac_title>
+<asset_asset_mac_name>Add a MAC address name</asset_asset_mac_name>
+<asset_asset_mac_main>Is the main MAC address</asset_asset_mac_main>
+<asset_asset_mac_add>Add</asset_asset_mac_add>
+<asset_asset_mac_cancel>Cancel</asset_asset_mac_cancel>
+<asset_asset_ip_error>A MAC address must be filled</asset_asset_ip_error>
+<asset_asset_ip_title>Add a new IP address</asset_asset_ip_title>
+<asset_asset_ip_name>Add an IP address name</asset_asset_ip_name>
+<asset_asset_ip_main>Is the main IP address</asset_asset_ip_main>
+<asset_asset_ip_add>Add</asset_asset_ip_add>
+<asset_asset_ip_cancel>Cancel</asset_asset_ip_cancel>
+<asset_asset_ip_error>An IP address must be filled</asset_asset_ip_error>
+
+<!-- Asset products & Os -->
+<asset_asset_os_title>Add/Update the operating system</asset_asset_os_title>
+<asset_asset_os_validate>Ok</asset_asset_os_validate>
+<asset_asset_os_search>Search for an OS</asset_asset_os_search>
+<asset_asset_os_data_products>List of products</asset_asset_os_data_products>
+<asset_asset_os_add>Add</asset_asset_os_add>
+<asset_asset_product_title>Add a new application</asset_asset_product_title>
+<asset_asset_product_validate>Ok</asset_asset_product_validate>
+<asset_asset_product_search>Search for an application</asset_asset_product_search>
+<asset_asset_product_data_products>List of products</asset_asset_product_data_products>
+<asset_asset_product_add>Add</asset_asset_product_add>
+<asset_asset_product_error_search>Search text must contain at least 2 characters.</asset_asset_product_error_search>
+<asset_asset_product_error_empty>No product selected.</asset_asset_product_error_empty>
+
+<!-- VPV -->
+<asset_vpv_title>Vendors, products and versions management</asset_vpv_title>
+<asset_vpv_search_vendors>Vendors</asset_vpv_search_vendors>
+<asset_vpv_search_products>Products</asset_vpv_search_products>
+<asset_vpv_search_versions>Versions</asset_vpv_search_versions>
+<asset_vpv_search_find>Ok</asset_vpv_search_find>
+<asset_vpv_search_error_text>The search text must contain at least 2 chars.</asset_vpv_search_error_text>
+<asset_vpv_search_error_selection>At least one filter must be selected.</asset_vpv_search_error_selection>
+
+<!-- Search -->
+<asset_searchresults_title>Search results for $1</asset_searchresults_title>
+<asset_searchresults_pageempty>0 result</asset_searchresults_pageempty>
+<asset_searchresults_pages>page $1 of $2 ( $3 results )</asset_searchresults_pages>
+<asset_searchresults_datas_vendors>Vendors</asset_searchresults_datas_vendors>
+<asset_searchresults_datas_products>Products</asset_searchresults_datas_products>
+<asset_searchresults_datas_versions>Versions</asset_searchresults_datas_versions>
+<asset_searchresults_datas_noresult>There is no result for $1.</asset_searchresults_datas_noresult>
+
+<!-- Vendors -->
+<asset_vendors>Vendors</asset_vendors>
+<asset_vendors_add>Add a new vendor</asset_vendors_add>
+<asset_vendors_novendor>No vendor available.</asset_vendors_novendor>
+<asset_vendors_nohiddenvendor>No hidden vendor available.</asset_vendors_nohiddenvendor>
+<asset_vendors_noactivevendor>No active vendor available.</asset_vendors_noactivevendor>
+<asset_vendors_description>Name</asset_vendors_description>
+<asset_vendors_relation>Preferred relationship</asset_vendors_relation>
+<asset_vendors_escalation>Escalation contact</asset_vendors_escalation>
+<asset_vendors_security>Security contact</asset_vendors_security>
+<asset_vendors_update>Update</asset_vendors_update>
+<asset_vendors_alias>Aliases</asset_vendors_alias>
+<asset_vendors_experts>Experts</asset_vendors_experts>
+<asset_vendors_history>History</asset_vendors_history>
+
+<!-- Products -->
+<asset_products>Products</asset_products>
+<asset_products_add>Add a new product</asset_products_add>
+<asset_products_noproduct>No product available.</asset_products_noproduct>
+<asset_products_nohiddenproduct>No hidden product available.</asset_products_nohiddenproduct>
+<asset_products_noactiveproduct>No active product available.</asset_products_noactiveproduct>
+<asset_products_description>Name</asset_products_description>
+<asset_products_type>Type</asset_products_type>
+<asset_products_technology>Technology</asset_products_technology>
+<asset_products_obsolescence>Obsolescence date</asset_products_obsolescence>
+<asset_products_obsoleted>Clear date</asset_products_obsoleted>
+<asset_products_update>Update</asset_products_update>
+<asset_products_alias>Aliases</asset_products_alias>
+
+<!-- Versions -->
+<asset_versions>Versions</asset_versions>
+<asset_versions_add>Add a new version</asset_versions_add>
+<asset_versions_noversion>No version available.</asset_versions_noversion>
+<asset_versions_noactiveversion>No active version available.</asset_versions_noactiveversion>
+<asset_versions_description>Name</asset_versions_description>
+<asset_versions_obsolescence>Obsolescence date</asset_versions_obsolescence>
+<asset_versions_obsoleted>Clear date</asset_versions_obsoleted>
+<asset_versions_update>Update</asset_versions_update>
+
+<!-- Add -->
+<asset_addvendorproductversion_title_vendor>Add a new vendor</asset_addvendorproductversion_title_vendor>
+<asset_addvendorproductversion_title_product>Add a new product</asset_addvendorproductversion_title_product>
+<asset_addvendorproductversion_title_version>Add a new version</asset_addvendorproductversion_title_version>
+<asset_addvendorproductversion_name>Name</asset_addvendorproductversion_name>
+<asset_addvendorproductversion_active>Active</asset_addvendorproductversion_active>
+<asset_addvendorproductversion_add>Add</asset_addvendorproductversion_add>
+<asset_addvendorproductversion_cancel>Cancel</asset_addvendorproductversion_cancel>
+<asset_addvendorproductversion_error_name>A name must be filled.</asset_addvendorproductversion_error_name>
+
+<!-- History -->
+<asset_history_title>History of $1</asset_history_title>
+<asset_history_vendor>Vendor history</asset_history_vendor>
+<asset_history_product>Product history</asset_history_product>
+<asset_history_version>Version history</asset_history_version>
+<asset_history_datas_vendors_change>Change date</asset_history_datas_vendors_change>
+<asset_history_datas_vendors_modifier>Modifier</asset_history_datas_vendors_modifier>
+<asset_history_datas_vendors_name>Vendor</asset_history_datas_vendors_name>
+<asset_history_datas_vendors_active>Active</asset_history_datas_vendors_active>
+<asset_history_datas_vendors_hidden>Hidden</asset_history_datas_vendors_hidden>
+<asset_history_datas_products_change>Change date</asset_history_datas_products_change>
+<asset_history_datas_products_modifier>Modifier</asset_history_datas_products_modifier>
+<asset_history_datas_products_name>Product</asset_history_datas_products_name>
+<asset_history_datas_products_active>Active</asset_history_datas_products_active>
+<asset_history_datas_products_hidden>Hidden</asset_history_datas_products_hidden>
+<asset_history_datas_versions_change>Change date</asset_history_datas_versions_change>
+<asset_history_datas_versions_modifier>Modifier</asset_history_datas_versions_modifier>
+<asset_history_datas_versions_name>Version</asset_history_datas_versions_name>
+<asset_history_datas_versions_active>Active</asset_history_datas_versions_active>
+
+<!-- Composites Applications -->
+<asset_composites_applications_title>Composites applications used in company $1</asset_composites_applications_title>
+<asset_composites_applications_name>Name</asset_composites_applications_name>
+<asset_composites_applications_update>Update</asset_composites_applications_update>
+<asset_composites_applications_datas_vendors>Vendors</asset_composites_applications_datas_vendors>
+<asset_composites_applications_datas_applications>Composites applications</asset_composites_applications_datas_applications>
+<asset_composites_applications_datas_applications_add>Add a composite application</asset_composites_applications_datas_applications_add>
+<asset_composites_applications_noactive>No active composite application.</asset_composites_applications_noactive>
+<asset_composites_applications_noapplication>No composite application.</asset_composites_applications_noapplication>
+<asset_composites_applications_history>History</asset_composites_applications_history>
+<asset_composites_applications_experts>Experts</asset_composites_applications_experts>
+<asset_composite_application_versions_name>Name</asset_composite_application_versions_name>
+<asset_composite_application_versions_update>Update</asset_composite_application_versions_update>
+<asset_composite_application_versions_datas_compappversions>Versions</asset_composite_application_versions_datas_compappversions>
+<asset_composite_application_versions_datas_compappversions_add>Add a version</asset_composite_application_versions_datas_compappversions_add>
+<asset_composite_application_versions_latest>Latest version</asset_composite_application_versions_latest>
+<asset_composite_application_versions_noactive>No active version.</asset_composite_application_versions_noactive>
+<asset_composite_application_versions_noversion>No version.</asset_composite_application_versions_noversion>
+<asset_composite_application_version_products_datas_compappversionproducts_vendor>Vendors</asset_composite_application_version_products_datas_compappversionproducts_vendor>
+<asset_composite_application_version_products_datas_compappversionproducts_product>Products</asset_composite_application_version_products_datas_compappversionproducts_product>
+<asset_composite_application_version_products_datas_compappversionproducts_version>Versions</asset_composite_application_version_products_datas_compappversionproducts_version>
+<asset_composite_application_version_products_datas_compappversionproducts_add>Add a product, a version</asset_composite_application_version_products_datas_compappversionproducts_add>
+<asset_composite_application_version_products_noproducts>No product or version linked.</asset_composite_application_version_products_noproducts>
+
+<asset_compositeapplication_title_product>Add a composite application</asset_compositeapplication_title_product>
+<asset_compositeapplication_title_version>Add a composite application version</asset_compositeapplication_title_version>
+<asset_compositeapplication_existingproduct>Use an existing product</asset_compositeapplication_existingproduct>
+<asset_compositeapplication_existingversion>Use an existing version</asset_compositeapplication_existingversion>
+<asset_compositeapplication_newproduct>Create a new product</asset_compositeapplication_newproduct>
+<asset_compositeapplication_newversion>Create a new version</asset_compositeapplication_newversion>
+<asset_compositeapplication_latestversion>Is last version</asset_compositeapplication_latestversion>
+<asset_compositeapplication_copyfromlatestversion>Copy from latest version</asset_compositeapplication_copyfromlatestversion>
+<asset_compositeapplication_search>Fill the field to find a product</asset_compositeapplication_search>
+<asset_compositeapplication_validate>OK</asset_compositeapplication_validate>
+<asset_compositeapplication_datas_products>Products</asset_compositeapplication_datas_products>
+<asset_compositeapplication_datas_versions>Product versions</asset_compositeapplication_datas_versions>
+<asset_compositeapplication_error_search>Search text must contain at least 2 characters.</asset_compositeapplication_error_search>
+<asset_compositeapplication_noversion>No version available for this composite application.</asset_compositeapplication_noversion>
+<asset_compositeapplication_newcomposite>Create a new composite application</asset_compositeapplication_newcomposite>
+<asset_compositeapplication_newcompositeversion>Create a new version for the composite application</asset_compositeapplication_newcompositeversion>
+<asset_compositeapplication_error_product>A product must be specified.</asset_compositeapplication_error_product>
+<asset_compositeapplication_error_version>A version must be specified.</asset_compositeapplication_error_version>
+<asset_compositeapplication_add>Add</asset_compositeapplication_add>
+
+<asset_compositelinks_title_version>Add a product/version linked to version</asset_compositelinks_title_version>
+<asset_compositelinks_search>Fill the field to find a product/version</asset_compositelinks_search>
+<asset_compositelinks_validate>OK</asset_compositelinks_validate>
+<asset_compositelinks_datas_assets><![CDATA[Products & versions]]></asset_compositelinks_datas_assets>
+<asset_compositelinks_error_search>Search text must contain at least 2 characters.</asset_compositelinks_error_search>
+<asset_compositelinks_error>Select a product/version to link.</asset_compositelinks_error>
+<asset_compositelinks_add>Add</asset_compositelinks_add>
+
+<!-- Expertises -->
+<asset_expertises_title>Experts for $1</asset_expertises_title>
+<asset_expertises_vendor>Vendor expertises</asset_expertises_vendor>
+<asset_expertises_product>Product expertises</asset_expertises_product>
+<asset_expertises_expertsall>All experts</asset_expertises_expertsall>
+<asset_expertises_expertsusers>Experts users</asset_expertises_expertsusers>
+<asset_expertises_expertsgroups>Experts groups</asset_expertises_expertsgroups>
+<asset_expertises_datas_groups_groupname>Group name</asset_expertises_datas_groups_groupname>
+<asset_expertises_datas_groups_add>Add an expert group</asset_expertises_datas_groups_add>
+<asset_expertises_datas_users_groupsusers>Group's users</asset_expertises_datas_users_groupsusers>
+<asset_expertises_datas_users_groupadd>Add a group member</asset_expertises_datas_users_groupadd>
+<asset_expertises_datas_users_username>User name</asset_expertises_datas_users_username>
+<asset_expertises_datas_users_firstname>First name</asset_expertises_datas_users_firstname>
+<asset_expertises_datas_users_lastname>Last name</asset_expertises_datas_users_lastname>
+<asset_expertises_datas_users_add>Add an expert user</asset_expertises_datas_users_add>
+
+<!-- Add Expertise -->
+<asset_addexpertise_title_group>Add expertise for group</asset_addexpertise_title_group>
+<asset_addexpertise_title_user>Add expertise for user</asset_addexpertise_title_user>
+<asset_addexpertise_title_usergroup>Add user to a group</asset_addexpertise_title_usergroup>
+<asset_addexpertise_add>Add</asset_addexpertise_add>
+<asset_addexpertise_datas_groups_groupname>Group name</asset_addexpertise_datas_groups_groupname>
+<asset_addexpertise_datas_users_username>User name</asset_addexpertise_datas_users_username>
+<asset_addexpertise_datas_users_firstname>First name</asset_addexpertise_datas_users_firstname>
+<asset_addexpertise_datas_users_lastname>Last name</asset_addexpertise_datas_users_lastname>
+
+<!-- Alias -->
+<asset_alias_title>Aliases of $1</asset_alias_title>
+<asset_alias_add_title>Add an alias</asset_alias_add_title>
+<asset_alias_add_text><![CDATA[Fill the alias name to add or merge it to your item :]]></asset_alias_add_text>
+<asset_alias_add>Add</asset_alias_add>
+<asset_alias_cancel>Cancel</asset_alias_cancel>
+<asset_alias_add_error>Alias name must be filled</asset_alias_add_error>
+<asset_alias_datas_vendor_alias>Aliases</asset_alias_datas_vendor_alias>
+<asset_alias_datas_vendor_add>Add an alias</asset_alias_datas_vendor_add>
+<asset_alias_datas_product_alias>Aliases</asset_alias_datas_product_alias>
+<asset_alias_datas_product_add>Add an alias</asset_alias_datas_product_add>
+
+<!-- Raci Change Request -->
+<asset_racichangerequest_title>List of RACI change requests for module</asset_racichangerequest_title>
+<asset_racichangerequest_text>At least a RACI change for the module request your validation. Select a change in the list and apply your modification.</asset_racichangerequest_text>
+<asset_racichangerequest_warning>Warning: validating the changes on your own informations in the RACI of the module will cause your disconnection from module.</asset_racichangerequest_warning>
+<asset_racichangerequest_validate>Validate</asset_racichangerequest_validate>
+<asset_racichangerequest_discard>Discard</asset_racichangerequest_discard>
+<asset_racichangerequest_dolater>Do later</asset_racichangerequest_dolater>
+<asset_racichangerequest_datas_request_date>Date</asset_racichangerequest_datas_request_date>
+<asset_racichangerequest_datas_request_modifier>Modifier</asset_racichangerequest_datas_request_modifier>
+<asset_racichangerequest_datas_request_stakeholder>Stakeholder</asset_racichangerequest_datas_request_stakeholder>
+<asset_racichangerequest_datas_request_modification>Modification</asset_racichangerequest_datas_request_modification>
+<asset_racichangerequest_datas_request_modification_add>Add</asset_racichangerequest_datas_request_modification_add>
+<asset_racichangerequest_datas_request_modification_update>Update</asset_racichangerequest_datas_request_modification_update>
+<asset_racichangerequest_datas_request_modification_delete>Delete</asset_racichangerequest_datas_request_modification_delete>
+<asset_racichangerequest_datas_request_modification_forced>Forced update</asset_racichangerequest_datas_request_modification_forced>
+<asset_racichangerequest_datas_request_substitute>Substitute</asset_racichangerequest_datas_request_substitute>
+<asset_racichangerequest_moduleraci>Current module RACI</asset_racichangerequest_moduleraci>
+
+<!-- Validation -->
+<asset_validation_title>Validate changes</asset_validation_title>
+<asset_validation_text>Do you want to save the changes you made ?</asset_validation_text>
+<asset_validation_yes>Yes</asset_validation_yes>
+<asset_validation_no>No</asset_validation_no>
+
+<!-- Error -->
+<asset_error_title>Error</asset_error_title>
+<asset_error_yes>Yes</asset_error_yes>
+<asset_error_no>No</asset_error_no>
+<asset_error_cancel>Cancel</asset_error_cancel>
+<asset_error_ok>Ok</asset_error_ok>
+<asset_error_notify>Notify</asset_error_notify>
+<asset_error_concurrency_title>Concurrent access on item</asset_error_concurrency_title>
+<asset_error_concurrency_text><![CDATA[The item '$1' has been already updated by an other user.<br />Click on the Refresh button to update it.<br />You'll have to relaunch your operation after that.]]></asset_error_concurrency_text>
+<asset_error_refresh>Refresh</asset_error_refresh>
+
+<!-- Menu -->
+<asset_menu_home>Home</asset_menu_home>
+<asset_menu_home_esis>ESIS home</asset_menu_home_esis>
+<asset_menu_home_title>Module selection</asset_menu_home_title>
+<asset_menu_logout>Logout</asset_menu_logout>
+<asset_menu_prefs>Prefs</asset_menu_prefs>
+<asset_menu_print>Print</asset_menu_print>
+<asset_menu_excel>Excel</asset_menu_excel>
+<asset_menu_msproject>MsProject</asset_menu_msproject>
+<asset_menu_mail>Mail</asset_menu_mail>
+<asset_menu_calendar>Calendar</asset_menu_calendar>
+<asset_menu_find>Find</asset_menu_find>
+<asset_menu_votes_my>my votes</asset_menu_votes_my>
+<asset_menu_votes_all>all votes</asset_menu_votes_all>
+<asset_menu_tasks_my>my tasks</asset_menu_tasks_my>
+<asset_menu_tasks_raci>RACI tasks</asset_menu_tasks_raci>
+<asset_menu_filter_my>MY</asset_menu_filter_my>
+<asset_menu_filter_raci>RACI</asset_menu_filter_raci>
+<asset_menu_filter_all>ALL</asset_menu_filter_all>
+<asset_menu_filter_interval_all>ever since</asset_menu_filter_interval_all>
+<asset_menu_filter_interval_twelvemonths>12 months</asset_menu_filter_interval_twelvemonths>
+<asset_menu_filter_interval_from>from</asset_menu_filter_interval_from>
+<asset_menu_filter_interval_title>Time period</asset_menu_filter_interval_title>
+<asset_menu_filter_interval_submit>OK</asset_menu_filter_interval_submit>
+<asset_menu_asset_assets>Assets</asset_menu_asset_assets>
+<asset_menu_asset_vpv>Products</asset_menu_asset_vpv>
+<asset_menu_asset_company>Company</asset_menu_asset_company>
+</entity>
+</esis>

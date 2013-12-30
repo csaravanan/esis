@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="esis" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<esis_contextmenu_copyright>Copyright (c) 2004-2008 Entelience SARL, Copyright (c) 2008-2009 Equity SA</esis_contextmenu_copyright>
+<esis_errors_maintenance_title>ESIS est en cours de maintenance</esis_errors_maintenance_title>
+<esis_errors_maintenance_text>ESIS est en cours de maintenance.
+Le service est momentanément indisponible.
+Veuillez nous excuser pour la gêne occasionnée.</esis_errors_maintenance_text>
+<esis_login_copyright><![CDATA[Copyright (c) 2004-2008 Entelience SARL, Copyright (c) 2008-2009 Equity SA, Sous licence GNU GPL, Version 3]]></esis_login_copyright>
+<esis_menu_home_esis>Accueil ESIS</esis_menu_home_esis>
+<esis_errors_accesstryout_text><![CDATA[<br /><br />Vous bénéficiez encore de $1 essai(s) avant le bloquage de votre compte.]]></esis_errors_accesstryout_text>
+<esis_error_lostpassword>Mot de passe ?</esis_error_lostpassword>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<esis_errors_accesstryout_text><![CDATA[<br /><br />Vous bénéficiez encore d'$1 essai(s) avant le bloquage de votre compte.]]></esis_errors_accesstryout_text>
+<esis_validation_title>Quitter ESIS</esis_validation_title>
+<esis_validation_text>Etes-vous sûr de vouloir quitter l'application ESIS ?</esis_validation_text>
+<esis_validation_yes>Oui</esis_validation_yes>
+<esis_validation_no>Non</esis_validation_no>
+<esis_errors_lostpassword_title>Perte de mot de passe</esis_errors_lostpassword_title>
+<esis_errors_lostpassword_support_text>Le support a été alerté de votre demande. Vous serez recontacté prochainement.</esis_errors_lostpassword_support_text>
+<esis_errors_lostpassword_email_text>Un nouveau mot de passe vient de vous être renvoyé à l'adresse $1.</esis_errors_lostpassword_email_text>
+<esis_prefs_password_username>Le mot de passe ne doit pas contenir le nom d'utilisateur</esis_prefs_password_username>
+<esis_prefs_password_company>Le mot de passe ne doit pas contenir le nom de société</esis_prefs_password_company>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<esis_error_lostpassword_text>Demande suite à une perte de mot de passe pour l'utilisateur: </esis_error_lostpassword_text>
+</removed>
+
+</entity>
+</esis>

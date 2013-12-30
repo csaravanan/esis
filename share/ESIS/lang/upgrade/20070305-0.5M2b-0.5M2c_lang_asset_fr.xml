@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_asset_fr.xml *** -->
+<entity name="asset" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<!-- Errors texts --> 
+<asset_errors_wsnotexist_text>Le service web '$1' semble être inexistant. Merci de contacter votre administrateur pour solutionner le problème.</asset_errors_wsnotexist_text><!-- html -->
+
+<asset_errors_vendors_active>Mise à jour impossible car $1 est utilisé sur au moins un système actif.</asset_errors_vendors_active>
+<asset_errors_products_active>Mise à jour impossible car $1 est utilisé sur au moins un système actif.</asset_errors_products_active>
+<asset_errors_versions_active>Mise à jour impossible car $1 est utilisé sur au moins un système actif.</asset_errors_versions_active>
+<asset_errors_vendors_cascademin>La mise à jour du vendeur $1 nécessite la modification de ses produits et versions de produits. Poursuivre ?</asset_errors_vendors_cascademin>
+<asset_errors_products_cascademin>La mise à jour du produit $1 nécessite la modification de son vendeur et de ses versions. Poursuivre ?</asset_errors_products_cascademin>
+<asset_errors_versions_cascademin>La mise à jour de la version $1 nécessite la modification de son vendeur et produit. Poursuivre ?</asset_errors_versions_cascademin>
+<asset_errors_vendors_cascademax>Voulez-vous mettre à jour tous les produits et versions du vendeur $1 en même temps ?</asset_errors_vendors_cascademax>
+<asset_errors_products_cascademax>Voulez-vous mettre à jour toutes les versions du produit $1 en même temps ?</asset_errors_products_cascademax>
+</changed>
+
+<!-- ******************** ADDED ******************** -->
+<added>
+<!-- Errors texts --> 
+<audit_errors_concurrency_title>Accès concurrent détécté</audit_errors_concurrency_title>
+<audit_errors_concurrency_text><![CDATA[L'opération a été annulée car l'objet ciblé a été mis à jour par un autre utilisateur.<br />Rafraichissez l'écran principal pour mettre à jour l'objet sélectionné avant de relancer l'opération.]]></audit_errors_concurrency_text>
+
+<!-- Error -->
+<asset_error_concurrency_title>Accès concurrent sur l'objet</asset_error_concurrency_title>
+<asset_error_concurrency_text><![CDATA[L'objet '$1' a déjà été modifié par un autre utilisateur.<br />Cliquez sur le bouton Rafraîchir pour mettre à jour l'objet.<br />Votre opération devra être relancée après le rafraichissement.]]></asset_error_concurrency_text>
+<asset_error_refresh>Rafraîchir</asset_error_refresh>
+</added>
+<!-- ******************** REMOVED ******************** -->
+</entity>
+</esis>

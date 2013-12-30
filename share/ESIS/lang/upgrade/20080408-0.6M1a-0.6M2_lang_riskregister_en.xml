@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="riskregister" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<risks_errors_raci_text>The current RACI matrix of the item $1 doesn't allow you to perform this action.</risks_errors_raci_text>
+<risks_errors_raci_persons>Please contact the Responsible or Accountable person(s) of the item $1.</risks_errors_raci_persons>
+<risks_risklevels_datas_risklevels_likelihood>Likelihoods</risks_risklevels_datas_risklevels_likelihood>
+<risks_risklevels_datas_risklevels_consequence>Consequences</risks_risklevels_datas_risklevels_consequence>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<risks_raci_edit>Edit privileges</risks_raci_edit>
+<risks_risklevels_benefic>Benefics</risks_risklevels_benefic>
+<risks_risklevels_negative>Negatives</risks_risklevels_negative>
+<risks_cause_error_occurencesnumber>'Occurences' must be a number.</risks_cause_error_occurencesnumber>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<risks_risklevels_datas_risklevels_level>Risk level</risks_risklevels_datas_risklevels_level>
+<risks_raci_risk_edit>Edit</risks_raci_risk_edit>
+</removed>
+
+</entity>
+</esis>

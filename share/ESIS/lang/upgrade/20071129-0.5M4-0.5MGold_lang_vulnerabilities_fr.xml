@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_vulnerabilities_fr.xml *** -->
+<entity name="vulnerabilities" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<vuln_racichangerequest_title>Liste des demandes de changements RACI pour le module</vuln_racichangerequest_title>
+<vuln_racichangerequest_text>Au moins une demande de modification du RACI du module nécessite votre approbation. Sélectionnez un chamgement dans la liste pour lui appliquer la modification.</vuln_racichangerequest_text>
+<vuln_racichangerequest_warning>Attention: le fait de valider les changements sur vos propres informations dans le RACI du module entrainera votre déconnexion du module.</vuln_racichangerequest_warning>
+<vuln_racichangerequest_validate>Valider</vuln_racichangerequest_validate>
+<vuln_racichangerequest_discard>Refuser</vuln_racichangerequest_discard>
+<vuln_racichangerequest_dolater>Plus tard</vuln_racichangerequest_dolater>
+<vuln_racichangerequest_datas_request_date>Date</vuln_racichangerequest_datas_request_date>
+<vuln_racichangerequest_datas_request_modifier>Modifié par</vuln_racichangerequest_datas_request_modifier>
+<vuln_racichangerequest_datas_request_stakeholder>Partie prenante</vuln_racichangerequest_datas_request_stakeholder>
+<vuln_racichangerequest_datas_request_modification>Modification</vuln_racichangerequest_datas_request_modification>
+<vuln_racichangerequest_datas_request_modification_add>Ajout</vuln_racichangerequest_datas_request_modification_add>
+<vuln_racichangerequest_datas_request_modification_update>Mise à jour</vuln_racichangerequest_datas_request_modification_update>
+<vuln_racichangerequest_datas_request_modification_delete>Suppression</vuln_racichangerequest_datas_request_modification_delete>
+<vuln_racichangerequest_datas_request_modification_forced>Modif. forcée</vuln_racichangerequest_datas_request_modification_forced>
+<vuln_racichangerequest_datas_request_substitute>Suppléant</vuln_racichangerequest_datas_request_substitute>
+<vuln_racichangerequest_moduleraci>RACI actuel du module</vuln_racichangerequest_moduleraci>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+</removed>
+
+</entity>
+</esis>

@@ -1,0 +1,401 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>SSL Support</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 8.3.10 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="libpq - C Library"
+HREF="libpq.html"><LINK
+REL="PREVIOUS"
+TITLE="LDAP Lookup of Connection Parameters"
+HREF="libpq-ldap.html"><LINK
+REL="NEXT"
+TITLE="Behavior in Threaded Programs"
+HREF="libpq-threading.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2010-03-12T04:15:17"></HEAD
+><BODY
+CLASS="SECT1"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="5"
+ALIGN="center"
+VALIGN="bottom"
+>PostgreSQL 8.3.10 Documentation</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="libpq-ldap.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="libpq.html"
+>Fast Backward</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 30. <SPAN
+CLASS="APPLICATION"
+>libpq</SPAN
+> - C Library</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="libpq.html"
+>Fast Forward</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="libpq-threading.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="LIBPQ-SSL"
+>30.16. SSL Support</A
+></H1
+><A
+NAME="AEN32825"
+></A
+><P
+>   <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> has native support for using <ACRONYM
+CLASS="ACRONYM"
+>SSL</ACRONYM
+>
+   connections to encrypt client/server communications for increased
+   security. See <A
+HREF="ssl-tcp.html"
+>Section 17.8</A
+> for details about the server-side
+   <ACRONYM
+CLASS="ACRONYM"
+>SSL</ACRONYM
+> functionality.
+  </P
+><P
+>   <SPAN
+CLASS="APPLICATION"
+>libpq</SPAN
+> reads the system-wide
+   <SPAN
+CLASS="PRODUCTNAME"
+>OpenSSL</SPAN
+> configuration file. By default, this
+   file is named <TT
+CLASS="FILENAME"
+>openssl.cnf</TT
+> and is located in the
+   directory reported by <TT
+CLASS="LITERAL"
+>openssl version -d</TT
+>.  This default
+   can be overridden by setting environment variable
+   <TT
+CLASS="ENVAR"
+>OPENSSL_CONF</TT
+> to the name of the desired configuration
+   file.
+  </P
+><P
+>   To verify the server certificate is trustworthy, place certificates of
+   the certificate authorities (<ACRONYM
+CLASS="ACRONYM"
+>CA</ACRONYM
+>) you trust in the
+   file <TT
+CLASS="FILENAME"
+>~/.postgresql/root.crt</TT
+> in the user's home directory.
+   (On Microsoft Windows the file is named
+   <TT
+CLASS="FILENAME"
+>%APPDATA%\postgresql\root.crt</TT
+>.)
+   <SPAN
+CLASS="APPLICATION"
+>libpq</SPAN
+> will then verify that the server's
+   certificate is signed by one of the trusted certificate authorities.
+   The SSL connection will fail if the server does not present a trusted
+   certificate.  Certificate Revocation List (CRL) entries are also checked
+   if the file <TT
+CLASS="FILENAME"
+>~/.postgresql/root.crl</TT
+> exists
+   (<TT
+CLASS="FILENAME"
+>%APPDATA%\postgresql\root.crl</TT
+> on Microsoft
+   Windows).
+  </P
+><P
+>   If the server requests a trusted client certificate,
+   <SPAN
+CLASS="APPLICATION"
+>libpq</SPAN
+> will send the certificate stored in
+   file <TT
+CLASS="FILENAME"
+>~/.postgresql/postgresql.crt</TT
+> in the user's home
+   directory.  The certificate must be signed by one of the certificate
+   authorities (<ACRONYM
+CLASS="ACRONYM"
+>CA</ACRONYM
+>) trusted by the server.  A matching
+   private key file <TT
+CLASS="FILENAME"
+>~/.postgresql/postgresql.key</TT
+> must also
+   be present, unless the secret key for the certificate is stored in a
+   hardware token, as specified by <TT
+CLASS="ENVAR"
+>PGSSLKEY</TT
+>.  (On Microsoft
+   Windows these files are named
+   <TT
+CLASS="FILENAME"
+>%APPDATA%\postgresql\postgresql.crt</TT
+> and
+   <TT
+CLASS="FILENAME"
+>%APPDATA%\postgresql\postgresql.key</TT
+>.) The private
+   key file must not be world-readable.
+  </P
+><P
+>   If the environment variable <TT
+CLASS="ENVAR"
+>PGSSLKEY</TT
+> is set, its value
+   should consist of a colon-separated engine name and key identifier. In
+   this case, <SPAN
+CLASS="APPLICATION"
+>libpq</SPAN
+> will load the specified
+   engine, i.e. the <SPAN
+CLASS="PRODUCTNAME"
+>OpenSSL</SPAN
+> module which supports special
+   hardware, and reference the key with the specified identifier.
+   Identifiers are engine-specific. Typically, cryptography hardware tokens
+   do not reveal secret keys to the application. Instead, applications
+   delegate all cryptography operations which require the secret key to
+   the hardware token.
+  </P
+><P
+>   If you are using <ACRONYM
+CLASS="ACRONYM"
+>SSL</ACRONYM
+> inside your application (in addition
+   to inside <SPAN
+CLASS="APPLICATION"
+>libpq</SPAN
+>), you can use
+   <CODE
+CLASS="FUNCTION"
+>PQinitSSL(int)</CODE
+> to tell <SPAN
+CLASS="APPLICATION"
+>libpq</SPAN
+>
+   that the <ACRONYM
+CLASS="ACRONYM"
+>SSL</ACRONYM
+> library has already been initialized by your
+   application.  
+   
+   See <A
+HREF="http://h71000.www7.hp.com/doc/83final/BA554_90007/ch04.html"
+TARGET="_top"
+>http://h71000.www7.hp.com/doc/83final/BA554_90007/ch04.html</A
+>
+   for details on the SSL API.
+  </P
+><DIV
+CLASS="TABLE"
+><A
+NAME="LIBPQ-SSL-FILE-USAGE"
+></A
+><P
+><B
+>Table 30-1. Libpq/Client SSL File Usage</B
+></P
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><COL><COL><COL><THEAD
+><TR
+><TH
+>File</TH
+><TH
+>Contents</TH
+><TH
+>Effect</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>~/.postgresql/postgresql.crt</TT
+></TD
+><TD
+>client certificate</TD
+><TD
+>requested by server</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>~/.postgresql/postgresql.key</TT
+></TD
+><TD
+>client private key</TD
+><TD
+>proves client certificate sent by owner; does not indicate
+      certificate owner is trustworthy</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>~/.postgresql/root.crt</TT
+></TD
+><TD
+>trusted certificate authorities</TD
+><TD
+>checks server certificate is signed by a trusted certificate
+      authority</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="FILENAME"
+>~/.postgresql/root.crl</TT
+></TD
+><TD
+>certificates revoked by certificate authorities</TD
+><TD
+>server certificate must not be on this list</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="libpq-ldap.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="libpq-threading.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>LDAP Lookup of Connection Parameters</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="libpq.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Behavior in Threaded Programs</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

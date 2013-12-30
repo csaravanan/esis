@@ -1,0 +1,223 @@
+#!/bin/sh
+#   
+#  ESIS
+#  
+#  Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+#  
+#  Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+#                          Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+#  
+#  
+#  This file is part of ESIS.
+#  
+#  ESIS is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation version 3 of the License.
+#  
+#  ESIS is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+#  
+#  $Id: esis_sanity_check 13 2009-07-07 15:15:32Z tburdairon $
+#
+
+# Post install sanity checks script
+# This script ensures that the system environment and ESIS are correclty configured
+# Items checked : Java version, JAVA_HOME, crontab presence, postgresql data directory, postgresql configuration files,
+#   Tomcat directory, esis webapp presence, jar files matching
+
+
+#source the environment
+. `dirname $0`/esis_env
+
+# remove existing temp file
+tmp_file="/tmp/esis_sanity"
+if [ -f $tmp_file ]; then
+ rm -rf $tmp_file
+fi
+
+nberrors=0
+
+#Java binary present ?
+echo "\nSearching a java binary"
+javalocation=`which java `
+nbf=`echo $javalocation | grep 'no java' | wc -l`
+if [ $nbf -eq 1 ]; then
+  echo "ERROR : java not found"
+  echo "$javalocation"
+  nberrors=`expr $nberrors + 1`
+else
+  echo "java binary successfully found in $javalocation"
+fi
+
+
+#Java version
+expectedversion="1.5.0"
+echo "\nChecking java version"
+java -version 2>> $tmp_file
+nblines=`grep 'java version "1.5.0' $tmp_file | wc -l`
+realversion=`grep 'java version ' $tmp_file`
+
+if [ $nblines -eq 1 ]; then
+  echo "Installed Java version OK : $realversion matches expected version $expectedversion" 
+else
+  echo "ERROR : Bad Java version, expected $expectedversion, found $realversion"
+  nberrors=`expr $nberrors + 1`
+fi
+
+#JAVA_HOME environment var
+echo "\nChecking JAVA_HOME environment variable"
+if [ -z $JAVA_HOME ]; then
+  echo "ERROR : JAVA_HOME environment variable not set"
+  nberrors=`expr $nberrors + 1`
+else
+  echo "JAVA_HOME set : $JAVA_HOME"
+fi
+
+#CRONTAB
+# 1 esis_daily, 1 esis_sendmail, 1 esis_backup_db are mandatory
+echo "\nChecking the crontab"
+ctcontent=`crontab -l`
+ctnblines=`echo "$ctcontent" | wc -l`
+if [ $ctnblines -lt 3 ]; then
+  echo "ERROR : Only $ctnblines lines found in the crontab"
+  echo "Crontab is : \n $ctcontent" 
+  nberrors=`expr $nberrors + 1`
+else
+  echo "$ctnblines lines found in the crontab"
+  echo "Crontab is : \n $ctcontent"
+fi
+
+#pgdata environment var
+echo "\nChecking PGDATA environment variable"
+if [ -z $PGDATA ]; then
+  echo "ERROR : PGDATA environment variable not set"
+  nberrors=`expr $nberrors + 1`
+else
+  echo "PGDATA set : $PGDATA"
+  # check the directory exists
+  if [ -d $PGDATA ]; then
+    echo "the $PGDATA directory exists"
+  else
+    echo "ERROR : the $PGDATA directory does not exists"
+    nberrors=`expr $nberrors + 1`
+  fi
+fi
+
+#postgresql configuration files
+echo "\nChecking Postgresql configuration files"
+if [ -f $PGDATA/postgresql.conf ]; then
+  echo "postgresql.conf present"
+else
+  echo "ERROR  : $PGDATA/postgresql.conf not present"
+  nberrors=`expr $nberrors + 1`
+fi
+
+if [ -f $PGDATA/pg_hba.conf ]; then
+  echo "pg_hba.conf present"
+else
+  echo "ERROR $PGDATA/pg_hba.conf not present"
+  nberrors=`expr $nberrors + 1`
+fi
+
+if [ -f "$HOME/.pgpass" ]; then
+  echo ".pgpass file present"
+else
+  echo "ERROR : $HOME/.pgpass not present"
+  nberrors=`expr $nberrors + 1`
+fi
+
+#catalina_home
+echo "\nChecking CATALINA_HOME environment variable"
+if [ -z $CATALINA_HOME ]; then
+  echo "ERROR : CATALINA_HOME environment variable not set"
+  nberrors=`expr $nberrors + 1`
+else
+  echo "CATALINA_HOME set : $CATALINA_HOME"
+  # check the directory exists
+  if [ -d $CATALINA_HOME ]; then
+    echo "the $CATALINA_HOME directory exists"
+  else
+    echo "ERROR : the $CATALINA_HOME directory does not exists"
+    nberrors=`expr $nberrors + 1`
+  fi
+fi
+
+#check the esis webapp is present
+echo "\nChecking the presence of ESIS webapp"
+esiswar="$CATALINA_HOME/webapps/esis.war"
+expectedwarfile="${ESIS_HOME}/webapps/esis.war"
+esiswebappdir="$CATALINA_HOME/webapps/esis"
+if [ -h $esiswar ]; then
+  esiswarfile=`file -h $esiswar | awk '{print $5}'`
+  if [ $esiswarfile = $expectedwarfile ]; then
+    if [ -f $esiswarfile ]; then
+      echo "$esiswar is a correct link to $expectedwarfile"
+    else
+      echo "ERROR : $esiswar is a symbolic link to $expectedwarfile, but $expectedwarfile does not exists or is not a valid file"
+      nberrors=`expr $nberrors + 1`
+    fi
+  else
+      echo "ERROR : $esiswar is a symbolic link to $esiswarfile, but should link to $expectedwarfile"
+      nberrors=`expr $nberrors + 1`
+  fi
+elif [ -f $esiswar ]; then
+  echo "ERROR : $esiswar is a plain file, but should be a symbolic link to $expectedwarfile"
+  nberrors=`expr $nberrors + 1`
+else
+  echo "ERROR : $esiswar file not found"
+  nberrors=`expr $nberrors + 1`
+fi
+
+if [ -d $esiswebappdir ]; then
+  echo "$esiswebappdir exists"
+else
+  echo "ERROR : $esiswebappdir does not exists"
+  nberrors=`expr $nberrors + 1`
+fi
+
+compare_2_jar_files()
+{
+  filename=$1
+  file="$CATALINA_HOME/webapps/esis/WEB-INF/lib/$filename"
+  expectedorig="${ESIS_HOME}/libexec/$filename"
+  if [ -h $file ]; then
+    foundorig=`file -h $file | awk '{print $5}'`
+    if [ $foundorig = $expectedorig ]; then
+      if [ -f $foundorig ]; then
+        echo "$file is a correct link to $expectedorig"
+      else
+        echo "ERROR : $file is a symbolic link to $expectedorig, but $expectedorig does not exists or is not a file"
+        nberrors=`expr $nberrors + 1`
+      fi
+    else
+      echo "ERROR : $file is a symbolic link to $foundorig but should link to $expectedorig"
+      nberrors=`expr $nberrors + 1`
+    fi
+  elif [ -f $file ]; then
+    echo "ERROR : $file is a plain file, but should be a symbolic link to $expectedorig"
+    nberrors=`expr $nberrors + 1`
+  else
+    echo "ERROR : $file does not exists"
+    nberrors=`expr $nberrors + 1`
+  fi
+  
+}
+
+# Check the jar files in libexec and the webapp are the same
+echo "\nChecking jars files are the same for CLI and webapp"
+compare_2_jar_files esis-commons.jar
+compare_2_jar_files esis-external-lib.jar
+compare_2_jar_files esis-probes.jar
+compare_2_jar_files esis-web.jar
+if [ -f ${ESIS_HOME}/libexec/esis-customer.jar ]; then
+  compare_2_jar_files esis-customer.jar
+fi
+
+
+echo "\n\nEnd of post-install sanity checks."
+echo "\n$nberrors problematic points found."

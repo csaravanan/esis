@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_asset_fr.xml *** -->
+<entity name="asset" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<asset_default_r>R</asset_default_r>
+<asset_default_a>A</asset_default_a>
+<asset_default_c>C</asset_default_c>
+<asset_default_i>I</asset_default_i>
+<!-- RACI -->
+<asset_raci_title>RACI</asset_raci_title>
+<asset_raci_compositetitle>RACI de l'application composée $1</asset_raci_compositetitle>
+<asset_raci_composite_title>RACI de l'application composée</asset_raci_composite_title>
+<asset_raci_composite_edit>Editer</asset_raci_composite_edit>
+<asset_raci_update_title>RACI pour $1</asset_raci_update_title>
+<asset_raci_add_title>Ajouter une partie prenante</asset_raci_add_title>
+<asset_raci_add_datas_users>Parties prenantes</asset_raci_add_datas_users>
+<asset_raci_add_datas_nousers>Aucune partie prenante active disponible.</asset_raci_add_datas_nousers>
+<asset_raci_update_currentraci>RACI actuel</asset_raci_update_currentraci>
+<asset_raci_update_newraci>Nouveau RACI</asset_raci_update_newraci>
+<asset_raci_add_newraci>RACI</asset_raci_add_newraci>
+<asset_raci_r>R</asset_raci_r>
+<asset_raci_a>A</asset_raci_a>
+<asset_raci_c>C</asset_raci_c>
+<asset_raci_i>I</asset_raci_i>
+<asset_raci_add>Ajouter</asset_raci_add>
+<asset_raci_update>Mettre à jour</asset_raci_update>
+<asset_raci_cancel>Annuler</asset_raci_cancel>
+<asset_raci_update_error>Une partie prenante doit être sélectionnée.</asset_raci_update_error>
+<asset_raci_datas_composite_user>Parties prenantes</asset_raci_datas_composite_user>
+<asset_raci_datas_composite_add>Ajouter une partie prenante</asset_raci_datas_composite_add>
+<asset_raci_infos_raci>RACI</asset_raci_infos_raci>
+<asset_raci_infos_r>R : responsabilité</asset_raci_infos_r>
+<asset_raci_infos_a>A : autorité</asset_raci_infos_a>
+<asset_raci_infos_c>C : consulté</asset_raci_infos_c>
+<asset_raci_infos_i>I : informé</asset_raci_infos_i>
+<!-- RACI History -->
+<asset_raci_history>Historique</asset_raci_history>
+<asset_racihistory_title>Historique du RACI</asset_racihistory_title>
+<asset_racihistory_matrix_title>RACI actuel</asset_racihistory_matrix_title>
+<asset_racihistory_close>Fermer</asset_racihistory_close>
+<asset_racihistory_datas_user>Partie prenante</asset_racihistory_datas_user>
+<asset_racihistory_datas_modifier>Modifié par</asset_racihistory_datas_modifier>
+<asset_racihistory_datas_modificationdate>Date modification</asset_racihistory_datas_modificationdate>
+<asset_racihistory_pages>page $1 sur $2 ( $3 modifications )</asset_racihistory_pages>
+<asset_racihistory_pageempty>0 modification</asset_racihistory_pageempty>
+<!-- Composite Applications -->
+<asset_vendors_composite>Voir les applications composées</asset_vendors_composite>
+<asset_composite_title>Management des systèmes - Applications composées</asset_composite_title>
+<asset_composite_return>Liste des systèmes</asset_composite_return>
+<asset_composite_datas_composites>Applications composées</asset_composite_datas_composites>
+<asset_composite_datas_composites_add>Ajouter une application composée</asset_composite_datas_composites_add>
+<asset_composite_datas_compositeversions>Versions des applications composées</asset_composite_datas_compositeversions>
+<asset_composite_datas_compositeversions_add>Ajouter une version à une application composée</asset_composite_datas_compositeversions_add>
+<asset_composite_datas_composite_links>Produits liés à l'application composée</asset_composite_datas_composite_links>
+<asset_composite_datas_composite_links_add>Ajouter un produit lié à l'application composée</asset_composite_datas_composite_links_add>
+<asset_composite_datas_composite_versionlinks>Versions liées à la version de l'application composée</asset_composite_datas_composite_versionlinks>
+<asset_composite_datas_composite_versionlinks_add>Ajouter une version liée à la version de l'application composée</asset_composite_datas_composite_versionlinks_add>
+<asset_compositeapplication_title_product>Ajouter une application composée</asset_compositeapplication_title_product>
+<asset_compositeapplication_title_version>Ajouter une version à une application composée</asset_compositeapplication_title_version>
+<asset_compositeapplication_existingproduct>Utiliser un produit existant</asset_compositeapplication_existingproduct>
+<asset_compositeapplication_newproduct>Créer un nouveau produit</asset_compositeapplication_newproduct>
+<asset_compositeapplication_search>Rechercher un produit</asset_compositeapplication_search>
+<asset_compositeapplication_validate>OK</asset_compositeapplication_validate>
+<asset_compositeapplication_datas_products>Produits</asset_compositeapplication_datas_products>
+<asset_compositeapplication_datas_versions>Versions du produit</asset_compositeapplication_datas_versions>
+<asset_compositeapplication_error_search>Le texte recherché doit contenir au moins 2 caractères.</asset_compositeapplication_error_search>
+<asset_compositeapplication_noversion>Aucune version disponible pour cette application composée.</asset_compositeapplication_noversion>
+<asset_compositeapplication_newcomposite>Créer une nouvelle application composée</asset_compositeapplication_newcomposite>
+<asset_compositeapplication_newcompositeversion>Créer une nouvelle version pour l'application composée</asset_compositeapplication_newcompositeversion>
+<asset_compositeapplication_error_product>Un produit doît être choisi.</asset_compositeapplication_error_product>
+<asset_compositeapplication_error_version>Une version doît être choisie.</asset_compositeapplication_error_version>
+<asset_compositeapplication_add>Ajouter</asset_compositeapplication_add>
+<asset_compositelinks_title_product>Ajouter un produit/version lié à l'application</asset_compositelinks_title_product>
+<asset_compositelinks_title_version>Ajouter un produit/version liée à la version</asset_compositelinks_title_version>
+<asset_compositelinks_search>Rechercher un produit, une version</asset_compositelinks_search>
+<asset_compositelinks_validate>OK</asset_compositelinks_validate>
+<asset_compositelinks_datas_assets><![CDATA[Produits & versions]]></asset_compositelinks_datas_assets>
+<asset_compositelinks_error_search>Le texte recherché doit contenir au moins 2 caractères.</asset_compositelinks_error_search>
+<asset_compositelinks_error>Sélectionnez un produit ou une version à lier.</asset_compositelinks_error>
+<asset_compositelinks_add>Ajouter</asset_compositelinks_add>
+<asset_menu_filter_intervalraci_all>tout l'historique</asset_menu_filter_intervalraci_all>
+<asset_menu_filter_intervalraci_twelvemonths>sur 12 mois</asset_menu_filter_intervalraci_twelvemonths>
+<asset_menu_filter_intervalraci_from>depuis le</asset_menu_filter_intervalraci_from>
+<asset_menu_filter_intervalraci_title>Période de temps</asset_menu_filter_intervalraci_title>
+<asset_menu_filter_intervalraci_submit>OK</asset_menu_filter_intervalraci_submit>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+</removed>
+</entity>
+</esis>

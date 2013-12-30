@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="admin" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<admin_errors_raci_text>The current RACI matrix of the item $1 doesn't allow you to perform this action.</admin_errors_raci_text>
+<admin_errors_raci_persons>Please contact the Responsible or Accountable person(s) of the item $1.</admin_errors_raci_persons>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<admin_users_datas_users_locked>Locked</admin_users_datas_users_locked>
+<admin_locations_datas_details_domains>Domains</admin_locations_datas_details_domains>
+<admin_businesszonedepartments_title>Departments for business zone $1</admin_businesszonedepartments_title>
+<admin_businesszonedepartments_datas_departments>Departments</admin_businesszonedepartments_datas_departments>
+<admin_businesszonedepartments_datas_membership>Departments linked</admin_businesszonedepartments_datas_membership>
+<admin_businesszonedepartments_remove>remove all departments directly included</admin_businesszonedepartments_remove>
+<admin_businesszonedepartments_error_notremovable>Selected department can't be removed because it's not part of the current business zone.</admin_businesszonedepartments_error_notremovable>
+<admin_businesszones_error_departmentnotremovable_title>Department not removable</admin_businesszones_error_departmentnotremovable_title>
+<admin_businesszones_error_departmentnotremovable_text>The department $1 can't be removed from this business geography zone because it's linked to a subzone.</admin_businesszones_error_departmentnotremovable_text>
+<admin_businesszones_datas_groups_add>Edit business zone departements</admin_businesszones_datas_groups_add>
+<admin_navigation_standards>Standards</admin_navigation_standards>
+<admin_navigation_incidents>Incidents</admin_navigation_incidents>
+<admin_incidents_title><![CDATA[Administration<br />Incidents management]]></admin_incidents_title>
+<admin_incidents_all>All</admin_incidents_all>
+<admin_incidents_sent>Sent</admin_incidents_sent>
+<admin_incidents_notsent>Not sent</admin_incidents_notsent>
+<admin_incidents_clipboard>To clipboard</admin_incidents_clipboard>
+<admin_incidents_resend>Resend</admin_incidents_resend>
+<admin_incidents_delete>Delete</admin_incidents_delete>
+<admin_incidents_senterror_title>Incident sending error</admin_incidents_senterror_title>
+<admin_incidents_senterror_text>An error occurs during the incident sending. Try to resend again.</admin_incidents_senterror_text>
+<admin_incidents_datas_details>Incident informations</admin_incidents_datas_details>
+<admin_incidents_datas_error>Incident description</admin_incidents_datas_error>
+<admin_incidents_datas_stacktrace>Exception stacktrace</admin_incidents_datas_stacktrace>
+<admin_incidents_datas_incidents_date>Date</admin_incidents_datas_incidents_date>
+<admin_incidents_datas_incidents_user>User</admin_incidents_datas_incidents_user>
+<admin_incidents_datas_incidents_error>Error summary</admin_incidents_datas_incidents_error>
+<admin_incidents_datas_incidents_email>Notified</admin_incidents_datas_incidents_email>
+<admin_incidents_datas_details_date>Date</admin_incidents_datas_details_date>
+<admin_incidents_datas_details_user>User</admin_incidents_datas_details_user>
+<admin_incidents_datas_details_ip>Client IP</admin_incidents_datas_details_ip>
+<admin_incidents_datas_details_os>OS</admin_incidents_datas_details_os>
+<admin_incidents_datas_details_agent>User agent</admin_incidents_datas_details_agent>
+<admin_incidents_datas_details_flash>Flash version</admin_incidents_datas_details_flash>
+<admin_incidents_datas_details_error>Error summary</admin_incidents_datas_details_error>
+<admin_incidents_datas_details_comment>User comment</admin_incidents_datas_details_comment>
+<admin_incidents_datas_details_email>Notified</admin_incidents_datas_details_email>
+<admin_standards_title><![CDATA[Administration<br />Standards management]]></admin_standards_title>
+<admin_standards_active>Actives</admin_standards_active>
+<admin_standards_obsoleted>Obsoleted</admin_standards_obsoleted>
+<admin_standards_all>All</admin_standards_all>
+<admin_standards_datas_details>Standard informations</admin_standards_datas_details>
+<admin_standards_datas_topics>Standard topics</admin_standards_datas_topics>
+<admin_standards_datas_various>Standard alias</admin_standards_datas_various>
+<admin_standards_sources>Source for standards</admin_standards_sources>
+<admin_standards_datas_standards_reference>Reference</admin_standards_datas_standards_reference>
+<admin_standards_datas_standards_title>Title</admin_standards_datas_standards_title>
+<admin_standards_datas_standards_category>Category</admin_standards_datas_standards_category>
+<admin_standards_datas_details_reference>Reference</admin_standards_datas_details_reference>
+<admin_standards_datas_details_title>Title</admin_standards_datas_details_title>
+<admin_standards_datas_details_category>Category</admin_standards_datas_details_category>
+<admin_standards_datas_details_classification>Classification index</admin_standards_datas_details_classification>
+<admin_standards_datas_details_source>Source</admin_standards_datas_details_source>
+<admin_standards_datas_details_published>Publication date</admin_standards_datas_details_published>
+<admin_standards_datas_details_nbtopics># topics</admin_standards_datas_details_nbtopics>
+<admin_standards_datas_details_active>Active</admin_standards_datas_details_active>
+<admin_standards_datas_details_obsoleted>Obsolete</admin_standards_datas_details_obsoleted>
+<admin_standards_datas_details_alias>Alias</admin_standards_datas_details_alias>
+<admin_standards_datas_details_obsolete>Obsoleted alias</admin_standards_datas_details_obsolete>
+<admin_menu_printselect_standard>selected standard</admin_menu_printselect_standard>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+</removed>
+
+</entity>
+</esis>

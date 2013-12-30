@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="esis" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<esis_contextmenu_copyright>Copyright (c) 2004-2008 Entelience SARL, Copyright (c) 2008-2009 Equity SA</esis_contextmenu_copyright>
+<esis_errors_maintenance_title>ESIS is under maintenance</esis_errors_maintenance_title>
+<esis_errors_maintenance_text>ESIS is under maintenance.
+Service is currently unavailable.
+We are sorry for the inconvenience.</esis_errors_maintenance_text>
+<esis_login_copyright><![CDATA[Copyright (c) 2004-2008 Entelience SARL, Copyright (c) 2008-2009 Equity SA, Licensed under the GNU GPL, Version 3]]></esis_login_copyright>
+<esis_menu_home_esis>ESIS home</esis_menu_home_esis>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<esis_errors_accesstryout_text><![CDATA[<br /><br />You have still $1 tryout(s) before your account will be locked out.]]></esis_errors_accesstryout_text>
+<esis_validation_title>Exit ESIS</esis_validation_title>
+<esis_validation_text>Are you sure you want to exit ESIS ?</esis_validation_text>
+<esis_validation_yes>Yes</esis_validation_yes>
+<esis_validation_no>No</esis_validation_no>
+<esis_errors_lostpassword_title>Lost password</esis_errors_lostpassword_title>
+<esis_errors_lostpassword_support_text>Support has been notify. Support will contact you soon.</esis_errors_lostpassword_support_text>
+<esis_errors_lostpassword_email_text>A new generated password has been sent to your email address $1.</esis_errors_lostpassword_email_text>
+<esis_prefs_password_username>Password shouldn't contain user name</esis_prefs_password_username>
+<esis_prefs_password_company>Password shoudn't contain company name</esis_prefs_password_company>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<esis_error_lostpassword_text>Password recovery request for user: </esis_error_lostpassword_text>
+</removed>
+
+</entity>
+</esis>

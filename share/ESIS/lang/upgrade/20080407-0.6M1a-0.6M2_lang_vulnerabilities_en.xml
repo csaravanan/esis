@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="vulnerabilities" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<vuln_navigation_management>Governance</vuln_navigation_management>
+<vuln_errors_raci_text>The current RACI matrix of the item $1 doesn't allow you to perform this action.</vuln_errors_raci_text>
+<vuln_errors_raci_persons>Please contact the Responsible or Accountable person(s) of the item $1.</vuln_errors_raci_persons>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<vuln_raci_edit>Edit privileges</vuln_raci_edit>
+<vuln_analysis_analysis_title>Options Strategy Analysis</vuln_analysis_analysis_title>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<vuln_raci_vrt_edit>Edit</vuln_raci_vrt_edit>
+<vuln_raci_vrtvulns_edit>Edit</vuln_raci_vrtvulns_edit>
+<vuln_raci_investigate_edit>Edit</vuln_raci_investigate_edit>
+<vuln_raci_repair_edit>Edit</vuln_raci_repair_edit>
+<vuln_raci_vulnerability_edit>Edit</vuln_raci_vulnerability_edit>
+<vuln_raci_analysis_edit>Edit</vuln_raci_analysis_edit>
+<vuln_raci_action_edit>Edit</vuln_raci_action_edit>
+<vuln_raci_search_edit>Edit</vuln_raci_search_edit>
+</removed>
+
+</entity>
+</esis>

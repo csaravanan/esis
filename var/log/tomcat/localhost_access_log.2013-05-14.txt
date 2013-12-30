@@ -1,0 +1,11 @@
+14.96.78.22 - - [14/May/2013:14:06:27 +0000] "GET /esis/ HTTP/1.1" 200 896
+14.96.78.22 - - [14/May/2013:14:06:28 +0000] "GET /esis/detection.js HTTP/1.1" 200 1072
+14.96.78.22 - - [14/May/2013:14:06:28 +0000] "GET /esis/js/swfobject.js HTTP/1.1" 200 6880
+14.96.78.22 - - [14/May/2013:14:06:32 +0000] "GET /esis/flash_detection.swf HTTP/1.1" 200 491
+14.96.78.22 - - [14/May/2013:14:06:34 +0000] "GET /esis/html/downloads/download_only_player.html HTTP/1.1" 200 4592
+14.96.78.22 - - [14/May/2013:14:06:35 +0000] "GET /esis/html/downloads/AC_OETags.js HTTP/1.1" 404 1051
+14.96.78.22 - - [14/May/2013:14:06:35 +0000] "GET /esis/html/downloads/images/logo_flash_player_mx_120x120.gif HTTP/1.1" 200 1575
+14.96.78.22 - - [14/May/2013:14:06:35 +0000] "GET /esis/html/downloads/images/background.jpg HTTP/1.1" 200 10344
+14.96.78.22 - - [14/May/2013:14:06:38 +0000] "GET /esis/module.jsp HTTP/1.1" 200 1253
+14.96.78.22 - - [14/May/2013:14:10:24 +0000] "GET /esis/ESIS.swf HTTP/1.1" 200 1266544
+14.96.78.22 - - [14/May/2013:14:11:04 +0000] "GET /esis/html/langxml?entity=esis HTTP/1.1" 200 13803

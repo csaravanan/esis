@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_esis_fr.xml *** -->
+<entity name="esis" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<esis_contextmenu_copyright>Copyright (c) 2004-08 Entelience</esis_contextmenu_copyright>
+<esis_login_copyright><![CDATA[Copyright © 2004-08 Entelience. Tous droits réservés.<br />ESIS, ICARRE are either trademarks of registered trademarks of Entelience in France, United States or other countries. Patent pending.]]></esis_login_copyright><!-- html -->
+<esis_icarre_i>I</esis_icarre_i>
+<esis_icarre_c>C</esis_icarre_c>
+<esis_icarre_a>A</esis_icarre_a>
+<esis_icarre_r>R</esis_icarre_r>
+<esis_icarre_e>E</esis_icarre_e>
+<esis_icarre_intergrity>INTEGRITY</esis_icarre_intergrity>
+<esis_icarre_compliance>COMPLIANCE</esis_icarre_compliance>
+<esis_icarre_availability>AVAILABILITY</esis_icarre_availability>
+<esis_icarre_reactivity>REACTIVITY</esis_icarre_reactivity>
+<esis_icarre_robustness>ROBUSTNESS</esis_icarre_robustness>
+<esis_icarre_exposure>EXPOSURE</esis_icarre_exposure>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+</removed>
+
+</entity>
+</esis>

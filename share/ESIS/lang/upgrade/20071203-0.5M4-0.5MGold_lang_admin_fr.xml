@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_vulnerabilities_fr.xml *** -->
+<entity name="admin" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<admin_users_datas_details_timezone>Fuseau horaire</admin_users_datas_details_timezone>
+<admin_users_datas_details_locked>Accès verrouillé</admin_users_datas_details_locked>
+<admin_user_timezone>Fuseau horaire</admin_user_timezone>
+<admin_user_notimezone>pas de fuseau horaire</admin_user_notimezone>
+<admin_user_locked>Accès verrouillé</admin_user_locked>
+<admin_validation_userupdatedisabled_text>Le fait de désactiver cet utilisateur ne prendra pas en compte les autres modifications. Voulez-vous supprimer cet utilisateur ?</admin_validation_userupdatedisabled_text>
+<admin_moduleraci_delaychange_title>Délai pour la modification du Raci sur $1</admin_moduleraci_delaychange_title>
+<admin_moduleraci_delaychange_text>La modification du Raci concernant le module $1 a été mise en attente. Un responsable ou une autorité doit valider ce changement avant qu'il ne soit appliqué au module.</admin_moduleraci_delaychange_text>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+</removed>
+
+</entity>
+</esis>

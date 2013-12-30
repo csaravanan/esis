@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="admin" lang="en">
+<added>
+<!-- FILE *** lang_admin_en.xml *** -->
+
+<!-- ******************** ADDED ******************** -->
+
+<!-- Module Informations -->
+<admin_moduledetails_title>Module informations</admin_moduledetails_title>
+<admin_moduledetails_module>Module</admin_moduledetails_module>
+<admin_moduledetails_version>Version</admin_moduledetails_version>
+<admin_moduledetails_nbusers># users</admin_moduledetails_nbusers>
+<admin_moduledetails_validity>Validity</admin_moduledetails_validity>
+<admin_moduledetails_description>Description</admin_moduledetails_description>
+<admin_moduledetails_active>Active</admin_moduledetails_active>
+<admin_moduledetails_registered>Registered</admin_moduledetails_registered>
+
+<!-- Module Preference Edit -->
+<admin_moduleprefs_edit_title>Edit preference</admin_moduleprefs_edit_title>
+<admin_moduleprefs_edit_name>Preference</admin_moduleprefs_edit_name>
+<admin_moduleprefs_edit_currentvalue>Current value</admin_moduleprefs_edit_currentvalue>
+<admin_moduleprefs_edit_newvalue>New value</admin_moduleprefs_edit_newvalue>
+<admin_moduleprefs_edit_edit>Update preference</admin_moduleprefs_edit_edit>
+</added>
+<!-- ******************** REMOVED ******************** -->
+</entity>
+</esis>

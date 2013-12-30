@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="asset" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<asset_vpv_title>Vendors, products and versions management</asset_vpv_title>
+<asset_vpv_search_vendors>Vendors</asset_vpv_search_vendors>
+<asset_vpv_search_products>Products</asset_vpv_search_products>
+<asset_vpv_search_versions>Versions</asset_vpv_search_versions>
+<asset_vpv_search_find>Ok</asset_vpv_search_find>
+<asset_vpv_search_error_text>The search text must contain at least 2 chars.</asset_vpv_search_error_text>
+<asset_vpv_search_error_selection>At least one filter must be selected.</asset_vpv_search_error_selection>
+<asset_menu_filter_my>MY</asset_menu_filter_my>
+<asset_menu_filter_all>ALL</asset_menu_filter_all>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<asset_assets_title>Assets management</asset_assets_title>
+<asset_assets_data_assets_ip>Main IP address</asset_assets_data_assets_ip>
+<asset_assets_data_assets_fqdn>Fully qualified domain name</asset_assets_data_assets_fqdn>
+<asset_assets_data_assets_active>Activated</asset_assets_data_assets_active>
+<asset_assets_data_pageempty>0 asset</asset_assets_data_pageempty>
+<asset_assets_data_pages>page $1 of $2 ( $3 assets )</asset_assets_data_pages>
+<asset_assets_data_details>Asset informations</asset_assets_data_details>
+<asset_assets_data_details_ip>Main IP address</asset_assets_data_details_ip>
+<asset_assets_data_details_ips>Others IP addresses</asset_assets_data_details_ips>
+<asset_assets_data_details_fqdn>Fully qualified domain name</asset_assets_data_details_fqdn>
+<asset_assets_data_details_serial>Serial number</asset_assets_data_details_serial>
+<asset_assets_data_details_active>Activated</asset_assets_data_details_active>
+<asset_assets_data_details_classification>Security classification</asset_assets_data_details_classification>
+<asset_assets_data_details_businessline>Business line</asset_assets_data_details_businessline>
+<asset_assets_data_details_availability>Availability</asset_assets_data_details_availability>
+<asset_assets_data_details_type>Type</asset_assets_data_details_type>
+<asset_assets_data_details_os>Operating system</asset_assets_data_details_os>
+<asset_assets_data_details_macaddress>Main MAC address</asset_assets_data_details_macaddress>
+<asset_assets_data_details_dhcp>Use DHCP</asset_assets_data_details_dhcp>
+<asset_assets_data_details_host>Host name</asset_assets_data_details_host>
+<asset_assets_data_details_domain>Domain name</asset_assets_data_details_domain>
+<asset_assets_data_details_timezone>Timezone</asset_assets_data_details_timezone>
+<asset_assets_data_details_applications>Applications</asset_assets_data_details_applications>
+<asset_assets_data_details_macaddresses>Others MAC addresses</asset_assets_data_details_macaddresses>
+<asset_asset_title>Asset informations</asset_asset_title>
+<asset_assets_all>All</asset_assets_all>
+<asset_assets_active>Actives</asset_assets_active>
+<asset_assets_inactive>Inactives</asset_assets_inactive>
+<asset_assets_data_assets_host>Host name</asset_assets_data_assets_host>
+<asset_asset_ips>IP addresses</asset_asset_ips>
+<asset_asset_macaddresses>MAC addresses</asset_asset_macaddresses>
+<asset_asset_products>Applications</asset_asset_products>
+<asset_asset_dhcp>Use DHCP</asset_asset_dhcp>
+<asset_asset_ip>Main IP address</asset_asset_ip>
+<asset_asset_macaddress>Main MAC address</asset_asset_macaddress>
+<asset_asset_fqdn>Full qualified domain name</asset_asset_fqdn>
+<asset_asset_host>Host name</asset_asset_host>
+<asset_asset_domain>Domain name</asset_asset_domain>
+<asset_asset_serialnumber>Serial number</asset_asset_serialnumber>
+<asset_asset_classification>Security classification</asset_asset_classification>
+<asset_asset_business>Business line</asset_asset_business>
+<asset_asset_availability>Availability</asset_asset_availability>
+<asset_asset_type>Type</asset_asset_type>
+<asset_asset_active>Is active</asset_asset_active>
+<asset_asset_os>Operating system</asset_asset_os>
+<asset_asset_timezone>System timezone</asset_asset_timezone>
+<asset_asset_ips_add>Add an IP address</asset_asset_ips_add>
+<asset_asset_macaddresses_add>Add a MAC address</asset_asset_macaddresses_add>
+<asset_asset_products_add>Add a product</asset_asset_products_add>
+<asset_asset_add>Add</asset_asset_add>
+<asset_asset_update>Update</asset_asset_update>
+<asset_asset_cancel>Cancel</asset_asset_cancel>
+<asset_asset_changeos>change</asset_asset_changeos>
+<asset_asset_deleteos>delete</asset_asset_deleteos>
+<asset_asset_ips_main>Main IP</asset_asset_ips_main>
+<asset_asset_macaddresses_main>Main MAC</asset_asset_macaddresses_main>
+<asset_default_nc>N.C.</asset_default_nc>
+<asset_assets_data_assets_add>Add a new asset</asset_assets_data_assets_add>
+<asset_asset_notimezone>No timezone defined</asset_asset_notimezone>
+<asset_asset_notype>No type defined</asset_asset_notype>
+<asset_asset_noclassification>No security classification defined</asset_asset_noclassification>
+<asset_asset_noavailability>No availability defined</asset_asset_noavailability>
+<asset_asset_nobusiness>No business line defined</asset_asset_nobusiness>
+<asset_asset_error_data>One of this field is required: main IP, FQDN, host name or serial number.</asset_asset_error_data>
+<asset_asset_mac_title>Add a new MAC address</asset_asset_mac_title>
+<asset_asset_mac_name>Add a MAC address name</asset_asset_mac_name>
+<asset_asset_mac_main>Is the main MAC address</asset_asset_mac_main>
+<asset_asset_mac_add>Add</asset_asset_mac_add>
+<asset_asset_mac_cancel>Cancel</asset_asset_mac_cancel>
+<asset_asset_ip_error>A MAC address must be filled</asset_asset_ip_error>
+<asset_asset_ip_title>Add a new IP address</asset_asset_ip_title>
+<asset_asset_ip_name>Add an IP address name</asset_asset_ip_name>
+<asset_asset_ip_main>Is the main IP address</asset_asset_ip_main>
+<asset_asset_ip_add>Add</asset_asset_ip_add>
+<asset_asset_ip_cancel>Cancel</asset_asset_ip_cancel>
+<asset_asset_ip_error>An IP address must be filled</asset_asset_ip_error>
+<asset_asset_os_title>Add/Update the operating system</asset_asset_os_title>
+<asset_asset_os_validate>Ok</asset_asset_os_validate>
+<asset_asset_os_search>Search for an OS</asset_asset_os_search>
+<asset_asset_os_data_products>List of products</asset_asset_os_data_products>
+<asset_asset_os_add>Add</asset_asset_os_add>
+<asset_asset_product_title>Add a new application</asset_asset_product_title>
+<asset_asset_product_validate>Ok</asset_asset_product_validate>
+<asset_asset_product_search>Search for an application</asset_asset_product_search>
+<asset_asset_product_data_products>List of products</asset_asset_product_data_products>
+<asset_asset_product_add>Add</asset_asset_product_add>
+<asset_asset_product_error_search>Search text must contain at least 2 characters.</asset_asset_product_error_search>
+<asset_asset_product_error_empty>No product selected.</asset_asset_product_error_empty>
+<asset_menu_asset_assets>Assets</asset_menu_asset_assets>
+<asset_menu_asset_vpv>Products</asset_menu_asset_vpv>
+<asset_menu_asset_company>Company</asset_menu_asset_company>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+</removed>
+
+</entity>
+</esis>

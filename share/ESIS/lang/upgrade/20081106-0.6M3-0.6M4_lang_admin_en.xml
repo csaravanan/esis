@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="admin" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<admin_menu_home_esis>ESIS home</admin_menu_home_esis>
+<admin_users_datas_groups_group>Group</admin_users_datas_groups_group>
+<admin_locations_datas_groups_add>Edit location departments</admin_locations_datas_groups_add>
+<admin_locations_datas_users_name>User names</admin_locations_datas_users_name>
+<admin_locations_datas_users_add>Edit location users</admin_locations_datas_users_add>
+<admin_businesszones_datas_parentzones>Parents business zones</admin_businesszones_datas_parentzones>
+<admin_businesszones_datas_locations_name>Locations</admin_businesszones_datas_locations_name>
+<admin_businesszones_datas_locations_country>Countries</admin_businesszones_datas_locations_country>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<admin_user_history>History</admin_user_history>
+<admin_user_loginhistory>Last logins</admin_user_loginhistory>
+<admin_userhistory_title>User history</admin_userhistory_title>
+<admin_userhistory_datas_date>Change date</admin_userhistory_datas_date>
+<admin_userhistory_datas_modifier>Modifier</admin_userhistory_datas_modifier>
+<admin_userhistory_datas_user>User</admin_userhistory_datas_user>
+<admin_userhistory_datas_location>Location</admin_userhistory_datas_location>
+<admin_userhistory_datas_company>Company</admin_userhistory_datas_company>
+<admin_userhistory_datas_admin>Admin.</admin_userhistory_datas_admin>
+<admin_userhistory_datas_disabled>Disabled</admin_userhistory_datas_disabled>
+<admin_userhistory_datas_locked>Locked</admin_userhistory_datas_locked>
+<admin_userloginhistory_title>User last logins history</admin_userloginhistory_title>
+<admin_userloginhistory_datas_date>Try date</admin_userloginhistory_datas_date>
+<admin_userloginhistory_datas_success>Success</admin_userloginhistory_datas_success>
+<admin_userloginhistory_datas_remoteip>Remote IP</admin_userloginhistory_datas_remoteip>
+<admin_users_users>Users</admin_users_users>
+<admin_users_infos>More informations</admin_users_infos>
+<admin_users_user>User</admin_users_user>
+<admin_users_back>Go back</admin_users_back>
+<admin_users_datas_locations_name>Locations</admin_users_datas_locations_name>
+<admin_users_datas_locations_company>Companies</admin_users_datas_locations_company>
+<admin_users_datas_locations_country>Countries</admin_users_datas_locations_country>
+<admin_users_datas_locations_nolocation>No location</admin_users_datas_locations_nolocation>
+<admin_users_datas_zones>Present in the business zones</admin_users_datas_zones>
+<admin_groups_groups>Groups</admin_groups_groups>
+<admin_groups_infos>More informations</admin_groups_infos>
+<admin_groups_group>Group</admin_groups_group>
+<admin_groups_group_department>department of $1</admin_groups_group_department>
+<admin_groups_back>Go back</admin_groups_back>
+<admin_groups_datas_users_name>User names</admin_groups_datas_users_name>
+<admin_groups_datas_locations_name>Locations</admin_groups_datas_locations_name>
+<admin_groups_datas_locations_company>Companies</admin_groups_datas_locations_company>
+<admin_groups_datas_locations_country>Countries</admin_groups_datas_locations_country>
+<admin_groups_datas_locations_add>Add/Remove a location</admin_groups_datas_locations_add>
+<admin_groups_datas_businesszones>Present in the business zones</admin_groups_datas_businesszones>
+<admin_groups_datas_businesszones_add>Add/Remove a business zone</admin_groups_datas_businesszones_add>
+<admin_groups_error_businesszonenotremovable_title>Business zone not removable</admin_groups_error_businesszonenotremovable_title>
+<admin_groups_error_businesszonenotremovable_text>The business zone $1 can't be removed from this department because this is a subzone.</admin_groups_error_businesszonenotremovable_text>
+<admin_locations_locations>Locations</admin_locations_locations>
+<admin_locations_infos>More informations</admin_locations_infos>
+<admin_locations_location_companycountry>linked to company $1 in country $2</admin_locations_location_companycountry>
+<admin_locations_location>Location</admin_locations_location>
+<admin_locations_back>Go back</admin_locations_back>
+<admin_locations_map>Location map</admin_locations_map>
+<admin_locations_datas_users_members>Members</admin_locations_datas_users_members>
+<admin_locations_datas_businesszones>Present in the business zones</admin_locations_datas_businesszones>
+<admin_locations_datas_businesszones_add>Edit location business zones</admin_locations_datas_businesszones_add>
+<admin_locations_error_businesszonenotremovable_title>Business zone not removable</admin_locations_error_businesszonenotremovable_title>
+<admin_locations_error_businesszonenotremovable_text>The business zone $1 can't be removed from this location because this is a subzone.</admin_locations_error_businesszonenotremovable_text>
+<admin_businesszones_zones>Business zones</admin_businesszones_zones>
+<admin_businesszones_infos>More informations</admin_businesszones_infos>
+<admin_businesszones_zone>Business zone</admin_businesszones_zone>
+<admin_businesszones_back>Go back</admin_businesszones_back>
+<admin_businesszones_map>Locations map</admin_businesszones_map>
+<admin_businesszones_datas_locations_company>Companies</admin_businesszones_datas_locations_company>
+<admin_grouplocations_title>Locations of department $1</admin_grouplocations_title>
+<admin_grouplocations_remove>remove all</admin_grouplocations_remove>
+<admin_grouplocations_datas_locations>Locations</admin_grouplocations_datas_locations>
+<admin_grouplocations_datas_membership>Department's locations</admin_grouplocations_datas_membership>
+<admin_groupbusinesszones_title>Business zones for department $1</admin_groupbusinesszones_title>
+<admin_groupbusinesszones_datas_businesszones>Business zones</admin_groupbusinesszones_datas_businesszones>
+<admin_groupbusinesszones_datas_membership>Business zones linked</admin_groupbusinesszones_datas_membership>
+<admin_groupbusinesszones_remove>remove all business zones directly included</admin_groupbusinesszones_remove>
+<admin_groupbusinesszones_error_notremovable>Selected business zone can't be removed because it's not directly linked to department.</admin_groupbusinesszones_error_notremovable>
+<admin_locationbusinesszones_title>Business zones for location $1</admin_locationbusinesszones_title>
+<admin_locationbusinesszones_datas_businesszones>Business zones</admin_locationbusinesszones_datas_businesszones>
+<admin_locationbusinesszones_datas_membership>Business zones linked</admin_locationbusinesszones_datas_membership>
+<admin_locationbusinesszones_remove>remove all business zones directly included</admin_locationbusinesszones_remove>
+<admin_locationbusinesszones_error_notremovable>Selected business zone can't be removed because it's not direclty linked to location.</admin_locationbusinesszones_error_notremovable>
+<admin_monitoring_legend_nodata>No data</admin_monitoring_legend_nodata>
+<admin_monitoring_legend_noexecution>No execution</admin_monitoring_legend_noexecution>
+<admin_monitoring_logs_data_name>File</admin_monitoring_logs_data_name>
+<admin_monitoring_logs_data_size>Size</admin_monitoring_logs_data_size>
+<admin_monitoring_logs_data_date>Date</admin_monitoring_logs_data_date>
+<admin_monitoring_logs_maindirectory>Logs directory</admin_monitoring_logs_maindirectory>
+<admin_monitoring_logs_download>Download</admin_monitoring_logs_download>
+<admin_monitoring_logs_email>Send to support</admin_monitoring_logs_email>
+<admin_monitoring_probesxml_text>Probes XML export</admin_monitoring_probesxml_text>
+<admin_monitoring_probesxml_download>Download</admin_monitoring_probesxml_download>
+<admin_monitoring_probesxml_email>Send to support</admin_monitoring_probesxml_email>
+<admin_monitoring_senterror_title>File sending error</admin_monitoring_senterror_title>
+<admin_monitoring_senterror_text>An error occurs during the file sending. Try to resend again.</admin_monitoring_senterror_text>
+<admin_validation_probe_title>Validate the unregistration</admin_validation_probe_title>
+<admin_validation_probe_text>When unregistering this probe, the probe license file will be erase ! Are you sure you want to unregister this probe ?</admin_validation_probe_text>
+<admin_proberegistration_title>Add a probe license file</admin_proberegistration_title>
+<admin_proberegistration_files>License files</admin_proberegistration_files>
+<admin_proberegistration_upload>Select the license file to upload</admin_proberegistration_upload>
+<admin_proberegistration_notify>Notify support</admin_proberegistration_notify>
+<admin_proberegistration_upload_uploading>Uploading file $1.</admin_proberegistration_upload_uploading>
+<admin_proberegistration_upload_finished>Upload of file $1 finished.</admin_proberegistration_upload_finished>
+<admin_proberegistration_upload_select>Attempting to upload file $1.</admin_proberegistration_upload_select>
+<admin_proberegistration_upload_maxsize>The file $1 has exceeded the authorized maximum size of $2 octets.</admin_proberegistration_upload_maxsize>
+<admin_proberegistration_upload_httperror>HTTP error $1 reached when uploading file $2. Please verify that file is in a correct ESIS license format and doesn't have an outdated validity date and try again.</admin_proberegistration_upload_httperror>
+<admin_proberegistration_upload_ioerror>Input/Output error when uploading file $1. Please verify that file isn't empty and try again.</admin_proberegistration_upload_ioerror>
+<admin_proberegistration_upload_securityerror>Security error ($1) reached when uploading file $2.</admin_proberegistration_upload_securityerror>
+<admin_reports_title><![CDATA[Administration & Configuration<br />Reports management]]></admin_reports_title>
+<admin_reports_datas_reports_name>Reports</admin_reports_datas_reports_name>
+<admin_reports_datas_reports_description>Descriptions</admin_reports_datas_reports_description>
+<admin_reports_datas_reports_class>Class names</admin_reports_datas_reports_class>
+<admin_reports_datas_reports_module>Modules</admin_reports_datas_reports_module>
+<admin_reports_pageempty>0 report</admin_reports_pageempty>
+<admin_reports_pages>page $1 of $2 ( $3 reports )</admin_reports_pages>
+<admin_navigation_reports>Reports</admin_navigation_reports>
+<admin_report_senterror_title>File sending error</admin_report_senterror_title>
+<admin_report_senterror_text>An error occurs during the file sending. Try to resend again.</admin_report_senterror_text>
+<admin_report_download>Download</admin_report_download>
+<admin_report_sendemail>Send email</admin_report_sendemail>
+<admin_report_title>Report informations</admin_report_title>
+<admin_report_name>Report</admin_report_name>
+<admin_report_description>Description</admin_report_description>
+<admin_report_class>Report class</admin_report_class>
+<admin_report_module>Module</admin_report_module>
+<admin_report_moduleclass>Module class</admin_report_moduleclass>
+<admin_report_email>Send file by mail</admin_report_email>
+<admin_report_data_files_name>Report file</admin_report_data_files_name>
+<admin_report_data_files_date>Date</admin_report_data_files_date>
+<admin_report_error_email>An email must be selected.</admin_report_error_email>
+<admin_user_error_password_error_username>User name is in the password</admin_user_error_password_error_username>
+<admin_user_error_password_error_company>Company name is in the password</admin_user_error_password_error_company>
+<admin_default_month_jan>January</admin_default_month_jan>
+<admin_default_month_feb>Febuary</admin_default_month_feb>
+<admin_default_month_mar>March</admin_default_month_mar>
+<admin_default_month_apr>April</admin_default_month_apr>
+<admin_default_month_may>May</admin_default_month_may>
+<admin_default_month_jun>June</admin_default_month_jun>
+<admin_default_month_jul>July</admin_default_month_jul>
+<admin_default_month_aug>August</admin_default_month_aug>
+<admin_default_month_sep>September</admin_default_month_sep>
+<admin_default_month_oct>October</admin_default_month_oct>
+<admin_default_month_nov>November</admin_default_month_nov>
+<admin_default_month_dec>December</admin_default_month_dec>
+<admin_default_day_sun>S</admin_default_day_sun>
+<admin_default_day_mon>M</admin_default_day_mon>
+<admin_default_day_tue>T</admin_default_day_tue>
+<admin_default_day_wed>W</admin_default_day_wed>
+<admin_default_day_thu>T</admin_default_day_thu>
+<admin_default_day_fri>F</admin_default_day_fri>
+<admin_default_day_sat>S</admin_default_day_sat>
+<admin_standard_add_title>Add a new standard</admin_standard_add_title>
+<admin_standard_update_title>Update a standard</admin_standard_update_title>
+<admin_standard_stdtitle>Title</admin_standard_stdtitle>
+<admin_standard_reference>Reference</admin_standard_reference>
+<admin_standard_classification>Classification</admin_standard_classification>
+<admin_standard_category>Category</admin_standard_category>
+<admin_standard_source>Source</admin_standard_source>
+<admin_standard_publication>Publication</admin_standard_publication>
+<admin_standard_active>Active</admin_standard_active>
+<admin_standard_obsolete>Obsolete</admin_standard_obsolete>
+<admin_standard_add>Add</admin_standard_add>
+<admin_standard_update>Update</admin_standard_update>
+<admin_standard_cancel>Cancel</admin_standard_cancel>
+<admin_standard_topics>Topics</admin_standard_topics>
+<admin_standard_error_title>Title must be filled.</admin_standard_error_title>
+<admin_standard_error_reference>Reference must be filled.</admin_standard_error_reference>
+<admin_standard_error_source>Source must be selected.</admin_standard_error_source>
+<admin_standardtopics_title>Manage the standard topics</admin_standardtopics_title>
+<admin_standardtopics_topictitle>Topic</admin_standardtopics_topictitle>
+<admin_standardtopics_reference>Reference</admin_standardtopics_reference>
+<admin_standardtopics_content>Content</admin_standardtopics_content>
+<admin_standardtopics_category>Category</admin_standardtopics_category>
+<admin_standardtopics_add>Add</admin_standardtopics_add>
+<admin_standardtopics_update>Update</admin_standardtopics_update>
+<admin_standardtopics_cancel>Cancel</admin_standardtopics_cancel>
+<admin_standardtopics_error_update>Can't be updated, need to Add</admin_standardtopics_error_update>
+<admin_standardtopics_error_title>Topic must be filled</admin_standardtopics_error_title>
+<admin_standardtopics_error_reference>Reference must be filled</admin_standardtopics_error_reference>
+<admin_standardtopics_error_referenceformat>Format reference with number: NN.xx.nn</admin_standardtopics_error_referenceformat>
+<admin_standardtopics_error_category>Category must be selected</admin_standardtopics_error_category>
+<admin_standardsources_title>Sources for standards</admin_standardsources_title>
+<admin_standardsources_add>Add</admin_standardsources_add>
+<admin_standardsources_update>Update</admin_standardsources_update>
+<admin_standardsources_cancel>Cancel</admin_standardsources_cancel>
+<admin_standardsources_add_source_title>Add a source</admin_standardsources_add_source_title>
+<admin_standardsources_update_source_title>Update a source</admin_standardsources_update_source_title>
+<admin_standardsources_add_source>Add a new source</admin_standardsources_add_source>
+<admin_standardsources_update_source>Update the source</admin_standardsources_update_source>
+<admin_standardsources_sources>Sources</admin_standardsources_sources>
+<admin_standardsources_datas_sources_add>Add a new source</admin_standardsources_datas_sources_add>
+<admin_standards_sources_view>Sources</admin_standards_sources_view>
+<admin_standards_categories_view>Categories</admin_standards_categories_view>
+<admin_standardcategories_title>Categories for standards</admin_standardcategories_title>
+<admin_standardcategories_add>Add</admin_standardcategories_add>
+<admin_standardcategories_update>Update</admin_standardcategories_update>
+<admin_standardcategories_cancel>Cancel</admin_standardcategories_cancel>
+<admin_standardcategories_add_category_title>Add a category</admin_standardcategories_add_category_title>
+<admin_standardcategories_update_category_title>Update a category</admin_standardcategories_update_category_title>
+<admin_standardcategories_add_category>Add a new category</admin_standardcategories_add_category>
+<admin_standardcategories_update_category>Update the category</admin_standardcategories_update_category>
+<admin_standardcategories_categories>Categories</admin_standardcategories_categories>
+<admin_standardcategories_datas_categories_add>Add a new category</admin_standardcategories_datas_categories_add>
+<admin_standardtopiccategories_title>Categories for standards topics</admin_standardtopiccategories_title>
+<admin_standardtopiccategories_add>Add</admin_standardtopiccategories_add>
+<admin_standardtopiccategories_update>Update</admin_standardtopiccategories_update>
+<admin_standardtopiccategories_cancel>Cancel</admin_standardtopiccategories_cancel>
+<admin_standardtopiccategories_add_category_title>Add a topic category</admin_standardtopiccategories_add_category_title>
+<admin_standardtopiccategories_update_category_title>Update a topic category</admin_standardtopiccategories_update_category_title>
+<admin_standardtopiccategories_add_category>Add a new topic category</admin_standardtopiccategories_add_category>
+<admin_standardtopiccategories_update_category>Update the topic category</admin_standardtopiccategories_update_category>
+<admin_standardtopiccategories_categories>Topics categories</admin_standardtopiccategories_categories>
+<admin_standardtopiccategories_datas_categories_add>Add a new topic category</admin_standardtopiccategories_datas_categories_add>
+<admin_standardtopics_categories>Categories</admin_standardtopics_categories>
+<admin_standard_category_none>No category defined</admin_standard_category_none>
+<admin_standards_datas_standards_add>Add a new standard</admin_standards_datas_standards_add>
+<admin_standardtopics_topics>Topics</admin_standardtopics_topics>
+<admin_preferences_title><![CDATA[Administration & Configuration<br />Global preferences]]></admin_preferences_title>
+<admin_preferences_return>Return to modules</admin_preferences_return>
+<admin_preferences_datas_prefs_parameter>Parameters</admin_preferences_datas_prefs_parameter>
+<admin_preferences_datas_prefs_value>Values</admin_preferences_datas_prefs_value>
+<admin_preferences_datas_prefs_defaultvalue>Default values</admin_preferences_datas_prefs_defaultvalue>
+<admin_preferences_description>Description</admin_preferences_description>
+<admin_preferences_datas_prefhistory_value>Value</admin_preferences_datas_prefhistory_value>
+<admin_preferences_datas_prefhistory_modifier>Modifier</admin_preferences_datas_prefhistory_modifier>
+<admin_preferences_datas_prefhistory_date>Date</admin_preferences_datas_prefhistory_date>
+<admin_preferences_commands>Use ESIS command lines to update these preferences.</admin_preferences_commands>
+<admin_modules_preferences>Global prefs</admin_modules_preferences>
+<admin_report_files_pages>page $1 of $2 ( $3 files )</admin_report_files_pages>
+<admin_report_files_pageempty>0 files</admin_report_files_pageempty>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<admin_businesszones_locations>Locations</admin_businesszones_locations>
+<admin_businesszones_zones>Geo. zones</admin_businesszones_zones>
+<admin_businesszones_groups>Departments</admin_businesszones_groups>
+</removed>
+
+</entity>
+</esis>

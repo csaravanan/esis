@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_vulnerabilities_en.xml *** -->
+<entity name="admin" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<admin_users_datas_details_timezone>Timezone</admin_users_datas_details_timezone>
+<admin_users_datas_details_locked>Locked</admin_users_datas_details_locked>
+<admin_user_timezone>Timezone</admin_user_timezone>
+<admin_user_notimezone>no user's timezone</admin_user_notimezone>
+<admin_user_locked>Locked</admin_user_locked>
+<admin_validation_userupdatedisabled_text>Removing this user will discard all others user modifications. Would you like to remove this user ?</admin_validation_userupdatedisabled_text>
+<admin_moduleraci_delaychange_title>Delay for Raci changes on $1</admin_moduleraci_delaychange_title>
+<admin_moduleraci_delaychange_text>The Raci change on module $1 have been delayed. A responsible or an accountable user of this module must validate the change before it's applied to module.</admin_moduleraci_delaychange_text>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+</removed>
+
+</entity>
+</esis>

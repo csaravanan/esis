@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="explorer" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<explorer_menu_home_esis>Accueil ESIS</explorer_menu_home_esis>
+<explorer_categories_legend_verybad>Jour -15 à jour -30</explorer_categories_legend_verybad>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<explorer_default_yes>Oui</explorer_default_yes>
+<explorer_default_no>Non</explorer_default_no>
+<explorer_navigation_services>Visualiseur de services</explorer_navigation_services>
+<explorer_navigation_data>Visualiseur de données</explorer_navigation_data>
+<explorer_data_title><![CDATA[Consolidation:<br />Gouvernance, Conformité et Risques]]></explorer_data_title>
+<explorer_data_tab_malwares>Malveillances</explorer_data_tab_malwares>
+<explorer_data_tab_domains>Noms de domaine</explorer_data_tab_domains>
+<explorer_data_tab_sites>Sites web</explorer_data_tab_sites>
+<explorer_data_pageempty_malwares>0 logiciel malveillant</explorer_data_pageempty_malwares>
+<explorer_data_pages_malwares>page $1 sur $2 ( $3 logiciels malveillants )</explorer_data_pages_malwares>
+<explorer_data_pageempty_domains>0 nom de domaine</explorer_data_pageempty_domains>
+<explorer_data_pages_domains>page $1 sur $2 ( $3 noms de domaine )</explorer_data_pages_domains>
+<explorer_data_pageempty_sites>0 site web</explorer_data_pageempty_sites>
+<explorer_data_pages_sites>page $1 sur $2 ( $3 sites web )</explorer_data_pages_sites>
+<explorer_data_nodata>Aucune donnée n'a été trouvée.</explorer_data_nodata>
+<explorer_data_domains_data_name>Noms de domaine</explorer_data_domains_data_name>
+<explorer_data_domains_data_firstoccurence>Premières fois</explorer_data_domains_data_firstoccurence>
+<explorer_data_domains_data_lastoccurence>Dernières fois</explorer_data_domains_data_lastoccurence>
+<explorer_data_sites_data_name>Sites</explorer_data_sites_data_name>
+<explorer_data_sites_data_domain>Noms de domaine</explorer_data_sites_data_domain>
+<explorer_data_sites_data_category>Catégories</explorer_data_sites_data_category>
+<explorer_data_sites_data_intranet>Intranet</explorer_data_sites_data_intranet>
+<explorer_data_sites_data_firstoccurence>Premières fois</explorer_data_sites_data_firstoccurence>
+<explorer_data_sites_data_lastoccurence>Dernières fois</explorer_data_sites_data_lastoccurence>
+<explorer_data_malwares_data_name>Logiciels malveillants</explorer_data_malwares_data_name>
+<explorer_data_malwares_data_description>Descriptions</explorer_data_malwares_data_description>
+<explorer_data_malwares_data_type>Types</explorer_data_malwares_data_type>
+<explorer_data_malwares_data_occurences># apparitions</explorer_data_malwares_data_occurences>
+<explorer_data_malwares_data_firstoccurence>Premières fois</explorer_data_malwares_data_firstoccurence>
+<explorer_data_malwares_data_lastoccurence>Dernières fois</explorer_data_malwares_data_lastoccurence>
+<explorer_data_malwares_data_assigndate>Ajout au CME</explorer_data_malwares_data_assigndate>
+<explorer_categories_legend_nodata><![CDATA[> à jour -30/pas de données]]></explorer_categories_legend_nodata>
+<explorer_data_tab_ips>Adresses IP</explorer_data_tab_ips>
+<explorer_data_pageempty_ips>0 adresse IP</explorer_data_pageempty_ips>
+<explorer_data_pages_ips>page $1 sur $2 ( $3 adresses IP )</explorer_data_pages_ips>
+<explorer_data_ips_data_fullname>Nom complet IP</explorer_data_ips_data_fullname>
+<explorer_data_ips_data_category>Catégories</explorer_data_ips_data_category>
+<explorer_data_ips_data_occurences># apparitions</explorer_data_ips_data_occurences>
+<explorer_data_ips_data_creation>Date création</explorer_data_ips_data_creation>
+<explorer_data_ips_data_lastseen>Dernière visualisation</explorer_data_ips_data_lastseen>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+</removed>
+
+</entity>
+</esis>

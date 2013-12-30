@@ -1,0 +1,110 @@
+#!/bin/sh
+#   
+#  ESIS
+#  
+#  Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+#  
+#  Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+#                          Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+#  
+#  
+#  This file is part of ESIS.
+#  
+#  ESIS is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation version 3 of the License.
+#  
+#  ESIS is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+#  
+#  $Id esis_install_db 30 2009-11-10 10:29:30Z pleberre $
+#
+
+#
+# Install / reinstall database related stuff
+#
+. `dirname $0`/esis_env
+
+echo "Installing ESIS database in ${ESIS_HOME}/pgdata \n";
+
+if [ -d ${ESIS_HOME}/pgdata ]; then
+    echo "Database directory ${ESIS_HOME}/pgdata already exists. Cannot reinstall"; exit 1
+fi
+
+	echo "Creating database directory ${ESIS_HOME}/pgdata";
+	mkdir -p ${ESIS_HOME}/pgdata
+	chmod 700 ${ESIS_HOME}/pgdata
+	if [ -f $HOME/.pgpass ]; then
+		echo "Removing a previous $HOME/.pgpass file";
+		rm -rf $HOME/.pgpass
+	fi
+
+	echo "Initializing the database";
+	${ESIS_HOME}/bin/initdb --locale=C -D ${ESIS_HOME}/pgdata
+
+	echo "Fixing database configuration files";
+    	# remove default postgresql.conf file
+	mv ${ESIS_HOME}/pgdata/postgresql.conf ${ESIS_HOME}/pgdata/postgresql.conf.default
+	# use our own configuration file for logging, memory, ...
+	cp ${ESIS_HOME}/share/ESIS/postgresql.conf.developer ${ESIS_HOME}/pgdata/postgresql.conf 
+
+	echo "Starting the database";
+	# start postgresql with new configuration.
+	${ESIS_HOME}/bin/pg_ctl -w -l ${ESIS_HOME}/var/log/psql.log -D ${ESIS_HOME}/pgdata start || { echo "Fail to startup postgresql. Check reasons in ${ESIS_HOME}/var/log/psql.log" && exit 1; }
+	
+	echo "Creating the esis user in the database";
+	${ESIS_HOME}/bin/psql postgres <<EOM
+ALTER ROLE esis ENCRYPTED PASSWORD 'Pa55w0rd';
+CREATE USER esis_user ENCRYPTED PASSWORD 'Pa55w0rd' NOCREATEDB NOCREATEUSER;
+CREATE DATABASE esis_sdw WITH ENCODING 'UTF8' OWNER esis_user;
+GRANT ALL ON DATABASE esis_sdw TO esis_user;
+
+EOM
+
+       sleep 2 
+    ${ESIS_HOME}/bin/psql esis_sdw <<EOM
+ALTER SCHEMA public OWNER TO esis_user;
+EOM
+
+	echo "Setting the plpgsal internal language";
+    ${ESIS_HOME}/bin/psql esis_sdw esis_user<<EOM
+CREATE LANGUAGE plpgsql;
+EOM
+
+	sleep 2	
+	echo "Populating the database";
+        ${ESIS_HOME}/bin/psql esis_sdw esis_user < ${ESIS_HOME}/share/ESIS/main_db.sql
+	${ESIS_HOME}/bin/psql esis_sdw esis_user < ${ESIS_HOME}/share/ESIS/core_schema_files.sql
+	${ESIS_HOME}/bin/psql esis_sdw esis_user < ${ESIS_HOME}/share/ESIS/esis_text_en.sql
+
+	echo "Stopping the database"
+	${ESIS_HOME}/bin/pg_ctl -D ${ESIS_HOME}/pgdata stop -m fast -l ${ESIS_HOME}/var/log/psql.log
+
+	echo "Fixing the permission"
+	#cp ${ESIS_HOME}/share/ESIS/postgresql.conf.sample ${ESIS_HOME}/pgdata/postgresql.conf # a normal-memory postgresql.conf
+	cp ${ESIS_HOME}/share/ESIS/pg_hba.conf ${ESIS_HOME}/pgdata/pg_hba.conf
+
+# end ${ESIS_HOME}/pgdata configuration.  database server (rdbms) should be up & running now.
+
+echo "Creating the $HOME/.pgpass file"	
+# .pgpass file to not have to enter password
+rm -rf $HOME/.pgpass
+touch $HOME/.pgpass
+cat > $HOME/.pgpass <<EOPG
+localhost:5432:*:esis_user:Pa55w0rd
+
+EOPG
+
+chmod 0600 $HOME/.pgpass
+
+( test -d ${ESIS_HOME}/backups || (
+	echo  "Creating the ${ESIS_HOME}/backups directory"
+	mkdir -p ${ESIS_HOME}/backups
+	chmod 700 ${ESIS_HOME}/backups
+
+)); # create directory for backup files

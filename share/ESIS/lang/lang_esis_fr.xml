@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="esis" lang="fr">
+<!-- the $1 $2, $3, ... strings are used for variables -->
+<!-- in html texts : add <br /> for return line -and- CDATA if use html code -->
+
+<esis_contextmenu_copyright>Copyright (c) 2004-2008 Entelience SARL, Copyright (c) 2008-2009 Equity SA</esis_contextmenu_copyright>
+<esis_contextmenu_website>Visiter notre site web</esis_contextmenu_website>
+<esis_contextmenu_prefs>Préférences</esis_contextmenu_prefs>
+<esis_administration>Administration &amp; Configuration</esis_administration>
+<esis_default_r>R</esis_default_r>
+<esis_default_a>A</esis_default_a>
+<esis_default_c>C</esis_default_c>
+<esis_default_i>I</esis_default_i>
+<esis_default_yes>Oui</esis_default_yes>
+<esis_default_no>Non</esis_default_no>
+
+<!-- ICARRE -->
+<esis_icarre_i>I</esis_icarre_i>
+<esis_icarre_c>C</esis_icarre_c>
+<esis_icarre_a>A</esis_icarre_a>
+<esis_icarre_r>R</esis_icarre_r>
+<esis_icarre_e>E</esis_icarre_e>
+<esis_icarre_intergrity>INTEGRITY</esis_icarre_intergrity>
+<esis_icarre_compliance>COMPLIANCE</esis_icarre_compliance>
+<esis_icarre_availability>AVAILABILITY</esis_icarre_availability>
+<esis_icarre_reactivity>REACTIVITY</esis_icarre_reactivity>
+<esis_icarre_robustness>ROBUSTNESS</esis_icarre_robustness>
+<esis_icarre_exposure>EXPOSURE</esis_icarre_exposure>
+
+<!-- Errors texts -->
+<esis_errors_default_title>Erreur</esis_errors_default_title>
+<esis_errors_default_text>Erreur inconnue</esis_errors_default_text><!-- html -->
+<esis_errors_maintenance_title>ESIS est en cours de maintenance</esis_errors_maintenance_title>
+<esis_errors_maintenance_text>ESIS est en cours de maintenance.
+Le service est momentanément indisponible.
+Veuillez nous excuser pour la gêne occasionnée.</esis_errors_maintenance_text>
+<esis_errors_timeout_title>Abandon de session</esis_errors_timeout_title>
+<esis_errors_timeout_text><![CDATA[Votre session est terminée !<br />Votre temps d'inactivité semble avoir été trop long. Pour assurer votre sécurité, la session que vous aviez débuté a été fermée.<br />Merci de vous reconnecter pour démarrer une nouvelle session.]]></esis_errors_timeout_text><!-- html -->
+<esis_errors_accessdenied_title>Accès refusé</esis_errors_accessdenied_title>
+<esis_errors_accessdenied_text>Merci de vérifier votre nom d'utilisateur et mot de passe et d'essayer à nouveau.</esis_errors_accessdenied_text><!-- html -->
+<esis_errors_accesslocked_text>Votre compte utilisateur est bloqué. Merci de contacter votre administrateur pour résoudre ce problème.</esis_errors_accesslocked_text>
+<esis_errors_accessconsecutiveslogin_text>Votre compte utilisateur vient d'être bloqué après $1 essais infructueux de connexion. Merci de contacter votre administrateur pour résoudre ce problème.</esis_errors_accessconsecutiveslogin_text>
+<esis_errors_accesssession_text>Problème à l'ouverture de la session. Merci d'essayer à nouveau.</esis_errors_accesssession_text>
+<esis_errors_accesserror_text>Une erreur inconnue est survenue durent la connexion. Merci d'essayer à nouveau.</esis_errors_accesserror_text>
+<esis_errors_accesstryout_text><![CDATA[<br /><br />Vous bénéficiez encore de $1 essai(s) avant le bloquage de votre compte.]]></esis_errors_accesstryout_text>
+<esis_errors_wsnotexist_title>Erreur au niveau des services</esis_errors_wsnotexist_title>
+<esis_errors_wsnotexist_text>Le service web '$1' n'existe pas. Merci de contacter votre administrateur pour résoudre ce problème.</esis_errors_wsnotexist_text><!-- html -->
+<esis_errors_xmlimport_title>Erreur à l'import XML</esis_errors_xmlimport_title>
+<esis_errors_xmlimport_text><![CDATA[Le fichier de configuration XML du module '$1' n'a pas pu être chargé. Essayez de recharger l'application.]]></esis_errors_xmlimport_text><!-- html -->
+<esis_errors_xmlimport_status1>Le fichier XML n'a pas pu être chargé ou n'existe pas.</esis_errors_xmlimport_status1>
+<esis_errors_xmlimport_status2>Une section CDATA n'est pas correctement finalisée.</esis_errors_xmlimport_status2>
+<esis_errors_xmlimport_status3>La déclaration XML n'est pas correctement finalisée.</esis_errors_xmlimport_status3>
+<esis_errors_xmlimport_status4>La déclaration DOCTYPE n'est pas correctement finalisée.</esis_errors_xmlimport_status4>
+<esis_errors_xmlimport_status5>Un commentaire n'est pas correctement finalisé.</esis_errors_xmlimport_status5>
+<esis_errors_xmlimport_status6>Un élément XML est malformé.</esis_errors_xmlimport_status6>
+<esis_errors_xmlimport_status7>Problème de mémoire (insuffisance).</esis_errors_xmlimport_status7>
+<esis_errors_xmlimport_status8>Une valeur d'attribut est mal renseignée ou finalisée.</esis_errors_xmlimport_status8>
+<esis_errors_xmlimport_status9>Une balise d'ouverture ne correspond pas à sa balise de fermeture.</esis_errors_xmlimport_status9>
+<esis_errors_xmlimport_status10>Une balise de fermeture a été trouvé sans balise d'ouverture correspondante.</esis_errors_xmlimport_status10>
+<esis_errors_swfimport_title>Erreur à l'import du module Flash</esis_errors_swfimport_title>
+<esis_errors_swfimport_text><![CDATA[Le fichier du module '$1' n'a paspu être chargé. Essayez de recharger l'application.<br />Si le problème persiste, veuillez contacter un administrateur.]]></esis_errors_swfimport_text><!-- html -->
+<esis_errors_passwordage_title>Mot de passe expiré</esis_errors_passwordage_title>
+<esis_errors_passwordage_text><![CDATA[Votre mot de passe a expiré.<br />Vous devez le changer dans les préférences de l'application pour pouvoir utiliser à nouveau l'application.<br />L'application devra être relancée une fois le mot de passe mis à jour.]]></esis_errors_passwordage_text><!-- html -->
+<esis_errors_passwordhistory_title>Mot de passe trop récent</esis_errors_passwordhistory_title>
+<esis_errors_passwordhistory_text>Votre compte utilisateur a été récemment associé au mot de passe sélectionné. Pour votre sécurité et confidentialité merci de chaoisir un nouveau mot de passe.</esis_errors_passwordhistory_text><!-- html -->
+<esis_errors_lostpassword_title>Perte de mot de passe</esis_errors_lostpassword_title>
+<esis_errors_lostpassword_support_text>Le support a été alerté de votre demande. Vous serez recontacté prochainement.</esis_errors_lostpassword_support_text>
+<esis_errors_lostpassword_email_text>Un nouveau mot de passe vient de vous être renvoyé à l'adresse $1.</esis_errors_lostpassword_email_text>
+
+<!-- Login -->
+<esis_login_login>Nom d'utilisateur :</esis_login_login>
+<esis_login_password>Mot de passe :</esis_login_password>
+<esis_login_text><![CDATA[]]></esis_login_text><!-- html -->
+<esis_login_copyright><![CDATA[Copyright (c) 2004-2008 Entelience SARL, Copyright (c) 2008-2009 Equity SA, Sous licence GNU GPL, Version 3]]></esis_login_copyright><!-- html -->
+<esis_login_button>Connexion</esis_login_button>
+
+<!-- Preferences -->
+<esis_prefs_title>Préférences</esis_prefs_title>
+<esis_prefs_info>Mes infos</esis_prefs_info>
+<esis_prefs_about>A propos</esis_prefs_about>
+<esis_prefs_password>Mot de passe</esis_prefs_password>
+<esis_prefs_expertises>Expertises</esis_prefs_expertises>
+<esis_prefs_raci>RACI</esis_prefs_raci>
+<esis_prefs_support>Mail au support</esis_prefs_support>
+<esis_prefs_groups>Groupes</esis_prefs_groups>
+<esis_prefs_password_old>Ancien mot de passe</esis_prefs_password_old>
+<esis_prefs_password_new>Nouveau mot de passe</esis_prefs_password_new>
+<esis_prefs_password_confirm>Confirmer mot de passe</esis_prefs_password_confirm>
+<esis_prefs_password_update>Mettre à jour</esis_prefs_password_update>
+<esis_prefs_password_validity>valide jusqu'au $1</esis_prefs_password_validity>
+<esis_prefs_password_empty>Les champs doivent être remplis</esis_prefs_password_empty>
+<esis_prefs_password_notconfirmed>Le mot de passe ne correspond pas à sa confirmation</esis_prefs_password_notconfirmed>
+<esis_prefs_password_minlength>Le mot de passe doit faire au moins $1 caractères</esis_prefs_password_minlength>
+<esis_prefs_password_notauthorized>Au moins un caractère non autorisé</esis_prefs_password_notauthorized>
+<esis_prefs_password_complexityrules>Mot de passe non-conforme aux règles de sécurité</esis_prefs_password_complexityrules>
+<esis_prefs_password_username>Le mot de passe ne doit pas contenir le nom d'utilisateur</esis_prefs_password_username>
+<esis_prefs_password_company>Le mot de passe ne doit pas contenir le nom de société</esis_prefs_password_company>
+<esis_prefs_password_failure>Echec lors de la mise à jour</esis_prefs_password_failure>
+<esis_prefs_password_success>Le mot de passe a été mis à jour</esis_prefs_password_success>
+<esis_prefs_password_oldwrong>L'ancien mot de passe saisi est erroné</esis_prefs_password_oldwrong>
+<esis_prefs_password_infos_title>Complexité des mots de passe</esis_prefs_password_infos_title>
+<esis_prefs_password_infos_explanations>Un mot de passe doit faire au moins $1 caractères et répondre à au moins 3 règles:</esis_prefs_password_infos_explanations>
+<esis_prefs_password_infos_case1>- utiliser des minuscules</esis_prefs_password_infos_case1>
+<esis_prefs_password_infos_case2>- utiliser des majuscules</esis_prefs_password_infos_case2>
+<esis_prefs_password_infos_case3>- utiliser des nombres</esis_prefs_password_infos_case3>
+<esis_prefs_password_infos_case4>- utiliser des caractères spéciaux</esis_prefs_password_infos_case4>
+<esis_prefs_infos_title>Mes informations utilisateur</esis_prefs_infos_title>
+<esis_prefs_infos_username>Nom d'utilisateur</esis_prefs_infos_username>
+<esis_prefs_infos_firstname>Prénom</esis_prefs_infos_firstname>
+<esis_prefs_infos_lastname>Nom</esis_prefs_infos_lastname>
+<esis_prefs_infos_company>Entreprise</esis_prefs_infos_company>
+<esis_prefs_infos_location>Emplacement</esis_prefs_infos_location>
+<esis_prefs_infos_timezone>Fuseau horaire</esis_prefs_infos_timezone>
+<esis_prefs_infos_phone>Téléphone</esis_prefs_infos_phone>
+<esis_prefs_infos_email>E-mail</esis_prefs_infos_email>
+<esis_prefs_infos_administrator>Administrateur</esis_prefs_infos_administrator>
+<esis_prefs_infos_lastmodification>Dernière modification</esis_prefs_infos_lastmodification>
+<esis_prefs_infos_changepassword>Dernier changement de mot de passe</esis_prefs_infos_changepassword>
+<esis_prefs_infos_passwordexpiration>Validité du mot de passe</esis_prefs_infos_passwordexpiration>
+<esis_prefs_infos_creationdate>Date création</esis_prefs_infos_creationdate>
+<esis_prefs_about_version>Version</esis_prefs_about_version>
+<esis_prefs_about_build>Build n°</esis_prefs_about_build>
+<esis_prefs_about_date>Date</esis_prefs_about_date>
+<esis_prefs_about_copyright>Copyright</esis_prefs_about_copyright>
+<esis_prefs_about_flash>Flash Player</esis_prefs_about_flash>
+<esis_prefs_expertises_datas_vendors>Vendeurs</esis_prefs_expertises_datas_vendors>
+<esis_prefs_expertises_datas_products>Produits</esis_prefs_expertises_datas_products>
+<esis_prefs_expertises_datas_groups>Groupes</esis_prefs_expertises_datas_groups>
+<esis_prefs_expertises_edit>Editer</esis_prefs_expertises_edit>
+<esis_prefs_expertises_pages>$1 expertises</esis_prefs_expertises_pages>
+<esis_prefs_expertises_pageempty>0 expertise</esis_prefs_expertises_pageempty>
+<esis_prefs_groups_datas_company>Entreprise</esis_prefs_groups_datas_company>
+<esis_prefs_groups_datas_group>Groupe</esis_prefs_groups_datas_group>
+<esis_prefs_groups_datas_departement>Département</esis_prefs_groups_datas_departement>
+<esis_prefs_raci_datas_module>Module</esis_prefs_raci_datas_module>
+<esis_prefs_raci_datas_item>Objet</esis_prefs_raci_datas_item>
+<esis_prefs_raci_datas_r>R</esis_prefs_raci_datas_r>
+<esis_prefs_raci_datas_a>A</esis_prefs_raci_datas_a>
+<esis_prefs_raci_datas_c>C</esis_prefs_raci_datas_c>
+<esis_prefs_raci_datas_i>I</esis_prefs_raci_datas_i>
+<esis_prefs_raci_pages>page $1 sur $2 ( $3 objets )</esis_prefs_raci_pages>
+<!-- $1 : current page / $2 : nb pages / $3 : nb items -->
+<esis_prefs_raci_pageempty>0 objet</esis_prefs_raci_pageempty>
+<esis_prefs_raci_infos_raci>RACI</esis_prefs_raci_infos_raci>
+<esis_prefs_raci_infos_r>R : responsabilité</esis_prefs_raci_infos_r>
+<esis_prefs_raci_infos_a>A : autorité</esis_prefs_raci_infos_a>
+<esis_prefs_raci_infos_c>C : consulté</esis_prefs_raci_infos_c>
+<esis_prefs_raci_infos_i>I : informé</esis_prefs_raci_infos_i>
+
+<!-- Expertises -->
+<esis_expertises_title>Mes expertises</esis_expertises_title>
+<esis_expertises_search>Trouver un produit ou un vendeur</esis_expertises_search>
+<esis_expertises_reset>réinitialiser</esis_expertises_reset>
+<esis_expertises_find>OK</esis_expertises_find>
+<esis_expertises_remove>tout enlever</esis_expertises_remove>
+<esis_expertises_datas_products>Vendeurs / Produits</esis_expertises_datas_products>
+<esis_expertises_datas_expertises>Mes Expertises</esis_expertises_datas_expertises>
+
+<!-- Validation -->
+<esis_validation_title>Quitter ESIS</esis_validation_title>
+<esis_validation_text>Etes-vous sûr de vouloir quitter l'application ESIS ?</esis_validation_text>
+<esis_validation_yes>Oui</esis_validation_yes>
+<esis_validation_no>Non</esis_validation_no>
+
+<!-- Error -->
+<esis_error_title>Erreur</esis_error_title>
+<esis_error_ok>Ok</esis_error_ok>
+<esis_error_notify>Notifier au support</esis_error_notify>
+<esis_error_lostpassword>Mot de passe ?</esis_error_lostpassword>
+
+<!-- Notify support -->
+<esis_notify_title>Notification au support</esis_notify_title>
+<esis_notify_text1>Vos informations nous sont utiles pour améliorer ce logiciel et, si vous le désirez, notre support peut vous recontacter pour résoudre votre problème.</esis_notify_text1><!-- html -->
+<esis_notify_text2>Merci de décrir les actions entreprises lorsque le problème est survenu.</esis_notify_text2>
+<esis_notify_contact>Je souhaite être contacté</esis_notify_contact>
+<esis_notify_phone>par tél.</esis_notify_phone>
+<esis_notify_email>par e-mail</esis_notify_email>
+<esis_notify_send>Envoyer</esis_notify_send>
+<esis_notify_cancel>Annuler</esis_notify_cancel>
+<esis_notify_success><![CDATA[Votre requête a été correctement transmise au support.<br />Un expert a été prévenu et va traiter votre demande.]]></esis_notify_success><!-- html -->
+<esis_notify_failure>Echec lors de l'envoi de la notification. Merci de bien vouloir réessayer.</esis_notify_failure>
+<esis_notify_notfilled>L'e-mail et/ou le téléphone doivent être saisis.</esis_notify_notfilled>
+
+<!-- Menu -->
+<esis_menu_home>Accueil</esis_menu_home>
+<esis_menu_home_esis>Accueil ESIS</esis_menu_home_esis>
+<esis_menu_home_title>Sélection du module</esis_menu_home_title>
+<esis_menu_logout>Quitter</esis_menu_logout>
+<esis_menu_prefs>Préfs</esis_menu_prefs>
+<esis_menu_print>Imprimer</esis_menu_print>
+<esis_menu_excel>Excel</esis_menu_excel>
+<esis_menu_msproject>MsProject</esis_menu_msproject>
+<esis_menu_mail>E-mail</esis_menu_mail>
+<esis_menu_calendar>Calendrier</esis_menu_calendar>
+<esis_menu_find>Trouver</esis_menu_find>
+<esis_menu_votes_my>mes votes</esis_menu_votes_my>
+<esis_menu_votes_all>tous votes</esis_menu_votes_all>
+<esis_menu_tasks_my>mes tâches</esis_menu_tasks_my>
+<esis_menu_tasks_raci>RACI tâches</esis_menu_tasks_raci>
+<esis_menu_filter_my>MON</esis_menu_filter_my>
+<esis_menu_filter_raci>RACI</esis_menu_filter_raci>
+<esis_menu_filter_all>TOUT</esis_menu_filter_all>
+
+</entity>
+</esis>

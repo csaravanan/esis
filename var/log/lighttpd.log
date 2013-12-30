@@ -1,0 +1,10 @@
+2013-04-26 09:06:59: (log.c.166) server started 
+2013-04-26 09:18:50: (server.c.1503) server stopped by UID = 500 PID = 9163 
+2013-04-26 12:17:31: (log.c.166) server started 
+2013-04-26 12:18:37: (server.c.1503) server stopped by UID = 500 PID = 11797 
+2013-04-26 15:33:09: (log.c.166) server started 
+2013-04-26 15:33:20: (server.c.1503) server stopped by UID = 500 PID = 13730 
+2013-04-26 15:44:47: (log.c.166) server started 
+2013-04-26 15:45:04: (server.c.1503) server stopped by UID = 500 PID = 14052 
+2013-04-30 10:05:27: (log.c.166) server started 
+2013-04-30 10:11:17: (server.c.1503) server stopped by UID = 500 PID = 31016 

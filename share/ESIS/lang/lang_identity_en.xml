@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="identity" lang="en">
+<!-- the # char is used for variables -->
+<!-- in html texts : add <br /> for return line -and- CDATA if use html code -->
+
+<!-- Navigation -->
+
+<!-- default texts -->
+<identity_default_r>R</identity_default_r>
+<identity_default_a>A</identity_default_a>
+<identity_default_c>C</identity_default_c>
+<identity_default_i>I</identity_default_i>
+
+<!-- Errors texts --> 
+<identity_errors_default_title>Error</identity_errors_default_title>
+<identity_errors_default_text>Error unknown</identity_errors_default_text><!-- html -->
+<identity_errors_wsnotexist_title>WebService Error</identity_errors_wsnotexist_title>
+<identity_errors_wsnotexist_text>The webservice '$1' doesn't exist. Please contact your administrator.</identity_errors_wsnotexist_text><!-- html -->
+<identity_errors_raci_title>RACI Violation</identity_errors_raci_title>
+<identity_errors_raci_text>The current RACI of this item not allow you to perform this action.</identity_errors_raci_text>
+<identity_errors_raci_persons>Please contact the Responsible or Accountable person(s) of this item.</identity_errors_raci_persons>
+<identity_errors_raci_accountables>Accountable(s)</identity_errors_raci_accountables>
+<identity_errors_raci_responsibles>Responsible(s)</identity_errors_raci_responsibles>
+<identity_errors_raci_noaccountable>No accountable person.</identity_errors_raci_noaccountable>
+<identity_errors_raci_noresponsible>No responsible person.</identity_errors_raci_noresponsible>
+
+<!-- Raci -->
+<identity_raci_r>R</identity_raci_r>
+<identity_raci_a>A</identity_raci_a>
+<identity_raci_c>C</identity_raci_c>
+<identity_raci_i>I</identity_raci_i>
+<identity_raci_infos_raci>RACI</identity_raci_infos_raci>
+<identity_raci_infos_r>R : responsible</identity_raci_infos_r>
+<identity_raci_infos_a>A : accountable</identity_raci_infos_a>
+<identity_raci_infos_c>C : consulted</identity_raci_infos_c>
+<identity_raci_infos_i>I : informed</identity_raci_infos_i>
+
+<!-- Raci Change Request -->
+<identity_racichangerequest_title>List of RACI change requests for module</identity_racichangerequest_title>
+<identity_racichangerequest_text>At least a RACI change for the module request your validation. Select a change in the list and apply your modification.</identity_racichangerequest_text>
+<identity_racichangerequest_warning>Warning: validating the changes on your own informations in the RACI of the module will cause your disconnection from module.</identity_racichangerequest_warning>
+<identity_racichangerequest_validate>Validate</identity_racichangerequest_validate>
+<identity_racichangerequest_discard>Discard</identity_racichangerequest_discard>
+<identity_racichangerequest_dolater>Do later</identity_racichangerequest_dolater>
+<identity_racichangerequest_datas_request_date>Date</identity_racichangerequest_datas_request_date>
+<identity_racichangerequest_datas_request_modifier>Modifier</identity_racichangerequest_datas_request_modifier>
+<identity_racichangerequest_datas_request_stakeholder>Stakeholder</identity_racichangerequest_datas_request_stakeholder>
+<identity_racichangerequest_datas_request_modification>Modification</identity_racichangerequest_datas_request_modification>
+<identity_racichangerequest_datas_request_modification_add>Add</identity_racichangerequest_datas_request_modification_add>
+<identity_racichangerequest_datas_request_modification_update>Update</identity_racichangerequest_datas_request_modification_update>
+<identity_racichangerequest_datas_request_modification_delete>Delete</identity_racichangerequest_datas_request_modification_delete>
+<identity_racichangerequest_datas_request_modification_forced>Forced update</identity_racichangerequest_datas_request_modification_forced>
+<identity_racichangerequest_datas_request_substitute>Substitute</identity_racichangerequest_datas_request_substitute>
+<identity_racichangerequest_moduleraci>Current module RACI</identity_racichangerequest_moduleraci>
+
+<!-- Menu -->
+<identity_menu_home>Home</identity_menu_home>
+<identity_menu_home_esis>ESIS home</identity_menu_home_esis>
+<identity_menu_home_title>Module selection</identity_menu_home_title>
+<identity_menu_logout>Logout</identity_menu_logout>
+<identity_menu_prefs>Prefs</identity_menu_prefs>
+<identity_menu_print>Print</identity_menu_print>
+<identity_menu_excel>Excel</identity_menu_excel>
+<identity_menu_msproject>MsProject</identity_menu_msproject>
+<identity_menu_mail>Mail</identity_menu_mail>
+<identity_menu_calendar>Calendar</identity_menu_calendar>
+<identity_menu_find>Find</identity_menu_find>
+<identity_menu_votes_my>my votes</identity_menu_votes_my>
+<identity_menu_votes_all>all votes</identity_menu_votes_all>
+<identity_menu_tasks_my>my tasks</identity_menu_tasks_my>
+<identity_menu_tasks_raci>RACI tasks</identity_menu_tasks_raci>
+<identity_menu_filter_my>My</identity_menu_filter_my>
+<identity_menu_filter_raci>RACI</identity_menu_filter_raci>
+<identity_menu_filter_all>All</identity_menu_filter_all>
+
+</entity>
+</esis>

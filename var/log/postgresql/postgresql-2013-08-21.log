@@ -1,0 +1,56 @@
+[2013-08-21 04:39:31 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 37
+[2013-08-21 04:39:31 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 04:39:31 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 562
+[2013-08-21 04:39:31 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 04:39:31 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 927
+[2013-08-21 04:39:31 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 04:39:31 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 1058
+[2013-08-21 04:39:31 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 09:50:39 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 37
+[2013-08-21 09:50:39 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 09:50:39 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 562
+[2013-08-21 09:50:39 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 09:50:39 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 927
+[2013-08-21 09:50:39 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 09:50:39 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 1058
+[2013-08-21 09:50:39 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 11:34:15 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 37
+[2013-08-21 11:34:15 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 11:34:15 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 562
+[2013-08-21 11:34:15 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 11:34:15 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 927
+[2013-08-21 11:34:15 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 11:34:15 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 1058
+[2013-08-21 11:34:15 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 11:37:39 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 37
+[2013-08-21 11:37:39 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 11:37:39 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 562
+[2013-08-21 11:37:39 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 11:37:39 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 927
+[2013-08-21 11:37:39 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 11:37:39 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 1058
+[2013-08-21 11:37:39 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 11:37:43 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 96
+[2013-08-21 11:37:43 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-08-21 11:37:43 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 644
+[2013-08-21 11:37:43 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-08-21 11:40:55 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 37
+[2013-08-21 11:40:55 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 11:40:55 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 562
+[2013-08-21 11:40:55 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 11:40:55 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 927
+[2013-08-21 11:40:55 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 11:40:55 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 1058
+[2013-08-21 11:40:55 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 12:00:24 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 37
+[2013-08-21 12:00:24 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 12:00:24 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 562
+[2013-08-21 12:00:24 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 12:00:24 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 927
+[2013-08-21 12:00:24 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 12:00:24 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 1058
+[2013-08-21 12:00:24 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-08-21 12:00:28 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 96
+[2013-08-21 12:00:28 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-08-21 12:00:28 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 644
+[2013-08-21 12:00:28 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.

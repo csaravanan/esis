@@ -1,0 +1,392 @@
+<?xml  version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<!--
+   
+   ESIS
+   
+   Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+   
+   Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+                           Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+   
+   
+   This file is part of ESIS.
+   
+   ESIS is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation version 3 of the License.
+   
+   ESIS is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+   
+   $Id: reports.xml 13 2009-07-07 15:15:32Z tburdairon $
+   
+-->
+<!--
+   XML file that describes available reports
+-->
+<esis>
+<!-- Administration: Groups report -->
+	<report name="AdminGroups" 
+		description="Generate a report for all groups and departments"
+		class_name="com.entelience.export.jasper.admin.AdminGroupsFiller"
+		file_name="admin/admin_groups.jasper"/>
+	<report name="AdminSubReportGroupsMembers" 
+		file_name="admin/admin_subreport_groups_members.jasper"/>
+	<report name="AdminSubReportGroupsExpertises" 
+		file_name="admin/admin_subreport_groups_expertises.jasper"/>
+	<report name="AdminSubReportGroupsDomains" 
+		file_name="admin/admin_subreport_groups_domains.jasper"/>
+
+<!-- Administration: Locations report -->
+	<report name="AdminLocations" 
+		description="Generate a report for all locations"
+		class_name="com.entelience.export.jasper.admin.AdminLocationsFiller"
+		file_name="admin/admin_locations.jasper"/>
+	<report name="AdminSubReportLocationsMembers" 
+		file_name="admin/admin_subreport_locations_members.jasper"/>
+	<report name="AdminSubReportLocationsGroups" 
+		file_name="admin/admin_subreport_locations_groups.jasper"/>
+	<report name="AdminSubReportLocationsNetworks" 
+		file_name="admin/admin_subreport_locations_networks.jasper"/>
+	<report name="AdminSubReportLocationsDomains" 
+		file_name="admin/admin_subreport_locations_domains.jasper"/>
+
+<!-- Administration: Modules report -->
+	<report name="AdminModules" 
+		description="Generate a report for all modules"
+		class_name="com.entelience.export.jasper.admin.AdminModulesFiller"
+		file_name="admin/admin_modules.jasper"/>
+	<report name="AdminSubReportModulesRaci" 
+		file_name="admin/admin_subreport_modules_raci.jasper"/>
+
+<!-- Administration: Module Preferences report -->
+	<report name="AdminModulePrefs" 
+		description="Generate a report for all preferences of a specified module"
+		class_name="com.entelience.export.jasper.admin.AdminModulePrefsFiller"
+		file_name="admin/admin_module_prefs.jasper"/>
+
+<!-- Administration: Global preferences report -->
+	<report name="AdminGlobalPrefs" 
+		description="Generate a report for all global preferences of ESIS"
+		class_name="com.entelience.export.jasper.admin.AdminGlobalPrefsFiller"
+		file_name="admin/admin_global_prefs.jasper"/>
+
+<!-- Administration: Users report -->
+	<report name="AdminUsers" 
+		description="Generate a report for all users"
+		class_name="com.entelience.export.jasper.admin.AdminUsersFiller"
+		file_name="admin/admin_users.jasper"/>
+	<report name="AdminSubReportUsersGroups" 
+		file_name="admin/admin_subreport_users_groups.jasper"/>
+	<report name="AdminSubReportUsersExpertises" 
+		file_name="admin/admin_subreport_users_expertises.jasper"/>
+
+<!-- Administration: Business Zones report -->
+	<report name="AdminBusinessZones" 
+		description="Generate a report for all business zones"
+		class_name="com.entelience.export.jasper.admin.AdminBusinessZonesFiller"
+		file_name="admin/admin_businesszones.jasper"/>
+	<report name="AdminSubReportBusinessZonesMembers" 
+		file_name="admin/admin_subreport_businesszones_members.jasper"/>
+	<report name="AdminSubReportBusinessZonesLocations" 
+		file_name="admin/admin_subreport_businesszones_locations.jasper"/>
+	<report name="AdminSubReportBusinessZonesDepartments" 
+		file_name="admin/admin_subreport_businesszones_departments.jasper"/>
+	<report name="AdminSubReportBusinessZonesZones" 
+		file_name="admin/admin_subreport_businesszones_zones.jasper"/>
+
+<!-- Administration: Probes report -->
+	<report name="AdminProbes" 
+		description="Generate a report for all probes"
+		class_name="com.entelience.export.jasper.admin.AdminProbesFiller"
+		file_name="admin/admin_probes.jasper"/>
+
+<!-- Administration: Probe Status report -->
+	<report name="AdminProbeStatus" 
+		description="Generate a report for all informations about a probe"
+		class_name="com.entelience.export.jasper.admin.AdminProbeStatusFiller"
+		file_name="admin/admin_probestatus.jasper"/>
+
+<!-- Administration: Probe History report -->
+	<report name="AdminProbeHistory" 
+		description="Generate a report for all histories data of a probe"
+		class_name="com.entelience.export.jasper.admin.AdminProbeHistoryFiller"
+		file_name="admin/admin_probehistory.jasper"/>
+	<report name="AdminSubReportProbeHistoryData" 
+		file_name="admin/admin_subreport_probehistory_data.jasper"/>
+	<report name="AdminSubReportProbeHistoryDatabase" 
+		file_name="admin/admin_subreport_probehistory_database.jasper"/>
+	<report name="AdminSubReportProbeHistoryFile" 
+		file_name="admin/admin_subreport_probehistory_file.jasper"/>
+
+<!-- Administration: Monitoring report -->
+	<report name="AdminProbesMonitoring" 
+		description="Generate a report for probes monitoring"
+		class_name="com.entelience.export.jasper.admin.AdminProbesMonitoringFiller"
+		file_name="admin/admin_monitoring.jasper"/>
+	<report name="AdminSubReportProbesMonitoringStatus" 
+		file_name="admin/admin_monitoring_probe.jasper"/>
+	<report name="AdminSubReportProbesMonitoringParameters" 
+		file_name="admin/admin_monitoring_probeparameters.jasper"/>
+
+<!-- Administration: Racis report -->
+	<report name="AdminRacis" 
+		description="Generate a report for a raci matrix"
+		class_name="com.entelience.export.jasper.admin.AdminRacisFiller"
+		file_name="admin/admin_racis.jasper"/>
+
+<!-- Administration: Raci History report -->
+	<report name="AdminRaciHistory" 
+		description="Generate a report for all history of a raci matrix"
+		class_name="com.entelience.export.jasper.admin.AdminRaciHistoryFiller"
+		file_name="admin/admin_racihistory.jasper"/>
+	<report name="AdminSubReportRaciHistoryMatrix" 
+		file_name="admin/admin_subreport_racihistory.jasper"/>
+
+<!-- Administration: Expertises report -->
+	<report name="AdminExpertises" 
+		description="Generate a report for all user experises"
+		class_name="com.entelience.export.jasper.admin.AdminExpertisesFiller"
+		file_name="admin/admin_expertises.jasper"/>
+
+<!-- Administration: Standards report -->
+	<report name="AdminStandards" 
+		description="Generate a report for all standards"
+		class_name="com.entelience.export.jasper.admin.AdminStandardsFiller"
+		file_name="admin/admin_standards.jasper"/>
+	<report name="AdminSubReportStandardsTopics" 
+		file_name="admin/admin_subreport_standards_topics.jasper"/>
+
+<!-- Administration: Incidents report -->
+	<report name="AdminIncidents" 
+		description="Generate a report for all incidents"
+		class_name="com.entelience.export.jasper.admin.AdminIncidentsFiller"
+		file_name="admin/admin_incidents.jasper"/>
+
+<!-- Administration: Incident report -->
+	<report name="AdminIncident" 
+		description="Generate a report for an incident"
+		class_name="com.entelience.export.jasper.admin.AdminIncidentFiller"
+		file_name="admin/admin_incident.jasper"/>
+
+<!-- Administration: User History report -->
+	<report name="UserHistory" 
+		description="Generate a report for all histories data of a user"
+		class_name="com.entelience.export.jasper.admin.AdminUserHistoryFiller"
+		file_name="admin/admin_userhistory.jasper"/>
+	<report name="AdminSubReportUserHistory" 
+		file_name="admin/admin_subreport_userhistory.jasper"/>
+
+<!-- Administration: User Login History report -->
+	<report name="UserLoginHistory" 
+		description="Generate a report for all logins histories of a user"
+		class_name="com.entelience.export.jasper.admin.AdminUserLoginHistoryFiller"
+		file_name="admin/admin_userhistory.jasper"/>
+	<report name="AdminSubReportUserLoginHistory" 
+		file_name="admin/admin_subreport_userloginhistory.jasper"/>
+
+<!-- Audits: Audit report -->
+	<report name="AuditReport" 
+		description="Generate a report for an audit with all it's reports, recommendations and actions"
+		class_name="com.entelience.export.jasper.audit.AuditReportFiller"
+		file_name="audits/audit.jasper"/>
+	<report name="AuditSubReport-Report" 
+		file_name="audits/audit_subreport-report.jasper"/>
+	<report name="AuditSubReport-Interview" 
+		file_name="audits/audit_subreport-interview.jasper"/>
+	<report name="AuditSubReport-Document" 
+		file_name="audits/audit_subreport-document.jasper"/>
+	<report name="AuditSubReport-Recommendation" 
+		file_name="audits/audit_subreport-rec.jasper"/>
+	<report name="AuditSubReport-Action" 
+		file_name="audits/audit_subreport-action.jasper"/>
+	<report name="AuditSubReport-ActionRacis" 
+		file_name="audits/audit_subreport-actionracis.jasper"/>
+	<report name="AuditSubReport-Racis" 
+		file_name="audits/audit_subreport-racis.jasper"/>
+	<report name="AuditSubReport-RecRacis" 
+		file_name="audits/audit_subreport-recraci.jasper"/>
+	<report name="AuditSubReport-Organisations" 
+		file_name="audits/audit_subreport-org.jasper"/>
+	<report name="AuditSubReport-Comments" 
+		file_name="audits/audit_subreport-comment.jasper"/>
+	<report name="AuditSubReport-Compliance" 
+		file_name="audits/audit_subreport-compliance.jasper"/>
+		
+<!-- Audits: Report report -->	
+	<report name="ReportAudit" 
+		description="Generate a report for a report with all it's recommendations and actions"
+		class_name="com.entelience.export.jasper.audit.ReportReportFiller"
+		file_name="audits/auditreport.jasper"/>
+	<report name="ReportAuditSubReport-Interview" 
+		file_name="audits/auditreport_subreport-itw.jasper"/>
+	<report name="ReportAuditSubReport-Organisation" 
+		file_name="audits/auditreport_subreport-org.jasper"/>
+	<report name="ReportAuditSubReport-Raci" 
+		file_name="audits/auditreport_subreport-raci.jasper"/>
+	<report name="ReportAuditSubReport-Rec" 
+		file_name="audits/auditreport_subreport-rec.jasper"/>
+	<report name="ReportAuditSubReport-RecOrg" 
+		file_name="audits/auditreport_subreport-recorg.jasper"/>
+	<report name="ReportAuditSubReport-Compliance" 
+		file_name="audits/auditreport_subreport-reccompliance.jasper"/>
+	<report name="ReportAuditSubReport-Action" 
+		file_name="audits/auditreport_subreport-act.jasper"/>
+		
+<!-- Audits: Compliance report -->	
+	<report name="RecComplianceReport"
+	        description="Compliance evaluation on a recommendation against an audit topic"
+		class_name="com.entelience.export.jasper.audit.RecComplianceReportFiller"
+		file_name="audits/compliance.jasper"/>
+	
+<!-- Assets: Assets report -->
+	<report name="AssetAssets" 
+		description="Generate a report for all assets"
+		class_name="com.entelience.export.jasper.asset.AssetAssetsFiller"
+		file_name="asset/asset_assets.jasper"/>
+
+<!-- Vulnerabilities: Vulnerability report -->
+	<report name="VulnReport"
+		description="Generate a report for all informations of a vulnerability"
+		class_name="com.entelience.export.jasper.vrt.VulnReportFiller"
+		file_name="vrt/vuln.jasper"/>
+	<report name="VulnSubReport-Racis" 
+		file_name="vrt/vuln_subreport-racis.jasper"/>
+	<report name="VulnSubReport-Alias" 
+		file_name="vrt/vuln_subreport-alias.jasper"/>
+	<report name="VulnSubReport-Comment" 
+		file_name="vrt/vuln_subreport-comment.jasper"/>
+	<report name="VulnSubReport-History" 
+		file_name="vrt/vuln_subreport-history.jasper"/>
+	<report name="VulnSubReport-Adv-History" 
+		file_name="vrt/vuln_subreport-adv-history.jasper"/>
+	<report name="VulnSubReport-Analysis" 
+		file_name="vrt/vuln_subreport-analysis.jasper"/>
+	<report name="VulnSubReport-Url" 
+		file_name="vrt/vuln_subreport-url.jasper"/>
+	<report name="VulnSubReport-VPV" 
+		file_name="vrt/vuln_subreport-vpv.jasper"/>
+	<report name="VulnSubReport-Action" 
+		file_name="vrt/vuln_subreport-action.jasper"/>
+	<report name="VulnSubReport-ActionRacis" 
+		file_name="vrt/vuln_subreport-actionracis.jasper"/>
+
+<!-- Vulnerabilities: Metrics report 01 -->
+	<report name="VulnerabilityManagementReport"
+		module_class_name="com.entelience.module.Vulnerabilities"
+		description="Vulnerabilities management report "
+		class_name="com.entelience.export.jasper.vrt.VulnManagementProcess"
+		file_name="vrt/process.jasper">
+		<parameter name="for the last 60 days" value="-60,day"/>
+		<parameter name="for the last 15 days" value="-15,day"/>
+		<parameter name="for the last 12 months" value="-12,month"/>
+	</report>
+
+<!-- Vulnerabilities: Metrics report 02 -->
+	<report name="VulnerabilityManagementGroupReport"
+		module_class_name="com.entelience.module.Vulnerabilities"
+		description="Vulnerabilities management report (per group) "
+		class_name="com.entelience.export.jasper.vrt.VulnManagementGroupProcess"
+		file_name="vrt/group-process.jasper">
+		<parameter name="for the last 60 days" value="-60,day"/>
+		<parameter name="for the last 15 days" value="-15,day"/>
+		<parameter name="for the last 12 months" value="-12,month"/>
+	</report>
+	<report name="ProcessSubReport-Chart" 
+		file_name="vrt/process_subreport-chart.jasper"/>
+        <report name="ProcessSubReport-SimpleList" 
+		file_name="vrt/process_subreport-simplelist.jasper"/>
+	<report name="ProcessSubReport-List1Column" 
+		file_name="vrt/process_subreport-list.jasper"/>
+	<report name="ProcessSubReport-Metric" 
+		file_name="vrt/process_subreport-metric.jasper"/>
+	<report name="ProcessSubReport-Group" 
+		file_name="vrt/process_subreport-group.jasper"/>
+	<report name="ProcessSubReport-Title" 
+		file_name="vrt/process_subreport-title.jasper"/>
+		
+<!-- Vulnerabilities: Metrics report 03 -->
+	<report name="ListVulnerabilitiesByTargetDateAndGroup"
+		module_class_name="com.entelience.module.Vulnerabilities"
+		description="Vulnerabilities (per group) with a target date "
+		class_name="com.entelience.export.jasper.vrt.VulnGroupListReportFiller"
+		file_name="vrt/vulnsgroup.jasper">
+		<parameter name="in the current month" value="current,month"/>
+		<parameter name="in the next 30 days" value="+30,day"/>
+		<parameter name="in the next 90 days" value="+90,day"/>
+		<parameter name="in the next 120 days" value="+120,day"/>
+		<parameter name="in the next 12 months" value="+12,month"/>
+	</report>
+
+<!-- Vulnerabilities: Metrics report 04 -->		
+	<report name="ListVulnerabilitiesByTargetDate"
+		module_class_name="com.entelience.module.Vulnerabilities"
+		description="Vulnerabilities with a target date "
+		class_name="com.entelience.export.jasper.vrt.VulnListReportFiller"
+		file_name="vrt/vulns.jasper">
+		<parameter name="in the current month" value="current,month"/>
+		<parameter name="in the next 30 days" value="+30,day"/>
+		<parameter name="in the next 90 days" value="+90,day"/>
+		<parameter name="in the next 120 days" value="+120,day"/>
+		<parameter name="in the next 12 months" value="+12,month"/>
+	</report>
+
+<!-- Vulnerabilities: Metrics report 05 -->
+	<report name="AdvisoriesOutPerimeter"
+		module_class_name="com.entelience.module.Vulnerabilities"
+		description="Advisories outside of the technical perimeter published "
+		class_name="com.entelience.export.jasper.vrt.AdvisoriesReportFiller"
+		file_name="vrt/advisories.jasper">
+		<parameter name="in the current month" value="current,month"/>
+		<parameter name="in the last 30 days" value="-30,day"/>
+	</report>
+	<report name="VulnsSubReport-VPV" 
+		file_name="vrt/vulns_subreport-vpvs.jasper"/>	
+        
+<!-- Vulnerabilities: Metrics report 06 -->
+	<report name="VulnsMissingVotes"
+		module_class_name="com.entelience.module.Vulnerabilities"
+		description="Advisories with missing votes published "
+		class_name="com.entelience.export.jasper.vrt.VoteSummaryReport"
+		file_name="vrt/vuln_votes.jasper">
+		<parameter name="in the current month" value="current,month"/>
+		<parameter name="in the last 30 days" value="-30,day"/>
+	</report>
+
+<!-- Explorer: Data -->
+	<report name="ExplorerDataReport"
+	        module_class_name="com.entelience.module.Portal"
+		description="Export an explorer data table (malwares, domains, sites ...)"
+		class_name="com.entelience.export.jasper.portal.ExplorerDataFiller"
+		file_name="portal/explorer_data.jasper"/>
+	<report name="ExplorerDataMalwaresSubReport" 
+		file_name="portal/explorer_data_malwares.jasper"/>
+	<report name="ExplorerDataDomainsSubReport" 
+		file_name="portal/explorer_data_domains.jasper"/>
+	<report name="ExplorerDataSitesSubReport" 
+		file_name="portal/explorer_data_sites.jasper"/>
+	<report name="ExplorerDataSiteDetailsSubReport" 
+		file_name="portal/explorer_data_sites_details.jasper"/>
+
+<!-- Portal: Standard report -->
+	<report name="StandardPortalReport"
+		description="Export a standard and its topics"
+		class_name="com.entelience.export.jasper.portal.StandardReportFiller"
+		file_name="portal/standard.jasper"/>
+
+<!-- Portal: Graphs -->
+	<report name="Chart-390-185" 
+		file_name="portal/chart-390-185.jasper"/>
+	<report name="Top-390" 
+		file_name="portal/top-390.jasper"/>
+	<report name="Text-390" 
+		file_name="portal/text-390.jasper"/>
+	<report name="Top-fourinfos-782" 
+		file_name="portal/top-locationsinfos-782.jasper"/>
+
+</esis>

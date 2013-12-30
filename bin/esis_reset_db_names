@@ -1,0 +1,80 @@
+#!/bin/sh
+#   
+#  ESIS
+#  
+#  Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+#  
+#  Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+#                          Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+#  
+#  
+#  This file is part of ESIS.
+#  
+#  ESIS is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation version 3 of the License.
+#  
+#  ESIS is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+#  
+#  $Id: esis_reset_db_names 13 2009-07-07 15:15:32Z tburdairon $
+#
+
+. `dirname $0`/esis_env
+
+        echo ""
+	echo "This procedure will change the ESIS database name and the ESIS database user name and password"
+	echo "Those changes are necessary to upgrade our software"
+	echo "The database will be renamed from 'mydb' to 'esis_sdw'"
+	echo "The database user will be renamed from 'entelligence' to 'esis_user'"
+	echo "The database user will have its password reset to 'Pa55w0rd'"
+	echo ""
+	echo "Once this change is over, we exhort you to change this password to a more acceptable one"
+	echo "To do so, run ${ESIS_HOME}/bin/esis_change_db_password once this script has successed"
+
+	echo "Shutting down ESIS"
+        ${ESIS_HOME}/bin/esis_shutdown
+	
+	echo "Starting the database"
+	pg_ctl start -w -l ${ESIS_HOME}/var/log/psql.log
+	echo "Please enter the current password of the database superuser"
+	success=`psql -c "ALTER DATABASE mydb RENAME TO esis_sdw; ALTER ROLE entelligence RENAME TO esis_user; ALTER ROLE esis_user ENCRYPTED PASSWORD 'Pa55w0rd'" template1 | grep ALTER | wc -l`
+	if [ $success -eq 1 ]; then
+		echo "The database has been successfully modified"
+	else
+		echo "ERROR : the database has not been modified"
+		exit 1
+	fi
+	echo "Now modifying the configuration files"
+
+	cp ${ESIS_HOME}/share/ESIS/esis.properties ${ESIS_HOME}/share/ESIS/esis.properties.old
+	sed s/mydb/esis_sdw/ < ${ESIS_HOME}/share/ESIS/esis.properties.old > ${ESIS_HOME}/share/ESIS/esis.properties.tmp
+	sed s/com.entelience.esis.db.username=.*$/com.entelience.esis.db.username=esis_user/ < ${ESIS_HOME}/share/ESIS/esis.properties.tmp > ${ESIS_HOME}/share/ESIS/esis.properties.tmp2
+	sed s/com.entelience.esis.db.password=.*$/com.entelience.esis.db.password=Pa55w0rd/ < ${ESIS_HOME}/share/ESIS/esis.properties.tmp2 > ${ESIS_HOME}/share/ESIS/esis.properties
+	rm ${ESIS_HOME}/share/ESIS/esis.properties.tmp*
+
+	cp $HOME/.pgpass $HOME/.pgpass.old
+	rm -rf $HOME/.pgpass
+	cat > $HOME/.pgpass <<EOPG
+localhost:5432:*:esis_user:Pa55w0rd
+
+EOPG
+	chmod 0600 $HOME/.pgpass
+
+	echo "esis.properties and .pgpass files have been updated"
+        
+	echo "ESIS will now restart"
+       	${ESIS_HOME}/bin/esis_shutdown
+       	${ESIS_HOME}/bin/esis_startup
+       	sleep 2
+       	echo "Testing the connection to the database"
+	${ESIS_HOME}/bin/esis checktz
+	echo ""
+        echo "The old version of modified files is available in ${ESIS_HOME}/share/ESIS/esis.properties.old and $HOME/.pgpass.old"
+        echo "You can delete these old files if the procedure succeeded"
+	echo "Remember to change the database password with the command ${ESIS_HOME}/bin/esis_change_db_password"

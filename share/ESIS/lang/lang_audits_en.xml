@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="audits" lang="en">
+<!-- the # char is used for variables -->
+<!-- in html texts : add <br /> for return line -and- CDATA if use html code -->
+
+<!-- Navigation -->
+<audit_navigation_audits>Audits</audit_navigation_audits>
+<audit_navigation_reports>Reports</audit_navigation_reports>
+<audit_navigation_recommendations>Recommendations</audit_navigation_recommendations>
+<audit_navigation_actions>Actions</audit_navigation_actions>
+<audit_navigation_management>Governance</audit_navigation_management>
+<audit_navigation_metrics>Metrics</audit_navigation_metrics>
+<audit_navigation_reportsmanagement>Reports</audit_navigation_reportsmanagement>
+<audit_navigation_racis>RACI</audit_navigation_racis>
+
+<!-- default texts -->
+<audit_default_allusers>All users</audit_default_allusers>
+<audit_default_month_jan>January</audit_default_month_jan>
+<audit_default_month_feb>Febuary</audit_default_month_feb>
+<audit_default_month_mar>March</audit_default_month_mar>
+<audit_default_month_apr>April</audit_default_month_apr>
+<audit_default_month_may>May</audit_default_month_may>
+<audit_default_month_jun>June</audit_default_month_jun>
+<audit_default_month_jul>July</audit_default_month_jul>
+<audit_default_month_aug>August</audit_default_month_aug>
+<audit_default_month_sep>September</audit_default_month_sep>
+<audit_default_month_oct>October</audit_default_month_oct>
+<audit_default_month_nov>November</audit_default_month_nov>
+<audit_default_month_dec>December</audit_default_month_dec>
+<audit_default_month_jan_short>Jan</audit_default_month_jan_short>
+<audit_default_month_feb_short>Feb</audit_default_month_feb_short>
+<audit_default_month_mar_short>Mar</audit_default_month_mar_short>
+<audit_default_month_apr_short>Apr</audit_default_month_apr_short>
+<audit_default_month_may_short>May</audit_default_month_may_short>
+<audit_default_month_jun_short>Jun</audit_default_month_jun_short>
+<audit_default_month_jul_short>Jul</audit_default_month_jul_short>
+<audit_default_month_aug_short>Aug</audit_default_month_aug_short>
+<audit_default_month_sep_short>Sep</audit_default_month_sep_short>
+<audit_default_month_oct_short>Oct</audit_default_month_oct_short>
+<audit_default_month_nov_short>Nov</audit_default_month_nov_short>
+<audit_default_month_dec_short>Dec</audit_default_month_dec_short>
+<audit_default_day_sun>S</audit_default_day_sun>
+<audit_default_day_mon>M</audit_default_day_mon>
+<audit_default_day_tue>T</audit_default_day_tue>
+<audit_default_day_wed>W</audit_default_day_wed>
+<audit_default_day_thu>T</audit_default_day_thu>
+<audit_default_day_fri>F</audit_default_day_fri>
+<audit_default_day_sat>S</audit_default_day_sat>
+<audit_default_day_sun_long>Sun</audit_default_day_sun_long>
+<audit_default_day_mon_long>Mon</audit_default_day_mon_long>
+<audit_default_day_tue_long>Tue</audit_default_day_tue_long>
+<audit_default_day_wed_long>Wed</audit_default_day_wed_long>
+<audit_default_day_thu_long>Thu</audit_default_day_thu_long>
+<audit_default_day_fri_long>Fri</audit_default_day_fri_long>
+<audit_default_day_sat_long>Sat</audit_default_day_sat_long>
+<audit_default_yes>Yes</audit_default_yes>
+<audit_default_no>No</audit_default_no>
+<audit_default_r>R</audit_default_r>
+<audit_default_a>A</audit_default_a>
+<audit_default_c>C</audit_default_c>
+<audit_default_i>I</audit_default_i>
+
+<!-- Errors texts --> 
+<audit_errors_default_title>Error</audit_errors_default_title>
+<audit_errors_default_text>Error unknown</audit_errors_default_text><!-- html -->
+<audit_errors_wsnotexist_title>WebService Error</audit_errors_wsnotexist_title>
+<audit_errors_wsnotexist_text>The webservice '$1' doesn't exist. Please contact your administrator.</audit_errors_wsnotexist_text><!-- html -->
+<audit_errors_raci_title>RACI Violation</audit_errors_raci_title>
+<audit_errors_raci_text>The current RACI matrix of the item $1 doesn't allow you to perform this action.</audit_errors_raci_text>
+<audit_errors_raci_persons>Please contact the Responsible or Accountable person(s) of the item $1.</audit_errors_raci_persons>
+<audit_errors_raci_accountables>Accountable(s)</audit_errors_raci_accountables>
+<audit_errors_raci_responsibles>Responsible(s)</audit_errors_raci_responsibles>
+<audit_errors_raci_noaccountable>No accountable person.</audit_errors_raci_noaccountable>
+<audit_errors_raci_noresponsible>No responsible person.</audit_errors_raci_noresponsible>
+<audit_errors_authorization_title>Authorization Exception</audit_errors_authorization_title>
+<audit_errors_authorization_text>Authorization refused: you're not allowed to execute this operation.</audit_errors_authorization_text>
+<audit_errors_argumentexception_title>Argument exception</audit_errors_argumentexception_title>
+<audit_errors_argumentexception_text>Action refused: you're not allowed to execute this action.</audit_errors_argumentexception_text>
+<audit_errors_interviewdelete_title>Interview delete error</audit_errors_interviewdelete_title>
+<audit_errors_interviewdelete_text>Action refused: you're not allowed to delete a 'completed' interview.</audit_errors_interviewdelete_text>
+<audit_errors_concurrency_title>Concurrent access error</audit_errors_concurrency_title>
+<audit_errors_concurrency_text><![CDATA[Operation refused: you're not allowed to finalize this operation because the selected object has been updated by another user.<br />Refresh the principal screen to update the selected object before start again the operation.]]></audit_errors_concurrency_text>
+<audit_errors_searchdate_title>Invalid search date</audit_errors_searchdate_title>
+<audit_errors_searchdate_text>Date format error: change the date format to any other format for example 2007, 2007-01 or 2007-01-01.</audit_errors_searchdate_text>
+
+<!-- RACI -->
+<audit_raci_title>RACI</audit_raci_title>
+<audit_raci_audittitle>RACI for audit $1</audit_raci_audittitle>
+<audit_raci_interviewtitle>RACI for interview</audit_raci_interviewtitle>
+<audit_raci_reporttitle>RACI for report $1</audit_raci_reporttitle>
+<audit_raci_recomauditortitle>RACI for auditor rec. $1</audit_raci_recomauditortitle>
+<audit_raci_recomauditeetitle>RACI for auditee rec. $1</audit_raci_recomauditeetitle>
+<audit_raci_actiontitle>RACI for action $1</audit_raci_actiontitle>
+<audit_raci_auditdocumenttitle>RACI for audit document</audit_raci_auditdocumenttitle>
+<audit_raci_recomdocumenttitle>RACI for recommendation document</audit_raci_recomdocumenttitle>
+<audit_raci_audit_title>Audit RACI</audit_raci_audit_title>
+<audit_raci_report_title>Report RACI</audit_raci_report_title>
+<audit_raci_interview_title>Interview RACI</audit_raci_interview_title>
+<audit_raci_auditdocument_title>Audit document RACI</audit_raci_auditdocument_title>
+<audit_raci_recomdocument_title>Recommendation document RACI</audit_raci_recomdocument_title>
+<audit_raci_action_title>Action RACI</audit_raci_action_title>
+<audit_raci_recommendation_auditor_title>Rec. auditor RACI</audit_raci_recommendation_auditor_title>
+<audit_raci_recommendation_auditee_title>Rec. auditee RACI</audit_raci_recommendation_auditee_title>
+<audit_raci_edit>Edit privileges</audit_raci_edit>
+<audit_raci_update_title>RACI for $1</audit_raci_update_title>
+<audit_raci_add_title>Add a stakeholder RACI</audit_raci_add_title>
+<audit_raci_add_datas_users>Stakeholders</audit_raci_add_datas_users>
+<audit_raci_add_datas_nousers>No active stakeholder available.</audit_raci_add_datas_nousers>
+<audit_raci_update_user>Current stakeholder</audit_raci_update_user>
+<audit_raci_update_currentraci>Current RACI</audit_raci_update_currentraci>
+<audit_raci_update_newraci>New RACI</audit_raci_update_newraci>
+<audit_raci_add_newraci>RACI</audit_raci_add_newraci>
+<audit_raci_r>R</audit_raci_r>
+<audit_raci_a>A</audit_raci_a>
+<audit_raci_c>C</audit_raci_c>
+<audit_raci_i>I</audit_raci_i>
+<audit_raci_add>Add</audit_raci_add>
+<audit_raci_update>Update</audit_raci_update>
+<audit_raci_cancel>Cancel</audit_raci_cancel>
+<audit_raci_update_error>A stakeholder must be selected.</audit_raci_update_error>
+<audit_raci_update_error_add>At least one RACI right must be selected.</audit_raci_update_error_add>
+<audit_raci_datas_audit_user>Stakeholders</audit_raci_datas_audit_user>
+<audit_raci_datas_audit_add>Add a stakeholder</audit_raci_datas_audit_add>
+<audit_raci_datas_interview_user>Stakeholders</audit_raci_datas_interview_user>
+<audit_raci_datas_interview_add>Add a stakeholder</audit_raci_datas_interview_add>
+<audit_raci_datas_auditdocument_user>Stakeholders</audit_raci_datas_auditdocument_user>
+<audit_raci_datas_auditdocument_add>Add a stakeholder</audit_raci_datas_auditdocument_add>
+<audit_raci_datas_report_user>Stakeholders</audit_raci_datas_report_user>
+<audit_raci_datas_report_add>Add a stakeholder</audit_raci_datas_report_add>
+<audit_raci_datas_recomauditor_user>Stakeholders</audit_raci_datas_recomauditor_user>
+<audit_raci_datas_recomauditor_add>Add a stakeholder</audit_raci_datas_recomauditor_add>
+<audit_raci_datas_recomauditee_user>Stakeholders</audit_raci_datas_recomauditee_user>
+<audit_raci_datas_recomauditee_add>Add a stakeholder</audit_raci_datas_recomauditee_add>
+<audit_raci_datas_action_user>Stakeholders</audit_raci_datas_action_user>
+<audit_raci_datas_action_add>Add a stakeholder</audit_raci_datas_action_add>
+<audit_raci_infos_raci>RACI</audit_raci_infos_raci>
+<audit_raci_infos_r>R : responsible</audit_raci_infos_r>
+<audit_raci_infos_a>A : accountable</audit_raci_infos_a>
+<audit_raci_infos_c>C : consulted</audit_raci_infos_c>
+<audit_raci_infos_i>I : informed</audit_raci_infos_i>
+
+<!-- RACI History -->
+<audit_raci_history>History</audit_raci_history>
+<audit_racihistory_title>RACI history</audit_racihistory_title>
+<audit_racihistory_matrix_title>Current RACI</audit_racihistory_matrix_title>
+<audit_racihistory_close>Close</audit_racihistory_close>
+<audit_racihistory_datas_user>Stakeholder</audit_racihistory_datas_user>
+<audit_racihistory_datas_modifier>Modifier</audit_racihistory_datas_modifier>
+<audit_racihistory_datas_modificationdate>Modif. date</audit_racihistory_datas_modificationdate>
+<audit_racihistory_pages>page $1 of $2 ( $3 modifications )</audit_racihistory_pages>
+<audit_racihistory_pageempty>0 modification</audit_racihistory_pageempty>
+
+<!-- Audits -->
+<audit_audits_title>Audits management</audit_audits_title>
+<audit_audits_objectives>Objectives</audit_audits_objectives>
+<audit_audits_deliverables>Deliver.</audit_audits_deliverables>
+<audit_audits_context>Context</audit_audits_context>
+<audit_audits_scope>Scope</audit_audits_scope>
+<audit_audits_opened>Opened</audit_audits_opened>
+<audit_audits_closed>Closed</audit_audits_closed>
+<audit_audits_datas_audits_reference>Reference</audit_audits_datas_audits_reference>
+<audit_audits_datas_audits_origin>Origin</audit_audits_datas_audits_origin>
+<audit_audits_datas_audits_topic>Topic</audit_audits_datas_audits_topic>
+<audit_audits_datas_audits_standard>Standard</audit_audits_datas_audits_standard>
+<audit_audits_datas_audits_status>Status</audit_audits_datas_audits_status>
+<audit_audits_datas_audits_owner>Responsible</audit_audits_datas_audits_owner>
+<audit_audits_datas_audits_add>Add a new audit</audit_audits_datas_audits_add>
+<audit_audits_pageempty>0 audit</audit_audits_pageempty>
+<audit_audits_pages>page $1 of $2 ( $3 audits )</audit_audits_pages>
+<audit_audits_datas_objectives>Objectives</audit_audits_datas_objectives>
+<audit_audits_datas_deliverables>Deliverables</audit_audits_datas_deliverables>
+<audit_audits_datas_context>Context</audit_audits_datas_context>
+<audit_audits_datas_scope>Scope</audit_audits_datas_scope>
+<audit_audits_datas_racis_users>Stakeholders</audit_audits_datas_racis_users>
+<audit_audits_datas_racis_r>R</audit_audits_datas_racis_r>
+<audit_audits_datas_racis_a>A</audit_audits_datas_racis_a>
+<audit_audits_datas_racis_c>C</audit_audits_datas_racis_c>
+<audit_audits_datas_racis_i>I</audit_audits_datas_racis_i>
+<audit_audit_datas_racis_edit>Edit privileges</audit_audit_datas_racis_edit>
+
+<!-- Audit Add -->
+<audit_auditadd_title>New audit</audit_auditadd_title>
+<audit_auditadd_add>Create</audit_auditadd_add>
+<audit_auditadd_cancel>Cancel</audit_auditadd_cancel>
+<audit_auditadd_reference>Reference</audit_auditadd_reference>
+<audit_auditadd_origin>Origin</audit_auditadd_origin>
+<audit_auditadd_use_standard>Compliance audit</audit_auditadd_use_standard>
+<audit_auditadd_standard>Standard</audit_auditadd_standard>
+<audit_auditadd_standard_view>view the standard informations</audit_auditadd_standard_view>
+<audit_auditadd_topic>Topic</audit_auditadd_topic>
+<audit_auditadd_confidentiality>Confidentiality</audit_auditadd_confidentiality>
+<audit_auditadd_startdate>Start date</audit_auditadd_startdate>
+<audit_auditadd_enddate>End date</audit_auditadd_enddate>
+<audit_auditadd_error_reference>'Reference' must be filled.</audit_auditadd_error_reference>
+<audit_auditadd_error_origin>'Origin' must be selected.</audit_auditadd_error_origin>
+<audit_auditadd_error_topic>'Topic' must be selected.</audit_auditadd_error_topic>
+<audit_auditadd_error_confidentiality>'Confidentiality' must be selected.</audit_auditadd_error_confidentiality>
+<audit_auditadd_error_dates>'End date' must be higher than 'Start date'.</audit_auditadd_error_dates>
+<audit_auditadd_error_standard>'Standard' must be selected.</audit_auditadd_error_standard>
+
+<!-- Audit Update -->
+<audit_auditupdate_title>Audit management</audit_auditupdate_title>
+<audit_auditupdate_reference>Reference</audit_auditupdate_reference>
+<audit_auditupdate_origin>Origin</audit_auditupdate_origin>
+<audit_auditupdate_topic>Topic</audit_auditupdate_topic>
+<audit_auditupdate_use_standard>Compliance audit</audit_auditupdate_use_standard>
+<audit_auditupdate_standard>Standard</audit_auditupdate_standard>
+<audit_auditupdate_standard_view>view the standard informations</audit_auditupdate_standard_view>
+<audit_auditupdate_confidentiality>Confidentiality</audit_auditupdate_confidentiality>
+<audit_auditupdate_status>Status</audit_auditupdate_status>
+<audit_auditupdate_startdate>Start date</audit_auditupdate_startdate>
+<audit_auditupdate_enddate>End date</audit_auditupdate_enddate>
+<audit_auditupdate_context>Context</audit_auditupdate_context>
+<audit_auditupdate_objectives>Objectives</audit_auditupdate_objectives>
+<audit_auditupdate_scope>Scope</audit_auditupdate_scope>
+<audit_auditupdate_deliverables>Deliverables</audit_auditupdate_deliverables>
+<audit_auditupdate_creationdate>created on $1</audit_auditupdate_creationdate>
+<audit_auditupdate_update>Update</audit_auditupdate_update>
+<audit_auditupdate_cancel>Cancel</audit_auditupdate_cancel>
+<audit_auditupdate_documents>Audit documents linked</audit_auditupdate_documents>
+<audit_auditupdate_history>History</audit_auditupdate_history>
+<audit_auditupdate_interviews>Interviews</audit_auditupdate_interviews>
+<audit_auditupdate_datas_racis_users>Stakeholders</audit_auditupdate_datas_racis_users>
+<audit_auditupdate_datas_racis_r>R</audit_auditupdate_datas_racis_r>
+<audit_auditupdate_datas_racis_a>A</audit_auditupdate_datas_racis_a>
+<audit_auditupdate_datas_racis_c>C</audit_auditupdate_datas_racis_c>
+<audit_auditupdate_datas_racis_i>I</audit_auditupdate_datas_racis_i>
+<audit_auditupdate_datas_racis_edit>Edit privileges</audit_auditupdate_datas_racis_edit>
+<audit_auditupdate_datas_organisations_name>Audit perimeter</audit_auditupdate_datas_organisations_name>
+<audit_auditupdate_datas_organisations_edit>Edit perimeter</audit_auditupdate_datas_organisations_edit>
+<audit_auditupdate_datas_interview_auditee>Interview auditee</audit_auditupdate_datas_interview_auditee>
+<audit_auditupdate_datas_interview_date>Int. date</audit_auditupdate_datas_interview_date>
+<audit_auditupdate_datas_interview_completed>Completed</audit_auditupdate_datas_interview_completed>
+<audit_auditupdate_datas_interview_add>Add an interview</audit_auditupdate_datas_interview_add>
+<audit_auditupdate_error_reference>'Reference' must be filled.</audit_auditupdate_error_reference>
+<audit_auditupdate_error_origin>'Origin' must be selected.</audit_auditupdate_error_origin>
+<audit_auditupdate_error_topic>'Topic' must be selected.</audit_auditupdate_error_topic>
+<audit_auditupdate_error_confidentiality>'Confidentiality' must be selected.</audit_auditupdate_error_confidentiality>
+<audit_auditupdate_error_status>'Status' must be selected.</audit_auditupdate_error_status>
+<audit_auditupdate_error_date>'End Date' must be higher than 'Start Date'.</audit_auditupdate_error_date>
+<audit_auditupdate_error_standard>'Standard' must be selected.</audit_auditupdate_error_standard>
+<audit_auditupdate_error_closed>Only RACI A stakeholder can close the audit.</audit_auditupdate_error_closed>
+
+<!-- Audit PieChart -->
+<audit_auditpiechart_title>Audit statistics</audit_auditpiechart_title>
+<audit_auditpiechart_topic>TOPIC</audit_auditpiechart_topic>
+<audit_auditpiechart_origin>ORIGIN</audit_auditpiechart_origin>
+<audit_auditpiechart_status>STATUS</audit_auditpiechart_status>
+<audit_auditpiechart_standard>STANDARD</audit_auditpiechart_standard>
+
+<!-- Audit History -->
+<audit_audithistory_title>Audit history</audit_audithistory_title>
+<audit_audithistory_datas_history_changedate>Change date</audit_audithistory_datas_history_changedate>
+<audit_audithistory_datas_history_modifier>Modifier</audit_audithistory_datas_history_modifier>
+<audit_audithistory_datas_history_startdate>Start date</audit_audithistory_datas_history_startdate>
+<audit_audithistory_datas_history_enddate>End date</audit_audithistory_datas_history_enddate>
+<audit_audithistory_datas_history_owner>Responsible</audit_audithistory_datas_history_owner>
+<audit_audithistory_datas_history_status>Status</audit_audithistory_datas_history_status>
+<audit_audithistory_datas_history_confidentiality>Confidentiality</audit_audithistory_datas_history_confidentiality>
+
+<!-- Audit Organisations -->
+<audit_auditorganisations_title>Audit permieter</audit_auditorganisations_title>
+<audit_auditorganisations_datas_locations>Locations</audit_auditorganisations_datas_locations>
+<audit_auditorganisations_datas_departments>Departments</audit_auditorganisations_datas_departments>
+<audit_auditorganisations_datas_businesszones>Business zones</audit_auditorganisations_datas_businesszones>
+<audit_auditorganisations_datas_organisations>Organisations</audit_auditorganisations_datas_organisations>
+
+<!-- Audit Standard -->
+<audit_auditstandard_title>Standard informations</audit_auditstandard_title>
+<audit_auditstandard_standard>Standard</audit_auditstandard_standard>
+<audit_auditstandard_source>Source</audit_auditstandard_source>
+<audit_auditstandard_reference>Reference</audit_auditstandard_reference>
+<audit_auditstandard_publication>Publication date</audit_auditstandard_publication>
+<audit_auditstandard_classification>Classification index</audit_auditstandard_classification>
+<audit_auditstandard_category>Category</audit_auditstandard_category>
+<audit_auditstandard_active>Active</audit_auditstandard_active>
+<audit_auditstandard_obsolete>Obsoleted</audit_auditstandard_obsolete>
+
+<!-- Interviews -->
+<audit_interviews_title>List of interviews</audit_interviews_title>
+<audit_interviews_audit_reference>Audit reference</audit_interviews_audit_reference>
+<audit_interviews_audit_status>Audit status</audit_interviews_audit_status>
+<audit_interviews_audit_startdate>Start date</audit_interviews_audit_startdate>
+<audit_interviews_audit_enddate>End date</audit_interviews_audit_enddate>
+<audit_interviews_datas_date>Date</audit_interviews_datas_date>
+<audit_interviews_datas_auditor>Auditor</audit_interviews_datas_auditor>
+<audit_interviews_datas_auditee>Auditee</audit_interviews_datas_auditee>
+<audit_interviews_datas_description>Description</audit_interviews_datas_description>
+<audit_interviews_datas_completed>Completed</audit_interviews_datas_completed>
+<audit_interviews_datas_add>Add an interview</audit_interviews_datas_add>
+
+<!-- Interview -->
+<audit_interview_title_add>New interview</audit_interview_title_add>
+<audit_interview_title_update>View/update interview</audit_interview_title_update>
+<audit_interview_auditee>Auditee</audit_interview_auditee>
+<audit_interview_description>Description</audit_interview_description>
+<audit_interview_date>Interview date</audit_interview_date>
+<audit_interview_completed>Completed</audit_interview_completed>
+<audit_interview_creationdate>created on $1</audit_interview_creationdate>
+<audit_interview_add>Create</audit_interview_add>
+<audit_interview_update>Update</audit_interview_update>
+<audit_interview_cancel>Cancel</audit_interview_cancel>
+<audit_interview_error_auditee>'Auditee' must be filled.</audit_interview_error_auditee>
+<audit_interview_error_date>'Interview Date' must be selected.</audit_interview_error_date>
+<audit_interview_object>interview with $1</audit_interview_object>
+
+<!-- Audit Documents -->
+<audit_auditdocuments_title>List of audit documents</audit_auditdocuments_title>
+<audit_auditdocuments_auditreference>Audit reference</audit_auditdocuments_auditreference>
+<audit_auditdocuments_datas_title>Title</audit_auditdocuments_datas_title>
+<audit_auditdocuments_datas_reference>Reference</audit_auditdocuments_datas_reference>
+<audit_auditdocuments_datas_description>Description</audit_auditdocuments_datas_description>
+<audit_auditdocuments_datas_owner>Responsible</audit_auditdocuments_datas_owner>
+<audit_auditdocuments_datas_verified>Verified</audit_auditdocuments_datas_verified>
+<audit_auditdocuments_datas_type>Type</audit_auditdocuments_datas_type>
+<audit_auditdocuments_datas_confidentiality>Confidentiality</audit_auditdocuments_datas_confidentiality>
+<audit_auditdocuments_datas_add>Add an audit document</audit_auditdocuments_datas_add>
+
+<!-- Audit & Recom Document -->
+<audit_auditdocument_title_add>New audit document</audit_auditdocument_title_add>
+<audit_recomdocument_title_add>New recommendation document</audit_recomdocument_title_add>
+<audit_auditdocument_title_update>View/update audit document</audit_auditdocument_title_update>
+<audit_recomdocument_title_update>View/update recommendation document</audit_recomdocument_title_update>
+<audit_auditdocument_documenttitle>Title</audit_auditdocument_documenttitle>
+<audit_auditdocument_description>Description</audit_auditdocument_description>
+<audit_auditdocument_reference>Reference</audit_auditdocument_reference>
+<audit_auditdocument_verified>Verified</audit_auditdocument_verified>
+<audit_auditdocument_type>Type</audit_auditdocument_type>
+<audit_auditdocument_confidentiality>Confidentiality</audit_auditdocument_confidentiality>
+<audit_auditdocument_creationdate>created on $1</audit_auditdocument_creationdate>
+<audit_auditdocument_download>Download file</audit_auditdocument_download>
+<audit_auditdocument_upload>Select the document file to upload</audit_auditdocument_upload>
+<audit_auditdocument_upload_uploading>Uploading file $1.</audit_auditdocument_upload_uploading>
+<audit_auditdocument_upload_select>Attempting to upload file $1.</audit_auditdocument_upload_select>
+<audit_auditdocument_upload_maxsize>The file $1 has exceeded the authorized maximum size of $2 octets.</audit_auditdocument_upload_maxsize>
+<audit_auditdocument_upload_httperror>HTTP error $1 reached when uploading file $2.</audit_auditdocument_upload_httperror>
+<audit_auditdocument_upload_ioerror>Input/Output error when uploading file $1.</audit_auditdocument_upload_ioerror>
+<audit_auditdocument_upload_securityerror>Security error ($1) reached when uploading file $2.</audit_auditdocument_upload_securityerror>
+<audit_auditdocument_upload_finished>Upload of file $1 finished.</audit_auditdocument_upload_finished>
+<audit_auditdocument_files>Documents files</audit_auditdocument_files>
+<audit_auditdocument_add>Create</audit_auditdocument_add>
+<audit_auditdocument_update>Update</audit_auditdocument_update>
+<audit_auditdocument_cancel>Cancel</audit_auditdocument_cancel>
+<audit_auditdocument_notify>Notify support</audit_auditdocument_notify>
+<audit_auditdocument_history>History</audit_auditdocument_history>
+<audit_auditdocument_error_documenttitle>'Title' must be filled.</audit_auditdocument_error_documenttitle>
+
+<!-- Audit & Recom. Document History -->
+<audit_auditdocumenthistory_title>Audit document history</audit_auditdocumenthistory_title>
+<audit_recomdocumenthistory_title>Recommendation document history</audit_recomdocumenthistory_title>
+<audit_auditdocumenthistory_datas_history_changedate>Change date</audit_auditdocumenthistory_datas_history_changedate>
+<audit_auditdocumenthistory_datas_history_modifier>Modifier</audit_auditdocumenthistory_datas_history_modifier>
+<audit_auditdocumenthistory_datas_history_owner>Responsible</audit_auditdocumenthistory_datas_history_owner>
+<audit_auditdocumenthistory_datas_history_revisionnumber>Revision #</audit_auditdocumenthistory_datas_history_revisionnumber>
+
+<!-- Reports -->
+<audit_reports_title>Audit's reports management</audit_reports_title>
+<audit_reports_datas_reports_title>Report title</audit_reports_datas_reports_title>
+<audit_reports_datas_reports_status>Status</audit_reports_datas_reports_status>
+<audit_reports_datas_reports_recommendations>Recommendations</audit_reports_datas_reports_recommendations>
+<audit_reports_datas_reports_actions>Actions</audit_reports_datas_reports_actions>
+<audit_reports_datas_reports_add>Add a new report</audit_reports_datas_reports_add>
+<audit_reports_pages>page $1 of $2 ( $3 reports )</audit_reports_pages>
+<audit_reports_pageempty>0 report</audit_reports_pageempty>
+<audit_reports_datas_infos>Report informations</audit_reports_datas_infos>
+<audit_reports_datas_infos_report>Report :</audit_reports_datas_infos_report>
+<audit_reports_datas_infos_title> - title</audit_reports_datas_infos_title>
+<audit_reports_datas_infos_subtitle> - subtitle</audit_reports_datas_infos_subtitle>
+<audit_reports_datas_infos_executivesummary> - executive summary</audit_reports_datas_infos_executivesummary>
+<audit_reports_datas_infos_source> - source</audit_reports_datas_infos_source>
+<audit_reports_datas_infos_status> - status</audit_reports_datas_infos_status>
+<audit_reports_datas_infos_date> - creation date</audit_reports_datas_infos_date>
+<audit_reports_datas_infos_duedate> - due date</audit_reports_datas_infos_duedate>
+<audit_reports_datas_infos_recommendations># recommendations</audit_reports_datas_infos_recommendations>
+<audit_reports_datas_infos_openedrecoms> - opened rec.</audit_reports_datas_infos_openedrecoms>
+<audit_reports_datas_infos_riskacceptedrecoms> - risk accepted rec.</audit_reports_datas_infos_riskacceptedrecoms>
+<audit_reports_datas_infos_duplicaterecoms> - duplicated rec.</audit_reports_datas_infos_duplicaterecoms>
+<audit_reports_datas_infos_closedrecoms> - closed rec.</audit_reports_datas_infos_closedrecoms>
+<audit_reports_datas_infos_actions># actions</audit_reports_datas_infos_actions>
+<audit_reports_datas_infos_openedactions> - opened actions</audit_reports_datas_infos_openedactions>
+<audit_reports_datas_infos_closedactions> - closed actions</audit_reports_datas_infos_closedactions>
+<audit_reports_datas_infos_audit>Audit :</audit_reports_datas_infos_audit>
+<audit_reports_datas_infos_refaudit> - reference</audit_reports_datas_infos_refaudit>
+<audit_reports_datas_infos_originaudit> - origin</audit_reports_datas_infos_originaudit>
+<audit_reports_datas_infos_topicstandardaudit> - topic/standard</audit_reports_datas_infos_topicstandardaudit>
+<audit_reports_datas_actions_action>Action</audit_reports_datas_actions_action>
+<audit_reports_datas_actions_owner>Responsible</audit_reports_datas_actions_owner>
+<audit_reports_datas_actions_duedate>Due date</audit_reports_datas_actions_duedate>
+
+<!-- Report -->
+<audit_report_title_add>New report</audit_report_title_add>
+<audit_report_title_update>View/update report</audit_report_title_update>
+<audit_report_auditreference>Audit reference</audit_report_auditreference>
+<audit_report_auditorigin>Origin</audit_report_auditorigin>
+<audit_report_audittopicstandard>Topic/Standard</audit_report_audittopicstandard>
+<audit_report_reporttitle>Report title</audit_report_reporttitle>
+<audit_report_reportsubtitle>Sub title</audit_report_reportsubtitle>
+<audit_report_reportexecutive>Executive summary</audit_report_reportexecutive>
+<audit_report_reportstatus>Status</audit_report_reportstatus>
+<audit_report_reportsource>Source</audit_report_reportsource>
+<audit_report_reportduedate>Due date</audit_report_reportduedate>
+<audit_report_reportcreationdate>created on $1</audit_report_reportcreationdate>
+<audit_report_history>History</audit_report_history>
+<audit_report_add>Create</audit_report_add>
+<audit_report_update>Update</audit_report_update>
+<audit_report_cancel>Cancel</audit_report_cancel>
+<audit_report_error_auditlist>'Audit' must be selected.</audit_report_error_auditlist>
+<audit_report_error_reporttitle>'Title' must be filled.</audit_report_error_reporttitle>
+<audit_report_error_reportstatus>'Status' must be selected.</audit_report_error_reportstatus>
+
+<!-- Report History -->
+<audit_reporthistory_title>Report history</audit_reporthistory_title>
+<audit_reporthistory_datas_history_changedate>Change date</audit_reporthistory_datas_history_changedate>
+<audit_reporthistory_datas_history_modifier>Modifier</audit_reporthistory_datas_history_modifier>
+<audit_reporthistory_datas_history_duedate>Due date</audit_reporthistory_datas_history_duedate>
+
+<!-- Report PieChart -->
+<audit_reportpiechart_title>Report statistics</audit_reportpiechart_title>
+<audit_reportpiechart_priority>REC. PRIORITY</audit_reportpiechart_priority>
+<audit_reportpiechart_severity>REC. SEVERITY</audit_reportpiechart_severity>
+<audit_reportpiechart_recomsstatus>REC. STATUS</audit_reportpiechart_recomsstatus>
+<audit_reportpiechart_actionsstatus>ACTIONS STATUS</audit_reportpiechart_actionsstatus>
+
+<!-- Recommendations -->
+<audit_recommendations_title>Audit's recommendations management</audit_recommendations_title>
+<audit_recommendations_datas_recoms_title>Title</audit_recommendations_datas_recoms_title>
+<audit_recommendations_datas_recoms_recommendation>Reference</audit_recommendations_datas_recoms_recommendation>
+<audit_recommendations_datas_recoms_priority>Priority</audit_recommendations_datas_recoms_priority>
+<audit_recommendations_datas_recoms_auditor>Auditor responsible</audit_recommendations_datas_recoms_auditor>
+<audit_recommendations_datas_recoms_auditee>Auditee responsible</audit_recommendations_datas_recoms_auditee>
+<audit_recommendations_datas_recoms_status>Status</audit_recommendations_datas_recoms_status>
+<audit_recommendations_datas_recoms_add>Add a new recommendation</audit_recommendations_datas_recoms_add>
+<audit_recommendations_pages>page $1 of $2 ( $3 recommendations )</audit_recommendations_pages>
+<audit_recommendations_pageempty>0 recommendation</audit_recommendations_pageempty>
+<audit_recommendations_datas_description>Recommendation informations</audit_recommendations_datas_description>
+<audit_recommendations_datas_infos_title>Title</audit_recommendations_datas_infos_title>
+<audit_recommendations_datas_infos_reference>Reference</audit_recommendations_datas_infos_reference>
+<audit_recommendations_datas_infos_recommendation>Recommendation</audit_recommendations_datas_infos_recommendation>
+<audit_recommendations_datas_infos_compliant>In compliance audit</audit_recommendations_datas_infos_compliant>
+<audit_recommendations_datas_infos_topics>Topics / Compliance topic</audit_recommendations_datas_infos_topics>
+<audit_recommendations_datas_infos_status>Status</audit_recommendations_datas_infos_status>
+<audit_recommendations_datas_infos_verification_insitu>In situ verification</audit_recommendations_datas_infos_verification_insitu>
+<audit_recommendations_datas_infos_verification_documented>Documentary verification</audit_recommendations_datas_infos_verification_documented>
+<audit_recommendations_datas_infos_auditor>Auditor responsible</audit_recommendations_datas_infos_auditor>
+<audit_recommendations_datas_infos_auditor_priority>Auditor priority</audit_recommendations_datas_infos_auditor_priority>
+<audit_recommendations_datas_infos_auditor_severity>Auditor severity</audit_recommendations_datas_infos_auditor_severity>
+<audit_recommendations_datas_infos_auditee>Auditee responsible</audit_recommendations_datas_infos_auditee>
+<audit_recommendations_datas_infos_targetdate>Target date</audit_recommendations_datas_infos_targetdate>
+<audit_recommendations_datas_infos_closeddate>Closed date</audit_recommendations_datas_infos_closeddate>
+<audit_recommendations_datas_infos_creationdate>Creation date</audit_recommendations_datas_infos_creationdate>
+<audit_recommendations_datas_actions_action>Action</audit_recommendations_datas_actions_action>
+<audit_recommendations_datas_actions_owner>Responsible</audit_recommendations_datas_actions_owner>
+<audit_recommendations_datas_actions_duedate>Due date</audit_recommendations_datas_actions_duedate>
+<audit_recommendations_datas_actions_add>Add a new action</audit_recommendations_datas_actions_add>
+<audit_recommendations_datas_comments_comment>Comment</audit_recommendations_datas_comments_comment>
+<audit_recommendations_datas_comments_author>Author</audit_recommendations_datas_comments_author>
+<audit_recommendations_datas_comments_add>Add a new comment</audit_recommendations_datas_comments_add>
+
+<!-- Recommendation -->
+<audit_recommendation_title_add>New recommendation</audit_recommendation_title_add>
+<audit_recommendation_title_update>View/update recommendation</audit_recommendation_title_update>
+<audit_recommendation_auditor>Auditor</audit_recommendation_auditor>
+<audit_recommendation_auditee>Auditee</audit_recommendation_auditee>
+<audit_recommendation_dependency>Dependency</audit_recommendation_dependency>
+<audit_recommendation_organisations>Perimeter</audit_recommendation_organisations>
+<audit_recommendation_compliance>Compliance</audit_recommendation_compliance>
+<audit_recommendation_documents>Documents</audit_recommendation_documents>
+<audit_recommendation_auditor_title>Title</audit_recommendation_auditor_title>
+<audit_recommendation_auditor_reference>Reference</audit_recommendation_auditor_reference>
+<audit_recommendation_auditor_topic1>Primary topic</audit_recommendation_auditor_topic1>
+<audit_recommendation_auditor_topic2>Secondary topic</audit_recommendation_auditor_topic2>
+<audit_recommendation_auditor_compliancetopic>Compliance topic</audit_recommendation_auditor_compliancetopic>
+<audit_recommendation_auditor_nocompliancetopic>No compliance topics available for this recommendation</audit_recommendation_auditor_nocompliancetopic> 
+<audit_recommendation_auditor_verification>Verification</audit_recommendation_auditor_verification>
+<audit_recommendation_auditor_verificationdocumented>Documentary verification</audit_recommendation_auditor_verificationdocumented>
+<audit_recommendation_auditor_verificationinsitu>In situ verification</audit_recommendation_auditor_verificationinsitu>
+<audit_recommendation_auditor_creationdate>created on $1</audit_recommendation_auditor_creationdate>
+<audit_recommendation_auditor_closeddate>Closed date</audit_recommendation_auditor_closeddate>
+<audit_recommendation_auditor_targetdate>Target date</audit_recommendation_auditor_targetdate>
+<audit_recommendation_auditor_status>Recommendation's status</audit_recommendation_auditor_status>
+<audit_recommendation_auditor_statusopened>Opened recommendation</audit_recommendation_auditor_statusopened>
+<audit_recommendation_auditor_statusriskaccepted>Risk accepted for recommendation</audit_recommendation_auditor_statusriskaccepted>
+<audit_recommendation_auditor_statusclosed>Closed recommendation</audit_recommendation_auditor_statusclosed>
+<audit_recommendation_auditor_statusduplicate>Closed duplicate recommendation</audit_recommendation_auditor_statusduplicate>
+<audit_recommendation_auditor_recommendation>Auditor recommendations</audit_recommendation_auditor_recommendation>
+<audit_recommendation_auditor_priority>Priority</audit_recommendation_auditor_priority>
+<audit_recommendation_auditor_severity>Severity</audit_recommendation_auditor_severity>
+<audit_recommendation_auditor_add>Create</audit_recommendation_auditor_add>
+<audit_recommendation_auditor_reopen>Reopen</audit_recommendation_auditor_reopen>
+<audit_recommendation_auditor_update>Update</audit_recommendation_auditor_update>
+<audit_recommendation_auditor_cancel>Cancel</audit_recommendation_auditor_cancel>
+<audit_recommendation_auditor_error_recomtitle>'Title' of the recommendation must be filled.</audit_recommendation_auditor_error_recomtitle>
+<audit_recommendation_auditor_error_reference>'Reference' of the recommendation must be filled.</audit_recommendation_auditor_error_reference>
+<audit_recommendation_auditor_error_recommendation>'Auditor Recommendation' must be filled.</audit_recommendation_auditor_error_recommendation>
+<audit_recommendation_auditor_error_status>'Status' must be selected.</audit_recommendation_auditor_error_status>
+<audit_recommendation_auditee_title>Title</audit_recommendation_auditee_title>
+<audit_recommendation_auditee_answer>Auditee answer</audit_recommendation_auditee_answer>
+<audit_recommendation_auditee_raci>Auditee RACI</audit_recommendation_auditee_raci>
+<audit_recommendation_auditee_priority>Priority</audit_recommendation_auditee_priority>
+<audit_recommendation_auditee_severity>Severity</audit_recommendation_auditee_severity>
+<audit_recommendation_auditee_targetdate>Target date</audit_recommendation_auditee_targetdate>
+<audit_recommendation_auditee_targetdate_resetescalade>Reset the pushed back target date marker</audit_recommendation_auditee_targetdate_resetescalade>
+<audit_recommendation_auditee_datas_raci_users>Stakeholders</audit_recommendation_auditee_datas_raci_users>
+<audit_recommendation_auditee_datas_raci_r>R</audit_recommendation_auditee_datas_raci_r>
+<audit_recommendation_auditee_datas_raci_a>A</audit_recommendation_auditee_datas_raci_a>
+<audit_recommendation_auditee_datas_raci_c>C</audit_recommendation_auditee_datas_raci_c>
+<audit_recommendation_auditee_datas_raci_i>I</audit_recommendation_auditee_datas_raci_i>
+<audit_recommendation_auditee_datas_raci_edit>Edit</audit_recommendation_auditee_datas_raci_edit>
+<audit_recommendation_auditee_update>Update</audit_recommendation_auditee_update>
+<audit_recommendation_auditee_cancel>Cancel</audit_recommendation_auditee_cancel>
+<audit_recommendation_auditee_error_answer>'Auditee Answer' must be filled.</audit_recommendation_auditee_error_answer>
+<audit_recommendation_auditee_error_targetdate>The target date must be filled.</audit_recommendation_auditee_error_targetdate>
+<audit_recommendation_dependency_title>Title</audit_recommendation_dependency_title>
+<audit_recommendation_dependency_dependents>Dependents</audit_recommendation_dependency_dependents>
+<audit_recommendation_dependency_blocking>Blocking</audit_recommendation_dependency_blocking>
+<audit_recommendation_dependency_duplicates>Duplicates</audit_recommendation_dependency_duplicates>
+<audit_recommendation_dependency_references>References</audit_recommendation_dependency_references>
+<audit_recommendation_dependency_dependentstext>Dependents recommendations</audit_recommendation_dependency_dependentstext>
+<audit_recommendation_dependency_blockingtext>Blocking recommendations</audit_recommendation_dependency_blockingtext>
+<audit_recommendation_dependency_duplicatestext>Duplicates recommendations</audit_recommendation_dependency_duplicatestext>
+<audit_recommendation_dependency_referencestext>Referring recommendations</audit_recommendation_dependency_referencestext>
+<audit_recommendation_dependency_datas_duplicates_add>Add a duplicate recom.</audit_recommendation_dependency_datas_duplicates_add>
+<audit_recommendation_dependency_datas_references_add>Add a reference recom.</audit_recommendation_dependency_datas_references_add>
+<audit_recommendation_dependency_datas_dependents_add>Add a dependent recom.</audit_recommendation_dependency_datas_dependents_add>
+<audit_recommendation_dependency_datas_blocking_add>Add a blocking recom.</audit_recommendation_dependency_datas_blocking_add>
+<audit_recommendation_dependency_change>Do you want to visualize the recommendation '$1' ?</audit_recommendation_dependency_change>
+<audit_recommendation_organisations_possible>Possible organisations</audit_recommendation_organisations_possible>
+<audit_recommendation_organisations_linked>Recommendation perimeter</audit_recommendation_organisations_linked>
+<audit_recommendation_compliance_datas_organisation>Organisation</audit_recommendation_compliance_datas_organisation>
+<audit_recommendation_compliance_datas_level>Level</audit_recommendation_compliance_datas_level>
+<audit_recommendation_compliance_datas_target>Target</audit_recommendation_compliance_datas_target>
+<audit_recommendation_compliance_datas_type>Type</audit_recommendation_compliance_datas_type>
+<audit_recommendation_compliance_datas_kind>Kind</audit_recommendation_compliance_datas_kind>
+<audit_recommendation_compliance_add>Evaluate compliance level</audit_recommendation_compliance_add>
+<audit_recommendation_compliance_nocompliance>No compliance (audit linked isn't associated with a standard)</audit_recommendation_compliance_nocompliance>
+<audit_recommendation_history>History</audit_recommendation_history>
+<audit_recommendation_planning>Planning</audit_recommendation_planning>
+<!-- Recom. Documents -->
+<audit_recommendation_documents_datas_title>Title</audit_recommendation_documents_datas_title>
+<audit_recommendation_documents_datas_reference>Reference</audit_recommendation_documents_datas_reference>
+<audit_recommendation_documents_datas_description>Description</audit_recommendation_documents_datas_description>
+<audit_recommendation_documents_datas_owner>Responsible</audit_recommendation_documents_datas_owner>
+<audit_recommendation_documents_datas_verified>Verified</audit_recommendation_documents_datas_verified>
+<audit_recommendation_documents_datas_type>Type</audit_recommendation_documents_datas_type>
+<audit_recommendation_documents_datas_confidentiality>Confidentiality</audit_recommendation_documents_datas_confidentiality>
+<audit_recommendation_documents_datas_add>Add a recommendation document</audit_recommendation_documents_datas_add>
+
+<!-- Recommendation Dependency Add -->
+<audit_recommendationdependency_dependent_title>Add a dependent recommendation</audit_recommendationdependency_dependent_title>
+<audit_recommendationdependency_blocking_title>Add a blocking recommendation</audit_recommendationdependency_blocking_title>
+<audit_recommendationdependency_duplicate_title>Add a duplicate recommendation</audit_recommendationdependency_duplicate_title>
+<audit_recommendationdependency_reference_title>Add a referring recommendation</audit_recommendationdependency_reference_title>
+<audit_recommendationdependency_add>Add</audit_recommendationdependency_add>
+<audit_recommendationdependency_datas_dependency_title>Title</audit_recommendationdependency_datas_dependency_title>
+<audit_recommendationdependency_datas_dependency_reference>Reference</audit_recommendationdependency_datas_dependency_reference>
+<audit_recommendationdependency_datas_dependency_status>Status</audit_recommendationdependency_datas_dependency_status>
+
+<!-- Recommendation Planning -->
+<audit_recommendationplanning_title>Recommendation planning</audit_recommendationplanning_title>
+<audit_recommendationplanning_error>No actions for this recommendation.</audit_recommendationplanning_error>
+
+<!-- Recommendation History -->
+<audit_recommendationhistory_title>Recommendation history</audit_recommendationhistory_title>
+<audit_recommendationhistory_datas_history_changedate>Change date</audit_recommendationhistory_datas_history_changedate>
+<audit_recommendationhistory_datas_history_modifier>Modifier</audit_recommendationhistory_datas_history_modifier>
+<audit_recommendationhistory_datas_history_auditor>Auditor</audit_recommendationhistory_datas_history_auditor>
+<audit_recommendationhistory_datas_history_auditorpriority>Auditor priority</audit_recommendationhistory_datas_history_auditorpriority>
+<audit_recommendationhistory_datas_history_auditee>Auditee</audit_recommendationhistory_datas_history_auditee>
+<audit_recommendationhistory_datas_history_auditeepriority>Auditee priority</audit_recommendationhistory_datas_history_auditeepriority>
+<audit_recommendationhistory_datas_history_targetdate>Target date</audit_recommendationhistory_datas_history_targetdate>
+<audit_recommendationhistory_datas_history_status>Status</audit_recommendationhistory_datas_history_status>
+
+<!-- Recommendation Compliance & History -->
+<audit_compliance_title_add>Evaluate compliance level</audit_compliance_title_add>
+<audit_compliance_title_update>View/Edit compliance level</audit_compliance_title_update>
+<audit_compliance_history>History</audit_compliance_history>
+<audit_compliance_recommendation>Recommendation ref.</audit_compliance_recommendation>
+<audit_compliance_organisation>Organisation</audit_compliance_organisation>
+<audit_compliance_organisation_empty>No specific organisation</audit_compliance_organisation_empty>
+<audit_compliance_target>Target level</audit_compliance_target>
+<audit_compliance_level>Current level</audit_compliance_level>
+<audit_compliance_type>Non-compliance</audit_compliance_type>
+<audit_compliance_kind>Notice</audit_compliance_kind>
+<audit_compliance_comment>Comment</audit_compliance_comment>
+<audit_compliance_add>Create</audit_compliance_add>
+<audit_compliance_update>Update</audit_compliance_update>
+<audit_compliance_cancel>Cancel</audit_compliance_cancel>
+<audit_compliance_text>compliance</audit_compliance_text>
+<audit_compliancehistory_title>Compliance history</audit_compliancehistory_title>
+<audit_compliancehistory_datas_modification>Change date</audit_compliancehistory_datas_modification>
+<audit_compliancehistory_datas_modifier>Modifier</audit_compliancehistory_datas_modifier>
+<audit_compliancehistory_datas_level>Current level</audit_compliancehistory_datas_level>
+<audit_compliancehistory_datas_target>Target level</audit_compliancehistory_datas_target>
+
+<!-- Actions -->
+<audit_actions_title>Audit's actions management</audit_actions_title>
+<audit_actions_datas_actions_title>Action title</audit_actions_datas_actions_title>
+<audit_actions_datas_actions_status>Status</audit_actions_datas_actions_status>
+<audit_actions_datas_actions_duedate>Due date</audit_actions_datas_actions_duedate>
+<audit_actions_datas_actions_owner>Responsible</audit_actions_datas_actions_owner>
+<audit_actions_datas_actions_add>Add a new action</audit_actions_datas_actions_add>
+<audit_actions_pages>page $1 of $2 ( $3 actions )</audit_actions_pages>
+<audit_actions_pageempty>0 action</audit_actions_pageempty>
+<audit_actions_datas_description>Description</audit_actions_datas_description>
+<audit_actions_datas_actionsstatus>Actions status</audit_actions_datas_actionsstatus>
+<audit_actions_datas_comments_comment>Comment</audit_actions_datas_comments_comment>
+<audit_actions_datas_comments_author>Author</audit_actions_datas_comments_author>
+<audit_actions_datas_comments_add>Add a new comment</audit_actions_datas_comments_add>
+
+<!-- Action -->
+<audit_action_title_add>New action</audit_action_title_add>
+<audit_action_title_update>View/update action</audit_action_title_update>
+<audit_action_action>Action</audit_action_action>
+<audit_action_organisations>Organisations</audit_action_organisations>
+<audit_action_recommendationtitle>Rec.</audit_action_recommendationtitle>
+<audit_action_recommendationreference>Reference</audit_action_recommendationreference>
+<audit_action_actiontitle>Title</audit_action_actiontitle>
+<audit_action_description>Description</audit_action_description>
+<audit_action_actionstatus>Status</audit_action_actionstatus>
+<audit_action_duedate>Due date</audit_action_duedate>
+<audit_action_duedate_resetescalade>Reset the pushed back target date marker</audit_action_duedate_resetescalade>
+<audit_action_externalref>Ext. ref.</audit_action_externalref>
+<audit_action_creationdate>created on $1</audit_action_creationdate>
+<audit_action_closeddate>Closed date</audit_action_closeddate>
+<audit_action_add>Create</audit_action_add>
+<audit_action_reopen>Reopen</audit_action_reopen>
+<audit_action_update>Update</audit_action_update>
+<audit_action_cancel>Cancel</audit_action_cancel>
+<audit_action_history>History</audit_action_history>
+<audit_action_status>Status</audit_action_status>
+<audit_action_error_actiontitle>'Title' must be filled.</audit_action_error_actiontitle>
+<audit_action_error_description>'Description' must be filled.</audit_action_error_description>
+<audit_action_error_duedate>Select a 'Due Date'.</audit_action_error_duedate>
+<audit_action_organisations_possible>Possible organisations</audit_action_organisations_possible>
+<audit_action_organisations_linked>Organisations linked</audit_action_organisations_linked>
+
+<!-- Action Status -->
+<audit_actionstatus_title>Action status</audit_actionstatus_title>
+<audit_actionstatus_cancel>Cancel</audit_actionstatus_cancel>
+<audit_actionstatus_update>Update</audit_actionstatus_update>
+
+<!-- Action History -->
+<audit_actionhistory_title>Action history</audit_actionhistory_title>
+<audit_actionhistory_datas_history_changedate>Change date</audit_actionhistory_datas_history_changedate>
+<audit_actionhistory_datas_history_modifier>Modifier</audit_actionhistory_datas_history_modifier>
+<audit_actionhistory_datas_history_owner>Responsible</audit_actionhistory_datas_history_owner>
+<audit_actionhistory_datas_history_duedate>Due date</audit_actionhistory_datas_history_duedate>
+<audit_actionhistory_datas_history_status>Status</audit_actionhistory_datas_history_status>
+
+<!-- Search  Screen-->
+<!-- title -->
+<audit_search_title_audits>Search for audits</audit_search_title_audits>
+<audit_search_title_reports>Search for reports</audit_search_title_reports>
+<audit_search_title_recommendations>Search for recommendations</audit_search_title_recommendations>
+<audit_search_title_actions>Search for actions</audit_search_title_actions>
+<audit_search_find>Find</audit_search_find>
+<audit_search_filters>Filters</audit_search_filters>
+<audit_search_filters_apply>Apply</audit_search_filters_apply>
+<!-- first parameters -->
+<audit_search_audits>Audits</audit_search_audits>
+<audit_search_reports>Reports</audit_search_reports>
+<audit_search_recommendations>Recommendations</audit_search_recommendations>
+<audit_search_actions>Actions</audit_search_actions>
+<!-- pages -->
+<audit_search_audits_pageempty>0 audit</audit_search_audits_pageempty>
+<audit_search_audits_pages>page $1 of $2 ( $3 audits )</audit_search_audits_pages>
+<audit_search_reports_pageempty>0 report</audit_search_reports_pageempty>
+<audit_search_reports_pages>page $1 of $2 ( $3 reports )</audit_search_reports_pages>
+<audit_search_recommendations_pageempty>0 recommendation</audit_search_recommendations_pageempty>
+<audit_search_recommendations_pages>page $1 of $2 ( $3 recommendations )</audit_search_recommendations_pages>
+<audit_search_actions_pageempty>0 action</audit_search_actions_pageempty>
+<audit_search_actions_pages>page $1 of $2 ( $3 actions )</audit_search_actions_pages>
+<!-- date description and stakeholder for all screens -->
+<audit_search_date>Date</audit_search_date>
+<audit_search_description>Description</audit_search_description>
+<audit_search_stakeholder>Stakeholder</audit_search_stakeholder>
+<!-- search by audits -->
+<audit_search_audits_confidentiality>Confidentiality</audit_search_audits_confidentiality>
+<audit_search_audits_status>Status</audit_search_audits_status>
+<audit_search_audits_topic>Topic</audit_search_audits_topic>
+<audit_search_audits_standard>Standard</audit_search_audits_standard>
+<audit_search_audits_origin>Origin</audit_search_audits_origin>
+<audit_search_audits_datas_reference>Reference</audit_search_audits_datas_reference>
+<audit_search_audits_datas_origin>Origin</audit_search_audits_datas_origin>
+<audit_search_audits_datas_topic>Topic</audit_search_audits_datas_topic>
+<audit_search_audits_datas_standard>Standard</audit_search_audits_datas_standard>
+<audit_search_audits_datas_status>Status</audit_search_audits_datas_status>
+<audit_search_audits_datas_owner>Responsible</audit_search_audits_datas_owner>
+<audit_search_audits_history>History</audit_search_audits_history>
+<audit_search_audits_raci_title>Audit RACI</audit_search_audits_raci_title>
+<audit_search_audits_raci_edit>Edit</audit_search_audits_raci_edit>
+<!--use this value for all screens -->
+<audit_search_raci>RACI</audit_search_raci>
+<!-- search by reports -->
+<audit_search_reports_status>Status</audit_search_reports_status>
+<audit_search_reports_topic>Topic</audit_search_reports_topic>
+<audit_search_reports_origin>Origin</audit_search_reports_origin>
+<audit_search_reports_datas_title>Title</audit_search_reports_datas_title>
+<audit_search_reports_datas_owner>Responsible</audit_search_reports_datas_owner>
+<audit_search_reports_datas_status>Status</audit_search_reports_datas_status>
+<audit_search_reports_history>History</audit_search_reports_history>
+<audit_search_reports_raci_title>Report RACI</audit_search_reports_raci_title>
+<audit_search_reports_raci_edit>Edit</audit_search_reports_raci_edit>
+<!--search by recommendations -->
+<audit_search_recommendations_status>Status</audit_search_recommendations_status>
+<audit_search_recommendations_priority>Priority</audit_search_recommendations_priority>
+<audit_search_recommendations_severity>Severity</audit_search_recommendations_severity>
+<audit_search_recommendations_topic>Topic</audit_search_recommendations_topic>
+<audit_search_recommendations_compliancetopic>Compliance topic</audit_search_recommendations_compliancetopic>
+<audit_search_recommendations_datas_reference>Reference</audit_search_recommendations_datas_reference>
+<audit_search_recommendations_datas_title>Title</audit_search_recommendations_datas_title>
+<audit_search_recommendations_datas_priority>Priority</audit_search_recommendations_datas_priority>
+<audit_search_recommendations_datas_auditor>Auditor responsible</audit_search_recommendations_datas_auditor>
+<audit_search_recommendations_datas_auditee>Auditee responsible</audit_search_recommendations_datas_auditee>
+<audit_search_recommendations_datas_status>Status</audit_search_recommendations_datas_status>
+<audit_search_recommendations_history>History</audit_search_recommendations_history>
+<audit_search_recommendations_raci_title>Recommendation RACI</audit_search_recommendations_raci_title>
+<audit_search_recommendations_raci_edit>Edit</audit_search_recommendations_raci_edit>
+<!--search by  actions -->
+<audit_search_actions_status>Status</audit_search_actions_status>
+<audit_search_actions_datas_title>Title</audit_search_actions_datas_title>
+<audit_search_actions_datas_status>Status</audit_search_actions_datas_status>
+<audit_search_actions_datas_duedate>Due date</audit_search_actions_datas_duedate>
+<audit_search_actions_datas_owner>Responsible</audit_search_actions_datas_owner>
+<audit_search_actions_history>History</audit_search_actions_history>
+<audit_search_actions_raci_title>Action RACI</audit_search_actions_raci_title>
+<audit_search_actions_raci_edit>Edit</audit_search_actions_raci_edit>
+<!-- END search screens-->
+
+<!-- Calendar -->
+<audit_calendar_title>Tasks calendar</audit_calendar_title>
+<audit_calendar_week>Week #</audit_calendar_week>
+<audit_calendar_view_week>per Week</audit_calendar_view_week>
+<audit_calendar_view_month>per Month</audit_calendar_view_month>
+<audit_calendar_nodate>No selected date.</audit_calendar_nodate>
+<audit_calendar_error_nodate>No selected date.</audit_calendar_error_nodate>
+<audit_calendar_error_noview>No selected period.</audit_calendar_error_noview>
+<audit_calendar_task_title>Task informations</audit_calendar_task_title>
+<audit_calendar_task_datas_name>Task</audit_calendar_task_datas_name>
+<audit_calendar_task_datas_type>Type</audit_calendar_task_datas_type>
+<audit_calendar_task_datas_startdate>Start date</audit_calendar_task_datas_startdate>
+<audit_calendar_task_datas_enddate>End date</audit_calendar_task_datas_enddate>
+
+<!-- Metrics -->
+<audit_metrics_title>Management - metrics</audit_metrics_title>
+<audit_metrics_compliance>Compliance</audit_metrics_compliance>
+<audit_metrics_reactivity>Reactivity</audit_metrics_reactivity>
+<audit_metrics_exposure>Exposure</audit_metrics_exposure>
+<audit_metrics_target_title><![CDATA[Target & timescale]]></audit_metrics_target_title>
+<audit_metrics_target_metric>Metric</audit_metrics_target_metric>
+<audit_metrics_target_target>Target</audit_metrics_target_target>
+<audit_metrics_target_timescale>Timescale</audit_metrics_target_timescale>
+<audit_metrics_target_update>Update</audit_metrics_target_update>
+<audit_metrics_target_cancel>Cancel</audit_metrics_target_cancel>
+<audit_metrics_compliance_description>Metric</audit_metrics_compliance_description>
+<audit_metrics_compliance_timescale>Timescale</audit_metrics_compliance_timescale>
+<audit_metrics_compliance_target>Target</audit_metrics_compliance_target>
+<audit_metrics_compliance_number># number</audit_metrics_compliance_number>
+<audit_metrics_compliance_min>Min.</audit_metrics_compliance_min>
+<audit_metrics_compliance_max>Max.</audit_metrics_compliance_max>
+<audit_metrics_compliance_average>Average</audit_metrics_compliance_average>
+<audit_metrics_reactivity_description>Metric</audit_metrics_reactivity_description>
+<audit_metrics_reactivity_timescale>Timescale</audit_metrics_reactivity_timescale>
+<audit_metrics_reactivity_target>Target</audit_metrics_reactivity_target>
+<audit_metrics_reactivity_number># number</audit_metrics_reactivity_number>
+<audit_metrics_reactivity_min>Min.</audit_metrics_reactivity_min>
+<audit_metrics_reactivity_max>Max.</audit_metrics_reactivity_max>
+<audit_metrics_reactivity_average>Average</audit_metrics_reactivity_average>
+<audit_metrics_exposure_description>Metric</audit_metrics_exposure_description>
+<audit_metrics_exposure_timescale>Timescale</audit_metrics_exposure_timescale>
+<audit_metrics_exposure_target>Target</audit_metrics_exposure_target>
+<audit_metrics_exposure_number># number</audit_metrics_exposure_number>
+<audit_metrics_exposure_min>Min.</audit_metrics_exposure_min>
+<audit_metrics_exposure_max>Max.</audit_metrics_exposure_max>
+<audit_metrics_exposure_average>Average</audit_metrics_exposure_average>
+
+<!-- Reports Management -->
+<audit_reportsmanagement_title>Management - reports</audit_reportsmanagement_title>
+<audit_reportsmanagement_datas_reports>Report</audit_reportsmanagement_datas_reports>
+<audit_reportsmanagement_pages>page $1 of $2 ( $3 reports )</audit_reportsmanagement_pages>
+<audit_reportsmanagement_pageempty>0 report</audit_reportsmanagement_pageempty>
+
+<!-- Racis -->
+<audit_racis_title>Management - module RACI</audit_racis_title>
+<audit_racis_datas_stakeholders>Stakeholders</audit_racis_datas_stakeholders>
+<audit_racis_datas_racis_users>Stakeholders</audit_racis_datas_racis_users>
+<audit_racis_datas_racis_items>Items</audit_racis_datas_racis_items>
+<audit_racis_datas_racis_r>R</audit_racis_datas_racis_r>
+<audit_racis_datas_racis_a>A</audit_racis_datas_racis_a>
+<audit_racis_datas_racis_c>C</audit_racis_datas_racis_c>
+<audit_racis_datas_racis_i>I</audit_racis_datas_racis_i>
+<audit_racis_pageempty>0 item</audit_racis_pageempty>
+<audit_racis_pages>page $1 of $2 ( $3 items )</audit_racis_pages>
+
+<!-- Comments -->
+<audit_comments_author>Comment by :</audit_comments_author>
+<audit_comments_date>Comment date :</audit_comments_date>
+<audit_comments_error>Comment field must be filled</audit_comments_error>
+<audit_comments_create>Create</audit_comments_create>
+<audit_comments_update>Update</audit_comments_update>
+<audit_comments_cancel>Cancel</audit_comments_cancel>
+<audit_comments_text>comment</audit_comments_text>
+<audit_comments_history>History</audit_comments_history>
+
+<!-- Comment History -->
+<audit_commenthistory_title>Comment history</audit_commenthistory_title>
+<audit_commenthistory_datas_history_changedate>Change date</audit_commenthistory_datas_history_changedate>
+<audit_commenthistory_datas_history_modifier>Modifier</audit_commenthistory_datas_history_modifier>
+<audit_commenthistory_datas_history_comment>Comment</audit_commenthistory_datas_history_comment>
+
+<!-- Audit Email -->
+<audit_email_title>Notify by mail</audit_email_title>
+<audit_email_from>From :</audit_email_from>
+<audit_email_to>To :</audit_email_to>
+<audit_email_send>Send</audit_email_send>
+<audit_email_cancel>Cancel</audit_email_cancel>
+<audit_email_success>Message sent successfully.</audit_email_success>
+<audit_email_failure>Sending error, please try again.</audit_email_failure>
+<audit_email_failure_email>Select an user.</audit_email_failure_email>
+<audit_email_failure_message>Message must be filled.</audit_email_failure_message>
+
+<!-- Raci Change Request -->
+<audit_racichangerequest_title>List of RACI change requests for module</audit_racichangerequest_title>
+<audit_racichangerequest_text>At least a RACI change for the module request your validation. Select a change in the list and apply your modification.</audit_racichangerequest_text>
+<audit_racichangerequest_warning>Warning: validating the changes on your own informations in the RACI of the module will cause your disconnection from module.</audit_racichangerequest_warning>
+<audit_racichangerequest_validate>Validate</audit_racichangerequest_validate>
+<audit_racichangerequest_discard>Discard</audit_racichangerequest_discard>
+<audit_racichangerequest_dolater>Do later</audit_racichangerequest_dolater>
+<audit_racichangerequest_datas_request_date>Date</audit_racichangerequest_datas_request_date>
+<audit_racichangerequest_datas_request_modifier>Modifier</audit_racichangerequest_datas_request_modifier>
+<audit_racichangerequest_datas_request_stakeholder>Stakeholder</audit_racichangerequest_datas_request_stakeholder>
+<audit_racichangerequest_datas_request_modification>Modification</audit_racichangerequest_datas_request_modification>
+<audit_racichangerequest_datas_request_modification_add>Add</audit_racichangerequest_datas_request_modification_add>
+<audit_racichangerequest_datas_request_modification_update>Update</audit_racichangerequest_datas_request_modification_update>
+<audit_racichangerequest_datas_request_modification_delete>Delete</audit_racichangerequest_datas_request_modification_delete>
+<audit_racichangerequest_datas_request_modification_forced>Forced update</audit_racichangerequest_datas_request_modification_forced>
+<audit_racichangerequest_datas_request_substitute>Substitute</audit_racichangerequest_datas_request_substitute>
+<audit_racichangerequest_moduleraci>Current module RACI</audit_racichangerequest_moduleraci>
+
+<!-- Validation -->
+<audit_validation_title>Validate changes</audit_validation_title>
+<audit_validation_text>Do you want to save the changes you made ?</audit_validation_text>
+<audit_validation_yes>Yes</audit_validation_yes>
+<audit_validation_no>No</audit_validation_no>
+<audit_validation_cancel>Cancel</audit_validation_cancel>
+
+<!-- Error -->
+<audit_error_title>Error</audit_error_title>
+<audit_error_ok>Ok</audit_error_ok>
+<audit_error_notify>Notify support</audit_error_notify>
+<audit_error_concurrency_title>Concurrent access on item</audit_error_concurrency_title>
+<audit_error_concurrency_text><![CDATA[The item '$1' has been already updated by an other user.<br />Click on the Refresh button to update it.<br />You'll have to relaunch your operation after that.]]></audit_error_concurrency_text>
+<audit_error_refresh>Refresh</audit_error_refresh>
+
+<!-- Menu -->
+<audit_menu_home>Home</audit_menu_home>
+<audit_menu_home_esis>ESIS home</audit_menu_home_esis>
+<audit_menu_home_title>Module selection</audit_menu_home_title>
+<audit_menu_logout>Logout</audit_menu_logout>
+<audit_menu_prefs>Prefs</audit_menu_prefs>
+<audit_menu_print>Print</audit_menu_print>
+<audit_menu_printselect_screen>screen datas</audit_menu_printselect_screen>
+<audit_menu_printselect_audit>selected audit</audit_menu_printselect_audit>
+<audit_menu_printselect_report>selected report</audit_menu_printselect_report>
+<audit_menu_printselect_recommendation>selected recommendation</audit_menu_printselect_recommendation>
+<audit_menu_printselect_action>selected action</audit_menu_printselect_action>
+<audit_menu_printselect_interview>selected interview</audit_menu_printselect_interview>
+<audit_menu_printselect_title>Print</audit_menu_printselect_title>
+<audit_menu_printselect_submit>OK</audit_menu_printselect_submit>
+<audit_menu_excel>Excel</audit_menu_excel>
+<audit_menu_msproject>MsProject</audit_menu_msproject>
+<audit_menu_mail>Mail</audit_menu_mail>
+<audit_menu_calendar>Calendar</audit_menu_calendar>
+<audit_menu_find>Find</audit_menu_find>
+<audit_menu_votes_my>my votes</audit_menu_votes_my>
+<audit_menu_votes_all>all votes</audit_menu_votes_all>
+<audit_menu_tasks_my>my tasks</audit_menu_tasks_my>
+<audit_menu_tasks_raci>RACI tasks</audit_menu_tasks_raci>
+<audit_menu_filter_my>MY</audit_menu_filter_my>
+<audit_menu_filter_raci>RACI</audit_menu_filter_raci>
+<audit_menu_filter_all>ALL</audit_menu_filter_all>
+<audit_menu_filter_interval_all>ever since</audit_menu_filter_interval_all>
+<audit_menu_filter_interval_twelvemonths>12 months</audit_menu_filter_interval_twelvemonths>
+<audit_menu_filter_interval_from>from</audit_menu_filter_interval_from>
+<audit_menu_filter_interval_title>Time period</audit_menu_filter_interval_title>
+<audit_menu_filter_interval_submit>OK</audit_menu_filter_interval_submit>
+</entity>
+</esis>

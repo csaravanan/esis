@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_esis_en.xml *** -->
+<entity name="esis" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<!-- Errors texts -->
+<esis_errors_xmlimport_text><![CDATA[The module's XML configuration file '#' hasn't been loaded.]]></esis_errors_xmlimport_text><!-- html -->
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<!-- Errors texts -->
+<esis_errors_xmlimport_status1>The XML file was not found.</esis_errors_xmlimport_status1>
+<esis_errors_xmlimport_status2>A CDATA section was not properly terminated.</esis_errors_xmlimport_status2>
+<esis_errors_xmlimport_status3>The XML declaration was not properly terminated.</esis_errors_xmlimport_status3>
+<esis_errors_xmlimport_status4>The DOCTYPE declaration was not properly terminated.</esis_errors_xmlimport_status4>
+<esis_errors_xmlimport_status5>A comment was not properly terminated.</esis_errors_xmlimport_status5>
+<esis_errors_xmlimport_status6>An XML element was malformed.</esis_errors_xmlimport_status6>
+<esis_errors_xmlimport_status7>Out of memory.</esis_errors_xmlimport_status7>
+<esis_errors_xmlimport_status8>An attribute value was not properly terminated.</esis_errors_xmlimport_status8>
+<esis_errors_xmlimport_status9>A start-tag was not matched with an end-tag.</esis_errors_xmlimport_status9>
+<esis_errors_xmlimport_status10>An end-tag was encountered without a matching start-tag.</esis_errors_xmlimport_status10>
+<esis_errors_swfimport_title>Flash file import error</esis_errors_swfimport_title>
+<esis_errors_swfimport_text><![CDATA[The module's file '#' hasn't been loaded.<br />Please contact your administrator if problem persists.]]></esis_errors_swfimport_text><!-- html -->
+</added>
+<!-- ******************** REMOVED ******************** -->
+</entity>
+</esis>

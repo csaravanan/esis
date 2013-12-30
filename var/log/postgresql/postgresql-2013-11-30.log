@@ -1,0 +1,8 @@
+[2013-11-30 05:05:42 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 37
+[2013-11-30 05:05:42 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-11-30 05:05:42 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 562
+[2013-11-30 05:05:42 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-11-30 05:05:42 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 927
+[2013-11-30 05:05:42 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-11-30 05:05:42 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 1058
+[2013-11-30 05:05:42 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_admin_en.xml *** -->
+<entity name="admin" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<admin_users_datas_groups_users># members</admin_users_datas_groups_users>
+<admin_groups_datas_groups_users># members</admin_groups_datas_groups_users>
+<admin_groups_datas_details_users># members</admin_groups_datas_details_users>
+<admin_modules_datas_modules_users># stakeholders</admin_modules_datas_modules_users>
+<admin_modules_datas_details_users># stakeholders</admin_modules_datas_details_users>
+<admin_groupusers_title>Members for group : </admin_groupusers_title>
+<admin_moduledetails_nbusers># stakeholders</admin_moduledetails_nbusers>
+<admin_modules_datas_modules_modulename>Name</admin_modules_datas_modules_modulename>
+<admin_modules_datas_details_modulename>Name</admin_modules_datas_details_modulename>
+<admin_modules_datas_details_version>Version</admin_modules_datas_details_version>
+<admin_usergroups_title>Groups for user $1</admin_usergroups_title>
+<admin_groupusers_title>Members for group $1</admin_groupusers_title>
+<admin_userexpertises_title>Expertise for user $1</admin_userexpertises_title>
+<admin_groupexpertises_title>Expertise for group $1</admin_groupexpertises_title>
+<admin_moduleprefs_title>Module preferences: $1</admin_moduleprefs_title>
+<admin_moduleraci_title>RACI for module: $1</admin_moduleraci_title>
+<admin_moduleraci_update_title>RACI for $1</admin_moduleraci_update_title>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<admin_navigation_locations>Locations</admin_navigation_locations>
+<admin_navigation_businesszones>Geo. zones</admin_navigation_businesszones>
+<admin_default_nolocation>No location</admin_default_nolocation>
+<admin_users_datas_details_firstlogin>First login</admin_users_datas_details_firstlogin>
+<admin_users_datas_details_lastlogin>Last login</admin_users_datas_details_lastlogin>
+<admin_users_datas_details_failedlogin>Last failed login</admin_users_datas_details_failedlogin>
+<admin_users_datas_details_lastmodification>Last modification</admin_users_datas_details_lastmodification>
+<admin_users_datas_details_changepassword>Last password change</admin_users_datas_details_changepassword>
+<admin_user_location>Location</admin_user_location>
+<admin_user_nolocation>No location</admin_user_nolocation>
+<admin_groups_datas_details_locations>Location(s)</admin_groups_datas_details_locations>
+<admin_locations_title><![CDATA[Administration<br />Locations management]]></admin_locations_title><!-- html -->
+<admin_locations_disabled>View disabled</admin_locations_disabled>
+<admin_locations_datas_locations_name>Location name</admin_locations_datas_locations_name>
+<admin_locations_datas_locations_company>Company</admin_locations_datas_locations_company>
+<admin_locations_datas_locations_country>Country</admin_locations_datas_locations_country>
+<admin_locations_datas_locations_city>City</admin_locations_datas_locations_city>
+<admin_locations_datas_locations_site>Site</admin_locations_datas_locations_site>
+<admin_locations_datas_locations_add>Add a location</admin_locations_datas_locations_add>
+<admin_locations_datas_details>Location details</admin_locations_datas_details>
+<admin_locations_datas_details_name>Location</admin_locations_datas_details_name>
+<admin_locations_datas_details_company>Company</admin_locations_datas_details_company>
+<admin_locations_datas_details_building>Building</admin_locations_datas_details_building>
+<admin_locations_datas_details_site>Site</admin_locations_datas_details_site>
+<admin_locations_datas_details_zipcode>Zip code</admin_locations_datas_details_zipcode>
+<admin_locations_datas_details_city>City</admin_locations_datas_details_city>
+<admin_locations_datas_details_country>Country</admin_locations_datas_details_country>
+<admin_locations_datas_details_region>Region</admin_locations_datas_details_region>
+<admin_locations_datas_details_timezone>Timezone</admin_locations_datas_details_timezone>
+<admin_locations_datas_details_groups># departments</admin_locations_datas_details_groups>
+<admin_locations_datas_details_users># users</admin_locations_datas_details_users>
+<admin_locations_datas_details_networks>Networks</admin_locations_datas_details_networks>
+<admin_locations_datas_details_disabled>Disabled</admin_locations_datas_details_disabled>
+<admin_locations_datas_groups_group>Departments</admin_locations_datas_groups_group>
+<admin_locations_datas_groups_users># members</admin_locations_datas_groups_users>
+<admin_locations_datas_groups_add>Edit departments location</admin_locations_datas_groups_add>
+<admin_locations_datas_users_name>Users</admin_locations_datas_users_name>
+<admin_locations_datas_users_add>Edit users location</admin_locations_datas_users_add>
+<!-- Location -->
+<admin_location_add_title>New location</admin_location_add_title>
+<admin_location_update_title>View/Update location</admin_location_update_title>
+<admin_location_location>Location</admin_location_location>
+<admin_location_building>Building</admin_location_building>
+<admin_location_site>Site</admin_location_site>
+<admin_location_zipcode>Zip code</admin_location_zipcode>
+<admin_location_city>City</admin_location_city>
+<admin_location_timezone>Timezone</admin_location_timezone>
+<admin_location_company>Company</admin_location_company>
+<admin_location_disabled>Disabled</admin_location_disabled>
+<admin_location_add>Create</admin_location_add>
+<admin_location_update>Update</admin_location_update>
+<admin_location_cancel>Cancel</admin_location_cancel>
+<admin_location_notimezone>no selected timezone</admin_location_notimezone>
+<admin_location_continents>Continents</admin_location_continents>
+<admin_location_subcontinents>Subcontinents</admin_location_subcontinents>
+<admin_location_countries>Countries</admin_location_countries>
+<admin_location_regions>Regions</admin_location_regions>
+<admin_location_regions_empty>no region.</admin_location_regions_empty>
+<admin_location_error_location>Location name must be filled</admin_location_error_location>
+<admin_location_error_country>A country must be selected</admin_location_error_country>
+<admin_location_networks>Networks</admin_location_networks>
+<!-- Location Groups and Users -->
+<admin_locationgroups_title>Departments of location $1</admin_locationgroups_title>
+<admin_locationgroups_remove>remove all</admin_locationgroups_remove>
+<admin_locationgroups_datas_groups>Departments</admin_locationgroups_datas_groups>
+<admin_locationgroups_datas_membership>Location's departments</admin_locationgroups_datas_membership>
+<admin_locationusers_title>Users of location $1</admin_locationusers_title>
+<admin_locationusers_remove>remove all</admin_locationusers_remove>
+<admin_locationusers_datas_users>Users</admin_locationusers_datas_users>
+<admin_locationusers_datas_membership>Location's users</admin_locationusers_datas_membership>
+<!-- Location Networks -->
+<admin_locationnetworks_title>Location's networks</admin_locationnetworks_title>
+<admin_locationnetworks_addnetworktitle>Add a new network</admin_locationnetworks_addnetworktitle>
+<admin_locationnetworks_updatenetworktitle>Update selected network</admin_locationnetworks_updatenetworktitle>
+<admin_locationnetworks_updatenetwork>Update the network</admin_locationnetworks_updatenetwork>
+<admin_locationnetworks_addnetwork>Add a network</admin_locationnetworks_addnetwork>
+<admin_locationnetworks_add>Add</admin_locationnetworks_add>
+<admin_locationnetworks_update>Update</admin_locationnetworks_update>
+<admin_locationnetworks_cancel>Cancel</admin_locationnetworks_cancel>
+<admin_locationnetworks_datas_networks>Networks</admin_locationnetworks_datas_networks>
+<admin_locationnetworks_datas_networks_add>Add a network/subnetwork</admin_locationnetworks_datas_networks_add>
+<!-- Business Zones -->
+<admin_businesszones_title><![CDATA[Administration<br />Business geography zones management]]></admin_businesszones_title><!-- html -->
+<admin_businesszones_locations>Locations</admin_businesszones_locations>
+<admin_businesszones_zones>Geo. zones</admin_businesszones_zones>
+<admin_businesszones_parentzones>Parent zones</admin_businesszones_parentzones>
+<admin_businesszones_groups>Departments</admin_businesszones_groups>
+<admin_businesszones_users>Users</admin_businesszones_users>
+<admin_businesszones_countries>Countries</admin_businesszones_countries>
+<admin_businesszones_disabled>View disabled</admin_businesszones_disabled>
+<admin_businesszones_datas_groups>Departments</admin_businesszones_datas_groups>
+<admin_businesszones_datas_users>Users</admin_businesszones_datas_users>
+<admin_businesszones_datas_countries>Countries</admin_businesszones_datas_countries>
+<admin_businesszones_datas_parentzones>Parent zones</admin_businesszones_datas_parentzones>
+<admin_businesszones_datas_businesszones_name>Name</admin_businesszones_datas_businesszones_name>
+<admin_businesszones_datas_businesszones_continents>Continents</admin_businesszones_datas_businesszones_continents>
+<admin_businesszones_datas_businesszones_subcontinents>Subcontinents</admin_businesszones_datas_businesszones_subcontinents>
+<admin_businesszones_datas_businesszones_countries># countries</admin_businesszones_datas_businesszones_countries>
+<admin_businesszones_datas_businesszones_locations># locations</admin_businesszones_datas_businesszones_locations>
+<admin_businesszones_datas_businesszones_add>Add a business zone</admin_businesszones_datas_businesszones_add>
+<admin_businesszones_datas_locations_name>Location</admin_businesszones_datas_locations_name>
+<admin_businesszones_datas_locations_country>Country</admin_businesszones_datas_locations_country>
+<admin_businesszones_datas_locations_add>Edit business zone locations</admin_businesszones_datas_locations_add>
+<admin_businesszones_datas_zones_name>Business zones included</admin_businesszones_datas_zones_name>
+<admin_businesszones_datas_zones_add>Edit zones included</admin_businesszones_datas_zones_add>
+<admin_businesszones_error_locationnotremovable_title>Location not removable</admin_businesszones_error_locationnotremovable_title>
+<admin_businesszones_error_locationnotremovable_text>The location $1 can't be removed from this business geography zone because it's linked to a subzone.</admin_businesszones_error_locationnotremovable_text>
+<admin_businesszones_error_zonenotremovable_title>Business zone not removable</admin_businesszones_error_zonenotremovable_title>
+<admin_businesszones_error_zonenotremovable_text>The business zone $1 can't be removed from this business geography zone because it's linked to a subzone.</admin_businesszones_error_zonenotremovable_text>
+<!-- Business Zone -->
+<admin_businesszone_add_title>New business zone</admin_businesszone_add_title>
+<admin_businesszone_update_title>View/Update business zone</admin_businesszone_update_title>
+<admin_businesszone_name>Business zone</admin_businesszone_name>
+<admin_businesszone_disabled>Disabled zone</admin_businesszone_disabled>
+<admin_businesszone_add>Create</admin_businesszone_add>
+<admin_businesszone_update>Update</admin_businesszone_update>
+<admin_businesszone_cancel>Cancel</admin_businesszone_cancel>
+<admin_businesszone_error_name>The name of the zone must be filled</admin_businesszone_error_name>
+<!-- Business Zone Locations -->
+<admin_businesszonelocations_title>Locations for business zone $1</admin_businesszonelocations_title>
+<admin_businesszonelocations_datas_locations>Locations</admin_businesszonelocations_datas_locations>
+<admin_businesszonelocations_datas_membership>Locations linked</admin_businesszonelocations_datas_membership>
+<admin_businesszonelocations_remove>remove all locations directly included</admin_businesszonelocations_remove>
+<admin_businesszonelocations_error_notremovable>Selected location can't be removed because it's not part of the current business zone.</admin_businesszonelocations_error_notremovable>
+<!-- Business Zone Zones -->
+<admin_businesszonezones_title>Zones for business zone $1</admin_businesszonezones_title>
+<admin_businesszonezones_datas_zones>Business zones</admin_businesszonezones_datas_zones>
+<admin_businesszonezones_datas_membership>Business zones linked</admin_businesszonezones_datas_membership>
+<admin_businesszonezones_remove>remove all zones directly included</admin_businesszonezones_remove>
+<admin_businesszonezones_error_notremovable>Selected zone can't be removed because it's not part of the current business zone.</admin_businesszonezones_error_notremovable>
+<!-- Module RACI history -->
+<admin_moduleraci_history>History</admin_moduleraci_history>
+<admin_moduleracihistory_title>RACI history</admin_moduleracihistory_title>
+<admin_moduleracihistory_close>Close</admin_moduleracihistory_close>
+<admin_moduleracihistory_matrix_title>Current RACI</admin_moduleracihistory_matrix_title>
+<admin_moduleracihistory_datas_user>Stakeholder</admin_moduleracihistory_datas_user>
+<admin_moduleracihistory_datas_modifier>Modifier</admin_moduleracihistory_datas_modifier>
+<admin_moduleracihistory_datas_modificationdate>Modif. date</admin_moduleracihistory_datas_modificationdate>
+<admin_moduleracihistory_pageempty>0 modification</admin_moduleracihistory_pageempty>
+<admin_moduleracihistory_pages>page $1 of $2 ( $3 modifications )</admin_moduleracihistory_pages>
+<!-- Validation -->
+<admin_validation_title>Unused departments locations</admin_validation_title>
+<admin_validation_userlocation_text>Removing this user from this location can generate departments with locations not affected to any member. Would you like to remove these unused locations from departments ?</admin_validation_userlocation_text>
+<admin_validation_userslocation_text>Removing all users from this location can generate departments with locations not affected to any member. Would you like to remove these unused locations from departments ?</admin_validation_userslocation_text>
+<admin_validation_usergroup_text>Removing the relation between this user and this department can generate department with locations not affected to any member. Would you like to remove these unused locations from department ?</admin_validation_usergroup_text>
+<admin_validation_usersgroup_text>Removing all users from this department can generate department with locations not affected to any member. Would you like to remove these unused locations from department ?</admin_validation_usersgroup_text>
+<admin_validation_groupsuser_text>Removing all departments memberships for this user can generate departments with locations not affected to any member. Would you like to remove these unused locations from departments ?</admin_validation_groupsuser_text>
+<admin_validation_user_text>Removing this user can generate departments with locations not affected to any member. Would you like to remove these unused locations from departments ?</admin_validation_user_text>
+<admin_validation_userupdate_text>Updating this user can generate departments with locations not affected to any member. Would you like to remove these unused locations from departments ?</admin_validation_userupdate_text>
+<admin_validation_yes>Yes</admin_validation_yes>
+<admin_validation_no>No</admin_validation_no>
+<!-- Menu -->
+<admin_menu_filter_intervalraci_all>ever since</admin_menu_filter_intervalraci_all>
+<admin_menu_filter_intervalraci_twelvemonths>12 months</admin_menu_filter_intervalraci_twelvemonths>
+<admin_menu_filter_intervalraci_from>from</admin_menu_filter_intervalraci_from>
+<admin_menu_filter_intervalraci_title>Time period</admin_menu_filter_intervalraci_title>
+<admin_menu_filter_intervalraci_submit>OK</admin_menu_filter_intervalraci_submit>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+</removed>
+
+</entity>
+</esis>

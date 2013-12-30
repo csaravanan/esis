@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="riskregister" lang="en">
+<!-- the # char is used for variables -->
+<!-- in html texts : add <br /> for return line -and- CDATA if use html code -->
+<risks_default_yes>Yes</risks_default_yes>
+<risks_default_no>No</risks_default_no>
+<risks_default_true>True</risks_default_true>
+<risks_default_false>False</risks_default_false>
+<risks_default_r>R</risks_default_r>
+<risks_default_a>A</risks_default_a>
+<risks_default_c>C</risks_default_c>
+<risks_default_i>I</risks_default_i>
+<risks_default_month_jan>January</risks_default_month_jan>
+<risks_default_month_feb>Febuary</risks_default_month_feb>
+<risks_default_month_mar>March</risks_default_month_mar>
+<risks_default_month_apr>April</risks_default_month_apr>
+<risks_default_month_may>May</risks_default_month_may>
+<risks_default_month_jun>June</risks_default_month_jun>
+<risks_default_month_jul>July</risks_default_month_jul>
+<risks_default_month_aug>August</risks_default_month_aug>
+<risks_default_month_sep>September</risks_default_month_sep>
+<risks_default_month_oct>October</risks_default_month_oct>
+<risks_default_month_nov>November</risks_default_month_nov>
+<risks_default_month_dec>December</risks_default_month_dec>
+<risks_default_month_jan_short>Jan</risks_default_month_jan_short>
+<risks_default_month_feb_short>Feb</risks_default_month_feb_short>
+<risks_default_month_mar_short>Mar</risks_default_month_mar_short>
+<risks_default_month_apr_short>Apr</risks_default_month_apr_short>
+<risks_default_month_may_short>May</risks_default_month_may_short>
+<risks_default_month_jun_short>Jun</risks_default_month_jun_short>
+<risks_default_month_jul_short>Jul</risks_default_month_jul_short>
+<risks_default_month_aug_short>Aug</risks_default_month_aug_short>
+<risks_default_month_sep_short>Sep</risks_default_month_sep_short>
+<risks_default_month_oct_short>Oct</risks_default_month_oct_short>
+<risks_default_month_nov_short>Nov</risks_default_month_nov_short>
+<risks_default_month_dec_short>Dec</risks_default_month_dec_short>
+<risks_default_day_sun>S</risks_default_day_sun>
+<risks_default_day_mon>M</risks_default_day_mon>
+<risks_default_day_tue>T</risks_default_day_tue>
+<risks_default_day_wed>W</risks_default_day_wed>
+<risks_default_day_thu>T</risks_default_day_thu>
+<risks_default_day_fri>F</risks_default_day_fri>
+<risks_default_day_sat>S</risks_default_day_sat>
+<risks_default_day_sun_long>Sun</risks_default_day_sun_long>
+<risks_default_day_mon_long>Mon</risks_default_day_mon_long>
+<risks_default_day_tue_long>Tue</risks_default_day_tue_long>
+<risks_default_day_wed_long>Wed</risks_default_day_wed_long>
+<risks_default_day_thu_long>Thu</risks_default_day_thu_long>
+<risks_default_day_fri_long>Fri</risks_default_day_fri_long>
+<risks_default_day_sat_long>Sat</risks_default_day_sat_long>
+<risks_default_nolikelihood>No specified likelihood</risks_default_nolikelihood>
+<risks_default_nostandard>No specified standard</risks_default_nostandard>
+
+<!-- Navigation -->
+<risks_navigation_management>Management</risks_navigation_management>
+<risks_navigation_modelisation>Modelisation</risks_navigation_modelisation>
+<risks_navigation_modelisation_risks>Risks</risks_navigation_modelisation_risks>
+<risks_navigation_modelisation_causes>Causes</risks_navigation_modelisation_causes>
+<risks_navigation_modelisation_events>Events</risks_navigation_modelisation_events>
+<risks_navigation_management_risks>Risks</risks_navigation_management_risks>
+<risks_navigation_management_criteria>Criteria</risks_navigation_management_criteria>
+<risks_navigation_management_groups>Groups</risks_navigation_management_groups>
+<risks_navigation_management_risklevels>Levels</risks_navigation_management_risklevels>
+
+<!-- Errors texts --> 
+<risks_errors_default_title>Error</risks_errors_default_title>
+<risks_errors_default_text>Error unknown</risks_errors_default_text><!-- html -->
+<risks_errors_wsnotexist_title>WebService Error</risks_errors_wsnotexist_title>
+<risks_errors_wsnotexist_text>The webservice '$1' doesn't exist. Please contact your administrator.</risks_errors_wsnotexist_text><!-- html -->
+<risks_errors_concurrency_title>Concurrent access error</risks_errors_concurrency_title>
+<risks_errors_concurrency_text><![CDATA[Operation refused: you're not allowed to finalize this operation because the selected object has been updated by another user.<br />Refresh the principal screen to update the selected object before start again the operation.]]></risks_errors_concurrency_text>
+<risks_errors_authorization_title>Authorization Exception</risks_errors_authorization_title>
+<risks_errors_authorization_text>Authorization refused: you're not allowed to execute this operation.</risks_errors_authorization_text>
+<risks_errors_raci_title>RACI Violation</risks_errors_raci_title>
+<risks_errors_raci_text>The current RACI matrix of the item $1 doesn't allow you to perform this action.</risks_errors_raci_text>
+<risks_errors_raci_persons>Please contact the Responsible or Accountable person(s) of the item $1.</risks_errors_raci_persons>
+<risks_errors_raci_accountables>Accountable(s)</risks_errors_raci_accountables>
+<risks_errors_raci_responsibles>Responsible(s)</risks_errors_raci_responsibles>
+<risks_errors_raci_noaccountable>No accountable person.</risks_errors_raci_noaccountable>
+<risks_errors_raci_noresponsible>No responsible person.</risks_errors_raci_noresponsible>
+
+<!-- MODELISATION -->
+
+<!-- Risks -->
+<risks_risks_title>Modelisation - Risks</risks_risks_title>
+<risks_risks_datas_risks_title>Title</risks_risks_datas_risks_title>
+<risks_risks_datas_risks_reference>Reference</risks_risks_datas_risks_reference>
+<risks_risks_datas_risks_category>Category</risks_risks_datas_risks_category>
+<risks_risks_datas_risks_responsible>Responsible</risks_risks_datas_risks_responsible>
+<risks_risks_datas_risks_expiration>Expiration</risks_risks_datas_risks_expiration>
+<risks_risks_datas_risks_review>Review period</risks_risks_datas_risks_review>
+<risks_risks_datas_risks_add>Add a new risk</risks_risks_datas_risks_add>
+<risks_risks_pageempty>0 risk</risks_risks_pageempty>
+<risks_risks_pages>page $1 of $2 ( $3 risks )</risks_risks_pages>
+<risks_risks_datas_linkedcauses>Risk causes</risks_risks_datas_linkedcauses>
+<risks_risks_datas_linkedcauses_edit>Edit risk causes links</risks_risks_datas_linkedcauses_edit>
+<risks_risks_datas_standardtopics>Risk standard topics</risks_risks_datas_standardtopics>
+<risks_risks_datas_standardtopics_edit>Change risk standard topics</risks_risks_datas_standardtopics_edit>
+<risks_risks_datas_standardtopics_nostandard>Risk isn't linked to a standard.</risks_risks_datas_standardtopics_nostandard>
+<risks_risks_datas_infos>Risk informations</risks_risks_datas_infos>
+<risks_risks_datas_infos_edit>View/edit risk</risks_risks_datas_infos_edit>
+<risks_risks_datas_infos_title>Title</risks_risks_datas_infos_title>
+<risks_risks_datas_infos_reference>Reference</risks_risks_datas_infos_reference>
+<risks_risks_datas_infos_description>Description</risks_risks_datas_infos_description>
+<risks_risks_datas_infos_category>Category</risks_risks_datas_infos_category>
+<risks_risks_datas_infos_likelihood>Likelihood</risks_risks_datas_infos_likelihood>
+<risks_risks_datas_infos_probability>Probability</risks_risks_datas_infos_probability>
+<risks_risks_datas_infos_standard>Standard</risks_risks_datas_infos_standard>
+<risks_risks_datas_infos_responsible>Responsible</risks_risks_datas_infos_responsible>
+<risks_risks_datas_infos_expirationdate>Expiration date</risks_risks_datas_infos_expirationdate>
+<risks_risks_datas_infos_reviewperiod>Review period</risks_risks_datas_infos_reviewperiod>
+<risks_risks_datas_infos_reviewperiodformat>$1 days</risks_risks_datas_infos_reviewperiodformat>
+<risks_risks_datas_infos_reviewforced>Review forced</risks_risks_datas_infos_reviewforced>
+<risks_risks_datas_infos_modificationdate>Last modification</risks_risks_datas_infos_modificationdate>
+<risks_risks_datas_infos_creationdate>Creation date</risks_risks_datas_infos_creationdate>
+
+<!-- Causes -->
+<risks_causes_title>Modelisation - Causes</risks_causes_title>
+<risks_causes_datas_causes_title>Title</risks_causes_datas_causes_title>
+<risks_causes_datas_causes_reference>Reference</risks_causes_datas_causes_reference>
+<risks_causes_datas_causes_period>Period</risks_causes_datas_causes_period>
+<risks_causes_datas_causes_likelihood>Likelihood</risks_causes_datas_causes_likelihood>
+<risks_causes_datas_causes_add>Add a new cause</risks_causes_datas_causes_add>
+<risks_causes_pageempty>0 cause</risks_causes_pageempty>
+<risks_causes_pages>page $1 of $2 ( $3 causes )</risks_causes_pages>
+<risks_causes_datas_linkedevents>Cause events</risks_causes_datas_linkedevents>
+<risks_causes_datas_linkedevents_edit>Edit cause events links</risks_causes_datas_linkedevents_edit>
+<risks_causes_datas_infos>Cause informations</risks_causes_datas_infos>
+<risks_causes_datas_infos_edit>View/edit cause</risks_causes_datas_infos_edit>
+<risks_causes_datas_infos_title>Title</risks_causes_datas_infos_title>
+<risks_causes_datas_infos_reference>Reference</risks_causes_datas_infos_reference>
+<risks_causes_datas_infos_description>Description</risks_causes_datas_infos_description>
+<risks_causes_datas_infos_period>Period</risks_causes_datas_infos_period>
+<risks_causes_datas_infos_periodformat>$1 years</risks_causes_datas_infos_periodformat>
+<risks_causes_datas_infos_likelihood>Likelihood</risks_causes_datas_infos_likelihood>
+<risks_causes_datas_infos_probability>Probability</risks_causes_datas_infos_probability>
+<risks_causes_datas_infos_horizonstart>Horizon start date</risks_causes_datas_infos_horizonstart>
+<risks_causes_datas_infos_horizonend>Horizon end date</risks_causes_datas_infos_horizonend>
+<risks_causes_datas_infos_occurences>Number of occurences</risks_causes_datas_infos_occurences>
+<risks_causes_datas_infos_modificationdate>Last modification date</risks_causes_datas_infos_modificationdate>
+<risks_causes_datas_infos_creationdate>Creation date</risks_causes_datas_infos_creationdate>
+
+<!-- Events -->
+<risks_events_title>Modelisation - Events</risks_events_title>
+<risks_events_datas_events_title>Title</risks_events_datas_events_title>
+<risks_events_datas_events_reference>Reference</risks_events_datas_events_reference>
+<risks_events_datas_events_category>Category</risks_events_datas_events_category>
+<risks_events_datas_events_period>Period</risks_events_datas_events_period>
+<risks_events_datas_events_likelihood>Likelihood</risks_events_datas_events_likelihood>
+<risks_events_datas_events_add>Add a new event</risks_events_datas_events_add>
+<risks_events_pageempty>0 event</risks_events_pageempty>
+<risks_events_pages>page $1 of $2 ( $3 events )</risks_events_pages>
+<risks_events_datas_linkedevents>Events included in event</risks_events_datas_linkedevents>
+<risks_events_datas_linkedevents_edit>Edit event events links</risks_events_datas_linkedevents_edit>
+<risks_events_datas_includingevents>Events including the event</risks_events_datas_includingevents>
+<risks_events_datas_infos>Event informations</risks_events_datas_infos>
+<risks_events_datas_infos_edit>View/edit event</risks_events_datas_infos_edit>
+<risks_events_datas_infos_title>Title</risks_events_datas_infos_title>
+<risks_events_datas_infos_reference>Reference</risks_events_datas_infos_reference>
+<risks_events_datas_infos_description>Description</risks_events_datas_infos_description>
+<risks_events_datas_infos_category>Category</risks_events_datas_infos_category>
+<risks_events_datas_infos_period>Period</risks_events_datas_infos_period>
+<risks_events_datas_infos_periodformat>$1 years</risks_events_datas_infos_periodformat>
+<risks_events_datas_infos_likelihood>Likelihood</risks_events_datas_infos_likelihood>
+<risks_events_datas_infos_probability>Probability</risks_events_datas_infos_probability>
+<risks_events_datas_infos_modificationdate>Last modification date</risks_events_datas_infos_modificationdate>
+<risks_events_datas_infos_creationdate>Creation date</risks_events_datas_infos_creationdate>
+
+<!-- Risk -->
+<risks_risk_title_add>New risk</risks_risk_title_add>
+<risks_risk_title_update>View/update risk</risks_risk_title_update>
+<risks_risk_risktitle>Title</risks_risk_risktitle>
+<risks_risk_reference>Reference</risks_risk_reference>
+<risks_risk_description>Description</risks_risk_description>
+<risks_risk_reviewperiod>Review period</risks_risk_reviewperiod>
+<risks_risk_reviewperiodformat>days</risks_risk_reviewperiodformat>
+<risks_risk_forcedreview>Forced review</risks_risk_forcedreview>
+<risks_risk_category>Category</risks_risk_category>
+<risks_risk_standard>Standard</risks_risk_standard>
+<risks_risk_likelihood>Likelihood</risks_risk_likelihood>
+<risks_risk_expirationdate>Expiration date</risks_risk_expirationdate>
+<risks_risk_add>Create</risks_risk_add>
+<risks_risk_update>Update</risks_risk_update>
+<risks_risk_cancel>Cancel</risks_risk_cancel>
+<risks_risk_creationdate>created on $1</risks_risk_creationdate>
+<risks_risk_error_risktitle>The 'title' must be filled.</risks_risk_error_risktitle>
+<risks_risk_error_category>The 'category' must be selected.</risks_risk_error_category>
+<risks_risk_error_period>The 'review period' must be filled.</risks_risk_error_period>
+<risks_risk_error_likelihood>The 'likelihood' must be selected.</risks_risk_error_likelihood>
+<risks_risk_history>History</risks_risk_history>
+<risks_risk_standardtopics>Standard topics</risks_risk_standardtopics>
+<risks_risk_viewstandard>View standard</risks_risk_viewstandard>
+
+<!-- Risk builder -->
+<risks_riskbuilder_title>Risk builder</risks_riskbuilder_title>
+<risks_riskbuilder_datas_linkedcauses>Risk causes</risks_riskbuilder_datas_linkedcauses>
+<risks_riskbuilder_datas_linkedcauses_edit>Edit risk's linked causes</risks_riskbuilder_datas_linkedcauses_edit>
+<risks_riskbuilder_datas_linkablecauses>Linkable causes for risk</risks_riskbuilder_datas_linkablecauses>
+<risks_riskbuilder_datas_linkablecauses_edit>Edit risk's linked causes</risks_riskbuilder_datas_linkablecauses_edit>
+<risks_riskbuilder_datas_infos>Risk informations</risks_riskbuilder_datas_infos>
+<risks_riskbuilder_datas_infos_edit>View/edit risk</risks_riskbuilder_datas_infos_edit>
+<risks_riskbuilder_datas_infos_title>Title</risks_riskbuilder_datas_infos_title>
+<risks_riskbuilder_datas_infos_reference>Reference</risks_riskbuilder_datas_infos_reference>
+<risks_riskbuilder_datas_infos_description>Description</risks_riskbuilder_datas_infos_description>
+<risks_riskbuilder_datas_infos_category>Category</risks_riskbuilder_datas_infos_category>
+<risks_riskbuilder_datas_infos_likelihood>Likelihood</risks_riskbuilder_datas_infos_likelihood>
+<risks_riskbuilder_datas_infos_probability>Probability</risks_riskbuilder_datas_infos_probability>
+<risks_riskbuilder_datas_infos_standard>Standard</risks_riskbuilder_datas_infos_standard>
+<risks_riskbuilder_datas_infos_responsible>Responsible</risks_riskbuilder_datas_infos_responsible>
+<risks_riskbuilder_datas_infos_expirationdate>Expiration date</risks_riskbuilder_datas_infos_expirationdate>
+<risks_riskbuilder_datas_infos_reviewperiod>Review period</risks_riskbuilder_datas_infos_reviewperiod>
+<risks_riskbuilder_datas_infos_reviewperiodformat>$1 days</risks_riskbuilder_datas_infos_reviewperiodformat>
+<risks_riskbuilder_datas_infos_reviewforced>Review forced</risks_riskbuilder_datas_infos_reviewforced>
+<risks_riskbuilder_datas_infos_modificationdate>Last modification</risks_riskbuilder_datas_infos_modificationdate>
+<risks_riskbuilder_datas_infos_creationdate>Creation date</risks_riskbuilder_datas_infos_creationdate>
+<risks_riskbuilder_history>History</risks_riskbuilder_history>
+
+<!-- Risk History -->
+<risks_riskhistory_title>Risk history</risks_riskhistory_title>
+<risks_riskhistory_datas_history_changedate>Change date</risks_riskhistory_datas_history_changedate>
+<risks_riskhistory_datas_history_modifier>Modifier</risks_riskhistory_datas_history_modifier>
+<risks_riskhistory_datas_history_title>Title</risks_riskhistory_datas_history_title>
+<risks_riskhistory_datas_history_responsible>Responsible</risks_riskhistory_datas_history_responsible>
+<risks_riskhistory_datas_history_period>Review period</risks_riskhistory_datas_history_period>
+<risks_riskhistory_datas_history_expirationdate>Expiration</risks_riskhistory_datas_history_expirationdate>
+
+<!-- Risk Causes -->
+<risks_riskcauses_title>Causes linked to risk</risks_riskcauses_title>
+<risks_riskcauses_datas_linkedcauses>Linked causes</risks_riskcauses_datas_linkedcauses>
+<risks_riskcauses_datas_linkablecauses>Linkable causes</risks_riskcauses_datas_linkablecauses>
+
+<!-- Risk Standard -->
+<risks_riskstandard_title>Standard informations</risks_riskstandard_title>
+<risks_riskstandard_standard>Standard</risks_riskstandard_standard>
+<risks_riskstandard_source>Source</risks_riskstandard_source>
+<risks_riskstandard_reference>Reference</risks_riskstandard_reference>
+<risks_riskstandard_publication>Publication date</risks_riskstandard_publication>
+<risks_riskstandard_classification>Classification index</risks_riskstandard_classification>
+<risks_riskstandard_category>Category</risks_riskstandard_category>
+<risks_riskstandard_active>Active</risks_riskstandard_active>
+<risks_riskstandard_obsolete>Obsoleted</risks_riskstandard_obsolete>
+
+<!-- Risk Standard Topics -->
+<risks_riskstandardtopics_title>Standard topics linked to risk</risks_riskstandardtopics_title>
+<risks_riskstandardtopics_datas_linkedtopics>Linked topics</risks_riskstandardtopics_datas_linkedtopics>
+<risks_riskstandardtopics_datas_linkabletopics>Linkable topics</risks_riskstandardtopics_datas_linkabletopics>
+
+<!-- Cause -->
+<risks_cause_title_add>New cause</risks_cause_title_add>
+<risks_cause_title_update>View/update cause</risks_cause_title_update>
+<risks_cause_causetitle>Title</risks_cause_causetitle>
+<risks_cause_reference>Reference</risks_cause_reference>
+<risks_cause_description>Description</risks_cause_description>
+<risks_cause_period>Period</risks_cause_period>
+<risks_cause_periodformat>years</risks_cause_periodformat>
+<risks_cause_likelihood>Likelihood</risks_cause_likelihood>
+<risks_cause_probability>Probability</risks_cause_probability>
+<risks_cause_probabilitymodification>Keep the current probability</risks_cause_probabilitymodification>
+<risks_cause_occurences># occurences</risks_cause_occurences>
+<risks_cause_horizonstart>Horizon start date</risks_cause_horizonstart>
+<risks_cause_horizonend>Horizon end date</risks_cause_horizonend>
+<risks_cause_add>Create</risks_cause_add>
+<risks_cause_update>Update</risks_cause_update>
+<risks_cause_cancel>Cancel</risks_cause_cancel>
+<risks_cause_creationdate>created on $1</risks_cause_creationdate>
+<risks_cause_error_eventtitle>The 'title' must be filled.</risks_cause_error_eventtitle>
+<risks_cause_error_period>The 'period' must be filled.</risks_cause_error_period>
+<risks_cause_error_probability>'Likelihood' or 'probability' must be filled.</risks_cause_error_probability>
+<risks_cause_error_probabilitynumber>'Probability' must be a number.</risks_cause_error_probabilitynumber>
+<risks_cause_error_occurences>The 'number of occurences' must be filled.</risks_cause_error_occurences>
+<risks_cause_error_occurencesnumber>'Occurences' must be a number.</risks_cause_error_occurencesnumber>
+<risks_cause_history>History</risks_cause_history>
+
+<!-- Cause History -->
+<risks_causehistory_title>Cause history</risks_causehistory_title>
+<risks_causehistory_datas_history_changedate>Change date</risks_causehistory_datas_history_changedate>
+<risks_causehistory_datas_history_title>Title</risks_causehistory_datas_history_title>
+<risks_causehistory_datas_history_modifier>Modifier</risks_causehistory_datas_history_modifier>
+<risks_causehistory_datas_history_period>Period</risks_causehistory_datas_history_period>
+<risks_causehistory_datas_history_probability>Probability</risks_causehistory_datas_history_probability>
+<risks_causehistory_datas_history_nboccurrences># occurrences</risks_causehistory_datas_history_nboccurrences>
+
+<!-- Cause Events -->
+<risks_causeevents_title>Events linked to cause</risks_causeevents_title>
+<risks_causeevents_datas_linkedevents>Linked events</risks_causeevents_datas_linkedevents>
+<risks_causeevents_datas_linkableevents>Linkable events</risks_causeevents_datas_linkableevents>
+
+<!-- Event -->
+<risks_event_title_add>New event</risks_event_title_add>
+<risks_event_title_update>View/update event</risks_event_title_update>
+<risks_event_eventtitle>Title</risks_event_eventtitle>
+<risks_event_reference>Reference</risks_event_reference>
+<risks_event_description>Description</risks_event_description>
+<risks_event_category>Category</risks_event_category>
+<risks_event_period>Period</risks_event_period>
+<risks_event_periodformat>years</risks_event_periodformat>
+<risks_event_likelihood>Likelihood</risks_event_likelihood>
+<risks_event_probability>Probability</risks_event_probability>
+<risks_event_probabilitymodification>Keep the current probability</risks_event_probabilitymodification>
+<risks_event_add>Create</risks_event_add>
+<risks_event_update>Update</risks_event_update>
+<risks_event_cancel>Cancel</risks_event_cancel>
+<risks_event_creationdate>created on $1</risks_event_creationdate>
+<risks_event_error_eventtitle>The 'title' must be filled.</risks_event_error_eventtitle>
+<risks_event_error_period>The 'period' must be filled.</risks_event_error_period>
+<risks_event_error_probability>'Likelihood' or 'probability' must be filled.</risks_event_error_probability>
+<risks_event_error_probabilitynumber>'Probability' must be a number.</risks_event_error_probabilitynumber>
+<risks_event_error_category>A 'category' must be selected.</risks_event_error_category>
+
+<!-- Event Events -->
+<risks_eventevents_title>Events linked to event</risks_eventevents_title>
+<risks_eventevents_datas_linkedevents>Linked events</risks_eventevents_datas_linkedevents>
+<risks_eventevents_datas_linkableevents>Linkable events</risks_eventevents_datas_linkableevents>
+
+<!-- MANAGEMENT -->
+
+<!-- Risk Management -->
+<risks_management_title>Risks management</risks_management_title>
+<risks_management_datas_risks_title>Title</risks_management_datas_risks_title>
+<risks_management_datas_risks_reference>Reference</risks_management_datas_risks_reference>
+<risks_management_datas_risks_category>Category</risks_management_datas_risks_category>
+<risks_management_datas_risks_responsible>Responsible</risks_management_datas_risks_responsible>
+<risks_management_datas_risks_expiration>Expiration</risks_management_datas_risks_expiration>
+<risks_management_datas_risks_review>Review period</risks_management_datas_risks_review>
+<risks_management_datas_risks_add>Go to risks modelisation</risks_management_datas_risks_add>
+<risks_management_datas_risks_pageempty>0 risk</risks_management_datas_risks_pageempty>
+<risks_management_datas_risks_pages>page $1 of $2 ( $3 risks )</risks_management_datas_risks_pages>
+<risks_management_datas_groups>Groups for risk</risks_management_datas_groups>
+<risks_management_datas_groups_add>Edit risk groups links</risks_management_datas_groups_add>
+<risks_management_datas_organisations>Linked organisations</risks_management_datas_organisations>
+<risks_management_datas_organisations_edit>Edit organisations links</risks_management_datas_organisations_edit>
+<risks_management_datas_comments_comment>Comment</risks_management_datas_comments_comment>
+<risks_management_datas_comments_author>Author</risks_management_datas_comments_author>
+<risks_management_datas_comments_add>Add a new comment</risks_management_datas_comments_add>
+<risks_management_datas_criteria_reference>Criterion</risks_management_datas_criteria_reference>
+<risks_management_datas_criteria_description>Description</risks_management_datas_criteria_description>
+<risks_management_datas_criteria_category>Category</risks_management_datas_criteria_category>
+<risks_management_datas_criteria_add>Add a new evaluation criterion</risks_management_datas_criteria_add>
+
+<!-- Criteria -->
+<risks_criteria_title>Evaluation criteria management</risks_criteria_title>
+<risks_criteria_datas_criteria_reference>Criterion</risks_criteria_datas_criteria_reference>
+<risks_criteria_datas_criteria_description>Description</risks_criteria_datas_criteria_description>
+<risks_criteria_datas_criteria_category>Category</risks_criteria_datas_criteria_category>
+<risks_criteria_datas_criteria_add>Add a new evaluation criterion</risks_criteria_datas_criteria_add>
+<risks_criteria_pageempty>0 criterion</risks_criteria_pageempty>
+<risks_criteria_pages>page $1 of $2 ( $3 criteria )</risks_criteria_pages>
+<risks_criteria_categories>Categories selection</risks_criteria_categories>
+<risks_criteria_allcategories>All the categories</risks_criteria_allcategories>
+<risks_criteria_datas_infos>Criterion informations</risks_criteria_datas_infos>
+<risks_criteria_datas_infos_reference>Reference</risks_criteria_datas_infos_reference>
+<risks_criteria_datas_infos_description>Description</risks_criteria_datas_infos_description>
+<risks_criteria_datas_infos_evaluationdescription>Evaluation description</risks_criteria_datas_infos_evaluationdescription>
+<risks_criteria_datas_infos_category>Category</risks_criteria_datas_infos_category>
+<risks_criteria_datas_infos_answertype>Expected answer type</risks_criteria_datas_infos_answertype>
+<risks_criteria_datas_infos_modificationdate>Last modification</risks_criteria_datas_infos_modificationdate>
+<risks_criteria_datas_infos_creationdate>Creation date</risks_criteria_datas_infos_creationdate>
+<risks_criteria_datas_infos_edit>View/edit criterion</risks_criteria_datas_infos_edit> 
+<risks_criteria_datas_linkedrisks>Linked risks</risks_criteria_datas_linkedrisks>
+<risks_criteria_datas_linkedrisks_edit>Edit criterion risks links</risks_criteria_datas_linkedrisks_edit>
+
+<!-- Criterion -->
+<risks_criterion_title_add>New evaluation criterion</risks_criterion_title_add>
+<risks_criterion_title_update>View/edit criterion</risks_criterion_title_update>
+<risks_criterion_reference>Reference</risks_criterion_reference>
+<risks_criterion_description>Description</risks_criterion_description>
+<risks_criterion_evaluationdescription>Explanation for evaluation</risks_criterion_evaluationdescription>
+<risks_criterion_category>Category</risks_criterion_category>
+<risks_criterion_answertype>Expected answer type:</risks_criterion_answertype>
+<risks_criterion_answertype_number>Number</risks_criterion_answertype_number>
+<risks_criterion_answertype_text>Text</risks_criterion_answertype_text>
+<risks_criterion_answertype_boolean>True/False</risks_criterion_answertype_boolean>
+<risks_criterion_add>Create</risks_criterion_add>
+<risks_criterion_update>Update</risks_criterion_update>
+<risks_criterion_cancel>Cancel</risks_criterion_cancel>
+<risks_criterion_creationdate>created on $1</risks_criterion_creationdate>
+<risks_criterion_error_reference>The 'reference' must be filled.</risks_criterion_error_reference>
+<risks_criterion_error_description>The 'description' must be filled.</risks_criterion_error_description>
+<risks_criterion_error_category>A 'category' must be selected.</risks_criterion_error_category>
+<risks_criterion_error_answertype>An 'answer type' must be selected.</risks_criterion_error_answertype>
+
+<!-- Risks using Criterion -->
+<risks_criterionrisks_title>My risks using the criterion</risks_criterionrisks_title>
+<risks_criterionrisks_datas_linkedrisks>My risks with the criterion</risks_criterionrisks_datas_linkedrisks>
+<risks_criterionrisks_datas_linkablerisks>My risks without the criterion</risks_criterionrisks_datas_linkablerisks>
+
+<!-- Groups -->
+<risks_groups_title>Groups of risks management</risks_groups_title>
+<risks_groups_datas_groups_name>Group name</risks_groups_datas_groups_name>
+<risks_groups_datas_groups_description>Description</risks_groups_datas_groups_description>
+<risks_groups_datas_groups_add>Add a new group of risks</risks_groups_datas_groups_add>
+<risks_groups_datas_infos>Group informations</risks_groups_datas_infos>
+<risks_groups_datas_infos_groupname>Group name</risks_groups_datas_infos_groupname>
+<risks_groups_datas_infos_description>Description</risks_groups_datas_infos_description>
+<risks_groups_datas_infos_modificationdate>Last modification</risks_groups_datas_infos_modificationdate>
+<risks_groups_datas_infos_creationdate>Creation date</risks_groups_datas_infos_creationdate>
+<risks_groups_datas_infos_edit>View/edit group</risks_groups_datas_infos_edit>
+<risks_groups_datas_linkedrisks>Group's risks</risks_groups_datas_linkedrisks>
+<risks_groups_datas_linkedrisks_edit>Edit list of group's risks</risks_groups_datas_linkedrisks_edit>
+
+<!-- Group -->
+<risks_group_title_add>New group</risks_group_title_add>
+<risks_group_title_update>View/edit group</risks_group_title_update>
+<risks_group_groupname>Group name</risks_group_groupname>
+<risks_group_description>Description</risks_group_description>
+<risks_group_creationdate>created on $1</risks_group_creationdate>
+<risks_group_add>Create</risks_group_add>
+<risks_group_update>Update</risks_group_update>
+<risks_group_cancel>Cancel</risks_group_cancel>
+<risks_group_error_groupname>The 'group name' must be filled.</risks_group_error_groupname>
+
+<!-- Risk(s) in groups -->
+<risks_grouprisks_title>Risks included in the group</risks_grouprisks_title>
+<risks_grouprisks_datas_linkablerisks>Unlinked risks</risks_grouprisks_datas_linkablerisks>
+<risks_grouprisks_datas_linkedrisks>Linked risks</risks_grouprisks_datas_linkedrisks>
+
+<!-- Risk Levels -->
+<risks_risklevels_title>General risks levels management</risks_risklevels_title>
+<risks_risklevels_datas_risklevels_likelihood>Likelihoods</risks_risklevels_datas_risklevels_likelihood>
+<risks_risklevels_datas_risklevels_consequence>Consequences</risks_risklevels_datas_risklevels_consequence>
+<risks_risklevels_titleupdate>Change the risk level</risks_risklevels_titleupdate>
+<risks_risklevels_likelihood>Likelihood for the risk level</risks_risklevels_likelihood>
+<risks_risklevels_consequence>Consequence for the risk level</risks_risklevels_consequence>
+<risks_risklevels_risklevel>Risk level</risks_risklevels_risklevel>
+<risks_risklevels_update>Update level</risks_risklevels_update>
+<risks_risklevels_benefic>Benefics</risks_risklevels_benefic>
+<risks_risklevels_negative>Negatives</risks_risklevels_negative>
+<risks_risklevels_error_risklevel>A risk level must be selected.</risks_risklevels_error_risklevel>
+
+<!-- Risk Comment -->
+<risks_riskcomment_author>Author</risks_riskcomment_author>
+<risks_riskcomment_date>Comment date</risks_riskcomment_date>
+<risks_riskcomment_create>Create</risks_riskcomment_create>
+<risks_riskcomment_update>Update</risks_riskcomment_update>
+<risks_riskcomment_cancel>Cancel</risks_riskcomment_cancel>
+<risks_riskcomment_error>The comment must be filled.</risks_riskcomment_error>
+<risks_riskcomment_history>History</risks_riskcomment_history>
+<risks_riskcomment_text>risk comment</risks_riskcomment_text>
+
+<!-- Risk Comment History -->
+<risks_riskcommenthistory_title>Risk comment history</risks_riskcommenthistory_title>
+<risks_riskcommenthistory_datas_history_changedate>Change date</risks_riskcommenthistory_datas_history_changedate>
+<risks_riskcommenthistory_datas_history_modifier>Modifier</risks_riskcommenthistory_datas_history_modifier>
+<risks_riskcommenthistory_datas_history_comment>Comment</risks_riskcommenthistory_datas_history_comment>
+
+<!-- Risk Organisations -->
+<risks_riskorganisations_title>Organisations linked to risk</risks_riskorganisations_title>
+<risks_riskorganisations_datas_locations>Locations</risks_riskorganisations_datas_locations>
+<risks_riskorganisations_datas_departments>Departments</risks_riskorganisations_datas_departments>
+<risks_riskorganisations_datas_businesszones>Business zones</risks_riskorganisations_datas_businesszones>
+<risks_riskorganisations_datas_organisations>Linked organisations</risks_riskorganisations_datas_organisations>
+
+<!-- Risk Criteria -->
+<risks_riskcriteria_title>Criteria linked to risk</risks_riskcriteria_title>
+<risks_riskcriteria_datas_linkablecriteria>Linkable criteria</risks_riskcriteria_datas_linkablecriteria>
+<risks_riskcriteria_datas_linkedcriteria>Linked criteria</risks_riskcriteria_datas_linkedcriteria>
+<risks_riskcriteria_pageempty>0 criterion</risks_riskcriteria_pageempty>
+<risks_riskcriteria_pages>page $1 of $2 ( $3 criteria )</risks_riskcriteria_pages>
+<risks_riskcriteria_allcategories>All the categories</risks_riskcriteria_allcategories>
+
+<!-- Groups of Risk(s) -->
+<risks_riskgroups_title>Risk contained in groups</risks_riskgroups_title>
+<risks_riskgroups_datas_linkablegroups>Group not containing risk</risks_riskgroups_datas_linkablegroups>
+<risks_riskgroups_datas_linkedgroups>Groups containing risk</risks_riskgroups_datas_linkedgroups>
+
+<!-- Raci -->
+<risks_raci_title>RACI</risks_raci_title>
+<risks_raci_risktitle>RACI for risk $1</risks_raci_risktitle>
+<risks_raci_risk_title>Risk RACI</risks_raci_risk_title>
+<risks_raci_edit>Edit privileges</risks_raci_edit>
+<risks_raci_update_title>RACI for $1</risks_raci_update_title>
+<risks_raci_add_title>Add a stakeholder RACI</risks_raci_add_title>
+<risks_raci_add_datas_users>Stakeholders</risks_raci_add_datas_users>
+<risks_raci_add_datas_nousers>No active stakeholder available.</risks_raci_add_datas_nousers>
+<risks_raci_update_user>Current stakeholder</risks_raci_update_user>
+<risks_raci_update_currentraci>Current RACI</risks_raci_update_currentraci>
+<risks_raci_update_newraci>New RACI</risks_raci_update_newraci>
+<risks_raci_add_newraci>RACI</risks_raci_add_newraci>
+<risks_raci_r>R</risks_raci_r>
+<risks_raci_a>A</risks_raci_a>
+<risks_raci_c>C</risks_raci_c>
+<risks_raci_i>I</risks_raci_i>
+<risks_raci_add>Add</risks_raci_add>
+<risks_raci_update>Update</risks_raci_update>
+<risks_raci_cancel>Cancel</risks_raci_cancel>
+<risks_raci_update_error>A stakeholder must be selected.</risks_raci_update_error>
+<risks_raci_update_error_add>At least one RACI right must be selected.</risks_raci_update_error_add>
+<risks_raci_datas_risk_user>Stakeholders</risks_raci_datas_risk_user>
+<risks_raci_datas_risk_add>Add a stakeholder</risks_raci_datas_risk_add>
+<risks_raci_infos_raci>RACI</risks_raci_infos_raci>
+<risks_raci_infos_r>R : responsible</risks_raci_infos_r>
+<risks_raci_infos_a>A : accountable</risks_raci_infos_a>
+<risks_raci_infos_c>C : consulted</risks_raci_infos_c>
+<risks_raci_infos_i>I : informed</risks_raci_infos_i>
+
+<!-- RACI History -->
+<risks_raci_history>History</risks_raci_history>
+<risks_racihistory_title>RACI history</risks_racihistory_title>
+<risks_racihistory_matrix_title>Current RACI</risks_racihistory_matrix_title>
+<risks_racihistory_close>Close</risks_racihistory_close>
+<risks_racihistory_datas_user>Stakeholder</risks_racihistory_datas_user>
+<risks_racihistory_datas_modifier>Modifier</risks_racihistory_datas_modifier>
+<risks_racihistory_datas_modificationdate>Modif. date</risks_racihistory_datas_modificationdate>
+<risks_racihistory_pages>page $1 of $2 ( $3 modifications )</risks_racihistory_pages>
+<risks_racihistory_pageempty>0 modification</risks_racihistory_pageempty>
+
+<!-- Raci Change Request -->
+<risks_racichangerequest_title>List of RACI change requests for module</risks_racichangerequest_title>
+<risks_racichangerequest_text>At least a RACI change for the module request your validation. Select a change in the list and apply your modification.</risks_racichangerequest_text>
+<risks_racichangerequest_warning>Warning: validating the changes on your own informations in the RACI of the module will cause your disconnection from module.</risks_racichangerequest_warning>
+<risks_racichangerequest_validate>Validate</risks_racichangerequest_validate>
+<risks_racichangerequest_discard>Discard</risks_racichangerequest_discard>
+<risks_racichangerequest_dolater>Do later</risks_racichangerequest_dolater>
+<risks_racichangerequest_datas_request_date>Date</risks_racichangerequest_datas_request_date>
+<risks_racichangerequest_datas_request_modifier>Modifier</risks_racichangerequest_datas_request_modifier>
+<risks_racichangerequest_datas_request_modification>Modification</risks_racichangerequest_datas_request_modification>
+<risks_racichangerequest_datas_request_modification_add>Add</risks_racichangerequest_datas_request_modification_add>
+<risks_racichangerequest_datas_request_modification_update>Update</risks_racichangerequest_datas_request_modification_update>
+<risks_racichangerequest_datas_request_modification_delete>Delete</risks_racichangerequest_datas_request_modification_delete>
+<risks_racichangerequest_datas_request_modification_forced>Forced update</risks_racichangerequest_datas_request_modification_forced>
+<risks_racichangerequest_datas_request_stakeholder>Stakeholder</risks_racichangerequest_datas_request_stakeholder>
+<risks_racichangerequest_datas_request_substitute>Substitute</risks_racichangerequest_datas_request_substitute>
+<risks_racichangerequest_moduleraci>Current module RACI</risks_racichangerequest_moduleraci>
+
+<!-- Email -->
+<risks_email_title>Notify by mail</risks_email_title>
+<risks_email_from>From :</risks_email_from>
+<risks_email_to>To :</risks_email_to>
+<risks_email_send>Send</risks_email_send>
+<risks_email_cancel>Cancel</risks_email_cancel>
+<risks_email_success>Message sent successfully.</risks_email_success>
+<risks_email_failure>Sending error, please try again.</risks_email_failure>
+<risks_email_failure_email>Select an user.</risks_email_failure_email>
+<risks_email_failure_message>Message must be filled.</risks_email_failure_message>
+
+<!-- Validation -->
+<risks_validation_title>Validate changes</risks_validation_title>
+<risks_validation_text>Do you want to save the changes you made ?</risks_validation_text>
+<risks_validation_yes>Yes</risks_validation_yes>
+<risks_validation_no>No</risks_validation_no>
+<risks_validation_cancel>Cancel</risks_validation_cancel>
+
+<!-- Error -->
+<risks_error_title>Error</risks_error_title>
+<risks_error_ok>Ok</risks_error_ok>
+<risks_error_notify>Notify support</risks_error_notify>
+<risks_error_concurrency_title>Concurrent access on item</risks_error_concurrency_title>
+<risks_error_concurrency_text><![CDATA[The item '$1' has been already updated by an other user.<br />Click on the Refresh button to update it.<br />You'll have to relaunch your operation after that.]]></risks_error_concurrency_text>
+<risks_error_refresh>Refresh</risks_error_refresh>
+
+<!-- Menu -->
+<risks_menu_home>Home</risks_menu_home>
+<risks_menu_home_esis>ESIS home</risks_menu_home_esis>
+<risks_menu_home_title>Module selection</risks_menu_home_title>
+<risks_menu_logout>Logout</risks_menu_logout>
+<risks_menu_prefs>Prefs</risks_menu_prefs>
+<risks_menu_print>Print</risks_menu_print>
+<risks_menu_excel>Excel</risks_menu_excel>
+<risks_menu_msproject>MsProject</risks_menu_msproject>
+<risks_menu_mail>Mail</risks_menu_mail>
+<risks_menu_calendar>Calendar</risks_menu_calendar>
+<risks_menu_find>Find</risks_menu_find>
+<risks_menu_votes_my>my votes</risks_menu_votes_my>
+<risks_menu_votes_all>all votes</risks_menu_votes_all>
+<risks_menu_tasks_my>my tasks</risks_menu_tasks_my>
+<risks_menu_tasks_raci>RACI tasks</risks_menu_tasks_raci>
+<risks_menu_filter_my>MY</risks_menu_filter_my>
+<risks_menu_filter_raci>RACI</risks_menu_filter_raci>
+<risks_menu_filter_all>ALL</risks_menu_filter_all>
+<risks_menu_filter_interval_all>ever since</risks_menu_filter_interval_all>
+<risks_menu_filter_interval_twelvemonths>12 months</risks_menu_filter_interval_twelvemonths>
+<risks_menu_filter_interval_from>from</risks_menu_filter_interval_from>
+<risks_menu_filter_interval_title>Time period</risks_menu_filter_interval_title>
+<risks_menu_filter_interval_submit>OK</risks_menu_filter_interval_submit>
+</entity>
+</esis>

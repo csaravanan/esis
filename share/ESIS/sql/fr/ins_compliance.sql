@@ -1,0 +1,10 @@
+INSERT INTO compliance.e_standard_category (e_standard_category_id, standard_category) VALUES (1, 'Technologies de l''information');
+INSERT INTO compliance.e_standard_category (e_standard_category_id, standard_category) VALUES (2, 'Gestion globale');
+INSERT INTO compliance.e_topic_category (e_topic_category_id, topic_category) VALUES (1, 'Gestion de la sécurité');
+INSERT INTO compliance.e_topic_category (e_topic_category_id, topic_category) VALUES (2, 'Contrôle des accès');
+INSERT INTO compliance.e_compliance_kind (e_compliance_kind_id, kind) VALUES (1, 'Remarque d''application');
+INSERT INTO compliance.e_compliance_kind (e_compliance_kind_id, kind) VALUES (2, 'Remarque documentaire');
+INSERT INTO compliance.e_compliance_type (e_compliance_type_id, compliance_type) VALUES (1, 'Non conformité mineure d''une application');
+INSERT INTO compliance.e_compliance_type (e_compliance_type_id, compliance_type) VALUES (2, 'Non conformité mineure documentaire');
+INSERT INTO compliance.e_compliance_type (e_compliance_type_id, compliance_type) VALUES (3, 'Non conformité majeure d''une application');
+INSERT INTO compliance.e_compliance_type (e_compliance_type_id, compliance_type) VALUES (4, 'Non conformité majeure documentaire');

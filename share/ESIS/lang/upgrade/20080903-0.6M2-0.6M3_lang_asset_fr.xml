@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="asset" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<asset_vpv_title>Gestion des vendeurs, des produits et des versions</asset_vpv_title>
+<asset_vpv_search_vendors>Vendeurs</asset_vpv_search_vendors>
+<asset_vpv_search_products>Produits</asset_vpv_search_products>
+<asset_vpv_search_versions>Versions</asset_vpv_search_versions>
+<asset_vpv_search_find>Ok</asset_vpv_search_find>
+<asset_vpv_search_error_text>La recherche doit comporter au moins 2 caractères.</asset_vpv_search_error_text>
+<asset_vpv_search_error_selection>Au moins un filtre doit être sélectionné.</asset_vpv_search_error_selection>
+<asset_menu_filter_my>MON</asset_menu_filter_my>
+<asset_menu_filter_all>TOUT</asset_menu_filter_all>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<asset_assets_title>Gestion des systèmes</asset_assets_title>
+<asset_assets_data_assets_ip>Adresse IP principale</asset_assets_data_assets_ip>
+<asset_assets_data_assets_fqdn>Nom complet de l'hôte</asset_assets_data_assets_fqdn>
+<asset_assets_data_assets_active>Activé</asset_assets_data_assets_active>
+<asset_assets_data_pageempty>0 système</asset_assets_data_pageempty>
+<asset_assets_data_pages>page $1 sur $2 ( $3 systèmes )</asset_assets_data_pages>
+<asset_assets_data_details>Informations sur le système</asset_assets_data_details>
+<asset_assets_data_details_ip>Adresse IP principale</asset_assets_data_details_ip>
+<asset_assets_data_details_ips>Autres adresses IP</asset_assets_data_details_ips>
+<asset_assets_data_details_fqdn>Nom complet du domaine</asset_assets_data_details_fqdn>
+<asset_assets_data_details_serial>Numéro de série</asset_assets_data_details_serial>
+<asset_assets_data_details_active>Activé</asset_assets_data_details_active>
+<asset_assets_data_details_classification>Classification sécurité</asset_assets_data_details_classification>
+<asset_assets_data_details_businessline>Secteur d'activité</asset_assets_data_details_businessline>
+<asset_assets_data_details_availability>Disponibilité</asset_assets_data_details_availability>
+<asset_assets_data_details_type>Type</asset_assets_data_details_type>
+<asset_assets_data_details_os>Système d'exploitation</asset_assets_data_details_os>
+<asset_assets_data_details_macaddress>Adresse MAC principale</asset_assets_data_details_macaddress>
+<asset_assets_data_details_macaddresses>Autres adresses MAC</asset_assets_data_details_macaddresses>
+<asset_assets_data_details_dhcp>Utilise DHCP</asset_assets_data_details_dhcp>
+<asset_assets_data_details_host>Nom d'hôte</asset_assets_data_details_host>
+<asset_assets_data_details_domain>Nom du domaine</asset_assets_data_details_domain>
+<asset_assets_data_details_timezone>Fuseau horaire</asset_assets_data_details_timezone>
+<asset_assets_data_details_applications>Applications</asset_assets_data_details_applications>
+<asset_asset_title>Informations sur le système</asset_asset_title>
+<asset_assets_all>Tous</asset_assets_all>
+<asset_assets_active>Actifs</asset_assets_active>
+<asset_assets_inactive>Inactifs</asset_assets_inactive>
+<asset_assets_data_assets_host>Nom de l'hôte</asset_assets_data_assets_host>
+<asset_asset_ips>Adresses IP</asset_asset_ips>
+<asset_asset_macaddresses>Adresses MAC</asset_asset_macaddresses>
+<asset_asset_products>Applications</asset_asset_products>
+<asset_asset_dhcp>Utilise DHCP</asset_asset_dhcp>
+<asset_asset_ip>Adresse IP principale</asset_asset_ip>
+<asset_asset_macaddress>Adresse MAC principale</asset_asset_macaddress>
+<asset_asset_fqdn>Nom complet de l'hôte</asset_asset_fqdn>
+<asset_asset_host>Nom d'hôte</asset_asset_host>
+<asset_asset_domain>Nom du domaine</asset_asset_domain>
+<asset_asset_serialnumber>Numéro de série</asset_asset_serialnumber>
+<asset_asset_classification>Classification sécurité</asset_asset_classification>
+<asset_asset_business>Secteur d'activité</asset_asset_business>
+<asset_asset_availability>Disponibilité</asset_asset_availability>
+<asset_asset_type>Type</asset_asset_type>
+<asset_asset_active>Activé</asset_asset_active>
+<asset_asset_os>Système d'exploitation</asset_asset_os>
+<asset_asset_timezone>Fuseau horaire</asset_asset_timezone>
+<asset_asset_ips_add>Ajouter une adresse IP</asset_asset_ips_add>
+<asset_asset_macaddresses_add>Ajouter une adresse MAC</asset_asset_macaddresses_add>
+<asset_asset_products_add>Ajouter une application</asset_asset_products_add>
+<asset_asset_add>Ajouter</asset_asset_add>
+<asset_asset_update>Mettre à jour</asset_asset_update>
+<asset_asset_cancel>Annuler</asset_asset_cancel>
+<asset_asset_changeos>changer</asset_asset_changeos>
+<asset_asset_deleteos>effacer</asset_asset_deleteos>
+<asset_asset_ips_main>IP principale</asset_asset_ips_main>
+<asset_asset_macaddresses_main>MAC principale</asset_asset_macaddresses_main>
+<asset_default_nc>N.C.</asset_default_nc>
+<asset_assets_data_assets_add>Ajouter un nouveau système</asset_assets_data_assets_add>
+<asset_asset_notimezone>Aucun fuseau horaire défini</asset_asset_notimezone>
+<asset_asset_notype>Aucun type défini</asset_asset_notype>
+<asset_asset_noclassification>Aucune classification sécurité définie</asset_asset_noclassification>
+<asset_asset_noavailability>Aucune disponibilité définie</asset_asset_noavailability>
+<asset_asset_nobusiness>Aucun secteur d'activité défini</asset_asset_nobusiness>
+<asset_asset_error_data>Remplir au moins: IP principale, FQDN, nom d'hôte ou numéro de série.</asset_asset_error_data>
+<asset_asset_mac_title>Ajouter une nouvelle adresse MAC</asset_asset_mac_title>
+<asset_asset_mac_name>Ajout d'une adresse MAC</asset_asset_mac_name>
+<asset_asset_mac_main>Adresse MAC principale</asset_asset_mac_main>
+<asset_asset_mac_add>Ajouter</asset_asset_mac_add>
+<asset_asset_mac_cancel>Annuler</asset_asset_mac_cancel>
+<asset_asset_ip_error>Une adresse MAC doit être saisie</asset_asset_ip_error>
+<asset_asset_ip_title>Ajouter une nouvelle adresse IP</asset_asset_ip_title>
+<asset_asset_ip_name>Ajout d'une adresse IP</asset_asset_ip_name>
+<asset_asset_ip_main>Adresse IP principale</asset_asset_ip_main>
+<asset_asset_ip_add>Ajouter</asset_asset_ip_add>
+<asset_asset_ip_cancel>Annuler</asset_asset_ip_cancel>
+<asset_asset_ip_error>Une adresse IP doit être saisie</asset_asset_ip_error>
+<asset_asset_os_title>Ajouter/Mettre à jour le système d'exploitation</asset_asset_os_title>
+<asset_asset_os_validate>Ok</asset_asset_os_validate>
+<asset_asset_os_search>Rechercher un système d'exploitation</asset_asset_os_search>
+<asset_asset_os_data_products>Liste des produits</asset_asset_os_data_products>
+<asset_asset_os_add>Ajouter</asset_asset_os_add>
+<asset_asset_product_title>Ajouter une nouvelle application</asset_asset_product_title>
+<asset_asset_product_validate>Ok</asset_asset_product_validate>
+<asset_asset_product_search>Rechercher une application</asset_asset_product_search>
+<asset_asset_product_data_products>Liste des produits</asset_asset_product_data_products>
+<asset_asset_product_add>Ajouter</asset_asset_product_add>
+<asset_asset_product_error_search>La recherche doit faire au moins 2 caractères.</asset_asset_product_error_search>
+<asset_asset_product_error_empty>Aucun produit sélectionné.</asset_asset_product_error_empty>
+<asset_menu_asset_assets>Systèmes</asset_menu_asset_assets>
+<asset_menu_asset_vpv>Produits</asset_menu_asset_vpv>
+<asset_menu_asset_company>Société</asset_menu_asset_company>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+</removed>
+
+</entity>
+</esis>

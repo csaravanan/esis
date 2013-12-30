@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="explorer" lang="en">
+<!-- the # char is used for variables -->
+<!-- in html texts : add <br /> for return line -and- CDATA if use html code -->
+
+<!-- Explorer -->
+<explorer_navigation_services>Services viewer</explorer_navigation_services>
+<explorer_navigation_data>Data viewer</explorer_navigation_data>
+<explorer_default_yes>Yes</explorer_default_yes>
+<explorer_default_no>No</explorer_default_no>
+
+<!-- Errors texts --> 
+<explorer_errors_default_title>Error</explorer_errors_default_title>
+<explorer_errors_default_text>Error unknown</explorer_errors_default_text><!-- html -->
+<explorer_errors_wsnotexist_title>WebService error</explorer_errors_wsnotexist_title>
+<explorer_errors_wsnotexist_text>The webservice '$1' doesn't exist. Please contact your administrator.</explorer_errors_wsnotexist_text><!-- html -->
+<explorer_errors_wsparameters_title>Webservice parameters error</explorer_errors_wsparameters_title>
+<explorer_errors_wsparameters_text>The webservice '$1' is trying to use more than 10 parameters values.</explorer_errors_wsparameters_text>
+
+<!-- Categories -->
+<explorer_categories_title><![CDATA[Governance, Compliance<br />and Risks consolidation]]></explorer_categories_title>
+<explorer_categories_legend_good>Today to day -1</explorer_categories_legend_good>
+<explorer_categories_legend_medium>Day -2 to day -5</explorer_categories_legend_medium>
+<explorer_categories_legend_bad>Day -6 to day -15</explorer_categories_legend_bad>
+<explorer_categories_legend_verybad>Day -15 to day -30</explorer_categories_legend_verybad>
+<explorer_categories_legend_nodata><![CDATA[> to day -30/no data]]></explorer_categories_legend_nodata>
+<explorer_categories_allcategories>All categories</explorer_categories_allcategories>
+
+<!-- Services -->
+<explorer_services_title><![CDATA[Governance, Compliance<br />and Risks consolidation]]></explorer_services_title>
+<explorer_services_apply>Reload</explorer_services_apply>
+<explorer_services_reset>Reset</explorer_services_reset>
+<explorer_services_selectservice>Select a service:</explorer_services_selectservice>
+<explorer_services_executiontime>Execution time:</explorer_services_executiontime>
+<explorer_services_noservice>Service unavailable for this category.</explorer_services_noservice>
+<explorer_services_description>Service description</explorer_services_description>
+<explorer_services_results>Service results</explorer_services_results>
+<explorer_services_parameters_data_parameter>Parameter</explorer_services_parameters_data_parameter>
+<explorer_services_parameters_data_label>Description</explorer_services_parameters_data_label>
+<explorer_services_parameters_data_value>Current value</explorer_services_parameters_data_value>
+<explorer_services_parameters_data_default>Default value</explorer_services_parameters_data_default>
+<explorer_services_parameters_data_possible>Possible values</explorer_services_parameters_data_possible>
+<explorer_services_toplist_data>Data</explorer_services_toplist_data>
+<explorer_services_toplist_number>Number</explorer_services_toplist_number>
+
+<!-- Service Parameters -->
+<explorer_serviceparameter_title>Parameter modification</explorer_serviceparameter_title>
+<explorer_serviceparameter_name>Parameter</explorer_serviceparameter_name>
+<explorer_serviceparameter_currentvalue>Current value</explorer_serviceparameter_currentvalue>
+<explorer_serviceparameter_newvalue>New value</explorer_serviceparameter_newvalue>
+<explorer_serviceparameter_edit>Update</explorer_serviceparameter_edit>
+
+<!-- Data -->
+<explorer_data_title><![CDATA[Governance, Compliance<br />and Risks consolidation]]></explorer_data_title>
+<explorer_data_tab_malwares>Malwares</explorer_data_tab_malwares>
+<explorer_data_tab_domains>Domain names</explorer_data_tab_domains>
+<explorer_data_tab_sites>Websites</explorer_data_tab_sites>
+<explorer_data_tab_ips>IP addresses</explorer_data_tab_ips>
+<explorer_data_pageempty_malwares>0 malware</explorer_data_pageempty_malwares>
+<explorer_data_pages_malwares>page $1 of $2 ( $3 malwares )</explorer_data_pages_malwares>
+<explorer_data_pageempty_domains>0 domain name</explorer_data_pageempty_domains>
+<explorer_data_pages_domains>page $1 of $2 ( $3 domains name )</explorer_data_pages_domains>
+<explorer_data_pageempty_sites>0 website</explorer_data_pageempty_sites>
+<explorer_data_pages_sites>page $1 of $2 ( $3 websites )</explorer_data_pages_sites>
+<explorer_data_pageempty_ips>0 Ip address</explorer_data_pageempty_ips>
+<explorer_data_pages_ips>page $1 of $2 ( $3 IP addresses )</explorer_data_pages_ips>
+<explorer_data_nodata>No data has been found.</explorer_data_nodata>
+<explorer_data_domains_data_name>Domains name</explorer_data_domains_data_name>
+<explorer_data_domains_data_firstoccurence>First times</explorer_data_domains_data_firstoccurence>
+<explorer_data_domains_data_lastoccurence>Last times</explorer_data_domains_data_lastoccurence>
+<explorer_data_sites_data_name>Sites</explorer_data_sites_data_name>
+<explorer_data_sites_data_domain>Domains name</explorer_data_sites_data_domain>
+<explorer_data_sites_data_category>Categories</explorer_data_sites_data_category>
+<explorer_data_sites_data_intranet>Intranet</explorer_data_sites_data_intranet>
+<explorer_data_sites_data_firstoccurence>First times</explorer_data_sites_data_firstoccurence>
+<explorer_data_sites_data_lastoccurence>Last times</explorer_data_sites_data_lastoccurence>
+<explorer_data_malwares_data_name>Malwares</explorer_data_malwares_data_name>
+<explorer_data_malwares_data_description>Descriptions</explorer_data_malwares_data_description>
+<explorer_data_malwares_data_type>Types</explorer_data_malwares_data_type>
+<explorer_data_malwares_data_occurences># occurences</explorer_data_malwares_data_occurences>
+<explorer_data_malwares_data_firstoccurence>First times</explorer_data_malwares_data_firstoccurence>
+<explorer_data_malwares_data_lastoccurence>Last times</explorer_data_malwares_data_lastoccurence>
+<explorer_data_malwares_data_assigndate>CME assigned</explorer_data_malwares_data_assigndate>
+<explorer_data_ips_data_fullname>IP full name</explorer_data_ips_data_fullname>
+<explorer_data_ips_data_category>Categories</explorer_data_ips_data_category>
+<explorer_data_ips_data_occurences># occurences</explorer_data_ips_data_occurences>
+<explorer_data_ips_data_creation>Creation date</explorer_data_ips_data_creation>
+<explorer_data_ips_data_lastseen>Last seen</explorer_data_ips_data_lastseen>
+
+<!-- Validation -->
+<explorer_validation_title>Validate changes</explorer_validation_title>
+<explorer_validation_text>Do you want to save the changes you made ?</explorer_validation_text>
+<explorer_validation_yes>Yes</explorer_validation_yes>
+<explorer_validation_no>No</explorer_validation_no>
+
+<!-- Error -->
+<explorer_error_title>Error</explorer_error_title>
+<explorer_error_ok>Ok</explorer_error_ok>
+<explorer_error_notify>Notify support</explorer_error_notify>
+
+<!-- Menu -->
+<explorer_menu_home>Home</explorer_menu_home>
+<explorer_menu_home_esis>ESIS home</explorer_menu_home_esis>
+<explorer_menu_home_title>Module selection</explorer_menu_home_title>
+<explorer_menu_logout>Logout</explorer_menu_logout>
+<explorer_menu_prefs>Prefs</explorer_menu_prefs>
+<explorer_menu_print>Print</explorer_menu_print>
+<explorer_menu_printselect_title>Print</explorer_menu_printselect_title>
+<explorer_menu_printselect_screen>screen datas</explorer_menu_printselect_screen>
+<explorer_menu_printselect_submit>OK</explorer_menu_printselect_submit>
+<explorer_menu_excel>Excel</explorer_menu_excel>
+<explorer_menu_msproject>MsProject</explorer_menu_msproject>
+<explorer_menu_mail>Mail</explorer_menu_mail>
+<explorer_menu_calendar>Calendar</explorer_menu_calendar>
+<explorer_menu_find>Find</explorer_menu_find>
+<explorer_menu_votes_my>my votes</explorer_menu_votes_my>
+<explorer_menu_votes_all>all votes</explorer_menu_votes_all>
+<explorer_menu_tasks_my>my tasks</explorer_menu_tasks_my>
+<explorer_menu_tasks_raci>RACI tasks</explorer_menu_tasks_raci>
+<explorer_menu_filter_my>MY</explorer_menu_filter_my>
+<explorer_menu_filter_raci>RACI</explorer_menu_filter_raci>
+<explorer_menu_filter_all>ALL</explorer_menu_filter_all>
+<explorer_menu_filter_interval_all>ever since</explorer_menu_filter_interval_all>
+<explorer_menu_filter_interval_twelvemonths>12 months</explorer_menu_filter_interval_twelvemonths>
+<explorer_menu_filter_interval_from>from</explorer_menu_filter_interval_from>
+<explorer_menu_filter_interval_submit>OK</explorer_menu_filter_interval_submit>
+<explorer_menu_filter_interval_title>Time period</explorer_menu_filter_interval_title>
+</entity>
+</esis>

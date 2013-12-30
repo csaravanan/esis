@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_admin_en.xml *** -->
+<entity name="admin" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<admin_validation_title>Validate changes</admin_validation_title>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<admin_navigation_companies>Companies</admin_navigation_companies>
+<admin_user_status>User status</admin_user_status>
+<admin_companies_title><![CDATA[Administration<br />Companies management]]></admin_companies_title><!-- html -->
+<admin_companies_datas_companies_name>Company name</admin_companies_datas_companies_name>
+<admin_companies_datas_companies_shortname>Short name</admin_companies_datas_companies_shortname>
+<admin_companies_datas_companies_database>Database URL</admin_companies_datas_companies_database>
+<admin_companies_datas_companies_users># users</admin_companies_datas_companies_users>
+<admin_companies_datas_companies_add>Add a new company</admin_companies_datas_companies_add>
+<admin_companies_datas_details>Company informations</admin_companies_datas_details>
+<admin_companies_datas_details_name>Company</admin_companies_datas_details_name>
+<admin_companies_datas_details_shortname>Short name</admin_companies_datas_details_shortname>
+<admin_companies_datas_details_connectionurl>Database URL</admin_companies_datas_details_connectionurl>
+<admin_companies_datas_details_username>Database user name</admin_companies_datas_details_username>
+<admin_companies_datas_details_passwordset>Database password set ?</admin_companies_datas_details_passwordset>
+<admin_companies_datas_details_logofile>Logo filename</admin_companies_datas_details_logofile>
+<admin_companies_datas_details_nbusers># users</admin_companies_datas_details_nbusers>
+<admin_companies_datas_users>Company users</admin_companies_datas_users>
+<admin_companies_datas_users_add>Update company users</admin_companies_datas_users_add>
+<admin_companies_datas_groups>Company departments</admin_companies_datas_groups>
+<admin_companies_datas_groups_add>Update company departments</admin_companies_datas_groups_add>
+<admin_company_add_title>New company</admin_company_add_title>
+<admin_company_update_title>View/Update a company</admin_company_update_title>
+<admin_company_name>Company name</admin_company_name>
+<admin_company_shortname>Short name</admin_company_shortname>
+<admin_company_databaseurl>Database URL</admin_company_databaseurl>
+<admin_company_databaseusername>Database user name</admin_company_databaseusername>
+<admin_company_databasepassword>Database password</admin_company_databasepassword>
+<admin_company_add>Create</admin_company_add>
+<admin_company_update>Update</admin_company_update>
+<admin_company_cancel>Cancel</admin_company_cancel>
+<admin_company_logo>Change logo</admin_company_logo>
+<admin_company_error_name>Choose a company name</admin_company_error_name>
+<admin_company_error_shortname>Choose a company short name</admin_company_error_shortname>
+<admin_company_error_databaseurl>A database URL must be set</admin_company_error_databaseurl>
+<admin_company_error_databaseusername>A database user name must be set</admin_company_error_databaseusername>
+<admin_company_error_databasepassword>A password must be set</admin_company_error_databasepassword>
+<admin_companylogo_title>Change the company logo file</admin_companylogo_title>
+<admin_companylogo_files>Logo files (*.JPEG,*.GIF,*.PNG,*.SWF)</admin_companylogo_files>
+<admin_companylogo_upload>Select the logo image file to upload</admin_companylogo_upload>
+<admin_companylogo_close>Close</admin_companylogo_close>
+<admin_companylogo_upload_uploading>Uploading file $1.</admin_companylogo_upload_uploading>
+<admin_companylogo_upload_finished>Upload of file $1 finished.</admin_companylogo_upload_finished>
+<admin_companylogo_upload_select>Attempting to upload file $1.</admin_companylogo_upload_select>
+<admin_companylogo_upload_maxsize>The file $1 has exceeded the authorized maximum size of $2 octets.</admin_companylogo_upload_maxsize>
+<admin_companylogo_upload_httperror>HTTP error $1 reached when uploading file $2.</admin_companylogo_upload_httperror>
+<admin_companylogo_upload_ioerror>Input/Output error when uploading file $1.</admin_companylogo_upload_ioerror>
+<admin_companylogo_upload_securityerror>Security error ($1) reached when uploading file $2.</admin_companylogo_upload_securityerror>
+<admin_probehistory_datas_history_jdbcurl>Url JDBC</admin_probehistory_datas_history_jdbcurl>
+<admin_probedetails_notify>Notify support</admin_probedetails_notify>
+<admin_validation_titlelocations>Unused departments locations</admin_validation_titlelocations>
+<admin_validation_text>Do you want to save the changes you made ?</admin_validation_text>
+<admin_moduleprefs_display>Display prefs</admin_moduleprefs_display>
+<admin_moduleprefsdisplay_title>Module display preferences</admin_moduleprefsdisplay_title>
+<admin_moduleprefsdisplay_newvalue>New value</admin_moduleprefsdisplay_newvalue>
+<admin_moduleprefsdisplay_edit>Edit</admin_moduleprefsdisplay_edit>
+<admin_moduleprefsdisplay_datas_display_components>Component</admin_moduleprefsdisplay_datas_display_components>
+<admin_moduleprefsdisplay_datas_display_parameters>Parameter</admin_moduleprefsdisplay_datas_display_parameters>
+<admin_moduleprefsdisplay_datas_display_values>Current value</admin_moduleprefsdisplay_datas_display_values>
+<admin_moduleprefsdisplay_datas_display_nodisplay>No display preferences available.</admin_moduleprefsdisplay_datas_display_nodisplay>
+<admin_moduleprefsdisplay_datas_description>Preference description</admin_moduleprefsdisplay_datas_description>
+<admin_group_domains>Domains</admin_group_domains>
+<admin_location_domains>Domains</admin_location_domains>
+<admin_businesszone_domains>Domains</admin_businesszone_domains>
+<admin_domains_department>Departement domains</admin_domains_department>
+<admin_domains_businesszone>Business zone domains</admin_domains_businesszone>
+<admin_domains_location>Location domains</admin_domains_location>
+<admin_domains_datas_domains>Domains</admin_domains_datas_domains>
+<admin_domains_datas_domains_add>Add a new domain</admin_domains_datas_domains_add>
+<admin_domains_add_text>Add a domain</admin_domains_add_text>
+<admin_domains_add_title>Domain</admin_domains_add_title>
+<admin_domains_add>Add</admin_domains_add>
+<admin_domains_cancel>Cancel</admin_domains_cancel>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<admin_moduledetails_description>Description</admin_moduledetails_description>
+</removed>
+
+</entity>
+</esis>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_audits_en.xml *** -->
+<entity name="audits" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<!-- Errors texts --> 
+<audit_errors_wsnotexist_text>The webservice '$1' doesn't exist. Please contact your administrator.</audit_errors_wsnotexist_text><!-- html -->
+
+<!-- Audits -->
+<audit_audits_pages>page $1 of $2 ( $3 audits )</audit_audits_pages>
+
+<!-- Reports -->
+<audit_reports_pages>page $1 of $2 ( $3 reports )</audit_reports_pages>
+
+<!-- Recommendations -->
+<audit_recommendations_pages>page $1 of $2 ( $3 recommendations )</audit_recommendations_pages>
+
+<!-- Actions -->
+<audit_actions_pages>page $1 of $2 ( $3 actions )</audit_actions_pages>
+
+<!-- Reports Management -->
+<audit_reportsmanagement_pages>page $1 of $2 ( $3 reports )</audit_reportsmanagement_pages>
+
+<!-- Racis -->
+<audit_racis_pages>page $1 of $2 ( $3 items )</audit_racis_pages>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<!-- Audit PieChart -->
+<audit_auditpiechart_na>N/A</audit_auditpiechart_na>
+
+<!-- Interview -->
+<audit_interview_object>interview with $1</audit_interview_object>
+
+<!-- Recommendation -->
+<audit_recommendation_auditor_type>Type</audit_recommendation_auditor_type>
+<audit_recommendation_auditor_verification>Verification</audit_recommendation_auditor_verification>
+
+<!-- Errors texts -->
+<audit_errors_concurrency_title>Concurrent access error</audit_errors_concurrency_title>
+<audit_errors_concurrency_text><![CDATA[Operation refused: you're not allowed to finalize this operation because the selected object has been updated by another user.<br />Refresh the principal screen to update the selected object before start again the operation.]]></audit_errors_concurrency_text>
+
+<!-- Error -->
+<audit_error_concurrency_title>Concurrent access on item</audit_error_concurrency_title>
+<audit_error_concurrency_text><![CDATA[The item '$1' has been already updated by an other user.<br />Click on the Refresh button to update it.<br />You'll have to relaunch your operation after that.]]></audit_error_concurrency_text>
+<audit_error_refresh>Refresh</audit_error_refresh>
+
+<!-- Search -->
+<!-- title -->
+<audit_search_title>Audits search</audit_search_title>
+<audit_search_find>Find</audit_search_find>
+<!-- first parameters -->
+<audit_search_audits>Audits</audit_search_audits>
+<audit_search_reports>Reports</audit_search_reports>
+<audit_search_recommendations>Recommendations</audit_search_recommendations>
+<audit_search_actions>Actions</audit_search_actions>
+<!-- audits -->
+<audit_search_audits_confidentiality>Confidentiality</audit_search_audits_confidentiality>
+<!--
+<audit_search_audits_confidentiality_company_private>Company private</audit_search_audits_confidentiality_company_private>
+<audit_search_audits_confidentiality_sponsor_only>Sponsor only</audit_search_audits_confidentiality_sponsor_only>
+<audit_search_audits_confidentiality_confidential>Confidential</audit_search_audits_confidentiality_confidential>
+<audit_search_audits_confidentiality_internal>Internal</audit_search_audits_confidentiality_internal>
+-->
+<audit_search_audits_status>Status</audit_search_audits_status>
+<!--
+<audit_search_audits_status_closed>Closed</audit_search_audits_status_closed>
+<audit_search_audits_status_remediating>Remediating</audit_search_audits_status_remediating>
+<audit_search_audits_status_final_report>Final report</audit_search_audits_status_final_report>
+<audit_search_audits_status_draft_report>Draft report</audit_search_audits_status_draft_report>
+<audit_search_audits_status_interviews>Interviews</audit_search_audits_status_interviews>
+<audit_search_audits_status_contracting>Contracting</audit_search_audits_status_contracting>
+<audit_search_audits_status_planning>Planning</audit_search_audits_status_planning>
+-->
+<audit_search_audits_topic>Topic</audit_search_audits_topic>
+<!--
+<audit_search_audits_topic_other>Other</audit_search_audits_topic_other>
+<audit_search_audits_topic_busines>Business</audit_search_audits_topic_busines>
+<audit_search_audits_topic_applications>Applications</audit_search_audits_topic_applications>
+<audit_search_audits_topic_access>Access</audit_search_audits_topic_access>
+<audit_search_audits_topic_system_security>System security</audit_search_audits_topic_system_security>
+<audit_search_audits_topic_physical_security>Physical security</audit_search_audits_topic_physical_security>
+<audit_search_audits_topic_network_security>Network security</audit_search_audits_topic_network_security>
+-->
+<audit_search_audits_origin>Origin</audit_search_audits_origin>
+<!--
+<audit_search_audits_origin_self_audit>Self audit</audit_search_audits_origin_self_audit>
+<audit_search_audits_origin_regulators>Regulators</audit_search_audits_origin_regulators>
+<audit_search_audits_origin_external_audit>External audit</audit_search_audits_origin_external_audit>
+<audit_search_audits_origin_internal_audit>Internal audit</audit_search_audits_origin_internal_audit>
+-->
+<!-- reports -->
+<!--
+<audit_search_reports_topic>Topic</audit_search_reports_topic>
+<audit_search_reports_origin>Origin</audit_search_reports_origin>
+-->
+<!-- recommendations -->
+<audit_search_recommendations_severity>Severity</audit_search_recommendations_severity>
+<!--
+<audit_search_recommendations_severity_high>High</audit_search_recommendations_severity_high>
+<audit_search_recommendations_severity_medium>Medium</audit_search_recommendations_severity_medium>
+<audit_search_recommendations_severity_low>Low</audit_search_recommendations_severity_low>
+-->
+<audit_search_recommendations_priority>Priority</audit_search_recommendations_priority>
+<!--
+<audit_search_recommendations_priority_high>High</audit_search_recommendations_priority_high>
+<audit_search_recommendations_priority_medium>Medium</audit_search_recommendations_priority_medium>
+<audit_search_recommendations_priority_low>Low</audit_search_recommendations_priority_low>
+-->
+<audit_search_recommendations_topic1>Primary topic</audit_search_recommendations_topic1>
+<audit_search_recommendations_topic2>Secondary topic</audit_search_recommendations_topic2>
+<!--
+<audit_search_recommendations_topic_awareness>Awareness</audit_search_recomendations_topic_awareness>
+<audit_search_recommendations_topic_monitoring>Monitoring</audit_search_recomendations_topic_monitoring>
+<audit_search_recommendations_topic_global>Global</audit_search_recomendations_topic_global>
+<audit_search_recommendations_topic_management>Management</audit_search_recomendations_topic_management>
+<audit_search_recommendations_topic_premises>Premises</audit_search_recomendations_topic_premises>
+<audit_search_recommendations_topic_network>Network</audit_search_recomendations_topic_network>
+<audit_search_recommendations_topic_access>Access</audit_search_recomendations_topic_access>
+-->
+<audit_search_recommendations_type>Type</audit_search_recommendations_type>
+<!--
+<audit_search_recommendations_type_na>N/A</audit_search_recommendations_type_na>
+<audit_search_recommendations_type_app_comment>Application Comment</audit_search_recommendations_type_app_comment>
+<audit_search_recommendations_type_doc_comment>Documentation Comment</audit_search_recommendations_type_doc_comment>
+<audit_search_recommendations_type_no_comp_min_app>Non compliance of minor application</audit_search_recommendations_type_no_comp_min_app>
+<audit_search_recommendations_type_no_comp_min_doc>Non compliance of minor documentation</audit_search_recommendations_type_no_comp_min_doc>
+<audit_search_recommendations_type_maj_app>Non compliance of major application</audit_search_recommendations_type_maj_app>
+<audit_search_recommendations_type_maj_doc>Non compliance of major documentation</audit_search_recommendations_type_maj_doc>
+-->
+<audit_search_recommendations_verification>Verification</audit_search_recommendations_verification>
+<!--
+<audit_search_recommendations_verification_na>N/A</audit_search_recommendations_verification_na>
+<audit_search_recommendations_verification_no_verif>No verification</audit_search_recommendations_verification_no_verif>
+<audit_search_recommendations_verification_doc_based>Document based</audit_search_recommendations_verification_doc_based>
+<audit_search_recommendations_verification_in_situ>In situ</audit_search_recommendations_verification_in_situ>
+-->
+<audit_search_recommendations_status>Status</audit_search_recommendations_status>
+<!--
+<audit_search_recommendations_status_closed_duplicate>Closed duplicate</audit_search_recommendations_status_closed_duplicate>
+<audit_search_recommendations_status_closed>Closed</audit_search_recommendations_status_closed>
+<audit_search_recommendations_status_opened>Opened</audit_search_recommendations_status_opened>
+<audit_search_recommendations_status_risk_accepted>Risk accepted</audit_search_recommendations_status_risk_accepted>
+-->
+<!-- actions -->
+<audit_search_actions_status>Status</audit_search_actions_status>
+<!--
+<audit_search_actions_status_completed>Completed</audit_search_actions_status_completed>
+<audit_search_actions_status_cancelled>Cancelled</audit_search_actions_status_cancelled>
+<audit_search_actions_status_halted>Halted</audit_search_actions_status_halted>
+<audit_search_actions_status_in_progress>In progress</audit_search_actions_status_in_progress>
+<audit_search_actions_status_planning>Planning</audit_search_actions_status_planning>
+-->
+</added>
+<!-- ******************** REMOVED ******************** -->
+</entity>
+</esis>

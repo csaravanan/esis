@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_asset_en.xml *** -->
+<entity name="asset" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<asset_menu_calendar>Calendar</asset_menu_calendar>
+<asset_menu_tasks_my>my tasks</asset_menu_tasks_my>
+<asset_menu_tasks_raci>RACI tasks</asset_menu_tasks_raci>
+<asset_raci_update_user>Current stakeholder</asset_raci_update_user>
+<asset_menu_filter_interval_all>ever since</asset_menu_filter_interval_all>
+<asset_menu_filter_interval_twelvemonths>12 months</asset_menu_filter_interval_twelvemonths>
+<asset_menu_filter_interval_from>from</asset_menu_filter_interval_from>
+<asset_menu_filter_interval_title>Time period</asset_menu_filter_interval_title>
+<asset_menu_filter_interval_submit>OK</asset_menu_filter_interval_submit>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<asset_menu_filter_intervalraci_all>ever since</asset_menu_filter_intervalraci_all>
+<asset_menu_filter_intervalraci_twelvemonths>12 months</asset_menu_filter_intervalraci_twelvemonths>
+<asset_menu_filter_intervalraci_from>from</asset_menu_filter_intervalraci_from>
+<asset_menu_filter_intervalraci_title>Time period</asset_menu_filter_intervalraci_title>
+<asset_menu_filter_intervalraci_submit>OK</asset_menu_filter_intervalraci_submit>
+</removed>
+
+</entity>
+</esis>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_audits_fr.xml *** -->
+<entity name="audits" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<audit_auditupdate_interviews>Entrevues</audit_auditupdate_interviews>
+<audit_interviews_title>Liste des entrevues</audit_interviews_title>
+<audit_interviews_datas_add>Ajouter une entrevue</audit_interviews_datas_add>
+<audit_interview_object>entrevue avec $1</audit_interview_object>
+<audit_reportpiechart_actionsstatus>STATUTS ACT.</audit_reportpiechart_actionsstatus>
+<audit_recommendation_auditor_compliancetopic>Sujet conformité</audit_recommendation_auditor_compliancetopic>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<audit_auditdocuments_auditreference>Référence audit</audit_auditdocuments_auditreference>
+<audit_email_failure_email>Avant l'envoi, sélectionnez un utilisateur</audit_email_failure_email>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<audit_auditdocuments_audit_reference>Référence audit</audit_auditdocuments_audit_reference>
+</removed>
+
+</entity>
+</esis>

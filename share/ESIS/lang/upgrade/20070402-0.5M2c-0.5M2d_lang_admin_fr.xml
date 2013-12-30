@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_admin_fr.xml *** -->
+<entity name="admin" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<admin_users_datas_groups_users># membres</admin_users_datas_groups_users>
+<admin_groups_datas_groups_users># membres</admin_groups_datas_groups_users>
+<admin_groups_datas_details_users># membres</admin_groups_datas_details_users>
+<admin_modules_datas_modules_users># parties prenantes</admin_modules_datas_modules_users>
+<admin_modules_datas_details_users># parties prenantes</admin_modules_datas_details_users>
+<admin_racis_datas_users>Parties prenantes</admin_racis_datas_users>
+<admin_racis_datas_raci_users>Parties prenantes</admin_racis_datas_raci_users>
+<admin_usergroups_datas_membership>Membre de</admin_usergroups_datas_membership>
+<admin_groupusers_title>Membres du groupe : </admin_groupusers_title>
+<admin_moduledetails_nbusers># parties prenantes</admin_moduledetails_nbusers>
+<admin_moduleraci_datas_racis_users>Parties prenantes</admin_moduleraci_datas_racis_users>
+<admin_moduleraci_datas_racis_add>Ajouter une partie prenante</admin_moduleraci_datas_racis_add>
+<admin_moduleraci_add_title>Ajouter une partie prenante</admin_moduleraci_add_title>
+<admin_moduleraci_add_datas_users>Parties prenantes</admin_moduleraci_add_datas_users>
+<admin_moduleraci_add_datas_nousers>Aucune partie prenante disponible.</admin_moduleraci_add_datas_nousers>
+<admin_moduleraci_update_error>Une partie prenante doit être sélectionnée</admin_moduleraci_update_error>
+<admin_modules_datas_details_modulename>Nom</admin_modules_datas_details_modulename>
+<admin_modules_datas_modules_modulename>Nom</admin_modules_datas_modules_modulename>
+<admin_usergroups_title>Groupes de l'utilisateur $1</admin_usergroups_title>
+<admin_groupusers_title>Membres du groupe $1</admin_groupusers_title>
+<admin_userexpertises_title>Expertises de l'utilisateur $1</admin_userexpertises_title>
+<admin_groupexpertises_title>Expertises du groupe $1</admin_groupexpertises_title>
+<admin_moduleprefs_title>Préférences du module: $1</admin_moduleprefs_title>
+<admin_moduleraci_title>RACI du module: $1</admin_moduleraci_title>
+<admin_moduleraci_update_title>RACI pour $1</admin_moduleraci_update_title>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<admin_navigation_locations>Localisation</admin_navigation_locations>
+<admin_navigation_businesszones>Zones géo.</admin_navigation_businesszones>
+<admin_users_datas_details_firstlogin>Première connexion</admin_users_datas_details_firstlogin>
+<admin_users_datas_details_lastlogin>Dernière connexion</admin_users_datas_details_lastlogin>
+<admin_users_datas_details_failedlogin>Dernier échec de connexion</admin_users_datas_details_failedlogin>
+<admin_users_datas_details_lastmodification>Dernière modification</admin_users_datas_details_lastmodification>
+<admin_users_datas_details_changepassword>Dernier changement de mot de passe</admin_users_datas_details_changepassword>
+<admin_user_location>Localisation</admin_user_location>
+<admin_user_nolocation>Pas de localisation</admin_user_nolocation>
+<admin_groups_datas_details_locations>Emplacement(s)</admin_groups_datas_details_locations>
+<admin_locations_title><![CDATA[Administration<br />Management des localisations]]></admin_locations_title><!-- html -->
+<admin_locations_disabled>Désactivées</admin_locations_disabled>
+<admin_locations_datas_locations_name>Localisation</admin_locations_datas_locations_name>
+<admin_locations_datas_locations_company>Entreprise</admin_locations_datas_locations_company>
+<admin_locations_datas_locations_country>Pays</admin_locations_datas_locations_country>
+<admin_locations_datas_locations_city>Ville</admin_locations_datas_locations_city>
+<admin_locations_datas_locations_site>Site</admin_locations_datas_locations_site>
+<admin_locations_datas_locations_add>Ajouter une localisation</admin_locations_datas_locations_add>
+<admin_locations_datas_details>Détails de la localisation</admin_locations_datas_details>
+<admin_locations_datas_details_name>Localisation</admin_locations_datas_details_name>
+<admin_locations_datas_details_company>Entreprise</admin_locations_datas_details_company>
+<admin_locations_datas_details_building>Bâtiment</admin_locations_datas_details_building>
+<admin_locations_datas_details_site>Site</admin_locations_datas_details_site>
+<admin_locations_datas_details_zipcode>Code postal</admin_locations_datas_details_zipcode>
+<admin_locations_datas_details_city>Ville</admin_locations_datas_details_city>
+<admin_locations_datas_details_country>Pays</admin_locations_datas_details_country>
+<admin_locations_datas_details_region>Région</admin_locations_datas_details_region>
+<admin_locations_datas_details_timezone>Fuseau horaire</admin_locations_datas_details_timezone>
+<admin_locations_datas_details_groups># départements</admin_locations_datas_details_groups>
+<admin_locations_datas_details_users># utilisateurs</admin_locations_datas_details_users>
+<admin_locations_datas_details_networks>Réseaux</admin_locations_datas_details_networks>
+<admin_locations_datas_details_disabled>Désactivé</admin_locations_datas_details_disabled>
+<admin_locations_datas_groups_group>Départements</admin_locations_datas_groups_group>
+<admin_locations_datas_groups_users># membres</admin_locations_datas_groups_users>
+<admin_locations_datas_groups_add>Editer la localisation des dép.</admin_locations_datas_groups_add>
+<admin_locations_datas_users_name>Utilisateurs</admin_locations_datas_users_name>
+<admin_locations_datas_users_add>Editer la localisation des util.</admin_locations_datas_users_add>
+<!-- Location -->
+<admin_location_add_title>Nouvelle localisation</admin_location_add_title>
+<admin_location_update_title>Voir/Mettre à jour une localisation</admin_location_update_title>
+<admin_location_location>Localisation</admin_location_location>
+<admin_location_building>Bâtiment</admin_location_building>
+<admin_location_site>Site</admin_location_site>
+<admin_location_zipcode>Code postal</admin_location_zipcode>
+<admin_location_city>Ville</admin_location_city>
+<admin_location_timezone>Fuseau horaire</admin_location_timezone>
+<admin_location_company>Entreprise</admin_location_company>
+<admin_location_disabled>Désactivé</admin_location_disabled>
+<admin_location_add>Créer</admin_location_add>
+<admin_location_update>Mettre à jour</admin_location_update>
+<admin_location_cancel>Annuler</admin_location_cancel>
+<admin_location_notimezone>pas de fuseau horaire</admin_location_notimezone>
+<admin_location_continents>Continents</admin_location_continents>
+<admin_location_subcontinents>Sous-continents</admin_location_subcontinents>
+<admin_location_countries>Pays</admin_location_countries>
+<admin_location_regions>Régions</admin_location_regions>
+<admin_location_regions_empty>pas de région.</admin_location_regions_empty>
+<admin_location_error_location>Saisissez un nom de localisation</admin_location_error_location>
+<admin_location_error_country>Sélectionnez un pays</admin_location_error_country>
+<admin_location_networks>Réseaux</admin_location_networks>
+<!-- Location Groups and Users -->
+<admin_locationgroups_title>Départements de la localisation $1</admin_locationgroups_title>
+<admin_locationgroups_remove>tout enlever</admin_locationgroups_remove>
+<admin_locationgroups_datas_groups>Départements</admin_locationgroups_datas_groups>
+<admin_locationgroups_datas_membership>Départements de la localisation</admin_locationgroups_datas_membership>
+<admin_locationusers_title>Utilisateurs de la localisation $1</admin_locationusers_title>
+<admin_locationusers_remove>tout enlever</admin_locationusers_remove>
+<admin_locationusers_datas_users>Utilisateurs</admin_locationusers_datas_users>
+<admin_locationusers_datas_membership>Utilisateurs de la localisation</admin_locationusers_datas_membership>
+<!-- Location Networks -->
+<admin_locationnetworks_title>Réseaux de la localisation</admin_locationnetworks_title>
+<admin_locationnetworks_addnetworktitle>Ajouter un réseau</admin_locationnetworks_addnetworktitle>
+<admin_locationnetworks_updatenetworktitle>Mettre à jour le réseau</admin_locationnetworks_updatenetworktitle>
+<admin_locationnetworks_updatenetwork>Mettre à jour le réseau</admin_locationnetworks_updatenetwork>
+<admin_locationnetworks_addnetwork>Ajouter un réseau</admin_locationnetworks_addnetwork>
+<admin_locationnetworks_add>Ajouter</admin_locationnetworks_add>
+<admin_locationnetworks_update>Mettre à jour</admin_locationnetworks_update>
+<admin_locationnetworks_cancel>Annuler</admin_locationnetworks_cancel>
+<admin_locationnetworks_datas_networks>Réseaux/Sous-réseaux</admin_locationnetworks_datas_networks>
+<admin_locationnetworks_datas_networks_add>Ajouter un réseau/sous-réseau</admin_locationnetworks_datas_networks_add>
+<!-- Business Zones -->
+<admin_businesszones_title><![CDATA[Administration<br />Management des zones de travail]]></admin_businesszones_title><!-- html -->
+<admin_businesszones_locations>Localisations</admin_businesszones_locations>
+<admin_businesszones_zones>Zones géo.</admin_businesszones_zones>
+<admin_businesszones_parentzones>Zones parentes</admin_businesszones_parentzones>
+<admin_businesszones_groups>Départements</admin_businesszones_groups>
+<admin_businesszones_users>Utilisateurs</admin_businesszones_users>
+<admin_businesszones_countries>Pays</admin_businesszones_countries>
+<admin_businesszones_disabled>Désactivées</admin_businesszones_disabled>
+<admin_businesszones_datas_groups>Départements</admin_businesszones_datas_groups>
+<admin_businesszones_datas_users>Utilisateurs</admin_businesszones_datas_users>
+<admin_businesszones_datas_countries>Pays</admin_businesszones_datas_countries>
+<admin_businesszones_datas_parentzones>Zones parentes</admin_businesszones_datas_parentzones>
+<admin_businesszones_datas_businesszones_name>Nom</admin_businesszones_datas_businesszones_name>
+<admin_businesszones_datas_businesszones_continents>Continents</admin_businesszones_datas_businesszones_continents>
+<admin_businesszones_datas_businesszones_subcontinents>Sous-continents</admin_businesszones_datas_businesszones_subcontinents>
+<admin_businesszones_datas_businesszones_countries># pays</admin_businesszones_datas_businesszones_countries>
+<admin_businesszones_datas_businesszones_locations># localisations</admin_businesszones_datas_businesszones_locations>
+<admin_businesszones_datas_businesszones_add>Ajouter une zone de travail</admin_businesszones_datas_businesszones_add>
+<admin_businesszones_datas_locations_name>Localisations</admin_businesszones_datas_locations_name>
+<admin_businesszones_datas_locations_country>Pays</admin_businesszones_datas_locations_country>
+<admin_businesszones_datas_locations_add>Associer des localisations</admin_businesszones_datas_locations_add>
+<admin_businesszones_datas_zones_name>Zones incluses</admin_businesszones_datas_zones_name>
+<admin_businesszones_datas_zones_add>Inclure des zones de travail</admin_businesszones_datas_zones_add>
+<admin_businesszones_error_locationnotremovable_title>Localisation non supprimable</admin_businesszones_error_locationnotremovable_title>
+<admin_businesszones_error_locationnotremovable_text>La localisation $1 ne peut pas être supprimée de la zone de travail car elle est liée à une sous-zone.</admin_businesszones_error_locationnotremovable_text>
+<admin_businesszones_error_zonenotremovable_title>Zone de travail non supprimable</admin_businesszones_error_zonenotremovable_title>
+<admin_businesszones_error_zonenotremovable_text>La zone de travail $1 ne peut pas être supprimée de la zone de travail principale car elle est liée à une sous-zone.</admin_businesszones_error_zonenotremovable_text>
+<!-- Business Zone -->
+<admin_businesszone_add_title>Nouvelle zone de travail</admin_businesszone_add_title>
+<admin_businesszone_update_title>Voir/Mettre à jour une zone de travail</admin_businesszone_update_title>
+<admin_businesszone_name>Zone de travail</admin_businesszone_name>
+<admin_businesszone_disabled>Zone désactivée</admin_businesszone_disabled>
+<admin_businesszone_add>Créer</admin_businesszone_add>
+<admin_businesszone_update>Mettre à jour</admin_businesszone_update>
+<admin_businesszone_cancel>Annuler</admin_businesszone_cancel>
+<admin_businesszone_error_name>Veuillez saisir le nom de la zone</admin_businesszone_error_name>
+<!-- Business Zone Locations -->
+<admin_businesszonelocations_title>Localisations de la zone de travail $1</admin_businesszonelocations_title>
+<admin_businesszonelocations_datas_locations>Localisations</admin_businesszonelocations_datas_locations>
+<admin_businesszonelocations_datas_membership>Localisations incluses</admin_businesszonelocations_datas_membership>
+<admin_businesszonelocations_remove>enlever toutes les localisations dépendantes</admin_businesszonelocations_remove>
+<admin_businesszonelocations_error_notremovable>La localisation sélectionnée ne peut pas être suprimée car elle ne dépend pas de la zone de travail actuelle.</admin_businesszonelocations_error_notremovable>
+<!-- Business Zone Zones -->
+<admin_businesszonezones_title>Zones de la zone de travail $1</admin_businesszonezones_title>
+<admin_businesszonezones_datas_zones>Zones de travail</admin_businesszonezones_datas_zones>
+<admin_businesszonezones_datas_membership>Zones de travail incluses</admin_businesszonezones_datas_membership>
+<admin_businesszonezones_remove>enlever toutes les zones dépendantes</admin_businesszonezones_remove>
+<admin_businesszonezones_error_notremovable>La zone sélectionnée ne peut pas être suprimée car elle ne dépend pas de la zone de travail actuelle.</admin_businesszonezones_error_notremovable>
+<!-- Module RACI history -->
+<admin_moduleraci_history>Historique</admin_moduleraci_history>
+<admin_moduleracihistory_title>Historique du RACI</admin_moduleracihistory_title>
+<admin_moduleracihistory_close>Fermer</admin_moduleracihistory_close>
+<admin_moduleracihistory_matrix_title>RACI actuel</admin_moduleracihistory_matrix_title>
+<admin_moduleracihistory_datas_user>Partie prenante</admin_moduleracihistory_datas_user>
+<admin_moduleracihistory_datas_modifier>Modifié par</admin_moduleracihistory_datas_modifier>
+<admin_moduleracihistory_datas_modificationdate>Date modification</admin_moduleracihistory_datas_modificationdate>
+<admin_moduleracihistory_pageempty>0 modification</admin_moduleracihistory_pageempty>
+<admin_moduleracihistory_pages>page $1 sur $2 ( $3 modifications )</admin_moduleracihistory_pages>
+<!-- Validation -->
+<admin_validation_title>Localisations de départements non utilisées</admin_validation_title>
+<admin_validation_userlocation_text>Supprimer cet utilisateur de cette localisation peut provoquer l'apparition de départements dont certaines localisations ne correspondent plus à aucun de leur membres. Voulez-vous supprimer ces localisations inutilisées des différents départements ?</admin_validation_userlocation_text>
+<admin_validation_userslocation_text>Supprimer tous les utilisateurs de cette localisation peut provoquer l'apparition de départements dont certaines localisations ne correspondent plus à aucun de leur membres. Voulez-vous supprimer ces localisations inutilisées des différents départements ?</admin_validation_userslocation_text>
+<admin_validation_usergroup_text>Supprimer la relation entre cet utilisateur et ce département peut provoquer l'appartition de localisations ne correspondent plus à aucun des membres du département. Voulez-vous supprimer ces localisations inutilisées du département ?</admin_validation_usergroup_text>
+<admin_validation_usersgroup_text>Supprimer tous les utilisateurs de ce département peut provoquer l'appartition de localisations ne correspondent plus à aucun des membres du département. Voulez-vous supprimer ces localisations inutilisées du département ?</admin_validation_usersgroup_text>
+<admin_validation_groupsuser_text>Supprimer l'appartenance de cet utilisateur de tous les départements peut provoquer l'appartition de localisations ne correspondent plus à aucun des membres des différents départements. Voulez-vous supprimer ces localisations inutilisées des différents départements ?</admin_validation_groupsuser_text>
+<admin_validation_user_text>Supprimer cet utilisateur peut provoquer l'appartition de départements dont certaines localisations ne correspondent plus à aucun de leurs membres. Voulez-vous supprimer ces localisations inutilisées des différents départements ?</admin_validation_user_text>
+<admin_validation_userupdate_text>Mettre à jour cet utilisateur peut provoquer l'appartition de départements dont certaines localisations ne correspondent plus à aucun de leurs membres. Voulez-vous supprimer ces localisations inutilisées des différents départements ?</admin_validation_userupdate_text>
+<admin_validation_yes>Oui</admin_validation_yes>
+<admin_validation_no>Non</admin_validation_no>
+<!-- Menu -->
+<admin_menu_filter_intervalraci_all>tout l'historique</admin_menu_filter_intervalraci_all>
+<admin_menu_filter_intervalraci_twelvemonths>sur 12 mois</admin_menu_filter_intervalraci_twelvemonths>
+<admin_menu_filter_intervalraci_from>depuis le</admin_menu_filter_intervalraci_from>
+<admin_menu_filter_intervalraci_title>Période de temps</admin_menu_filter_intervalraci_title>
+<admin_menu_filter_intervalraci_submit>OK</admin_menu_filter_intervalraci_submit>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+</removed>
+
+</entity>
+</esis>

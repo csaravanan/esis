@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_esis_fr.xml *** -->
+<entity name="esis" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<esis_prefs_infos_username>Nom d'utilisateur</esis_prefs_infos_username>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<esis_default_yes>Oui</esis_default_yes>
+<esis_default_no>Non</esis_default_no>
+<esis_login_text><![CDATA[]]></esis_login_text><!-- html -->
+<esis_prefs_info>Mes infos</esis_prefs_info>
+<esis_prefs_about>A propos</esis_prefs_about>
+<esis_prefs_password>Mot de passe</esis_prefs_password>
+<esis_prefs_expertises>Expertises</esis_prefs_expertises>
+<esis_prefs_raci>RACI</esis_prefs_raci>
+<esis_prefs_password_validity>valide jusqu'au $1</esis_prefs_password_validity>
+<esis_prefs_password_infos_title>Complexité des mots de passe</esis_prefs_password_infos_title>
+<esis_prefs_password_infos_explanations>Un mot de passe doit faire au moins $1 caractères et répondre à au moins 3 règles:</esis_prefs_password_infos_explanations>
+<esis_prefs_password_infos_case1>- utiliser des miniscules</esis_prefs_password_infos_case1>
+<esis_prefs_password_infos_case2>- utiliser des majuscules</esis_prefs_password_infos_case2>
+<esis_prefs_password_infos_case3>- utiliser des nombres</esis_prefs_password_infos_case3>
+<esis_prefs_password_infos_case4>- utiliser des caractères spéciaux</esis_prefs_password_infos_case4>
+<esis_prefs_infos_passwordexpiration>Validité du mot de passe</esis_prefs_infos_passwordexpiration>
+<esis_prefs_infos_title>Mes informations utilisateur</esis_prefs_infos_title>
+<esis_prefs_infos_company>Entreprise</esis_prefs_infos_company>
+<esis_prefs_infos_location>Emplacement</esis_prefs_infos_location>
+<esis_prefs_infos_phone>Téléphone</esis_prefs_infos_phone>
+<esis_prefs_infos_administrator>Administrator</esis_prefs_infos_administrator>
+<esis_prefs_infos_lastmodification>Dernière modification</esis_prefs_infos_lastmodification>
+<esis_prefs_infos_changepassword>Dernier changement de mot de passe</esis_prefs_infos_changepassword>
+<esis_prefs_infos_creationdate>Date création</esis_prefs_infos_creationdate>
+<esis_menu_calendar>Calendrier</esis_menu_calendar>
+<esis_menu_tasks_my>mes tâches</esis_menu_tasks_my>
+<esis_menu_tasks_raci>RACI tâches</esis_menu_tasks_raci>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<esis_prefs_infos_date>Date création</esis_prefs_infos_date>
+</removed>
+
+</entity>
+</esis>

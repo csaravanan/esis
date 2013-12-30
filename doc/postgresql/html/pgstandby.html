@@ -1,0 +1,897 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>pg_standby</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 8.3.10 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Additional Supplied Modules"
+HREF="contrib.html"><LINK
+REL="PREVIOUS"
+TITLE="pgrowlocks"
+HREF="pgrowlocks.html"><LINK
+REL="NEXT"
+TITLE="pgstattuple"
+HREF="pgstattuple.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2010-03-12T04:15:17"></HEAD
+><BODY
+CLASS="SECT1"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="5"
+ALIGN="center"
+VALIGN="bottom"
+>PostgreSQL 8.3.10 Documentation</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="pgrowlocks.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="contrib.html"
+>Fast Backward</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+>Appendix F. Additional Supplied Modules</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="contrib.html"
+>Fast Forward</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="pgstattuple.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="PGSTANDBY"
+>F.23. pg_standby</A
+></H1
+><A
+NAME="AEN104780"
+></A
+><P
+>  <SPAN
+CLASS="APPLICATION"
+>pg_standby</SPAN
+> supports creation of a <SPAN
+CLASS="QUOTE"
+>"warm standby"</SPAN
+>
+  database server.  It is designed to be a production-ready program, as well
+  as a customizable template should you require specific modifications.
+ </P
+><P
+>  <SPAN
+CLASS="APPLICATION"
+>pg_standby</SPAN
+> is designed to be a waiting
+  <TT
+CLASS="LITERAL"
+>restore_command</TT
+>, which is needed to turn a standard
+  archive recovery into a warm standby operation.  Other
+  configuration is required as well, all of which is described in the main
+  server manual (see <A
+HREF="warm-standby.html"
+>Section 24.4</A
+>).
+ </P
+><P
+>  <SPAN
+CLASS="APPLICATION"
+>pg_standby</SPAN
+> features include:
+ </P
+><P
+></P
+><UL
+><LI
+><P
+>    Supports copy or link for restoring WAL files
+   </P
+></LI
+><LI
+><P
+>    Written in C, so very portable and easy to install
+   </P
+></LI
+><LI
+><P
+>    Easy-to-modify source code, with specifically designated
+    sections to modify for your own needs
+   </P
+></LI
+><LI
+><P
+>    Already tested on Linux and Windows
+   </P
+></LI
+></UL
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN104800"
+>F.23.1. Usage</A
+></H2
+><P
+>   To configure a standby
+   server to use <SPAN
+CLASS="APPLICATION"
+>pg_standby</SPAN
+>, put this into its
+   <TT
+CLASS="FILENAME"
+>recovery.conf</TT
+> configuration file:
+  </P
+><PRE
+CLASS="PROGRAMLISTING"
+>restore_command = 'pg_standby <TT
+CLASS="REPLACEABLE"
+><I
+>archiveDir</I
+></TT
+> %f %p %r'
+  </PRE
+><P
+>   where <TT
+CLASS="REPLACEABLE"
+><I
+>archiveDir</I
+></TT
+> is the directory from which WAL segment
+   files should be restored.
+  </P
+><P
+>   The full syntax of <SPAN
+CLASS="APPLICATION"
+>pg_standby</SPAN
+>'s command line is
+  </P
+><PRE
+CLASS="SYNOPSIS"
+>pg_standby [<SPAN
+CLASS="OPTIONAL"
+> <TT
+CLASS="REPLACEABLE"
+><I
+>option</I
+></TT
+> ... </SPAN
+>] <TT
+CLASS="REPLACEABLE"
+><I
+>archivelocation</I
+></TT
+> <TT
+CLASS="REPLACEABLE"
+><I
+>nextwalfile</I
+></TT
+> <TT
+CLASS="REPLACEABLE"
+><I
+>xlogfilepath</I
+></TT
+> [<SPAN
+CLASS="OPTIONAL"
+> <TT
+CLASS="REPLACEABLE"
+><I
+>restartwalfile</I
+></TT
+> </SPAN
+>]
+  </PRE
+><P
+>   When used within <TT
+CLASS="LITERAL"
+>restore_command</TT
+>, the <TT
+CLASS="LITERAL"
+>%f</TT
+> and
+   <TT
+CLASS="LITERAL"
+>%p</TT
+> macros should be specified for <TT
+CLASS="REPLACEABLE"
+><I
+>nextwalfile</I
+></TT
+>
+   and <TT
+CLASS="REPLACEABLE"
+><I
+>xlogfilepath</I
+></TT
+> respectively, to provide the actual file
+   and path required for the restore.
+  </P
+><P
+>   If <TT
+CLASS="REPLACEABLE"
+><I
+>restartwalfile</I
+></TT
+> is specified, normally by using the
+   <TT
+CLASS="LITERAL"
+>%r</TT
+> macro, then all WAL files logically preceding this
+   file will be removed from <TT
+CLASS="REPLACEABLE"
+><I
+>archivelocation</I
+></TT
+>. This minimizes
+   the number of files that need to be retained, while preserving
+   crash-restart capability.  Use of this parameter is appropriate if the
+   <TT
+CLASS="REPLACEABLE"
+><I
+>archivelocation</I
+></TT
+> is a transient staging area for this
+   particular standby server, but <SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>not</I
+></SPAN
+> when the
+   <TT
+CLASS="REPLACEABLE"
+><I
+>archivelocation</I
+></TT
+> is intended as a long-term WAL archive area.
+  </P
+><P
+>   <SPAN
+CLASS="APPLICATION"
+>pg_standby</SPAN
+> assumes that
+   <TT
+CLASS="REPLACEABLE"
+><I
+>archivelocation</I
+></TT
+> is a directory readable by the
+   server-owning user.  If <TT
+CLASS="REPLACEABLE"
+><I
+>restartwalfile</I
+></TT
+> (or <TT
+CLASS="LITERAL"
+>-k</TT
+>)
+   is specified,
+   the <TT
+CLASS="REPLACEABLE"
+><I
+>archivelocation</I
+></TT
+> directory must be writable too.
+  </P
+><DIV
+CLASS="TABLE"
+><A
+NAME="AEN104838"
+></A
+><P
+><B
+>Table F-26. <SPAN
+CLASS="APPLICATION"
+>pg_standby</SPAN
+> options</B
+></P
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><COL><COL><COL><THEAD
+><TR
+><TH
+>Option</TH
+><TH
+>Default</TH
+><TH
+>Description</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+><TT
+CLASS="LITERAL"
+>-c</TT
+></TD
+><TD
+>yes</TD
+><TD
+>       Use <TT
+CLASS="LITERAL"
+>cp</TT
+> or <TT
+CLASS="LITERAL"
+>copy</TT
+> command to restore WAL files
+       from archive.
+      </TD
+></TR
+><TR
+><TD
+><TT
+CLASS="LITERAL"
+>-d</TT
+></TD
+><TD
+>no</TD
+><TD
+>Print lots of debug logging output on <TT
+CLASS="FILENAME"
+>stderr</TT
+>.</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="LITERAL"
+>-k</TT
+> <TT
+CLASS="REPLACEABLE"
+><I
+>numfiles</I
+></TT
+></TD
+><TD
+>0</TD
+><TD
+>       Remove files from <TT
+CLASS="REPLACEABLE"
+><I
+>archivelocation</I
+></TT
+> so that
+       no more than this many WAL files before the current one are kept in the
+       archive.  Zero (the default) means not to remove any files from
+       <TT
+CLASS="REPLACEABLE"
+><I
+>archivelocation</I
+></TT
+>.
+       This parameter will be silently ignored if
+       <TT
+CLASS="REPLACEABLE"
+><I
+>restartwalfile</I
+></TT
+> is specified, since that
+       specification method is more accurate in determining the correct
+       archive cut-off point.
+       Use of this parameter is <SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>deprecated</I
+></SPAN
+> as of
+       <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> 8.3; it is safer and more efficient to
+       specify a <TT
+CLASS="REPLACEABLE"
+><I
+>restartwalfile</I
+></TT
+> parameter.  A too
+       small setting could result in removal of files that are still needed
+       for a restart of the standby server, while a too large setting wastes
+       archive space.
+      </TD
+></TR
+><TR
+><TD
+><TT
+CLASS="LITERAL"
+>-l</TT
+></TD
+><TD
+>no</TD
+><TD
+>       Use <TT
+CLASS="LITERAL"
+>ln</TT
+> command to restore WAL files from archive.
+       Link is more efficient than copy, but the default is copy since link
+       will not work in all scenarios.
+       On Windows, this option uses the <TT
+CLASS="LITERAL"
+>mklink</TT
+> command
+       to provide a file-to-file symbolic link. <TT
+CLASS="LITERAL"
+>-l</TT
+> will
+       not work on versions of Windows prior to Vista.
+      </TD
+></TR
+><TR
+><TD
+><TT
+CLASS="LITERAL"
+>-r</TT
+> <TT
+CLASS="REPLACEABLE"
+><I
+>maxretries</I
+></TT
+></TD
+><TD
+>3</TD
+><TD
+>        Set the maximum number of times to retry the copy or link command if it
+        fails. After each failure, we wait for <TT
+CLASS="REPLACEABLE"
+><I
+>sleeptime</I
+></TT
+> *
+        <TT
+CLASS="REPLACEABLE"
+><I
+>num_retries</I
+></TT
+>
+        so that the wait time increases progressively.  So by default,
+        we will wait 5 secs, 10 secs, then 15 secs before reporting
+        the failure back to the standby server. This will be
+        interpreted as end of recovery and the standby will come
+        up fully as a result.
+      </TD
+></TR
+><TR
+><TD
+><TT
+CLASS="LITERAL"
+>-s</TT
+> <TT
+CLASS="REPLACEABLE"
+><I
+>sleeptime</I
+></TT
+></TD
+><TD
+>5</TD
+><TD
+>       Set the number of seconds (up to 60) to sleep between tests to see
+       if the WAL file to be restored is available in the archive yet.
+       The default setting is not necessarily recommended;
+       consult <A
+HREF="warm-standby.html"
+>Section 24.4</A
+> for discussion.
+      </TD
+></TR
+><TR
+><TD
+><TT
+CLASS="LITERAL"
+>-t</TT
+> <TT
+CLASS="REPLACEABLE"
+><I
+>triggerfile</I
+></TT
+></TD
+><TD
+>none</TD
+><TD
+>       Specify a trigger file whose presence should cause recovery to end
+       whether or not the next WAL file is available.
+       It is recommended that you use a structured filename to
+       avoid confusion as to which server is being triggered
+       when multiple servers exist on the same system; for example
+       <TT
+CLASS="FILENAME"
+>/tmp/pgsql.trigger.5432</TT
+>.
+      </TD
+></TR
+><TR
+><TD
+><TT
+CLASS="LITERAL"
+>-w</TT
+> <TT
+CLASS="REPLACEABLE"
+><I
+>maxwaittime</I
+></TT
+></TD
+><TD
+>0</TD
+><TD
+>       Set the maximum number of seconds to wait for the next WAL file,
+       after which recovery will end and the standby will come up.
+       A setting of zero (the default) means wait forever.
+       The default setting is not necessarily recommended;
+       consult <A
+HREF="warm-standby.html"
+>Section 24.4</A
+> for discussion.
+      </TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><DIV
+CLASS="CAUTION"
+><P
+></P
+><TABLE
+CLASS="CAUTION"
+BORDER="1"
+WIDTH="100%"
+><TR
+><TD
+ALIGN="CENTER"
+><B
+>Caution</B
+></TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+><P
+>      It is critical the trigger file be created with permissions allowing
+      the postgres process to remove the file. Generally this is best done
+      by creating the file from the postgres user account. Failure to do so
+      will prevent completion of WAL file recovery and the server from
+      coming back online successfully.
+    </P
+></TD
+></TR
+></TABLE
+></DIV
+><DIV
+CLASS="NOTE"
+><BLOCKQUOTE
+CLASS="NOTE"
+><P
+><B
+>Note: </B
+>    <TT
+CLASS="LITERAL"
+>--help</TT
+> is not supported since
+    <SPAN
+CLASS="APPLICATION"
+>pg_standby</SPAN
+> is not intended for interactive use,
+    except during development and testing.
+   </P
+></BLOCKQUOTE
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN104916"
+>F.23.2. Examples</A
+></H2
+><P
+>On Linux or Unix systems, you might use:</P
+><PRE
+CLASS="PROGRAMLISTING"
+>archive_command = 'cp %p .../archive/%f'
+
+restore_command = 'pg_standby -l -d -s 2 -t /tmp/pgsql.trigger.5442 .../archive %f %p %r 2&#62;&#62;standby.log'
+  </PRE
+><P
+>   where the archive directory is physically located on the standby server,
+   so that the <TT
+CLASS="LITERAL"
+>archive_command</TT
+> is accessing it across NFS,
+   but the files are local to the standby (enabling use of <TT
+CLASS="LITERAL"
+>ln</TT
+>).
+   This will:
+  </P
+><P
+></P
+><UL
+><LI
+><P
+>     use the <TT
+CLASS="LITERAL"
+>ln</TT
+> command to restore WAL files from archive
+    </P
+></LI
+><LI
+><P
+>     produce debugging output in <TT
+CLASS="FILENAME"
+>standby.log</TT
+>
+    </P
+></LI
+><LI
+><P
+>     sleep for 2 seconds between checks for next WAL file availability
+    </P
+></LI
+><LI
+><P
+>     stop waiting only when a trigger file called
+     <TT
+CLASS="FILENAME"
+>/tmp/pgsql.trigger.5442</TT
+> appears
+    </P
+></LI
+><LI
+><P
+>     remove no-longer-needed files from the archive directory
+    </P
+></LI
+></UL
+><P
+>On Windows, you might use:</P
+><PRE
+CLASS="PROGRAMLISTING"
+>archive_command = 'copy %p ...\\archive\\%f'
+
+restore_command = 'pg_standby -d -s 5 -t C:\pgsql.trigger.5442 ...\archive %f %p %r 2&#62;&#62;standby.log'
+  </PRE
+><P
+>   Note that backslashes need to be doubled in the
+   <TT
+CLASS="LITERAL"
+>archive_command</TT
+>, but <SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>not</I
+></SPAN
+> in the
+   <TT
+CLASS="LITERAL"
+>restore_command</TT
+>.  This will:
+  </P
+><P
+></P
+><UL
+><LI
+><P
+>     use the <TT
+CLASS="LITERAL"
+>copy</TT
+> command to restore WAL files from archive
+    </P
+></LI
+><LI
+><P
+>     produce debugging output in <TT
+CLASS="FILENAME"
+>standby.log</TT
+>
+    </P
+></LI
+><LI
+><P
+>     sleep for 5 seconds between checks for next WAL file availability
+    </P
+></LI
+><LI
+><P
+>     stop waiting only when a trigger file called
+     <TT
+CLASS="FILENAME"
+>C:\pgsql.trigger.5442</TT
+> appears
+    </P
+></LI
+><LI
+><P
+>     remove no-longer-needed files from the archive directory
+    </P
+></LI
+></UL
+><P
+>   Since the Windows example uses <TT
+CLASS="LITERAL"
+>copy</TT
+> at both ends, either
+   or both servers might be accessing the archive directory across the
+   network.
+  </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN104959"
+>F.23.3. Supported server versions</A
+></H2
+><P
+>   <SPAN
+CLASS="APPLICATION"
+>pg_standby</SPAN
+> is designed to work with
+   <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> 8.2 and later.
+  </P
+><P
+>   <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> 8.3 provides the <TT
+CLASS="LITERAL"
+>%r</TT
+> macro,
+   which is designed to let <SPAN
+CLASS="APPLICATION"
+>pg_standby</SPAN
+> know the
+   last file it needs to keep.  With <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> 8.2, the
+   <TT
+CLASS="LITERAL"
+>-k</TT
+> option must be used if archive cleanup is
+   required.  This option remains available in 8.3, but its use is deprecated.
+  </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN104970"
+>F.23.4. Author</A
+></H2
+><P
+>   Simon Riggs <CODE
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:simon@2ndquadrant.com"
+>simon@2ndquadrant.com</A
+>&#62;</CODE
+>
+  </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="pgrowlocks.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="pgstattuple.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>pgrowlocks</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="contrib.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>pgstattuple</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

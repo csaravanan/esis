@@ -1,0 +1,683 @@
+<CMEData dateCreated="2006-02-09T18:13:45Z" xmlns="http://cme.mitre.org/XMLSchema/cme" xmlns:cme="http://cme.mitre.org/XMLSchema/cme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cme.mitre.org/XMLSchema/cme cme.xsd">
+   <CME id="CME-711">
+     <DateAssigned>2007-01-19T21:15:01Z</DateAssigned>
+     <Description>CME-711 is a Trojan Downloader that is spread as an attachment to emails with news headlines as the subject lines which downloads additional security threats,</Description>
+     <Aliases>
+       <Alias source="Aladdin">Win32.Small.dam</Alias>
+       <Alias source="Authentium" url="http://www.authentium.com/threatmatrix/VirusDetail.aspx?RefNo=726">W32/Downloader.AYDY</Alias>
+       <Alias source="AVIRA" url="http://www.avira.com/en/threats/section/details/id_vir/3453/tr_dldr.small.dbx.html">TR/Dldr.Small.DBX</Alias>
+       <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?id=60917">Win32/Pecoan</Alias>
+       <Alias source="ClamAV">Trojan.Downloader-647</Alias>
+       <Alias source="ESET" url="http://www.eset.com/threat-center/pedia/trojan/fuclip.htm">Win32/Fuclip.A</Alias>
+       <Alias source="Fortinet" url="http://www.fortinet.com/VirusEncyclopedia/search/encyclopediaSearch.do?method=viewVirusDetailsInfo&amp;fid=258582&amp;locale=">W32/Small.DAM!tr</Alias>
+       <Alias source="F-Secure" url="http://www.f-secure.com/v-descs/small_dam.shtml">Small.DAM</Alias>
+       <Alias source="Grisoft">Downloader.Tibs</Alias>
+       <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=124218">Trojan-Downloader.Win32.Small.dam</Alias>
+       <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_141316.htm">Downloader-BAI!M711</Alias>
+       <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?Name=Win32/Nuwar.N@mm">Win32/Nuwar.N@MM!CME-711</Alias>
+       <Alias source="Norman">W32/Tibs.gen12</Alias>
+       <Alias source="Panda" url="http://www.pandasoftware.com/com/virus_info/encyclopedia/overview.aspx?idvirus=146961&amp;sind=0&amp;sitepanda=empresas">Trj/Alanchum.NX!CME-711</Alias>
+       <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/trojdwnldrfyd.html">Troj/DwnLdr-FYD</Alias>
+       <Alias source="Symantec" url="http://www.symantec.com/enterprise/security_response/writeup.jsp?docid=2007-011917-1403-99">Trojan.Peacomm</Alias>
+       <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=TROJ%5FSMALL%2EEDW">TROJ_SMALL.EDW</Alias>
+     </Aliases>
+   </CME>
+  
+  <CME id="CME-416">
+    <DateAssigned>2006-11-03T13:20:35Z</DateAssigned>
+    <Description>CME-416 is a multi-component mass-mailing worm that downloads and executes files from the Internet.</Description>
+    <Aliases>
+      <Alias source="Authentium" url="http://www.authentium.com/threatmatrix/VirusDetail.aspx?RefNo=812 ">W32/Warezov.GC</Alias>
+      <Alias source="AVIRA" url="http://www.avira.com/en/threats/section/details/id_vir/3026/tr_dldr.stration.c.html">TR/Dldr.Stration.C</Alias>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?id=58375">Win32/Stration.Variant!Worm</Alias>
+      <Alias source="ClamAV">Worm.Stration.LY</Alias>
+      <Alias source="ESET">Win32/Stration.NO</Alias>
+      <Alias source="Fortinet" url="http://www.fortinet.com/VirusEncyclopedia/search/encyclopediaSearch.do?method=quickSearchDirectly&amp;virusName=W32/Stration.DS@MM">W32/Stration.DS@mm</Alias>
+      <Alias source="Grisoft" url="http://www.grisoft.com/doc/virbase/lng/us/tpl/tpl01?nam=I-Worm/Stration">I-Worm/Stration</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=140780">Email-Worm.W32.Warezov.ez</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_140419.htm">W32/Stration@MM</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?Name=Win32/Stration.DH@mm">Win32/Stration.DH@mm!CME-416</Alias>
+      <Alias source="Norman">W32/Stration.ATT</Alias>
+      <Alias source="Panda">W32/Spamta.KG.worm</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/security/analyses/w32stratigen.html">W32/Strati-Gen</Alias>
+      <Alias source="Symantec" url="http://www.symantec.com/enterprise/security_response/writeup.jsp?docid=2006-103112-2047-99">W32.Stration.DL@mm</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=TROJ%5FSTRAT%2EDR">WORM_STRAT.DR</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-762">
+    <DateAssigned>2006-08-14T08:01:00Z</DateAssigned>
+    <Description>CME-762 is a worm that opens an IRC back door on the compromised host. It
+      spreads by exploiting the Microsoft Windows Server Service Remote Buffer Overflow
+      Vulnerability (Microsoft Security Bulletin MS06-040).</Description>
+    <Aliases>
+      <Alias source="Avira" url="http://www.avira.com/en/threats/section/details/id_vir/2491/worm_ircbot.9374.html">Worm/IRCBot.9374</Alias>
+      <Alias source="Authentium" url="http://www.authentium.com/threatmatrix/VirusDetail.aspx?RefNo=804">W32/Ircbot.TT</Alias>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=57649">Win32/Cuebot.K!Worm</Alias>
+      <Alias source="ClamAV">Trojan.IRCBot-690</Alias>
+      <Alias source="ESET" url="http://www.eset.com/msgs/ircbotoo.htm">Win32/IRCBot.OO</Alias>
+      <Alias source="Fortinet" url="http://www.fortinet.com/VirusEncyclopedia/search/encyclopediaSearch.do?method=viewVirusDetailsInfo&amp;fid=242368&amp;locale=">W32/Graweg.A!tr.bdr</Alias>
+      <Alias source="Grisoft" url="http://www.grisoft.com/doc/62/lng/us/tpl/tpl01/idv/286202">BackDoor.Generic3.GBB!CME-762</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=126097">Backdoor.Win32.IRCBot.st</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=backdoor:Win32/Graweg.B">backdoor:Win32/Graweg.B</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/Content/v_140394.htm">IRC-Mocbot!MS06-040</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?IdVirus=126477&amp;sind=0&amp;sitepanda=particulares">W32/Oscarbot.KD</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/security/analyses/w32cuebotm.html">W32/Cuebot-M</Alias>
+      <Alias source="Symantec" url="http://www.symantec.com/enterprise/security_response/writeup.jsp?docid=2006-081312-3302-99">W32.Wargbot</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM%5FIRCBOT%2EJK">WORM_IRCBOT.JK</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-482">
+    <DateAssigned>2006-08-14T08:00:42Z</DateAssigned>
+    <Description>CME-482 is a worm that opens an IRC back door on the compromised host. It
+      spreads by exploiting the Microsoft Windows Server Service Remote Buffer Overflow
+      Vulnerability (Microsoft Security Bulletin MS06-040).</Description>
+    <Aliases>
+      <Alias source="Avira" url="http://www.avira.com/en/threats/section/details/id_vir/2490/worm_ircbot.9609.html">Worm/IRCBot.9609</Alias>
+      <Alias source="Authentium" url="http://www.authentium.com/threatmatrix/VirusDetail.aspx?RefNo=805">W32/Ircbot.TU</Alias>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?id=57639">Win32/Cuebot.J!Worm</Alias>
+      <Alias source="ClamAV">Trojan.IRCBot-689</Alias>
+      <Alias source="ESET" url="http://www.eset.com/msgs/ircbotoo.htm">Win32/IRCBot.OO</Alias>
+      <Alias source="Fortinet" url="http://www.fortinet.com/VirusEncyclopedia/search/encyclopediaSearch.do?method=viewVirusDetailsInfo&amp;fid=242369&amp;locale=">W32/Graweg.B!tr.bdr</Alias>
+      <Alias source="Grisoft" url="http://www.grisoft.com/doc/62/lng/us/tpl/tpl01/idv/286203">BackDoor.Generic3.GBC!CME-482</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=126097">Backdoor.Win32.IRCBot.st</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/Content/v_140394.htm">IRC-Mocbot!MS06-040</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=backdoor:Win32/Graweg.A">backdoor:Win32/Graweg.A</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?IdVirus=126477&amp;sind=0&amp;sitepanda=particulares">W32/Oscarbot.KD</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/security/analyses/w32cuebotl.html">W32/Cuebot-L</Alias>
+      <Alias source="Symantec" url="http://www.symantec.com/enterprise/security_response/writeup.jsp?docid=2006-081312-3302-99">W32.Wargbot</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM%5FIRCBOT%2EJL">WORM_IRCBOT.JL</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-136">
+    <DateAssigned>2006-06-29T08:21:35Z</DateAssigned>
+    <Description>CME-136 is a Microsoft Word macro virus that drops a trojan onto the infected host.</Description>
+    <Aliases>
+      <Alias source="Avira">W2000M/Kukudro.C</Alias>
+      <Alias source="Authentium" url="http://www.authentium.com/threatmatrix/VirusDetail.aspx?RefNo=800">W97M/Kukudro.C</Alias>
+      <Alias source="CA">W97M/Kukudro.B:trojan</Alias>
+      <Alias source="ClamAV">Trojan.Dropper.MSWord.MyNo-3</Alias>
+      <Alias source="ESET">W97M/TrojanDropper.Lafool.NAA</Alias>
+      <Alias source="Fortinet" url="http://www.fortinet.com/VirusEncyclopedia/search/encyclopediaSearch.do?method=viewVirusDetailsInfoDirectly&amp;fid=226971">WM/Kukudro.C</Alias>
+      <Alias source="GRISOFT">W97M/Kukudro</Alias>
+      <Alias source="H+BEDV">W2000M/Kukudro.C</Alias>
+      <Alias source="Kaspersky">Trojan-Dropper.MSWord.Lafool.j</Alias>
+      <Alias source="McAfee">W97M/Kukudro.c</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=W97M/Kukudro.C">W97M/Kukudro.C!CME-136</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?IdVirus=122173&amp;sind=0&amp;sitepanda=empresas">W97/Kukudro.C!CME-136</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/wm97kukudrfam.html">WM97/Kukudr-Fam</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w97m.kukudro.a.html">W97M.Kukudro.A</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-476">
+    <DateAssigned>2006-06-28T14:09:06Z</DateAssigned>
+    <Description>CME-476 is a Microsoft Word macro virus that drops a trojan onto the infected host.</Description>
+    <Aliases>
+      <Alias source="Avira">W2000M/Kukudro.B</Alias>
+      <Alias source="Authentium" url="http://www.authentium.com/threatmatrix/VirusDetail.aspx?RefNo=799">W97M/Kukudro.B</Alias>
+      <Alias source="CA">W97M/Pricheck.B</Alias>
+      <Alias source="ClamAV">Trojan.Dropper.MSWord.MyNo-2</Alias>
+      <Alias source="ESET">W97M/TrojanDropper.Lafool.NAA</Alias>
+      <Alias source="Fortinet">WM/Kukudro.B</Alias>
+      <Alias source="GRISOFT">W97M/Kukudro</Alias>
+      <Alias source="H+BEDV">W2000M/Kukudro.B</Alias>
+      <Alias source="Kaspersky">Trojan-Dropper.MSWord.Lafool.j</Alias>
+      <Alias source="McAfee">W97M/Kukudro.b!CME-476</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=W97M/Kukudro.B">W97M/Kukudro.B!CME-476</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?IdVirus=122173&amp;sind=0&amp;sitepanda=empresas">W97/Kukudro.A</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/wm97kukudrob.html">WM97/Kukudro-B</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w97m.kukudro.a.html">W97M.Kukudro.A</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=W97M_DLOADER.BVS">W97M_DLOADER.BVS</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-745">
+    <DateAssigned>2006-06-28T14:07:05Z</DateAssigned>
+    <Description>CME-745 is a Microsoft Word macro virus that drops a trojan onto the infected host.</Description>
+    <Aliases>
+      <Alias source="Avira">W2000M/Kukudro.A</Alias>
+      <Alias source="Authentium" url="http://www.authentium.com/threatmatrix/VirusDetail.aspx?RefNo=798">W97M/Kukudro.A</Alias>
+      <Alias source="CA eTrust InoculateIT">W97M/Kukudr</Alias>
+      <Alias source="ClamAV">Trojan.Dropper.MSWord.MyNo-1</Alias>
+      <Alias source="ESET">W97M/TrojanDropper.Lafool.I</Alias>
+      <Alias source="F-Secure" url="http://www.f-secure.com/v-descs/kukudro_a.shtml">Kukudro.A</Alias>
+      <Alias source="Fortinet">WM/Lafool.I!tr</Alias>
+      <Alias source="GRISOFT">W97/Kukudro</Alias>
+      <Alias source="H+BEDV">W2000M/Kukudro.A</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=125919">Trojan-Dropper.MSWord.Lafool.i</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_140060.htm">W97M/Kukudro.a!CME-745</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=W97M/Kukudro.A">W97M/Kukudro.A!CME-745</Alias>
+      <Alias source="Norman">W97M/Pricheck.A</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?IdVirus=122173&amp;sind=0&amp;sitepanda=empresas">W97/Kukudro.A!CME-745</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/wm97kukudroa.html">WM97/Kukudro-A</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w97m.kukudro.a.html">W97M.Kukudro.A</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=W97M_DLOADER.BKV">W97M_DLOADER.BKV</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-934">
+    <DateAssigned>2006-03-21T11:46:05Z</DateAssigned>
+    <Description>This is small Trojan downloader that downloads files and lowers security settings. It is spreading as an email attachment.</Description>
+    <Aliases>
+      <Alias source="Aladdin Knowledge Systems" url="http://www.esafe.com/home/csrt/analysis.asp?virus_no=21780&amp;cf=">Win32.Agent.adu</Alias>
+      <Alias source="Authentium" url="http://www.authentium.com/threatmatrix/VirusDetail.aspx?RefNo=793&amp;VN=W32/Downloader.SEL@dl">W32/Downloader.SEL@dl</Alias>
+      <Alias source="Avira" url="http://www.avira.com/en/threats/section/details/id_vir/1791/tr_dldr.small.nih.html">TR/Dldr.Small.NIH</Alias>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=49987">Win32/Clagger.Q</Alias>
+      <Alias source="ClamAV">Trojan.Downloader.Small-1133</Alias>
+      <Alias source="ESET">Win32/TrojanDownloader.Small.NIH</Alias>
+      <Alias source="Fortinet" url="http://www.fortinet.com/VirusEncyclopedia/search/encyclopediaSearch.do?method=viewVirusDetailsInfoDirectly&amp;fid=133226">W32/Small.NIJ!dldr</Alias>
+      <Alias source="Grisoft">Generic.QYK</Alias>
+      <Alias source="H+BEDV" url="http://products.antivir.de/en/threats/TR_Dldr_Small_NIH.html">TR/Dldr.Small.NIH</Alias>
+      <Alias source="iDefense">Agent.ACX</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=109911">Trojan-Downloader:Win32.Agent.adu</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_138968.htm">Downloader-ATM!CME-934</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?Name=TrojanDownloader:Win32/Clagger.C">TrojanDownloader:Win32/Clagger.C!CME-934</Alias>
+      <Alias source="Norman">W32/Clagger.C</Alias>
+      <Alias source="Panda" url="http://enterprises.pandasoftware.com/virus_info/encyclopedia/overview.aspx?IdVirus=112254&amp;sind=0&amp;sitepanda=empresas">Trj/Nabload.CC!CME-934</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/trojclaggerk.html">Troj/Clagger-K</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/pwsteal.tarno.t.html">PWSteal.Tarno.T</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=TROJ%5FCLAGGER%2ED">TROJ_CLAGGER.D</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-4">
+    <DateAssigned>2006-02-16T01:20:07Z</DateAssigned>
+    <Description>This is a worm under Macintosh OS X that spreads via the iChat instant messaging application.</Description>
+    <Aliases>
+      <Alias source="Authentium" url="http://www.authentium.com/threatmatrix/VirusDetail.aspx?RefNo=787">MacOS/Leap.A</Alias>
+      <Alias source="Avira" url="http://www.avira.com/en/threats/MacOS_Leap_A.html">MacOS/Leap.A</Alias>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=51355">OSX/Leap.A</Alias>
+      <Alias source="ClamAV">Trojan.Leap.A</Alias>
+      <Alias source="ESET">Mac/Leap.A</Alias>
+      <Alias source="Fortinet" url="http://www.fortinet.com/VirusEncyclopedia/encysearch.jsp?fid=126453">OSX/Leap!worm</Alias>
+      <Alias source="F-secure" url="http://www.f-secure.com/v-descs/leap_a.shtml">Leap.A</Alias>
+      <Alias source="H+BEDV" url="http://products.antivir.de/en/threats/MacOS_Leap_A.html">MacOS/Leap.A</Alias>
+      <Alias source="Intego" url="http://www.intego.com/news/pr76.asp">OSX/OOMP-A OR LEAP.A</Alias>
+      <Alias source="McAfee" url="http://us.mcafee.com/virusInfo/default.asp?id=description&amp;virus_k=138578">OSX/Leap</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=MacOS/Leap.A@mm">MacOS/Leap.A@mm!CME-4</Alias>
+      <Alias source="Panda" url="http://enterprises.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=108889">OSX/Oomp.A.worm</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/osxleapa.html">OSX/Leap-A</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/osx.leap.a.html">OSX.Leap.A</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=OSX%5FLEAP%2EA">OSX_LEAP.A</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-328">
+    <DateAssigned>2006-02-06T17:45:56Z</DateAssigned>
+    <Description>This is a "Bagle" mass-mailer which demonstrates typical "Bagle" behavior: it has a .ZIP file attachment, it contains a simple message subject/body, and it spreads to others.</Description>
+    <Aliases>
+      <Alias source="Aladdin Knowledge Systems" url="http://www.esafe.com/home/csrt/analysis.asp?virus_no=22212&amp;cf=">Win32.Bagle.cl</Alias>
+      <Alias source="Authentium" url="http://www.authentium.com/threatmatrix/VirusDetail.aspx?RefNo=783&amp;VN=W32/Bagle.DW@mm">W32/Bagle.DW@mm</Alias>
+      <Alias source="AVIRA" url="http://www.avira.com/en/threats/Worm_Bagle_FI.html">Worm/Bagle.FI</Alias>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=50621">Win32/Bagle.DR</Alias>
+      <Alias source="ClamAV">Worm.Bagle.CP</Alias>
+      <Alias source="ESET" url="http://www.nod32.com/msgs/baglefa.htm">Win32/Bagle.FA</Alias>
+      <Alias source="Fortinet" url="http://www.fortinet.com/VirusEncyclopedia/search/encyclopediaSearch.do?method=viewVirusDetailsInfoDirectly&amp;fid=124189">W32/Bagle.DW-mm</Alias>
+      <Alias source="F-Secure">W32/Bagle.DW@mm</Alias>
+      <Alias source="Grisoft">I-Worm/Bagle generic</Alias>
+      <Alias source="H+BEDV" url="http://products.antivir.de/en/threats/Worm_Bagle_FI.html">Worm/Bagle.FI</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=110673">Email-Worm.Win32.Bagle.fj</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_138366.htm">W32/Bagle.dp@MM</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Bagle.X@mm">Win32/Bagle.X@mm!CME-328</Alias>
+      <Alias source="Norman">W32/Mitglied.PR</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=107153">W32/Bagle.GS.worm</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/trojbagledlbz.html">Troj/BagleDl-BZ</Alias>
+      <Alias source="Symantec" url="http://www.symantec.com/avcenter/venc/data/w32.beagle.dl@mm.html">W32.Beagle.DL@mm</Alias>
+      <Alias source="TrendMicro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_BAGLE.CL">WORM_BAGLE.CL</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-24">
+    <DateAssigned>2006-01-24T18:02:31Z</DateAssigned>
+    <Description>This worm will destroy certain data files on an infected user's machine on Friday, February 3, 2006.  Additional information can be found at: http://blogs.securiteam.com http://isc.sans.org/blackworm http://www.lurhq.com/blackworm.html</Description>
+    <Aliases>
+      <Alias source="Aladdin Knowledge Systems" url="http://www.aladdin.com/home/csrt/analysis.asp?virus_no=22035">Win32.Blackmal.e</Alias>
+      <Alias source="Authentium" url="http://www.authentium.com/threatmatrix/VirusDetail.aspx?RefNo=779">W32/Kapser.A@mm</Alias>
+      <Alias source="AVIRA" url="http://www.avira.com/en/threats/Worm_KillAV_GR.html">Worm/KillAV.GR</Alias>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?id=50198">Win32/Blackmal.F</Alias>
+      <Alias source="ESET" url="http://www.eset.com/msgs/vbnei.htm">Win32/VB.NEI</Alias>
+      <Alias source="Fortinet" url="http://www.fortinet.com/VirusEncyclopedia/search/encyclopediaSearch.do?method=viewVirusDetailsInfoDirectly&amp;fid=119856">W32/Grew.A!wm</Alias>
+      <Alias source="F-Secure" url="http://www.f-secure.com/v-descs/nyxem_e.shtml">Nyxem.E</Alias>
+      <Alias source="Grisoft" url="http://www.grisoft.com/doc/virbase/lng/us/tpl/tpl01?nam=worm/generic.fx!CME-24">Worm/Generic.FX</Alias>
+      <Alias source="H+BEDV" url="http://products.antivir.de/en/threats/Worm_KillAV_GR.html">Worm/KillAV.GR</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=109064">Email-Worm.Win32.Nyxem.e</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_138027.htm">W32/MyWife.d@MM</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Mywife.E">Win32/Mywife.E@mm!CME-24</Alias>
+      <Alias source="Norman" url="http://www.norman.com/Virus/Virus_descriptions/28031/en">W32/Small.KI</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=105192">W32/Tearec.A.worm</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32nyxemd.html">W32/Nyxem-D</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.blackmal.e@mm.html">W32.Blackmal.E@mm</Alias>
+      <Alias source="TrendMicro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_GREW.A">WORM_GREW.A</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-503">
+    <DateAssigned>2006-01-20T10:28:59Z</DateAssigned>
+    <Description>Trojan downloader that is spread as an attachment to a spam email and tries to download a password stealer.</Description>
+    <Aliases>
+      <Alias source="Authentium" url="http://www.authentium.com/threatmatrix/VirusDetail.aspx?RefNo=778">W32/Downloader.MQT</Alias>
+      <Alias source="AVIRA" url="http://www.avira.com/en/threats/TR_Dldr_Delf_qx.html">TR/Dldr.Delf.qx</Alias>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=49987">W32/Clagger Family</Alias>
+      <Alias source="Fortinet" url="http://www.fortinet.com/VirusEncyclopedia/search/encyclopediaSearch.do?method=viewVirusDetailsInfoDirectly&amp;fid=120474">W32/Ewojim!tr</Alias>
+      <Alias source="Grisoft" url="http://www.grisoft.com/doc/62/lng/us/tpl/tpl01/idv/284900%20">Downloader.Generic.POS</Alias>
+      <Alias source="H+BEDV" url="http://products.antivir.de/en/threats/TR_Dldr_Delf_qx.html">TR/Dldr.Delf.qx</Alias>
+      <Alias source="Kaspersky">Trojan-Downloader.Win32.Agent.ado</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_138057.htm">Downloader-ATM</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=TrojanDownloader:Win32/Clagger.A">TrojanDownloader:Win32/Clagger.A!CME-503</Alias>
+      <Alias source="Norman">W32/DLoader.QSE</Alias>
+      <Alias source="Panda" url="http://enterprises.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=105591">Trj/Downloader.HGN!CME-503</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/trojclaggerd.html">Troj/Clagger-D</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/pwsteal.tarno.r.html">PWSteal.Tarno.R</Alias>
+      <Alias source="TrendMicro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=TROJ%5FAGENT%2EAPS">TROJ_AGENT.APS</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-681">
+    <DateAssigned>2005-11-22T13:26:38Z</DateAssigned>
+    <Description>A new variant of the Sober mass-mailing worm.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=49473">Win32.Sober.W</Alias>
+      <Alias source="F-Secure" url="http://www.f-secure.com/v-descs/sober_y.shtml">Sober.Y</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=99827">Email-Worm.Win32.Sober.y</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_137072.htm">W32/Sober@MM!M681</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Sober.Z@mm">Win32/Sober.Z@mm!CME-681</Alias>
+      <Alias source="Norman" url="http://www.norman.com/Virus/Virus_descriptions/25962/en">W32/Sober.AA@mm</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?IdVirus=98110">W32/Sober.AH.worm</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32soberz.html">W32/Sober-Z</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.sober.x@mm.html">W32.Sober.X@mm</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_SOBER.AG">WORM_SOBER.AG</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-157">
+    <DateAssigned>2005-11-15T09:28:29Z</DateAssigned>
+    <Description>A new variant of the Sober mass-mailing worm.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?id=48104">Win32.Sober.Q</Alias>
+      <Alias source="F-Secure" url="http://www.f-secure.com/v-descs/sober_u.shtml">Sober.U</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=99824">Email-Worm.Win32.Sober.u</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_136959.htm">W32/Sober.t</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Sober.V@mm">Win32/Sober.V@mm!CME-157</Alias>
+      <Alias source="Norman">W32/Sober.T@mm</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?lst=vis&amp;idvirus=97334">W32/Sober.AD.worm</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32soberu.html">W32/Sober-U</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.sober.v@mm.html">W32.Sober.V@mm</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_SOBER.AD">WORM_SOBER.AD</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-589">
+    <DateAssigned>2005-11-10T16:44:13Z</DateAssigned>
+    <Description>A backdoor Trojan that is remotely controlled via Internet Relay Chat (IRC). It exploits Sony BMG Digital Rights Management (DRM) software to hide its presence.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=48002">Win32.OutsBot.U</Alias>
+      <Alias source="F-Secure" url="http://www.f-secure.com/v-descs/breplibot_b.shtml">Breplibot.b</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=99412">Backdoor.Win32.Breplibot.b</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_136936.htm">W32/Brepibot!CME-589</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Backdoor:Win32/Ryknos.A">Backdoor:Win32/Ryknos.A!CME-589</Alias>
+      <Alias source="Norman" url="http://www.norman.com/Virus/Virus_descriptions/25793/en">W32/Ryknos.A</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?IdVirus=96761&amp;sind=0">Bck/Ryknos.A</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/trojstinxe.html">Troj/Stinx-E</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/backdoor.ryknos.html">Backdoor.Ryknos</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=BKDR_BREPLIBOT.C">BKDR_BREPLIBOT.C</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-151">
+    <DateAssigned>2005-10-06T04:42:19Z</DateAssigned>
+    <Description>This is a mass-mailing worm that uses its own SMTP engine to spread. It sends itself as an email attachment that mimics an image file.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?id=47434">Win32.Sober.P</Alias>
+      <Alias source="F-Secure" url="http://www.f-secure.com/v-descs/sober_s.shtml">Sober.S</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=95836">Email-Worm.Win.Sober.s</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_136390.htm">W32/Sober.r@MM</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Sober.S@mm">Win32/Sober.S@mm!CME-151</Alias>
+      <Alias source="Norman" url="http://www.norman.com/Virus/Virus_descriptions/24963/en">W32/Sober.R@mm</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?IdVirus=92673">Sober.Y</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32sobero.html">W32/Sober-O</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.sober.q@mm.html">W32.Sober.Q@mm</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_SOBER.AC">WORM_SOBER.AC</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-15">
+    <DateAssigned>2005-08-25T19:05:04Z</DateAssigned>
+    <Description>A worm that opens a back door and exploits the Microsoft Windows Plug and Play Buffer Overflow Vulnerability (described in Microsoft Security Bulletin MS05-039 at http://www.microsoft.com/technet/security/Bulletin/MS05-039.mspx) on TCP port 445.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?id=43446">Win32.Tpbot.B</Alias>
+      <Alias source="F-Secure" url="http://www.f-secure.com/v-descs/bozori_b.shtml">Bozori.B</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=91169">Net-Worm.Win32.Bozori.b</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_135494.htm">W32/Bozori.worm.b</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Worm:Win32/Zotob.F">Worm:Win32/Zotob.F!CME-15</Alias>
+      <Alias source="Norman">W32/Bozori.B</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=86230">IRCbot.KD</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32zotobf.html">W32/Zotob-F</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.zotob.f.html?Open">W32.Zotob.F</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_ZOTOB.F">WORM_ZOTOB.F</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-164">
+    <DateAssigned>2005-08-25T19:14:39Z</DateAssigned>
+    <Description>A worm that spreads by exploiting Microsoft Windows Plug and Play Buffer Overflow Vulnerability (described in ).</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=43334">Win32.Zotob.B</Alias>
+      <Alias source="F-Secure" url="http://www.f-secure.com/v-descs/zotob_b.shtml">Zotob.B</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=91031">Net-Worm.Win32.Mytob.cf</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_135435.htm">W32/Zotob.worm.b</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Worm:Win32/Zotob.B">Worm:Win32/Zotob.B!CME-164</Alias>
+      <Alias source="Norman" url="http://www.norman.com/Virus/Virus_descriptions/24317/en">W32/Zotob.B</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=85875">Zotob.B</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32zotobb.html">W32/Zotob-B</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.zotob.b.html">W32.Zotob.B</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_ZOTOB.B">WORM_ZOTOB.B</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-243">
+    <DateAssigned>2005-08-25T15:13:50Z</DateAssigned>
+    <Description>A worm that opens a back door and exploits the Microsoft Windows Plug and Play Buffer Overflow Vulnerability (described in Microsoft Security Bulletin MS05-039 at http://www.microsoft.com/technet/security/Bulletin/MS05-039.mspx) on TCP port 445.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=43335">Win32.Zotob.A</Alias>
+      <Alias source="F-Secure" url="http://www.f-secure.com/v-descs/zotob_a.shtml">Zotob.A</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=90970">Net-Worm.Win32.Mytob.cd</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_135433.htm">W32/Zotob.worm</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Worm:Win32/Zotob.A">Worm:Win32/Zotob.A!CME-243</Alias>
+      <Alias source="Norman">W32/Zotob.A</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?IdVirus=85821">Zotob.A</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32zotoba.html">W32/Zotob-A</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.zotob.a.html">W32.Zotob.A</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_ZOTOB.A">WORM_ZOTOB.A</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-284">
+    <DateAssigned>2005-08-25T15:12:53Z</DateAssigned>
+    <Description>A worm that spreads by exploiting the Microsoft Windows Plug and Play Buffer Overflow Vulnerability (described in Microsoft Security Bulletin MS05-039 at http://www.microsoft.com/technet/security/Bulletin/MS05-039.mspx).</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=43448">Win32.Esbot.C</Alias>
+      <Alias source="F-Secure" url="http://www.f-secure.com/v-descs/ircbot_ex.shtml">IRCBot.ex</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=91286">Backdoor.Win32.IRCBot.ex</Alias>
+      <Alias source="McAfee" url="http://vil.mcafeesecurity.com/vil/content/v_133133.htm">W32/Sdbot.worm.gen.by</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Worm:Win32/Esbot.B">Worm:Win32/Esbot.B!CME-284</Alias>
+      <Alias source="Norman">W32/Esbot.B</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=86295">IRCbot.KG</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32hwbotb.html">W32/Hwbot-B</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.esbot.b.html">W32.Esbot.B</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_ESBOT.C">WORM_ESBOT.C</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-354">
+    <DateAssigned>2005-08-25T19:11:44Z</DateAssigned>
+    <Description>A worm that spreads by exploiting the Microsoft Windows Plug and Play Buffer Overflow Vulnerability (described in Microsoft Security Bulletin MS05-039 http://www.microsoft.com/technet/security/Bulletin/MS05-039.mspx).</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=43417">Win32.Esbot.A</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=91046">Backdoor.Win32.IRCBot.es</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_134136.htm">W32/IRCbot.gen</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Worm:Win32/Esbot.A">Worm:Win32/Esbot.A!CME-354</Alias>
+      <Alias source="Norman">Win32/IRCbot.BR</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=86348">IRCbot.KI</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32sdbotacg.html">W32/Sdbot-ACG</Alias>
+      <Alias source="Symantec" url="http://sarc.com/avcenter/venc/data/w32.esbot.a.html">W32.Esbot.A</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_ESBOT.A">WORM_ESBOT.A</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-419">
+    <DateAssigned>2005-08-25T19:02:14Z</DateAssigned>
+    <Description>A mass-mailing worm that opens a back door, downloads remote files, and lowers security settings on the compromised computer. The worm spreads by exploiting the Microsoft Windows Plug and Play Buffer Overflow Vulnerability (as described in Microsoft Security Bulletin MS05-039 at http://www.microsoft.com/technet/security/Bulletin/MS05-039.mspx) and by sending a copy of itself to email addresses gathered.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=43472">Win32.Qweasy.A</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=92404">Backdoor.Win32.Surila.x</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_135474.htm">W32/Mydoom.bv@MM</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Bobax.O@mm">Win32/Bobax.O@mm!CME-419</Alias>
+      <Alias source="Norman">W32/Bobax.Q</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=85991">Antiemule.A</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32mydoomgen.html">W32/MyDoom-Gen</Alias>
+      <Alias source="Symantec" url="http://www.symantec.com/avcenter/venc/data/w32.bobax.af@mm.html">W32.Bobax.AF@mm</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_BOBAX.AD">WORM_BOBAX.AD</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-581">
+    <DateAssigned>2005-08-25T19:15:37Z</DateAssigned>
+    <Description>A mass-mailing worm that opens a back door and exploits the Microsoft Windows Plug and Play Buffer Overflow Vulnerability (as described in Microsoft Security Bulletin MS05-039 at http://www.microsoft.com/technet/security/Bulletin/MS05-039.mspx) on TCP port 445.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=43369">Win32.Zotob.C</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=91069">Net-Worm.Win32.Mytob.ch</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_135473.htm">W32/Zotob.worm.c</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Worm:Win32/Zotob.C">Worm:Win32/Zotob.C!CME-581</Alias>
+      <Alias source="Norman">W32/Zotob.C</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=86009">Zotob.C</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32zotobc.html">W32/Zotob-C</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.zotob.c@mm.html">W32.Zotob.C@mm</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_ZOTOB.C">WORM_ZOTOB.C</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-637">
+    <DateAssigned>2005-08-25T19:10:34Z</DateAssigned>
+    <Description>A worm that opens a back door and exploits the Microsoft Windows Plug and Play Buffer Overflow Vulnerability (described Microsoft Security Bulletin MS05-039 at in http://www.microsoft.com/technet/security/Bulletin/MS05-039.mspx) on TCP port 445.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=43418">Win32.Drugtob.B</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=91047">Backdoor.Win32.IRCBot.et</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_135434.htm">W32/Sdbot.worm!MS05-039</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Worm:Win32/Zotob.Q">Worm:Win32/Zotob.Q!CME-637</Alias>
+      <Alias source="Norman">W32/Zotob.D</Alias>
+      <Alias source="Panda" url="http://enterprises.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=86286">IRCbot.KE</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32dogbotb.html">W32/Dogbot-B</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.zotob.d.html">W32.Zotob.D</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_ZOTOB.D">WORM_ZOTOB.D</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-702">
+    <DateAssigned>2005-08-25T19:08:19Z</DateAssigned>
+    <Description>A worm that opens a back door and exploits the Microsoft Windows Plug and Play Buffer Overflow Vulnerability (described in Microsoft Security Bulletin MS05-039 http://www.microsoft.com/technet/security/Bulletin/MS05-039.mspx) on TCP port 445.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=43445">Win32.Drugtob.A</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=91047">Backdoor.Win32.IRCBot.et</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_101719.htm">W32/Sdbot.worm.gen</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Worm:Win32/Zotob.D">Worm:Win32/Zotob.D!CME-702</Alias>
+      <Alias source="Norman" url="http://www.norman.com/Virus/Virus_descriptions/14822/en-us">SDBot.RTC</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=86042">IRCbot.JZ</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32sdbotaci.html">W32/Sdbot-ACI</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.zotob.g.html">W32.Zotob.G</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_DRUDGEBOT.A">WORM_DRUDGEBOT.A</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-540">
+    <DateAssigned>2005-08-17T05:29:17Z</DateAssigned>
+    <Description>A worm that opens a back door and exploits the Microsoft Windows Plug and Play Buffer Overflow Vulnerability (described in Microsoft Security Bulletin MS05-039 at http://www.microsoft.com/technet/security/Bulletin/MS05-039.mspx) on TCP port 445.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?id=43416">Win32.Tpbot.A</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=91125">Net-Worm.Win32.Bozori.a</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_135513.htm">W32/Bozori.worm.a!CME-540</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Worm:Win32/Zotob.E">Worm:Win32/Zotob.E!CME-540</Alias>
+      <Alias source="Norman">W32/Bozori.A</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?IdVirus=86180">IRCBot.KC</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32tpbota.html">W32/Tpbot-A</Alias>
+      <Alias source="Symantec" url="http://www.symantec.com/avcenter/venc/data/w32.zotob.e.html">W32.Zotob.E</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_ZOTOB.E">WORM_ZOTOB.E</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-477">
+    <DateAssigned>2005-08-04T15:01:16Z</DateAssigned>
+    <Description>A mass-mailing worm that uses its own SMTP engine to email copies of itself to addresses gathered from the compromised computer. The worm also opens a back door on TCP Port 9030 on the compromised computer.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=43641">Win32.Bagle.BP</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=90067">Email-Worm.Win32.Bagle.bw</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_135302.htm">W32/Bagle.cb@MM</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Bagle.BA@mm">Win32/Bagle.BA@mm!CME-477</Alias>
+      <Alias source="Norman">W32/Bagle.BO@mm</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=84805">Bagle.DO</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32baglebw.html">W32/Bagle-BW</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.beagle.by@mm.html">W32.Beagle.BY@mm</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_BAGLE.BM">WORM_BAGLE.BM</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-875">
+    <DateAssigned>2005-07-15T14:14:55Z</DateAssigned>
+    <Description>A mass-mailing worm that opens a back door and attempts to propagate by exploiting the Microsoft Windows Local Security Authority Service Remote Buffer Overflow (as described in Microsoft Security Bulletin MS04-011) on TCP port 445.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=43302">Win32.Reatle.A</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=88239">Net-Worm.Win32.Lebreat.c</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_134885.htm">W32/Reatle.gen@MM</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Reatle.A@mm">Win32/Reatle.A@mm!CME-875</Alias>
+      <Alias source="Norman">W32/Breatel.A</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?IdVirus=82799">Lebreat.C</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32lebreatc.html">W32/Lebreat-C</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.reatle@mm.html">W32.Reatle@mm</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_REATLE.B">WORM_REATLE.B</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-96">
+    <DateAssigned>2005-07-14T09:05:08Z</DateAssigned>
+    <Description>A trojan downloader.</Description>
+    <Aliases>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=88190">Trojan-Downloader.Win32.Delf.ri</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_134906.htm">Downloader-ACY</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Trojan:Win32/Delf.M">Trojan:Win32/Delf.M!CME-96</Alias>
+      <Alias source="Norman">W32/DLoader.HIE</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=82387">Downloader.DNN</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/trojdloaderqk.html">Troj/Dloader-QK</Alias>
+      <Alias source="Trend Micro">TROJ_DLOADER.UX</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-323">
+    <DateAssigned>2005-07-08T08:28:11Z</DateAssigned>
+    <Description>A password stealing trojan that downloads a dll, which is used to intercept user keystrokes. The collected data is posted to another web site.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=43289">Win32.Conferox</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=78237">Trojan-Downloader.Win32.Small.arf</Alias>
+      <Alias source="McAfee" url="http://vil.mcafeesecurity.com/vil/content/v_133057.htm">Downloader-YZ</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=TrojanDownloader:Win32/Zayaho.A ">TrojanDownloader:Win32/Zayaho.A!CME-323</Alias>
+      <Alias source="Norman">W32/DLoader.GKR</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=81273">Downloader.DKC</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/trojdloaderpz.html">Troj/Dloader-PZ</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/download.trojan.html">Download.Trojan</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=TROJ_SMALL.ALT">TROJ_SMALL.ALT</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-746">
+    <DateAssigned>2005-07-08T08:26:49Z</DateAssigned>
+    <Description>A trojan downloader that downloads an executable from a malware Web site.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=43292">Win32.SillyDl.RW</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=87549">Trojan-Downloader.Win32.Small.bcf</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_133944.htm">Downloader-ABC</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=TrojanDownloader:Win32/Small.BCF">TrojanDownloader:Win32/Small.BCF!CME-746</Alias>
+      <Alias source="Norman">W32/DLoader.GKV</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=81283">Downloader.DKD</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/trojdloaderoq.html">Troj/Dloader-OQ</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/download.trojan.html">Download.Trojan</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=TROJ_SMALL.AME">TROJ_SMALL.AME</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-402">
+    <DateAssigned>2005-07-04T10:34:56Z</DateAssigned>
+    <Description>A trojan that downloads adware and spyware programs on the infected system.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?id=43618">Win32.DlWreck</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=87598">Trojan-Downloader.Win32.Vidlo.p</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_134667.htm">Downloader-ACS</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=TrojanDownloader:Win32/Vildo.P">TrojanDownloader:Win32/Vildo.P!CME-402</Alias>
+      <Alias source="Norman">W32/Vidlo.P</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=80834">Agent.AAW</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/trojvidlop.html">Troj/Vidlo-P</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/download.trojan.html">Download.Trojan</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=TROJ_DLOADER.RY">TROJ_DLOADER.RY</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-978">
+    <DateAssigned>2005-07-04T10:34:14Z</DateAssigned>
+    <Description>A trojan downloader that downloads malware from several different Internet addresses.</Description>
+    <Aliases>
+      <Alias source=" Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=76409">Trojan-Downloader.Win32.Small.aon</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_134668.htm">Downloader-ACQ</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=TrojanDownloader:Win32/Small.AON">TrojanDownloader:Win32/Small.AON!CME-978</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=80811">Mitglieder.DV</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/trojcifonda.html">Troj/Cifond-A</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=TROJ_SMALL.ALP">TROJ_SMALL.ALP</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-766">
+    <DateAssigned>2005-06-01T11:52:49Z</DateAssigned>
+    <Description>A Trojan horse that interferes with the operation of security software by ending processes, stopping services, removing registry entries, and deleting files.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=43213">Win32.Glieder.AG</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=82665">Email-Worm.Win32.Bagle.bo</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_132149.htm">W32/Bagle.dldr.gen</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=TrojanDropper:Win32/Bagle.BK">TrojanDropper:Win32/Bagle.BK!CME-766</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=TrojanDropper:Win32/Bagle.BL">TrojanDropper:Win32/Bagle.BL!CME-766</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=TrojanDropper:Win32/Bagle.BM">TrojanDropper:Win32/Bagle.BM!CME-766</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=TrojanDropper:Win32/Bagle.BN">TrojanDropper:Win32/Bagle.BN!CME-766</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=TrojanDropper:Win32/Bagle.BO">TrojanDropper:Win32/Bagle.BO!CME-766</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=TrojanDropper:Win32/Bagle.BP">TrojanDropper:Win32/Bagle.BP!CME-766</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=TrojanDropper:Win32/Bagle.BQ">TrojanDropper:Win32/Bagle.BQ!CME-766</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=TrojanDropper:Win32/Bagle.BR">TrojanDropper:Win32/Bagle.BR!CME-766</Alias>
+      <Alias source="Norman">W32/Mitglied.HZ</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?IdVirus=76356">Mitglieder.DC</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/trojbagledlq.html">Troj/BagleDl-Q</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/trojan.tooso.l.html">Trojan.Tooso.L</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=TROJ_BAGLE.AR">TROJ_BAGLE.AR</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-456">
+    <DateAssigned>2005-05-02T19:15:44Z</DateAssigned>
+    <Description>A mass-mailing worm that sends itself as an email attachment to addresses gathered from the compromised computer. It uses its own SMTP engine to spread. The email may be in either English or German.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=42813">Win32.Sober.N</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=79908">Email-Worm.Win32.Sober.p</Alias>
+      <Alias source="McAfee" url="http://vil.mcafeesecurity.com/vil/content/v_133409.htm">W32/Sober.p@MM</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Sober.Q@mm">Win32/Sober.Q@mm!CME-456</Alias>
+      <Alias source="Norman" url="http://www.norman.com/Virus/Virus_descriptions/22435/en">Sober.O@mm</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=72170">Sober.V</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32sobern.html">W32/Sober-N</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.sober.o@mm.html">W32.Sober.O@mm</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_SOBER.S">WORM_SOBER.S</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-414">
+    <DateAssigned>2005-04-21T05:09:46Z</DateAssigned>
+    <Description>A mass-mailing worm arrives in an email messages that is designed to trick users into thinking that someone else is receiving their email.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?id=42569">Win32.Sober.M</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=79071">Email-Worm.Win32.Sober.n</Alias>
+      <Alias source="McAfee" url="http://vil.mcafeesecurity.com/vil/content/v_133061.htm">W32/Sober.o@MM!M414</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Sober.M@mm">Win32/Sober.M@mm!CME-414</Alias>
+      <Alias source="Norman" url="http://www.norman.com/Virus/Virus_descriptions/22090/en">Sober.N@mm</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=70083">Sober.U</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32soberm.html">W32/Sober-M</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.sober.n@mm.html">W32.Sober.N@mm</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_SOBER.N">WORM_SOBER.N</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-901">
+    <DateAssigned>2005-02-28T21:42:00Z</DateAssigned>
+    <Description>A variant of the Mydoom worm. It spreads via email through SMTP, gathering target recipients from the Windows Address Book, the Temporary Internet Files folder, and certain fixed drives. Notably, it skips email addresses that contain certain strings.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?id=41854">Win32.Mydoom.AZ</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=74056">Email-Worm.Win32.Mydoom.am</Alias>
+      <Alias source="McAfee" url="http://vil.mcafeesecurity.com/vil/content/v_131871.htm">W32/Mydoom.be@MM!zip</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Mydoom.AR@mm">Win32/Mydoom.AR@mm!CME-901</Alias>
+      <Alias source="Norman">MyDoom.AT@mm</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=59712">Mydoom.AR</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32mydoombc.html">W32/MyDoom-BC</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.mydoom.ba@mm.html">W32.Mydoom.BA@mm</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_MYDOOM.BA">WORM_MYDOOM.BA</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-245">
+    <DateAssigned>2004-11-22T14:00:04Z</DateAssigned>
+    <Description>A worm that spreads as an attachment to an infected email. The worm harvests addresses from the local address book and installs a proxy server. This Bagle variant spreads either as Windows PE EXE file or a Windows Control Panel Applet (CPL) file, both about 20 KB in size.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?ID=40602">Win32.Bagle.AR</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=64659">Email-Worm.Win32.Bagle.au</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_129511.htm">W32/Bagle.bd@MM</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Bagle.BD@mm">Win32/Bagle.BD@mm!CME-245</Alias>
+      <Alias source="Norman">Bagle.AR@mm</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=53898">Bagle.BE</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32bagleau.html">W32/Bagle-AU</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.beagle.aw@mm.html">W32.Beagle.AW@mm</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_BAGLE.AU">WORM_BAGLE.AU</Alias>
+    </Aliases>
+  </CME>
+  <CME id="CME-473">
+    <DateAssigned>2004-11-22T14:00:04Z</DateAssigned>
+    <Description>A variant of the Bagle worm.</Description>
+    <Aliases>
+      <Alias source="CA" url="http://www3.ca.com/securityadvisor/virusinfo/virus.aspx?id=40589">Win32.Bagle.AQ</Alias>
+      <Alias source="Kaspersky" url="http://www.viruslist.com/en/viruses/encyclopedia?virusid=64658">Email-Worm.Win32.Bagle.at</Alias>
+      <Alias source="McAfee" url="http://vil.nai.com/vil/content/v_129509.htm">W32/Bagle.bb@MM</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Bagle.AS@mm">Win32/Bagle.AS@mm!CME-473</Alias>
+      <Alias source="Microsoft" url="http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Bagle.AX@mm">Win32/Bagle.AX@mm!CME-473</Alias>
+      <Alias source="Norman" url="http://www.norman.com/Virus/Virus_descriptions/18272/en">Bagle.AQ@mm</Alias>
+      <Alias source="Panda" url="http://www.pandasoftware.com/virus_info/encyclopedia/overview.aspx?idvirus=53891">Bagle.BC</Alias>
+      <Alias source="Sophos" url="http://www.sophos.com/virusinfo/analyses/w32bagleau.html">W32/Bagle-AU</Alias>
+      <Alias source="Symantec" url="http://securityresponse.symantec.com/avcenter/venc/data/w32.beagle.av@mm.html">W32.Beagle.AV@mm</Alias>
+      <Alias source="Trend Micro" url="http://www.trendmicro.com/vinfo/virusencyclo/default5.asp?VName=WORM_BAGLE.AT">WORM_BAGLE.AT</Alias>
+    </Aliases>
+  </CME>
+</CMEData>

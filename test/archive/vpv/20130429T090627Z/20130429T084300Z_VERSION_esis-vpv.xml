@@ -1,0 +1,1628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+  ESIS
+ 
+  Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+  Copyright (c) 2009-2010 Consulare sarl
+  
+  This file is part of ESIS.
+  
+  ESIS is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation version 3 of the License.
+  
+  ESIS is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+  
+  You should have received a copy of the GNU General Public License
+  along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ 
+ $Id: esis-vpv.xml 713 2010-05-26 09:39:28Z pleberre $
+-->
+<vpvs version="6M2">
+    <vendor name="RedHat">
+      <alias name="Red-Hat"/>
+      <alias name="Red Hat"/>
+    </vendor>
+    <vendor name="Novell">
+	  <alias name="SuSe" />
+      <alias name="S.u.S.E."/>
+      <alias name="S.u.S.E"/>
+    </vendor>
+    <vendor name="Symantec">
+      <alias name="Symantec Veritas"/>
+      <alias name="Veritas"/>
+      <alias name="Veritas Software"/>
+    </vendor>
+    <vendor name="Sendmail">
+      <alias name="Sendmail Inc."/>
+    </vendor>
+    <vendor name="CA">
+      <alias name="Computer Associates"/>
+    </vendor>
+    <vendor name="BEA">
+      <alias name="BEA Systems"/>
+    </vendor>
+    <vendor name="Check Point Software">
+      <alias name="Check Point"/>
+      <alias name="CheckPoint"/>
+      <alias name="CheckPoint Software"/>
+    </vendor>
+    <vendor name="SGI">
+        <alias name="Silicon"/>
+        <products>
+            <product name="IRIX"/>
+        </products>
+    </vendor>
+    <vendor name="Apple" hidden="false" active="false">
+        <products>
+            <product name="Mac OS X" hidden="false" active="false" type="Operating System">
+                <alias name="MacOS"/>
+                <alias name="Mac OS"/>
+                <version active="false">10.0</version>
+                <version active="false">10.0.1</version>
+                <version active="false">10.0.2</version>
+                <version active="false">10.0.3</version>
+                <version active="false">10.0.4</version>
+                <version active="false">10.1</version>
+                <version active="false">10.1.1</version>
+                <version active="false">10.1.2</version>
+                <version active="false">10.1.3</version>
+                <version active="false">10.1.4</version>
+                <version active="false">10.1.5</version>
+                <version active="false">10.2</version>
+                <version active="false">10.2.1</version>
+                <version active="false">10.2.2</version>
+                <version active="false">10.2.3</version>
+                <version active="false">10.2.4</version>
+                <version active="false">10.2.5</version>
+                <version active="false">10.2.6</version>
+                <version active="false">10.2.7</version>
+                <version active="false">10.2.8</version>
+                <version active="false">10.3</version>
+                <version active="false">10.3.1</version>
+                <version active="false">10.3.2</version>
+                <version active="false">10.3.3</version>
+                <version active="false">10.3.4</version>
+                <version active="false">10.3.5</version>
+                <version active="false">10.3.6</version>
+                <version active="false">10.3.7</version>
+                <version active="false">10.3.8</version>
+                <version active="false">10.3.9</version>
+                <version active="false">10.4</version>
+                <version active="false">10.4.1</version>
+                <version active="false">10.4.2</version>
+                <version active="false">10.4.3</version>
+                <version active="false">10.4.4</version>
+                <version active="false">10.4.5</version>
+                <version active="false">10.4.6</version>
+            </product>
+            <product name="Mac OS X Server" hidden="false" active="false" type="Operating System">
+                <version active="false">10.0</version>
+                <version active="false">10.1</version>
+                <version active="false">10.1.1</version>
+                <version active="false">10.1.2</version>
+                <version active="false">10.1.3</version>
+                <version active="false">10.1.4</version>
+                <version active="false">10.1.5</version>
+                <version active="false">10.2</version>
+                <version active="false">10.2.1</version>
+                <version active="false">10.2.2</version>
+                <version active="false">10.2.3</version>
+                <version active="false">10.2.4</version>
+                <version active="false">10.2.5</version>
+                <version active="false">10.2.6</version>
+                <version active="false">10.2.7</version>
+                <version active="false">10.2.8</version>
+                <version active="false">10.3</version>
+                <version active="false">10.3.1</version>
+                <version active="false">10.3.2</version>
+                <version active="false">10.3.3</version>
+                <version active="false">10.3.4</version>
+                <version active="false">10.3.5</version>
+                <version active="false">10.3.6</version>
+                <version active="false">10.3.7</version>
+                <version active="false">10.3.8</version>
+                <version active="false">10.3.9</version>
+                <version active="false">10.4</version>
+                <version active="false">10.4.1</version>
+                <version active="false">10.4.2</version>
+                <version active="false">10.4.3</version>
+                <version active="false">10.4.4</version>
+                <version active="false">10.4.5</version>
+                <version active="false">10.4.6</version>
+            </product>
+            <product name="QuickTime" hidden="false" active="false">
+                <version active="false">7.1 for Mac OS X</version>
+            </product>
+            <product name="QuickTime Player" hidden="false" active="false">
+                <version active="false">7.0.3</version>
+                <version active="false">7.0.4</version>
+            </product>
+            <product name="Safari" hidden="false" active="false">
+                <version active="false">1.0</version>
+                <version active="false">1.1</version>
+                <version active="false">1.2</version>
+                <version active="false">1.2.1</version>
+                <version active="false">1.2.2</version>
+                <version active="false">1.2.3</version>
+                <version active="false">1.3</version>
+                <version active="false">1.3.1</version>
+                <version active="false">2</version>
+                <version active="false">2.0</version>
+                <version active="false">2.0.1</version>
+                <version active="false">2.0.2</version>
+                <version active="false">2.0.3</version>
+            </product>
+            <product name="Safari RSS" hidden="false" active="false">
+                <version active="false">2.0 pre-release</version>
+            </product>
+            <product name="Software Update"/>
+            <product name="iTunes" hidden="false" active="false">
+                <version active="false">6.0.1</version>
+                <version active="false">6.0.2</version>
+            </product>
+        </products>
+    </vendor>
+    <vendor name="Cisco" hidden="false" active="false">
+        <alias name="Cisco Systems"/>
+		<alias name="Linksys" />
+        <products>
+            <product name="Aironet" hidden="false" active="false">
+                <version active="false">1100</version>
+                <version active="false">1130AG</version>
+                <version active="false">1200</version>
+                <version active="false">1230AG</version>
+                <version active="false">1240AG</version>
+                <version active="false">1300</version>
+                <version active="false">1400</version>
+                <version active="false">350</version>
+            </product>
+            <product name="Anomaly Guard Module" hidden="false" active="false">
+                <version active="false">5.0(1)</version>
+                <version active="false">5.0(3)</version>
+            </product>
+            <product name="Application Velocity System" hidden="false" active="false">
+                <version active="false">3110</version>
+                <version active="false">3120</version>
+            </product>
+            <product name="CS-MARS" hidden="false" active="false">
+                <version active="false">4.1</version>
+                <version active="false">4.1.2</version>
+            </product>
+            <product name="Call Manager" hidden="false" active="false">
+                <version active="false">1.0</version>
+                <version active="false">2.0</version>
+                <version active="false">3.0</version>
+                <version active="false">3.1</version>
+                <version active="false">3.2</version>
+                <version active="false">3.3</version>
+                <version active="false">3.3 (3)ES61</version>
+                <version active="false">3.3 (4)ES25</version>
+                <version active="false">3.3 (5)ES30</version>
+                <version active="false">4.0</version>
+                <version active="false">4.0 (2a)ES40</version>
+                <version active="false">4.0 (2a)ES62</version>
+                <version active="false">4.0 (2a)SR2b</version>
+                <version active="false">4.1 (2)ES33</version>
+                <version active="false">4.1 (2)ES55</version>
+                <version active="false">4.1 (3)ES07</version>
+                <version active="false">4.1 (3)ES32</version>
+                <version active="false">4.1 (3)SR1</version>
+            </product>
+            <product name="CiscoWorks 2000 Service Management Solution"
+                hidden="false" active="false"/>
+            <product name="Content Service Switch" hidden="false" active="false">
+                <version active="false">11500</version>
+            </product>
+            <product name="Ethernet Subscriber Solution Engine"
+                hidden="false" active="false"/>
+            <product name="FWSM" hidden="false" active="false">
+                <version active="false">2.3</version>
+                <version active="false">3.1</version>
+            </product>
+            <product name="Guard" hidden="false" active="false">
+                <version active="false">5.0(1)</version>
+                <version active="false">5.0(3)</version>
+            </product>
+            <product name="Hosting Solution Engine" hidden="false" active="false">
+                <version active="false">1.7</version>
+                <version active="false">1.7.0</version>
+                <version active="false">1.7.1</version>
+                <version active="false">1.7.2</version>
+                <version active="false">1.7.3</version>
+            </product>
+            <product name="IOS" hidden="false" active="false">
+                <version active="false">12.0</version>
+                <version active="false">12.0 S</version>
+                <version active="false">12.0 SC</version>
+                <version active="false">12.0 T</version>
+                <version active="false">12.0 XA</version>
+                <version active="false">12.0 XC</version>
+                <version active="false">12.0 XD</version>
+                <version active="false">12.0 XE</version>
+                <version active="false">12.0 XG</version>
+                <version active="false">12.0 XH</version>
+                <version active="false">12.0 XI</version>
+                <version active="false">12.0 XJ</version>
+                <version active="false">12.0 XK</version>
+                <version active="false">12.0 XL</version>
+                <version active="false">12.0 XN</version>
+                <version active="false">12.0 XR</version>
+                <version active="false">12.0T</version>
+                <version active="false">12.0XH</version>
+                <version active="false">12.0XK</version>
+                <version active="false">12.0XL</version>
+                <version active="false">12.0XN</version>
+                <version active="false">12.0XR</version>
+                <version active="false">12.1</version>
+                <version active="false">12.1 AA</version>
+                <version active="false">12.1 E</version>
+                <version active="false">12.1 EC</version>
+                <version active="false">12.1 EX</version>
+                <version active="false">12.1 EZ</version>
+                <version active="false">12.1 GA</version>
+                <version active="false">12.1 GB</version>
+                <version active="false">12.1 T</version>
+                <version active="false">12.1 XA</version>
+                <version active="false">12.1 XD</version>
+                <version active="false">12.1 XH</version>
+                <version active="false">12.1 XI</version>
+                <version active="false">12.1 XL</version>
+                <version active="false">12.1 XM</version>
+                <version active="false">12.1 XQ</version>
+                <version active="false">12.1 XS</version>
+                <version active="false">12.1 XU</version>
+                <version active="false">12.1 XW</version>
+                <version active="false">12.1 XX</version>
+                <version active="false">12.1 XY</version>
+                <version active="false">12.1 XZ</version>
+                <version active="false">12.1 YA</version>
+                <version active="false">12.1 YB</version>
+                <version active="false">12.1 YD</version>
+                <version active="false">12.1AA</version>
+                <version active="false">12.1E</version>
+                <version active="false">12.1EC</version>
+                <version active="false">12.1EZ</version>
+                <version active="false">12.1GA</version>
+                <version active="false">12.1GB</version>
+                <version active="false">12.1T</version>
+                <version active="false">12.1XA</version>
+                <version active="false">12.1XE</version>
+                <version active="false">12.1XH</version>
+                <version active="false">12.1XI</version>
+                <version active="false">12.1XJ</version>
+                <version active="false">12.1XL</version>
+                <version active="false">12.1XM</version>
+                <version active="false">12.1XP</version>
+                <version active="false">12.1XQ</version>
+                <version active="false">12.1XS</version>
+                <version active="false">12.1XT</version>
+                <version active="false">12.1XU</version>
+                <version active="false">12.1XV</version>
+                <version active="false">12.1XW</version>
+                <version active="false">12.1XY</version>
+                <version active="false">12.1XZ</version>
+                <version active="false">12.1YA</version>
+                <version active="false">12.1YB</version>
+                <version active="false">12.1YD</version>
+                <version active="false">12.1YE</version>
+                <version active="false">12.1YF</version>
+                <version active="false">12.1YH</version>
+                <version active="false">12.1YI</version>
+                <version active="false">12.2</version>
+                <version active="false">12.2 B</version>
+                <version active="false">12.2 BC</version>
+                <version active="false">12.2 BW</version>
+                <version active="false">12.2 BY</version>
+                <version active="false">12.2 CX</version>
+                <version active="false">12.2 DD</version>
+                <version active="false">12.2 DX</version>
+                <version active="false">12.2 MC</version>
+                <version active="false">12.2 S</version>
+                <version active="false">12.2 SU</version>
+                <version active="false">12.2 SY</version>
+                <version active="false">12.2 SZ</version>
+                <version active="false">12.2 T</version>
+                <version active="false">12.2 XA</version>
+                <version active="false">12.2 XB</version>
+                <version active="false">12.2 XC</version>
+                <version active="false">12.2 XF</version>
+                <version active="false">12.2 XG</version>
+                <version active="false">12.2 XK</version>
+                <version active="false">12.2 XL</version>
+                <version active="false">12.2 XS</version>
+                <version active="false">12.2 XT</version>
+                <version active="false">12.2 XV</version>
+                <version active="false">12.2 YD</version>
+                <version active="false">12.2 YE</version>
+                <version active="false">12.2 YN</version>
+                <version active="false">12.2 YT</version>
+                <version active="false">12.2 YW</version>
+                <version active="false">12.2 YX</version>
+                <version active="false">12.2 YY</version>
+                <version active="false">12.2 YZ</version>
+                <version active="false">12.2 ZA</version>
+                <version active="false">12.2 ZB</version>
+                <version active="false">12.2 ZD</version>
+                <version active="false">12.2 ZE</version>
+                <version active="false">12.2 ZJ</version>
+                <version active="false">12.2 ZN</version>
+                <version active="false">12.2(25)S</version>
+                <version active="false">12.2B</version>
+                <version active="false">12.2BW</version>
+                <version active="false">12.2BY</version>
+                <version active="false">12.2DD</version>
+                <version active="false">12.2DX</version>
+                <version active="false">12.2MX</version>
+                <version active="false">12.2N</version>
+                <version active="false">12.2S</version>
+                <version active="false">12.2SU</version>
+                <version active="false">12.2SW</version>
+                <version active="false">12.2SXB</version>
+                <version active="false">12.2SXD</version>
+                <version active="false">12.2SXE</version>
+                <version active="false">12.2SZ</version>
+                <version active="false">12.2XA</version>
+                <version active="false">12.2XB</version>
+                <version active="false">12.2XC</version>
+                <version active="false">12.2XD</version>
+                <version active="false">12.2XG</version>
+                <version active="false">12.2XH</version>
+                <version active="false">12.2XJ</version>
+                <version active="false">12.2XK</version>
+                <version active="false">12.2XL</version>
+                <version active="false">12.2XM</version>
+                <version active="false">12.2XQ</version>
+                <version active="false">12.2XS</version>
+                <version active="false">12.2XT</version>
+                <version active="false">12.2XU</version>
+                <version active="false">12.2XV</version>
+                <version active="false">12.2XW</version>
+                <version active="false">12.2YB</version>
+                <version active="false">12.2YC</version>
+                <version active="false">12.2YD</version>
+                <version active="false">12.2YE</version>
+                <version active="false">12.2YH</version>
+                <version active="false">12.2YK</version>
+                <version active="false">12.2YL</version>
+                <version active="false">12.2YM</version>
+                <version active="false">12.2YN</version>
+                <version active="false">12.2YT</version>
+                <version active="false">12.2YU</version>
+                <version active="false">12.2YW</version>
+                <version active="false">12.2YX</version>
+                <version active="false">12.2YY</version>
+                <version active="false">12.2YZ</version>
+                <version active="false">12.2ZB</version>
+                <version active="false">12.2ZC</version>
+                <version active="false">12.2ZD</version>
+                <version active="false">12.2ZE</version>
+                <version active="false">12.2ZF</version>
+                <version active="false">12.2ZH</version>
+                <version active="false">12.2ZJ</version>
+                <version active="false">12.2ZL</version>
+                <version active="false">12.2ZN</version>
+                <version active="false">12.2ZP</version>
+                <version active="false">12.3</version>
+                <version active="false">12.3 B</version>
+                <version active="false">12.3 BC</version>
+                <version active="false">12.3 BW</version>
+                <version active="false">12.3 T</version>
+                <version active="false">12.3 XB</version>
+                <version active="false">12.3 XD</version>
+                <version active="false">12.3 XF</version>
+                <version active="false">12.3 XH</version>
+                <version active="false">12.3 XI</version>
+                <version active="false">12.3 XJ</version>
+                <version active="false">12.3 XM</version>
+                <version active="false">12.3 XQ</version>
+                <version active="false">12.3 XU</version>
+                <version active="false">12.3 XW</version>
+                <version active="false">12.3 YF</version>
+                <version active="false">12.3 YG</version>
+                <version active="false">12.3 YJ</version>
+                <version active="false">12.3 YK</version>
+                <version active="false">12.3 YM</version>
+                <version active="false">12.3 YQ</version>
+                <version active="false">12.3 YT</version>
+                <version active="false">12.3 YU</version>
+                <version active="false">12.3 YX</version>
+                <version active="false">12.3(11)YK2</version>
+                <version active="false">12.3(11)YL</version>
+                <version active="false">12.3B</version>
+                <version active="false">12.3T</version>
+                <version active="false">12.3XA</version>
+                <version active="false">12.3XB</version>
+                <version active="false">12.3XD</version>
+                <version active="false">12.3XE</version>
+                <version active="false">12.3XF</version>
+                <version active="false">12.3XG</version>
+                <version active="false">12.3XH</version>
+                <version active="false">12.3XI</version>
+                <version active="false">12.3XJ</version>
+                <version active="false">12.3XK</version>
+                <version active="false">12.3XM</version>
+                <version active="false">12.3XQ</version>
+                <version active="false">12.3XR</version>
+                <version active="false">12.3XW</version>
+                <version active="false">12.3XY</version>
+                <version active="false">12.3YA</version>
+                <version active="false">12.3YB</version>
+                <version active="false">12.3YF</version>
+                <version active="false">12.3YG</version>
+                <version active="false">12.3YH</version>
+                <version active="false">12.3YI</version>
+                <version active="false">12.3YJ</version>
+                <version active="false">12.3YK</version>
+                <version active="false">12.3YM</version>
+                <version active="false">12.3YQ</version>
+                <version active="false">12.3YS</version>
+                <version active="false">12.3YT</version>
+                <version active="false">12.3YU</version>
+                <version active="false">12.3YX</version>
+                <version active="false">12.4</version>
+                <version active="false">12.4 MR</version>
+                <version active="false">12.4 T</version>
+                <version active="false">12.4 XA</version>
+                <version active="false">12.4 XB</version>
+                <version active="false">12.4MR</version>
+                <version active="false">12.4T</version>
+            </product>
+            <product name="IOS XR" hidden="false" active="false">
+                <version active="false">3.0.1</version>
+                <version active="false">3.1.0</version>
+                <version active="false">3.2</version>
+                <version active="false">3.2.1</version>
+                <version active="false">3.2.2</version>
+                <version active="false">3.2.4</version>
+                <version active="false">3.2.50</version>
+            </product>
+            <product name="IOS XR for CRS-1" hidden="false" active="false">
+                <version active="false">3.2.3</version>
+            </product>
+            <product name="IOS XR for PRP" hidden="false" active="false">
+                <version active="false">3.2.3</version>
+            </product>
+            <product name="IP Phone" hidden="false" active="false">
+                <version active="false">7940</version>
+            </product>
+            <product name="ONS 15310-CL Series" hidden="false" active="false">
+                <version active="false">0</version>
+            </product>
+            <product name="ONS 15327" hidden="false" active="false">
+                <version active="false">3.0</version>
+                <version active="false">3.1</version>
+                <version active="false">3.2</version>
+                <version active="false">3.3</version>
+                <version active="false">3.4</version>
+                <version active="false">4.0</version>
+                <version active="false">4.1</version>
+                <version active="false">4.14</version>
+                <version active="false">4.6</version>
+            </product>
+            <product name="ONS 15454" hidden="false" active="false">
+                <version active="false">0</version>
+            </product>
+            <product name="ONS 15454 MSPP" hidden="false" active="false"/>
+            <product name="ONS 15454 MSTP" hidden="false" active="false"/>
+            <product name="ONS 15600" hidden="false" active="false">
+                <version active="false">1.0</version>
+                <version active="false">1.1</version>
+                <version active="false">1.3</version>
+            </product>
+            <product name="ONS 15600 Series" hidden="false" active="false">
+                <version active="false">0</version>
+            </product>
+            <product name="PIX Firewall" hidden="false" active="false">
+                <version active="false">2.7</version>
+                <version active="false">3.0</version>
+                <version active="false">3.1</version>
+                <version active="false">4.0</version>
+                <version active="false">4.1.6</version>
+                <version active="false">4.1.6 b</version>
+                <version active="false">4.2</version>
+                <version active="false">4.2.1</version>
+                <version active="false">4.2.2</version>
+                <version active="false">4.3</version>
+                <version active="false">4.4</version>
+                <version active="false">5.0</version>
+                <version active="false">5.1</version>
+                <version active="false">5.1.4</version>
+                <version active="false">5.2</version>
+                <version active="false">5.3</version>
+                <version active="false">525</version>
+                <version active="false">6.0</version>
+                <version active="false">6.0.3</version>
+                <version active="false">6.0.4</version>
+                <version active="false">6.1</version>
+                <version active="false">6.1.3</version>
+                <version active="false">6.1.4</version>
+                <version active="false">6.1.5</version>
+                <version active="false">6.2</version>
+                <version active="false">6.2.1</version>
+                <version active="false">6.2.2</version>
+                <version active="false">6.2.2.111</version>
+                <version active="false">6.2.3</version>
+                <version active="false">6.3</version>
+                <version active="false">6.3.1</version>
+                <version active="false">6.3.2</version>
+                <version active="false">6.3.3</version>
+            </product>
+            <product name="PIX/ASA" hidden="false" active="false">
+                <version active="false">7.0</version>
+                <version active="false">7.0.1.4</version>
+                <version active="false">7.0.4</version>
+                <version active="false">7.0.4.3</version>
+            </product>
+            <product name="Secure ACS for Windows NT" hidden="false" active="false">
+                <version active="false">3.0</version>
+                <version active="false">3.0.1</version>
+                <version active="false">3.0.3</version>
+                <version active="false">3.1</version>
+                <version active="false">3.1.1</version>
+                <version active="false">3.2</version>
+                <version active="false">3.3</version>
+            </product>
+            <product name="Secure ACS for Windows Server" hidden="false" active="false">
+                <version active="false">3.2</version>
+            </product>
+            <product name="Traffic Anomaly Detector" hidden="false" active="false">
+                <version active="false">5.0(1)</version>
+                <version active="false">5.0(3)</version>
+            </product>
+            <product name="Traffic Anomaly Detector Module"
+                hidden="false" active="false">
+                <version active="false">5.0(1)</version>
+                <version active="false">5.0(3)</version>
+            </product>
+            <product name="Transport Controller" hidden="false" active="false">
+                <version active="false">4.0.x</version>
+            </product>
+            <product name="Unity Express" hidden="false" active="false">
+                <version active="false">1.1(1)</version>
+                <version active="false">2.1(1)</version>
+                <version active="false">2.2(2)</version>
+            </product>
+            <product name="User Registration Tool" hidden="false" active="false"/>
+            <product name="VPN 3005 Concentrator" hidden="false" active="false">
+                <version active="false">4.7</version>
+                <version active="false">4.7 REL</version>
+                <version active="false">4.7.1</version>
+                <version active="false">4.7.1 F</version>
+                <version active="false">4.7.2</version>
+                <version active="false">4.7.2 A</version>
+            </product>
+            <product name="VPN 3015 Concentrator" hidden="false" active="false">
+                <version active="false">4.7</version>
+                <version active="false">4.7 REL</version>
+                <version active="false">4.7.1</version>
+                <version active="false">4.7.1 F</version>
+                <version active="false">4.7.2</version>
+                <version active="false">4.7.2 A</version>
+            </product>
+            <product name="VPN 3020 Concentrator" hidden="false" active="false">
+                <version active="false">4.7</version>
+                <version active="false">4.7 REL</version>
+                <version active="false">4.7.1</version>
+                <version active="false">4.7.1 F</version>
+                <version active="false">4.7.2</version>
+                <version active="false">4.7.2 A</version>
+            </product>
+            <product name="VPN 3030 Concentrator" hidden="false" active="false">
+                <version active="false">4.7</version>
+                <version active="false">4.7 REL</version>
+                <version active="false">4.7.1</version>
+                <version active="false">4.7.1 F</version>
+                <version active="false">4.7.2</version>
+                <version active="false">4.7.2 A</version>
+            </product>
+            <product name="VPN 3060 Concentrator" hidden="false" active="false">
+                <version active="false">4.7</version>
+                <version active="false">4.7 REL</version>
+                <version active="false">4.7.1</version>
+                <version active="false">4.7.1 F</version>
+                <version active="false">4.7.2</version>
+                <version active="false">4.7.2 A</version>
+            </product>
+            <product name="VPN 3080 Concentrator" hidden="false" active="false">
+                <version active="false">4.7</version>
+                <version active="false">4.7 REL</version>
+                <version active="false">4.7.1</version>
+                <version active="false">4.7.1 F</version>
+                <version active="false">4.7.2 A</version>
+            </product>
+            <product name="Wireless LAN Solution Engine" hidden="false" active="false">
+                <version active="false">2.0</version>
+                <version active="false">2.1</version>
+                <version active="false">2.10</version>
+                <version active="false">2.11</version>
+                <version active="false">2.12</version>
+                <version active="false">2.13</version>
+                <version active="false">2.2</version>
+                <version active="false">2.3</version>
+                <version active="false">2.4</version>
+                <version active="false">2.5</version>
+                <version active="false">2.6</version>
+                <version active="false">2.7</version>
+                <version active="false">2.8</version>
+                <version active="false">2.9</version>
+            </product>
+        </products>
+    </vendor>
+    <vendor name="FreeBSD" hidden="false" active="false">
+        <products>
+            <product name="FreeBSD" hidden="false" active="false" type="Operating System">
+                <version active="false">1.1.5.1</version>
+                <version active="false">2.0</version>
+                <version active="false">2.0.5</version>
+                <version active="false">2.1</version>
+                <version active="false">2.1.5</version>
+                <version active="false">2.1.6</version>
+                <version active="false">2.1.6 .1</version>
+                <version active="false">2.1.7 .1</version>
+                <version active="false">2.1.x</version>
+                <version active="false">2.2</version>
+                <version active="false">2.2.2</version>
+                <version active="false">2.2.3</version>
+                <version active="false">2.2.4</version>
+                <version active="false">2.2.5</version>
+                <version active="false">2.2.6</version>
+                <version active="false">2.2.8</version>
+                <version active="false">2.2.x</version>
+                <version active="false">2.x</version>
+                <version active="false">3.0</version>
+                <version active="false">3.0-RELENG</version>
+                <version active="false">3.1</version>
+                <version active="false">3.1.x</version>
+                <version active="false">3.2</version>
+                <version active="false">3.2.x</version>
+                <version active="false">3.3</version>
+                <version active="false">3.3.x</version>
+                <version active="false">3.4</version>
+                <version active="false">3.4.x</version>
+                <version active="false">3.5</version>
+                <version active="false">3.5-STABLE</version>
+                <version active="false">3.5-STABLEpre050201</version>
+                <version active="false">3.5-STABLEpre122300</version>
+                <version active="false">3.5.1</version>
+                <version active="false">3.5.1-RELEASE</version>
+                <version active="false">3.5.1-STABLE</version>
+                <version active="false">3.5.1-STABLEpre2001-07-20</version>
+                <version active="false">3.5.x</version>
+                <version active="false">3.x</version>
+                <version active="false">4.0</version>
+                <version active="false">4.0-RELENG</version>
+                <version active="false">4.0.x</version>
+                <version active="false">4.1</version>
+                <version active="false">4.1.1</version>
+                <version active="false">4.1.1-RELEASE</version>
+                <version active="false">4.1.1-STABLE</version>
+                <version active="false">4.10</version>
+                <version active="false">4.10-PRERELEASE</version>
+                <version active="false">4.10-RELEASE</version>
+                <version active="false">4.10-RELEASE-p8</version>
+                <version active="false">4.10-RELENG</version>
+                <version active="false">4.11-RELEASE-p3</version>
+                <version active="false">4.11-RELENG</version>
+                <version active="false">4.11-STABLE</version>
+                <version active="false">4.2</version>
+                <version active="false">4.2-RELEASE</version>
+                <version active="false">4.2-STABLE</version>
+                <version active="false">4.2-STABLEpre050201</version>
+                <version active="false">4.2-STABLEpre122300</version>
+                <version active="false">4.3</version>
+                <version active="false">4.3-RELEASE</version>
+                <version active="false">4.3-RELEASE-p38</version>
+                <version active="false">4.3-RELENG</version>
+                <version active="false">4.3-STABLE</version>
+                <version active="false">4.4</version>
+                <version active="false">4.4-RELEASE-p42</version>
+                <version active="false">4.4-RELENG</version>
+                <version active="false">4.4-STABLE</version>
+                <version active="false">4.5</version>
+                <version active="false">4.5-RELEASE</version>
+                <version active="false">4.5-RELEASE-p32</version>
+                <version active="false">4.5-RELENG</version>
+                <version active="false">4.5-STABLE</version>
+                <version active="false">4.5-STABLEpre2002-03-07</version>
+                <version active="false">4.6</version>
+                <version active="false">4.6-RELEASE</version>
+                <version active="false">4.6-RELEASE-p20</version>
+                <version active="false">4.6-RELENG</version>
+                <version active="false">4.6-STABLE</version>
+                <version active="false">4.6.2</version>
+                <version active="false">4.7</version>
+                <version active="false">4.7-RELEASE</version>
+                <version active="false">4.7-RELEASE-p17</version>
+                <version active="false">4.7-RELENG</version>
+                <version active="false">4.7-STABLE</version>
+                <version active="false">4.8</version>
+                <version active="false">4.8-PRERELEASE</version>
+                <version active="false">4.8-RELEASE-p7</version>
+                <version active="false">4.8-RELENG</version>
+                <version active="false">4.9</version>
+                <version active="false">4.9-PRERELEASE</version>
+                <version active="false">4.9-RELENG</version>
+                <version active="false">5.0</version>
+                <version active="false">5.0-RELEASE-p14</version>
+                <version active="false">5.0-RELENG</version>
+                <version active="false">5.1</version>
+                <version active="false">5.1-RELEASE</version>
+                <version active="false">5.1-RELEASE-p5</version>
+                <version active="false">5.1-RELEASE/Alpha</version>
+                <version active="false">5.1-RELENG</version>
+                <version active="false">5.2</version>
+                <version active="false">5.2-RELEASE</version>
+                <version active="false">5.2-RELENG</version>
+                <version active="false">5.2.1-RELEASE</version>
+                <version active="false">5.3</version>
+                <version active="false">5.3-RELEASE</version>
+                <version active="false">5.3-RELENG</version>
+                <version active="false">5.3-STABLE</version>
+                <version active="false">5.4</version>
+                <version active="false">5.4-PRERELEASE</version>
+                <version active="false">5.4-RELEASE</version>
+                <version active="false">5.4-RELENG</version>
+                <version active="false">5.4-STABLE</version>
+                <version active="false">6.0</version>
+                <version active="false">6.0-RELEASE</version>
+                <version active="false">6.0-STABLE</version>
+            </product>
+        </products>
+    </vendor>
+    <vendor name="HP" hidden="false" active="false">
+        <alias name="Hewlett-Packard"/>
+        <alias name="H-P"/>
+        <alias name="Hewlett Packard"/>
+        <alias name="Compaq"/>
+		<alias name="3Com" />
+        <products>
+	<product name="NonStop" hidden="false" active="false"/>
+            <product name="Color LaserJet" hidden="false" active="false">
+                <version active="false">2500</version>
+                <version active="false">2500L</version>
+                <version active="false">2500Lse</version>
+                <version active="false">2500n</version>
+                <version active="false">2500tn</version>
+                <version active="false">4600</version>
+                <version active="false">4600dn</version>
+                <version active="false">4600dtn</version>
+                <version active="false">4600hdn</version>
+            </product>
+            <product name="CompaqHTTPServer/9.9" hidden="false" active="false">
+                <version active="false">x</version>
+            </product>
+            <product name="HP-UX" hidden="false" active="false" type="Operating System">
+                <alias name="HPUX"/>
+                <version active="false">B.11.00</version>
+                <version active="false">B.11.04</version>
+                <version active="false">B.11.11</version>
+                <version active="false">B.11.23</version>
+            </product>
+            <product name="PSC 1210 All-in-One" hidden="false" active="false">
+                <version active="false">1.0</version>
+                <version active="false">1.0.0.1</version>
+            </product>
+            <product name="StorageWorks Secure Path" hidden="false" active="false">
+                <version active="false">4.0C-SP2 for Windows</version>
+            </product>
+            <product name="System Management Homepage" hidden="false" active="false">
+                <version active="false">2.0.0</version>
+                <version active="false">2.1.3.132</version>
+                <version active="false">2.1.4</version>
+            </product>
+            <product name="Systems Insight Manager" hidden="false" active="false">
+                <version active="false">4.2</version>
+                <version active="false">4.2 SP1</version>
+                <version active="false">4.2 SP2</version>
+                <version active="false">5.0</version>
+                <version active="false">5.0 SP1</version>
+                <version active="false">5.0 SP2</version>
+                <version active="false">5.0 SP3</version>
+            </product>
+            <product name="Tru64 UNIX" hidden="false" active="false" type="Operating System">
+                <alias name="Digital Unix"/>
+                <alias name="True64"/>
+                <version active="false">4.0F PK8</version>
+                <version active="false">4.0G PK4</version>
+                <version active="false">5.1A PK6</version>
+                <version active="false">5.1B-2/PK4</version>
+                <version active="false">5.1B-3</version>
+            </product>
+        </products>
+    </vendor>
+    <vendor name="IBM" hidden="false" active="false">
+        <alias name="Lotus"/>
+        <products>
+            <product name="AIX" hidden="false" active="false" type="Operating System">
+                <version active="false">4.3.3</version>
+                <version active="false">5.1</version>
+                <version active="false">5.1 L</version>
+                <version active="false">5.1L</version>
+                <version active="false">5.2</version>
+                <version active="false">5.2 L</version>
+                <version active="false">5.2.0.50</version>
+                <version active="false">5.2.0.54</version>
+                <version active="false">5.2.2</version>
+                <version active="false">5.3</version>
+                <version active="false">5.3 L</version>
+                <version active="false">5.3 ML03</version>
+                <version active="false">5.3.0</version>
+                <version active="false">5.3.0.10</version>
+                <version active="false">5.3.0.20</version>
+            </product>
+            <product name="Lotus Domino" hidden="false" active="false">
+                <version active="false">6.5.0</version>
+                <version active="false">6.5.1</version>
+                <version active="false">6.5.2</version>
+                <version active="false">6.5.3</version>
+                <version active="false">6.5.4</version>
+                <version active="false">6.5.4 FP 1</version>
+                <version active="false">6.5.4 FP 2</version>
+            </product>
+            <product name="Lotus Domino Enterprise Server"
+                hidden="false" active="false">
+                <version active="false">6.5.2</version>
+                <version active="false">6.5.4</version>
+            </product>
+            <product name="Lotus Domino Server" hidden="false" active="false">
+                <version active="false">7.0</version>
+            </product>
+            <product name="Lotus Domino iNotes Client" hidden="false" active="false">
+                <version active="false">6.5.4</version>
+                <version active="false">7.0</version>
+            </product>
+            <product name="Lotus Notes" hidden="false" active="false">
+                <version active="false">6.0</version>
+                <version active="false">6.5</version>
+                <version active="false">6.5.1</version>
+                <version active="false">6.5.2</version>
+                <version active="false">6.5.3</version>
+                <version active="false">6.5.4</version>
+            </product>
+            <product name="Tivoli Access Manager for e-business"
+                hidden="false" active="false">
+                <version active="false">5.1.0.10</version>
+                <version active="false">6.0.0</version>
+            </product>
+            <product name="Tivoli Business Systems Manager"
+                hidden="false" active="false">
+                <version active="false">3.1</version>
+            </product>
+            <product name="Tivoli Directory Server" hidden="false" active="false">
+                <version active="false">6.0</version>
+            </product>
+            <product name="WebSphere Application Server" hidden="false" active="false">
+                <version active="false">4.0.1</version>
+                <version active="false">4.0.2</version>
+                <version active="false">4.0.3</version>
+                <version active="false">5.0.0</version>
+                <version active="false">5.0.1</version>
+                <version active="false">5.0.2</version>
+                <version active="false">5.0.2.1</version>
+                <version active="false">5.0.2.10</version>
+                <version active="false">5.0.2.11</version>
+                <version active="false">5.0.2.12</version>
+                <version active="false">5.0.2.13</version>
+                <version active="false">5.0.2.14</version>
+                <version active="false">5.0.2.2</version>
+                <version active="false">5.0.2.3</version>
+                <version active="false">5.0.2.4</version>
+                <version active="false">5.0.2.5</version>
+                <version active="false">5.0.2.6</version>
+                <version active="false">5.0.2.7</version>
+                <version active="false">5.0.2.8</version>
+                <version active="false">5.0.2.9</version>
+                <version active="false">5.1.0</version>
+                <version active="false">5.1.1</version>
+                <version active="false">5.1.1.1</version>
+                <version active="false">5.1.1.2</version>
+                <version active="false">5.1.1.3</version>
+                <version active="false">5.1.1.4</version>
+                <version active="false">5.1.1.5</version>
+                <version active="false">5.1.1.6</version>
+                <version active="false">5.1.1.7</version>
+                <version active="false">5.1.1.8</version>
+                <version active="false">5.1.1.9</version>
+                <version active="false">6.0.2</version>
+                <version active="false">6.0.2.1</version>
+                <version active="false">6.0.2.2</version>
+                <version active="false">6.0.2.3</version>
+                <version active="false">6.0.2.4</version>
+                <version active="false">6.0.2.5</version>
+                <version active="false">6.0.2.6</version>
+                <version active="false">6.0.2.7</version>
+            </product>
+            <product name="Websphere" hidden="false" active="false">
+                <version active="false">5.1.1</version>
+            </product>
+        </products>
+    </vendor>
+    <vendor name="Microsoft" hidden="false" active="false">
+        <products>
+            <product name=".NET Framework" hidden="false" active="false">
+                <version active="false">1.0</version>
+                <version active="false">1.0 SDK</version>
+                <version active="false">1.1</version>
+                <version active="false">1.1 SDK</version>
+            </product>
+            <product name=".NET Framework SDK" hidden="false" active="false">
+                <version active="false">1.0</version>
+                <version active="false">1.1</version>
+            </product>
+            <product name="ASP.NET" hidden="false" active="false">
+                <version active="false">1.0</version>
+                <version active="false">1.1</version>
+            </product>
+            <product name="Commerce Server" hidden="false" active="false">
+                <version active="false">2002</version>
+            </product>
+            <product name="Distributed Transaction Coordinator"
+                hidden="false" active="false"/>
+            <product name="Excel" hidden="false" active="false">
+                <version active="false">2000</version>
+                <version active="false">2002</version>
+                <version active="false">2003</version>
+                <version active="false">2004</version>
+                <version active="false">X for Mac</version>
+            </product>
+            <product name="Exchange Server" hidden="false" active="false">
+                <version active="false">2000</version>
+                <version active="false">2003</version>
+                <version active="false">5.0</version>
+                <version active="false">5.5</version>
+            </product>
+            <product name="FrontPage Server Extensions" hidden="false" active="false">
+                <version active="false">2002</version>
+            </product>
+            <product name="HTML Help" hidden="false" active="false">
+                <version active="false">1.4 SDK</version>
+            </product>
+            <product name="HTML Help Workshop" hidden="false" active="false">
+                <version active="false">4.74.8702.0</version>
+            </product>
+            <product name="ISA Server" hidden="false" active="false">
+                <version active="false">2004</version>
+            </product>
+            <product name="Infotech Storage System Libary"
+                hidden="false" active="false"/>
+            <product name="Internet Explorer" hidden="false" active="false">
+                <alias name="IE"/>
+                <version active="false">5.0</version>
+                <version active="false">5.0 for Windows 2000</version>
+                <version active="false">5.0 for Windows 95</version>
+                <version active="false">5.0 for Windows 98</version>
+                <version active="false">5.0 for Windows NT 4.0</version>
+                <version active="false">5.0.1</version>
+                <version active="false">5.0.1 for Windows 2000</version>
+                <version active="false">5.0.1 for Windows 95</version>
+                <version active="false">5.0.1 for Windows 98</version>
+                <version active="false">5.0.1 for Windows NT 4.0</version>
+                <version active="false">5.01</version>
+                <version active="false">5.01 for Microsoft Windows 2000</version>
+                <version active="false">5.1</version>
+                <version active="false">5.1 for MacOS</version>
+                <version active="false">5.2.3 for Macintosh</version>
+                <version active="false">5.5</version>
+                <version active="false">5.5 preview</version>
+                <version active="false">6</version>
+                <version active="false">6.0</version>
+                <version active="false">6.0 for Windows Server 2003</version>
+                <version active="false">6.0 for Windows XP</version>
+                <version active="false">6.0.2600</version>
+                <version active="false">6.0.2600.0</version>
+                <version active="false">6.0.2800</version>
+                <version active="false">6.0.2800.1106</version>
+                <version active="false">6.0.2900.2180</version>
+                <version active="false">7.0 Beta 2</version>
+                <version active="false">7.0 Beta1</version>
+                <version active="false">7.0 Beta2</version>
+            </product>
+            <product name="MDAC" hidden="false" active="false">
+                <version active="false">2.5</version>
+                <version active="false">2.7</version>
+                <version active="false">2.8</version>
+                <version active="false">2.8.0</version>
+            </product>
+            <product name="MSXML"/>
+            <product name="MSN Messenger Service" hidden="false" active="false">
+                <version active="false">7.5</version>
+            </product>
+            <product name="Windows Messenger"/>
+            <product name="Windows Live Messenger"/>
+            <product name="MSN Messenger"/>     
+            <product name="Office" hidden="false" active="false">
+                <version active="false">2000</version>
+                <version active="false">2003</version>
+                <version active="false">2004</version>
+                <version active="false">X for Mac</version>
+                <version active="false">XP</version>
+                <version active="false">XP SP1</version>
+                <version active="false">XP SP2</version>
+                <version active="false">XP SP3</version>
+            </product>
+            <product name="Outlook" hidden="false" active="false">
+                <version active="false">2000</version>
+                <version active="false">2002</version>
+                <version active="false">2003</version>
+            </product>
+            <product name="Operations Manager">
+                <version active="false">2005</version>
+            </product>
+            <product name="System Center Operations Manager">
+                <version active="false">2007</version>
+            </product>
+            <product name="Outlook Express" hidden="false" active="false">
+                <version active="false">5.5</version>
+                <version active="false">6.0</version>
+            </product>
+            <product name="Project"/>
+            <product name="SharePoint Team Services" hidden="false" active="false"/>
+            <product name="SQL Server" hidden="false" active="false"/>
+            <product name="Visual InterDev" hidden="false" active="false">
+                <version active="false">6.0</version>
+            </product>
+            <product name="Visual Studio" hidden="false" active="false">
+                <version active="false">2005</version>
+                <version active="false">6.0</version>
+            </product>
+            <product name="Virtual PC"/>
+            <product name="Virtual Server"/>
+            <product name="Windows 2000" hidden="false" active="false" type="Operating System">
+                <version active="false">2000</version>
+                <version active="false">Advanced Server</version>
+                <version active="false">Advanced Server SP1</version>
+                <version active="false">Advanced Server SP2</version>
+                <version active="false">Advanced Server SP3</version>
+                <version active="false">Advanced Server SP4</version>
+                <version active="false">Datacenter Server</version>
+                <version active="false">Datacenter Server SP1</version>
+                <version active="false">Datacenter Server SP2</version>
+                <version active="false">Datacenter Server SP3</version>
+                <version active="false">Datacenter Server SP4</version>
+                <version active="false">Professional</version>
+                <version active="false">Professional SP1</version>
+                <version active="false">Professional SP2</version>
+                <version active="false">Professional SP3</version>
+                <version active="false">Professional SP4</version>
+                <version active="false">SP1</version>
+                <version active="false">SP2</version>
+                <version active="false">SP3</version>
+                <version active="false">SP4</version>
+                <version active="false">Server</version>
+                <version active="false">Server SP1</version>
+                <version active="false">Server SP2</version>
+                <version active="false">Server SP3</version>
+                <version active="false">Server SP4</version>
+            </product>
+            <product name="Windows 98" hidden="false" active="false" type="Operating System">
+                <version active="false">98</version>
+                <version active="false">SE</version>
+            </product>
+            <product name="Windows ME" hidden="false" active="false" type="Operating System">
+                <version active="false">ME</version>
+            </product>
+            <product name="Windows Media Player" hidden="false" active="false">
+                <version active="false">10.0</version>
+                <version active="false">7.1</version>
+                <version active="false">9.0</version>
+            </product>
+            <product name="Windows NT" hidden="false" active="false" type="Operating System">
+                <version active="false">3.5</version>
+                <version active="false">3.5.1</version>
+                <version active="false">3.5.1 SP1</version>
+                <version active="false">3.5.1 SP2</version>
+                <version active="false">3.5.1 SP3</version>
+                <version active="false">3.5.1 SP4</version>
+                <version active="false">3.5.1 SP5</version>
+                <version active="false">3.5.1 alpha SP5</version>
+                <version active="false">4.0</version>
+                <version active="false">4.0 SP1</version>
+                <version active="false">4.0 SP2</version>
+                <version active="false">4.0 SP3</version>
+                <version active="false">4.0 SP4</version>
+                <version active="false">4.0 SP5</version>
+                <version active="false">4.0 SP6</version>
+                <version active="false">4.0 SP6a</version>
+                <version active="false">4.0 SP6a alpha</version>
+                <version active="false">4.0 alpha</version>
+                <version active="false">4.0 alpha SP1</version>
+                <version active="false">4.0 alpha SP2</version>
+                <version active="false">4.0 alpha SP3</version>
+                <version active="false">4.0 alpha SP4</version>
+                <version active="false">4.0 alpha SP5</version>
+                <version active="false">4.0 alpha SP6</version>
+                <version active="false">Enterprise 4.0</version>
+                <version active="false">Enterprise 4.0 SP1</version>
+                <version active="false">Enterprise 4.0 SP2</version>
+                <version active="false">Enterprise 4.0 SP3</version>
+                <version active="false">Enterprise 4.0 SP4</version>
+                <version active="false">Enterprise 4.0 SP5</version>
+                <version active="false">Enterprise 4.0 SP6</version>
+                <version active="false">Enterprise 4.0 SP6a</version>
+                <version active="false">Enterprise Server 4.0</version>
+                <version active="false">Enterprise Server 4.0 SP1</version>
+                <version active="false">Enterprise Server 4.0 SP2</version>
+                <version active="false">Enterprise Server 4.0 SP3</version>
+                <version active="false">Enterprise Server 4.0 SP4</version>
+                <version active="false">Enterprise Server 4.0 SP5</version>
+                <version active="false">Enterprise Server 4.0 SP6</version>
+                <version active="false">Enterprise Server 4.0 SP6a</version>
+                <version active="false">Server 4.0</version>
+                <version active="false">Server 4.0 SP1</version>
+                <version active="false">Server 4.0 SP2</version>
+                <version active="false">Server 4.0 SP3</version>
+                <version active="false">Server 4.0 SP4</version>
+                <version active="false">Server 4.0 SP5</version>
+                <version active="false">Server 4.0 SP6</version>
+                <version active="false">Server 4.0 SP6a</version>
+                <version active="false">Terminal Server 4.0</version>
+                <version active="false">Terminal Server 4.0 SP1</version>
+                <version active="false">Terminal Server 4.0 SP2</version>
+                <version active="false">Terminal Server 4.0 SP3</version>
+                <version active="false">Terminal Server 4.0 SP4</version>
+                <version active="false">Terminal Server 4.0 SP5</version>
+                <version active="false">Terminal Server 4.0 SP6</version>
+                <version active="false">Terminal Server 4.0 SP6a</version>
+                <version active="false">Terminal Server 4.0 alpha</version>
+                <version active="false">Workstation 4.0</version>
+                <version active="false">Workstation 4.0 SP1</version>
+                <version active="false">Workstation 4.0 SP2</version>
+                <version active="false">Workstation 4.0 SP3</version>
+                <version active="false">Workstation 4.0 SP4</version>
+                <version active="false">Workstation 4.0 SP5</version>
+                <version active="false">Workstation 4.0 SP6</version>
+                <version active="false">Workstation 4.0 SP6a</version>
+            </product>
+            <product name="Windows Server 2003" hidden="false" active="false" type="Operating System">
+                <version active="false">Datacenter</version>
+                <version active="false">Datacenter 64-bit</version>
+                <version active="false">Datacenter 64-bit SP1</version>
+                <version active="false">Datacenter SP1</version>
+                <version active="false">Enterprise</version>
+                <version active="false">Enterprise 64-bit</version>
+                <version active="false">Enterprise 64-bit SP1</version>
+                <version active="false">Enterprise SP1</version>
+                <version active="false">SP1</version>
+                <version active="false">Standard</version>
+                <version active="false">Standard 64-bit</version>
+                <version active="false">Standard SP1</version>
+                <version active="false">Web</version>
+                <version active="false">Web SP1</version>
+            </product>
+            <product name="Windows Vista" hidden="false" active="false" type="Operating System">
+                <version active="false">Ultimate</version>
+                <version active="false">Home Premium</version>
+                <version active="false">Home Basic</version>
+                <version active="false">Enterprise</version>
+                <version active="false">Business</version>
+            </product>
+            <product name="Windows XP" hidden="false" active="false" type="Operating System">
+                <version active="false">64-bit</version>
+                <version active="false">64-bit SP1</version>
+                <version active="false">64-bit version 2003</version>
+                <version active="false">64-bit version 2003 SP1</version>
+                <version active="false">Embedded</version>
+                <version active="false">Embedded SP1</version>
+                <version active="false">Home</version>
+                <version active="false">Home Gold</version>
+                <version active="false">Home SP1</version>
+                <version active="false">Home SP2</version>
+                <version active="false">Media Center</version>
+                <version active="false">Media Center SP1</version>
+                <version active="false">Media Center SP2</version>
+                <version active="false">Professional</version>
+                <version active="false">Professional 64-bit</version>
+                <version active="false">Professional Gold</version>
+                <version active="false">Professional SP1</version>
+                <version active="false">Professional SP2</version>
+                <version active="false">SP1</version>
+                <version active="false">SP2</version>
+                <version active="false">Tablet PC</version>
+                <version active="false">Tablet PC SP1</version>
+                <version active="false">Tablet PC SP2</version>
+            </product>
+            <product name="Word" hidden="false" active="false">
+                <version active="false">2003</version>
+            </product>
+            <product name="Works Suite" hidden="false" active="false">
+                <version active="false">2000</version>
+                <version active="false">2001</version>
+                <version active="false">2002</version>
+                <version active="false">2003</version>
+                <version active="false">2004</version>
+                <version active="false">2005</version>
+                <version active="false">2006</version>
+            </product>
+        </products>
+    </vendor>
+    <vendor name="Oracle" hidden="false" active="false">
+	 	  <alias name="MySQL" />
+	      <alias name="My-SQL"/>
+	      <alias name="MySQL AB"/>
+		  <alias name="Sun" />
+		<alias name="Sun Microsystems"/>
+	    <products>
+	        <product name="MySQL">
+	          <alias name="My-SQL"/>
+	        </product>
+            <product name="Application Server" hidden="false" active="false">
+                <version active="false">2</version>
+                <version active="false">6.0.8.26(PS17)</version>
+            </product>
+            <product name="Application Server 10g" hidden="false" active="false">
+                <version active="false">10.1.2</version>
+                <version active="false">9.0.4</version>
+                <version active="false">9.0.4 .1</version>
+                <version active="false">9.0.4 .2</version>
+            </product>
+            <product name="Client" hidden="false" active="false">
+                <version active="false">4.83 SP3</version>
+                <version active="false">4.90 SP2</version>
+                <version active="false">4.91 SP2</version>
+            </product>
+            <product name="Collaboration Suite" hidden="false" active="false">
+                <version active="false">1</version>
+                <version active="false">10.1.1</version>
+                <version active="false">10.1.2.0</version>
+                <version active="false">10.1.2.1</version>
+                <version active="false">2</version>
+                <version active="false">9.0.4.2</version>
+            </product>
+            <product name="Database Server" hidden="false" active="false">
+                <version active="false">10.1.0.4</version>
+                <version active="false">10.1.0.5</version>
+                <version active="false">10.2.0.1</version>
+                <version active="false">8.1.7.4</version>
+                <version active="false">9.0.1.5</version>
+                <version active="false">9.2.0.6</version>
+                <version active="false">9.2.0.7</version>
+            </product>
+            <product name="Developer Suite" hidden="false" active="false">
+                <version active="false">10.1.2</version>
+                <version active="false">9.0.2 .1</version>
+                <version active="false">9.0.4 .1</version>
+                <version active="false">9.0.4 .2</version>
+            </product>
+            <product name="Diagnostics" hidden="false" active="false">
+                <version active="false">2.0</version>
+                <version active="false">2.1</version>
+                <version active="false">2.2</version>
+            </product>
+            <product name="E-Business Suite" hidden="false" active="false">
+                <version active="false">11.5.10</version>
+                <version active="false">11.5.3</version>
+                <version active="false">11.5.4</version>
+                <version active="false">11.5.5</version>
+                <version active="false">11.5.6</version>
+                <version active="false">11.5.7</version>
+                <version active="false">11.5.8</version>
+                <version active="false">11.5.9</version>
+                <version active="false">4.3</version>
+            </product>
+            <product name="E-Business Suite 11i" hidden="false" active="false">
+                <version active="false">11.5 .10</version>
+                <version active="false">11.5.1</version>
+                <version active="false">11.5.2</version>
+                <version active="false">11.5.3</version>
+                <version active="false">11.5.4</version>
+                <version active="false">11.5.5</version>
+                <version active="false">11.5.6</version>
+                <version active="false">11.5.7</version>
+                <version active="false">11.5.8</version>
+                <version active="false">11.5.9</version>
+            </product>
+            <product name="E-Business Suite and Applications"
+                hidden="false" active="false">
+                <version active="false">11.5.10</version>
+                <version active="false">11.5.10CU1</version>
+                <version active="false">11.5.10CU2</version>
+                <version active="false">11.5.9</version>
+            </product>
+            <product name="Enterprise Manager" hidden="false" active="false">
+                <version active="false">9.0.1.5</version>
+                <version active="false">9.2.0.7</version>
+            </product>
+            <product name="Enterprise Manager Grid Control 10g"
+                hidden="false" active="false">
+                <version active="false">10.1 .0.3</version>
+                <version active="false">10.1 .0.4</version>
+            </product>
+            <product name="HTTP Server" hidden="false" active="false">
+                <version active="false">1.0.2.0</version>
+                <version active="false">1.0.2.1</version>
+                <version active="false">1.0.2.1s for Apps</version>
+                <version active="false">1.0.2.2</version>
+                <version active="false">1.0.2.2 Roll up 2</version>
+                <version active="false">8.1.7</version>
+                <version active="false">9.0.1</version>
+                <version active="false">9.0.2</version>
+                <version active="false">9.0.2.3</version>
+                <version active="false">9.0.3.1</version>
+                <version active="false">9.1</version>
+                <version active="false">9.2.0</version>
+            </product>
+            <product name="Internet Application Server" hidden="false" active="false">
+                <version active="false">1.0.2.0</version>
+                <version active="false">1.0.2.1</version>
+            </product>
+            <product name="JD Edwards EnterpriseOne" hidden="false" active="false">
+                <version active="false">8.95 _F1</version>
+                <version active="false">8.95.J1</version>
+                <version active="false">SP23_L1</version>
+            </product>
+            <product name="Oracle10g" hidden="false" active="false">
+                <version active="false">10.1</version>
+                <version active="false">10.1.0.2</version>
+                <version active="false">10.1.0.3</version>
+                <version active="false">10.1.0.3.1</version>
+                <version active="false">10.1.0.4</version>
+                <version active="false">10.1.0.4.2</version>
+                <version active="false">10.1.0.5</version>
+                <version active="false">10.10.3.1</version>
+                <version active="false">10.2</version>
+                <version active="false">10.2.0.1</version>
+                <version active="false">10.2.3</version>
+            </product>
+            <product name="Oracle10g Application Server" hidden="false" active="false">
+                <version active="false">10.1.0.2</version>
+                <version active="false">10.1.0.3</version>
+                <version active="false">10.1.0.3.1</version>
+                <version active="false">10.1.0.4</version>
+                <version active="false">10.1.2</version>
+                <version active="false">10.1.2 .0.1</version>
+                <version active="false">10.1.2 .0.2</version>
+                <version active="false">10.1.2 .1.0</version>
+                <version active="false">10.1.2.0</version>
+                <version active="false">10.1.2.0.1</version>
+                <version active="false">10.1.2.0.2</version>
+                <version active="false">10.1.2.1</version>
+                <version active="false">10.1.2.1.0</version>
+                <version active="false">2</version>
+                <version active="false">9.0.4 .1</version>
+                <version active="false">9.0.4 .2</version>
+                <version active="false">9.0.4.0</version>
+                <version active="false">9.0.4.1</version>
+                <version active="false">9.0.4.2</version>
+            </product>
+            <product name="Oracle10g Database Server" hidden="false" active="false">
+                <version active="false">1</version>
+                <version active="false">10.1.0.3</version>
+                <version active="false">10.1.0.4</version>
+                <version active="false">10.1.0.4.2</version>
+                <version active="false">10.1.0.5</version>
+                <version active="false">10.2.0.1</version>
+                <version active="false">2</version>
+            </product>
+            <product name="Oracle10g Database Server Release"
+                hidden="false" active="false">
+                <version active="false">2</version>
+            </product>
+            <product name="Oracle10g Database Server Release 1"
+                hidden="false" active="false">
+                <version active="false">10.1.0.3</version>
+                <version active="false">10.1.0.4</version>
+                <version active="false">10.1.0.5</version>
+            </product>
+            <product name="Oracle10g Database Server Release 2"
+                hidden="false" active="false">
+                <version active="false">10.2.0.1</version>
+                <version active="false">10.2.0.2</version>
+            </product>
+            <product name="Oracle8" hidden="false" active="false">
+                <version active="false">8.0.6</version>
+                <version active="false">8.0.6 .3</version>
+                <version active="false">8.1.7 .4</version>
+                <version active="false">8.1.7.4</version>
+            </product>
+            <product name="Oracle8i" hidden="false" active="false">
+                <version active="false">8.0.6</version>
+                <version active="false">8.1.7</version>
+                <version active="false">8.1.7.4</version>
+            </product>
+            <product name="Oracle8i Database Server" hidden="false" active="false">
+                <version active="false">3</version>
+                <version active="false">8.1.7.4</version>
+            </product>
+            <product name="Oracle8i Database Server Release 3"
+                hidden="false" active="false">
+                <version active="false">8.1.7.4</version>
+            </product>
+            <product name="Oracle9i" hidden="false" active="false">
+                <version active="false">9.0.1</version>
+                <version active="false">9.0.1.5</version>
+                <version active="false">9.2</version>
+                <version active="false">9.2.0</version>
+                <version active="false">9.2.0.1</version>
+                <version active="false">9.2.0.2</version>
+                <version active="false">9.2.0.3</version>
+                <version active="false">9.2.0.5</version>
+                <version active="false">9.2.0.6</version>
+                <version active="false">9.2.0.7</version>
+                <version active="false">9.2.3</version>
+            </product>
+            <product name="Oracle9i Application Server" hidden="false" active="false">
+                <version active="false">1</version>
+                <version active="false">1.0.2</version>
+                <version active="false">1.0.2 .2</version>
+                <version active="false">1.0.2.1s</version>
+                <version active="false">1.0.2.2</version>
+                <version active="false">1.0.2.2.2</version>
+                <version active="false">9.0.2</version>
+                <version active="false">9.0.2.0.0</version>
+                <version active="false">9.0.2.0.1</version>
+                <version active="false">9.0.2.1</version>
+                <version active="false">9.0.2.2</version>
+                <version active="false">9.0.2.3</version>
+                <version active="false">9.0.3</version>
+                <version active="false">9.0.3.1</version>
+                <version active="false">9.2.0.6</version>
+                <version active="false">9.2.0.7</version>
+            </product>
+            <product name="Oracle9i Database Server" hidden="false" active="false">
+                <version active="false">10.1.0.5</version>
+                <version active="false">2</version>
+                <version active="false">8.1.7.4</version>
+                <version active="false">9.0.1.5</version>
+                <version active="false">9.0.1.5 FIPS</version>
+                <version active="false">9.2.0.6</version>
+                <version active="false">9.2.0.7</version>
+            </product>
+            <product name="Oracle9i Database Server Release 1"
+                hidden="false" active="false">
+                <version active="false">9.0.1.5</version>
+            </product>
+            <product name="Oracle9i Database Server Release 2"
+                hidden="false" active="false">
+                <version active="false">9.2.0.6</version>
+                <version active="false">9.2.0.7</version>
+            </product>
+            <product name="PeopleSoft Enterprise" hidden="false" active="false">
+                <version active="false">8.46.12</version>
+                <version active="false">8.47.04</version>
+            </product>
+            <product name="Workflow" hidden="false" active="false">
+                <version active="false">11.5.1</version>
+                <version active="false">11.5.9 .5</version>
+            </product>
+      	<!-- Sun -->
+         <product name="Cluster" hidden="false" active="false">
+                <version active="false">3.1 4/04</version>
+            </product>
+            <product name="Grid Engine" hidden="false" active="false">
+                <version active="false">5.3</version>
+                <version active="false">6.0</version>
+                <version active="false">6.0u1</version>
+                <version active="false">6.0u2</version>
+                <version active="false">6.0u3</version>
+                <version active="false">6.0u4</version>
+                <version active="false">6.0u5</version>
+                <version active="false">6.0u6</version>
+                <version active="false">6.0u7</version>
+            </product>
+            <product name="J2SE" hidden="false" active="false">
+                <version active="false">5.0 Update 5</version>
+            </product>
+            <product name="JDK" hidden="false" active="false">
+                <version active="false">1.5.0_6</version>
+                <version active="false">5.0 Update 3</version>
+                <version active="false">5.0 Update 4</version>
+                <version active="false">5.0 Update 5</version>
+            </product>
+            <product name="JRE" hidden="false" active="false">
+                <version active="false">1.3.1_16</version>
+                <version active="false">1.4.2_08</version>
+                <version active="false">1.4.2_09</version>
+                <version active="false">1.5.0_6</version>
+                <version active="false">5.0 Update 3</version>
+                <version active="false">5.0 Update 4</version>
+                <version active="false">5.0 Update 5</version>
+            </product>
+            <product name="Java Studio Enterprise" hidden="false" active="false">
+                <version active="false">8</version>
+            </product>
+            <product name="Java System Access Manager" hidden="false" active="false">
+                <version active="false">7.0 2005Q4 Linux</version>
+                <version active="false">7.0 2005Q4 Solaris S</version>
+                <version active="false">7.0 2005Q4 Solaris x</version>
+            </product>
+            <product name="Java System Application Server"
+                hidden="false" active="false">
+                <version active="false">7.0 2004Q2 Enterprise Update 2</version>
+                <version active="false">7.0 2004Q2 Standard Update 2</version>
+            </product>
+            <product name="Java System Directory Server" hidden="false" active="false">
+                <version active="false">5.2</version>
+            </product>
+            <product name="Java System Web Server" hidden="false" active="false">
+                <version active="false">6.1</version>
+                <version active="false">6.1 SP1</version>
+                <version active="false">6.1 SP2</version>
+                <version active="false">6.1 SP3</version>
+                <version active="false">6.1 SP4</version>
+            </product>
+            <product name="N1 Grid Engine" hidden="false" active="false">
+                <version active="false">6.0</version>
+            </product>
+            <product name="ONE Application Server" hidden="false" active="false">
+                <version active="false">7.0 Platform</version>
+                <version active="false">7.0 Platform Update 6</version>
+                <version active="false">7.0 Standard</version>
+                <version active="false">7.0 Standard Update 6</version>
+            </product>
+            <product name="ONE Web Server" hidden="false" active="false">
+                <version active="false">6.0</version>
+                <version active="false">6.0 SP1</version>
+                <version active="false">6.0 SP2</version>
+                <version active="false">6.0 SP3</version>
+                <version active="false">6.0 SP4</version>
+                <version active="false">6.0 SP5</version>
+                <version active="false">6.0 SP6</version>
+                <version active="false">6.0 SP7</version>
+                <version active="false">6.0 SP8</version>
+                <version active="false">6.0 SP9</version>
+            </product>
+            <product name="SDK" hidden="false" active="false">
+                <version active="false">1.3.1_16</version>
+                <version active="false">1.4.2_08</version>
+                <version active="false">1.4.2_09</version>
+                <version active="false">1.5.0_6</version>
+            </product>
+            <product name="Solaris" hidden="false" active="false" type="Operating System">
+                <version active="false">10</version>
+                <version active="false">10.0</version>
+                <version active="false">8</version>
+                <version active="false">8.0</version>
+                <version active="false">8.1</version>
+                <version active="false">8.2</version>
+                <version active="false">9</version>
+                <version active="false">9.0</version>
+                <version active="false">9.1</version>
+            </product>
+        </products>
+    </vendor>
+    <vendor name="Mozilla">
+        <products>
+            <product name="Firefox"><version>1.0</version></product>
+        </products>
+    </vendor>
+    <vendor name="Adobe">
+        <alias name="Macromedia"/>
+        <products>
+            <product name="Acrobat"/>
+            <product name="Acrobat Reader"/>
+            <product name="AIR"/>
+            <product name="ColdFusion"/>
+            <product name="Dreamweaver"/>
+            <product name="Flash Player"/>
+            <product name="Reader"/>
+        </products>
+    </vendor>
+    <vendor name="Apache">
+        <alias name="Apache Group"/>
+        <alias name="Apache Software Foundation"/>
+        <products>
+            <product name="Tomcat"/>
+        </products>
+    </vendor>
+    <vendor name="Google">
+        <products>
+            <product name="Desktop"/>
+            <product name="Earth"/>
+            <product name="Talk"/>
+            <product name="Picasa">
+                <version active="false">2</version>
+            </product>
+        </products>
+    </vendor>
+    <vendor name="OpenOffice">
+        <products>
+            <product name="OpenOffice.org"/>
+        </products>
+    </vendor>
+</vpvs>
+</esis>

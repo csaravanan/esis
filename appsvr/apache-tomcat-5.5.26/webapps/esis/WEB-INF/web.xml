@@ -1,0 +1,2029 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2.2.dtd">
+
+<!--
+   
+   ESIS
+   
+   Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+   
+   Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+                           Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+   
+   
+   This file is part of ESIS.
+   
+   ESIS is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation version 3 of the License.
+   
+   ESIS is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+   
+   $Id$
+   
+-->
+
+<web-app>
+  <display-name>Apache-Axis</display-name>
+  <servlet>
+    <servlet-name>AxisServlet</servlet-name>
+    <display-name>Apache-Axis Servlet</display-name>
+    <servlet-class>
+        org.apache.axis.transport.http.AxisServlet
+    </servlet-class>
+    <load-on-startup>8</load-on-startup>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AdminServlet</servlet-name>
+    <display-name>Axis Admin Servlet</display-name>
+    <servlet-class>
+        org.apache.axis.transport.http.AdminServlet
+    </servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+<!-- 
+ <servlet>
+    <servlet-name>SOAPMonitorService</servlet-name>
+    <display-name>SOAPMonitorService</display-name>
+    <servlet-class>
+        org.apache.axis.monitor.SOAPMonitorService
+    </servlet-class>
+    <init-param>
+      <param-name>SOAPMonitorPort</param-name>
+      <param-value>5001</param-value>
+    </init-param>
+    <load-on-startup>100</load-on-startup>
+  </servlet> 
+-->
+
+  <servlet-mapping>
+    <servlet-name>AxisServlet</servlet-name>
+    <url-pattern>/servlet/AxisServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AxisServlet</servlet-name>
+    <url-pattern>*.jws</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AxisServlet</servlet-name>
+    <url-pattern>/services/*</url-pattern>
+  </servlet-mapping>
+
+ <!--
+  <servlet-mapping>
+    <servlet-name>SOAPMonitorService</servlet-name>
+    <url-pattern>/SOAPMonitor</url-pattern>
+  </servlet-mapping>
+ -->
+
+ <!-- uncomment this if you want the admin servlet -->
+ <!--
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/servlet/AdminServlet</url-pattern>
+  </servlet-mapping>
+ -->
+
+    <!-- currently the W3C havent settled on a media type for WSDL;
+    http://www.w3.org/TR/2003/WD-wsdl12-20030303/#ietf-draft
+    for now we go with the basic 'it's XML' response -->
+  <mime-mapping>
+    <extension>wsdl</extension>
+     <mime-type>text/xml</mime-type>
+  </mime-mapping>
+
+  <mime-mapping>
+    <extension>xsd</extension>
+    <mime-type>text/xml</mime-type>
+  </mime-mapping>
+
+  <welcome-file-list id="WelcomeFileList">
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+<!-- servletconf - autoincluded by build.xml target servlet-conf -->
+<!--
+   
+   ESIS
+   
+   Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+   
+   Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+                           Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+   
+   
+   This file is part of ESIS.
+   
+   ESIS is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation version 3 of the License.
+   
+   ESIS is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+   
+   $Id$
+   
+  -->
+<!-- ********** VULNERABILITIES ********** -->
+
+<!-- com.entelience.servlet.vrt.excel.NewVulnerabilities servlet conf -->
+  <servlet>
+    <servlet-name>NewVulnerabilities</servlet-name>
+    <display-name>NewVulnerabilities</display-name>
+    <servlet-class>
+        com.entelience.servlet.vrt.excel.NewVulnerabilities
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewVulnerabilities</servlet-name>
+    <url-pattern>/html/vrt/xls/NewVulnerabilities.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.vrt.excel.ListVrt servlet conf -->
+  <servlet>
+    <servlet-name>VRTMeetings</servlet-name>
+    <display-name>VRTMeetings</display-name>
+    <servlet-class>
+        com.entelience.servlet.vrt.excel.ListVrt
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VRTMeetings</servlet-name>
+    <url-pattern>/html/vrt/xls/VRTMeetings.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.vrt.excel.VrtVulnerabilities servlet conf -->
+  <servlet>
+    <servlet-name>VRTVulnerabilities</servlet-name>
+    <display-name>VRTVulnerabilities</display-name>
+    <servlet-class>
+        com.entelience.servlet.vrt.excel.VrtVulnerabilities
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VRTVulnerabilities</servlet-name>
+    <url-pattern>/html/vrt/xls/VRTVulnerabilities.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.vrt.excel.InvestigateVulnerabilities servlet conf -->
+  <servlet>
+    <servlet-name>InvestigateVulnerabilities</servlet-name>
+    <display-name>InvestigateVulnerabilities</display-name>
+    <servlet-class>
+        com.entelience.servlet.vrt.excel.InvestigateVulnerabilities
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InvestigateVulnerabilities</servlet-name>
+    <url-pattern>/html/vrt/xls/InvVulns.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.vrt.excel.ActionVulnerabilities servlet conf -->
+  <servlet>
+    <servlet-name>ActionVulnerabilities</servlet-name>
+    <display-name>ActionVulnerabilities</display-name>
+    <servlet-class>
+        com.entelience.servlet.vrt.excel.ActionVulnerabilities
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ActionVulnerabilities</servlet-name>
+    <url-pattern>/html/vrt/xls/ActionVulns.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.vrt.excel.Actions servlet conf -->
+  <servlet>
+    <servlet-name>Actions</servlet-name>
+    <display-name>Actions</display-name>
+    <servlet-class>
+        com.entelience.servlet.vrt.excel.Actions
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Actions</servlet-name>
+    <url-pattern>/html/vrt/xls/Actions.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.vrt.excel.FoundVulnerabilities servlet conf -->
+  <servlet>
+    <servlet-name>FoundVulnerabilities</servlet-name>
+    <display-name>FoundVulnerabilities</display-name>
+    <servlet-class>
+        com.entelience.servlet.vrt.excel.FoundVulnerabilities
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FoundVulnerabilities</servlet-name>
+    <url-pattern>/html/vrt/xls/FoundVulnerabilities.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.vrt.excel.DecisionVotes servlet conf -->
+  <servlet>
+    <servlet-name>DecisionVotes</servlet-name>
+    <display-name>DecisionVotes</display-name>
+    <servlet-class>
+        com.entelience.servlet.vrt.excel.DecisionVotes
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DecisionVotes</servlet-name>
+    <url-pattern>/html/vrt/xls/DecisionVotes.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.vrt.excel.Metrics servlet conf -->
+  <servlet>
+    <servlet-name>Metrics</servlet-name>
+    <display-name>Metrics</display-name>
+    <servlet-class>
+        com.entelience.servlet.vrt.excel.Metrics
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Metrics</servlet-name>
+    <url-pattern>/html/vrt/xls/Metrics.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.vrt.VulnGantt servlet conf -->
+  <servlet>
+    <servlet-name>VulnGantt</servlet-name>
+    <display-name>VulnGantt</display-name>
+    <servlet-class>
+        com.entelience.servlet.vrt.VulnGantt
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VulnGantt</servlet-name>
+    <url-pattern>/html/vrt/VulnGantt</url-pattern>
+  </servlet-mapping>
+  
+<!-- com.entelience.servlet.vrt.VRTGantt servlet conf -->
+  <servlet>
+    <servlet-name>VRTGantt</servlet-name>
+    <display-name>VRTGantt</display-name>
+    <servlet-class>
+        com.entelience.servlet.vrt.VRTGantt
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VRTGantt</servlet-name>
+    <url-pattern>/html/vrt/VRTGantt</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.vrt.RepairVulnsGantt servlet conf -->
+  <servlet>
+    <servlet-name>RepairVulnsGantt</servlet-name>
+    <display-name>RepairVulnsGantt</display-name>
+    <servlet-class>
+        com.entelience.servlet.vrt.RepairVulnsGantt
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RepairVulnsGantt</servlet-name>
+    <url-pattern>/html/vrt/RepairVulnsGantt</url-pattern>
+  </servlet-mapping>  
+
+<!-- com.entelience.servlet.vrt.VulnReport servlet conf -->
+  <servlet>
+    <servlet-name>VulnReport</servlet-name>
+    <display-name>VulnReport</display-name>
+    <servlet-class>
+        com.entelience.servlet.vrt.VulnReport
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VulnReport</servlet-name>
+    <url-pattern>/html/vrt/VulnReport</url-pattern>
+  </servlet-mapping>
+
+<!-- ********** PORTAL ********** -->
+
+<!-- com.entelience.servlet.portal.excel.ExcelForPortal servlet conf -->
+  <servlet>
+    <servlet-name>ExcelForPortal</servlet-name>
+    <display-name>ExcelForPortal</display-name>
+    <servlet-class>
+        com.entelience.servlet.portal.excel.ExcelForPortal
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExcelForPortal</servlet-name>
+    <url-pattern>/html/portal/xls/Portal.xls</url-pattern>
+  </servlet-mapping>
+  
+<!-- com.entelience.servlet.portal.excel.StandardExport servlet conf -->
+  <servlet>
+    <servlet-name>StandardExport</servlet-name>
+    <display-name>StandardExport</display-name>
+    <servlet-class>
+        com.entelience.servlet.portal.excel.StandardExport
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StandardExport</servlet-name>
+    <url-pattern>/html/portal/xls/StandardExport.xls</url-pattern>
+  </servlet-mapping>
+  
+<!-- com.entelience.servlet.portal.StandardReport servlet conf -->
+  <servlet>
+    <servlet-name>StandardReport</servlet-name>
+    <display-name>StandardReport</display-name>
+    <servlet-class>
+        com.entelience.servlet.portal.StandardReport
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StandardReport</servlet-name>
+    <url-pattern>/html/portal/StandardExport</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.portal.CreateImgServlet servlet conf -->
+  <servlet>
+    <servlet-name>PortalImage</servlet-name>
+    <display-name>PortalImage</display-name>
+    <servlet-class>
+        com.entelience.servlet.portal.CreateImgServlet
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PortalImage</servlet-name>
+    <url-pattern>/html/portal/PortalImage</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.portal.ExplorerData servlet conf -->
+  <servlet>
+    <servlet-name>ExplorerData</servlet-name>
+    <display-name>ExplorerData</display-name>
+    <servlet-class>
+        com.entelience.servlet.portal.ExplorerData
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExplorerData</servlet-name>
+    <url-pattern>/html/portal/ExplorerData</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.portal.excel.ExplorerDataExcel servlet conf -->
+  <servlet>
+    <servlet-name>ExplorerDataExcel</servlet-name>
+    <display-name>ExplorerDataExcel</display-name>
+    <servlet-class>
+        com.entelience.servlet.portal.excel.ExplorerDataExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExplorerDataExcel</servlet-name>
+    <url-pattern>/html/portal/xls/ExplorerDataExcel</url-pattern>
+  </servlet-mapping>
+
+<!-- ********** AUDITS ********** -->
+
+<!-- com.entelience.servlet.audit.excel.Actions servlet conf -->
+  <servlet>
+    <servlet-name>AuditActions</servlet-name>
+    <display-name>AuditActions</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.excel.Actions
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuditActions</servlet-name>
+    <url-pattern>/html/audit/list_actions.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.audit.excel.Recommendations servlet conf -->
+  <servlet>
+    <servlet-name>AuditRecommendations</servlet-name>
+    <display-name>AuditRecommendations</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.excel.Recommendations
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuditRecommendations</servlet-name>
+    <url-pattern>/html/audit/list_recoms.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.audit.excel.Reports servlet conf -->
+  <servlet>
+    <servlet-name>AuditReports</servlet-name>
+    <display-name>AuditReports</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.excel.Reports
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuditReports</servlet-name>
+    <url-pattern>/html/audit/list_reports.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.audit.excel.Audits servlet conf -->
+  <servlet>
+    <servlet-name>AuditAudits</servlet-name>
+    <display-name>AuditAudits</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.excel.Audits
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuditAudits</servlet-name>
+    <url-pattern>/html/audit/list_audits.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.audit.excel.FoundActions servlet conf -->
+  <servlet>
+    <servlet-name>FoundActions</servlet-name>
+    <display-name>FoundActions</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.excel.FoundActions
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FoundActions</servlet-name>
+    <url-pattern>/html/audit/found_actions.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.audit.excel.FoundRecommendations servlet conf -->
+  <servlet>
+    <servlet-name>FoundRecommendations</servlet-name>
+    <display-name>FoundRecommendations</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.excel.FoundRecommendations
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FoundRecommendations</servlet-name>
+    <url-pattern>/html/audit/found_recommendations.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.audit.excel.FoundReports servlet conf -->
+  <servlet>
+    <servlet-name>FoundReports</servlet-name>
+    <display-name>FoundReports</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.excel.FoundReports
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FoundReports</servlet-name>
+    <url-pattern>/html/audit/found_reports.xls</url-pattern>
+  </servlet-mapping>
+  
+<!-- com.entelience.servlet.audit.excel.FoundAudits servlet conf -->
+  <servlet>
+    <servlet-name>FoundAudits</servlet-name>
+    <display-name>FoundAudits</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.excel.FoundAudits
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FoundAudits</servlet-name>
+    <url-pattern>/html/audit/found_audits.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.audit.excel.Interviews servlet conf -->
+  <servlet>
+    <servlet-name>AuditInterviews</servlet-name>
+    <display-name>AuditInterviews</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.excel.Interviews
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuditInterviews</servlet-name>
+    <url-pattern>/html/audit/list_interviews.xls</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.audit.RecGantt servlet conf -->
+  <servlet>
+    <servlet-name>RecGantt</servlet-name>
+    <display-name>RecGantt</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.RecGantt
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RecGantt</servlet-name>
+    <url-pattern>/html/audit/RecGantt</url-pattern>
+  </servlet-mapping>
+  
+<!-- com.entelience.servlet.audit.ReportGantt servlet conf -->
+  <servlet>
+    <servlet-name>ReportGantt</servlet-name>
+    <display-name>ReportGantt</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.ReportGantt
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReportGantt</servlet-name>
+    <url-pattern>/html/audit/ReportGantt</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.audit.AuditGantt servlet conf -->
+  <servlet>
+    <servlet-name>AuditGantt</servlet-name>
+    <display-name>AuditGantt</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.AuditGantt
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuditGantt</servlet-name>
+    <url-pattern>/html/audit/AuditGantt</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.audit.AuditReport servlet conf -->
+  <servlet>
+    <servlet-name>AuditReport</servlet-name>
+    <display-name>AuditReport</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.AuditReport
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuditReport</servlet-name>
+    <url-pattern>/html/audit/AuditReport</url-pattern>
+  </servlet-mapping>
+  
+<!-- com.entelience.servlet.audit.ReportAudit servlet conf -->
+  <servlet>
+    <servlet-name>ReportAudit</servlet-name>
+    <display-name>ReportAudit</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.ReportAudit
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReportAudit</servlet-name>
+    <url-pattern>/html/audit/ReportAudit</url-pattern>
+  </servlet-mapping>
+  
+<!-- com.entelience.servlet.audit.ComplianceReport servlet conf -->
+  <servlet>
+    <servlet-name>ComplianceReport</servlet-name>
+    <display-name>ComplianceReport</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.ComplianceReport
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ComplianceReport</servlet-name>
+    <url-pattern>/html/audit/ComplianceReport</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.audit.DocumentUpload servlet conf -->
+  <servlet>
+    <servlet-name>DocumentUpload</servlet-name>
+    <display-name>DocumentUpload</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.DocumentUpload
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DocumentUpload</servlet-name>
+    <url-pattern>/upload/audit/DocumentUpload</url-pattern>
+  </servlet-mapping>
+  
+<!-- com.entelience.servlet.audit.DocumentDownload servlet conf -->
+  <servlet>
+    <servlet-name>DocumentDownload</servlet-name>
+    <display-name>DocumentDownload</display-name>
+    <servlet-class>
+        com.entelience.servlet.audit.DocumentDownload
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DocumentDownload</servlet-name>
+    <url-pattern>/html/audit/DocumentDownload</url-pattern>
+  </servlet-mapping>
+
+<!-- ********** ASSETS ********** -->
+
+<!-- com.entelience.servlet.asset.ExcelVPV servlet conf -->
+  <servlet>
+    <servlet-name>ExcelVPV</servlet-name>
+    <display-name>ExcelVPV</display-name>
+    <servlet-class>
+        com.entelience.servlet.asset.ExcelVPV
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExcelVPV</servlet-name>
+    <url-pattern>/html/asset/vpvs.xls</url-pattern>
+  </servlet-mapping>
+  
+<!-- com.entelience.servlet.asset.CompositeApplications servlet conf -->
+  <servlet>
+    <servlet-name>CompositeApplications</servlet-name>
+    <display-name>CompositeApplications</display-name>
+    <servlet-class>
+        com.entelience.servlet.asset.CompositeApplications
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CompositeApplications</servlet-name>
+    <url-pattern>/html/asset/compositeapps.xls</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.asset.AssetAssets servlet conf -->
+  <servlet>
+    <servlet-name>AssetAssets</servlet-name>
+    <display-name>AssetAssets</display-name>
+    <servlet-class>com.entelience.servlet.asset.AssetAssets</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AssetAssets</servlet-name>
+    <url-pattern>/html/asset/AssetAssets</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.asset.AssetAssetsExcel servlet conf -->
+  <servlet>
+    <servlet-name>AssetAssetsExcel</servlet-name>
+    <display-name>AssetAssetsExcel</display-name>
+    <servlet-class>com.entelience.servlet.asset.AssetAssetsExcel</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AssetAssetsExcel</servlet-name>
+    <url-pattern>/html/asset/AssetAssetsExcel</url-pattern>
+  </servlet-mapping>
+
+<!-- ********** ADMINISTRATION ********** -->
+
+  <!-- com.entelience.servlet.admin.AdminGroups servlet conf -->
+  <servlet>
+    <servlet-name>AdminGroups</servlet-name>
+    <display-name>AdminGroups</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminGroups</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminGroups</servlet-name>
+    <url-pattern>/html/admin/AdminGroups</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminLocations servlet conf -->
+  <servlet>
+    <servlet-name>AdminLocations</servlet-name>
+    <display-name>AdminLocations</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminLocations</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminLocations</servlet-name>
+    <url-pattern>/html/admin/AdminLocations</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminModules servlet conf -->
+  <servlet>
+    <servlet-name>AdminModules</servlet-name>
+    <display-name>AdminModules</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminModules</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminModules</servlet-name>
+    <url-pattern>/html/admin/AdminModules</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminModulePrefs servlet conf -->
+  <servlet>
+    <servlet-name>AdminModulePrefs</servlet-name>
+    <display-name>AdminModulePrefs</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminModulePrefs</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminModulePrefs</servlet-name>
+    <url-pattern>/html/admin/AdminModulePrefs</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminGlobalPrefs servlet conf -->
+  <servlet>
+    <servlet-name>AdminGlobalPrefs</servlet-name>
+    <display-name>AdminGlobalPrefs</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminGlobalPrefs</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminGlobalPrefs</servlet-name>
+    <url-pattern>/html/admin/AdminGlobalPrefs</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminGlobalPrefsExcel servlet conf -->
+  <servlet>
+    <servlet-name>AdminGlobalPrefsExcel</servlet-name>
+    <display-name>AdminGlobalPrefsExcel</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminGlobalPrefsExcel</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminGlobalPrefsExcel</servlet-name>
+    <url-pattern>/html/admin/AdminGlobalPrefsExcel</url-pattern>
+  </servlet-mapping> 
+
+  <!-- com.entelience.servlet.admin.AdminUsers servlet conf -->
+  <servlet>
+    <servlet-name>AdminUsers</servlet-name>
+    <display-name>AdminUsers</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminUsers</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminUsers</servlet-name>
+    <url-pattern>/html/admin/AdminUsers</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminBusinessZones servlet conf -->
+  <servlet>
+    <servlet-name>AdminBusinessZones</servlet-name>
+    <display-name>AdminBusinessZones</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminBusinessZones</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminBusinessZones</servlet-name>
+    <url-pattern>/html/admin/AdminBusinessZones</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminProbes servlet conf -->
+  <servlet>
+    <servlet-name>AdminProbes</servlet-name>
+    <display-name>AdminProbes</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminProbes</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminProbes</servlet-name>
+    <url-pattern>/html/admin/AdminProbes</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminProbeStatus servlet conf -->
+  <servlet>
+    <servlet-name>AdminProbeStatus</servlet-name>
+    <display-name>AdminProbeStatus</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminProbeStatus</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminProbeStatus</servlet-name>
+    <url-pattern>/html/admin/AdminProbeStatus</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminProbeHistory servlet conf -->
+  <servlet>
+    <servlet-name>AdminProbeHistory</servlet-name>
+    <display-name>AdminProbeHistory</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminProbeHistory</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminProbeHistory</servlet-name>
+    <url-pattern>/html/admin/AdminProbeHistory</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminProbesMonitoring servlet conf -->
+  <servlet>
+    <servlet-name>AdminProbesMonitoring</servlet-name>
+    <display-name>AdminProbesMonitoring</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminProbesMonitoring</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminProbesMonitoring</servlet-name>
+    <url-pattern>/html/admin/AdminProbesMonitoring</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminRacis servlet conf -->
+  <servlet>
+    <servlet-name>AdminRacis</servlet-name>
+    <display-name>AdminRacis</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminRacis</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminRacis</servlet-name>
+    <url-pattern>/html/admin/AdminRacis</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminRaciHistory servlet conf -->
+  <servlet>
+    <servlet-name>AdminRaciHistory</servlet-name>
+    <display-name>AdminRaciHistory</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminRaciHistory</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminRaciHistory</servlet-name>
+    <url-pattern>/html/admin/AdminRaciHistory</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminExpertises servlet conf -->
+  <servlet>
+    <servlet-name>AdminExpertises</servlet-name>
+    <display-name>AdminExpertises</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminExpertises</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminExpertises</servlet-name>
+    <url-pattern>/html/admin/AdminExpertises</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminStandards servlet conf -->
+  <servlet>
+    <servlet-name>AdminStandards</servlet-name>
+    <display-name>AdminStandards</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminStandards</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminStandards</servlet-name>
+    <url-pattern>/html/admin/AdminStandards</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminIncidents servlet conf -->
+  <servlet>
+    <servlet-name>AdminIncidents</servlet-name>
+    <display-name>AdminIncidents</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminIncidents</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminIncidents</servlet-name>
+    <url-pattern>/html/admin/AdminIncidents</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.AdminIncident servlet conf -->
+  <servlet>
+    <servlet-name>AdminIncident</servlet-name>
+    <display-name>AdminIncident</display-name>
+    <servlet-class>com.entelience.servlet.admin.AdminIncident</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminIncident</servlet-name>
+    <url-pattern>/html/admin/AdminIncident</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.PreferencesExcel servlet conf -->
+  <servlet>
+    <servlet-name>PreferencesXls</servlet-name>
+    <display-name>PreferencesXls</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.PreferencesExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PreferencesXls</servlet-name>
+    <url-pattern>/html/admin/preferences.xls</url-pattern>
+  </servlet-mapping> 
+  
+  <!-- com.entelience.servlet.admin.RacisExcel servlet conf -->
+  <servlet>
+    <servlet-name>Racis</servlet-name>
+    <display-name>Racis</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.RacisExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Racis</servlet-name>
+    <url-pattern>/html/admin/racis.xls</url-pattern>
+  </servlet-mapping>
+  
+  <!-- com.entelience.servlet.admin.RaciHistoryExcel servlet conf -->
+  <servlet>
+    <servlet-name>RaciHistory</servlet-name>
+    <display-name>RaciHistory</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.RaciHistoryExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RaciHistory</servlet-name>
+    <url-pattern>/html/admin/raci_history.xls</url-pattern>
+  </servlet-mapping>
+ 
+  <!-- com.entelience.servlet.admin.IncidentsExcel servlet conf -->
+  <servlet>
+    <servlet-name>IncidentsXls</servlet-name>
+    <display-name>IncidentsXls</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.IncidentsExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IncidentsXls</servlet-name>
+    <url-pattern>/html/admin/incidents.xls</url-pattern>
+  </servlet-mapping> 
+ 
+  <!-- com.entelience.servlet.admin.ModulesExcel servlet conf -->
+  <servlet>
+    <servlet-name>ModulesXls</servlet-name>
+    <display-name>ModulesXls</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.ModulesExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModulesXls</servlet-name>
+    <url-pattern>/html/admin/modules.xls</url-pattern>
+  </servlet-mapping> 
+
+  <!-- com.entelience.servlet.admin.GroupsExcel servlet conf -->
+  <servlet>
+    <servlet-name>GroupsXls</servlet-name>
+    <display-name>GroupsXls</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.GroupsExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GroupsXls</servlet-name>
+    <url-pattern>/html/admin/groups.xls</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.StandardsExcel servlet conf -->
+  <servlet>
+    <servlet-name>StandardsExcel</servlet-name>
+    <display-name>StandardsExcel</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.StandardsExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StandardsExcel</servlet-name>
+    <url-pattern>/html/admin/standards.xls</url-pattern>
+  </servlet-mapping>
+  
+  <!-- com.entelience.servlet.admin.UsersExcel servlet conf -->
+  <servlet>
+    <servlet-name>UsersXls</servlet-name>
+    <display-name>UsersXls</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.UsersExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsersXls</servlet-name>
+    <url-pattern>/html/admin/users.xls</url-pattern>
+  </servlet-mapping> 
+  
+  <!-- com.entelience.servlet.admin.ExpertisesExcel servlet conf -->
+  <servlet>
+    <servlet-name>ExpertisesExcel</servlet-name>
+    <display-name>ExpertisesExcel</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.ExpertisesExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExpertisesExcel</servlet-name>
+    <url-pattern>/html/admin/myxps.xls</url-pattern>
+  </servlet-mapping> 
+  
+  <!-- com.entelience.servlet.admin.LocationsExcel servlet conf -->
+  <servlet>
+    <servlet-name>LocationsExcel</servlet-name>
+    <display-name>LocationsExcel</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.LocationsExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LocationsExcel</servlet-name>
+    <url-pattern>/html/admin/locations.xls</url-pattern>
+  </servlet-mapping> 
+  
+  <!-- com.entelience.servlet.admin.BusinessZonesExcel servlet conf -->
+  <servlet>
+    <servlet-name>BusinessZonesExcel</servlet-name>
+    <display-name>BusinessZonesExcel</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.BusinessZonesExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BusinessZonesExcel</servlet-name>
+    <url-pattern>/html/admin/zones.xls</url-pattern>
+  </servlet-mapping> 
+  
+  <!-- com.entelience.servlet.admin.GenericMetrics servlet conf -->
+  <servlet>
+    <servlet-name>GenericMetrics</servlet-name>
+    <display-name>GenericMetrics</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.GenericMetrics
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GenericMetrics</servlet-name>
+    <url-pattern>/html/admin/metrics.xls</url-pattern>
+  </servlet-mapping> 
+  
+  <!-- com.entelience.servlet.admin.CompanyLogoUpload servlet conf -->
+  <servlet>
+    <servlet-name>CompanyLogoUpload</servlet-name>
+    <display-name>CompanyLogoUpload</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.CompanyLogoUpload
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CompanyLogoUpload</servlet-name>
+    <url-pattern>/upload/admin/CompanyLogoUpload</url-pattern>
+  </servlet-mapping> 
+  
+<!-- com.entelience.servlet.admin.RaciCal servlet conf -->
+  <servlet>
+    <servlet-name>RaciCal</servlet-name>
+    <display-name>RaciCal</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.RaciCal
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RaciCal</servlet-name>
+    <url-pattern>/html/admin/RaciCal</url-pattern>
+  </servlet-mapping>
+  
+<!-- com.entelience.servlet.admin.ModuleCal servlet conf -->
+  <servlet>
+    <servlet-name>ModuleCal</servlet-name>
+    <display-name>ModuleCal</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.ModuleCal
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModuleCal</servlet-name>
+    <url-pattern>/html/admin/ModuleCal</url-pattern>
+  </servlet-mapping>
+  
+<!-- com.entelience.servlet.admin.ProbesStatusExcel servlet conf -->
+  <servlet>
+    <servlet-name>ProbesStatusExcel</servlet-name>
+    <display-name>ProbesStatusExcel</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.ProbesStatusExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProbesStatusExcel</servlet-name>
+    <url-pattern>/html/admin/ProbesStatusExcel</url-pattern>
+  </servlet-mapping>
+  
+<!-- com.entelience.servlet.admin.ProbeHistoryExcel servlet conf -->
+  <servlet>
+    <servlet-name>ProbeHistoryExcel</servlet-name>
+    <display-name>ProbeHistoryExcel</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.ProbeHistoryExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProbeHistoryExcel</servlet-name>
+    <url-pattern>/html/admin/ProbeHistoryExcel</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.admin.AdminProbesMonitoringExcel servlet conf -->
+  <servlet>
+    <servlet-name>AdminProbesMonitoringExcel</servlet-name>
+    <display-name>AdminProbesMonitoringExcel</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.AdminProbesMonitoringExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminProbesMonitoringExcel</servlet-name>
+    <url-pattern>/html/admin/AdminProbesMonitoringExcel</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.admin.UserHistory servlet conf -->
+  <servlet>
+    <servlet-name>UserHistory</servlet-name>
+    <display-name>UserHistory</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.UserHistory
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserHistory</servlet-name>
+    <url-pattern>/html/admin/UserHistory</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.admin.UserHistoryExcel servlet conf -->
+  <servlet>
+    <servlet-name>UserHistoryExcel</servlet-name>
+    <display-name>UserHistoryExcel</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.UserHistoryExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserHistoryExcel</servlet-name>
+    <url-pattern>/html/admin/UserHistoryExcel</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.admin.UserLoginHistory servlet conf -->
+  <servlet>
+    <servlet-name>UserLoginHistory</servlet-name>
+    <display-name>UserLoginHistory</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.UserLoginHistory
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserLoginHistory</servlet-name>
+    <url-pattern>/html/admin/UserLoginHistory</url-pattern>
+  </servlet-mapping>
+
+<!-- com.entelience.servlet.admin.UserLoginHistoryExcel servlet conf -->
+  <servlet>
+    <servlet-name>UserLoginHistoryExcel</servlet-name>
+    <display-name>UserLoginHistoryExcel</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.UserLoginHistoryExcel
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserLoginHistoryExcel</servlet-name>
+    <url-pattern>/html/admin/UserLoginHistoryExcel</url-pattern>
+  </servlet-mapping>
+
+<!-- ********** VARIOUS ********** -->
+
+  <!-- com.entelience.servlet.CompanyLogo servlet conf -->
+  <servlet>
+    <servlet-name>CompanyLogo</servlet-name>
+    <display-name>CompanyLogo</display-name>
+    <servlet-class>
+        com.entelience.servlet.CompanyLogo
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CompanyLogo</servlet-name>
+    <url-pattern>/html/companylogo</url-pattern>
+  </servlet-mapping> 
+  
+  <!-- com.entelience.servlet.LangXml servlet conf -->
+  <servlet>
+    <servlet-name>LangXml</servlet-name>
+    <display-name>LangXml</display-name>
+    <servlet-class>
+        com.entelience.servlet.LangXml
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LangXml</servlet-name>
+    <url-pattern>/html/langxml</url-pattern>
+  </servlet-mapping> 
+
+  <!-- com.entelience.servlet.portal.GeneratedDocumentDownload servlet conf -->
+  <servlet>
+    <servlet-name>GeneratedDocument</servlet-name>
+    <display-name>GeneratedDocument</display-name>
+    <servlet-class>
+        com.entelience.servlet.portal.GeneratedDocumentDownload
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GeneratedDocument</servlet-name>
+    <url-pattern>/html/portal/generateddocument</url-pattern>
+  </servlet-mapping> 
+
+<!-- com.entelience.servlet.GenericModuleReport servlet conf -->
+  <servlet>
+    <servlet-name>ModuleReport</servlet-name>
+    <display-name>ModuleReport</display-name>
+    <servlet-class>
+        com.entelience.servlet.GenericModuleReport
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModuleReport</servlet-name>
+    <url-pattern>/html/ModuleReport</url-pattern>
+  </servlet-mapping>
+  
+  <!-- com.entelience.servlet.admin.LogFileDownload servlet conf -->
+  <servlet>
+    <servlet-name>LogFileDownload</servlet-name>
+    <display-name>LogFileDownload</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.LogFileDownload
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogFileDownload</servlet-name>
+    <url-pattern>/html/LogFileDownload</url-pattern>
+  </servlet-mapping>
+  
+  <!-- com.entelience.servlet.admin.ProbeXmlDownload servlet conf -->
+  <servlet>
+    <servlet-name>ProbeXmlDownload</servlet-name>
+    <display-name>ProbeXmlDownload</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.ProbeXmlDownload
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProbeXmlDownload</servlet-name>
+    <url-pattern>/html/ProbeXmlDownload</url-pattern>
+  </servlet-mapping>
+  
+  <!-- com.entelience.servlet.admin.ProbeRegistration servlet conf -->
+  <servlet>
+    <servlet-name>ProbeRegistration</servlet-name>
+    <display-name>ProbeRegistration</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.ProbeRegistration
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProbeRegistration</servlet-name>
+    <url-pattern>/upload/admin/ProbeRegistration</url-pattern>
+  </servlet-mapping>
+
+  <!-- com.entelience.servlet.admin.ReportFileDownload servlet conf -->
+  <servlet>
+    <servlet-name>ReportFileDownload</servlet-name>
+    <display-name>ReportFileDownload</display-name>
+    <servlet-class>
+        com.entelience.servlet.admin.ReportFileDownload
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReportFileDownload</servlet-name>
+    <url-pattern>/html/ReportFileDownload</url-pattern>
+  </servlet-mapping>
+  
+<!-- ********** RISK ASSESSMENT & REGISTER ********** -->
+
+<servlet>
+	<servlet-name>Risks</servlet-name>
+	<display-name>Risks</display-name>
+	<servlet-class>com.entelience.servlet.risk.excel.Risks</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Risks</servlet-name>
+	<url-pattern>/html/risk/Risks.xls</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>RiskReviews</servlet-name>
+	<display-name>RiskReviews</display-name>
+	<servlet-class>com.entelience.servlet.risk.excel.RiskReviews</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>RiskReviews</servlet-name>
+	<url-pattern>/html/risk/RiskReviews.xls</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>RiskImpactsRiskControls</servlet-name>
+	<display-name>RiskImpactsRiskControls</display-name>
+	<servlet-class>com.entelience.servlet.risk.excel.RiskImpactsRiskControls</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>RiskImpactsRiskControls</servlet-name>
+	<url-pattern>/html/risk/RiskImpactsRiskControls.xls</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>RiskCriteria</servlet-name>
+	<display-name>RiskCriteria</display-name>
+	<servlet-class>com.entelience.servlet.risk.excel.RiskCriteria</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>RiskCriteria</servlet-name>
+	<url-pattern>/html/risk/RiskCriteria.xls</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>RiskConsequences</servlet-name>
+	<display-name>RiskConsequences</display-name>
+	<servlet-class>com.entelience.servlet.risk.excel.RiskConsequences</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>RiskConsequences</servlet-name>
+	<url-pattern>/html/risk/RiskConsequences.xls</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>RiskActions</servlet-name>
+	<display-name>RiskActions</display-name>
+	<servlet-class>com.entelience.servlet.risk.excel.RiskActions</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>RiskActions</servlet-name>
+	<url-pattern>/html/risk/RiskActions.xls</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>RiskGroups</servlet-name>
+	<display-name>RiskGroups</display-name>
+	<servlet-class>com.entelience.servlet.risk.excel.Groups</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>RiskGroups</servlet-name>
+	<url-pattern>/html/risk/Groups.xls</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>RiskEvents</servlet-name>
+	<display-name>RiskEvents</display-name>
+	<servlet-class>com.entelience.servlet.risk.excel.Events</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>RiskEvents</servlet-name>
+	<url-pattern>/html/risk/Events.xls</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>RiskCauses</servlet-name>
+	<display-name>RiskCauses</display-name>
+	<servlet-class>com.entelience.servlet.risk.excel.Causes</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>RiskCauses</servlet-name>
+	<url-pattern>/html/risk/Causes.xls</url-pattern>
+</servlet-mapping>
+
+
+<!-- jsps - autoincluded by build.xml target servlet-conf-->
+
+<!--
+Automatically created by Apache Jakarta Tomcat JspC.
+Place this fragment in the web.xml before all icon, display-name,
+description, distributable, and context-param elements.
+-->
+
+    <servlet>
+        <servlet-name>org.apache.jsp.reports_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.reports_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.module_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.module_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.icon_inc_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.icon_inc_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.page_005ffooter_inc_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.page_005ffooter_inc_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.always_005ferror_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.always_005ferror_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.copyright_inc_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.copyright_inc_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.style_inc_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.style_inc_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.page_005fheader_inc_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.page_005fheader_inc_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.find_005freports_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.find_005freports_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.find_005factions_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.find_005factions_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.report_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.report_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.list_005faudits_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.list_005faudits_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.recom_005fcomment_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.recom_005fcomment_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.find_005faudits_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.find_005faudits_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.list_005finterviews_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.list_005finterviews_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.action_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.action_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.recommendation_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.recommendation_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.find_005frecommendations_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.find_005frecommendations_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.list_005freports_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.list_005freports_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.interview_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.interview_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.list_005factions_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.list_005factions_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.list_005frecommendations_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.list_005frecommendations_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.audit_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.audit_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.portal.portal_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.portal.portal_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.portal.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.portal.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.admin.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.admin.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.admin.generic_005fmetrics_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.admin.generic_005fmetrics_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.metrics_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.metrics_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.vuln_005fcomment_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.vuln_005fcomment_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.voted_005fvulnerabilities_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.voted_005fvulnerabilities_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.mav_005fvulnerabilities_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.mav_005fvulnerabilities_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.new_005fvulnerabilities_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.new_005fvulnerabilities_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.vuln_005fanalysis_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.vuln_005fanalysis_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.targets_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.targets_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.vuln_005femail_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.vuln_005femail_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.vulnerability_005fsearch_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.vulnerability_005fsearch_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.vrt_005fvulnerabilities_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.vrt_005fvulnerabilities_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.inv_005fvulnerabilities_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.inv_005fvulnerabilities_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.mim.print_005fuser_005fdetails_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.mim.print_005fuser_005fdetails_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.mim.probe_005fhistory_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.mim.probe_005fhistory_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.mim.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.mim.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.mim.anomalies_005fusers_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.mim.anomalies_005fusers_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.mim.print_005fasls_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.mim.print_005fasls_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.mim.print_005fsnail_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.mim.print_005fsnail_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.mim.print_005fusers_005ffor_005fasl_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.mim.print_005fusers_005ffor_005fasl_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005fcriteria_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005fcriteria_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005fevents_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005fevents_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005fcauses_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005fcauses_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005fimpacts_005friskcontrols_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005fimpacts_005friskcontrols_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005fconsequences_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005fconsequences_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005fgroups_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005fgroups_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005friskreviews_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005friskreviews_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005frisks_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005frisks_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005factions_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005factions_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.asset.compositesProducts_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.asset.compositesProducts_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.asset.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.asset.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.asset.show_005fvpv_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.asset.show_005fvpv_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.downloads.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.downloads.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.downloads.images.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.downloads.images.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.soap.i18nLib_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.soap.i18nLib_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.soap.happyaxis_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.soap.happyaxis_jsp</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.reports_jsp</servlet-name>
+        <url-pattern>/reports.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.index_jsp</servlet-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.module_jsp</servlet-name>
+        <url-pattern>/module.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.icon_inc_jsp</servlet-name>
+        <url-pattern>/html/icon.inc.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.page_005ffooter_inc_jsp</servlet-name>
+        <url-pattern>/html/page_footer.inc.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.always_005ferror_jsp</servlet-name>
+        <url-pattern>/html/always_error.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.copyright_inc_jsp</servlet-name>
+        <url-pattern>/html/copyright.inc.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.index_jsp</servlet-name>
+        <url-pattern>/html/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.style_inc_jsp</servlet-name>
+        <url-pattern>/html/style.inc.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.page_005fheader_inc_jsp</servlet-name>
+        <url-pattern>/html/page_header.inc.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.find_005freports_jsp</servlet-name>
+        <url-pattern>/html/audit/find_reports.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.find_005factions_jsp</servlet-name>
+        <url-pattern>/html/audit/find_actions.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.report_jsp</servlet-name>
+        <url-pattern>/html/audit/report.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.list_005faudits_jsp</servlet-name>
+        <url-pattern>/html/audit/list_audits.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.recom_005fcomment_jsp</servlet-name>
+        <url-pattern>/html/audit/recom_comment.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.find_005faudits_jsp</servlet-name>
+        <url-pattern>/html/audit/find_audits.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.list_005finterviews_jsp</servlet-name>
+        <url-pattern>/html/audit/list_interviews.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.action_jsp</servlet-name>
+        <url-pattern>/html/audit/action.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.index_jsp</servlet-name>
+        <url-pattern>/html/audit/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.recommendation_jsp</servlet-name>
+        <url-pattern>/html/audit/recommendation.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.find_005frecommendations_jsp</servlet-name>
+        <url-pattern>/html/audit/find_recommendations.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.list_005freports_jsp</servlet-name>
+        <url-pattern>/html/audit/list_reports.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.interview_jsp</servlet-name>
+        <url-pattern>/html/audit/interview.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.list_005factions_jsp</servlet-name>
+        <url-pattern>/html/audit/list_actions.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.list_005frecommendations_jsp</servlet-name>
+        <url-pattern>/html/audit/list_recommendations.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.audit_jsp</servlet-name>
+        <url-pattern>/html/audit/audit.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.portal.portal_jsp</servlet-name>
+        <url-pattern>/html/portal/portal.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.portal.index_jsp</servlet-name>
+        <url-pattern>/html/portal/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.admin.index_jsp</servlet-name>
+        <url-pattern>/html/admin/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.admin.generic_005fmetrics_jsp</servlet-name>
+        <url-pattern>/html/admin/generic_metrics.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.metrics_jsp</servlet-name>
+        <url-pattern>/html/vrt/metrics.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.vuln_005fcomment_jsp</servlet-name>
+        <url-pattern>/html/vrt/vuln_comment.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.voted_005fvulnerabilities_jsp</servlet-name>
+        <url-pattern>/html/vrt/voted_vulnerabilities.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.mav_005fvulnerabilities_jsp</servlet-name>
+        <url-pattern>/html/vrt/mav_vulnerabilities.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.new_005fvulnerabilities_jsp</servlet-name>
+        <url-pattern>/html/vrt/new_vulnerabilities.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.vuln_005fanalysis_jsp</servlet-name>
+        <url-pattern>/html/vrt/vuln_analysis.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.targets_jsp</servlet-name>
+        <url-pattern>/html/vrt/targets.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.vuln_005femail_jsp</servlet-name>
+        <url-pattern>/html/vrt/vuln_email.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.vulnerability_005fsearch_jsp</servlet-name>
+        <url-pattern>/html/vrt/vulnerability_search.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.index_jsp</servlet-name>
+        <url-pattern>/html/vrt/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.vrt_005fvulnerabilities_jsp</servlet-name>
+        <url-pattern>/html/vrt/vrt_vulnerabilities.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.inv_005fvulnerabilities_jsp</servlet-name>
+        <url-pattern>/html/vrt/inv_vulnerabilities.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.mim.print_005fuser_005fdetails_jsp</servlet-name>
+        <url-pattern>/html/mim/print_user_details.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.mim.probe_005fhistory_jsp</servlet-name>
+        <url-pattern>/html/mim/probe_history.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.mim.index_jsp</servlet-name>
+        <url-pattern>/html/mim/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.mim.anomalies_005fusers_jsp</servlet-name>
+        <url-pattern>/html/mim/anomalies_users.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.mim.print_005fasls_jsp</servlet-name>
+        <url-pattern>/html/mim/print_asls.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.mim.print_005fsnail_jsp</servlet-name>
+        <url-pattern>/html/mim/print_snail.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.mim.print_005fusers_005ffor_005fasl_jsp</servlet-name>
+        <url-pattern>/html/mim/print_users_for_asl.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005fcriteria_jsp</servlet-name>
+        <url-pattern>/html/risk/list_criteria.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005fevents_jsp</servlet-name>
+        <url-pattern>/html/risk/list_events.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005fcauses_jsp</servlet-name>
+        <url-pattern>/html/risk/list_causes.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005fimpacts_005friskcontrols_jsp</servlet-name>
+        <url-pattern>/html/risk/list_impacts_riskcontrols.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005fconsequences_jsp</servlet-name>
+        <url-pattern>/html/risk/list_consequences.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005fgroups_jsp</servlet-name>
+        <url-pattern>/html/risk/list_groups.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005friskreviews_jsp</servlet-name>
+        <url-pattern>/html/risk/list_riskreviews.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.index_jsp</servlet-name>
+        <url-pattern>/html/risk/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005frisks_jsp</servlet-name>
+        <url-pattern>/html/risk/list_risks.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005factions_jsp</servlet-name>
+        <url-pattern>/html/risk/list_actions.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.asset.compositesProducts_jsp</servlet-name>
+        <url-pattern>/html/asset/compositesProducts.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.asset.index_jsp</servlet-name>
+        <url-pattern>/html/asset/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.asset.show_005fvpv_jsp</servlet-name>
+        <url-pattern>/html/asset/show_vpv.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.downloads.index_jsp</servlet-name>
+        <url-pattern>/html/downloads/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.downloads.images.index_jsp</servlet-name>
+        <url-pattern>/html/downloads/images/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.soap.i18nLib_jsp</servlet-name>
+        <url-pattern>/soap/i18nLib.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.soap.happyaxis_jsp</servlet-name>
+        <url-pattern>/soap/happyaxis.jsp</url-pattern>
+    </servlet-mapping>
+
+<!--
+All session-config, mime-mapping, welcome-file-list, error-page, taglib,
+resource-ref, security-constraint, login-config, security-role,
+env-entry, and ejb-ref elements should follow this fragment.
+-->
+
+
+<!-- Uncomment and configure in server.xml for AD/NTLM authentication -->
+<!--
+<filter-mapping>
+<filter-name>ExtNtlmHttpFilter</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping>
+-->
+</web-app>

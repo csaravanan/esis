@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="admin" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<admin_menu_home_esis>Accueil ESIS</admin_menu_home_esis>
+<admin_locations_datas_groups_add>Editer les départements de la localisation</admin_locations_datas_groups_add>
+<admin_locations_datas_users_name>Noms d'utilisateur</admin_locations_datas_users_name>
+<admin_locations_datas_users_add>Editer les utilisateurs de la localisation</admin_locations_datas_users_add>
+<admin_businesszones_datas_parentzones>Zones de travail parentes</admin_businesszones_datas_parentzones>
+<admin_businesszones_datas_locations_add>Editer les localisations de la zone</admin_businesszones_datas_locations_add>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<admin_user_history>Historique</admin_user_history>
+<admin_user_loginhistory>Connexions</admin_user_loginhistory>
+<admin_userhistory_title>Historique de l'utilisateur</admin_userhistory_title>
+<admin_userhistory_datas_date>Date modification</admin_userhistory_datas_date>
+<admin_userhistory_datas_modifier>Modifié par</admin_userhistory_datas_modifier>
+<admin_userhistory_datas_user>Utilisateur</admin_userhistory_datas_user>
+<admin_userhistory_datas_location>Localisation</admin_userhistory_datas_location>
+<admin_userhistory_datas_company>Entreprise</admin_userhistory_datas_company>
+<admin_userhistory_datas_admin>Administrateur</admin_userhistory_datas_admin>
+<admin_userhistory_datas_disabled>Désactivé</admin_userhistory_datas_disabled>
+<admin_userhistory_datas_locked>Verrouillé</admin_userhistory_datas_locked>
+<admin_userloginhistory_title>Historique des dernières connexions de l'utilisateur</admin_userloginhistory_title>
+<admin_userloginhistory_datas_date>Date de connexion</admin_userloginhistory_datas_date>
+<admin_userloginhistory_datas_success>Succès</admin_userloginhistory_datas_success>
+<admin_userloginhistory_datas_remoteip>IP distante</admin_userloginhistory_datas_remoteip>
+<admin_users_users>Utilisateurs</admin_users_users>
+<admin_users_infos>Plus d'infos</admin_users_infos>
+<admin_users_user>Utilisateur</admin_users_user>
+<admin_users_back>Retour</admin_users_back>
+<admin_users_datas_locations_name>Localisations</admin_users_datas_locations_name>
+<admin_users_datas_locations_company>Entreprises</admin_users_datas_locations_company>
+<admin_users_datas_locations_country>Pays</admin_users_datas_locations_country>
+<admin_users_datas_locations_nolocation>Pas de localisation</admin_users_datas_locations_nolocation>
+<admin_users_datas_zones>Présent dans les zones de travail</admin_users_datas_zones>
+<admin_groups_groups>Groupes</admin_groups_groups>
+<admin_groups_infos>Plus d'infos</admin_groups_infos>
+<admin_groups_group>Groupe</admin_groups_group>
+<admin_groups_group_department>département de $1</admin_groups_group_department>
+<admin_groups_back>Retour</admin_groups_back>
+<admin_groups_datas_users_name>Noms d'utilisateur</admin_groups_datas_users_name>
+<admin_groups_datas_locations_name>Localisations</admin_groups_datas_locations_name>
+<admin_groups_datas_locations_company>Entreprises</admin_groups_datas_locations_company>
+<admin_groups_datas_locations_country>Pays</admin_groups_datas_locations_country>
+<admin_groups_datas_locations_add>Ajouter/Supprimer une localisation</admin_groups_datas_locations_add>
+<admin_groups_datas_businesszones>Présent dans les zones de travail</admin_groups_datas_businesszones>
+<admin_groups_datas_businesszones_add>Ajouter/Supprimer une zone de travail</admin_groups_datas_businesszones_add>
+<admin_groups_error_businesszonenotremovable_title>Zone de travail non supprimable</admin_groups_error_businesszonenotremovable_title>
+<admin_groups_error_businesszonenotremovable_text>La zone de travail $1 ne peut pas être supprimé du département car c'est une sous-zone.</admin_groups_error_businesszonenotremovable_text>
+<admin_locations_locations>Localisations</admin_locations_locations>
+<admin_locations_infos>Plus d'infos</admin_locations_infos>
+<admin_locations_location_companycountry>liée à l'entreprise $1 dans le pays $2</admin_locations_location_companycountry>
+<admin_locations_location>Localisation</admin_locations_location>
+<admin_locations_back>Retour</admin_locations_back>
+<admin_locations_map>Situation géographique</admin_locations_map>
+<admin_locations_datas_users_members>Membres</admin_locations_datas_users_members>
+<admin_locations_datas_businesszones>Présente dans les zones de travail</admin_locations_datas_businesszones>
+<admin_locations_datas_businesszones_add>Editer les zones de travail de la localisation</admin_locations_datas_businesszones_add>
+<admin_locations_error_businesszonenotremovable_title>Zone de travail non supprimable</admin_locations_error_businesszonenotremovable_title>
+<admin_locations_error_businesszonenotremovable_text>La zone de travail $1 ne peut pas être supprimé de la localisation car c'est une sous-zone.</admin_locations_error_businesszonenotremovable_text>
+<admin_businesszones_zones>Zones de travail</admin_businesszones_zones>
+<admin_businesszones_infos>Plus d'infos</admin_businesszones_infos>
+<admin_businesszones_zone>Zone de travail</admin_businesszones_zone>
+<admin_businesszones_back>Retour</admin_businesszones_back>
+<admin_businesszones_map>Situation géographique</admin_businesszones_map>
+<admin_businesszones_datas_locations_company>Entreprises</admin_businesszones_datas_locations_company>
+<admin_grouplocations_title>Localisations du département $1</admin_grouplocations_title>
+<admin_grouplocations_remove>tout enlever</admin_grouplocations_remove>
+<admin_grouplocations_datas_locations>Localisations</admin_grouplocations_datas_locations>
+<admin_grouplocations_datas_membership>Localisations du département</admin_grouplocations_datas_membership>
+<admin_groupbusinesszones_title>Zones de travail du département $1</admin_groupbusinesszones_title>
+<admin_groupbusinesszones_datas_businesszones>Zones de travail</admin_groupbusinesszones_datas_businesszones>
+<admin_groupbusinesszones_datas_membership>Zones de travail liées</admin_groupbusinesszones_datas_membership>
+<admin_groupbusinesszones_remove>enlever toutes les zones dépendantes</admin_groupbusinesszones_remove>
+<admin_groupbusinesszones_error_notremovable>La zone de travail sélectionnée ne peut pas être supprimée car elle ne dépend pas directement du département.</admin_groupbusinesszones_error_notremovable>
+<admin_locationbusinesszones_title>Zones de travail de la localisation $1</admin_locationbusinesszones_title>
+<admin_locationbusinesszones_datas_businesszones>Zones de travail</admin_locationbusinesszones_datas_businesszones>
+<admin_locationbusinesszones_datas_membership>Zones de travail liées</admin_locationbusinesszones_datas_membership>
+<admin_locationbusinesszones_remove>enlever toutes les zones dépendantes</admin_locationbusinesszones_remove>
+<admin_locationbusinesszones_error_notremovable>La zone de travail sélectionnée ne peut pas être supprimée car elle n'est pas directement liée à la localisation.</admin_locationbusinesszones_error_notremovable>
+<admin_monitoring_legend_nodata>Pas de données</admin_monitoring_legend_nodata>
+<admin_monitoring_legend_noexecution>Pas d'exécution</admin_monitoring_legend_noexecution>
+<admin_monitoring_logs_data_name>Fichier</admin_monitoring_logs_data_name>
+<admin_monitoring_logs_data_size>Taille</admin_monitoring_logs_data_size>
+<admin_monitoring_logs_data_date>Date</admin_monitoring_logs_data_date>
+<admin_monitoring_logs_maindirectory>Répertoire des logs</admin_monitoring_logs_maindirectory>
+<admin_monitoring_logs_download>Téléchargement</admin_monitoring_logs_download>
+<admin_monitoring_logs_email>Envoi au support</admin_monitoring_logs_email>
+<admin_monitoring_probesxml_text>Export du XML des sondes</admin_monitoring_probesxml_text>
+<admin_monitoring_probesxml_download>Téléchargement</admin_monitoring_probesxml_download>
+<admin_monitoring_probesxml_email>Envoi au support</admin_monitoring_probesxml_email>
+<admin_monitoring_senterror_title>Erreur lors de l'envoi du fichier</admin_monitoring_senterror_title>
+<admin_monitoring_senterror_text>Une erreur est apparue lors de l'envoi du fichier. Essayez de renvoyer de le fichier à nouveau.</admin_monitoring_senterror_text>
+<admin_validation_probe_title>Validation du désenregistrement</admin_validation_probe_title>
+<admin_validation_probe_text>En désenregistrant cette sonde, la licence liée à la sonde sera supprimée ! Etes-vous sûr de vouloir désenregistrer cette sonde ?</admin_validation_probe_text>
+<admin_proberegistration_title>Ajouter un fichier de licence à la sonde</admin_proberegistration_title>
+<admin_proberegistration_files>Fichiers de licence</admin_proberegistration_files>
+<admin_proberegistration_upload>Sélectionnez le fichier de licence à ajouter</admin_proberegistration_upload>
+<admin_proberegistration_notify>Notifier au support</admin_proberegistration_notify>
+<admin_proberegistration_upload_uploading>Enregistrement du fichier $1 en cours.</admin_proberegistration_upload_uploading>
+<admin_proberegistration_upload_finished>Enregistrement du fichier $1 terminé.</admin_proberegistration_upload_finished>
+<admin_proberegistration_upload_select>Préparation de l'enregistrement du fichier $1.</admin_proberegistration_upload_select>
+<admin_proberegistration_upload_maxsize>Le fichier $1 a dépassé la taille maximale autorisée ($2 octets).</admin_proberegistration_upload_maxsize>
+<admin_proberegistration_upload_httperror>Erreur HTTP $1 lors de l'enregistrement du fichier. Vérifiez que le fichier de licence est bien un fichier de licence ESIS valide et que sa date de validité est conforme et réessayez.</admin_proberegistration_upload_httperror>
+<admin_proberegistration_upload_ioerror>Erreur en entrée/sortie lors de l'enregistrement du fichier $1. Vérifiez que le fichier n'est pas vide et réessayez.</admin_proberegistration_upload_ioerror>
+<admin_proberegistration_upload_securityerror>Erreur de sécurité ($1) lors de l'enregistrement du fichier $2.</admin_proberegistration_upload_securityerror>
+<admin_modules_datas_details_description>Description</admin_modules_datas_details_description>
+<admin_navigation_reports>Rapports</admin_navigation_reports>
+<admin_reports_title><![CDATA[Administration & Configuration<br />Gestion des rapports]]></admin_reports_title>
+<admin_reports_datas_reports_name>Rapports</admin_reports_datas_reports_name>
+<admin_reports_datas_reports_description>Descriptions</admin_reports_datas_reports_description>
+<admin_reports_datas_reports_class>Noms de classes</admin_reports_datas_reports_class>
+<admin_reports_datas_reports_module>Modules</admin_reports_datas_reports_module>
+<admin_reports_pageempty>0 rapport</admin_reports_pageempty>
+<admin_reports_pages>page $1 sur $2 ( $3 rapports )</admin_reports_pages>
+<admin_report_senterror_title>Erreur lors de l'envoi du fichier</admin_report_senterror_title>
+<admin_report_senterror_text>Une erreur est apparue lors de l'envoi du fichier. Essayez de renvoyer de le fichier à nouveau.</admin_report_senterror_text>
+<admin_report_download>Télécharger</admin_report_download>
+<admin_report_sendemail>Envoi email</admin_report_sendemail>
+<admin_report_title>Informations sur le rapport</admin_report_title>
+<admin_report_name>Rapport</admin_report_name>
+<admin_report_description>Description</admin_report_description>
+<admin_report_class>Classe (rapport)</admin_report_class>
+<admin_report_module>Module</admin_report_module>
+<admin_report_moduleclass>Classe (module)</admin_report_moduleclass>
+<admin_report_email>Envoyer par email</admin_report_email>
+<admin_report_data_files_name>Fichier de rapport</admin_report_data_files_name>
+<admin_report_data_files_date>Date</admin_report_data_files_date>
+<admin_report_error_email>Un email doit être sélectionné.</admin_report_error_email>	  
+<admin_user_error_password_error_username>Le nom d'utilisateur est dans le mot de passe</admin_user_error_password_error_username>
+<admin_user_error_password_error_company>L'entreprise est dans le mot de passe</admin_user_error_password_error_company>
+<admin_default_month_jan>Janvier</admin_default_month_jan>
+<admin_default_month_feb>Février</admin_default_month_feb>
+<admin_default_month_mar>Mars</admin_default_month_mar>
+<admin_default_month_apr>Avril</admin_default_month_apr>
+<admin_default_month_may>Mai</admin_default_month_may>
+<admin_default_month_jun>Juin</admin_default_month_jun>
+<admin_default_month_jul>Juillet</admin_default_month_jul>
+<admin_default_month_aug>Août</admin_default_month_aug>
+<admin_default_month_sep>Septembre</admin_default_month_sep>
+<admin_default_month_oct>Octobre</admin_default_month_oct>
+<admin_default_month_nov>Novembre</admin_default_month_nov>
+<admin_default_month_dec>Décembre</admin_default_month_dec>
+<admin_default_day_sun>D</admin_default_day_sun>
+<admin_default_day_mon>L</admin_default_day_mon>
+<admin_default_day_tue>M</admin_default_day_tue>
+<admin_default_day_wed>M</admin_default_day_wed>
+<admin_default_day_thu>J</admin_default_day_thu>
+<admin_default_day_fri>V</admin_default_day_fri>
+<admin_default_day_sat>S</admin_default_day_sat>
+<admin_standard_add_title>Ajouter une nouvelle norme</admin_standard_add_title>
+<admin_standard_update_title>Mettre à jour une norme</admin_standard_update_title>
+<admin_standard_stdtitle>Titre</admin_standard_stdtitle>
+<admin_standard_reference>Référence</admin_standard_reference>
+<admin_standard_classification>Classification</admin_standard_classification>
+<admin_standard_category>Catégorie</admin_standard_category>
+<admin_standard_source>Source</admin_standard_source>
+<admin_standard_publication>Publication</admin_standard_publication>
+<admin_standard_active>Active</admin_standard_active>
+<admin_standard_obsolete>Obsolète</admin_standard_obsolete>
+<admin_standard_add>Ajouter</admin_standard_add>
+<admin_standard_update>Mettre à jour</admin_standard_update>
+<admin_standard_cancel>Annuler</admin_standard_cancel>
+<admin_standard_topics>Sujets</admin_standard_topics>
+<admin_standard_error_title>Le titre doit être saisi.</admin_standard_error_title>
+<admin_standard_error_reference>La réference doit être saisie.</admin_standard_error_reference>
+<admin_standard_error_source>La source doit être sélectionnée.</admin_standard_error_source>
+<admin_standardtopics_title>Gérer les sujets de la norme</admin_standardtopics_title>
+<admin_standardtopics_topictitle>Sujet</admin_standardtopics_topictitle>
+<admin_standardtopics_reference>Référence</admin_standardtopics_reference>
+<admin_standardtopics_content>Contenu</admin_standardtopics_content>
+<admin_standardtopics_category>Catégorie</admin_standardtopics_category>
+<admin_standardtopics_add>Ajouter</admin_standardtopics_add>
+<admin_standardtopics_update>Mettre à jour</admin_standardtopics_update>
+<admin_standardtopics_cancel>Annuler</admin_standardtopics_cancel>
+<admin_standardtopics_error_update>Pas de mise à jour possible, utilisez 'Ajouter'</admin_standardtopics_error_update>
+<admin_standardtopics_error_title>Le sujet doit être saisi</admin_standardtopics_error_title>
+<admin_standardtopics_error_reference>La référence doit être saisie</admin_standardtopics_error_reference>
+<admin_standardtopics_error_referenceformat>Le format de référence doit être numérique: NN.xx.nn</admin_standardtopics_error_referenceformat>
+<admin_standardtopics_error_category>Une catégorie doit être sélectionnée</admin_standardtopics_error_category>
+<admin_standardsources_title>Sources des normes</admin_standardsources_title>
+<admin_standardsources_add>Ajouter</admin_standardsources_add>
+<admin_standardsources_update>Mettre à jour</admin_standardsources_update>
+<admin_standardsources_cancel>Annuler</admin_standardsources_cancel>
+<admin_standardsources_add_source_title>Ajouter une source</admin_standardsources_add_source_title>
+<admin_standardsources_update_source_title>Mettre à jour une source</admin_standardsources_update_source_title>
+<admin_standardsources_add_source>Ajouter une nouvelle source</admin_standardsources_add_source>
+<admin_standardsources_update_source>Mettre à jour la source</admin_standardsources_update_source>
+<admin_standardsources_sources>Sources</admin_standardsources_sources>
+<admin_standardsources_datas_sources_add>Ajouter une nouvelle source</admin_standardsources_datas_sources_add>
+<admin_standards_sources_view>Sources</admin_standards_sources_view>
+<admin_standards_categories_view>Catégories</admin_standards_categories_view>
+<admin_standardcategories_title>Catégories pour les normes</admin_standardcategories_title>
+<admin_standardcategories_add>Ajouter</admin_standardcategories_add>
+<admin_standardcategories_update>Mettre à jour</admin_standardcategories_update>
+<admin_standardcategories_cancel>Annuler</admin_standardcategories_cancel>
+<admin_standardcategories_add_category_title>Ajouter une catégorie</admin_standardcategories_add_category_title>
+<admin_standardcategories_update_category_title>Mettre à jour une catégorie</admin_standardcategories_update_category_title>
+<admin_standardcategories_add_category>Ajouter une nouvelle catégorie</admin_standardcategories_add_category>
+<admin_standardcategories_update_category>Mettre à jour une catégorie</admin_standardcategories_update_category>
+<admin_standardcategories_categories>Catégories</admin_standardcategories_categories>
+<admin_standardcategories_datas_categories_add>Ajouter une nouvelle catégorie</admin_standardcategories_datas_categories_add>
+<admin_standardtopiccategories_title>Catégories des sujets des normes</admin_standardtopiccategories_title>
+<admin_standardtopiccategories_add>Ajouter</admin_standardtopiccategories_add>
+<admin_standardtopiccategories_update>Mettre à jour</admin_standardtopiccategories_update>
+<admin_standardtopiccategories_cancel>Annuler</admin_standardtopiccategories_cancel>
+<admin_standardtopiccategories_add_category_title>Ajouter une catégorie de sujet</admin_standardtopiccategories_add_category_title>
+<admin_standardtopiccategories_update_category_title>Mettre à jour une catégorie de sujet</admin_standardtopiccategories_update_category_title>
+<admin_standardtopiccategories_add_category>Ajouter une nouvelle catégorie de sujet</admin_standardtopiccategories_add_category>
+<admin_standardtopiccategories_update_category>Mettre à jour la catégorie de sujet</admin_standardtopiccategories_update_category>
+<admin_standardtopiccategories_categories>Catégories de sujets</admin_standardtopiccategories_categories>
+<admin_standardtopiccategories_datas_categories_add>Ajouter une nouvelle catégorie de sujet</admin_standardtopiccategories_datas_categories_add>
+<admin_standardtopics_categories>Catégories</admin_standardtopics_categories>
+<admin_standard_category_none>Pas de catégorie définie</admin_standard_category_none>
+<admin_standards_datas_standards_add>Ajouter une nouvelle norme</admin_standards_datas_standards_add>
+<admin_standardtopics_topics>Sujets</admin_standardtopics_topics>
+<admin_preferences_title><![CDATA[Administration & Configuration<br />Préférences générales]]></admin_preferences_title>
+<admin_preferences_return>Retour modules</admin_preferences_return>
+<admin_preferences_datas_prefs_parameter>Paramètres</admin_preferences_datas_prefs_parameter>
+<admin_preferences_datas_prefs_value>Valeurs</admin_preferences_datas_prefs_value>
+<admin_preferences_datas_prefs_defaultvalue>Valeurs par défaut</admin_preferences_datas_prefs_defaultvalue>
+<admin_preferences_description>Description</admin_preferences_description>
+<admin_preferences_datas_prefhistory_value>Valeur</admin_preferences_datas_prefhistory_value>
+<admin_preferences_datas_prefhistory_modifier>Modifié par</admin_preferences_datas_prefhistory_modifier>
+<admin_preferences_datas_prefhistory_date>Date</admin_preferences_datas_prefhistory_date>
+<admin_preferences_commands>Utiliser les lignes de commandes ESIS pour éditer ces préférences.</admin_preferences_commands>
+<admin_modules_preferences>Préfs générales</admin_modules_preferences>
+<admin_report_files_pages>page $1 sur $2 ( $3 fichiers )</admin_report_files_pages>
+<admin_report_files_pageempty>0 fichier</admin_report_files_pageempty>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<admin_businesszones_locations>Localisations</admin_businesszones_locations>
+<admin_businesszones_zones>Zones géo.</admin_businesszones_zones>
+<admin_businesszones_groups>Départements</admin_businesszones_groups>
+</removed>
+</entity>
+</esis>

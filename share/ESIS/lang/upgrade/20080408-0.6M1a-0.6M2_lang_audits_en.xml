@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="audits" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<audit_navigation_management>Governance</audit_navigation_management>
+<audit_recommendation_compliance_add>Evaluate compliance level</audit_recommendation_compliance_add>
+<audit_compliance_title_add>Evaluate compliance level</audit_compliance_title_add>
+<audit_compliance_title_update>View/Edit compliance level</audit_compliance_title_update>
+<audit_auditupdate_datas_organisations_name>Audit perimeter</audit_auditupdate_datas_organisations_name>
+<audit_auditupdate_datas_organisations_edit>Edit perimeter</audit_auditupdate_datas_organisations_edit>
+<audit_auditorganisations_title>Audit permieter</audit_auditorganisations_title>
+<audit_recommendation_organisations>Perimeter</audit_recommendation_organisations>
+<audit_recommendation_organisations_linked>Recommendation perimeter</audit_recommendation_organisations_linked>
+<audit_raci_auditdocumenttitle>RACI for audit document</audit_raci_auditdocumenttitle>
+<audit_raci_recomdocumenttitle>RACI for recommendation document</audit_raci_recomdocumenttitle>
+<audit_auditupdate_datas_racis_edit>Edit privileges</audit_auditupdate_datas_racis_edit>
+<audit_report_auditreference>Audit reference</audit_report_auditreference>
+<audit_report_reporttitle>Report title</audit_report_reporttitle>
+<audit_errors_raci_text>The current RACI matrix of the item $1 doesn't allow you to perform this action.</audit_errors_raci_text>
+<audit_errors_raci_persons>Please contact the Responsible or Accountable person(s) of the item $1.</audit_errors_raci_persons>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<audit_audits_opened>Opened</audit_audits_opened>
+<audit_audits_closed>Closed</audit_audits_closed>
+<audit_raci_edit>Edit privileges</audit_raci_edit>
+<audit_audits_datas_racis_users>Stakeholders</audit_audits_datas_racis_users>
+<audit_audits_datas_racis_r>R</audit_audits_datas_racis_r>
+<audit_audits_datas_racis_a>A</audit_audits_datas_racis_a>
+<audit_audits_datas_racis_c>C</audit_audits_datas_racis_c>
+<audit_audits_datas_racis_i>I</audit_audits_datas_racis_i>
+<audit_audit_datas_racis_edit>Edit privileges</audit_audit_datas_racis_edit>
+<audit_auditupdate_error_closed>Only RACI A stakeholder can close the audit.</audit_auditupdate_error_closed>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<audit_raci_audit_edit>Edit</audit_raci_audit_edit>
+<audit_raci_report_edit>Edit</audit_raci_report_edit>
+<audit_raci_interview_edit>Edit</audit_raci_interview_edit>
+<audit_raci_auditdocument_edit>Edit</audit_raci_auditdocument_edit>
+<audit_raci_action_edit>Edit</audit_raci_action_edit>
+<audit_raci_recommendation_auditor_edit>Edit</audit_raci_recommendation_auditor_edit>
+<audit_raci_recommendation_auditee_edit>Edit</audit_raci_recommendation_auditee_edit>
+<audit_audits_datas_interviews_auditee>Interview auditee</audit_audits_datas_interviews_auditee>
+<audit_audits_datas_interviews_date>Int. Date</audit_audits_datas_interviews_date>
+<audit_audits_datas_interviews_add>Add an interview</audit_audits_datas_interviews_add>
+</removed>
+
+</entity>
+</esis>

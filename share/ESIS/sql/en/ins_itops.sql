@@ -1,0 +1,12 @@
+INSERT INTO itops.t_alert_severity (t_alert_severity_id, severity_name) VALUES (1, 'Information');
+INSERT INTO itops.t_alert_severity (t_alert_severity_id, severity_name) VALUES (2, 'Warning');
+INSERT INTO itops.t_alert_severity (t_alert_severity_id, severity_name) VALUES (3, 'Critical');
+INSERT INTO itops.t_alert_priority (t_alert_priority_id, priority_name) VALUES (1, 'Low');
+INSERT INTO itops.t_alert_priority (t_alert_priority_id, priority_name) VALUES (2, 'Medium');
+INSERT INTO itops.t_alert_priority (t_alert_priority_id, priority_name) VALUES (3, 'High');
+INSERT INTO itops.t_event_level (t_event_level_id, event_level) VALUES (1, 'Success');
+INSERT INTO itops.t_event_level (t_event_level_id, event_level) VALUES (2, 'Error');
+INSERT INTO itops.t_event_level (t_event_level_id, event_level) VALUES (3, 'Warning');
+INSERT INTO itops.t_event_level (t_event_level_id, event_level) VALUES (4, 'Information');
+INSERT INTO itops.t_event_level (t_event_level_id, event_level) VALUES (5, 'Audit Success');
+INSERT INTO itops.t_event_level (t_event_level_id, event_level) VALUES (6, 'Audit Failure');

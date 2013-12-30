@@ -1,0 +1,3 @@
+#!/bin/sh
+PATH=${GZIP_BINDIR-'/opt/ESIS/bin'}:$PATH
+exec gzip -d "$@"

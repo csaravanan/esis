@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="js/swfobject.js"></script>
+<title>ESIS - Fundamentals Metrics</title>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+//-->
+<style>
+body {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	background-color:#B7C0C8;
+}
+</style>
+<script type="text/javascript">
+<!--
+// get all url params
+var tmp = window.location.search.substring(1).split("&");
+var GET = [];
+for (var i in tmp)
+{
+	if (tmp[i].indexOf("=")!=-1)
+	{
+		GET[decodeURI(tmp[i].substring(0, tmp[i].indexOf("=")))] = decodeURI(tmp[i].substring(tmp[i].indexOf("=")+1));
+	} else
+	{
+		GET[decodeURI(tmp[i])]='';
+	}
+}
+//-->
+</script>
+</head>
+<body>
+<div id="flashcontent" align="center">&nbsp;</div>
+<script type="text/javascript">
+<!--
+var so = new SWFObject ("PORTAL.swf", "PortalSwf", GET['portalWidth'], GET['portalHeight'], "8.0.22", "#B7C0C8");
+so.addVariable("wsName", GET['wsName']);
+so.addVariable("wsParams", GET['wsParams']);
+so.addVariable("portalTitle", GET['portalTitle']);
+so.addVariable("multipleDatasTitles", GET['multipleDatasTitles']);
+so.addVariable("portalSpotMetric", GET['portalSpotMetric']);
+so.addVariable("portalProtocol", GET['portalProtocol']);
+so.addVariable("portalHost", GET['portalHost']);
+so.addVariable("listLabelName", GET['listLabelName']);
+so.addVariable("listLabelNumber", GET['listLabelNumber']);
+so.addVariable("portalHeight", GET['portalHeight']);
+so.addVariable("portalWidth", GET['portalWidth']);
+so.addVariable("portalZoom", GET['portalZoom']);
+so.addVariable("portalLanguage", GET['portalLanguage']);
+so.addParam("menu", true);
+so.addParam("quality", "high");
+//so.addParam("wmode", "transparent");
+//so.addParam("salign", "t");
+so.write("flashcontent");
+//-->
+</script>
+</body>
+</html>

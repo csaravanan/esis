@@ -1,0 +1,1124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<Admin>
+</Admin>
+<Vulnerabilities>
+</Vulnerabilities>
+<Identity>
+</Identity>
+<Audits>
+</Audits>
+<Assets>
+</Assets>
+<Risk_Assessment>
+</Risk_Assessment>
+<Risk_Register>
+</Risk_Register>
+<Portal>
+<!-- HBAR -->
+	<displayPref>
+		<prefGraphType>hbar</prefGraphType>
+		<prefParamText>Langue</prefParamText>
+		<prefParam>langue</prefParam>
+		<prefValue>en</prefValue>
+		<prefDescription>Pour configurer la langue d'affichage des textes dans le composant. Valeures possibles: en (par défaut) ou fr.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>hbar</prefGraphType>
+		<prefParamText>Taille texte</prefParamText>
+		<prefParam>textSizeVal</prefParam>
+		<prefValue>12</prefValue>
+		<prefDescription>Pour configurer la taille des textes en pixels. Valeur par défaut: 12.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>hbar</prefGraphType>
+		<prefParamText>Police du texte</prefParamText>
+		<prefParam>textFaceVal</prefParam>
+		<prefValue>ESISTEXT</prefValue>
+		<prefDescription>Pour configurer la police de caractère des textes. Valeur par défaut: ESISTEXT.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>hbar</prefGraphType>
+		<prefParamText>Espace entre les barres</prefParamText>
+		<prefParam>spaceBetweenBars</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour définir ou non un espace entre les barres. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>hbar</prefGraphType>
+		<prefParamText>Palette de couleurs</prefParamText>
+		<prefParam>setOfColors</prefParam>
+		<prefValue>esis</prefValue>
+		<prefDescription>Pour définir la palette de couleurs des barres. Valeurs possibles: esis (par défaut) ou other.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>hbar</prefGraphType>
+		<prefParamText>Titre de l'axe des X</prefParamText>
+		<prefParam>xAxisTitle</prefParam>
+		<prefValue></prefValue>
+		<prefDescription>Pour affecter un titre commun à tous les axes des X pour ce composant.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>hbar</prefGraphType>
+		<prefParamText>Taille titre</prefParamText>
+		<prefParam>textSizeTitleVal</prefParam>
+		<prefValue>11</prefValue>
+		<prefDescription>Pour configurer la taille du titre en pixels. Valeur par défaut: 11.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>hbar</prefGraphType>
+		<prefParamText>Police du titre</prefParamText>
+		<prefParam>textFaceTitleVal</prefParam>
+		<prefValue>ESISTITLE</prefValue>
+		<prefDescription>Pour configurer la police de caractère du titre. Valeur par défaut: ESISTITLE.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>hbar</prefGraphType>
+		<prefParamText>Type de l'application</prefParamText>
+		<prefParam>applicationSizeBkg</prefParam>
+		<prefValue>portal</prefValue>
+		<prefDescription>Pour configurer le composant pour qu'il soit compatible pour le module portal ou pour autres modules. Valeurs possibles: all ou portal (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>hbar</prefGraphType>
+		<prefParamText>Thème d'affichage</prefParamText>
+		<prefParam>colorTheme</prefParam>
+		<prefValue>default</prefValue>
+		<prefDescription>Pour configurer le thème d'affichage du composant. Valeurs possibles: default (par défaut), blue, blackwhite or gray.</prefDescription>
+	</displayPref>
+<!-- VBAR -->
+	<displayPref>
+		<prefGraphType>vbar</prefGraphType>
+		<prefParamText>Langue</prefParamText>
+		<prefParam>langue</prefParam>
+		<prefValue>en</prefValue>
+		<prefDescription>Pour configurer la langue d'affichage des textes dans le composant. Valeures possibles: en (par défaut) ou fr.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>vbar</prefGraphType>
+		<prefParamText>Taille texte</prefParamText>
+		<prefParam>textSizeVal</prefParam>
+		<prefValue>12</prefValue>
+		<prefDescription>Pour configurer la taille des textes en pixels. Valeur par défaut: 12.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>vbar</prefGraphType>
+		<prefParamText>Police du texte</prefParamText>
+		<prefParam>textFaceVal</prefParam>
+		<prefValue>ESISTEXT</prefValue>
+		<prefDescription>Pour configurer la police de caractère des textes. Valeur par défaut: ESISTEXT.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>vbar</prefGraphType>
+		<prefParamText>Espace entre les barres</prefParamText>
+		<prefParam>spaceBetweenBars</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour définir ou non un espace entre les barres. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>vbar</prefGraphType>
+		<prefParamText>Palette de couleurs</prefParamText>
+		<prefParam>setOfColors</prefParam>
+		<prefValue>esis</prefValue>
+		<prefDescription>Pour définir la palette de couleurs des barres. Valeurs possibles: esis (par défaut) ou other.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>vbar</prefGraphType>
+		<prefParamText>Titre de l'axe des Y</prefParamText>
+		<prefParam>yAxisTitle</prefParam>
+		<prefValue></prefValue>
+		<prefDescription>Pour affecter un titre commun à tous les axes des Y pour ce composant.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>vbar</prefGraphType>
+		<prefParamText>Taille titre</prefParamText>
+		<prefParam>textSizeTitleVal</prefParam>
+		<prefValue>11</prefValue>
+		<prefDescription>Pour configurer la taille du titre en pixels. Valeur par défaut: 11.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>vbar</prefGraphType>
+		<prefParamText>Police du titre</prefParamText>
+		<prefParam>textFaceTitleVal</prefParam>
+		<prefValue>ESISTITLE</prefValue>
+		<prefDescription>Pour configurer la police de caractère du titre. Valeur par défaut: ESISTITLE.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>vbar</prefGraphType>
+		<prefParamText>Type de l'application</prefParamText>
+		<prefParam>applicationSizeBkg</prefParam>
+		<prefValue>portal</prefValue>
+		<prefDescription>Pour configurer le composant pour qu'il soit compatible pour le module portal ou pour autres modules. Valeurs possibles: all ou portal (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>vbar</prefGraphType>
+		<prefParamText>Thème d'affichage</prefParamText>
+		<prefParam>colorTheme</prefParam>
+		<prefValue>default</prefValue>
+		<prefDescription>Pour configurer le thème d'affichage du composant. Valeurs possibles: default (par défaut), blue, blackwhite or gray.</prefDescription>
+	</displayPref>
+<!-- TOP -->
+	<displayPref>
+		<prefGraphType>top</prefGraphType>
+		<prefParamText>Langue</prefParamText>
+		<prefParam>langue</prefParam>
+		<prefValue>en</prefValue>
+		<prefDescription>Pour configurer la langue d'affichage des textes dans le composant. Valeures possibles: en (par défaut) ou fr.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>top</prefGraphType>
+		<prefParamText>Format des nombres</prefParamText>
+		<prefParam>numberFormat</prefParam>
+		<prefValue>eu</prefValue>
+		<prefDescription>Pour configurer l'affichage des nombres avec les séparateurs "." (eu) ou "," (us). Valeurs possibles: eu (par défaut) ou us.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>top</prefGraphType>
+		<prefParamText>Taille texte</prefParamText>
+		<prefParam>textSizeVal</prefParam>
+		<prefValue>12</prefValue>
+		<prefDescription>Pour configurer la taille des textes en pixels. Valeur par défaut: 12.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>top</prefGraphType>
+		<prefParamText>Police du texte</prefParamText>
+		<prefParam>textFaceVal</prefParam>
+		<prefValue>ESISTEXT</prefValue>
+		<prefDescription>Pour configurer la police de caractère des textes. Valeur par défaut: ESISTEXT.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>top</prefGraphType>
+		<prefParamText>Taille titre</prefParamText>
+		<prefParam>textSizeTitleVal</prefParam>
+		<prefValue>11</prefValue>
+		<prefDescription>Pour configurer la taille du titre en pixels. Valeur par défaut: 11.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>top</prefGraphType>
+		<prefParamText>Police du titre</prefParamText>
+		<prefParam>textFaceTitleVal</prefParam>
+		<prefValue>ESISTITLE</prefValue>
+		<prefDescription>Pour configurer la police de caractère du titre. Valeur par défaut: ESISTITLE.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>top</prefGraphType>
+		<prefParamText>Espace entre les cellules</prefParamText>
+		<prefParam>cellMargin</prefParam>
+		<prefValue>2</prefValue>
+		<prefDescription>Pour définir l'espace entre les cellules en pixels. Valeur par défaut: 2.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>top</prefGraphType>
+		<prefParamText>Activer agrandissement/réduction</prefParamText>
+		<prefParam>useDropDown</prefParam>
+		<prefValue>false</prefValue>
+		<prefDescription>Activer agrandissement/réductionPour afficher les icônes d'agrandissement et de réduction et activer les actions correspondantes. Valeurs possibles: true ou false (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>top</prefGraphType>
+		<prefParamText>Type de l'application</prefParamText>
+		<prefParam>applicationSizeBkg</prefParam>
+		<prefValue>portal</prefValue>
+		<prefDescription>Pour configurer le composant pour qu'il soit compatible pour le module portal ou pour autres modules. Valeurs possibles: all ou portal (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>top</prefGraphType>
+		<prefParamText>Thème d'affichage</prefParamText>
+		<prefParam>colorTheme</prefParam>
+		<prefValue>default</prefValue>
+		<prefDescription>Pour configurer le thème d'affichage du composant. Valeurs possibles: default (par défaut), blue, blackwhite or gray.</prefDescription>
+	</displayPref>
+<!-- SPOTMETRIC -->
+	<displayPref>
+		<prefGraphType>spotMetric</prefGraphType>
+		<prefParamText>Langue</prefParamText>
+		<prefParam>langue</prefParam>
+		<prefValue>en</prefValue>
+		<prefDescription>Pour configurer la langue d'affichage des textes dans le composant. Valeures possibles: en (par défaut) ou fr.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>spotMetric</prefGraphType>
+		<prefParamText>Format des nombres</prefParamText>
+		<prefParam>numberFormat</prefParam>
+		<prefValue>eu</prefValue>
+		<prefDescription>Pour configurer l'affichage des nombres avec les séparateurs "." (eu) ou "," (us). Valeurs possibles: eu (par défaut) ou us.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>spotMetric</prefGraphType>
+		<prefParamText>Couleur du fond</prefParamText>
+		<prefParam>backgroundColor</prefParam>
+		<prefValue>#FFFFFF</prefValue>
+		<prefDescription>Pour modifier la couleur de fond du graphique. Valeur par défaut: #FFFFFF.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>spotMetric</prefGraphType>
+		<prefParamText>Taille texte</prefParamText>
+		<prefParam>textSizeVal</prefParam>
+		<prefValue>10</prefValue>
+		<prefDescription>Pour configurer la taille des textes en pixels. Valeur par défaut: 10.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>spotMetric</prefGraphType>
+		<prefParamText>Police du texte</prefParamText>
+		<prefParam>textFaceVal</prefParam>
+		<prefValue>ESISTEXT</prefValue>
+		<prefDescription>Pour configurer la police de caractère des textes. Valeur par défaut: ESISTEXT.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>spotMetric</prefGraphType>
+		<prefParamText>Taille titre</prefParamText>
+		<prefParam>textSizeTitleVal</prefParam>
+		<prefValue>10</prefValue>
+		<prefDescription>Pour configurer la taille du titre en pixels. Valeur par défaut: 10.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>spotMetric</prefGraphType>
+		<prefParamText>Police du titre</prefParamText>
+		<prefParam>textFaceTitleVal</prefParam>
+		<prefValue>ESISTITLE</prefValue>
+		<prefDescription>Pour configurer la police de caractère du titre. Valeur par défaut: ESISTITLE.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>spotMetric</prefGraphType>
+		<prefParamText>Rotation et rafraichissement des valeurs</prefParamText>
+		<prefParam>useIntervalTime</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour activer la rotation des valeurs lors de l'utilisation du composant spotMetric en mode ticker. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>spotMetric</prefGraphType>
+		<prefParamText>Délai de rotation</prefParamText>
+		<prefParam>defaultIntervalTimeSeconds</prefParam>
+		<prefValue>10</prefValue>
+		<prefDescription>Pour modifier le délai de rotation (en secondes) pour un spotMetric en mode tiker. Valeur par défaut: 10.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>spotMetric</prefGraphType>
+		<prefParamText>Type de l'application</prefParamText>
+		<prefParam>applicationSizeBkg</prefParam>
+		<prefValue>portal</prefValue>
+		<prefDescription>Pour configurer le composant pour qu'il soit compatible pour le module portal ou pour autres modules. Valeurs possibles: all ou portal (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>spotMetric</prefGraphType>
+		<prefParamText>Thème d'affichage</prefParamText>
+		<prefParam>colorTheme</prefParam>
+		<prefValue>default</prefValue>
+		<prefDescription>Pour configurer le thème d'affichage du composant. Valeurs possibles: default (par défaut), blue, blackwhite or gray.</prefDescription>
+	</displayPref>
+<!-- PIE -->
+	<displayPref>
+		<prefGraphType>pie</prefGraphType>
+		<prefParamText>Langue</prefParamText>
+		<prefParam>langue</prefParam>
+		<prefValue>en</prefValue>
+		<prefDescription>Pour configurer la langue d'affichage des textes dans le composant. Valeures possibles: en (par défaut) ou fr.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>pie</prefGraphType>
+		<prefParamText>Format des nombres</prefParamText>
+		<prefParam>numberFormat</prefParam>
+		<prefValue>eu</prefValue>
+		<prefDescription>Pour configurer l'affichage des nombres avec les séparateurs "." (eu) ou "," (us). Valeurs possibles: eu (par défaut) ou us.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>pie</prefGraphType>
+		<prefParamText>Taille texte</prefParamText>
+		<prefParam>textSizeVal</prefParam>
+		<prefValue>12</prefValue>
+		<prefDescription>Pour configurer la taille des textes en pixels. Valeur par défaut: 12.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>pie</prefGraphType>
+		<prefParamText>Police du texte</prefParamText>
+		<prefParam>textFaceVal</prefParam>
+		<prefValue>ESISTEXT</prefValue>
+		<prefDescription>Pour configurer la police de caractère des textes. Valeur par défaut: ESISTEXT.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>pie</prefGraphType>
+		<prefParamText>Taille titre</prefParamText>
+		<prefParam>textSizeTitleVal</prefParam>
+		<prefValue>11</prefValue>
+		<prefDescription>Pour configurer la taille du titre en pixels. Valeur par défaut: 11.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>pie</prefGraphType>
+		<prefParamText>Police du titre</prefParamText>
+		<prefParam>textFaceTitleVal</prefParam>
+		<prefValue>ESISTITLE</prefValue>
+		<prefDescription>Pour configurer la police de caractère du titre. Valeur par défaut: ESISTITLE.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>pie</prefGraphType>
+		<prefParamText>Palette de couleurs</prefParamText>
+		<prefParam>colorPallet</prefParam>
+		<prefValue>array</prefValue>
+		<prefDescription>Pour définir la palette de couleurs des barres. Valeurs possibles: array (par défaut) ou random.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>pie</prefGraphType>
+		<prefParamText>Valeur minimale en pourcentage</prefParamText>
+		<prefParam>minPercentValue</prefParam>
+		<prefValue>3</prefValue>
+		<prefDescription>Pour définir la valeur minimale des libellés à afficher. Valeur par défaut: 3.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>pie</prefGraphType>
+		<prefParamText>Afficher les pourcentages</prefParamText>
+		<prefParam>usePercents</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour activer l'affichage des pourcentages. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>pie</prefGraphType>
+		<prefParamText>Afficher les tris</prefParamText>
+		<prefParam>useSortOption</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour afficher les options de tri sur libellés et valeurs. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>pie</prefGraphType>
+		<prefParamText>Type de l'application</prefParamText>
+		<prefParam>applicationSizeBkg</prefParam>
+		<prefValue>portal</prefValue>
+		<prefDescription>Pour configurer le composant pour qu'il soit compatible pour le module portal ou pour autres modules. Valeurs possibles: all ou portal (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>pie</prefGraphType>
+		<prefParamText>Thème d'affichage</prefParamText>
+		<prefParam>colorTheme</prefParam>
+		<prefValue>default</prefValue>
+		<prefDescription>Pour configurer le thème d'affichage du composant. Valeurs possibles: default (par défaut), blue, blackwhite or gray.</prefDescription>
+	</displayPref>
+<!-- STACKED BAR -->
+	<displayPref>
+		<prefGraphType>stackedbar</prefGraphType>
+		<prefParamText>Langue</prefParamText>
+		<prefParam>langue</prefParam>
+		<prefValue>en</prefValue>
+		<prefDescription>Pour configurer la langue d'affichage des textes dans le composant. Valeures possibles: en (par défaut) ou fr.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>stackedbar</prefGraphType>
+		<prefParamText>Format des nombres</prefParamText>
+		<prefParam>numberFormat</prefParam>
+		<prefValue>eu</prefValue>
+		<prefDescription>Pour configurer l'affichage des nombres avec les séparateurs "." (eu) ou "," (us). Valeurs possibles: eu (par défaut) ou us.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>stackedbar</prefGraphType>
+		<prefParamText>Taille texte</prefParamText>
+		<prefParam>textSizeVal</prefParam>
+		<prefValue>12</prefValue>
+		<prefDescription>Pour configurer la taille des textes en pixels. Valeur par défaut: 12.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>stackedbar</prefGraphType>
+		<prefParamText>Police du texte</prefParamText>
+		<prefParam>textFaceVal</prefParam>
+		<prefValue>ESISTEXT</prefValue>
+		<prefDescription>Pour configurer la police de caractère des textes. Valeur par défaut: ESISTEXT.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>stackedbar</prefGraphType>
+		<prefParamText>Taille titre</prefParamText>
+		<prefParam>textSizeTitleVal</prefParam>
+		<prefValue>11</prefValue>
+		<prefDescription>Pour configurer la taille du titre en pixels. Valeur par défaut: 11.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>stackedbar</prefGraphType>
+		<prefParamText>Police du titre</prefParamText>
+		<prefParam>textFaceTitleVal</prefParam>
+		<prefValue>ESISTITLE</prefValue>
+		<prefDescription>Pour configurer la police de caractère du titre. Valeur par défaut: ESISTITLE.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>stackedbar</prefGraphType>
+		<prefParamText>Palette de couleurs</prefParamText>
+		<prefParam>colorPallet</prefParam>
+		<prefValue>array</prefValue>
+		<prefDescription>Pour définir la palette de couleurs des barres. Valeurs possibles: array (par défaut) ou random.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>stackedbar</prefGraphType>
+		<prefParamText>Utiliser les pourcentages fournis dans les données</prefParamText>
+		<prefParam>usePercents</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour activer l'affichage des pourcentages si trouvés dans les données fournies. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>stackedbar</prefGraphType>
+		<prefParamText>Afficher les tris</prefParamText>
+		<prefParam>useSortOption</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour afficher les options de tri sur libellés et valeurs. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>stackedbar</prefGraphType>
+		<prefParamText>Type de l'application</prefParamText>
+		<prefParam>applicationSizeBkg</prefParam>
+		<prefValue>portal</prefValue>
+		<prefDescription>Pour configurer le composant pour qu'il soit compatible pour le module portal ou pour autres modules. Valeurs possibles: all ou portal (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>stackedbar</prefGraphType>
+		<prefParamText>Thème d'affichage</prefParamText>
+		<prefParam>colorTheme</prefParam>
+		<prefValue>default</prefValue>
+		<prefDescription>Pour configurer le thème d'affichage du composant. Valeurs possibles: default (par défaut), blue, blackwhite or gray.</prefDescription>
+	</displayPref>
+<!-- MULTIBAR -->
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Langue</prefParamText>
+		<prefParam>langue</prefParam>
+		<prefValue>en</prefValue>
+		<prefDescription>Pour configurer la langue d'affichage des textes dans le composant. Valeures possibles: en (par défaut) ou fr.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Format des nombres</prefParamText>
+		<prefParam>numberFormat</prefParam>
+		<prefValue>eu</prefValue>
+		<prefDescription>Pour configurer l'affichage des nombres avec les séparateurs "." (eu) ou "," (us). Valeurs possibles: eu (par défaut) ou us.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Taille texte</prefParamText>
+		<prefParam>textSizeVal</prefParam>
+		<prefValue>10</prefValue>
+		<prefDescription>Pour configurer la taille des textes en pixels. Valeur par défaut: 10.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Police du texte</prefParamText>
+		<prefParam>textFaceVal</prefParam>
+		<prefValue>ESISTEXT</prefValue>
+		<prefDescription>Pour configurer la police de caractère des textes. Valeur par défaut: ESISTEXT.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Taille titre</prefParamText>
+		<prefParam>textSizeTitleVal</prefParam>
+		<prefValue>11</prefValue>
+		<prefDescription>Pour configurer la taille du titre en pixels. Valeur par défaut: 11.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Police du titre</prefParamText>
+		<prefParam>textFaceTitleVal</prefParam>
+		<prefValue>ESISTITLE</prefValue>
+		<prefDescription>Pour configurer la police de caractère du titre. Valeur par défaut: ESISTITLE.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Taille libellés</prefParamText>
+		<prefParam>textSizeLabelVal</prefParam>
+		<prefValue>10</prefValue>
+		<prefDescription>Pour configurer la taille des libellés en pixels. Valeur par défaut: 10.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Police des libellés</prefParamText>
+		<prefParam>textFaceLabelVal</prefParam>
+		<prefValue>ESISTEXT</prefValue>
+		<prefDescription>Pour configurer la police de caractère des libellés. Valeur par défaut: ESISTEXT.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Titre de l'axe des X</prefParamText>
+		<prefParam>xAxisTitle</prefParam>
+		<prefValue></prefValue>
+		<prefDescription>Pour affecter un titre commun à tous les axes des X pour ce composant.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Titre de l'axe des Y</prefParamText>
+		<prefParam>yAxisTitle</prefParam>
+		<prefValue></prefValue>
+		<prefDescription>Pour affecter un titre commun à tous les axes des Y pour ce composant.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Affichage les valeurs de l'axe du temps</prefParamText>
+		<prefParam>showTimeAxisValues</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour activer l'affichage des valeurs de temps sur l'axe des X. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Afficher les valeurs de l'axe des Y</prefParamText>
+		<prefParam>showYAxisValues</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour activer l'affichage des valeurs intermédiaires sur l'axe des Y. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Nombre minimum de valeurs sur l'axe des X</prefParamText>
+		<prefParam>atLeastXAxisLines</prefParam>
+		<prefValue>0</prefValue>
+		<prefDescription>Pour afficher un nombre minimum des valeurs sur l'axe des X (plus de valeurs peuvent être affichées). Utiliser "0" pour désactiver cette option. Valeur par défaut: 0.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Espace entre les barres</prefParamText>
+		<prefParam>spaceBetweenBars</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour définir ou non un espace entre chaque lot de barres. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Type de l'application</prefParamText>
+		<prefParam>applicationSizeBkg</prefParam>
+		<prefValue>portal</prefValue>
+		<prefDescription>Pour configurer le composant pour qu'il soit compatible pour le module portal ou pour autres modules. Valeurs possibles: all ou portal (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multibar</prefGraphType>
+		<prefParamText>Thème d'affichage</prefParamText>
+		<prefParam>colorTheme</prefParam>
+		<prefValue>default</prefValue>
+		<prefDescription>Pour configurer le thème d'affichage du composant. Valeurs possibles: default (par défaut), blue, blackwhite or gray.</prefDescription>
+	</displayPref>
+<!-- CHART -->
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Langue</prefParamText>
+		<prefParam>langue</prefParam>
+		<prefValue>en</prefValue>
+		<prefDescription>Pour configurer la langue d'affichage des textes dans le composant. Valeures possibles: en (par défaut) ou fr.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Format des nombres</prefParamText>
+		<prefParam>numberFormat</prefParam>
+		<prefValue>eu</prefValue>
+		<prefDescription>Pour configurer l'affichage des nombres avec les séparateurs "." (eu) ou "," (us). Valeurs possibles: eu (par défaut) ou us.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Taille texte</prefParamText>
+		<prefParam>textSizeVal</prefParam>
+		<prefValue>10</prefValue>
+		<prefDescription>Pour configurer la taille des textes en pixels. Valeur par défaut: 10.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Police du texte</prefParamText>
+		<prefParam>textFaceVal</prefParam>
+		<prefValue>ESISTEXT</prefValue>
+		<prefDescription>Pour configurer la police de caractère des textes. Valeur par défaut: ESISTEXT.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Taille titre</prefParamText>
+		<prefParam>textSizeTitleVal</prefParam>
+		<prefValue>11</prefValue>
+		<prefDescription>Pour configurer la taille du titre en pixels. Valeur par défaut: 11.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Police du titre</prefParamText>
+		<prefParam>textFaceTitleVal</prefParam>
+		<prefValue>ESISTITLE</prefValue>
+		<prefDescription>Pour configurer la police de caractère du titre. Valeur par défaut: ESISTITLE.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Taille libellés</prefParamText>
+		<prefParam>textSizeLabelVal</prefParam>
+		<prefValue>10</prefValue>
+		<prefDescription>Pour configurer la taille des libellés en pixels. Valeur par défaut: 10.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Police des libellés</prefParamText>
+		<prefParam>textFaceLabelVal</prefParam>
+		<prefValue>ESISTEXT</prefValue>
+		<prefDescription>Pour configurer la police de caractère des libellés. Valeur par défaut: ESISTEXT.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Titre de l'axe des X</prefParamText>
+		<prefParam>xAxisTitle</prefParam>
+		<prefValue></prefValue>
+		<prefDescription>Pour affecter un titre commun à tous les axes des X pour ce composant.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Titre de l'axe des Y</prefParamText>
+		<prefParam>yAxisTitle</prefParam>
+		<prefValue></prefValue>
+		<prefDescription>Pour affecter un titre commun à tous les axes des Y pour ce composant.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Afficher les points</prefParamText>
+		<prefParam>showPoints</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour afficher les points correspondants aux valeurs sur la ligne. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Afficher les valeurs</prefParamText>
+		<prefParam>showValues</prefParam>
+		<prefValue>false</prefValue>
+		<prefDescription>Pour afficher les valeurs au niveau de chaque point de la ligne. Valeurs possibles: true ou false (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Afficher la moyenne</prefParamText>
+		<prefParam>showAverageLine</prefParam>
+		<prefValue>false</prefValue>
+		<prefDescription>Pour afficher la moyenne des valeurs des points de la ligne. Valeurs possibles: true ou false (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Affichage les valeurs de l'axe des Y</prefParamText>
+		<prefParam>showYAxisValues</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour activer l'affichage des valeurs intermédiaires sur l'axe des Y. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Affichage les valeurs de l'axe du temps</prefParamText>
+		<prefParam>showTimeAxisValues</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour activer l'affichage des valeurs de temps sur l'axe des X. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Début à 0</prefParamText>
+		<prefParam>useZeroBase</prefParam>
+		<prefValue>false</prefValue>
+		<prefDescription>Pour débuter l'axe des Y à 0. Valeurs possibles: true ou false (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Nombre minimum de valeurs sur l'axe des X</prefParamText>
+		<prefParam>atLeastXAxisLines</prefParam>
+		<prefValue>0</prefValue>
+		<prefDescription>Pour afficher un nombre minimum des valeurs sur l'axe des X (plus de valeurs peuvent être affichées). Utiliser "0" pour désactiver cette option. Valeur par défaut: 0.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Affichage en courbe</prefParamText>
+		<prefParam>drawSmoothCurves</prefParam>
+		<prefValue>false</prefValue>
+		<prefDescription>Pour afficher la ligne en courbe. Valeurs possibles: true ou false (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Animer le graphique</prefParamText>
+		<prefParam>useAnimation</prefParam>
+		<prefValue>false</prefValue>
+		<prefDescription>Pour animer l'affichage du graphique. Valeurs possibles: true ou false (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Intervale d'animation de la courbe</prefParamText>
+		<prefParam>animationInterval</prefParam>
+		<prefValue>100</prefValue>
+		<prefDescription>Pour modifier le nombre de pas lors de l'animation d'une courbe. Valeur par défaut: 100.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Redimensionnement du graphique</prefParamText>
+		<prefParam>useStretcher</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Permet de définir des barres de redimensionnement dans le graphique pour agrandir ou diminuer une partie d'un graphique. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Type de l'application</prefParamText>
+		<prefParam>applicationSizeBkg</prefParam>
+		<prefValue>portal</prefValue>
+		<prefDescription>Pour configurer le composant pour qu'il soit compatible pour le module portal ou pour autres modules. Valeurs possibles: all ou portal (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>chart</prefGraphType>
+		<prefParamText>Thème d'affichage</prefParamText>
+		<prefParam>colorTheme</prefParam>
+		<prefValue>default</prefValue>
+		<prefDescription>Pour configurer le thème d'affichage du composant. Valeurs possibles: default (par défaut), blue, blackwhite or gray.</prefDescription>
+	</displayPref>
+<!-- MULTICHART -->
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Langue</prefParamText>
+		<prefParam>langue</prefParam>
+		<prefValue>en</prefValue>
+		<prefDescription>Pour configurer la langue d'affichage des textes dans le composant. Valeures possibles: en (par défaut) ou fr.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Format des nombres</prefParamText>
+		<prefParam>numberFormat</prefParam>
+		<prefValue>eu</prefValue>
+		<prefDescription>Pour configurer l'affichage des nombres avec les séparateurs "." (eu) ou "," (us). Valeurs possibles: eu (par défaut) ou us.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Taille texte</prefParamText>
+		<prefParam>textSizeVal</prefParam>
+		<prefValue>10</prefValue>
+		<prefDescription>Pour configurer la taille des textes en pixels. Valeur par défaut: 10.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Police du texte</prefParamText>
+		<prefParam>textFaceVal</prefParam>
+		<prefValue>ESISTEXT</prefValue>
+		<prefDescription>Pour configurer la police de caractère des textes. Valeur par défaut: ESISTEXT.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Taille titre</prefParamText>
+		<prefParam>textSizeTitleVal</prefParam>
+		<prefValue>11</prefValue>
+		<prefDescription>Pour configurer la taille du titre en pixels. Valeur par défaut: 11.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Police du titre</prefParamText>
+		<prefParam>textFaceTitleVal</prefParam>
+		<prefValue>ESISTITLE</prefValue>
+		<prefDescription>Pour configurer la police de caractère du titre. Valeur par défaut: ESISTITLE.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Taille libellés</prefParamText>
+		<prefParam>textSizeLabelVal</prefParam>
+		<prefValue>10</prefValue>
+		<prefDescription>Pour configurer la taille des libellés en pixels. Valeur par défaut: 10.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Police des libellés</prefParamText>
+		<prefParam>textFaceLabelVal</prefParam>
+		<prefValue>ESISTEXT</prefValue>
+		<prefDescription>Pour configurer la police de caractère des libellés. Valeur par défaut: ESISTEXT.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Titre de l'axe des X</prefParamText>
+		<prefParam>xAxisTitle</prefParam>
+		<prefValue></prefValue>
+		<prefDescription>Pour affecter un titre commun à tous les axes des X pour ce composant.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Titre de l'axe des Y</prefParamText>
+		<prefParam>yAxisTitle</prefParam>
+		<prefValue></prefValue>
+		<prefDescription>Pour affecter un titre commun à tous les axes des Y pour ce composant.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Afficher les points</prefParamText>
+		<prefParam>showPoints</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour afficher les points correspondants aux valeurs sur la ligne. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Affichage les valeurs de l'axe des Y</prefParamText>
+		<prefParam>showYAxisValues</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour activer l'affichage des valeurs intermédiaires sur l'axe des Y. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Affichage les valeurs de l'axe du temps</prefParamText>
+		<prefParam>showTimeAxisValues</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour activer l'affichage des valeurs de temps sur l'axe des X. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Début à 0</prefParamText>
+		<prefParam>useZeroBase</prefParam>
+		<prefValue>false</prefValue>
+		<prefDescription>Pour débuter l'axe des Y à 0. Valeurs possibles: true ou false (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Nombre minimum de valeurs sur l'axe des X</prefParamText>
+		<prefParam>atLeastXAxisLines</prefParam>
+		<prefValue>0</prefValue>
+		<prefDescription>Pour afficher un nombre minimum des valeurs sur l'axe des X (plus de valeurs peuvent être affichées). Utiliser "0" pour désactiver cette option. Valeur par défaut: 0.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Affichage en courbes</prefParamText>
+		<prefParam>drawSmoothCurves</prefParam>
+		<prefValue>false</prefValue>
+		<prefDescription>Pour afficher les lignes en courbes. Valeurs possibles: true ou false (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Animer le graphique</prefParamText>
+		<prefParam>useAnimation</prefParam>
+		<prefValue>false</prefValue>
+		<prefDescription>Pour animer l'affichage du graphique. Valeurs possibles: true ou false (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Intervale d'animation des courbes</prefParamText>
+		<prefParam>animationInterval</prefParam>
+		<prefValue>100</prefValue>
+		<prefDescription>Pour modifier le nombre de pas lors de l'animation des courbes. Valeur par défaut: 100.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Redimensionnement du graphique</prefParamText>
+		<prefParam>useStretcher</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Permet de définir des barres de redimensionnement dans le graphique pour agrandir ou diminuer une partie d'un graphique. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Type de l'application</prefParamText>
+		<prefParam>applicationSizeBkg</prefParam>
+		<prefValue>portal</prefValue>
+		<prefDescription>Pour configurer le composant pour qu'il soit compatible pour le module portal ou pour autres modules. Valeurs possibles: all ou portal (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>multichart</prefGraphType>
+		<prefParamText>Thème d'affichage</prefParamText>
+		<prefParam>colorTheme</prefParam>
+		<prefValue>default</prefValue>
+		<prefDescription>Thème d'affichagePour configurer le thème d'affichage du composant. Valeurs possibles: default (par défaut), blue, blackwhite or gray.</prefDescription>
+	</displayPref>
+<!-- LINEAR GAUGE -->
+	<displayPref>
+		<prefGraphType>linearGauge</prefGraphType>
+		<prefParamText>Langue</prefParamText>
+		<prefParam>langue</prefParam>
+		<prefValue>en</prefValue>
+		<prefDescription>Pour configurer la langue d'affichage des textes dans le composant. Valeures possibles: en (par défaut) ou fr.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>linearGauge</prefGraphType>
+		<prefParamText>Format des nombres</prefParamText>
+		<prefParam>numberFormat</prefParam>
+		<prefValue>eu</prefValue>
+		<prefDescription>Pour configurer l'affichage des nombres avec les séparateurs "." (eu) ou "," (us). Valeurs possibles: eu (par défaut) ou us.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>linearGauge</prefGraphType>
+		<prefParamText>Couleur du fond</prefParamText>
+		<prefParam>backgroundColor</prefParam>
+		<prefValue>#FFFFFF</prefValue>
+		<prefDescription>Pour modifier la couleur de fond du graphique. Valeur par défaut: #FFFFFF.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>linearGauge</prefGraphType>
+		<prefParamText>Couleur de la jauge</prefParamText>
+		<prefParam>graphColor</prefParam>
+		<prefValue>#3EFC2E</prefValue>
+		<prefDescription>Pour modifier la couleur de la jauge. Valeur par défaut: #3EFC2E.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>linearGauge</prefGraphType>
+		<prefParamText>Taille texte</prefParamText>
+		<prefParam>textSizeVal</prefParam>
+		<prefValue>10</prefValue>
+		<prefDescription>Pour configurer la taille des textes en pixels. Valeur par défaut: 10.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>linearGauge</prefGraphType>
+		<prefParamText>Police du texte</prefParamText>
+		<prefParam>textFaceVal</prefParam>
+		<prefValue>ESISTEXT</prefValue>
+		<prefDescription>Pour configurer la police de caractère des textes. Valeur par défaut: ESISTEXT.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>linearGauge</prefGraphType>
+		<prefParamText>Taille titre</prefParamText>
+		<prefParam>textSizeTitleVal</prefParam>
+		<prefValue>11</prefValue>
+		<prefDescription>Pour configurer la taille du titre en pixels. Valeur par défaut: 11.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>linearGauge</prefGraphType>
+		<prefParamText>Police du titre</prefParamText>
+		<prefParam>textFaceTitleVal</prefParam>
+		<prefValue>ESISTITLE</prefValue>
+		<prefDescription>Pour configurer la police de caractère du titre. Valeur par défaut: ESISTITLE.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>linearGauge</prefGraphType>
+		<prefParamText>Affichage en pourcentages</prefParamText>
+		<prefParam>onlyPercents</prefParam>
+		<prefValue>false</prefValue>
+		<prefDescription>Pour afficher seulement les pourcentages. Valeurs possibles: true ou false (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>linearGauge</prefGraphType>
+		<prefParamText>Affichage par valeurs</prefParamText>
+		<prefParam>onlyValues</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour afficher seulement les données par valeurs. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>linearGauge</prefGraphType>
+		<prefParamText>Affichage du libellé</prefParamText>
+		<prefParam>showLabel</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour permettre l'affichage du libellé de la jauge. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>linearGauge</prefGraphType>
+		<prefParamText>Métrique sélectionné</prefParamText>
+		<prefParam>selectedDataName</prefParam>
+		<prefValue></prefValue>
+		<prefDescription>Pour sélectionner le métrique à afficher sous forme de jauge. Valeurs par défaut: "".</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>linearGauge</prefGraphType>
+		<prefParamText>Type de l'application</prefParamText>
+		<prefParam>applicationSizeBkg</prefParam>
+		<prefValue>portal</prefValue>
+		<prefDescription>Pour configurer le composant pour qu'il soit compatible pour le module portal ou pour autres modules. Valeurs possibles: all ou portal (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>linearGauge</prefGraphType>
+		<prefParamText>Thème d'affichage</prefParamText>
+		<prefParam>colorTheme</prefParam>
+		<prefValue>default</prefValue>
+		<prefDescription>Pour configurer le thème d'affichage du composant. Valeurs possibles: default (par défaut), blue, blackwhite or gray.</prefDescription>
+	</displayPref>
+<!-- TEXT -->
+	<displayPref>
+		<prefGraphType>text</prefGraphType>
+		<prefParamText>Taille titre</prefParamText>
+		<prefParam>textTitleSize</prefParam>
+		<prefValue>11</prefValue>
+		<prefDescription>Pour configurer la taille du titre en pixels. Valeur par défaut: 11.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>text</prefGraphType>
+		<prefParamText>Police du titre</prefParamText>
+		<prefParam>titleFace</prefParam>
+		<prefValue>ESISTITLE</prefValue>
+		<prefDescription>Pour configurer la police de caractère du titre. Valeur par défaut: ESISTITLE.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>text</prefGraphType>
+		<prefParamText>Taille texte</prefParamText>
+		<prefParam>textDGSize</prefParam>
+		<prefValue>12</prefValue>
+		<prefDescription>Pour configurer la taille du texte en pixels. Valeur par défaut: 12.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>text</prefGraphType>
+		<prefParamText>Police du texte</prefParamText>
+		<prefParam>fontFace</prefParam>
+		<prefValue>ESISDATAGRID</prefValue>
+		<prefDescription>Pour configurer la police de caractère du texte. Valeur par défaut: ESISDATAGRID.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>text</prefGraphType>
+		<prefParamText>Activer agrandissement/réduction</prefParamText>
+		<prefParam>useDropDown</prefParam>
+		<prefValue>false</prefValue>
+		<prefDescription>Pour afficher les icônes d'agrandissement et de réduction et activer les actions correspondantes. Valeurs possibles: true ou false (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>text</prefGraphType>
+		<prefParamText>Utiliser HTML pour le texte</prefParamText>
+		<prefParam>useHtml</prefParam>
+		<prefValue>true</prefValue>
+		<prefDescription>Pour configurer le texte avec compatibilité des tags HTML. Valeurs possibles: true (par défaut) ou false.</prefDescription>
+	</displayPref>
+<!-- WEBSERVICESERROR -->
+	<displayPref>
+		<prefGraphType>error</prefGraphType>
+		<prefParamText>Langue</prefParamText>
+		<prefParam>langue</prefParam>
+		<prefValue>en</prefValue>
+		<prefDescription>Pour configurer la langue d'affichage des textes dans le composant. Valeures possibles: en (par défaut) ou fr.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>error</prefGraphType>
+		<prefParamText>Taille texte</prefParamText>
+		<prefParam>textSizeVal</prefParam>
+		<prefValue>12</prefValue>
+		<prefDescription>Pour configurer la taille des textes en pixels. Valeur par défaut: 12.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>error</prefGraphType>
+		<prefParamText>Police du texte</prefParamText>
+		<prefParam>textFaceVal</prefParam>
+		<prefValue>ESISTEXT</prefValue>
+		<prefDescription>Pour configurer la police de caractère des textes. Valeur par défaut: ESISTEXT.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>error</prefGraphType>
+		<prefParamText>Marges</prefParamText>
+		<prefParam>margins</prefParam>
+		<prefValue>10</prefValue>
+		<prefDescription>Pour définir la taille des marges en pixels. Valeurs par défaut: 10.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>error</prefGraphType>
+		<prefParamText>Taille titre</prefParamText>
+		<prefParam>textSizeTitleVal</prefParam>
+		<prefValue>11</prefValue>
+		<prefDescription>Pour configurer la taille du titre en pixels. Valeur par défaut: 11.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>error</prefGraphType>
+		<prefParamText>Police du titre</prefParamText>
+		<prefParam>textFaceTitleVal</prefParam>
+		<prefValue>ESISTITLE</prefValue>
+		<prefDescription>Pour configurer la police de caractère du titre. Valeur par défaut: ESISTITLE.</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>error</prefGraphType>
+		<prefParamText>Type de l'application</prefParamText>
+		<prefParam>applicationSizeBkg</prefParam>
+		<prefValue>portal</prefValue>
+		<prefDescription>Pour configurer le composant pour qu'il soit compatible pour le module portal ou pour autres modules. Valeurs possibles: all ou portal (par défaut).</prefDescription>
+	</displayPref>
+	<displayPref>
+		<prefGraphType>error</prefGraphType>
+		<prefParamText>Thème d'affichage</prefParamText>
+		<prefParam>colorTheme</prefParam>
+		<prefValue>default</prefValue>
+		<prefDescription>Pour configurer le thème d'affichage du composant. Valeurs possibles: default (par défaut), blue, blackwhite or gray.</prefDescription>
+	</displayPref>
+</Portal>
+</esis>

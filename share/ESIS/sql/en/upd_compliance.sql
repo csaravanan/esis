@@ -1,0 +1,10 @@
+UPDATE compliance.e_standard_category SET standard_category = 'Information Technology' WHERE e_standard_category_id = 1;
+UPDATE compliance.e_standard_category SET standard_category = 'General Management' WHERE e_standard_category_id = 2;
+UPDATE compliance.e_topic_category SET topic_category = 'Security Management' WHERE e_topic_category_id = 1;
+UPDATE compliance.e_topic_category SET topic_category = 'Access Control' WHERE e_topic_category_id = 2;
+UPDATE compliance.e_compliance_kind SET kind = 'Application comment' WHERE e_compliance_kind_id = 1;
+UPDATE compliance.e_compliance_kind SET kind = 'Documentation comment' WHERE e_compliance_kind_id = 2;
+UPDATE compliance.e_compliance_type SET compliance_type = 'Non compliance of minor application' WHERE e_compliance_type_id = 1;
+UPDATE compliance.e_compliance_type SET compliance_type = 'Non compliance of minor documentation' WHERE e_compliance_type_id = 2;
+UPDATE compliance.e_compliance_type SET compliance_type = 'Non compliance of major application' WHERE e_compliance_type_id = 3;
+UPDATE compliance.e_compliance_type SET compliance_type = 'Non compliance of major documentation' WHERE e_compliance_type_id = 4;

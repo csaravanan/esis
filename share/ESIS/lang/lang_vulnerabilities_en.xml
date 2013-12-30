@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="vulnerabilities" lang="en">
+<!-- the # char is used for variables -->
+<!-- in html texts : add <br /> for return line -and- CDATA if use html code -->
+
+<!-- Navigation -->
+<vuln_navigation_new>New</vuln_navigation_new>
+<vuln_navigation_vrt>VRT</vuln_navigation_vrt>
+<vuln_navigation_investigated>Investigated</vuln_navigation_investigated>
+<vuln_navigation_repair>Repair</vuln_navigation_repair>
+<vuln_navigation_management>Governance</vuln_navigation_management>
+<vuln_navigation_metrics>Metrics</vuln_navigation_metrics>
+<vuln_navigation_reports>Reports</vuln_navigation_reports>
+<vuln_navigation_raci>RACI</vuln_navigation_raci>
+
+<!-- default texts -->
+<vuln_default_allusers>All users</vuln_default_allusers>
+<vuln_default_month_jan>January</vuln_default_month_jan>
+<vuln_default_month_feb>Febuary</vuln_default_month_feb>
+<vuln_default_month_mar>March</vuln_default_month_mar>
+<vuln_default_month_apr>April</vuln_default_month_apr>
+<vuln_default_month_may>May</vuln_default_month_may>
+<vuln_default_month_jun>June</vuln_default_month_jun>
+<vuln_default_month_jul>July</vuln_default_month_jul>
+<vuln_default_month_aug>August</vuln_default_month_aug>
+<vuln_default_month_sep>September</vuln_default_month_sep>
+<vuln_default_month_oct>October</vuln_default_month_oct>
+<vuln_default_month_nov>November</vuln_default_month_nov>
+<vuln_default_month_dec>December</vuln_default_month_dec>
+<vuln_default_month_jan_short>Jan</vuln_default_month_jan_short>
+<vuln_default_month_feb_short>Feb</vuln_default_month_feb_short>
+<vuln_default_month_mar_short>Mar</vuln_default_month_mar_short>
+<vuln_default_month_apr_short>Apr</vuln_default_month_apr_short>
+<vuln_default_month_may_short>May</vuln_default_month_may_short>
+<vuln_default_month_jun_short>Jun</vuln_default_month_jun_short>
+<vuln_default_month_jul_short>Jul</vuln_default_month_jul_short>
+<vuln_default_month_aug_short>Aug</vuln_default_month_aug_short>
+<vuln_default_month_sep_short>Sep</vuln_default_month_sep_short>
+<vuln_default_month_oct_short>Oct</vuln_default_month_oct_short>
+<vuln_default_month_nov_short>Nov</vuln_default_month_nov_short>
+<vuln_default_month_dec_short>Dec</vuln_default_month_dec_short>
+<vuln_default_day_sun>S</vuln_default_day_sun>
+<vuln_default_day_mon>M</vuln_default_day_mon>
+<vuln_default_day_tue>T</vuln_default_day_tue>
+<vuln_default_day_wed>W</vuln_default_day_wed>
+<vuln_default_day_thu>T</vuln_default_day_thu>
+<vuln_default_day_fri>F</vuln_default_day_fri>
+<vuln_default_day_sat>S</vuln_default_day_sat>
+<vuln_default_day_sun_long>Sun</vuln_default_day_sun_long>
+<vuln_default_day_mon_long>Mon</vuln_default_day_mon_long>
+<vuln_default_day_tue_long>Tue</vuln_default_day_tue_long>
+<vuln_default_day_wed_long>Wed</vuln_default_day_wed_long>
+<vuln_default_day_thu_long>Thu</vuln_default_day_thu_long>
+<vuln_default_day_fri_long>Fri</vuln_default_day_fri_long>
+<vuln_default_day_sat_long>Sat</vuln_default_day_sat_long>
+<vuln_default_days>day(s)</vuln_default_days>
+<vuln_default_r>R</vuln_default_r>
+<vuln_default_a>A</vuln_default_a>
+<vuln_default_c>C</vuln_default_c>
+<vuln_default_i>I</vuln_default_i>
+
+<!-- Errors texts --> 
+<vuln_errors_default_title>Error</vuln_errors_default_title>
+<vuln_errors_default_text>Error unknown</vuln_errors_default_text><!-- html -->
+<vuln_errors_wsnotexist_title>WebService Error</vuln_errors_wsnotexist_title>
+<vuln_errors_wsnotexist_text>The webservice '$1' doesn't exist. Please contact your administrator.</vuln_errors_wsnotexist_text><!-- html -->
+<vuln_errors_raci_title>RACI Violation</vuln_errors_raci_title>
+<vuln_errors_raci_text>The current RACI matrix of the item $1 doesn't allow you to perform this action.</vuln_errors_raci_text>
+<vuln_errors_raci_persons>Please contact the Responsible or Accountable person(s) of the item $1.</vuln_errors_raci_persons>
+<vuln_errors_raci_accountables>Accountable(s)</vuln_errors_raci_accountables>
+<vuln_errors_raci_responsibles>Responsible(s)</vuln_errors_raci_responsibles>
+<vuln_errors_raci_noaccountable>No accountable person.</vuln_errors_raci_noaccountable>
+<vuln_errors_raci_noresponsible>No responsible person.</vuln_errors_raci_noresponsible>
+<vuln_errors_authorization_title>Authorization Exception</vuln_errors_authorization_title>
+<vuln_errors_authorization_text>Authorization refused: you're not allowed to execute this operation.</vuln_errors_authorization_text>
+<vuln_errors_searchdate_title>Invalid search date</vuln_errors_searchdate_title>
+<vuln_errors_searchdate_text>Date format error: change the date format to any other format for example 2006, 2006-01 or 2006-01-01.</vuln_errors_searchdate_text>
+<vuln_errors_concurrency_title>Concurrent access error</vuln_errors_concurrency_title>
+<vuln_errors_concurrency_text><![CDATA[Operation refused: you're not allowed to finalize this operation because the selected object has been updated by another user.<br />Refresh the principal screen to update the selected object before start again the operation.]]></vuln_errors_concurrency_text>
+<vuln_errors_departments_title>Multiple selection error</vuln_errors_departments_title>
+<vuln_errors_departments_text>When the preference 'oneVotePerExpertDepartment' is activated, only one vulnerability can be added or ignored at the same time.</vuln_errors_departments_text><!-- html -->
+
+<!-- Vrt -->
+<vuln_vrt_title>VRT Meetings</vuln_vrt_title>
+<vuln_vrt_start>Start VRT</vuln_vrt_start>
+<vuln_vrt_resume>Resume VRT</vuln_vrt_resume>
+<vuln_vrt_view>View VRT</vuln_vrt_view>
+<vuln_vrt_close>Close VRT</vuln_vrt_close>
+<vuln_vrt_next>-Next VRT-</vuln_vrt_next>
+<vuln_vrt_started>-Started VRT-</vuln_vrt_started>
+<vuln_vrt_paused>-Paused VRT-</vuln_vrt_paused>
+<vuln_vrt_datas_vrt_enddate>Date</vuln_vrt_datas_vrt_enddate>
+<vuln_vrt_datas_vrt_total>Total</vuln_vrt_datas_vrt_total>
+<vuln_vrt_datas_vrt_new>New</vuln_vrt_datas_vrt_new>
+<vuln_vrt_datas_vrt_repair>Repair</vuln_vrt_datas_vrt_repair>
+<vuln_vrt_datas_vrt_investigate>Investigate</vuln_vrt_datas_vrt_investigate>
+<vuln_vrt_datas_vrt_acceptrisk>Accept risk</vuln_vrt_datas_vrt_acceptrisk>
+<vuln_vrt_datas_vrt_ignore>Ignore</vuln_vrt_datas_vrt_ignore>
+<vuln_vrt_pages>page $1 of $2 ( $3 meetings )</vuln_vrt_pages>
+<!-- first # : current page / second # : nb pages / third # : nb items - always in this order -->
+<vuln_vrt_pageempty>0 meeting</vuln_vrt_pageempty>
+<vuln_vrt_datas_vulnerabilities_name>Vuln. Id</vuln_vrt_datas_vulnerabilities_name>
+<vuln_vrt_datas_vulnerabilities_vendor>Vendor</vuln_vrt_datas_vulnerabilities_vendor>
+<vuln_vrt_datas_vulnerabilities_publishdate>Date</vuln_vrt_datas_vulnerabilities_publishdate>
+<vuln_vrt_datas_comments_comment>Comment</vuln_vrt_datas_comments_comment>
+<vuln_vrt_datas_comments_author>Author</vuln_vrt_datas_comments_author>
+
+<!-- New -->
+<vuln_new_title>New vulnerabilities</vuln_new_title>
+<vuln_new_add>Add to VRT</vuln_new_add>
+<vuln_new_voteadd>Vote for add</vuln_new_voteadd>
+<vuln_new_ignore>Ignore</vuln_new_ignore>
+<vuln_new_voteignore>Vote for ignore</vuln_new_voteignore>
+<vuln_new_newscreen>New</vuln_new_newscreen>
+<vuln_new_votescreen>Voted</vuln_new_votescreen>
+<vuln_new_datas_new_name>Vuln. Id</vuln_new_datas_new_name>
+<vuln_new_datas_new_description>Description</vuln_new_datas_new_description>
+<vuln_new_datas_new_vendor>Vendor</vuln_new_datas_new_vendor>
+<vuln_new_datas_new_product>Product</vuln_new_datas_new_product>
+<vuln_new_datas_new_severity>Severity</vuln_new_datas_new_severity>
+<vuln_new_datas_new_novulnerabilities>There are no vulnerabilities.</vuln_new_datas_new_novulnerabilities>
+<vuln_new_datas_new_noracivulnerabilities>There are no vulnerabilities matching your filter(s) and expertise(s).</vuln_new_datas_new_noracivulnerabilities>
+<vuln_new_pages>page $1 of $2 ( $3 vulnerabilities )</vuln_new_pages>
+<!-- first # : current page / second # : nb pages / third # : nb items - always in this order -->
+<vuln_new_pageempty>0 vulnerability</vuln_new_pageempty>
+<vuln_new_datas_voted_name>Vuln. Id</vuln_new_datas_voted_name>
+<vuln_new_datas_voted_description>Description</vuln_new_datas_voted_description>
+<vuln_new_datas_voted_product>Product</vuln_new_datas_voted_product>
+<vuln_new_datas_voted_myvote>My vote</vuln_new_datas_voted_myvote>
+<vuln_new_datas_voted_decision>Decision</vuln_new_datas_voted_decision>
+<vuln_new_datas_voted_novulnerabilities>There are no voted vulnerabilities.</vuln_new_datas_voted_novulnerabilities>
+<vuln_new_datas_voted_noracivulnerabilities>There are no voted vulnerabilities matching your expertise(s).</vuln_new_datas_voted_noracivulnerabilities>
+<vuln_new_datas_details>Informations</vuln_new_datas_details>
+<vuln_new_datas_details_name>Vuln. Id</vuln_new_datas_details_name>
+<vuln_new_datas_details_publishdate>Publish date</vuln_new_datas_details_publishdate>
+<vuln_new_datas_details_severity>Severity</vuln_new_datas_details_severity>
+<vuln_new_datas_details_vendors>Vendor(s)</vuln_new_datas_details_vendors>
+<vuln_new_datas_details_products>Products versions</vuln_new_datas_details_products>
+<vuln_new_datas_description>Description</vuln_new_datas_description>
+<vuln_new_datas_comments_comment>Comment</vuln_new_datas_comments_comment>
+<vuln_new_datas_comments_author>Author</vuln_new_datas_comments_author>
+<vuln_new_datas_comments_add>Add a new comment</vuln_new_datas_comments_add>
+
+<!-- VRT Vulnerabilities -->
+<vuln_vrtvulns_title>VRT vulnerabilities</vuln_vrtvulns_title>
+<vuln_vrtvulns_analysis>Analysis</vuln_vrtvulns_analysis>
+<vuln_vrtvulns_exit>Exit</vuln_vrtvulns_exit>
+<vuln_vrtvulns_new>New</vuln_vrtvulns_new>
+<vuln_vrtvulns_repair>Repair</vuln_vrtvulns_repair>
+<vuln_vrtvulns_investigate>Investigate</vuln_vrtvulns_investigate>
+<vuln_vrtvulns_acceptrisk>Accept risk</vuln_vrtvulns_acceptrisk>
+<vuln_vrtvulns_ignore>Ignore</vuln_vrtvulns_ignore>
+<vuln_vrtvulns_datas_vulns_name>Vuln. Id</vuln_vrtvulns_datas_vulns_name>
+<vuln_vrtvulns_datas_vulns_decision>Decision</vuln_vrtvulns_datas_vulns_decision>
+<vuln_vrtvulns_datas_vulns_description>Description</vuln_vrtvulns_datas_vulns_description>
+<vuln_vrtvulns_datas_vulns_product>Product</vuln_vrtvulns_datas_vulns_product>
+<vuln_vrtvulns_datas_vulns_severity>Severity</vuln_vrtvulns_datas_vulns_severity>
+<vuln_vrtvulns_datas_vulns_novulnerabilities>There are no vulnerabilities.</vuln_vrtvulns_datas_vulns_novulnerabilities>
+<vuln_vrtvulns_datas_vulns_noracivulnerabilities>There are no vulnerabilities matching your filter(s) and expertise(s).</vuln_vrtvulns_datas_vulns_noracivulnerabilities>
+<vuln_vrtvulns_datas_vulns_nomyvulnerabilities>There are no vulnerabilities matching your filter(s).</vuln_vrtvulns_datas_vulns_nomyvulnerabilities>
+<vuln_vrtvulns_pages>page $1 of $2 ( $3 vulnerabilities )</vuln_vrtvulns_pages>
+<!-- first # : current page / second # : nb pages / third # : nb items - always in this order -->
+<vuln_vrtvulns_pageempty>0 vulnerability</vuln_vrtvulns_pageempty>
+<vuln_vrtvulns_datas_details>Informations</vuln_vrtvulns_datas_details>
+<vuln_vrtvulns_datas_details_name>Vuln. Id</vuln_vrtvulns_datas_details_name>
+<vuln_vrtvulns_datas_details_publishdate>Publish date</vuln_vrtvulns_datas_details_publishdate>
+<vuln_vrtvulns_datas_details_severity>Severity</vuln_vrtvulns_datas_details_severity>
+<vuln_vrtvulns_datas_details_vendors>Vendor(s)</vuln_vrtvulns_datas_details_vendors>
+<vuln_vrtvulns_datas_details_products>Products versions</vuln_vrtvulns_datas_details_products>
+<vuln_vrtvulns_datas_description>Description</vuln_vrtvulns_datas_description>
+<vuln_vrtvulns_datas_comments_comment>Comment</vuln_vrtvulns_datas_comments_comment>
+<vuln_vrtvulns_datas_comments_author>Author</vuln_vrtvulns_datas_comments_author>
+<vuln_vrtvulns_datas_comments_add>Add a new comment</vuln_vrtvulns_datas_comments_add>
+
+<!-- Investigate -->
+<vuln_investigate_title>Investigated vulnerabilities</vuln_investigate_title>
+<vuln_investigate_manage>Manage vuln.</vuln_investigate_manage>
+<vuln_investigate_datas_investigate_name>Vuln. Id</vuln_investigate_datas_investigate_name>
+<vuln_investigate_datas_investigate_priority>Priority</vuln_investigate_datas_investigate_priority>
+<vuln_investigate_datas_investigate_description>Description</vuln_investigate_datas_investigate_description>
+<vuln_investigate_datas_investigate_product>Product</vuln_investigate_datas_investigate_product>
+<vuln_investigate_datas_investigate_severity>Severity</vuln_investigate_datas_investigate_severity>
+<vuln_investigate_datas_investigate_novulnerabilities>There are no vulnerabilities.</vuln_investigate_datas_investigate_novulnerabilities>
+<vuln_investigate_datas_investigate_noracivulnerabilities>There are no vulnerabilities matching your filter(s) and expertise(s).</vuln_investigate_datas_investigate_noracivulnerabilities>
+<vuln_investigate_datas_investigate_nomyvulnerabilities>There are no vulnerabilities matching your filter(s).</vuln_investigate_datas_investigate_nomyvulnerabilities>
+<vuln_investigate_pages>page $1 of $2 ( $3 vulnerabilities )</vuln_investigate_pages>
+<!-- first # : current page / second # : nb pages / third # : nb items - always in this order -->
+<vuln_investigate_pageempty>0 vulnerability</vuln_investigate_pageempty>
+<vuln_investigate_datas_details>Informations</vuln_investigate_datas_details>
+<vuln_investigate_datas_details_name>Vuln. Id</vuln_investigate_datas_details_name>
+<vuln_investigate_datas_details_publishdate>Publish date</vuln_investigate_datas_details_publishdate>
+<vuln_investigate_datas_details_severity>Severity</vuln_investigate_datas_details_severity>
+<vuln_investigate_datas_details_vendors>Vendor(s)</vuln_investigate_datas_details_vendors>
+<vuln_investigate_datas_details_products>Products versions</vuln_investigate_datas_details_products>
+<vuln_investigate_datas_description>Description</vuln_investigate_datas_description>
+<vuln_investigate_datas_comments_comment>Comment</vuln_investigate_datas_comments_comment>
+<vuln_investigate_datas_comments_author>Author</vuln_investigate_datas_comments_author>
+<vuln_investigate_datas_comments_add>Add a new comment</vuln_investigate_datas_comments_add>
+
+<!-- Repair -->
+<vuln_repair_title>Vulnerabilities management</vuln_repair_title>
+<vuln_repair_na>N/A</vuln_repair_na>
+<vuln_repair_planning>Planning</vuln_repair_planning>
+<vuln_repair_inprogress>In progress</vuln_repair_inprogress>
+<vuln_repair_fix>Fixed</vuln_repair_fix>
+<vuln_repair_wontfix>Won't fix</vuln_repair_wontfix>
+<vuln_repair_manage>Manage vuln.</vuln_repair_manage>
+<vuln_repair_datas_repair_name>Vuln. Id</vuln_repair_datas_repair_name>
+<vuln_repair_datas_repair_priority>Priority</vuln_repair_datas_repair_priority>
+<vuln_repair_datas_repair_description>Description</vuln_repair_datas_repair_description>
+<vuln_repair_datas_repair_owner>Responsible</vuln_repair_datas_repair_owner>
+<vuln_repair_datas_repair_status>Status</vuln_repair_datas_repair_status>
+<vuln_repair_datas_repair_targetdate>Target date</vuln_repair_datas_repair_targetdate>
+<vuln_repair_datas_repair_novulnerabilities>There are no vulnerabilities.</vuln_repair_datas_repair_novulnerabilities>
+<vuln_repair_datas_repair_noracivulnerabilities>There are no vulnerabilities matching your filter(s) and expertise(s).</vuln_repair_datas_repair_noracivulnerabilities>
+<vuln_repair_datas_repair_nomyvulnerabilities>There are no vulnerabilities matching your filter(s).</vuln_repair_datas_repair_nomyvulnerabilities>
+<vuln_repair_pages>page $1 of $2 ( $3 vulnerabilities )</vuln_repair_pages>
+<!-- first # : current page / second # : nb pages / third # : nb items - always in this order -->
+<vuln_repair_pageempty>0 vulnerability</vuln_repair_pageempty>
+<vuln_repair_datas_actions_status>Status</vuln_repair_datas_actions_status>
+<vuln_repair_datas_actions_owner>Responsible</vuln_repair_datas_actions_owner>
+<vuln_repair_datas_actions_targetdate>Target date</vuln_repair_datas_actions_targetdate>
+<vuln_repair_datas_actions_add>Add a new action</vuln_repair_datas_actions_add>
+<vuln_repair_datas_comments_comment>Comment</vuln_repair_datas_comments_comment>
+<vuln_repair_datas_comments_author>Author</vuln_repair_datas_comments_author>
+<vuln_repair_datas_comments_add>Add a new comment</vuln_repair_datas_comments_add>
+
+<!-- Metrics -->
+<vuln_metrics_title>Management - Metrics</vuln_metrics_title>
+<vuln_metrics_datas_compliance>Compliance</vuln_metrics_datas_compliance>
+<vuln_metrics_datas_compliance_status>Status</vuln_metrics_datas_compliance_status>
+<vuln_metrics_datas_compliance_vulnerabilities># vulnerabilities</vuln_metrics_datas_compliance_vulnerabilities>
+<vuln_metrics_datas_compliance_rate>Rate</vuln_metrics_datas_compliance_rate>
+<vuln_metrics_datas_compliance_target>Target</vuln_metrics_datas_compliance_target>
+<vuln_metrics_datas_compliance_limit>Limit</vuln_metrics_datas_compliance_limit>
+<vuln_metrics_datas_reactivity>Reactivity</vuln_metrics_datas_reactivity>
+<vuln_metrics_datas_reactivity_time>Time</vuln_metrics_datas_reactivity_time>
+<vuln_metrics_datas_reactivity_longesttime>Longest</vuln_metrics_datas_reactivity_longesttime>
+<vuln_metrics_datas_reactivity_averagetime>Average</vuln_metrics_datas_reactivity_averagetime>
+<vuln_metrics_datas_reactivity_shortesttime>Shortest</vuln_metrics_datas_reactivity_shortesttime>
+<vuln_metrics_datas_reactivity_target>Target</vuln_metrics_datas_reactivity_target>
+<vuln_metrics_datas_exposure>Exposure</vuln_metrics_datas_exposure>
+<vuln_metrics_datas_exposure_closuretime>Time to close since action decision</vuln_metrics_datas_exposure_closuretime>
+<vuln_metrics_datas_exposure_longesttime>Longest</vuln_metrics_datas_exposure_longesttime>
+<vuln_metrics_datas_exposure_averagetime>Average</vuln_metrics_datas_exposure_averagetime>
+<vuln_metrics_datas_exposure_shortesttime>Shortest</vuln_metrics_datas_exposure_shortesttime>
+<vuln_metrics_datas_exposure_target>Target</vuln_metrics_datas_exposure_target>
+<vuln_metrics_targets>Targets</vuln_metrics_targets>
+
+<!-- Targets -->
+<vuln_targets_save>Save</vuln_targets_save>
+<vuln_targets_compliance>Compliance</vuln_targets_compliance>
+<vuln_targets_reactivity>Reactivity</vuln_targets_reactivity>
+<vuln_targets_exposure>Exposure</vuln_targets_exposure>
+<vuln_targets_levels>Measured levels</vuln_targets_levels>
+
+<!-- Reports -->
+<vuln_reports_title>Management - Reports</vuln_reports_title>
+<vuln_reports_datas_reports>Report</vuln_reports_datas_reports>
+<vuln_reports_datas_description>Report description</vuln_reports_datas_description>
+<vuln_reports_pages>page $1 of $2 ( $3 reports )</vuln_reports_pages>
+<!-- first # : current page / second # : nb pages / third # : nb items - always in this order -->
+<vuln_reports_pageempty>0 report</vuln_reports_pageempty>
+
+<!-- RACIs -->
+<vuln_racis_title>Management - Module RACI</vuln_racis_title>
+<vuln_racis_R>R</vuln_racis_R>
+<vuln_racis_A>A</vuln_racis_A>
+<vuln_racis_C>C</vuln_racis_C>
+<vuln_racis_I>I</vuln_racis_I>
+<vuln_racis_datas_users>Stakeholders</vuln_racis_datas_users>
+<vuln_racis_datas_racis_user>Stakeholder</vuln_racis_datas_racis_user>
+<vuln_racis_datas_racis_item>Item</vuln_racis_datas_racis_item>
+<vuln_racis_datas_racis_r>R</vuln_racis_datas_racis_r>
+<vuln_racis_datas_racis_a>A</vuln_racis_datas_racis_a>
+<vuln_racis_datas_racis_c>C</vuln_racis_datas_racis_c>
+<vuln_racis_datas_racis_i>I</vuln_racis_datas_racis_i>
+<vuln_racis_pages>page $1 of $2 ( $3 items )</vuln_racis_pages>
+<!-- first # : current page / second # : nb pages / third # : nb items - always in this order -->
+<vuln_racis_pageempty>0 item</vuln_racis_pageempty>
+
+<!-- Vulnerability -->
+<vuln_vulnerability_title>Vulnerability informations</vuln_vulnerability_title>
+<vuln_vulnerability_name>Vuln. Id</vuln_vulnerability_name>
+<vuln_vulnerability_published>Published date</vuln_vulnerability_published>
+<vuln_vulnerability_severity>Severity</vuln_vulnerability_severity>
+<vuln_vulnerability_decision>Decision</vuln_vulnerability_decision>
+<vuln_vulnerability_priority>Priority</vuln_vulnerability_priority>
+<vuln_vulnerability_status>Correction status</vuln_vulnerability_status>
+<vuln_vulnerability_targetdate>Target date</vuln_vulnerability_targetdate>
+<vuln_vulnerability_ignore>Ignore</vuln_vulnerability_ignore>
+<vuln_vulnerability_add>Add to VRT</vuln_vulnerability_add>
+<vuln_vulnerability_voteignore>Vote for ignore</vuln_vulnerability_voteignore>
+<vuln_vulnerability_voteadd>Vote for add</vuln_vulnerability_voteadd>
+<vuln_vulnerability_description>Description</vuln_vulnerability_description>
+<vuln_vulnerability_vendors>Vendors</vuln_vulnerability_vendors>
+<vuln_vulnerability_products>Products</vuln_vulnerability_products>
+<vuln_vulnerability_links>Links</vuln_vulnerability_links>
+<vuln_vulnerability_datas_references>References and alias</vuln_vulnerability_datas_references>
+<vuln_vulnerability_datas_references_add>Add an alias</vuln_vulnerability_datas_references_add>
+<vuln_vulnerability_history>History</vuln_vulnerability_history>
+<vuln_vulnerability_details>More details</vuln_vulnerability_details>
+<vuln_vulnerability_datas_comments_comment>Comment</vuln_vulnerability_datas_comments_comment>
+<vuln_vulnerability_datas_comments_author>Author</vuln_vulnerability_datas_comments_author>
+<vuln_vulnerability_datas_comments_add>Add a new comment</vuln_vulnerability_datas_comments_add>
+<vuln_vulnerability_datas_actions_filter>View all</vuln_vulnerability_datas_actions_filter>
+<vuln_vulnerability_datas_actions_status>Status</vuln_vulnerability_datas_actions_status>
+<vuln_vulnerability_datas_actions_owner>Responsible</vuln_vulnerability_datas_actions_owner>
+<vuln_vulnerability_datas_actions_targetdate>Target date</vuln_vulnerability_datas_actions_targetdate>
+<vuln_vulnerability_datas_actions_add>Add a new action</vuln_vulnerability_datas_actions_add>
+<vuln_vulnerability_manage>Manage vuln.</vuln_vulnerability_manage>
+<vuln_vulnerability_analysis>Analysis</vuln_vulnerability_analysis>
+
+<!-- Vulnerability History -->
+<vuln_vulnerabilityhistory_title>Vulnerability history</vuln_vulnerabilityhistory_title>
+<vuln_vulnerabilityhistory_name>Vuln. Id :</vuln_vulnerabilityhistory_name>
+<vuln_vulnerabilityhistory_published>Published date :</vuln_vulnerabilityhistory_published>
+<vuln_vulnerabilityhistory_received>Received date :</vuln_vulnerabilityhistory_received>
+<vuln_vulnerabilityhistory_triaged>Triaged date :</vuln_vulnerabilityhistory_triaged>
+<vuln_vulnerabilityhistory_datas_changedate>Change date</vuln_vulnerabilityhistory_datas_changedate>
+<vuln_vulnerabilityhistory_datas_modifier>Modifier</vuln_vulnerabilityhistory_datas_modifier>
+<vuln_vulnerabilityhistory_datas_decision>Decision</vuln_vulnerabilityhistory_datas_decision>
+<vuln_vulnerabilityhistory_datas_owner>Responsible</vuln_vulnerabilityhistory_datas_owner>
+<vuln_vulnerabilityhistory_datas_priority>Priority</vuln_vulnerabilityhistory_datas_priority>
+<vuln_vulnerabilityhistory_datas_status>Status</vuln_vulnerabilityhistory_datas_status>
+<vuln_vulnerabilityhistory_datas_targetdate>Target date</vuln_vulnerabilityhistory_datas_targetdate>
+
+<!-- Vulnerability Alias -->
+<vuln_alias_title>Add an alias</vuln_alias_title>
+<vuln_alias_text>Fill the alias name to add or merge it to your vulnerability :</vuln_alias_text>
+<vuln_alias_informations>Attention: adding alias name or alias vulnerability to your vulnerability make your modification completly unreversible.</vuln_alias_informations>
+<vuln_alias_ok>Ok</vuln_alias_ok>
+<vuln_alias_cancel>Cancel</vuln_alias_cancel>
+
+<!-- Vulnerability Details -->
+<vuln_details_title>Vulnerability informations</vuln_details_title>
+<vuln_details_datas_details_nodetails>No details available.</vuln_details_datas_details_nodetails>
+<vuln_details_datas_details_revision>Revision #</vuln_details_datas_details_revision>
+<vuln_details_datas_details_revisiondate>Revision date</vuln_details_datas_details_revisiondate>
+<vuln_details_datas_details_description>Description</vuln_details_datas_details_description>
+
+<!-- Vulnerability Analysis -->
+<vuln_analysis_title>Vulnerability management</vuln_analysis_title>
+<vuln_analysis_datas_description>Description</vuln_analysis_datas_description>
+<vuln_analysis_datas_links>Links</vuln_analysis_datas_links>
+<vuln_analysis_datas_references>References and alias</vuln_analysis_datas_references>
+<vuln_analysis_severity>Severity: $1</vuln_analysis_severity>
+<vuln_analysis_owner>Responsible: $1</vuln_analysis_owner>
+<vuln_analysis_decision>Decision: $1</vuln_analysis_decision>
+<vuln_analysis_save>Save</vuln_analysis_save>
+<vuln_analysis_history>History</vuln_analysis_history>
+<vuln_analysis_raci_title>RACI</vuln_analysis_raci_title>
+<vuln_analysis_raci_datas_edit>Edit</vuln_analysis_raci_datas_edit>
+<vuln_analysis_snail_clients>Clients devices</vuln_analysis_snail_clients>
+<vuln_analysis_snail_applications>Applications</vuln_analysis_snail_applications>
+<vuln_analysis_snail_network>Network</vuln_analysis_snail_network>
+<vuln_analysis_snail_windows>Windows</vuln_analysis_snail_windows>
+<vuln_analysis_snail_unix>Unix</vuln_analysis_snail_unix>
+<vuln_analysis_snail_businessinternational>International operations</vuln_analysis_snail_businessinternational>
+<vuln_analysis_snail_businesssupport>Business support</vuln_analysis_snail_businesssupport>
+<vuln_analysis_snail_businessoperations>Business operations</vuln_analysis_snail_businessoperations>
+<vuln_analysis_snail_businessbrand>Brand and company value</vuln_analysis_snail_businessbrand>
+<vuln_analysis_snail_business_title>Business impact</vuln_analysis_snail_business_title>
+<vuln_analysis_snail_technical_title>Technical impact</vuln_analysis_snail_technical_title>
+<vuln_analysis_snail_exposure_title>Exposure</vuln_analysis_snail_exposure_title>
+<vuln_analysis_default_na>N/A</vuln_analysis_default_na>
+<vuln_analysis_default_low>Low</vuln_analysis_default_low>
+<vuln_analysis_default_medium>Med.</vuln_analysis_default_medium>
+<vuln_analysis_default_high>High</vuln_analysis_default_high>
+<vuln_analysis_analysis_title>Options Strategy Analysis</vuln_analysis_analysis_title>
+<vuln_analysis_business_title>Business impact</vuln_analysis_business_title>
+<vuln_analysis_technical_title>Technical impact</vuln_analysis_technical_title>
+<vuln_analysis_exposure_title>Exposure</vuln_analysis_exposure_title>
+<vuln_analysis_decision_title>Decision</vuln_analysis_decision_title>
+<vuln_analysis_management_title>Management</vuln_analysis_management_title>
+<vuln_analysis_business_brand>Brand and company value</vuln_analysis_business_brand>
+<vuln_analysis_business_operations>Business operations</vuln_analysis_business_operations>
+<vuln_analysis_business_support>Business support</vuln_analysis_business_support>
+<vuln_analysis_business_international>International operations</vuln_analysis_business_international>
+<vuln_analysis_business_comment>Comment</vuln_analysis_business_comment>
+<vuln_analysis_technical_unix>Unix</vuln_analysis_technical_unix>
+<vuln_analysis_technical_windows>Windows</vuln_analysis_technical_windows>
+<vuln_analysis_technical_network>Network</vuln_analysis_technical_network>
+<vuln_analysis_technical_clients>Clients devices</vuln_analysis_technical_clients>
+<vuln_analysis_technical_applications>Applications</vuln_analysis_technical_applications>
+<vuln_analysis_technical_comment>Comment</vuln_analysis_technical_comment>
+<vuln_analysis_exposure_unix>Unix</vuln_analysis_exposure_unix>
+<vuln_analysis_exposure_windows>Windows</vuln_analysis_exposure_windows>
+<vuln_analysis_exposure_network>Network</vuln_analysis_exposure_network>
+<vuln_analysis_exposure_clients>Clients devices</vuln_analysis_exposure_clients>
+<vuln_analysis_exposure_applications>Applications</vuln_analysis_exposure_applications>
+<vuln_analysis_exposure_comment>Comment</vuln_analysis_exposure_comment>
+<vuln_analysis_decision_decision>Decision</vuln_analysis_decision_decision>
+<vuln_analysis_decision_priority>Priority</vuln_analysis_decision_priority>
+<vuln_analysis_management_status>Status</vuln_analysis_management_status>
+<vuln_analysis_management_targetdate>Target date</vuln_analysis_management_targetdate>
+
+<!-- Action -->
+<vuln_action_title>Action management</vuln_action_title>
+<vuln_action_vulnerabilityname>Vuln. Id</vuln_action_vulnerabilityname>
+<vuln_action_vulnerabilitytargetdate>Vuln. target date</vuln_action_vulnerabilitytargetdate>
+<vuln_action_vulnerabilityseverity>Vuln. severity</vuln_action_vulnerabilityseverity>
+<vuln_action_status>Status</vuln_action_status>
+<vuln_action_owner>Responsible</vuln_action_owner>
+<vuln_action_priority>Priority</vuln_action_priority>
+<vuln_action_changereference>Change ref.</vuln_action_changereference>
+<vuln_action_workload>Workload</vuln_action_workload>
+<vuln_action_targetdate>Target date</vuln_action_targetdate>
+<vuln_action_description>Description</vuln_action_description>
+<vuln_action_hideaction>Hide action</vuln_action_hideaction>
+<vuln_action_add>Create</vuln_action_add>
+<vuln_action_update>Update</vuln_action_update>
+<vuln_action_cancel>Cancel</vuln_action_cancel>
+<vuln_action_actionhistory>History</vuln_action_actionhistory>
+<vuln_action_text>action</vuln_action_text>
+
+<!-- Action History -->
+<vuln_actionhistory_title>Vulnerability action history</vuln_actionhistory_title>
+<vuln_actionhistory_datas_history_changedate>Change date</vuln_actionhistory_datas_history_changedate>
+<vuln_actionhistory_datas_history_modifier>Modifier</vuln_actionhistory_datas_history_modifier>
+<vuln_actionhistory_datas_history_owner>Responsible</vuln_actionhistory_datas_history_owner>
+<vuln_actionhistory_datas_history_status>Status</vuln_actionhistory_datas_history_status>
+<vuln_actionhistory_datas_history_targetdate>Target date</vuln_actionhistory_datas_history_targetdate>
+
+<!-- Comments -->
+<vuln_comment_author>Comment by</vuln_comment_author>
+<vuln_comment_date>Comment date :</vuln_comment_date>
+<vuln_comment_ignore>An explanation is required to ignore this vulnerability</vuln_comment_ignore>
+<vuln_comment_departments>Select the departments concerned by the vote and your explanation</vuln_comment_departments>
+<vuln_comment_datas_departments>Departments concerned</vuln_comment_datas_departments>
+<vuln_comment_error>Comment description must be filled.</vuln_comment_error>
+<vuln_comment_add>Create</vuln_comment_add>
+<vuln_comment_ignoreadd>Validate</vuln_comment_ignoreadd>
+<vuln_comment_update>Update</vuln_comment_update>
+<vuln_comment_cancel>Cancel</vuln_comment_cancel>
+<vuln_comment_text>comment</vuln_comment_text>
+<vuln_comment_history>History</vuln_comment_history>
+
+<!-- Comment History -->
+<vuln_commenthistory_title>Comment history</vuln_commenthistory_title>
+<vuln_commenthistory_datas_history_changedate>Change date</vuln_commenthistory_datas_history_changedate>
+<vuln_commenthistory_datas_history_modifier>Modifier</vuln_commenthistory_datas_history_modifier>
+<vuln_commenthistory_datas_history_comment>Comment</vuln_commenthistory_datas_history_comment>
+
+<!-- PieChart -->
+<vuln_piechart_title>Statistics for $1</vuln_piechart_title>
+<vuln_piechart_vrt_title_current>Current VRT</vuln_piechart_vrt_title_current>
+<vuln_piechart_vrt_title>VRT - $1</vuln_piechart_vrt_title>
+<vuln_piechart_vrt_decision>DECISION</vuln_piechart_vrt_decision>
+<vuln_piechart_vrt_severity>SEVERITY</vuln_piechart_vrt_severity>
+<vuln_piechart_vrt_priority>PRIORITY</vuln_piechart_vrt_priority>
+<vuln_piechart_vrt_vendor>VENDOR</vuln_piechart_vrt_vendor>
+<vuln_piechart_metrics_title>Metrics</vuln_piechart_metrics_title>
+<vuln_piechart_metrics_triaged>TRIAGED</vuln_piechart_metrics_triaged>
+<vuln_piechart_metrics_triaged_triage>Triaged</vuln_piechart_metrics_triaged_triage>
+<vuln_piechart_metrics_triaged_new>New</vuln_piechart_metrics_triaged_new>
+<vuln_piechart_metrics_addignore>ADD/IGNORE</vuln_piechart_metrics_addignore>
+<vuln_piechart_metrics_addignore_ignore>Ignored</vuln_piechart_metrics_addignore_ignore>
+<vuln_piechart_metrics_addignore_add>Added</vuln_piechart_metrics_addignore_add>
+<vuln_piechart_metrics_decision>DECISION</vuln_piechart_metrics_decision>
+<vuln_piechart_metrics_decision_repair>To repair</vuln_piechart_metrics_decision_repair>
+<vuln_piechart_metrics_decision_investigate>Investigated</vuln_piechart_metrics_decision_investigate>
+<vuln_piechart_metrics_decision_acceptrisk>Risk accepted</vuln_piechart_metrics_decision_acceptrisk>
+<vuln_piechart_metrics_resolution>RESOLUTION</vuln_piechart_metrics_resolution>
+<vuln_piechart_metrics_resolution_fix>Fixed</vuln_piechart_metrics_resolution_fix>
+<vuln_piechart_metrics_resolution_unfix>Unfixed</vuln_piechart_metrics_resolution_unfix>
+<vuln_piechart_repair_title>Vulnerabilities in action plan</vuln_piechart_repair_title>
+<vuln_piechart_repair_status>STATUS</vuln_piechart_repair_status>
+<vuln_piechart_repair_severity>SEVERITY</vuln_piechart_repair_severity>
+<vuln_piechart_repair_priority>PRIORITY</vuln_piechart_repair_priority>
+<vuln_piechart_repair_vendor>VENDOR</vuln_piechart_repair_vendor>
+
+<!-- RACI -->
+<vuln_raci_title>RACI for $1</vuln_raci_title>
+<vuln_raci_actiontitle>RACI for action of $1</vuln_raci_actiontitle>
+<vuln_raci_edit>Edit privileges</vuln_raci_edit>
+<vuln_raci_vrt_title>VRT RACI</vuln_raci_vrt_title>
+<vuln_raci_vrtvulns_title>Vulnerability RACI</vuln_raci_vrtvulns_title>
+<vuln_raci_investigate_title>Vulnerability RACI</vuln_raci_investigate_title>
+<vuln_raci_repair_title>Vulnerability RACI</vuln_raci_repair_title>
+<vuln_raci_vulnerability_title>Vulnerability RACI</vuln_raci_vulnerability_title>
+<vuln_raci_analysis_title>Vulnerability RACI</vuln_raci_analysis_title>
+<vuln_raci_action_title>Action RACI</vuln_raci_action_title>
+<vuln_raci_search_title>Vulnerability RACI</vuln_raci_search_title>
+<vuln_raci_update_title>RACI for $1</vuln_raci_update_title>
+<vuln_raci_add_title>Add a stakeholder RACI</vuln_raci_add_title>
+<vuln_raci_add_datas_users>Stakeholders</vuln_raci_add_datas_users>
+<vuln_raci_add_datas_nousers>No active stakeholder available.</vuln_raci_add_datas_nousers>
+<vuln_raci_update_user>Current stakeholder</vuln_raci_update_user>
+<vuln_raci_update_currentraci>Current RACI</vuln_raci_update_currentraci>
+<vuln_raci_update_newraci>New RACI</vuln_raci_update_newraci>
+<vuln_raci_add_newraci>RACI</vuln_raci_add_newraci>
+<vuln_raci_r>R</vuln_raci_r>
+<vuln_raci_a>A</vuln_raci_a>
+<vuln_raci_c>C</vuln_raci_c>
+<vuln_raci_i>I</vuln_raci_i>
+<vuln_raci_add>Add</vuln_raci_add>
+<vuln_raci_update>Update</vuln_raci_update>
+<vuln_raci_cancel>Cancel</vuln_raci_cancel>
+<vuln_raci_update_error>A stakeholder must be selected.</vuln_raci_update_error>
+<vuln_raci_update_error_add>At least one RACI right must be selected.</vuln_raci_update_error_add>
+<vuln_raci_datas_vrt_user>Stakeholders</vuln_raci_datas_vrt_user>
+<vuln_raci_datas_vrt_add>Add a stakeholder</vuln_raci_datas_vrt_add>
+<vuln_raci_datas_vulnerability_user>Stakeholders</vuln_raci_datas_vulnerability_user>
+<vuln_raci_datas_vulnerability_add>Add a stakeholder</vuln_raci_datas_vulnerability_add>
+<vuln_raci_datas_action_user>Stakeholders</vuln_raci_datas_action_user>
+<vuln_raci_datas_action_add>Add a stakeholder</vuln_raci_datas_action_add>
+<vuln_raci_infos_raci>RACI</vuln_raci_infos_raci>
+<vuln_raci_infos_r>R : responsible</vuln_raci_infos_r>
+<vuln_raci_infos_a>A : accountable</vuln_raci_infos_a>
+<vuln_raci_infos_c>C : consulted</vuln_raci_infos_c>
+<vuln_raci_infos_i>I : informed</vuln_raci_infos_i>
+<vuln_raci_history>History</vuln_raci_history>
+
+<!-- RACI History -->
+<vuln_racihistory_title>RACI history</vuln_racihistory_title>
+<vuln_racihistory_matrix_title>Current RACI</vuln_racihistory_matrix_title>
+<vuln_racihistory_close>Close</vuln_racihistory_close>
+<vuln_racihistory_datas_user>Stakeholder</vuln_racihistory_datas_user>
+<vuln_racihistory_datas_modifier>Modifier</vuln_racihistory_datas_modifier>
+<vuln_racihistory_datas_modificationdate>Modif. date</vuln_racihistory_datas_modificationdate>
+<vuln_racihistory_pages>page $1 of $2 ( $3 modifications )</vuln_racihistory_pages>
+<vuln_racihistory_pageempty>0 modification</vuln_racihistory_pageempty>
+
+<!-- Vulnerability Email -->
+<vuln_email_title>Notify by mail</vuln_email_title>
+<vuln_email_from>From :</vuln_email_from>
+<vuln_email_to>To :</vuln_email_to>
+<vuln_email_send>Send</vuln_email_send>
+<vuln_email_cancel>Cancel</vuln_email_cancel>
+<vuln_email_success>Message sent successfully.</vuln_email_success>
+<vuln_email_failure>Sending error, please try again.</vuln_email_failure>
+<vuln_email_failure_email>Select an user.</vuln_email_failure_email>
+<vuln_email_failure_message>Message must be filled.</vuln_email_failure_message>
+
+<!-- Validation -->
+<vuln_validation_title>Validate changes</vuln_validation_title>
+<vuln_validation_text>Do you want to save the changes you made ?</vuln_validation_text>
+<vuln_validation_yes>Yes</vuln_validation_yes>
+<vuln_validation_no>No</vuln_validation_no>
+<vuln_validation_cancel>Cancel</vuln_validation_cancel>
+
+<!-- Search -->
+<vuln_search_title>Vulnerability search</vuln_search_title>
+<vuln_search_find>Find</vuln_search_find>
+<vuln_search_date>Date</vuln_search_date>
+<vuln_search_reference>Reference</vuln_search_reference>
+<vuln_search_description>Description</vuln_search_description>
+<vuln_search_vendor>Vendor</vuln_search_vendor>
+<vuln_search_product>Product</vuln_search_product>
+<vuln_search_user>Stakeholder</vuln_search_user>
+<vuln_search_status>Status</vuln_search_status>
+<vuln_search_status_na>N/A</vuln_search_status_na>
+<vuln_search_status_planning>Planning</vuln_search_status_planning>
+<vuln_search_status_inprogress>In progress</vuln_search_status_inprogress>
+<vuln_search_status_fixed>Fixed</vuln_search_status_fixed>
+<vuln_search_status_wontfix>Won't fix</vuln_search_status_wontfix>
+<vuln_search_decision>Decision</vuln_search_decision>
+<vuln_search_decision_new>New</vuln_search_decision_new>
+<vuln_search_decision_repair>Repair</vuln_search_decision_repair>
+<vuln_search_decision_investigate>Investigate</vuln_search_decision_investigate>
+<vuln_search_decision_acceptrisk>Accept risk</vuln_search_decision_acceptrisk>
+<vuln_search_decision_ignore>Ignore</vuln_search_decision_ignore>
+<vuln_search_priority>Priority</vuln_search_priority>
+<vuln_search_priority_na>N/A</vuln_search_priority_na>
+<vuln_search_priority_low>Low</vuln_search_priority_low>
+<vuln_search_priority_medium>Medium</vuln_search_priority_medium>
+<vuln_search_priority_high>High</vuln_search_priority_high>
+<vuln_search_priority_immediate>Immediate</vuln_search_priority_immediate>
+<vuln_search_raci>RACI</vuln_search_raci>
+<vuln_search_raci_r>R</vuln_search_raci_r>
+<vuln_search_raci_a>A</vuln_search_raci_a>
+<vuln_search_raci_c>C</vuln_search_raci_c>
+<vuln_search_raci_i>I</vuln_search_raci_i>
+<vuln_search_history>History</vuln_search_history>
+<vuln_search_analysis>Analysis</vuln_search_analysis>
+<vuln_search_repair>Repair</vuln_search_repair>
+<vuln_search_investigate>Investigate</vuln_search_investigate>
+<vuln_search_datas_search_reference>Reference</vuln_search_datas_search_reference>
+<vuln_search_datas_search_description>Description</vuln_search_datas_search_description>
+<vuln_search_datas_search_vendor>Vendor</vuln_search_datas_search_vendor>
+<vuln_search_datas_search_product>Product</vuln_search_datas_search_product>
+<vuln_search_datas_search_decision>Decision</vuln_search_datas_search_decision>
+<vuln_search_datas_search_status>Status</vuln_search_datas_search_status>
+<vuln_search_datas_search_publishdate>Publish date</vuln_search_datas_search_publishdate>
+<vuln_search_pages>page $1 of $2 ( $3 vulnerabilities )</vuln_search_pages>
+<vuln_search_pageempty>0 vulnerability</vuln_search_pageempty>
+
+<!-- Calendar -->
+<vuln_calendar_title>Tasks calendar</vuln_calendar_title>
+<vuln_calendar_week>Week #</vuln_calendar_week>
+<vuln_calendar_view_week>per Week</vuln_calendar_view_week>
+<vuln_calendar_view_month>per Month</vuln_calendar_view_month>
+<vuln_calendar_nodate>No selected date.</vuln_calendar_nodate>
+<vuln_calendar_error_nodate>No selected date.</vuln_calendar_error_nodate>
+<vuln_calendar_error_noview>No selected period.</vuln_calendar_error_noview>
+<vuln_calendar_task_title>Task informations</vuln_calendar_task_title>
+<vuln_calendar_task_datas_name>Task</vuln_calendar_task_datas_name>
+<vuln_calendar_task_datas_type>Type</vuln_calendar_task_datas_type>
+<vuln_calendar_task_datas_startdate>Start date</vuln_calendar_task_datas_startdate>
+<vuln_calendar_task_datas_enddate>End date</vuln_calendar_task_datas_enddate>
+
+<!-- Raci Change Request -->
+<vuln_racichangerequest_title>List of RACI change requests for module</vuln_racichangerequest_title>
+<vuln_racichangerequest_text>At least a RACI change for the module request your validation. Select a change in the list and apply your modification.</vuln_racichangerequest_text>
+<vuln_racichangerequest_warning>Warning: validating the changes on your own informations in the RACI of the module will cause your disconnection from module.</vuln_racichangerequest_warning>
+<vuln_racichangerequest_validate>Validate</vuln_racichangerequest_validate>
+<vuln_racichangerequest_discard>Discard</vuln_racichangerequest_discard>
+<vuln_racichangerequest_dolater>Do later</vuln_racichangerequest_dolater>
+<vuln_racichangerequest_datas_request_date>Date</vuln_racichangerequest_datas_request_date>
+<vuln_racichangerequest_datas_request_modifier>Modifier</vuln_racichangerequest_datas_request_modifier>
+<vuln_racichangerequest_datas_request_stakeholder>Stakeholder</vuln_racichangerequest_datas_request_stakeholder>
+<vuln_racichangerequest_datas_request_modification>Modification</vuln_racichangerequest_datas_request_modification>
+<vuln_racichangerequest_datas_request_modification_add>Add</vuln_racichangerequest_datas_request_modification_add>
+<vuln_racichangerequest_datas_request_modification_update>Update</vuln_racichangerequest_datas_request_modification_update>
+<vuln_racichangerequest_datas_request_modification_delete>Delete</vuln_racichangerequest_datas_request_modification_delete>
+<vuln_racichangerequest_datas_request_modification_forced>Forced update</vuln_racichangerequest_datas_request_modification_forced>
+<vuln_racichangerequest_datas_request_substitute>Substitute</vuln_racichangerequest_datas_request_substitute>
+<vuln_racichangerequest_moduleraci>Current module RACI</vuln_racichangerequest_moduleraci>
+
+<!-- Error -->
+<vuln_error_title>Error</vuln_error_title>
+<vuln_error_ok>Ok</vuln_error_ok>
+<vuln_error_notify>Notify support</vuln_error_notify>
+<vuln_error_concurrency_title>Concurrent access on item</vuln_error_concurrency_title>
+<vuln_error_concurrency_text><![CDATA[The item '$1' has been already updated by an other user.<br />Click on the Refresh button to update it.<br />You'll have to relaunch your operation after that.]]></vuln_error_concurrency_text>
+<vuln_error_concurrency_multiple><![CDATA[At least one vulnerability has been already updated by an other user.<br />Click on the Refresh button to update screen.<br />You'll have to relaunch your operation after that.]]></vuln_error_concurrency_multiple>
+<vuln_error_refresh>Refresh</vuln_error_refresh>
+
+<!-- Menu -->
+<vuln_menu_home>Home</vuln_menu_home>
+<vuln_menu_home_esis>ESIS home</vuln_menu_home_esis>
+<vuln_menu_home_title>Module selection</vuln_menu_home_title>
+<vuln_menu_logout>Logout</vuln_menu_logout>
+<vuln_menu_prefs>Prefs</vuln_menu_prefs>
+<vuln_menu_print>Print</vuln_menu_print>
+<vuln_menu_printselect_screen>screen datas</vuln_menu_printselect_screen>
+<vuln_menu_printselect_vulnerability>selected vulnerability</vuln_menu_printselect_vulnerability>
+<vuln_menu_printselect_title>Print</vuln_menu_printselect_title>
+<vuln_menu_printselect_submit>OK</vuln_menu_printselect_submit>
+<vuln_menu_excel>Excel</vuln_menu_excel>
+<vuln_menu_msproject>MsProject</vuln_menu_msproject>
+<vuln_menu_mail>Mail</vuln_menu_mail>
+<vuln_menu_calendar>Calendar</vuln_menu_calendar>
+<vuln_menu_find>Find</vuln_menu_find>
+<vuln_menu_votes_my>my votes</vuln_menu_votes_my>
+<vuln_menu_votes_all>all votes</vuln_menu_votes_all>
+<vuln_menu_tasks_my>my tasks</vuln_menu_tasks_my>
+<vuln_menu_tasks_raci>RACI tasks</vuln_menu_tasks_raci>
+<vuln_menu_filter_my>MY</vuln_menu_filter_my>
+<vuln_menu_filter_raci>RACI</vuln_menu_filter_raci>
+<vuln_menu_filter_all>ALL</vuln_menu_filter_all>
+<vuln_menu_filter_interval_all>ever since</vuln_menu_filter_interval_all>
+<vuln_menu_filter_interval_twelvemonths>12 months</vuln_menu_filter_interval_twelvemonths>
+<vuln_menu_filter_interval_from>from</vuln_menu_filter_interval_from>
+<vuln_menu_filter_interval_title>Time period</vuln_menu_filter_interval_title>
+<vuln_menu_filter_interval_submit>OK</vuln_menu_filter_interval_submit>
+</entity>
+</esis>

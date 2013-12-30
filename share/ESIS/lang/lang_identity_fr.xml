@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="identity" lang="fr">
+<!-- the # char is used for variables -->
+<!-- in html texts : add <br /> for return line -and- CDATA if use html code -->
+
+<!-- Navigation -->
+
+<!-- default texts -->
+<identity_default_r>R</identity_default_r>
+<identity_default_a>A</identity_default_a>
+<identity_default_c>C</identity_default_c>
+<identity_default_i>I</identity_default_i>
+
+<!-- Errors texts --> 
+<identity_errors_default_title>Erreur</identity_errors_default_title>
+<identity_errors_default_text>Erreur inconnue</identity_errors_default_text><!-- html -->
+<identity_errors_wsnotexist_title>Erreur au niveau des services web</identity_errors_wsnotexist_title>
+<identity_errors_wsnotexist_text>Le service web '$1' semble être inexistant. Merci de contacter votre administrateur pour solutionner le problème.</identity_errors_wsnotexist_text><!-- html -->
+<identity_errors_raci_title>Violation des règles RACI</identity_errors_raci_title>
+<identity_errors_raci_text>Le RACI assigné à cet objet ne vous permet pas d'effectuer cette action.</identity_errors_raci_text>
+<identity_errors_raci_persons>Merci de contacter le ou les responsables et/ou l'autorités de cet objet.</identity_errors_raci_persons>
+<identity_errors_raci_accountables>Autorité(s)</identity_errors_raci_accountables>
+<identity_errors_raci_responsibles>Responsable(s)</identity_errors_raci_responsibles>
+<identity_errors_raci_noaccountable>Aucune autorité n'est désigné.</identity_errors_raci_noaccountable>
+<identity_errors_raci_noresponsible>Aucune responsabilité n'est désigné.</identity_errors_raci_noresponsible>
+
+<!-- Raci -->
+<identity_raci_r>R</identity_raci_r>
+<identity_raci_a>A</identity_raci_a>
+<identity_raci_c>C</identity_raci_c>
+<identity_raci_i>I</identity_raci_i>
+<identity_raci_infos_raci>RACI</identity_raci_infos_raci>
+<identity_raci_infos_r>R : responsabilité</identity_raci_infos_r>
+<identity_raci_infos_a>A : autorité</identity_raci_infos_a>
+<identity_raci_infos_c>C : consulté</identity_raci_infos_c>
+<identity_raci_infos_i>I : informé</identity_raci_infos_i>
+
+<!-- Raci Change Request -->
+<identity_racichangerequest_title>Liste des demandes de changements RACI pour le module</identity_racichangerequest_title>
+<identity_racichangerequest_text>Au moins une demande de modification du RACI du module nécessite votre approbation. Sélectionnez un chamgement dans la liste pour lui appliquer la modification.</identity_racichangerequest_text>
+<identity_racichangerequest_warning>Attention: le fait de valider les changements sur vos propres informations dans le RACI du module entrainera votre déconnexion du module.</identity_racichangerequest_warning>
+<identity_racichangerequest_validate>Valider</identity_racichangerequest_validate>
+<identity_racichangerequest_discard>Refuser</identity_racichangerequest_discard>
+<identity_racichangerequest_dolater>Plus tard</identity_racichangerequest_dolater>
+<identity_racichangerequest_datas_request_date>Date</identity_racichangerequest_datas_request_date>
+<identity_racichangerequest_datas_request_modifier>Modifié par</identity_racichangerequest_datas_request_modifier>
+<identity_racichangerequest_datas_request_stakeholder>Partie prenante</identity_racichangerequest_datas_request_stakeholder>
+<identity_racichangerequest_datas_request_modification>Modification</identity_racichangerequest_datas_request_modification>
+<identity_racichangerequest_datas_request_modification_add>Ajout</identity_racichangerequest_datas_request_modification_add>
+<identity_racichangerequest_datas_request_modification_update>Mise à jour</identity_racichangerequest_datas_request_modification_update>
+<identity_racichangerequest_datas_request_modification_delete>Suppression</identity_racichangerequest_datas_request_modification_delete>
+<identity_racichangerequest_datas_request_modification_forced>Modif. forcée</identity_racichangerequest_datas_request_modification_forced>
+<identity_racichangerequest_datas_request_substitute>Suppléant</identity_racichangerequest_datas_request_substitute>
+<identity_racichangerequest_moduleraci>RACI actuel du module</identity_racichangerequest_moduleraci>
+
+<!-- Menu -->
+<identity_menu_home>Accueil</identity_menu_home>
+<identity_menu_home_esis>Accueil ESIS</identity_menu_home_esis>
+<identity_menu_home_title>Sélection du module</identity_menu_home_title>
+<identity_menu_logout>Quitter</identity_menu_logout>
+<identity_menu_prefs>Préfs</identity_menu_prefs>
+<identity_menu_print>Imprimer</identity_menu_print>
+<identity_menu_excel>Excel</identity_menu_excel>
+<identity_menu_msproject>MsProject</identity_menu_msproject>
+<identity_menu_mail>E-mail</identity_menu_mail>
+<identity_menu_calendar>Calendrier</identity_menu_calendar>
+<identity_menu_find>Trouver</identity_menu_find>
+<identity_menu_votes_my>mes votes</identity_menu_votes_my>
+<identity_menu_votes_all>tous votes</identity_menu_votes_all>
+<identity_menu_calendar>Calendrier</identity_menu_calendar>
+<identity_menu_tasks_my>mes tâches</identity_menu_tasks_my>
+<identity_menu_tasks_raci>RACI tâches</identity_menu_tasks_raci>
+<identity_menu_filter_my>Mon</identity_menu_filter_my>
+<identity_menu_filter_raci>RACI</identity_menu_filter_raci>
+<identity_menu_filter_all>Tout</identity_menu_filter_all>
+
+</entity>
+</esis>

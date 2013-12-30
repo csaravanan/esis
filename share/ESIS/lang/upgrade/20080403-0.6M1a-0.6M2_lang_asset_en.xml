@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="asset" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<asset_title>Assets and products management</asset_title>
+<asset_vendors_alias>Aliases</asset_vendors_alias>
+<asset_products_alias>Aliases</asset_products_alias>
+<asset_alias_title>Aliases of $1</asset_alias_title>
+<asset_alias_datas_vendor_alias>Aliases</asset_alias_datas_vendor_alias>
+<asset_alias_datas_product_alias>Aliases</asset_alias_datas_product_alias>
+<asset_errors_raci_text>The current RACI matrix of the item $1 doesn't allow you to perform this action.</asset_errors_raci_text>
+<asset_errors_raci_persons>Please contact the Responsible or Accountable person(s) of the item $1.</asset_errors_raci_persons>
+<asset_errors_concurrency_text><![CDATA[Operation refused: you're not allowed to finalize this operation because $1 has been updated by another user.<br />Refresh the principal screen to update the selected object before start again the operation.]]></asset_errors_concurrency_text>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<asset_searchresults_title>Search results for $1</asset_searchresults_title>
+<asset_searchresults_pageempty>0 result</asset_searchresults_pageempty>
+<asset_searchresults_pages>page $1 of $2 ( $3 results )</asset_searchresults_pages>
+<asset_searchresults_datas_vendors>Vendors</asset_searchresults_datas_vendors>
+<asset_searchresults_datas_products>Products</asset_searchresults_datas_products>
+<asset_searchresults_datas_versions>Versions</asset_searchresults_datas_versions>
+<asset_searchresults_datas_noresult>There is no result for $1.</asset_searchresults_datas_noresult>
+<asset_search_vendors>Vendors</asset_search_vendors>
+<asset_search_products>Products</asset_search_products>
+<asset_search_versions>Versions</asset_search_versions>
+<asset_search_find>Ok</asset_search_find>
+<asset_search_error_text>The search text must contain at least 2 chars.</asset_search_error_text>
+<asset_search_error_selection>At least one filter must be selected.</asset_search_error_selection>
+<asset_vendors_add>Add a new vendor</asset_vendors_add>
+<asset_products_add>Add a new product</asset_products_add>
+<asset_versions_add>Add a new version</asset_versions_add>
+<asset_errors_vendors_novendortext>A vendor name must be filled.</asset_errors_vendors_novendortext>
+<asset_errors_products_noproducttext>A product name must be filled.</asset_errors_products_noproducttext>
+<asset_errors_versions_noversiontext>A version name must be filled.</asset_errors_versions_noversiontext>
+<asset_errors_compositeapplications_title>Composite application update</asset_errors_compositeapplications_title>
+<asset_errors_compositeapplications_noapplication>There is no composite application selected.</asset_errors_compositeapplications_noapplication>
+<asset_errors_compositeapplications_cascademin>To update $1 we also need to update its vendor and versions. Continue ?</asset_errors_compositeapplications_cascademin>
+<asset_errors_compositeapplications_active>Cannot update $1 because it is in use by active assets.</asset_errors_compositeapplications_active>
+<asset_errors_compositeapplications_cascademax>Update all the $1 versions at the same time ?</asset_errors_compositeapplications_cascademax>
+<asset_errors_compositeapplicationversions_title>Composite application version update</asset_errors_compositeapplicationversions_title>
+<asset_errors_compositeapplicationversions_noversion>There is no composite application version selected.</asset_errors_compositeapplicationversions_noversion>
+<asset_errors_compositeapplicationversions_cascademin>To update $1 we also need to update its composite application. Continue ?</asset_errors_compositeapplicationversions_cascademin>
+<asset_errors_compositeapplicationversions_active>Cannot update $1 because it is in use by active assets.</asset_errors_compositeapplicationversions_active>
+<asset_errors_concurrency_textgeneric><![CDATA[Operation refused: you're not allowed to finalize this operation because the specified object has been updated by another user.<br />Refresh the principal screen to update the selected object before start again the operation.]]></asset_errors_concurrency_textgeneric>
+<asset_vendors_history>History</asset_vendors_history>
+<asset_history_vendor>Vendor history</asset_history_vendor>
+<asset_history_product>Product history</asset_history_product>
+<asset_history_version>Version history</asset_history_version>
+<asset_raci_compositeapplicationtitle>RACI for $1</asset_raci_compositeapplicationtitle>
+<asset_raci_composite_application_title>Composite application RACI</asset_raci_composite_application_title>
+<asset_raci_edit>Edit privileges</asset_raci_edit>
+<asset_composites_applications_title>Composites applications used in company $1</asset_composites_applications_title>
+<asset_composites_applications_name>Name</asset_composites_applications_name>
+<asset_composites_applications_update>Update</asset_composites_applications_update>
+<asset_composites_applications_datas_vendors>Vendors</asset_composites_applications_datas_vendors>
+<asset_composites_applications_datas_applications>Composites applications</asset_composites_applications_datas_applications>
+<asset_composites_applications_datas_applications_add>Add a composite application</asset_composites_applications_datas_applications_add>
+<asset_composites_applications_noactive>No active composite application.</asset_composites_applications_noactive>
+<asset_composites_applications_noapplication>No composite application.</asset_composites_applications_noapplication>
+<asset_composites_applications_history>History</asset_composites_applications_history>
+<asset_composites_applications_experts>Experts</asset_composites_applications_experts>
+<asset_composite_application_versions_name>Name</asset_composite_application_versions_name>
+<asset_composite_application_versions_update>Update</asset_composite_application_versions_update>
+<asset_composite_application_versions_datas_compappversions>Versions</asset_composite_application_versions_datas_compappversions>
+<asset_composite_application_versions_datas_compappversions_add>Add a version</asset_composite_application_versions_datas_compappversions_add>
+<asset_composite_application_versions_latest>Latest version</asset_composite_application_versions_latest>
+<asset_composite_application_versions_noactive>No active version.</asset_composite_application_versions_noactive>
+<asset_composite_application_versions_noversion>No version.</asset_composite_application_versions_noversion>
+<asset_composite_application_version_products_datas_compappversionproducts_vendor>Vendors</asset_composite_application_version_products_datas_compappversionproducts_vendor>
+<asset_composite_application_version_products_datas_compappversionproducts_product>Products</asset_composite_application_version_products_datas_compappversionproducts_product>
+<asset_composite_application_version_products_datas_compappversionproducts_version>Versions</asset_composite_application_version_products_datas_compappversionproducts_version>
+<asset_composite_application_version_products_datas_compappversionproducts_add>Add a product, a version</asset_composite_application_version_products_datas_compappversionproducts_add>
+<asset_composite_application_version_products_noproducts>No product or version linked.</asset_composite_application_version_products_noproducts>
+<asset_compositeapplication_latestversion>Is last version</asset_compositeapplication_latestversion>
+<asset_compositeapplication_copyfromlatestversion>Copy from latest version</asset_compositeapplication_copyfromlatestversion>
+<asset_expertises_vendor>Vendor expertises</asset_expertises_vendor>
+<asset_expertises_product>Product expertises</asset_expertises_product>
+<asset_history_datas_vendors_name>Vendor</asset_history_datas_vendors_name>
+<asset_history_datas_products_name>Product</asset_history_datas_products_name>
+<asset_history_datas_versions_name>Version</asset_history_datas_versions_name>
+<asset_addvendorproductversion_title_vendor>Add a new vendor</asset_addvendorproductversion_title_vendor>
+<asset_addvendorproductversion_title_product>Add a new product</asset_addvendorproductversion_title_product>
+<asset_addvendorproductversion_title_version>Add a new version</asset_addvendorproductversion_title_version>
+<asset_addvendorproductversion_name>Name</asset_addvendorproductversion_name>
+<asset_addvendorproductversion_active>Active</asset_addvendorproductversion_active>
+<asset_addvendorproductversion_add>Add</asset_addvendorproductversion_add>
+<asset_addvendorproductversion_cancel>Cancel</asset_addvendorproductversion_cancel>
+<asset_addvendorproductversion_error_name>A name must be filled.</asset_addvendorproductversion_error_name>
+<asset_validation_title>Validate changes</asset_validation_title>
+<asset_validation_text>Do you want to save the changes you made ?</asset_validation_text>
+<asset_validation_yes>Yes</asset_validation_yes>
+<asset_validation_no>No</asset_validation_no>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<asset_products_experts>Experts</asset_products_experts>
+<asset_compositelinks_title_product>Add a product/version linked to application</asset_compositelinks_title_product>
+<asset_vendors_composite>View composite applications</asset_vendors_composite>
+<asset_raci_composite_edit>Edit</asset_raci_composite_edit>
+<asset_raci_compositetitle>RACI for composite application $1</asset_raci_compositetitle>
+<asset_raci_composite_title>Composite application RACI</asset_raci_composite_title>
+<asset_composite_title>Assets Management - Composite applications</asset_composite_title>
+<asset_composite_return>Return to assets</asset_composite_return>
+<asset_composite_datas_composites>Composite applications</asset_composite_datas_composites>
+<asset_composite_datas_composites_add>Add a composite application</asset_composite_datas_composites_add>
+<asset_composite_datas_compositeversions>Composite applications versions</asset_composite_datas_compositeversions>
+<asset_composite_datas_compositeversions_add>Add a composite application version</asset_composite_datas_compositeversions_add>
+<asset_composite_datas_composite_links>Products/versions linked to composite application</asset_composite_datas_composite_links>
+<asset_composite_datas_composite_links_add>Add a product/version linked to composite application</asset_composite_datas_composite_links_add>
+<asset_composite_datas_composite_versionlinks>Products/versions linked to composite application version</asset_composite_datas_composite_versionlinks>
+<asset_composite_datas_composite_versionlinks_add>Add a product/version linked to composite application version</asset_composite_datas_composite_versionlinks_add>
+</removed>
+
+</entity>
+</esis>

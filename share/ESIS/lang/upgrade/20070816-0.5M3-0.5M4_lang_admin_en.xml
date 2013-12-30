@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_admin_en.xml *** -->
+<entity name="admin" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<admin_moduleprefs_edit>Update</admin_moduleprefs_edit>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<admin_navigation_probes>Probes</admin_navigation_probes>
+<admin_users_datas_details_passwordexpiration>Password valid until</admin_users_datas_details_passwordexpiration>
+<admin_user_infos_title>Password complexity rules</admin_user_infos_title>
+<admin_user_infos_explanations>The password must contain at least $1 characters and respond to at least 3 rules:</admin_user_infos_explanations>
+<admin_user_infos_case1>- use lower case character(s)</admin_user_infos_case1>
+<admin_user_infos_case2>- use upper case character(s)</admin_user_infos_case2>
+<admin_user_infos_case3>- use number(s)</admin_user_infos_case3>
+<admin_user_infos_case4>- use special character(s)</admin_user_infos_case4>
+<admin_menu_calendar>Calendar</admin_menu_calendar>
+<admin_menu_tasks_my>my tasks</admin_menu_tasks_my>
+<admin_menu_tasks_raci>RACI tasks</admin_menu_tasks_raci>
+<admin_menu_printselect_title>Print</admin_menu_printselect_title>
+<admin_menu_printselect_screen>screen datas</admin_menu_printselect_screen>
+<admin_menu_printselect_probe>selected probe</admin_menu_printselect_probe>
+<admin_menu_printselect_submit>OK</admin_menu_printselect_submit>
+<admin_moduleraci_update_user>Current stakeholder</admin_moduleraci_update_user>
+<admin_menu_filter_interval_all>ever since</admin_menu_filter_interval_all>
+<admin_menu_filter_interval_twelvemonths>12 months</admin_menu_filter_interval_twelvemonths>
+<admin_menu_filter_interval_from>from</admin_menu_filter_interval_from>
+<admin_menu_filter_interval_submit>OK</admin_menu_filter_interval_submit>
+<admin_menu_filter_interval_title>Time period</admin_menu_filter_interval_title>
+<!-- Probes -->
+<admin_probes_title><![CDATA[Administration<br />Probes management]]></admin_probes_title><!-- html -->
+<admin_probes_active>Active</admin_probes_active>
+<admin_probes_registered>Registered</admin_probes_registered>
+<admin_probes_all>All</admin_probes_all>
+<admin_probes_datas_probes_probename>Probe name</admin_probes_datas_probes_probename>
+<admin_probes_datas_probes_rundate>Run date</admin_probes_datas_probes_rundate>
+<admin_probes_datas_probes_duration>Duration</admin_probes_datas_probes_duration>
+<admin_probes_datas_probes_status>Status</admin_probes_datas_probes_status>
+<admin_probes_datas_probes_message>Message</admin_probes_datas_probes_message>
+<admin_probes_datas_preferences>Probe default preferences</admin_probes_datas_preferences>
+<admin_probes_datas_details>Probe details</admin_probes_datas_details>
+<admin_probes_datas_details_lastrun>Last run</admin_probes_datas_details_lastrun>
+<admin_probes_datas_details_firstrun>First run</admin_probes_datas_details_firstrun>
+<admin_probes_datas_details_totalrun>Number of runs</admin_probes_datas_details_totalrun>
+<admin_probes_datas_details_lastrunduration>Last run duration</admin_probes_datas_details_lastrunduration>
+<admin_probes_datas_details_averagerunduration>Average runs durations</admin_probes_datas_details_averagerunduration>
+<admin_probes_datas_details_lastsuccess>Last success</admin_probes_datas_details_lastsuccess>
+<admin_probes_datas_details_totalsuccess>Number of success</admin_probes_datas_details_totalsuccess>
+<admin_probes_datas_details_lasterror>Last error</admin_probes_datas_details_lasterror>
+<admin_probes_datas_details_totalerror>Number of errors</admin_probes_datas_details_totalerror>
+<admin_probes_datas_details_lastfailure>Last failure</admin_probes_datas_details_lastfailure>
+<admin_probes_datas_details_totalfailure>Number of failures</admin_probes_datas_details_totalfailure>
+<admin_probes_datas_details_lastabort>Last abort</admin_probes_datas_details_lastabort>
+<admin_probes_datas_details_totalabort>Number of aborts</admin_probes_datas_details_totalabort>
+<admin_probes_datas_history>Last probe histories</admin_probes_datas_history>
+<admin_probes_datas_history_add>View probe history</admin_probes_datas_history_add>
+<admin_probes_history>History</admin_probes_history>
+<admin_probes_performance>Performance</admin_probes_performance>
+<!-- Probe History -->
+<admin_probehistory_title>Probe history</admin_probehistory_title>
+<admin_probehistory_title_database>Database probe history</admin_probehistory_title_database>
+<admin_probehistory_title_file>File probe history</admin_probehistory_title_file>
+<admin_probehistory_pages>page $1 of $2 ( $3 runs )</admin_probehistory_pages>
+<admin_probehistory_pageempty>0 run</admin_probehistory_pageempty>
+<admin_probehistory_datas_history_rundate>Run date</admin_probehistory_datas_history_rundate>
+<admin_probehistory_datas_history_status>Status</admin_probehistory_datas_history_status>
+<admin_probehistory_datas_history_message>Message</admin_probehistory_datas_history_message>
+<admin_probehistory_datas_history_filename>File</admin_probehistory_datas_history_filename>
+<admin_probehistory_datas_history_filesize>Size</admin_probehistory_datas_history_filesize>
+<admin_probehistory_datas_history_databasename>Table name</admin_probehistory_datas_history_databasename>
+<admin_probehistory_datas_history_databaseid>Last id</admin_probehistory_datas_history_databaseid>
+<admin_probehistory_datas_history_databasedate>Last date</admin_probehistory_datas_history_databasedate>
+<!-- Probe details -->
+<admin_probedetails_title>Probe informations</admin_probedetails_title>
+<admin_probedetails_probename>Probe name</admin_probedetails_probename>
+<admin_probedetails_fileprobe>File probe</admin_probedetails_fileprobe>
+<admin_probedetails_databaseprobe>Database probe</admin_probedetails_databaseprobe>
+<admin_probedetails_laststartdate>Last start date</admin_probedetails_laststartdate>
+<admin_probedetails_lastenddate>Last end date</admin_probedetails_lastenddate>
+<admin_probedetails_duration>Duration</admin_probedetails_duration>
+<admin_probedetails_status>Probe status</admin_probedetails_status>
+<admin_probedetails_errormessage>Probe message</admin_probedetails_errormessage>
+<admin_probedetails_stacktrace>Probe process message</admin_probedetails_stacktrace>
+<admin_probedetails_license>License informations</admin_probedetails_license>
+<admin_probedetails_active>Active probe</admin_probedetails_active>
+<admin_probedetails_registered>Registered probe</admin_probedetails_registered>
+<admin_probedetails_validity>Valid until</admin_probedetails_validity>
+<admin_probedetails_statusneverrun>Never run</admin_probedetails_statusneverrun>
+<admin_probedetails_statusstillrunning>Still running</admin_probedetails_statusstillrunning>
+<admin_probedetails_statuserror>Error</admin_probedetails_statuserror>
+<admin_probedetails_statusfailure>Failure</admin_probedetails_statusfailure>
+<admin_probedetails_statusabort>Abort</admin_probedetails_statusabort>
+<admin_probedetails_statussuccess>Success</admin_probedetails_statussuccess>
+<admin_probedetails_nostatus>-</admin_probedetails_nostatus>
+<!-- Probe performance -->
+<admin_probeperformance_title>Probe performance</admin_probeperformance_title>
+<admin_probeperformance_xaxis>Run date</admin_probeperformance_xaxis>
+<admin_probeperformance_yaxis>Duration</admin_probeperformance_yaxis>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<admin_menu_filter_intervalraci_all>ever since</admin_menu_filter_intervalraci_all>
+<admin_menu_filter_intervalraci_twelvemonths>12 months</admin_menu_filter_intervalraci_twelvemonths>
+<admin_menu_filter_intervalraci_from>from</admin_menu_filter_intervalraci_from>
+<admin_menu_filter_intervalraci_submit>OK</admin_menu_filter_intervalraci_submit>
+<admin_menu_filter_intervalraci_title>Time period</admin_menu_filter_intervalraci_title>
+</removed>
+
+</entity>
+</esis>

@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="risks" lang="en">
+<!-- the # char is used for variables -->
+<!-- in html texts : add <br /> for return line -and- CDATA if use html code -->
+<risks_default_yes>Yes</risks_default_yes>
+<risks_default_no>No</risks_default_no>
+<risks_default_true>True</risks_default_true>
+<risks_default_false>False</risks_default_false>
+<risks_default_r>R</risks_default_r>
+<risks_default_a>A</risks_default_a>
+<risks_default_c>C</risks_default_c>
+<risks_default_i>I</risks_default_i>
+<risks_default_month_jan>January</risks_default_month_jan>
+<risks_default_month_feb>Febuary</risks_default_month_feb>
+<risks_default_month_mar>March</risks_default_month_mar>
+<risks_default_month_apr>April</risks_default_month_apr>
+<risks_default_month_may>May</risks_default_month_may>
+<risks_default_month_jun>June</risks_default_month_jun>
+<risks_default_month_jul>July</risks_default_month_jul>
+<risks_default_month_aug>August</risks_default_month_aug>
+<risks_default_month_sep>September</risks_default_month_sep>
+<risks_default_month_oct>October</risks_default_month_oct>
+<risks_default_month_nov>November</risks_default_month_nov>
+<risks_default_month_dec>December</risks_default_month_dec>
+<risks_default_month_jan_short>Jan</risks_default_month_jan_short>
+<risks_default_month_feb_short>Feb</risks_default_month_feb_short>
+<risks_default_month_mar_short>Mar</risks_default_month_mar_short>
+<risks_default_month_apr_short>Apr</risks_default_month_apr_short>
+<risks_default_month_may_short>May</risks_default_month_may_short>
+<risks_default_month_jun_short>Jun</risks_default_month_jun_short>
+<risks_default_month_jul_short>Jul</risks_default_month_jul_short>
+<risks_default_month_aug_short>Aug</risks_default_month_aug_short>
+<risks_default_month_sep_short>Sep</risks_default_month_sep_short>
+<risks_default_month_oct_short>Oct</risks_default_month_oct_short>
+<risks_default_month_nov_short>Nov</risks_default_month_nov_short>
+<risks_default_month_dec_short>Dec</risks_default_month_dec_short>
+<risks_default_day_sun>S</risks_default_day_sun>
+<risks_default_day_mon>M</risks_default_day_mon>
+<risks_default_day_tue>T</risks_default_day_tue>
+<risks_default_day_wed>W</risks_default_day_wed>
+<risks_default_day_thu>T</risks_default_day_thu>
+<risks_default_day_fri>F</risks_default_day_fri>
+<risks_default_day_sat>S</risks_default_day_sat>
+<risks_default_day_sun_long>Sun</risks_default_day_sun_long>
+<risks_default_day_mon_long>Mon</risks_default_day_mon_long>
+<risks_default_day_tue_long>Tue</risks_default_day_tue_long>
+<risks_default_day_wed_long>Wed</risks_default_day_wed_long>
+<risks_default_day_thu_long>Thu</risks_default_day_thu_long>
+<risks_default_day_fri_long>Fri</risks_default_day_fri_long>
+<risks_default_day_sat_long>Sat</risks_default_day_sat_long>
+
+<!-- Navigation -->
+<risks_navigation_reviews_reviews>Reviews</risks_navigation_reviews_reviews>
+
+<!-- Errors texts --> 
+<risks_errors_default_title>Error</risks_errors_default_title>
+<risks_errors_default_text>Error unknown</risks_errors_default_text><!-- html -->
+<risks_errors_wsnotexist_title>WebService Error</risks_errors_wsnotexist_title>
+<risks_errors_wsnotexist_text>The webservice '$1' doesn't exist. Please contact your administrator.</risks_errors_wsnotexist_text><!-- html -->
+<risks_errors_concurrency_title>Concurrent access error</risks_errors_concurrency_title>
+<risks_errors_concurrency_text><![CDATA[Operation refused: you're not allowed to finalize this operation because the selected object has been updated by another user.<br />Refresh the principal screen to update the selected object before start again the operation.]]></risks_errors_concurrency_text>
+<risks_errors_authorization_title>Authorization Exception</risks_errors_authorization_title>
+<risks_errors_authorization_text>Authorization refused: you're not allowed to execute this operation.</risks_errors_authorization_text>
+<risks_errors_raci_title>RACI Violation</risks_errors_raci_title>
+<risks_errors_raci_text>The current RACI matrix of the item $1 doesn't allow you to perform this action.</risks_errors_raci_text>
+<risks_errors_raci_persons>Please contact the Responsible or Accountable person(s) of the item $1.</risks_errors_raci_persons>
+<risks_errors_raci_accountables>Accountable(s)</risks_errors_raci_accountables>
+<risks_errors_raci_responsibles>Responsible(s)</risks_errors_raci_responsibles>
+<risks_errors_raci_noaccountable>No accountable person.</risks_errors_raci_noaccountable>
+<risks_errors_raci_noresponsible>No responsible person.</risks_errors_raci_noresponsible>
+
+<!-- MODELISATION -->
+
+<!-- Risk -->
+<risks_risk_title_update>View risk</risks_risk_title_update>
+<risks_risk_risktitle>Title</risks_risk_risktitle>
+<risks_risk_reference>Reference</risks_risk_reference>
+<risks_risk_description>Description</risks_risk_description>
+<risks_risk_reviewperiod>Review period</risks_risk_reviewperiod>
+<risks_risk_reviewperiodformat>days</risks_risk_reviewperiodformat>
+<risks_risk_forcedreview>Forced review</risks_risk_forcedreview>
+<risks_risk_category>Category</risks_risk_category>
+<risks_risk_standard>Standard</risks_risk_standard>
+<risks_risk_likelihood>Likelihood</risks_risk_likelihood>
+<risks_risk_expirationdate>Expiration date</risks_risk_expirationdate>
+<risks_risk_creationdate>created on $1</risks_risk_creationdate>
+<risks_risk_history>History</risks_risk_history>
+<risks_risk_viewstandard>View standard</risks_risk_viewstandard>
+
+<!-- Risk History -->
+<risks_riskhistory_title>Risk history</risks_riskhistory_title>
+<risks_riskhistory_datas_history_changedate>Change date</risks_riskhistory_datas_history_changedate>
+<risks_riskhistory_datas_history_modifier>Modifier</risks_riskhistory_datas_history_modifier>
+<risks_riskhistory_datas_history_title>Title</risks_riskhistory_datas_history_title>
+<risks_riskhistory_datas_history_responsible>Responsible</risks_riskhistory_datas_history_responsible>
+<risks_riskhistory_datas_history_period>Review period</risks_riskhistory_datas_history_period>
+<risks_riskhistory_datas_history_expirationdate>Expiration</risks_riskhistory_datas_history_expirationdate>
+
+<!-- Risk Standard -->
+<risks_riskstandard_title>Standard informations</risks_riskstandard_title>
+<risks_riskstandard_standard>Standard</risks_riskstandard_standard>
+<risks_riskstandard_source>Source</risks_riskstandard_source>
+<risks_riskstandard_reference>Reference</risks_riskstandard_reference>
+<risks_riskstandard_publication>Publication date</risks_riskstandard_publication>
+<risks_riskstandard_classification>Classification index</risks_riskstandard_classification>
+<risks_riskstandard_category>Category</risks_riskstandard_category>
+<risks_riskstandard_active>Active</risks_riskstandard_active>
+<risks_riskstandard_obsolete>Obsoleted</risks_riskstandard_obsolete>
+
+<!-- REVIEWS -->
+
+<!-- Risk Reviews -->
+<risks_reviews_title>Risk reviews management</risks_reviews_title>
+<risks_reviews_risks>Selection by risks:</risks_reviews_risks>
+<risks_reviews_allrisks>Reviews for all the risks</risks_reviews_allrisks>
+<risks_reviews_all>All</risks_reviews_all>
+<risks_reviews_toreview>To review</risks_reviews_toreview>
+<risks_reviews_datas_riskreviews_risktitle>Risk title</risks_reviews_datas_riskreviews_risktitle>
+<risks_reviews_datas_riskreviews_organisation>Organisation</risks_reviews_datas_riskreviews_organisation>
+<risks_reviews_datas_riskreviews_reference>Reference</risks_reviews_datas_riskreviews_reference>
+<risks_reviews_datas_riskreviews_decision>Decision</risks_reviews_datas_riskreviews_decision>
+<risks_reviews_datas_riskreviews_priority>Priority</risks_reviews_datas_riskreviews_priority>
+<risks_reviews_datas_riskreviews_consequence>Consequence</risks_reviews_datas_riskreviews_consequence>
+<risks_reviews_datas_riskreviews_responsible>Responsible</risks_reviews_datas_riskreviews_responsible>
+<risks_reviews_datas_riskreviews_lastreview>Last review</risks_reviews_datas_riskreviews_lastreview>
+<risks_reviews_datas_riskreviews_pageempty>0 review</risks_reviews_datas_riskreviews_pageempty>
+<risks_reviews_datas_riskreviews_pages>page $1 of $2 ( $3 reviews )</risks_reviews_datas_riskreviews_pages>
+<risks_reviews_datas_infos>Risk review informations</risks_reviews_datas_infos>
+<risks_reviews_datas_infos_risk>Risk:</risks_reviews_datas_infos_risk>
+<risks_reviews_datas_infos_risktitle>Risk title</risks_reviews_datas_infos_risktitle>
+<risks_reviews_datas_infos_riskreference>Reference</risks_reviews_datas_infos_riskreference>
+<risks_reviews_datas_infos_riskdecription>Description</risks_reviews_datas_infos_riskdecription>
+<risks_reviews_datas_infos_riskcategory>Category</risks_reviews_datas_infos_riskcategory>
+<risks_reviews_datas_infos_riskperiod>Review period</risks_reviews_datas_infos_riskperiod>
+<risks_reviews_datas_infos_riskperiodformat>$1 days</risks_reviews_datas_infos_riskperiodformat>
+<risks_reviews_datas_infos_riskforcedreview>Forced review</risks_reviews_datas_infos_riskforcedreview>
+<risks_reviews_datas_infos_risklikelihood>Likelihood</risks_reviews_datas_infos_risklikelihood>
+<risks_reviews_datas_infos_riskprobability>Probability</risks_reviews_datas_infos_riskprobability>
+<risks_reviews_datas_infos_riskresponsible>Responsible</risks_reviews_datas_infos_riskresponsible>
+<risks_reviews_datas_infos_review>Review:</risks_reviews_datas_infos_review>
+<risks_reviews_datas_infos_reviewreference>Reference</risks_reviews_datas_infos_reviewreference>
+<risks_reviews_datas_infos_revieworganisation>Organisation</risks_reviews_datas_infos_revieworganisation>
+<risks_reviews_datas_infos_reviewdescription>Treatment</risks_reviews_datas_infos_reviewdescription>
+<risks_reviews_datas_infos_reviewdecision>Decision</risks_reviews_datas_infos_reviewdecision>
+<risks_reviews_datas_infos_reviewpriority>Priority</risks_reviews_datas_infos_reviewpriority>
+<risks_reviews_datas_infos_reviewconsequence>Consequence</risks_reviews_datas_infos_reviewconsequence>
+<risks_reviews_datas_infos_reviewriskgeneral>General risk</risks_reviews_datas_infos_reviewriskgeneral>
+<risks_reviews_datas_infos_reviewadequacycontrols>Adequacy of controls</risks_reviews_datas_infos_reviewadequacycontrols>
+<risks_reviews_datas_infos_reviewresponsible>Responsible</risks_reviews_datas_infos_reviewresponsible>
+<risks_reviews_datas_infos_reviewlastdate>Last review</risks_reviews_datas_infos_reviewlastdate>
+<risks_reviews_datas_infos_edit>Edit risk review</risks_reviews_datas_infos_edit>
+<risks_reviews_datas_evaluations>Review evaluations</risks_reviews_datas_evaluations>
+
+<!-- Risk Review -->
+<risks_review_title>View/edit risk review</risks_review_title>
+<risks_review_risktitle>Risk</risks_review_risktitle>
+<risks_review_riskorganisation>Organisation</risks_review_riskorganisation>
+<risks_review_reference>Reference</risks_review_reference>
+<risks_review_description>Treatment</risks_review_description>
+<risks_review_decision>Decision</risks_review_decision>
+<risks_review_priority>Priority</risks_review_priority>
+<risks_review_consequence>Consequence</risks_review_consequence>
+<risks_review_risklevel>Risk level</risks_review_risklevel>
+<risks_review_lastreview>Last review</risks_review_lastreview>
+<risks_review_adequacycontrols>Adequacy of controls</risks_review_adequacycontrols>
+<risks_review_viewrisk>View risk</risks_review_viewrisk>
+<risks_review_update>Update</risks_review_update>
+<risks_review_cancel>Cancel</risks_review_cancel>
+<risks_review_history>History</risks_review_history>
+<risks_review_error_reference>The reference must be filled.</risks_review_error_reference>
+<risks_review_error_consequence>A consequence must be selected.</risks_review_error_consequence>
+<risks_review_error_priority>A priority must be selected.</risks_review_error_priority>
+<risks_review_error_decision>A decision must be selected.</risks_review_error_decision>
+
+<!-- Risk Review History -->
+<risks_reviewhistory_title>Risk review history</risks_reviewhistory_title>
+<risks_reviewhistory_datas_history_changedate>Change date</risks_reviewhistory_datas_history_changedate>
+<risks_reviewhistory_datas_history_modifier>Modifier</risks_reviewhistory_datas_history_modifier>
+<risks_reviewhistory_datas_history_decision>Decision</risks_reviewhistory_datas_history_decision>
+<risks_reviewhistory_datas_history_priority>Priority</risks_reviewhistory_datas_history_priority>
+<risks_reviewhistory_datas_history_consequence>Consequence</risks_reviewhistory_datas_history_consequence>
+<risks_reviewhistory_datas_history_riskLevel>Risk level</risks_reviewhistory_datas_history_riskLevel>
+
+<!-- Criterion Evaluation -->
+<risks_evaluation_title>View/edit criterion evaluation</risks_evaluation_title>
+<risks_evaluation_reference>Reference</risks_evaluation_reference>
+<risks_evaluation_description>Criterion description</risks_evaluation_description>
+<risks_evaluation_informations>Criterion explanation</risks_evaluation_informations>
+<risks_evaluation_category>Category</risks_evaluation_category>
+<risks_evaluation_answer>Evaluation/Answer</risks_evaluation_answer>
+<risks_evaluation_update>Update</risks_evaluation_update>
+<risks_evaluation_cancel>Cancel</risks_evaluation_cancel>
+<risks_evaluation_history>History</risks_evaluation_history>
+<risks_evaluation_answernumber>The answer must be an integer value.</risks_evaluation_answernumber>
+<risks_evaluation_error_text>Answer must be a text.</risks_evaluation_error_text>
+<risks_evaluation_error_integer>The answer must be an integer value.</risks_evaluation_error_integer>
+<risks_evaluation_error_boolean>Select a boolean value for the answer.</risks_evaluation_error_boolean>
+
+<!-- Criterion Evaluation History -->
+<risks_evaluationhistory_title>Evaluation history</risks_evaluationhistory_title>
+<risks_evaluationhistory_datas_history_changedate>Change date</risks_evaluationhistory_datas_history_changedate>
+<risks_evaluationhistory_datas_history_modifier>Modifier</risks_evaluationhistory_datas_history_modifier>
+<risks_evaluationhistory_datas_history_evaluation>Evaluation</risks_evaluationhistory_datas_history_evaluation>
+
+<!-- Review: Impacts & Risk controls -->
+<risks_impactscontrols_title>Review: impacts and risk controls</risks_impactscontrols_title>
+<risks_impactscontrols_defaultreview>Risk review</risks_impactscontrols_defaultreview>
+<risks_impactscontrols_datas_impacts_title>Impact title</risks_impactscontrols_datas_impacts_title>
+<risks_impactscontrols_datas_impacts_description>Description</risks_impactscontrols_datas_impacts_description>
+<risks_impactscontrols_datas_impacts_consequence>Consequence</risks_impactscontrols_datas_impacts_consequence>
+<risks_impactscontrols_datas_impacts_consequenceisnegative>Is negative</risks_impactscontrols_datas_impacts_consequenceisnegative>
+<risks_impactscontrols_datas_impacts_add>Add a new impact</risks_impactscontrols_datas_impacts_add>
+<risks_impactscontrols_datas_impacts_pageempty>0 impact</risks_impactscontrols_datas_impacts_pageempty>
+<risks_impactscontrols_datas_impacts_pages>page $1 of $2 ( $3 impacts )</risks_impactscontrols_datas_impacts_pages>
+<risks_impactscontrols_impacts_filter_deleted>Deleted</risks_impactscontrols_impacts_filter_deleted>
+<risks_impactscontrols_datas_riskcontrols_resources>Resources requirement</risks_impactscontrols_datas_riskcontrols_resources>
+<risks_impactscontrols_datas_riskcontrols_description>Description</risks_impactscontrols_datas_riskcontrols_description>
+<risks_impactscontrols_datas_riskcontrols_responsible>Responsible</risks_impactscontrols_datas_riskcontrols_responsible>
+<risks_impactscontrols_datas_riskcontrols_add>Add a new risk control</risks_impactscontrols_datas_riskcontrols_add>
+<risks_impactscontrols_datas_riskcontrols_pageempty>0 risk control</risks_impactscontrols_datas_riskcontrols_pageempty>
+<risks_impactscontrols_datas_riskcontrols_pages>page $1 of $2 ( $3 risk controls )</risks_impactscontrols_datas_riskcontrols_pages>
+<risks_impactscontrols_riskcontrols_filter_deleted>Deleted</risks_impactscontrols_riskcontrols_filter_deleted>
+<risks_impactscontrols_datas_impact>Impact informations</risks_impactscontrols_datas_impact>
+<risks_impactscontrols_datas_impact_title>Title</risks_impactscontrols_datas_impact_title>
+<risks_impactscontrols_datas_impact_description>Description</risks_impactscontrols_datas_impact_description>
+<risks_impactscontrols_datas_impact_consequencetype>Consequence is</risks_impactscontrols_datas_impact_consequencetype>
+<risks_impactscontrols_datas_impact_consequenceisbenefic>Positive</risks_impactscontrols_datas_impact_consequenceisbenefic>
+<risks_impactscontrols_datas_impact_consequenceisnegative>Negative</risks_impactscontrols_datas_impact_consequenceisnegative>
+<risks_impactscontrols_datas_impact_consequence>Consequence</risks_impactscontrols_datas_impact_consequence>
+<risks_impactscontrols_datas_impact_creationdate>Creation date</risks_impactscontrols_datas_impact_creationdate>
+<risks_impactscontrols_datas_impact_edit>View/edit impact</risks_impactscontrols_datas_impact_edit>
+<risks_impactscontrols_datas_riskcontrol>Control informations</risks_impactscontrols_datas_riskcontrol>
+<risks_impactscontrols_datas_riskcontrol_resources>Resources requirement</risks_impactscontrols_datas_riskcontrol_resources>
+<risks_impactscontrols_datas_riskcontrol_description>Description</risks_impactscontrols_datas_riskcontrol_description>
+<risks_impactscontrols_datas_riskcontrol_responsible>Responsible</risks_impactscontrols_datas_riskcontrol_responsible>
+<risks_impactscontrols_datas_riskcontrol_creationdate>Creation date</risks_impactscontrols_datas_riskcontrol_creationdate>
+<risks_impactscontrols_datas_riskcontrol_edit>View/edit risk control</risks_impactscontrols_datas_riskcontrol_edit>
+
+<!-- Impact -->
+<risks_impact_title_add>New impact</risks_impact_title_add>
+<risks_impact_title_update>View/edit impact</risks_impact_title_update>
+<risks_impact_impacttitle>Title</risks_impact_impacttitle>
+<risks_impact_description>Description</risks_impact_description>
+<risks_impact_consequencebenefic>Positive consequence</risks_impact_consequencebenefic>
+<risks_impact_consequencenegative>Negative consequence</risks_impact_consequencenegative>
+<risks_impact_reactivate>Reactivate impact</risks_impact_reactivate>
+<risks_impact_creationdate>created on $1</risks_impact_creationdate>
+<risks_impact_add>Create</risks_impact_add>
+<risks_impact_update>Update</risks_impact_update>
+<risks_impact_cancel>Cancel</risks_impact_cancel>
+<risks_impact_error_impacttitle>A 'title' must be filled.</risks_impact_error_impacttitle>
+<risks_impact_error_consequence>A 'consequence' must be selected.</risks_impact_error_consequence>
+
+<!-- Risk control -->
+<risks_riskcontrol_title_add>New risk control</risks_riskcontrol_title_add>
+<risks_riskcontrol_title_update>View/edit risk control</risks_riskcontrol_title_update>
+<risks_riskcontrol_resources>Resources requirement</risks_riskcontrol_resources>
+<risks_riskcontrol_description>Description</risks_riskcontrol_description>
+<risks_riskcontrol_reactivate>Reactivate risk control</risks_riskcontrol_reactivate>
+<risks_riskcontrol_creationdate>created on $1</risks_riskcontrol_creationdate>
+<risks_riskcontrol_add>Create</risks_riskcontrol_add>
+<risks_riskcontrol_update>Update</risks_riskcontrol_update>
+<risks_riskcontrol_cancel>Cancel</risks_riskcontrol_cancel>
+<risks_riskcontrol_error_resources>Resources requirement must be filled.</risks_riskcontrol_error_resources>
+
+<!-- Impact: Consequences -->
+<risks_consequences_title>Impact: consequences</risks_consequences_title>
+<risks_consequences_datas_consequences_title>Consequence title</risks_consequences_datas_consequences_title>
+<risks_consequences_datas_consequences_description>Description</risks_consequences_datas_consequences_description>
+<risks_consequences_datas_consequences_consequence>Consequence</risks_consequences_datas_consequences_consequence>
+<risks_consequences_datas_consequences_consequenceisnegative>Is negative</risks_consequences_datas_consequences_consequenceisnegative>
+<risks_consequences_datas_consequences_add>Add a new impact consequence</risks_consequences_datas_consequences_add>
+<risks_consequences_datas_consequences_pageempty>0 consequences</risks_consequences_datas_consequences_pageempty>
+<risks_consequences_datas_consequences_pages>page $1 of $2 ( $3 consequences )</risks_consequences_datas_consequences_pages>
+<risks_consequences_filter_deleted>Deleted</risks_consequences_filter_deleted>
+<risks_consequences_datas_infos>Consequence informations</risks_consequences_datas_infos>
+<risks_consequences_datas_infos_title>Title</risks_consequences_datas_infos_title>
+<risks_consequences_datas_infos_description>Description</risks_consequences_datas_infos_description>
+<risks_consequences_datas_infos_consequencetype>Consequence is</risks_consequences_datas_infos_consequencetype>
+<risks_consequences_datas_infos_consequenceisbenefic>Positive</risks_consequences_datas_infos_consequenceisbenefic>
+<risks_consequences_datas_infos_consequenceisnegative>Negative</risks_consequences_datas_infos_consequenceisnegative>
+<risks_consequences_datas_infos_consequence>Consequence</risks_consequences_datas_infos_consequence>
+<risks_consequences_datas_infos_creationdate>Creation date</risks_consequences_datas_infos_creationdate>
+<risks_consequences_datas_infos_edit>View/edit consequence</risks_consequences_datas_infos_edit>
+
+<!-- Consequence -->
+<risks_consequence_title_add>New consequence</risks_consequence_title_add>
+<risks_consequence_title_update>View/edit consequence</risks_consequence_title_update>
+<risks_consequence_impacttitle>Title</risks_consequence_impacttitle>
+<risks_consequence_description>Description</risks_consequence_description>
+<risks_consequence_consequencebenefic>Positive consequence</risks_consequence_consequencebenefic>
+<risks_consequence_consequencenegative>Negative consequence</risks_consequence_consequencenegative>
+<risks_consequence_reactivate>Reactivate consequence</risks_consequence_reactivate>
+<risks_consequence_creationdate>created on $1</risks_consequence_creationdate>
+<risks_consequence_add>Create</risks_consequence_add>
+<risks_consequence_update>Update</risks_consequence_update>
+<risks_consequence_cancel>Cancel</risks_consequence_cancel>
+<risks_consequence_error_impacttitle>A 'title' must be filled.</risks_consequence_error_impacttitle>
+<risks_consequence_error_consequence>A 'consequence' must be selected.</risks_consequence_error_consequence>
+
+<!-- Risk control: Actions -->
+<risks_actions_title>Risk control: actions</risks_actions_title>
+<risks_actions_datas_actions_title>Action title</risks_actions_datas_actions_title>
+<risks_actions_datas_actions_reference>Reference</risks_actions_datas_actions_reference>
+<risks_actions_datas_actions_description>Description</risks_actions_datas_actions_description>
+<risks_actions_datas_actions_status>Status</risks_actions_datas_actions_status>
+<risks_actions_datas_actions_targetdate>Target date</risks_actions_datas_actions_targetdate>
+<risks_actions_datas_actions_add>Add a new risk control action</risks_actions_datas_actions_add>
+<risks_actions_datas_actions_pageempty>0 action</risks_actions_datas_actions_pageempty>
+<risks_actions_datas_actions_pages>page $1 of $2 ( $3 actions )</risks_actions_datas_actions_pages>
+<risks_actions_filter_all>All</risks_actions_filter_all>
+<risks_actions_filter_actives>Actives</risks_actions_filter_actives>
+<risks_actions_filter_finalized>Finalized</risks_actions_filter_finalized>
+<risks_actions_datas_infos>Action informations</risks_actions_datas_infos>
+<risks_actions_datas_infos_title>Title</risks_actions_datas_infos_title>
+<risks_actions_datas_infos_reference>Reference</risks_actions_datas_infos_reference>
+<risks_actions_datas_infos_description>Description</risks_actions_datas_infos_description>
+<risks_actions_datas_infos_status>Status</risks_actions_datas_infos_status>
+<risks_actions_datas_infos_targetdate>Target date</risks_actions_datas_infos_targetdate>
+<risks_actions_datas_infos_responsible>Responsible</risks_actions_datas_infos_responsible>
+<risks_actions_datas_infos_creationdate>Creation date</risks_actions_datas_infos_creationdate>
+<risks_actions_datas_infos_edit>View/edit action</risks_actions_datas_infos_edit>
+
+<!-- Action -->
+<risks_action_title_add>New action</risks_action_title_add>
+<risks_action_title_update>View/edit action</risks_action_title_update>
+<risks_action_actiontitle>Title</risks_action_actiontitle>
+<risks_action_reference>Reference</risks_action_reference>
+<risks_action_description>Description</risks_action_description>
+<risks_action_status>Status</risks_action_status>
+<risks_action_targetdate>Target date</risks_action_targetdate>
+<risks_action_creationdate>created on $1</risks_action_creationdate>
+<risks_action_add>Create</risks_action_add>
+<risks_action_update>Update</risks_action_update>
+<risks_action_cancel>Cancel</risks_action_cancel>
+<risks_action_error_actiontitle>A 'title' must be filled.</risks_action_error_actiontitle>
+<risks_action_error_status>A 'status' must be selected.</risks_action_error_status>
+<risks_action_history>History</risks_action_history>
+
+<!-- Action history -->
+<risks_actionhistory_title>Action history</risks_actionhistory_title>
+<risks_actionhistory_datas_history_changedate>Change date</risks_actionhistory_datas_history_changedate>
+<risks_actionhistory_datas_history_modifier>Modifier</risks_actionhistory_datas_history_modifier>
+<risks_actionhistory_datas_history_responsible>Responsible</risks_actionhistory_datas_history_responsible>
+<risks_actionhistory_datas_history_targetdate>Target date</risks_actionhistory_datas_history_targetdate>
+<risks_actionhistory_datas_history_status>Status</risks_actionhistory_datas_history_status>
+
+<!-- Raci -->
+<risks_raci_title>RACI</risks_raci_title>
+<risks_raci_risktitle>RACI for risk $1</risks_raci_risktitle>
+<risks_raci_risk_title>Risk RACI</risks_raci_risk_title>
+<risks_raci_riskreviewtitle>RACI for risk review $1</risks_raci_riskreviewtitle>
+<risks_raci_riskreview_title>Risk review RACI</risks_raci_riskreview_title>
+<risks_raci_riskcontroltitle>RACI for risk control $1</risks_raci_riskcontroltitle>
+<risks_raci_riskcontrol_title>Risk control RACI</risks_raci_riskcontrol_title>
+<risks_raci_actiontitle>RACI for action $1</risks_raci_actiontitle>
+<risks_raci_action_title>Action RACI</risks_raci_action_title>
+<risks_raci_edit>Edit privileges</risks_raci_edit>
+<risks_raci_update_title>RACI for $1</risks_raci_update_title>
+<risks_raci_add_title>Add a stakeholder RACI</risks_raci_add_title>
+<risks_raci_add_datas_users>Stakeholders</risks_raci_add_datas_users>
+<risks_raci_add_datas_nousers>No active stakeholder available.</risks_raci_add_datas_nousers>
+<risks_raci_update_user>Current stakeholder</risks_raci_update_user>
+<risks_raci_update_currentraci>Current RACI</risks_raci_update_currentraci>
+<risks_raci_update_newraci>New RACI</risks_raci_update_newraci>
+<risks_raci_add_newraci>RACI</risks_raci_add_newraci>
+<risks_raci_r>R</risks_raci_r>
+<risks_raci_a>A</risks_raci_a>
+<risks_raci_c>C</risks_raci_c>
+<risks_raci_i>I</risks_raci_i>
+<risks_raci_add>Add</risks_raci_add>
+<risks_raci_update>Update</risks_raci_update>
+<risks_raci_cancel>Cancel</risks_raci_cancel>
+<risks_raci_update_error>A stakeholder must be selected.</risks_raci_update_error>
+<risks_raci_update_error_add>At least one RACI right must be selected.</risks_raci_update_error_add>
+<risks_raci_datas_risk_user>Stakeholders</risks_raci_datas_risk_user>
+<risks_raci_datas_risk_add>Add a stakeholder</risks_raci_datas_risk_add>
+<risks_raci_datas_riskreview_user>Stakeholders</risks_raci_datas_riskreview_user>
+<risks_raci_datas_riskreview_add>Add a stakeholder</risks_raci_datas_riskreview_add>
+<risks_raci_datas_riskcontrol_user>Stakeholders</risks_raci_datas_riskcontrol_user>
+<risks_raci_datas_riskcontrol_add>Add a stakeholder</risks_raci_datas_riskcontrol_add>
+<risks_raci_datas_action_user>Stakeholders</risks_raci_datas_action_user>
+<risks_raci_datas_action_add>Add a stakeholder</risks_raci_datas_action_add>
+<risks_raci_infos_raci>RACI</risks_raci_infos_raci>
+<risks_raci_infos_r>R : responsible</risks_raci_infos_r>
+<risks_raci_infos_a>A : accountable</risks_raci_infos_a>
+<risks_raci_infos_c>C : consulted</risks_raci_infos_c>
+<risks_raci_infos_i>I : informed</risks_raci_infos_i>
+
+<!-- RACI History -->
+<risks_raci_history>History</risks_raci_history>
+<risks_racihistory_title>RACI history</risks_racihistory_title>
+<risks_racihistory_matrix_title>Current RACI</risks_racihistory_matrix_title>
+<risks_racihistory_close>Close</risks_racihistory_close>
+<risks_racihistory_datas_user>Stakeholder</risks_racihistory_datas_user>
+<risks_racihistory_datas_modifier>Modifier</risks_racihistory_datas_modifier>
+<risks_racihistory_datas_modificationdate>Modif. date</risks_racihistory_datas_modificationdate>
+<risks_racihistory_pages>page $1 of $2 ( $3 modifications )</risks_racihistory_pages>
+<risks_racihistory_pageempty>0 modification</risks_racihistory_pageempty>
+
+<!-- Raci Change Request -->
+<risks_racichangerequest_title>List of RACI change requests for module</risks_racichangerequest_title>
+<risks_racichangerequest_text>At least a RACI change for the module request your validation. Select a change in the list and apply your modification.</risks_racichangerequest_text>
+<risks_racichangerequest_warning>Warning: validating the changes on your own informations in the RACI of the module will cause your disconnection from module.</risks_racichangerequest_warning>
+<risks_racichangerequest_validate>Validate</risks_racichangerequest_validate>
+<risks_racichangerequest_discard>Discard</risks_racichangerequest_discard>
+<risks_racichangerequest_dolater>Do later</risks_racichangerequest_dolater>
+<risks_racichangerequest_datas_request_date>Date</risks_racichangerequest_datas_request_date>
+<risks_racichangerequest_datas_request_modifier>Modifier</risks_racichangerequest_datas_request_modifier>
+<risks_racichangerequest_datas_request_modification>Modification</risks_racichangerequest_datas_request_modification>
+<risks_racichangerequest_datas_request_modification_add>Add</risks_racichangerequest_datas_request_modification_add>
+<risks_racichangerequest_datas_request_modification_update>Update</risks_racichangerequest_datas_request_modification_update>
+<risks_racichangerequest_datas_request_modification_delete>Delete</risks_racichangerequest_datas_request_modification_delete>
+<risks_racichangerequest_datas_request_modification_forced>Forced update</risks_racichangerequest_datas_request_modification_forced>
+<risks_racichangerequest_datas_request_stakeholder>Stakeholder</risks_racichangerequest_datas_request_stakeholder>
+<risks_racichangerequest_datas_request_substitute>Substitute</risks_racichangerequest_datas_request_substitute>
+<risks_racichangerequest_moduleraci>Current module RACI</risks_racichangerequest_moduleraci>
+
+<!-- Email -->
+<risks_email_title>Notify by mail</risks_email_title>
+<risks_email_from>From :</risks_email_from>
+<risks_email_to>To :</risks_email_to>
+<risks_email_send>Send</risks_email_send>
+<risks_email_cancel>Cancel</risks_email_cancel>
+<risks_email_success>Message sent successfully.</risks_email_success>
+<risks_email_failure>Sending error, please try again.</risks_email_failure>
+<risks_email_failure_email>Select an user.</risks_email_failure_email>
+<risks_email_failure_message>Message must be filled.</risks_email_failure_message>
+
+<!-- Validation -->
+<risks_validation_title>Validate changes</risks_validation_title>
+<risks_validation_text>Do you want to save the changes you made ?</risks_validation_text>
+<risks_validation_yes>Yes</risks_validation_yes>
+<risks_validation_no>No</risks_validation_no>
+<risks_validation_cancel>Cancel</risks_validation_cancel>
+
+<!-- Error -->
+<risks_error_title>Error</risks_error_title>
+<risks_error_ok>Ok</risks_error_ok>
+<risks_error_notify>Notify support</risks_error_notify>
+<risks_error_concurrency_title>Concurrent access on item</risks_error_concurrency_title>
+<risks_error_concurrency_text><![CDATA[The item '$1' has been already updated by an other user.<br />Click on the Refresh button to update it.<br />You'll have to relaunch your operation after that.]]></risks_error_concurrency_text>
+<risks_error_refresh>Refresh</risks_error_refresh>
+
+<!-- Calendar -->
+<risks_calendar_title>Tasks calendar</risks_calendar_title>
+<risks_calendar_week>Week #</risks_calendar_week>
+<risks_calendar_view_week>per Week</risks_calendar_view_week>
+<risks_calendar_view_month>per Month</risks_calendar_view_month>
+<risks_calendar_nodate>No selected date.</risks_calendar_nodate>
+<risks_calendar_error_nodate>No selected date.</risks_calendar_error_nodate>
+<risks_calendar_error_noview>No selected period.</risks_calendar_error_noview>
+<risks_calendar_task_title>Task informations</risks_calendar_task_title>
+<risks_calendar_task_datas_name>Task</risks_calendar_task_datas_name>
+<risks_calendar_task_datas_type>Type</risks_calendar_task_datas_type>
+<risks_calendar_task_datas_startdate>Start date</risks_calendar_task_datas_startdate>
+<risks_calendar_task_datas_enddate>End date</risks_calendar_task_datas_enddate>
+
+<!-- Menu -->
+<risks_menu_home>Home</risks_menu_home>
+<risks_menu_home_esis>ESIS home</risks_menu_home_esis>
+<risks_menu_home_title>Module selection</risks_menu_home_title>
+<risks_menu_logout>Logout</risks_menu_logout>
+<risks_menu_prefs>Prefs</risks_menu_prefs>
+<risks_menu_print>Print</risks_menu_print>
+<risks_menu_excel>Excel</risks_menu_excel>
+<risks_menu_msproject>MsProject</risks_menu_msproject>
+<risks_menu_mail>Mail</risks_menu_mail>
+<risks_menu_calendar>Calendar</risks_menu_calendar>
+<risks_menu_find>Find</risks_menu_find>
+<risks_menu_votes_my>my votes</risks_menu_votes_my>
+<risks_menu_votes_all>all votes</risks_menu_votes_all>
+<risks_menu_tasks_my>my tasks</risks_menu_tasks_my>
+<risks_menu_tasks_raci>RACI tasks</risks_menu_tasks_raci>
+<risks_menu_filter_my>MY</risks_menu_filter_my>
+<risks_menu_filter_raci>RACI</risks_menu_filter_raci>
+<risks_menu_filter_all>ALL</risks_menu_filter_all>
+<risks_menu_filter_interval_all>ever since</risks_menu_filter_interval_all>
+<risks_menu_filter_interval_twelvemonths>12 months</risks_menu_filter_interval_twelvemonths>
+<risks_menu_filter_interval_from>from</risks_menu_filter_interval_from>
+<risks_menu_filter_interval_title>Time period</risks_menu_filter_interval_title>
+<risks_menu_filter_interval_submit>OK</risks_menu_filter_interval_submit>
+</entity>
+</esis>

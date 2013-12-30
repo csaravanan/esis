@@ -1,0 +1,614 @@
+[2013-04-23 11:07:46 UTC] < on > LOG:  database system was shut down at 2013-04-23 11:07:46 UTC
+[2013-04-23 11:07:46 UTC] < on > LOG:  database system is ready to accept connections
+[2013-04-23 11:07:46 UTC] < on > LOG:  autovacuum launcher started
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_raci_objects_pkey" for table "e_raci_objects"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_raci_change_request_pkey" for table "e_raci_change_request"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_raci_object_type_pkey" for table "e_raci_object_type"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_people_pkey" for table "e_people"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_global_group_pkey" for table "e_global_group"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_group_to_people_pkey" for table "e_group_to_people"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_company_pkey" for table "e_company"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_company_group_pkey" for table "e_company_group"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_location_pkey" for table "e_location"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_location_alias_pkey" for table "e_location_alias"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_location_network_pkey" for table "e_location_network"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_group_location_pkey" for table "e_group_location"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_business_zone_pkey" for table "e_business_zone"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_business_zone_location_pkey" for table "e_business_zone_location"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_business_zone_department_pkey" for table "e_business_zone_department"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_business_zone_dependencies_pkey" for table "e_business_zone_dependencies"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_organisation_domain_pkey" for table "e_organisation_domain"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_ip_pkey" for table "e_asset_ip"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_network_interface_pkey" for table "e_asset_network_interface"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_pkey" for table "e_asset"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_port_daily_pkey" for table "e_asset_port_daily"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_protocol_daily_pkey" for table "e_asset_protocol_daily"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_product_pkey" for table "e_asset_product"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_detected_product_pkey" for table "e_detected_product"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_detected_product_detected_product_key" for table "e_detected_product"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_product_detected_pkey" for table "e_asset_product_detected"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_type_pkey" for table "e_asset_type"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_sc_pkey" for table "e_sc"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_bl_pkey" for table "e_bl"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_availability_pkey" for table "e_availability"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_compliance_daily_pkey" for table "e_asset_compliance_daily"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_anomaly_daily_pkey" for table "e_asset_anomaly_daily"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_antivirus_update_pkey" for table "e_asset_antivirus_update"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_device_type_pkey" for table "e_asset_device_type"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_asset_device_type_type_name_key" for table "e_asset_device_type"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_device_pkey" for table "e_asset_device"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_asset_device_name_key" for table "e_asset_device"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_device_daily_pkey" for table "e_asset_device_daily"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_daily_pkey" for table "e_asset_daily"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_asset_location_daily_pkey" for table "e_asset_location_daily"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_source_pkey" for table "e_source"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_source_source_key" for table "e_source"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_standard_category_pkey" for table "e_standard_category"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_standard_category_standard_category_key" for table "e_standard_category"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_standard_pkey" for table "e_standard"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_standard_aliases_pkey" for table "e_standard_aliases"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_standard_aliases_ref_alias_key" for table "e_standard_aliases"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_standard_obsolescence_pkey" for table "e_standard_obsolescence"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_topic_category_pkey" for table "e_topic_category"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_topic_category_topic_category_key" for table "e_topic_category"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_topic_mapping_pkey" for table "e_topic_mapping"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_topic_pkey" for table "e_topic"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_compliance_kind_pkey" for table "e_compliance_kind"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_compliance_kind_kind_key" for table "e_compliance_kind"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_compliance_type_pkey" for table "e_compliance_type"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_compliance_type_compliance_type_key" for table "e_compliance_type"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_compliance_level_pkey" for table "e_compliance_level"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_policy_tool_pkey" for table "e_policy_tool"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_policy_tool_tool_name_key" for table "e_policy_tool"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_policy_tool_scan_pkey" for table "e_policy_tool_scan"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_policy_tool_scan_elements_pkey" for table "e_policy_tool_scan_elements"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_product_pkey" for table "e_product"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_product_technology_pkey" for table "e_product_technology"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_product_type_pkey" for table "e_product_type"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_vendor_pkey" for table "e_vendor"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_preferred_relationship_pkey" for table "e_preferred_relationship"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_support_contract_pkey" for table "e_support_contract"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_version_pkey" for table "e_version"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_composite_product_pkey" for table "e_composite_product"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_composite_version_pkey" for table "e_composite_version"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_report_pkey" for table "e_report"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "i_report_data_pkey" for table "i_report_data"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "i_report_aggregate_pkey" for table "i_report_aggregate"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_bundle_pkey" for table "e_bundle"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_metric_name_pkey" for table "e_metric_name"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_metric_group_pkey" for table "e_metric_group"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_metric_groups_pkey" for table "e_metric_groups"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_metric_status_pkey" for table "e_metric_status"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_metric_report_pkey" for table "e_metric_report"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_operation_pkey" for table "e_operation"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_operation_state_pkey" for table "e_operation_state"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_operation_state_state_descr_key" for table "e_operation_state"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_probe_run_status_pkey" for table "e_probe_run_status"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_probe_run_status_status_name_key" for table "e_probe_run_status"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_probe_category_pkey" for table "e_probe_category"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_probe_category_package_name_key" for table "e_probe_category"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_probe_category_name_key" for table "e_probe_category"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_probe_history_pkey" for table "e_probe_history"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_probes_pkey" for table "e_probes"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_probe_parameter_origin_pkey" for table "e_probe_parameter_origin"
+[2013-04-23 11:07:51 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_probe_parameter_origin_origin_key" for table "e_probe_parameter_origin"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_probe_pid_pkey" for table "e_probe_pid"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_remote_file_state_pkey" for table "e_remote_file_state"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_local_file_state_pkey" for table "e_local_file_state"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_probe_asset_history_pkey" for table "e_probe_asset_history"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_probe_pattern_pkey" for table "e_probe_pattern"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 108
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 109
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 109
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 109
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \' in a string literal at character 109
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> HINT:  Use '' to write quotes in strings, or use the escape string syntax (E'...').
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 109
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 109
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 109
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 109
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 109
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \' in a string literal at character 109
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> HINT:  Use '' to write quotes in strings, or use the escape string syntax (E'...').
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 109
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 109
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_source_pkey" for table "t_source"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_probe_supported_products_pkey" for table "e_probe_supported_products"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_vulnerability_pkey" for table "e_vulnerability"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_vulnerability_severity_pkey" for table "e_vulnerability_severity"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_vulnerability_severity_severity_name_key" for table "e_vulnerability_severity"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_vulnerability_status_pkey" for table "e_vulnerability_status"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_vulnerability_status_status_name_key" for table "e_vulnerability_status"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_vulnerability_priority_pkey" for table "e_vulnerability_priority"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_vulnerability_priority_priority_name_key" for table "e_vulnerability_priority"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_vulnerability_mav_status_pkey" for table "e_vulnerability_mav_status"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_vulnerability_mav_status_mav_status_name_key" for table "e_vulnerability_mav_status"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_vulnerability_comments_pkey" for table "e_vulnerability_comments"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_vulnerability_vrt_pkey" for table "e_vulnerability_vrt"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_vulnerability_targets_pkey" for table "e_vulnerability_targets"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_vulnerability_searchs_pkey" for table "e_vulnerability_searchs"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_vulnerability_action_pkey" for table "e_vulnerability_action"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_vulnerability_vote_decision_pkey" for table "e_vulnerability_vote_decision"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_vulnerability_vote_decision_vote_decision_key" for table "e_vulnerability_vote_decision"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "i_vuln_pkey" for table "i_vuln"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_cvss_pkey" for table "e_cvss"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_vuln_nist_pkey" for table "t_vuln_nist"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_vuln_ms_pkey" for table "t_vuln_ms"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_vuln_securityfocus_pkey" for table "t_vuln_securityfocus"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_vuln_nessus_pkey" for table "t_vuln_nessus"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_vuln_cert_pkey" for table "t_vuln_cert"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_vuln_cert_history_pkey" for table "t_vuln_cert_history"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_vuln_lexsi_pkey" for table "t_vuln_lexsi"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_vuln_keycheck_pkey" for table "t_vuln_keycheck"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "i_patch_pkey" for table "i_patch"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  merging column "description" with inherited definition
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_patch_sun_pkey" for table "t_patch_sun"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_patch_ms_pkey" for table "t_patch_ms"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_patch_ms_p_pkey" for table "t_patch_ms_p"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_patch_ms_p_asp_pkey" for table "t_patch_ms_p_asp"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_locn_ms_pkey" for table "t_locn_ms"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_product_ms_pkey" for table "t_product_ms"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_product_ms_sp_pkey" for table "t_product_ms_sp"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_scan_pkey" for table "t_scan"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_scan_nessus_keys_pkey" for table "t_scan_nessus_keys"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_scan_nessus_results_pkey" for table "t_scan_nessus_results"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_vulns_daily_pkey" for table "e_vulns_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_triage_daily_pkey" for table "e_triage_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_actions_daily_pkey" for table "e_actions_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_decision_daily_pkey" for table "e_decision_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_status_daily_pkey" for table "e_status_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_priority_daily_pkey" for table "e_priority_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_severity_daily_pkey" for table "e_severity_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_users_daily_pkey" for table "e_users_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_groups_daily_pkey" for table "e_groups_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_vendor_daily_pkey" for table "e_vendor_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_product_daily_pkey" for table "e_product_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_version_daily_pkey" for table "e_version_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_user_details_daily_pkey" for table "e_user_details_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_user_priority_daily_pkey" for table "e_user_priority_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_user_severity_daily_pkey" for table "e_user_severity_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_user_decision_daily_pkey" for table "e_user_decision_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_user_status_daily_pkey" for table "e_user_status_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_group_details_daily_pkey" for table "e_group_details_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_group_members_daily_pkey" for table "e_group_members_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_group_priority_daily_pkey" for table "e_group_priority_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_group_severity_daily_pkey" for table "e_group_severity_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_group_decision_daily_pkey" for table "e_group_decision_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_group_status_daily_pkey" for table "e_group_status_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_continent_pkey" for table "e_continent"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_subcontinent_pkey" for table "e_subcontinent"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_country_pkey" for table "e_country"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \' in a string literal at character 46
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> HINT:  Use '' to write quotes in strings, or use the escape string syntax (E'...').
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_region_pkey" for table "e_region"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \' in a string literal at character 58
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> HINT:  Use '' to write quotes in strings, or use the escape string syntax (E'...').
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_top_level_domains_pkey" for table "e_top_level_domains"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_timezone_to_country_pkey" for table "e_timezone_to_country"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_cross_domain_pkey" for table "e_cross_domain"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_cross_domain_http_domain_id_key" for table "e_cross_domain"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_cross_domain_mail_domain_id_key" for table "e_cross_domain"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_cross_domain_chat_domain_id_key" for table "e_cross_domain"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_company_domain_pkey" for table "e_company_domain"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_pkey" for table "e_audit"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_interview_pkey" for table "e_audit_interview"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_document_pkey" for table "e_audit_document"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_document_content_pkey" for table "e_audit_document_content"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_document_type_pkey" for table "e_audit_document_type"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_audit_document_type_document_type_key" for table "e_audit_document_type"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_organisation_pkey" for table "e_audit_organisation"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_confidentiality_pkey" for table "e_audit_confidentiality"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_audit_confidentiality_confidentiality_key" for table "e_audit_confidentiality"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_status_pkey" for table "e_audit_status"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_audit_status_status_key" for table "e_audit_status"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_report_pkey" for table "e_audit_report"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_rec_pkey" for table "e_audit_rec"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_rec_organisation_pkey" for table "e_audit_rec_organisation"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_rec_auditee_pkey" for table "e_audit_rec_auditee"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_action_pkey" for table "e_audit_action"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_action_organisation_pkey" for table "e_audit_action_organisation"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_rec_comment_pkey" for table "e_audit_rec_comment"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_report_status_pkey" for table "e_audit_report_status"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_audit_report_status_report_status_key" for table "e_audit_report_status"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_rec_status_pkey" for table "e_audit_rec_status"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_audit_rec_status_rec_status_key" for table "e_audit_rec_status"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_severity_pkey" for table "e_audit_severity"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_audit_severity_severity_key" for table "e_audit_severity"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_topic_pkey" for table "e_audit_topic"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_audit_topic_topic_key" for table "e_audit_topic"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_origin_pkey" for table "e_audit_origin"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_audit_origin_origin_key" for table "e_audit_origin"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_action_status_pkey" for table "e_audit_action_status"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_audit_action_status_action_status_key" for table "e_audit_action_status"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_priority_pkey" for table "e_audit_priority"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_audit_priority_priority_key" for table "e_audit_priority"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_rec_topic_pkey" for table "e_audit_rec_topic"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_audit_rec_topic_topic_key" for table "e_audit_rec_topic"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_daily_pkey" for table "e_audit_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_status_daily_pkey" for table "e_audit_status_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_topic_daily_pkey" for table "e_audit_topic_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_origin_daily_pkey" for table "e_audit_origin_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_confidentiality_daily_pkey" for table "e_audit_confidentiality_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_rec_daily_pkey" for table "e_audit_rec_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_rec_status_daily_pkey" for table "e_audit_rec_status_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_action_daily_pkey" for table "e_audit_action_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_action_status_daily_pkey" for table "e_audit_action_status_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_compliance_daily_pkey" for table "e_audit_compliance_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_compliance_level_daily_pkey" for table "e_audit_compliance_level_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_compliance_target_daily_pkey" for table "e_audit_compliance_target_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_raci_daily_pkey" for table "e_audit_raci_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_raci_confidentiality_daily_pkey" for table "e_audit_raci_confidentiality_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_rec_severity_raci_daily_pkey" for table "e_audit_rec_severity_raci_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_rec_priority_raci_daily_pkey" for table "e_audit_rec_priority_raci_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_audit_report_status_daily_pkey" for table "e_audit_report_status_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_module_pkey" for table "e_module"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_application_version_pkey" for table "e_application_version"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_module_indicator_pkey" for table "e_module_indicator"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_module_metric_pkey" for table "e_module_metric"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_generated_reports_pkey" for table "e_generated_reports"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_http_status_pkey" for table "e_http_status"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_authorization_pkey" for table "t_authorization"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_authorization_authorization_name_key" for table "t_authorization"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_domain_pkey" for table "t_domain"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_domain_category_pkey" for table "t_domain_category"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_domain_category_daily_pkey" for table "t_domain_category_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_domain_daily_pkey" for table "t_domain_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_domain_site_pkey" for table "t_domain_site"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_domain_site_daily_pkey" for table "t_domain_site_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_site_anomalies_daily_pkey" for table "t_site_anomalies_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_site_path_pkey" for table "t_site_path"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_site_path_daily_pkey" for table "t_site_path_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_path_daily_user_pkey" for table "t_path_daily_user"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_path_daily_ip_pkey" for table "t_path_daily_ip"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_site_path_dependencie_pkey" for table "t_site_path_dependencie"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_http_day_pkey" for table "t_http_day"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_https_day_pkey" for table "t_https_day"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ftp_day_pkey" for table "t_ftp_day"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_other_day_pkey" for table "t_other_day"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_http_agent_pkey" for table "t_http_agent"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_http_agent_daily_pkey" for table "t_http_agent_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_pkey" for table "t_user"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_user_user_name_key" for table "t_user"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ip_users_daily_pkey" for table "t_ip_users_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ip_to_user_daily_pkey" for table "t_ip_to_user_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_to_ip_daily_pkey" for table "t_user_to_ip_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_daily_pkey" for table "t_user_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ip_daily_pkey" for table "t_ip_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_location_daily_pkey" for table "t_location_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_location_site_daily_pkey" for table "t_location_site_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_mime_daily_pkey" for table "t_mime_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_users_daily_pkey" for table "t_users_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_users_weekly_pkey" for table "t_users_weekly"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_users_monthly_pkey" for table "t_users_monthly"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_users_yearly_pkey" for table "t_users_yearly"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_tld_daily_pkey" for table "e_tld_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_invalid_url_pkey" for table "t_invalid_url"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_invalid_url_daily_pkey" for table "t_invalid_url_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_security_rule_pkey" for table "t_security_rule"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_security_rule_category_pkey" for table "t_security_rule_category"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_security_rule_category_category_name_key" for table "t_security_rule_category"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_security_rule_alias_pkey" for table "t_security_rule_alias"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_security_rule_to_vulnerability_pkey" for table "t_security_rule_to_vulnerability"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_security_action_daily_pkey" for table "t_security_action_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_security_rule_category_daily_pkey" for table "t_security_rule_category_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_security_rule_daily_pkey" for table "t_security_rule_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_security_site_daily_pkey" for table "t_security_site_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_security_daily_pkey" for table "t_security_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_security_rule_site_daily_pkey" for table "t_security_rule_site_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_security_access_asset_daily_pkey" for table "t_security_access_asset_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_security_access_site_daily_pkey" for table "t_security_access_site_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_security_access_site_path_daily_pkey" for table "t_security_access_site_path_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_security_access_status_daily_pkey" for table "t_security_access_status_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_virus_pkey" for table "t_virus"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_virus_to_vuln_t_virus_id_key" for table "t_virus_to_vuln"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_virus_type_pkey" for table "t_virus_type"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_virus_origin_pkey" for table "t_virus_origin"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_virus_origin_origin_key" for table "t_virus_origin"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_virus_origin_detail_pkey" for table "t_virus_origin_detail"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_virus_origin_detail_detail_key" for table "t_virus_origin_detail"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_viral_activity_pkey" for table "t_viral_activity"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_virus_daily_pkey" for table "t_virus_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_virus_type_daily_pkey" for table "t_virus_type_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_virus_origin_daily_pkey" for table "t_virus_origin_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_virus_asset_daily_pkey" for table "t_virus_asset_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_virus_location_daily_pkey" for table "t_virus_location_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_watched_assets_pkey" for table "t_watched_assets"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_alert_provider_pkey" for table "t_alert_provider"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_alert_provider_name_key" for table "t_alert_provider"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_alert_level_pkey" for table "e_alert_level"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_alert_level_alert_name_key" for table "e_alert_level"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_alert_level_pkey" for table "t_alert_level"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_alert_daily_pkey" for table "t_alert_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_alert_daily_pkey" for table "e_alert_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_spam_daily_pkey" for table "t_spam_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_spam_status_pkey" for table "t_spam_status"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_email_daily_pkey" for table "t_email_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_domain_pkey" for table "t_domain"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_domain_user_pkey" for table "t_domain_user"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_domain_user_internal_daily_pkey" for table "t_domain_user_internal_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_domain_internal_daily_pkey" for table "t_domain_internal_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_domain_user_daily_pkey" for table "t_domain_user_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_domain_daily_pkey" for table "t_domain_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_email_daily_file_attachments_pkey" for table "t_email_daily_file_attachments"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_domain_mime_daily_pkey" for table "t_domain_mime_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_mime_daily_pkey" for table "t_user_mime_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_message_daily_pkey" for table "t_message_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_external_domain_info_pkey" for table "t_external_domain_info"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_global_daily_pkey" for table "t_global_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_external_domain_daily_pkey" for table "t_external_domain_daily"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_im_user_pkey" for table "t_im_user"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_anomaly_pkey" for table "t_user_anomaly"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_im_asl_pkey" for table "t_im_asl"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_im_user_metrics_pkey" for table "t_im_user_metrics"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_im_asl_to_user_pkey" for table "t_im_asl_to_user"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_esisdbversion_pkey" for table "e_esisdbversion"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_esiscmd_history_pkey" for table "e_esiscmd_history"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_esisconfig_pkey" for table "e_esisconfig"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_preference_descriptions_pkey" for table "e_preference_descriptions"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_mime_category_pkey" for table "e_mime_category"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_mime_category_alias_pkey" for table "e_mime_category_alias"
+[2013-04-23 11:07:52 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_mime_type_pkey" for table "e_mime_type"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_file_type_pkey" for table "e_file_type"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_mime_products_pkey" for table "e_mime_products"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_wtmp_pkey" for table "t_wtmp"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_wtmp_events_pkey" for table "t_wtmp_events"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_wtmp_other_pkey" for table "t_wtmp_other"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_daily_user_global_pkey" for table "t_daily_user_global"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_daily_account_global_pkey" for table "t_daily_account_global"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_daily_priv_global_pkey" for table "t_daily_priv_global"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_daily_system_global_pkey" for table "t_daily_system_global"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_userpatterns_pkey" for table "t_userpatterns"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_ppl_pkey" for table "t_user_ppl"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_base_keycheck_pkey" for table "t_user_base_keycheck"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_base_pkey" for table "t_user_base"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_sys_pkey" for table "t_user_sys"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_app_pkey" for table "t_user_app"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_realm_pkey" for table "t_realm"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_realm_realm_name_key" for table "t_realm"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_rlm_pkey" for table "t_user_rlm"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_daily_pkey" for table "t_user_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_login_daily_pkey" for table "t_user_login_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_ad_daily_pkey" for table "t_user_ad_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_network_device_login_daily_pkey" for table "t_network_device_login_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 77
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 77
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 77
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 77
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of \\ in a string literal at character 77
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for backslashes, e.g., E'\\'.
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_compliance_daily_pkey" for table "t_user_compliance_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_anomaly_daily_pkey" for table "t_user_anomaly_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_app_login_pkey" for table "t_app_login"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_app_login_daily_pkey" for table "t_app_login_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_location_user_pkey" for table "t_location_user"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_department_user_pkey" for table "t_department_user"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_location_daily_pkey" for table "t_location_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_department_daily_pkey" for table "t_department_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_email_queue_pkey" for table "e_email_queue"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ip_pkey" for table "t_ip"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_ip_ip_key" for table "t_ip"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ip_range_pkey" for table "t_ip_range"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ip_location_pkey" for table "t_ip_location"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_syslogs_daily_pkey" for table "t_syslogs_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_devices_daily_pkey" for table "t_devices_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_custom_service_pkey" for table "t_custom_service"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_rule_pkey" for table "t_rule"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_action_pkey" for table "t_action"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_action_action_name_key" for table "t_action"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_severity_pkey" for table "t_severity"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_severity_severity_name_key" for table "t_severity"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_rule_daily_pkey" for table "t_rule_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ip_daily_pkey" for table "t_ip_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_location_daily_pkey" for table "t_location_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_asset_action_daily_pkey" for table "t_asset_action_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_daily_summary_pkey" for table "t_daily_summary"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_custom_service_daily_pkey" for table "t_custom_service_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_port_range_daily_pkey" for table "e_port_range_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_severity_daily_pkey" for table "t_severity_daily"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_iana_protocols_pkey" for table "e_iana_protocols"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_iana_port_range_pkey" for table "e_iana_port_range"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_iana_port_range_range_name_key" for table "e_iana_port_range"
+[2013-04-23 11:07:53 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_iana_registered_ports_pkey" for table "e_iana_registered_ports"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_category_pkey" for table "e_category"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_category_category_name_key" for table "e_category"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_likelihood_pkey" for table "e_likelihood"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_likelihood_name_key" for table "e_likelihood"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_likelihood_probability_key" for table "e_likelihood"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_risk_decision_pkey" for table "e_risk_decision"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_risk_decision_decision_key" for table "e_risk_decision"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_risk_priority_pkey" for table "e_risk_priority"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_risk_priority_priority_key" for table "e_risk_priority"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_risk_level_pkey" for table "e_risk_level"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_risk_level_level_key" for table "e_risk_level"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_action_status_pkey" for table "e_action_status"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_action_status_action_status_key" for table "e_action_status"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_consequence_level_pkey" for table "e_consequence_level"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_risk_level_matrix_pkey" for table "e_risk_level_matrix"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_primary_event_pkey" for table "e_primary_event"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_event_dependencie_pkey" for table "e_event_dependencie"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_event_to_cause_pkey" for table "e_event_to_cause"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_cause_pkey" for table "e_cause"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_cause_to_risk_pkey" for table "e_cause_to_risk"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_scenario_pkey" for table "e_scenario"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_scenario_to_causes_pkey" for table "e_scenario_to_causes"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_risk_pkey" for table "e_risk"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_risk_topic_pkey" for table "e_risk_topic"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_risk_organisation_pkey" for table "e_risk_organisation"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_risk_group_pkey" for table "e_risk_group"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_risk_to_group_pkey" for table "e_risk_to_group"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_risk_comment_pkey" for table "e_risk_comment"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_criteria_pkey" for table "e_criteria"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_risk_to_criteria_pkey" for table "e_risk_to_criteria"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_risk_review_pkey" for table "e_risk_review"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_risk_evaluation_pkey" for table "e_risk_evaluation"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_impact_pkey" for table "e_impact"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_consequence_pkey" for table "e_consequence"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_risk_control_pkey" for table "e_risk_control"
+[2013-04-23 11:07:54 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_action_pkey" for table "e_action"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_alert_type_pkey" for table "t_alert_type"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_alert_type_alert_type_key" for table "t_alert_type"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_alert_pkey" for table "t_alert"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_alert_severity_pkey" for table "t_alert_severity"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_alert_severity_severity_name_key" for table "t_alert_severity"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_alert_priority_pkey" for table "t_alert_priority"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_alert_priority_priority_name_key" for table "t_alert_priority"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_alert_daily_pkey" for table "t_alert_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_alert_asset_daily_pkey" for table "t_alert_asset_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_event_channel_pkey" for table "t_event_channel"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_event_channel_channel_name_key" for table "t_event_channel"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_event_publisher_pkey" for table "t_event_publisher"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_event_publisher_publisher_name_key" for table "t_event_publisher"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_event_level_pkey" for table "t_event_level"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_event_level_event_level_key" for table "t_event_level"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_managed_computer_pkey" for table "t_managed_computer"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_managed_computer_daily_pkey" for table "t_managed_computer_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_app_pkey" for table "t_app"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_log_level_pkey" for table "t_log_level"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_log_level_level_name_key" for table "t_log_level"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_app_log_level_daily_pkey" for table "t_app_log_level_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_app_event_pkey" for table "t_app_event"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_app_event_daily_pkey" for table "t_app_event_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_status_pkey" for table "t_status"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_support_level_pkey" for table "t_support_level"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_type_pkey" for table "t_type"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_category_pkey" for table "t_category"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ipsu_pkey" for table "t_ipsu"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ticket_pkey" for table "t_ticket"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ticket_category_pkey" for table "t_ticket_category"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ticket_ipsu_pkey" for table "t_ticket_ipsu"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ticket_raci_pkey" for table "t_ticket_raci"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ticket_daily_pkey" for table "t_ticket_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ticket_type_daily_pkey" for table "t_ticket_type_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ticket_category_daily_pkey" for table "t_ticket_category_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ticket_user_daily_pkey" for table "t_ticket_user_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ticket_ipsu_daily_pkey" for table "t_ticket_ipsu_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_ticket_status_daily_pkey" for table "t_ticket_status_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_satisfaction_survey_pkey" for table "t_satisfaction_survey"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_satisfaction_question_pkey" for table "t_satisfaction_question"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_satisfaction_answer_pkey" for table "t_satisfaction_answer"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_satisfaction_level_pkey" for table "t_satisfaction_level"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "t_satisfaction_level_satisfaction_level_key" for table "t_satisfaction_level"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_satisfaction_question_category_pkey" for table "t_satisfaction_question_category"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_satisfaction_survey_result_pkey" for table "t_satisfaction_survey_result"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_satisfaction_daily_pkey" for table "t_satisfaction_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_satisfaction_level_daily_pkey" for table "t_satisfaction_level_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_supported_lang_pkey" for table "e_supported_lang"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_supported_lang_lang_key" for table "e_supported_lang"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_label_pkey" for table "e_label"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_label_lbl_key" for table "e_label"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_label_lang_pkey" for table "e_label_lang"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_frontend_lang_entity_pkey" for table "e_frontend_lang_entity"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / UNIQUE will create implicit index "e_frontend_lang_entity_entity_key" for table "e_frontend_lang_entity"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "e_frontend_lang_entity_labels_pkey" for table "e_frontend_lang_entity_labels"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_domain_pkey" for table "t_domain"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_pkey" for table "t_user"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_conversation_pkey" for table "t_conversation"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_message_pkey" for table "t_message"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_message_recipient_pkey" for table "t_message_recipient"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_private_message_daily_pkey" for table "t_user_private_message_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_message_daily_pkey" for table "t_message_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_conversation_daily_pkey" for table "t_conversation_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t_user_daily_pkey" for table "t_user_daily"
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people CASCADE;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_vulnerability" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_vulnerability CASCADE;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_vulnerability_action" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_vulnerability_action;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_vulnerability_vrt" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_vulnerability_vrt;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_module" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_module;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_audit" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_audit;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_audit_interview" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_audit_interview;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_audit_document" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_audit_document;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_audit_rec" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_audit_rec;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_audit_rec_auditee" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_audit_rec_auditee;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_audit_action" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_audit_action;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_audit_report" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_audit_report;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_composite_product" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_composite_product;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_risk" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_risk CASCADE;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_risk_review" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_risk_review CASCADE;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_risk_control" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_risk_control CASCADE;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_risk_action" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_risk_action CASCADE;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_objects" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_objects;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_objects" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_objects;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_vulnerability" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_vulnerability;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_vulnerability_action" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_vulnerability_action;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_vulnerability_vrt" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_vulnerability_vrt;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_module" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_module;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_audit" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_audit;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_audit_interview" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_audit_interview;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_audit_document" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_audit_document;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_audit_rec" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_audit_rec;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_audit_rec_auditee" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_audit_rec_auditee;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_audit_action" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_audit_action;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_audit_report" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_audit_report;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_composite_product" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_composite_product;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_risk" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_risk;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_risk_review" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_risk_review CASCADE;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_risk_control" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_risk_control CASCADE;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_risk_action" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_risk_action CASCADE;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_names" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_names;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_target" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_target CASCADE;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  view "v_raci_people_target" does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP VIEW v_raci_people_target CASCADE;
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  function is_expert(integer, integer) does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP FUNCTION is_expert(integer, integer);
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> ERROR:  function is_group_expert(integer, integer) does not exist
+[2013-04-23 11:07:55 UTC] <esis_user on esis_sdw> STATEMENT:  DROP FUNCTION is_group_expert(integer, integer);
+[2013-04-23 11:07:55 UTC] < on > LOG:  received fast shutdown request
+[2013-04-23 11:07:55 UTC] < on > LOG:  aborting any active transactions
+[2013-04-23 11:07:55 UTC] < on > LOG:  autovacuum launcher shutting down
+[2013-04-23 11:07:55 UTC] < on > LOG:  shutting down
+[2013-04-23 11:07:55 UTC] < on > LOG:  database system is shut down
+[2013-04-23 11:10:41 UTC] < on > LOG:  database system was shut down at 2013-04-23 11:07:55 UTC
+[2013-04-23 11:10:41 UTC] < on > LOG:  database system is ready to accept connections
+[2013-04-23 11:10:41 UTC] < on > LOG:  autovacuum launcher started

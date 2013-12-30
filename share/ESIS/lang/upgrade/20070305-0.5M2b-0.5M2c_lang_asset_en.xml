@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_asset_en.xml *** -->
+<entity name="asset" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<!-- Errors texts --> 
+<asset_errors_wsnotexist_text>The webservice '$1' doesn't exist. Please contact your administrator.</asset_errors_wsnotexist_text><!-- html -->
+
+<asset_errors_vendors_active>Cannot update $1 because its products are in use by active assets.</asset_errors_vendors_active>
+<asset_errors_products_active>Cannot update $1 because it is in use by active assets.</asset_errors_products_active>
+<asset_errors_versions_active>Cannot update $1 because it is in use by active assets.</asset_errors_versions_active>
+<asset_errors_vendors_cascademin>To update $1 we also need to update its products and versions. Continue ?</asset_errors_vendors_cascademin>
+<asset_errors_products_cascademin>To update $1 we also need to update its vendor and versions. Continue ?</asset_errors_products_cascademin>
+<asset_errors_versions_cascademin>To update $1 we also need to update its vendor and product. Continue ?</asset_errors_versions_cascademin>
+<asset_errors_vendors_cascademax>Update all the $1 products and versions at the same time ?</asset_errors_vendors_cascademax>
+<asset_errors_products_cascademax>Update all the $1 versions at the same time ?</asset_errors_products_cascademax>
+</changed>
+
+<!-- ******************** ADDED ******************** -->
+<added>
+<!-- Errors texts -->
+<asset_errors_concurrency_title>Concurrent access error</asset_errors_concurrency_title>
+<asset_errors_concurrency_text><![CDATA[Operation refused: you're not allowed to finalize this operation because the selected object has been updated by another user.<br />Refresh the principal screen to update the selected object before start again the operation.]]></asset_errors_concurrency_text>
+
+<!-- Error -->
+<asset_error_concurrency_title>Concurrent access on item</asset_error_concurrency_title>
+<asset_error_concurrency_text><![CDATA[The item '$1' has been already updated by an other user.<br />Click on the Refresh button to update it.<br />You'll have to relaunch your operation after that.]]></asset_error_concurrency_text>
+<asset_error_refresh>Refresh</asset_error_refresh>
+</added>
+<!-- ******************** REMOVED ******************** -->
+</entity>
+</esis>

@@ -1,0 +1,31 @@
+[2013-12-28 03:35:15 UTC] <esis_user on esis_sdw> LOG:  unexpected EOF on client connection
+[2013-12-28 03:35:15 UTC] <esis_user on esis_sdw> LOG:  unexpected EOF on client connection
+[2013-12-28 03:35:15 UTC] <esis_user on esis_sdw> LOG:  unexpected EOF on client connection
+[2013-12-28 03:35:15 UTC] <esis_user on esis_sdw> LOG:  unexpected EOF on client connection
+[2013-12-28 03:35:15 UTC] <esis_user on esis_sdw> LOG:  unexpected EOF on client connection
+[2013-12-28 03:35:15 UTC] <esis_user on esis_sdw> LOG:  unexpected EOF on client connection
+[2013-12-28 03:35:15 UTC] <esis_user on esis_sdw> LOG:  unexpected EOF on client connection
+[2013-12-28 03:35:15 UTC] <esis_user on esis_sdw> LOG:  unexpected EOF on client connection
+[2013-12-28 03:35:15 UTC] <esis_user on esis_sdw> LOG:  unexpected EOF on client connection
+[2013-12-28 08:57:03 UTC] < on > LOG:  database system was interrupted; last known up at 2013-12-27 06:55:04 UTC
+[2013-12-28 08:57:03 UTC] < on > LOG:  database system was not properly shut down; automatic recovery in progress
+[2013-12-28 08:57:03 UTC] < on > LOG:  record with zero length at 0/1F4D57A0
+[2013-12-28 08:57:03 UTC] < on > LOG:  redo is not required
+[2013-12-28 08:57:03 UTC] < on > LOG:  database system is ready to accept connections
+[2013-12-28 08:57:03 UTC] < on > LOG:  autovacuum launcher started
+[2013-12-28 15:06:19 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 37
+[2013-12-28 15:06:19 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-12-28 15:06:19 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 562
+[2013-12-28 15:06:19 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-12-28 15:06:19 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 927
+[2013-12-28 15:06:19 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-12-28 15:06:19 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 1058
+[2013-12-28 15:06:19 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-12-28 15:13:03 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 37
+[2013-12-28 15:13:03 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-12-28 15:13:03 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 562
+[2013-12-28 15:13:03 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-12-28 15:13:03 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 927
+[2013-12-28 15:13:03 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.
+[2013-12-28 15:13:03 UTC] <esis_user on esis_sdw> WARNING:  nonstandard use of escape in a string literal at character 1058
+[2013-12-28 15:13:03 UTC] <esis_user on esis_sdw> HINT:  Use the escape string syntax for escapes, e.g., E'\r\n'.

@@ -1,0 +1,330 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>ALTER VIEW</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 8.3.10 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="SQL Commands"
+HREF="sql-commands.html"><LINK
+REL="PREVIOUS"
+TITLE="ALTER USER"
+HREF="sql-alteruser.html"><LINK
+REL="NEXT"
+TITLE="ANALYZE"
+HREF="sql-analyze.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2010-03-12T04:15:17"></HEAD
+><BODY
+CLASS="REFENTRY"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="5"
+ALIGN="center"
+VALIGN="bottom"
+>PostgreSQL 8.3.10 Documentation</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="sql-alteruser.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="sql-alteruser.html"
+>Fast Backward</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="sql-analyze.html"
+>Fast Forward</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="sql-analyze.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><H1
+><A
+NAME="SQL-ALTERVIEW"
+></A
+>ALTER VIEW</H1
+><DIV
+CLASS="REFNAMEDIV"
+><A
+NAME="AEN50407"
+></A
+><H2
+>Name</H2
+>ALTER VIEW&nbsp;--&nbsp;change the definition of a view</DIV
+><A
+NAME="AEN50410"
+></A
+><DIV
+CLASS="REFSYNOPSISDIV"
+><A
+NAME="AEN50412"
+></A
+><H2
+>Synopsis</H2
+><PRE
+CLASS="SYNOPSIS"
+>ALTER VIEW <TT
+CLASS="REPLACEABLE"
+><I
+>name</I
+></TT
+> RENAME TO <TT
+CLASS="REPLACEABLE"
+><I
+>newname</I
+></TT
+></PRE
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN50416"
+></A
+><H2
+>Description</H2
+><P
+>   <TT
+CLASS="COMMAND"
+>ALTER VIEW</TT
+> changes the definition of a view.
+   The only currently available functionality is to rename the view.
+   To execute this command you must be the owner of the view.
+  </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN50420"
+></A
+><H2
+>Parameters</H2
+><P
+></P
+><DIV
+CLASS="VARIABLELIST"
+><DL
+><DT
+><TT
+CLASS="REPLACEABLE"
+><I
+>name</I
+></TT
+></DT
+><DD
+><P
+>      The name (optionally schema-qualified) of an existing view.
+     </P
+></DD
+><DT
+><TT
+CLASS="REPLACEABLE"
+><I
+>newname</I
+></TT
+></DT
+><DD
+><P
+>      The new name of the view.
+     </P
+></DD
+></DL
+></DIV
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN50433"
+></A
+><H2
+>Notes</H2
+><P
+>   Some variants of <TT
+CLASS="COMMAND"
+>ALTER TABLE</TT
+> can be used with
+   views as well; for example, to rename a view it is also
+   possible to use <TT
+CLASS="COMMAND"
+>ALTER TABLE RENAME</TT
+>.  To change
+   the schema or owner of a view, you currently must use <TT
+CLASS="COMMAND"
+>ALTER
+   TABLE</TT
+>.
+  </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN50439"
+></A
+><H2
+>Examples</H2
+><P
+>   To rename the view <TT
+CLASS="LITERAL"
+>foo</TT
+> to
+   <TT
+CLASS="LITERAL"
+>bar</TT
+>:
+</P><PRE
+CLASS="PROGRAMLISTING"
+>ALTER VIEW foo RENAME TO bar;</PRE
+><P>
+  </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN50445"
+></A
+><H2
+>Compatibility</H2
+><P
+>   <TT
+CLASS="COMMAND"
+>ALTER VIEW</TT
+> is a <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+>
+   extension of the SQL standard.
+  </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN50450"
+></A
+><H2
+>See Also</H2
+><A
+HREF="sql-createview.html"
+><I
+>CREATE VIEW</I
+></A
+>, <A
+HREF="sql-dropview.html"
+><I
+>DROP VIEW</I
+></A
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="sql-alteruser.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="sql-analyze.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>ALTER USER</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="sql-commands.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>ANALYZE</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

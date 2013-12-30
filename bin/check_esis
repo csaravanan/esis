@@ -1,0 +1,78 @@
+#!/bin/sh
+#   
+#  ESIS
+#  
+#  Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+#  
+#  Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+#                          Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+#  
+#  
+#  This file is part of ESIS.
+#  
+#  ESIS is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation version 3 of the License.
+#  
+#  ESIS is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+#  
+#  $Id: check_esis 13 2009-07-07 15:15:32Z tburdairon $
+#
+
+# check_esis script for nagios
+#  - returns 0 (OK) if tomcat/axis are UP
+#  - returns 1 (Warning) if lighttpd is UP (maintenance)
+#  - returns 2 (Critical) if none of them are UP
+#   use wget to have this result
+
+#source the environment
+. `dirname $0`/esis_env
+
+TOMCAT_PORT=8080
+PID=$$
+
+# remove existing temp file
+tmp_file="/tmp/check_esis.$PID"
+if [ -f $tmp_file ]; then
+ rm -rf $tmp_file*
+fi
+#silent mode
+wget -O $tmp_file.out -o $tmp_file.msgs http://localhost:$TOMCAT_PORT/esis/services/EsisVersion?m3th0d=getEsisVersion 
+
+#how many lines returned : none mean no service
+contentlength=`cat $tmp_file.out | wc -l`
+
+# nothing returned
+if [ $contentlength -eq 0 ]; then
+  echo "ESIS NOT RUNNING: Neither Tomcat nor Lighttpd running"
+  rm -rf $tmp_file*
+  exit 2
+fi
+
+# check on the fault code
+maintenance=`grep '<faultcode>Server.maintenance</faultcode>' $tmp_file.out | wc -l`
+if [ $maintenance -eq 1 ]; then
+  echo "ESIS in maintenance: Lighttpd is running"
+  rm -rf $tmp_file*
+  exit 1
+fi
+
+rm -rf $tmp_file*
+
+#get esis version
+esis checktz > $tmp_file.cmd
+
+esisversion=`head -4 $tmp_file.cmd | tail -1`
+
+rm $tmp_file.cmd
+
+echo "ESIS OK: Version $esisversion"
+
+exit 0
+

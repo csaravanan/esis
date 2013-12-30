@@ -1,0 +1,138 @@
+package org.apache.jsp.html.vrt;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+import com.entelience.soap.soapVulnerabilityReview;
+import com.entelience.soap.soapDirectory;
+import com.entelience.objects.vuln.VulnId;
+import com.entelience.objects.vrt.VulnerabilityInformation;
+import com.entelience.objects.vrt.CommentInfoLine;
+
+public final class vuln_005fcomment_jsp extends com.entelience.servlet.JspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static java.util.List _jspx_dependants;
+
+  static {
+    _jspx_dependants = new java.util.ArrayList(3);
+    _jspx_dependants.add("/html/vrt/../style.inc.jsp");
+    _jspx_dependants.add("/html/vrt/../icon.inc.jsp");
+    _jspx_dependants.add("/html/vrt/../copyright.inc.jsp");
+  }
+
+  public Object getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    JspFactory _jspxFactory = null;
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+
+    try {
+      _jspxFactory = JspFactory.getDefaultFactory();
+      response.setContentType("text/html");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+
+      out.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<!-- the HTML header allows us to view the jsp as an html file in web browsers -->\n");
+      out.write("\n\n\n\n\n\n\n");
+
+// code
+// Check session id validity
+try {
+	Integer peopleId = getSession(request);
+	initTimeZone(peopleId);
+	// Now we can use webservices
+	// Read parameters.
+	Integer vid = getParamInteger(request, "e_vulnerability_id");
+	if (vid == null) {
+		throw new Exception("Null parameter for e_vulnerability_id");
+	}
+	Integer cid = getParamInteger(request, "e_vulnerability_comments_id");
+	if (cid == null) {
+		throw new Exception("Null parameter for e_vulnerability_comments_id");
+	}
+	int intCid = cid.intValue();
+	VulnId e_vulnerability_id = new VulnId(vid.intValue(), 0);
+	
+	soapVulnerabilityReview vr = new soapVulnerabilityReview(peopleId);
+	soapDirectory dir = new soapDirectory(peopleId);
+	VulnerabilityInformation vi = vr.getVulnerabilityInformation(e_vulnerability_id);
+	// end try code
+
+      out.write("\n<head>\n<title>Vulnerability ");
+      out.print( vi.getVuln_name() );
+      out.write(" comment</title>\n");
+      out.write("\n<style type=\"text/css\">\n<!--\nbody {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; color: #000000; background-color: #FFFFFF}\n.title {  font-weight: bold;  text-align: center; font-size: 20pt}\n.subtitle {  font-weight: bold;  text-align: center; font-size: 18pt}\n.copy {  color: #808099; text-align: center; font-size: 9pt}\n.vtitle{ text-align: left; font-size: 14pt; font-weight: bold}\n.vproduct { font-size: 9pt; text-align: left; color: #003366 }\n.db { font-family: \"Monaco\", \"Microsoft Sans Serif\"; font-size: 9pt; }\n-->\n</style>\n");
+      out.write("\n</head>\n<body>\n<table width=\"100%\" border=\"0\" align=\"center\" bgcolor=\"white\">\n<tr>\n\t<td>\n\t\t<div align=\"center\">\n\t\t<!-- Header -->\n\t\t<table width=\"100%\" border=\"0\" align=\"center\" cellpadding=\"4\" cellspacing=\"0\">\n\t\t<tr>\n\t\t\t<td width=\"20%\" rowspan=\"2\" align=\"left\"><a href=\"http://esis.sourceforge.net/\" target=\"_blank\">");
+      out.write('\n');
+      out.write("  \n<img src=\"../icon.gif\" width=\"146\" height=\"51\" border=\"0\" alt=\"ESIS\">");
+      out.write("</a></td>\n\t\t\t<td width=\"80%\" align=\"center\" class=\"title\">Vulnerability comment</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td align=\"center\" class=\"subtitle\">");
+      out.print( vi.getVuln_name() );
+      out.write("</td>\n\t\t</tr>\n\t\t</table>\n\t\t<br/>\n\t\t");
+
+		if (vi.getComments() != null) {
+		
+      out.write("\n\t\t<br/>\n\t\t<table border=\"1\" cellspacing=\"0\" cellpadding=\"4\" width=\"90%\">\n\t\t<tr>\n\t\t\t<td width=\"20%\" align=\"center\" bgcolor=\"gainsboro\">Author</td>\n\t\t\t<td width=\"20%\" align=\"center\" bgcolor=\"gainsboro\">Date</td>\n\t\t\t<td width=\"60%\" align=\"center\" bgcolor=\"gainsboro\">Comment</td>\n\t\t</tr>\n\t\t");
+
+		for (int j = 0; j < vi.getComments().size(); ++j) {
+			CommentInfoLine cil = (CommentInfoLine) vi.getComments().get(j);
+			//show the selected comment
+			if (cil.getE_vulnerability_comments_id().getId() == intCid) {
+				
+      out.write("\n\t\t\t\t<tr>\n\t\t\t\t\t<td align=\"center\">");
+      out.print( cil.getAuthor() );
+      out.write("</td>\n\t\t\t\t\t<td align=\"center\">");
+      out.print( formatDate(cil.getComment_date()) );
+      out.write("</td>\n\t\t\t\t\t<td valign=\"top\" align=\"left\">");
+      out.print( cil.getComment() );
+      out.write("</td>\n\t\t\t\t</tr>\n\t\t\t\t");
+
+			}
+		}//end for
+		
+      out.write("\n\t\t</table>\n\t\t");
+
+		// end comments
+		}
+		
+      out.write('\n');
+      out.write('	');
+      out.write('	');
+      out.write("\n&nbsp;<br/>\n<table width=\"100%\" border=\"0\" cellpadding=\"4\" cellspacing=\"0\">\n<tr>\n\t<td align=\"center\" class=\"copy\">\n\t<br/>\n\t<br/>Copyright (c) 2004-2008 Entelience SARL, Copyright (c) 2008-2009 Equity SA, Copyright (c) 2009-2010 Consulare sÃ rl, Licensed under the <a href=\"http://www.gnu.org/copyleft/gpl.html\">GNU GPL, Version 3</a>.\n\t<br/>\n\t</td>\n</tr>\n</table>");
+      out.write("\n\t\t</div>\n\t</td>\n</tr>\n</table>\n</body>\n</html>\n");
+
+} catch(Exception e){
+_logger.error("Exception during JSP execution", e);
+	setErrorMessage(response, e, getSessionId(request));
+}
+
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+      }
+    } finally {
+      if (_jspxFactory != null) _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}

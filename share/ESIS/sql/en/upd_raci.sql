@@ -1,0 +1,16 @@
+UPDATE public.e_raci_object_type SET description = 'Vulnerability' WHERE e_raci_object_type_id = 1;
+UPDATE public.e_raci_object_type SET description = 'Action for vulnerability' WHERE e_raci_object_type_id = 2;
+UPDATE public.e_raci_object_type SET description = 'VRT meeting' WHERE e_raci_object_type_id = 3;
+UPDATE public.e_raci_object_type SET description = 'Module' WHERE e_raci_object_type_id = 4;
+UPDATE public.e_raci_object_type SET description = 'Audit' WHERE e_raci_object_type_id = 5;
+UPDATE public.e_raci_object_type SET description = 'Audit interview' WHERE e_raci_object_type_id = 6;
+UPDATE public.e_raci_object_type SET description = 'Audit document' WHERE e_raci_object_type_id = 7;
+UPDATE public.e_raci_object_type SET description = 'Audit recommendation (auditor)' WHERE e_raci_object_type_id = 8;
+UPDATE public.e_raci_object_type SET description = 'Audit recommendation (auditee)' WHERE e_raci_object_type_id = 9;
+UPDATE public.e_raci_object_type SET description = 'Audit action' WHERE e_raci_object_type_id = 10;
+UPDATE public.e_raci_object_type SET description = 'Audit report' WHERE e_raci_object_type_id = 11;
+UPDATE public.e_raci_object_type SET description = 'Composite product' WHERE e_raci_object_type_id = 12;
+UPDATE public.e_raci_object_type SET description = 'Risk' WHERE e_raci_object_type_id = 13;
+UPDATE public.e_raci_object_type SET description = 'Risk review' WHERE e_raci_object_type_id = 14;
+UPDATE public.e_raci_object_type SET description = 'Risk control' WHERE e_raci_object_type_id = 15;
+UPDATE public.e_raci_object_type SET description = 'Risk action' WHERE e_raci_object_type_id = 16;

@@ -1,0 +1,414 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>TRUNCATE</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 8.3.10 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="SQL Commands"
+HREF="sql-commands.html"><LINK
+REL="PREVIOUS"
+TITLE="START TRANSACTION"
+HREF="sql-start-transaction.html"><LINK
+REL="NEXT"
+TITLE="UNLISTEN"
+HREF="sql-unlisten.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2010-03-12T04:15:17"></HEAD
+><BODY
+CLASS="REFENTRY"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="5"
+ALIGN="center"
+VALIGN="bottom"
+>PostgreSQL 8.3.10 Documentation</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="sql-start-transaction.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="sql-start-transaction.html"
+>Fast Backward</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="sql-unlisten.html"
+>Fast Forward</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="sql-unlisten.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><H1
+><A
+NAME="SQL-TRUNCATE"
+></A
+>TRUNCATE</H1
+><DIV
+CLASS="REFNAMEDIV"
+><A
+NAME="AEN60805"
+></A
+><H2
+>Name</H2
+>TRUNCATE&nbsp;--&nbsp;empty a table or set of tables</DIV
+><A
+NAME="AEN60808"
+></A
+><DIV
+CLASS="REFSYNOPSISDIV"
+><A
+NAME="AEN60810"
+></A
+><H2
+>Synopsis</H2
+><PRE
+CLASS="SYNOPSIS"
+>TRUNCATE [ TABLE ] <TT
+CLASS="REPLACEABLE"
+><I
+>name</I
+></TT
+> [, ...] [ CASCADE | RESTRICT ]</PRE
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN60813"
+></A
+><H2
+>Description</H2
+><P
+>   <TT
+CLASS="COMMAND"
+>TRUNCATE</TT
+> quickly removes all rows from a set of
+   tables. It has the same effect as an unqualified
+   <TT
+CLASS="COMMAND"
+>DELETE</TT
+> on each table, but since it does not actually
+   scan the tables it is faster. Furthermore, it reclaims disk space
+   immediately, rather than requiring a subsequent <TT
+CLASS="COMMAND"
+>VACUUM</TT
+>
+   operation. This is most useful on large tables.
+  </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN60819"
+></A
+><H2
+>Parameters</H2
+><P
+></P
+><DIV
+CLASS="VARIABLELIST"
+><DL
+><DT
+><TT
+CLASS="REPLACEABLE"
+><I
+>name</I
+></TT
+></DT
+><DD
+><P
+>      The name (optionally schema-qualified) of a table to be truncated.
+     </P
+></DD
+><DT
+><TT
+CLASS="LITERAL"
+>CASCADE</TT
+></DT
+><DD
+><P
+>      Automatically truncate all tables that have foreign-key references
+      to any of the named tables, or to any tables added to the group
+      due to <TT
+CLASS="LITERAL"
+>CASCADE</TT
+>.
+     </P
+></DD
+><DT
+><TT
+CLASS="LITERAL"
+>RESTRICT</TT
+></DT
+><DD
+><P
+>      Refuse to truncate if any of the tables have foreign-key references
+      from tables that are not to be truncated.  This is the default.
+     </P
+></DD
+></DL
+></DIV
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN60838"
+></A
+><H2
+>Notes</H2
+><P
+>   Only the owner of a table can <TT
+CLASS="COMMAND"
+>TRUNCATE</TT
+> it.
+  </P
+><P
+>   <TT
+CLASS="COMMAND"
+>TRUNCATE</TT
+> cannot be used on a table that has foreign-key
+   references from other tables, unless all such tables are also truncated
+   in the same command.  Checking validity in such cases would require table
+   scans, and the whole point is not to do one.  The <TT
+CLASS="LITERAL"
+>CASCADE</TT
+>
+   option can be used to automatically include all dependent tables &mdash;
+   but be very careful when using this option, or else you might lose data you
+   did not intend to!
+  </P
+><P
+>   <TT
+CLASS="COMMAND"
+>TRUNCATE</TT
+> will not run any <TT
+CLASS="LITERAL"
+>ON DELETE</TT
+>
+   triggers that might exist for the tables.
+  </P
+><DIV
+CLASS="WARNING"
+><P
+></P
+><TABLE
+CLASS="WARNING"
+BORDER="1"
+WIDTH="100%"
+><TR
+><TD
+ALIGN="CENTER"
+><B
+>Warning</B
+></TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+><P
+>    <TT
+CLASS="COMMAND"
+>TRUNCATE</TT
+> is not MVCC-safe (see <A
+HREF="mvcc.html"
+>Chapter 13</A
+>
+     for general information about MVCC).  After truncation, the table
+     will appear empty to all concurrent transactions, even if they
+     are using a snapshot taken before the truncation occurred.  This
+     will only be an issue for a transaction that did not access the
+     truncated table before the truncation happened &mdash; any
+     transaction that has done so would hold at least an
+     <TT
+CLASS="LITERAL"
+>ACCESS SHARE</TT
+> lock, which would block
+     <TT
+CLASS="COMMAND"
+>TRUNCATE</TT
+> until that transaction completes.  So
+     truncation will not cause any apparent inconsistency in the table
+     contents for successive queries on the same table, but it could
+     cause visible inconsistency between the contents of the truncated
+     table and other tables in the database.
+   </P
+><P
+>    <TT
+CLASS="COMMAND"
+>TRUNCATE</TT
+> is transaction-safe, however: the truncation
+    will be safely rolled back if the surrounding transaction does not
+    commit.
+   </P
+></TD
+></TR
+></TABLE
+></DIV
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN60856"
+></A
+><H2
+>Examples</H2
+><P
+>   Truncate the tables <TT
+CLASS="LITERAL"
+>bigtable</TT
+> and <TT
+CLASS="LITERAL"
+>fattable</TT
+>:
+
+</P><PRE
+CLASS="PROGRAMLISTING"
+>TRUNCATE bigtable, fattable;</PRE
+><P>
+  </P
+><P
+>   Truncate the table <TT
+CLASS="LITERAL"
+>othertable</TT
+>, and cascade to any tables
+   that reference <TT
+CLASS="LITERAL"
+>othertable</TT
+> via foreign-key
+   constraints:
+
+</P><PRE
+CLASS="PROGRAMLISTING"
+>TRUNCATE othertable CASCADE;</PRE
+><P>
+  </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN60866"
+></A
+><H2
+>Compatibility</H2
+><P
+>   There is no <TT
+CLASS="COMMAND"
+>TRUNCATE</TT
+> command in the SQL standard.
+  </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="sql-start-transaction.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="sql-unlisten.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>START TRANSACTION</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="sql-commands.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>UNLISTEN</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

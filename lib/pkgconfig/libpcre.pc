@@ -1,0 +1,12 @@
+# Package Information for pkg-config
+
+prefix=/opt/ESIS
+exec_prefix=/opt/ESIS
+libdir=/opt/ESIS/lib
+includedir=/opt/ESIS/include
+
+Name: libpcre
+Description: PCRE - Perl compatible regular expressions C library
+Version: 7.1
+Libs: -L${libdir} -lpcre
+Cflags: -I${includedir}

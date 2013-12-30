@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_audits_fr.xml *** -->
+<entity name="audits" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<audit_racichangerequest_title>Liste des demandes de changements RACI pour le module</audit_racichangerequest_title>
+<audit_racichangerequest_text>Au moins une demande de modification du RACI du module nécessite votre approbation. Sélectionnez un chamgement dans la liste pour lui appliquer la modification.</audit_racichangerequest_text>
+<audit_racichangerequest_warning>Attention: le fait de valider les changements sur vos propres informations dans le RACI du module entrainera votre déconnexion du module.</audit_racichangerequest_warning>
+<audit_racichangerequest_validate>Valider</audit_racichangerequest_validate>
+<audit_racichangerequest_discard>Refuser</audit_racichangerequest_discard>
+<audit_racichangerequest_dolater>Plus tard</audit_racichangerequest_dolater>
+<audit_racichangerequest_datas_request_date>Date</audit_racichangerequest_datas_request_date>
+<audit_racichangerequest_datas_request_modifier>Modifié par</audit_racichangerequest_datas_request_modifier>
+<audit_racichangerequest_datas_request_stakeholder>Partie prenante</audit_racichangerequest_datas_request_stakeholder>
+<audit_racichangerequest_datas_request_modification>Modification</audit_racichangerequest_datas_request_modification>
+<audit_racichangerequest_datas_request_modification_add>Ajout</audit_racichangerequest_datas_request_modification_add>
+<audit_racichangerequest_datas_request_modification_update>Mise à jour</audit_racichangerequest_datas_request_modification_update>
+<audit_racichangerequest_datas_request_modification_delete>Suppression</audit_racichangerequest_datas_request_modification_delete>
+<audit_racichangerequest_datas_request_modification_forced>Modif. forcée</audit_racichangerequest_datas_request_modification_forced>
+<audit_racichangerequest_datas_request_substitute>Suppléant</audit_racichangerequest_datas_request_substitute>
+<audit_racichangerequest_moduleraci>RACI actuel du module</audit_racichangerequest_moduleraci>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+</removed>
+
+</entity>
+</esis>

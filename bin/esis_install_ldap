@@ -1,0 +1,66 @@
+#!/bin/sh
+#   
+#  ESIS
+#  
+#  Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+#  
+#  Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+#                          Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+#  
+#  
+#  This file is part of ESIS.
+#  
+#  ESIS is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation version 3 of the License.
+#  
+#  ESIS is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+#  
+#  $Id: esis_install_ldap 13 2009-07-07 15:15:32Z tburdairon $
+#
+
+#
+# Install openldap. this script is not used in normal installations
+#
+. `dirname $0`/esis_env
+
+( test -d ${ESIS_HOME}/var/openldap-data || (
+
+	echo "Installing ESIS openldap server.";
+
+	mkdir -p ${ESIS_HOME}/var/openldap-data
+	chmod 700 ${ESIS_HOME}/var/openldap-data
+
+	cp ${ESIS_HOME}/share/ESIS/slapd.conf ${ESIS_HOME}/etc/openldap/
+	
+	cat >${ESIS_HOME}/libexec/kill_slapd <<KILLSLAPD
+#!/bin/sh
+#
+# script to run as any user to kill slapd
+#
+( test -f ${ESIS_HOME}/var/run/slapd.pid && (
+	/bin/cat ${ESIS_HOME}/var/run/slapd.pid | /usr/bin/xargs /bin/kill
+	echo "Sent slapd kill signal."
+) || (echo "Slapd not running.")
+);
+KILLSLAPD
+
+	echo "Please enter your password for su root.";
+	echo "su - root -c ${ESIS_HOME}/libexec/slapd";
+	su - root -c ". ${ESIS_HOME}/bin/esis_env ; chown 0:0 ${ESIS_HOME}/var/openldap-data ; chown 0:0 ${ESIS_HOME}/libexec/slapd; chmod 6555 ${ESIS_HOME}/libexec/slapd; chown 0:0 ${ESIS_HOME}/libexec/kill_slapd; chmod 6555 ${ESIS_HOME}/libexec/kill_slapd"
+
+	${ESIS_HOME}/libexec/slapd
+	echo "Waiting for slapd..."
+	sleep 3
+
+	${ESIS_HOME}/bin/ldapadd -x -D "cn=Manager,dc=my-domain,dc=com" -w secret -c -f ${ESIS_HOME}/share/ESIS/extra_schema.ldif
+	
+	${ESIS_HOME}/libexec/kill_slapd
+
+)); # end ${ESIS_HOME}/var/openldap-data

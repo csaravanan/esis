@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="explorer" lang="fr">
+<!-- the # char is used for variables -->
+<!-- in html texts : add <br /> for return line -and- CDATA if use html code -->
+
+<!-- Explorer -->
+<explorer_navigation_services>Visualiseur de services</explorer_navigation_services>
+<explorer_navigation_data>Visualiseur de données</explorer_navigation_data>
+<explorer_default_yes>Oui</explorer_default_yes>
+<explorer_default_no>Non</explorer_default_no>
+
+<!-- Errors texts --> 
+<explorer_errors_default_title>Erreur</explorer_errors_default_title>
+<explorer_errors_default_text>Erreur inconnue</explorer_errors_default_text><!-- html -->
+<explorer_errors_wsnotexist_title>Erreur au niveau des services</explorer_errors_wsnotexist_title>
+<explorer_errors_wsnotexist_text>Le service web '$1' n'existe pas. Merci de contacter votre administrateur pour résoudre ce problème.</explorer_errors_wsnotexist_text><!-- html -->
+<explorer_errors_wsparameters_title>Erreur au niveau des paramètres du service</explorer_errors_wsparameters_title>
+<explorer_errors_wsparameters_text>Le service web '$1' tente d'utiliser plus de 10 valeurs en paramètres.</explorer_errors_wsparameters_text>
+
+<!-- Categories -->
+<explorer_categories_title><![CDATA[Consolidation:<br />Gouvernance, Conformité et Risques]]></explorer_categories_title>
+<explorer_categories_legend_good>Aujourd'hui à jour -1</explorer_categories_legend_good>
+<explorer_categories_legend_medium>Jour -2 à jour -5</explorer_categories_legend_medium>
+<explorer_categories_legend_bad>Jour -6 à jour -15</explorer_categories_legend_bad>
+<explorer_categories_legend_verybad>Jour -15 à jour -30</explorer_categories_legend_verybad>
+<explorer_categories_legend_nodata><![CDATA[> à jour -30/pas de données]]></explorer_categories_legend_nodata>
+<explorer_categories_allcategories>Toutes les catégories</explorer_categories_allcategories>
+
+<!-- Services -->
+<explorer_services_title><![CDATA[Consolidation:<br />Gouvernance, Conformité et Risques]]></explorer_services_title>
+<explorer_services_apply>Relancer</explorer_services_apply>
+<explorer_services_reset>Réinitialiser</explorer_services_reset>
+<explorer_services_selectservice>Sélectionnez un service:</explorer_services_selectservice>
+<explorer_services_executiontime>Temps d'exécution</explorer_services_executiontime>
+<explorer_services_noservice>Pas de service disponible dans cette catégorie.</explorer_services_noservice>
+<explorer_services_description>Description du service</explorer_services_description>
+<explorer_services_results>Résultats du service</explorer_services_results>
+<explorer_services_parameters_data_parameter>Paramètre</explorer_services_parameters_data_parameter>
+<explorer_services_parameters_data_label>Description</explorer_services_parameters_data_label>
+<explorer_services_parameters_data_value>Valeur actuelle</explorer_services_parameters_data_value>
+<explorer_services_parameters_data_default>Valeur par défaut</explorer_services_parameters_data_default>
+<explorer_services_parameters_data_possible>Valeurs possibles</explorer_services_parameters_data_possible>
+<explorer_services_toplist_data>Donnée</explorer_services_toplist_data>
+<explorer_services_toplist_number>Quantité</explorer_services_toplist_number>
+
+<!-- Service Parameters -->
+<explorer_serviceparameter_title>Modifier un paramètre</explorer_serviceparameter_title>
+<explorer_serviceparameter_name>Paramètre</explorer_serviceparameter_name>
+<explorer_serviceparameter_currentvalue>Valeur actuelle</explorer_serviceparameter_currentvalue>
+<explorer_serviceparameter_newvalue>Nouvelle valeur</explorer_serviceparameter_newvalue>
+<explorer_serviceparameter_edit>Mettre à jour</explorer_serviceparameter_edit>
+
+<!-- Data -->
+<explorer_data_title><![CDATA[Consolidation:<br />Gouvernance, Conformité et Risques]]></explorer_data_title>
+<explorer_data_tab_malwares>Malveillances</explorer_data_tab_malwares>
+<explorer_data_tab_domains>Noms de domaine</explorer_data_tab_domains>
+<explorer_data_tab_sites>Sites web</explorer_data_tab_sites>
+<explorer_data_tab_ips>Adresses IP</explorer_data_tab_ips>
+<explorer_data_pageempty_malwares>0 logiciel malveillant</explorer_data_pageempty_malwares>
+<explorer_data_pages_malwares>page $1 sur $2 ( $3 logiciels malveillants )</explorer_data_pages_malwares>
+<explorer_data_pageempty_domains>0 nom de domaine</explorer_data_pageempty_domains>
+<explorer_data_pages_domains>page $1 sur $2 ( $3 noms de domaine )</explorer_data_pages_domains>
+<explorer_data_pageempty_sites>0 site web</explorer_data_pageempty_sites>
+<explorer_data_pages_sites>page $1 sur $2 ( $3 sites web )</explorer_data_pages_sites>
+<explorer_data_pageempty_ips>0 adresse IP</explorer_data_pageempty_ips>
+<explorer_data_pages_ips>page $1 sur $2 ( $3 adresses IP )</explorer_data_pages_ips>
+<explorer_data_nodata>Aucune donnée n'a été trouvée.</explorer_data_nodata>
+<explorer_data_domains_data_name>Noms de domaine</explorer_data_domains_data_name>
+<explorer_data_domains_data_firstoccurence>Premières fois</explorer_data_domains_data_firstoccurence>
+<explorer_data_domains_data_lastoccurence>Dernières fois</explorer_data_domains_data_lastoccurence>
+<explorer_data_sites_data_name>Sites</explorer_data_sites_data_name>
+<explorer_data_sites_data_domain>Noms de domaine</explorer_data_sites_data_domain>
+<explorer_data_sites_data_category>Catégories</explorer_data_sites_data_category>
+<explorer_data_sites_data_intranet>Intranet</explorer_data_sites_data_intranet>
+<explorer_data_sites_data_firstoccurence>Premières fois</explorer_data_sites_data_firstoccurence>
+<explorer_data_sites_data_lastoccurence>Dernières fois</explorer_data_sites_data_lastoccurence>
+<explorer_data_malwares_data_name>Logiciels malveillants</explorer_data_malwares_data_name>
+<explorer_data_malwares_data_description>Descriptions</explorer_data_malwares_data_description>
+<explorer_data_malwares_data_type>Types</explorer_data_malwares_data_type>
+<explorer_data_malwares_data_occurences># apparitions</explorer_data_malwares_data_occurences>
+<explorer_data_malwares_data_firstoccurence>Premières fois</explorer_data_malwares_data_firstoccurence>
+<explorer_data_malwares_data_lastoccurence>Dernières fois</explorer_data_malwares_data_lastoccurence>
+<explorer_data_malwares_data_assigndate>Ajout au CME</explorer_data_malwares_data_assigndate>
+<explorer_data_ips_data_fullname>Nom complet IP</explorer_data_ips_data_fullname>
+<explorer_data_ips_data_category>Catégories</explorer_data_ips_data_category>
+<explorer_data_ips_data_occurences># apparitions</explorer_data_ips_data_occurences>
+<explorer_data_ips_data_creation>Date création</explorer_data_ips_data_creation>
+<explorer_data_ips_data_lastseen>Dernière visualisation</explorer_data_ips_data_lastseen>
+
+<!-- Validation -->
+<explorer_validation_title>Validation des changements</explorer_validation_title>
+<explorer_validation_text>Voulez-vous sauvegarder vos changements ?</explorer_validation_text>
+<explorer_validation_yes>Oui</explorer_validation_yes>
+<explorer_validation_no>Non</explorer_validation_no>
+
+<!-- Error -->
+<explorer_error_title>Erreur</explorer_error_title>
+<explorer_error_ok>Ok</explorer_error_ok>
+<explorer_error_notify>Notifier au support</explorer_error_notify>
+
+<!-- Menu -->
+<explorer_menu_home>Accueil</explorer_menu_home>
+<explorer_menu_home_esis>Accueil ESIS</explorer_menu_home_esis>
+<explorer_menu_home_title>Sélection du module</explorer_menu_home_title>
+<explorer_menu_logout>Quitter</explorer_menu_logout>
+<explorer_menu_prefs>Préfs</explorer_menu_prefs>
+<explorer_menu_print>Imprimer</explorer_menu_print>
+<explorer_menu_printselect_title>Imprimer</explorer_menu_printselect_title>
+<explorer_menu_printselect_screen>les données de l'écran</explorer_menu_printselect_screen>
+<explorer_menu_printselect_submit>OK</explorer_menu_printselect_submit>
+<explorer_menu_excel>Excel</explorer_menu_excel>
+<explorer_menu_msproject>MsProject</explorer_menu_msproject>
+<explorer_menu_mail>E-mail</explorer_menu_mail>
+<explorer_menu_calendar>Calendrier</explorer_menu_calendar>
+<explorer_menu_find>Trouver</explorer_menu_find>
+<explorer_menu_votes_my>mes votes</explorer_menu_votes_my>
+<explorer_menu_votes_all>tous votes</explorer_menu_votes_all>
+<explorer_menu_tasks_my>mes tâches</explorer_menu_tasks_my>
+<explorer_menu_tasks_raci>RACI tâches</explorer_menu_tasks_raci>
+<explorer_menu_filter_my>MON</explorer_menu_filter_my>
+<explorer_menu_filter_raci>RACI</explorer_menu_filter_raci>
+<explorer_menu_filter_all>TOUT</explorer_menu_filter_all>
+<explorer_menu_filter_interval_all>tout l'historique</explorer_menu_filter_interval_all>
+<explorer_menu_filter_interval_twelvemonths>sur 12 mois</explorer_menu_filter_interval_twelvemonths>
+<explorer_menu_filter_interval_from>depuis le</explorer_menu_filter_interval_from>
+<explorer_menu_filter_interval_title>Période de temps</explorer_menu_filter_interval_title>
+<explorer_menu_filter_interval_submit>OK</explorer_menu_filter_interval_submit>
+</entity>
+</esis>

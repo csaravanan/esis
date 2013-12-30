@@ -1,0 +1,14 @@
+UPDATE public.e_probe_category SET name = 'Applications' WHERE e_probe_category_id = 1;
+UPDATE public.e_probe_category SET name = 'Assets' WHERE e_probe_category_id = 2;
+UPDATE public.e_probe_category SET name = 'Audit' WHERE e_probe_category_id = 3;
+UPDATE public.e_probe_category SET name = 'Compliance' WHERE e_probe_category_id = 4;
+UPDATE public.e_probe_category SET name = 'Web' WHERE e_probe_category_id = 5;
+UPDATE public.e_probe_category SET name = 'IT Operations' WHERE e_probe_category_id = 6;
+UPDATE public.e_probe_category SET name = 'IT System management' WHERE e_probe_category_id = 7;
+UPDATE public.e_probe_category SET name = 'Spam and mail' WHERE e_probe_category_id = 8;
+UPDATE public.e_probe_category SET name = 'Identity management' WHERE e_probe_category_id = 9;
+UPDATE public.e_probe_category SET name = 'Network events' WHERE e_probe_category_id = 10;
+UPDATE public.e_probe_category SET name = 'Vulnerabilities' WHERE e_probe_category_id = 11;
+UPDATE public.e_probe_category SET name = 'User tools' WHERE e_probe_category_id = 12;
+UPDATE public.e_probe_category SET name = 'Malwares' WHERE e_probe_category_id = 13;
+UPDATE public.e_probe_category SET name = 'Instant messaging' WHERE e_probe_category_id = 14;

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_admin_fr.xml *** -->
+<entity name="admin" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<admin_validation_title>Validation des changements</admin_validation_title>
+<admin_users_datas_details_location>Localisation</admin_users_datas_details_location>
+<admin_groups_datas_details_locations>Localisations</admin_groups_datas_details_locations>
+<admin_user_confirmpassword>Confirmer</admin_user_confirmpassword>
+<admin_locations_datas_details_disabled>Désactivée</admin_locations_datas_details_disabled>
+<admin_moduledetails_nbusers>parties prenantes</admin_moduledetails_nbusers>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<admin_navigation_companies>Entreprises</admin_navigation_companies>
+<admin_user_status>Etat</admin_user_status>
+<admin_companies_title><![CDATA[Administration<br />Management des entreprises]]></admin_companies_title><!-- html -->
+<admin_companies_datas_companies_name>Nom de l'entreprise</admin_companies_datas_companies_name>
+<admin_companies_datas_companies_shortname>Nom court</admin_companies_datas_companies_shortname>
+<admin_companies_datas_companies_database>URL base de données</admin_companies_datas_companies_database>
+<admin_companies_datas_companies_users># utilisateurs</admin_companies_datas_companies_users>
+<admin_companies_datas_companies_add>Ajouter une nouvelle entreprise</admin_companies_datas_companies_add>
+<admin_companies_datas_details>Informations sur l'entreprise</admin_companies_datas_details>
+<admin_companies_datas_details_name>Entreprise</admin_companies_datas_details_name>
+<admin_companies_datas_details_shortname>Nom court</admin_companies_datas_details_shortname>
+<admin_companies_datas_details_connectionurl>URL base de données</admin_companies_datas_details_connectionurl>
+<admin_companies_datas_details_username>Nom d'utilisateur base de données</admin_companies_datas_details_username>
+<admin_companies_datas_details_passwordset>Mot de passe base de données activé ?</admin_companies_datas_details_passwordset>
+<admin_companies_datas_details_logofile>Fichier logo</admin_companies_datas_details_logofile>
+<admin_companies_datas_details_nbusers># utilisateurs</admin_companies_datas_details_nbusers>
+<admin_companies_datas_users>Utilisateurs de l'entreprise</admin_companies_datas_users>
+<admin_companies_datas_users_add>Gérer les utilisateurs de l'entreprise</admin_companies_datas_users_add>
+<admin_companies_datas_groups>Départements de l'entreprise</admin_companies_datas_groups>
+<admin_companies_datas_groups_add>Gérer les départements de l'entreprise</admin_companies_datas_groups_add>
+<admin_company_add_title>Nouvelle entreprise</admin_company_add_title>
+<admin_company_update_title>Voir/Mettre à jour une entreprise</admin_company_update_title>
+<admin_company_name>Nom de l'entreprise</admin_company_name>
+<admin_company_shortname>Nom court</admin_company_shortname>
+<admin_company_databaseurl>URL base de données</admin_company_databaseurl>
+<admin_company_databaseusername>Nom d'utilisateur base de données</admin_company_databaseusername>
+<admin_company_databasepassword>Mot de passe base de données</admin_company_databasepassword>
+<admin_company_add>Créer</admin_company_add>
+<admin_company_update>Mettre à jour</admin_company_update>
+<admin_company_cancel>Annuler</admin_company_cancel>
+<admin_company_logo>Modifier logo</admin_company_logo>
+<admin_company_error_name>Saisir un nom d'entreprise</admin_company_error_name>
+<admin_company_error_shortname>Saisir un nom court</admin_company_error_shortname>
+<admin_company_error_databaseurl>Une base de données doit être séectionnée</admin_company_error_databaseurl>
+<admin_company_error_databaseusername>Un nom d'utilisateur doit être renseigné</admin_company_error_databaseusername>
+<admin_company_error_databasepassword>Un mot de passe doit être renseigné</admin_company_error_databasepassword>
+<admin_companylogo_title>Modifier le logo de l'entreprise</admin_companylogo_title>
+<admin_companylogo_files>Fichiers logo (*.JPEG,*.GIF,*.PNG,*.SWF)</admin_companylogo_files>
+<admin_companylogo_upload>Sélectionnez le logo à ajouter</admin_companylogo_upload>
+<admin_companylogo_close>Fermer</admin_companylogo_close>
+<admin_companylogo_upload_uploading>Enregistrement du fichier $1 en cours.</admin_companylogo_upload_uploading>
+<admin_companylogo_upload_finished>Enregistrement du fichier $1 terminé.</admin_companylogo_upload_finished>
+<admin_companylogo_upload_select>Préparation de l'enregistrement du fichier $1.</admin_companylogo_upload_select>
+<admin_companylogo_upload_maxsize>Le fichier $1 a dépassé la taille maximale autorisée ($2 octets).</admin_companylogo_upload_maxsize>
+<admin_companylogo_upload_httperror>Erreur HTTP $1 lors de l'enregistrement du fichier.</admin_companylogo_upload_httperror>
+<admin_companylogo_upload_ioerror>Erreur en entrée/sortie lors de l'enregistrement du fichier $1.</admin_companylogo_upload_ioerror>
+<admin_companylogo_upload_securityerror>Erreur de sécurité ($1) lors de l'enregistrement du fichier $2.</admin_companylogo_upload_securityerror>
+<admin_probehistory_datas_history_jdbcurl>Url JDBC</admin_probehistory_datas_history_jdbcurl>
+<admin_probedetails_notify>Notifier au support</admin_probedetails_notify>
+<admin_validation_titlelocations>Localisations de départements non utilisées</admin_validation_titlelocations>
+<admin_validation_text>Voulez-vous sauvegarder vos changements ?</admin_validation_text>
+<admin_moduleprefs_display>Préf. d'affichage</admin_moduleprefs_display>
+<admin_moduleprefsdisplay_title>Préférences d'affichage du module</admin_moduleprefsdisplay_title>
+<admin_moduleprefsdisplay_newvalue>Nouvelle valeur</admin_moduleprefsdisplay_newvalue>
+<admin_moduleprefsdisplay_edit>Editer</admin_moduleprefsdisplay_edit>
+<admin_moduleprefsdisplay_datas_display_components>Composant</admin_moduleprefsdisplay_datas_display_components>
+<admin_moduleprefsdisplay_datas_display_parameters>Paramètre</admin_moduleprefsdisplay_datas_display_parameters>
+<admin_moduleprefsdisplay_datas_display_values>Valeur actuelle</admin_moduleprefsdisplay_datas_display_values>
+<admin_moduleprefsdisplay_datas_display_nodisplay>Auncune préférence d'affichage disponible.</admin_moduleprefsdisplay_datas_display_nodisplay>
+<admin_moduleprefsdisplay_datas_description>Description</admin_moduleprefsdisplay_datas_description>
+<admin_group_domains>Domaines</admin_group_domains>
+<admin_location_domains>Domaines</admin_location_domains>
+<admin_businesszone_domains>Domaines</admin_businesszone_domains>
+<admin_domains_department>Domaines du département</admin_domains_department>
+<admin_domains_businesszone>Domaines de la zone de travail</admin_domains_businesszone>
+<admin_domains_location>Domaines pour la localisation</admin_domains_location>
+<admin_domains_datas_domains>Domaines</admin_domains_datas_domains>
+<admin_domains_datas_domains_add>Ajouter un nouveau domaine</admin_domains_datas_domains_add>
+<admin_domains_add_text>Ajouter un domaine</admin_domains_add_text>
+<admin_domains_add_title>Domaine</admin_domains_add_title>
+<admin_domains_add>Ajouter</admin_domains_add>
+<admin_domains_cancel>Annuler</admin_domains_cancel>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<admin_moduledetails_description>Description</admin_moduledetails_description>
+<admin_modules_datas_details_description>Description</admin_modules_datas_details_description>
+</removed>
+
+</entity>
+</esis>

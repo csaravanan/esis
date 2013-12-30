@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="admin" lang="fr">
+<!-- the # char is used for variables -->
+<!-- in html texts : add <br /> for return line -and- CDATA if use html code -->
+
+<!-- Navigation -->
+<admin_navigation_users>Utilisateurs</admin_navigation_users>
+<admin_navigation_groups>Groupes</admin_navigation_groups>
+<admin_navigation_companies>Entreprises</admin_navigation_companies>
+<admin_navigation_locations>Localisations</admin_navigation_locations>
+<admin_navigation_businesszones>Zones géo.</admin_navigation_businesszones>
+<admin_navigation_modules>Modules</admin_navigation_modules>
+<admin_navigation_raci>RACI</admin_navigation_raci>
+<admin_navigation_probes>Sondes</admin_navigation_probes>
+<admin_navigation_standards>Normes</admin_navigation_standards>
+<admin_navigation_incidents>Incidents</admin_navigation_incidents>
+<admin_navigation_monitoring>Suivi</admin_navigation_monitoring>
+<admin_navigation_reports>Rapports</admin_navigation_reports>
+
+<!-- default texts -->
+<admin_default_allusers>Tous utilisateurs</admin_default_allusers>
+<admin_default_allmodules>Tous modules</admin_default_allmodules>
+<admin_default_yes>Oui</admin_default_yes>
+<admin_default_no>Non</admin_default_no>
+<admin_default_r>R</admin_default_r>
+<admin_default_a>A</admin_default_a>
+<admin_default_c>C</admin_default_c>
+<admin_default_i>I</admin_default_i>
+<admin_default_nocompany>Hors entreprise</admin_default_nocompany>
+<admin_default_month_jan>Janvier</admin_default_month_jan>
+<admin_default_month_feb>Février</admin_default_month_feb>
+<admin_default_month_mar>Mars</admin_default_month_mar>
+<admin_default_month_apr>Avril</admin_default_month_apr>
+<admin_default_month_may>Mai</admin_default_month_may>
+<admin_default_month_jun>Juin</admin_default_month_jun>
+<admin_default_month_jul>Juillet</admin_default_month_jul>
+<admin_default_month_aug>Août</admin_default_month_aug>
+<admin_default_month_sep>Septembre</admin_default_month_sep>
+<admin_default_month_oct>Octobre</admin_default_month_oct>
+<admin_default_month_nov>Novembre</admin_default_month_nov>
+<admin_default_month_dec>Décembre</admin_default_month_dec>
+<admin_default_day_sun>D</admin_default_day_sun>
+<admin_default_day_mon>L</admin_default_day_mon>
+<admin_default_day_tue>M</admin_default_day_tue>
+<admin_default_day_wed>M</admin_default_day_wed>
+<admin_default_day_thu>J</admin_default_day_thu>
+<admin_default_day_fri>V</admin_default_day_fri>
+<admin_default_day_sat>S</admin_default_day_sat>
+
+<!-- Errors texts --> 
+<admin_errors_default_title>Erreur</admin_errors_default_title>
+<admin_errors_default_text>Erreur inconnue</admin_errors_default_text><!-- html -->
+<admin_errors_wsnotexist_title>Erreur au niveau des services</admin_errors_wsnotexist_title>
+<admin_errors_wsnotexist_text>Le service web '$1' n'existe pas. Merci de contacter votre administrateur pour résoudre ce problème.</admin_errors_wsnotexist_text><!-- html -->
+<admin_errors_raci_title>Violation des règles RACI</admin_errors_raci_title>
+<admin_errors_raci_text>La matrice RACI assignée à l'objet $1 ne vous permet pas d'effectuer cette action.</admin_errors_raci_text>
+<admin_errors_raci_persons>Merci de contacter le ou les responsables et/ou autorités de l'objet $1.</admin_errors_raci_persons>
+<admin_errors_raci_accountables>Autorité(s)</admin_errors_raci_accountables>
+<admin_errors_raci_responsibles>Responsable(s)</admin_errors_raci_responsibles>
+<admin_errors_raci_noaccountable>Aucune autorité n'est désigné.</admin_errors_raci_noaccountable>
+<admin_errors_raci_noresponsible>Aucune responsabilité n'est désigné.</admin_errors_raci_noresponsible>
+
+<!-- Users -->
+<admin_users_title><![CDATA[Administration & Configuration<br />Gestion des utilisateurs]]></admin_users_title>
+<admin_users_disabled>Désactivés</admin_users_disabled>
+<admin_users_users>Utilisateurs</admin_users_users>
+<admin_users_infos>Plus d'infos</admin_users_infos>
+<admin_users_user>Utilisateur</admin_users_user>
+<admin_users_back>Retour</admin_users_back>
+<admin_users_datas_users_username>Utilisateur</admin_users_datas_users_username>
+<admin_users_datas_users_firstname>Prénom</admin_users_datas_users_firstname>
+<admin_users_datas_users_lastname>Nom</admin_users_datas_users_lastname>
+<admin_users_datas_users_company>Entreprise</admin_users_datas_users_company>
+<admin_users_datas_users_email>E-mail</admin_users_datas_users_email>
+<admin_users_datas_users_locked>Verrouillé</admin_users_datas_users_locked>
+<admin_users_datas_users_add>Ajouter un utilisateur</admin_users_datas_users_add>
+<admin_users_datas_details>Détails de l'utilisateur</admin_users_datas_details>
+<admin_users_datas_details_username>Utilisateur</admin_users_datas_details_username>
+<admin_users_datas_details_firstname>Prénom</admin_users_datas_details_firstname>
+<admin_users_datas_details_lastname>Nom</admin_users_datas_details_lastname>
+<admin_users_datas_details_company>Entreprise</admin_users_datas_details_company>
+<admin_users_datas_details_location>Localisation</admin_users_datas_details_location>
+<admin_users_datas_details_timezone>Fuseau horaire</admin_users_datas_details_timezone>
+<admin_users_datas_details_phone>Téléphone</admin_users_datas_details_phone>
+<admin_users_datas_details_email>E-mail</admin_users_datas_details_email>
+<admin_users_datas_details_creationdate>Date création</admin_users_datas_details_creationdate>
+<admin_users_datas_details_firstlogin>Première connexion</admin_users_datas_details_firstlogin>
+<admin_users_datas_details_lastlogin>Dernière connexion</admin_users_datas_details_lastlogin>
+<admin_users_datas_details_failedlogin>Dernier échec de connexion</admin_users_datas_details_failedlogin>
+<admin_users_datas_details_lastmodification>Dernière modification</admin_users_datas_details_lastmodification>
+<admin_users_datas_details_changepassword>Dernier changement de mot de passe</admin_users_datas_details_changepassword>
+<admin_users_datas_details_passwordexpiration>Validité du mot de passe</admin_users_datas_details_passwordexpiration>
+<admin_users_datas_details_administrator>Administrateur</admin_users_datas_details_administrator>
+<admin_users_datas_details_disabled>Désactivé</admin_users_datas_details_disabled>
+<admin_users_datas_details_locked>Accès verrouillé</admin_users_datas_details_locked>
+<admin_users_datas_groups_group>Groupes</admin_users_datas_groups_group>
+<admin_users_datas_groups_users># membres</admin_users_datas_groups_users>
+<admin_users_datas_groups_add>Ajouter/Supprimer une appartenance</admin_users_datas_groups_add>
+<admin_users_datas_expertises>Expertises</admin_users_datas_expertises>
+<admin_users_datas_expertises_add>Ajouter/Supprimer une expertise</admin_users_datas_expertises_add>
+<admin_users_datas_locations_name>Localisations</admin_users_datas_locations_name>
+<admin_users_datas_locations_company>Entreprises</admin_users_datas_locations_company>
+<admin_users_datas_locations_country>Pays</admin_users_datas_locations_country>
+<admin_users_datas_locations_nolocation>Pas de localisation</admin_users_datas_locations_nolocation>
+<admin_users_datas_zones>Présent dans les zones de travail</admin_users_datas_zones>
+
+<!-- Groups -->
+<admin_groups_title><![CDATA[Administration & Configuration<br />Gestion des groupes]]></admin_groups_title>
+<admin_groups_groups>Groupes</admin_groups_groups>
+<admin_groups_infos>Plus d'infos</admin_groups_infos>
+<admin_groups_group>Groupe</admin_groups_group>
+<admin_groups_group_department>département de $1</admin_groups_group_department>
+<admin_groups_back>Retour</admin_groups_back>
+<admin_groups_datas_groups_groupname>Nom du groupe</admin_groups_datas_groups_groupname>
+<admin_groups_datas_groups_company>Entreprise</admin_groups_datas_groups_company>
+<admin_groups_datas_groups_department>Dépt.</admin_groups_datas_groups_department>
+<admin_groups_datas_groups_description>Description</admin_groups_datas_groups_description>
+<admin_groups_datas_groups_expertises># expertises</admin_groups_datas_groups_expertises>
+<admin_groups_datas_groups_users># membres</admin_groups_datas_groups_users>
+<admin_groups_datas_groups_add>Ajouter un groupe</admin_groups_datas_groups_add>
+<admin_groups_datas_details>Détails du groupe</admin_groups_datas_details>
+<admin_groups_datas_details_groupname>Nom du groupe</admin_groups_datas_details_groupname>
+<admin_groups_datas_details_company>Entreprise</admin_groups_datas_details_company>
+<admin_groups_datas_details_department>Département</admin_groups_datas_details_department>
+<admin_groups_datas_details_locations>Localisations</admin_groups_datas_details_locations>
+<admin_groups_datas_details_expertises># expertises</admin_groups_datas_details_expertises>
+<admin_groups_datas_details_users># membres</admin_groups_datas_details_users>
+<admin_groups_datas_details_description>Description</admin_groups_datas_details_description>
+<admin_groups_datas_details_creationdate>Date création</admin_groups_datas_details_creationdate>
+<admin_groups_datas_users_name>Noms d'utilisateur</admin_groups_datas_users_name>
+<admin_groups_datas_users_members>Membres</admin_groups_datas_users_members>
+<admin_groups_datas_users_add>Ajouter/Supprimer un membre</admin_groups_datas_users_add>
+<admin_groups_datas_expertises>Expertises</admin_groups_datas_expertises>
+<admin_groups_datas_expertises_add>Ajouter/Supprimer une expertise</admin_groups_datas_expertises_add>
+<admin_groups_datas_locations_name>Localisations</admin_groups_datas_locations_name>
+<admin_groups_datas_locations_company>Entreprises</admin_groups_datas_locations_company>
+<admin_groups_datas_locations_country>Pays</admin_groups_datas_locations_country>
+<admin_groups_datas_locations_add>Ajouter/Supprimer une localisation</admin_groups_datas_locations_add>
+<admin_groups_datas_businesszones>Présent dans les zones de travail</admin_groups_datas_businesszones>
+<admin_groups_datas_businesszones_add>Ajouter/Supprimer une zone de travail</admin_groups_datas_businesszones_add>
+<admin_groups_error_businesszonenotremovable_title>Zone de travail non supprimable</admin_groups_error_businesszonenotremovable_title>
+<admin_groups_error_businesszonenotremovable_text>La zone de travail $1 ne peut pas être supprimé du département car c'est une sous-zone.</admin_groups_error_businesszonenotremovable_text>
+
+<!-- Companies -->
+<admin_companies_title><![CDATA[Administration & Configuration<br />Gestion des entreprises]]></admin_companies_title>
+<admin_companies_datas_companies_name>Nom de l'entreprise</admin_companies_datas_companies_name>
+<admin_companies_datas_companies_shortname>Nom court</admin_companies_datas_companies_shortname>
+<admin_companies_datas_companies_database>URL base de données</admin_companies_datas_companies_database>
+<admin_companies_datas_companies_users># utilisateurs</admin_companies_datas_companies_users>
+<admin_companies_datas_companies_add>Ajouter une nouvelle entreprise</admin_companies_datas_companies_add>
+<admin_companies_datas_details>Informations sur l'entreprise</admin_companies_datas_details>
+<admin_companies_datas_details_name>Entreprise</admin_companies_datas_details_name>
+<admin_companies_datas_details_shortname>Nom court</admin_companies_datas_details_shortname>
+<admin_companies_datas_details_connectionurl>URL base de données</admin_companies_datas_details_connectionurl>
+<admin_companies_datas_details_username>Nom d'utilisateur base de données</admin_companies_datas_details_username>
+<admin_companies_datas_details_passwordset>Mot de passe base de données activé ?</admin_companies_datas_details_passwordset>
+<admin_companies_datas_details_logofile>Fichier logo</admin_companies_datas_details_logofile>
+<admin_companies_datas_details_nbusers># utilisateurs</admin_companies_datas_details_nbusers>
+<admin_companies_datas_users>Utilisateurs de l'entreprise</admin_companies_datas_users>
+<admin_companies_datas_users_add>Gérer les utilisateurs de l'entreprise</admin_companies_datas_users_add>
+<admin_companies_datas_groups>Départements de l'entreprise</admin_companies_datas_groups>
+<admin_companies_datas_groups_add>Gérer les départements de l'entreprise</admin_companies_datas_groups_add>
+
+<!-- Locations -->
+<admin_locations_title><![CDATA[Administration & Configuration<br />Gestion des localisations]]></admin_locations_title>
+<admin_locations_disabled>Désactivées</admin_locations_disabled>
+<admin_locations_locations>Localisations</admin_locations_locations>
+<admin_locations_infos>Plus d'infos</admin_locations_infos>
+<admin_locations_location_companycountry>liée à l'entreprise $1 dans le pays $2</admin_locations_location_companycountry>
+<admin_locations_location>Localisation</admin_locations_location>
+<admin_locations_back>Retour</admin_locations_back>
+<admin_locations_datas_locations_name>Localisation</admin_locations_datas_locations_name>
+<admin_locations_datas_locations_company>Entreprise</admin_locations_datas_locations_company>
+<admin_locations_datas_locations_country>Pays</admin_locations_datas_locations_country>
+<admin_locations_datas_locations_city>Ville</admin_locations_datas_locations_city>
+<admin_locations_datas_locations_site>Site</admin_locations_datas_locations_site>
+<admin_locations_datas_locations_add>Ajouter une localisation</admin_locations_datas_locations_add>
+<admin_locations_datas_details>Détails de la localisation</admin_locations_datas_details>
+<admin_locations_datas_details_name>Localisation</admin_locations_datas_details_name>
+<admin_locations_datas_details_company>Entreprise</admin_locations_datas_details_company>
+<admin_locations_datas_details_building>Bâtiment</admin_locations_datas_details_building>
+<admin_locations_datas_details_site>Site</admin_locations_datas_details_site>
+<admin_locations_datas_details_zipcode>Code postal</admin_locations_datas_details_zipcode>
+<admin_locations_datas_details_city>Ville</admin_locations_datas_details_city>
+<admin_locations_datas_details_country>Pays</admin_locations_datas_details_country>
+<admin_locations_datas_details_region>Région</admin_locations_datas_details_region>
+<admin_locations_datas_details_timezone>Fuseau horaire</admin_locations_datas_details_timezone>
+<admin_locations_datas_details_groups># départements</admin_locations_datas_details_groups>
+<admin_locations_datas_details_users># utilisateurs</admin_locations_datas_details_users>
+<admin_locations_datas_details_alias>Liste d'alias</admin_locations_datas_details_alias>
+<admin_locations_datas_details_networks>Réseaux</admin_locations_datas_details_networks>
+<admin_locations_datas_details_domains>Domaines</admin_locations_datas_details_domains>
+<admin_locations_datas_details_disabled>Désactivée</admin_locations_datas_details_disabled>
+<admin_locations_datas_groups_group>Départements</admin_locations_datas_groups_group>
+<admin_locations_datas_groups_users># membres</admin_locations_datas_groups_users>
+<admin_locations_datas_groups_add>Editer les départements de la localisation</admin_locations_datas_groups_add>
+<admin_locations_datas_users_name>Noms d'utilisateur</admin_locations_datas_users_name>
+<admin_locations_datas_users_members>Membres</admin_locations_datas_users_members>
+<admin_locations_datas_users_add>Editer les utilisateurs de la localisation</admin_locations_datas_users_add>
+<admin_locations_datas_businesszones>Présente dans les zones de travail</admin_locations_datas_businesszones>
+<admin_locations_datas_businesszones_add>Editer les zones de travail de la localisation</admin_locations_datas_businesszones_add>
+<admin_locations_map>Situation géographique</admin_locations_map>
+<admin_locations_error_businesszonenotremovable_title>Zone de travail non supprimable</admin_locations_error_businesszonenotremovable_title>
+<admin_locations_error_businesszonenotremovable_text>La zone de travail $1 ne peut pas être supprimé de la localisation car c'est une sous-zone.</admin_locations_error_businesszonenotremovable_text>
+
+<!-- Business Zones -->
+<admin_businesszones_title><![CDATA[Administration & Configuration<br />Gestion des zones de travail]]></admin_businesszones_title>
+<admin_businesszones_zones>Zones de travail</admin_businesszones_zones>
+<admin_businesszones_infos>Plus d'infos</admin_businesszones_infos>
+<admin_businesszones_zone>Zone de travail</admin_businesszones_zone>
+<admin_businesszones_back>Retour</admin_businesszones_back>
+<admin_businesszones_map>Situation géographique</admin_businesszones_map>
+<admin_businesszones_parentzones>Zones parentes</admin_businesszones_parentzones>
+<admin_businesszones_users>Utilisateurs</admin_businesszones_users>
+<admin_businesszones_countries>Pays</admin_businesszones_countries>
+<admin_businesszones_disabled>Désactivées</admin_businesszones_disabled>
+<admin_businesszones_datas_groups>Départements</admin_businesszones_datas_groups>
+<admin_businesszones_datas_groups_add>Associer des départements</admin_businesszones_datas_groups_add>
+<admin_businesszones_datas_users>Utilisateurs</admin_businesszones_datas_users>
+<admin_businesszones_datas_countries>Pays</admin_businesszones_datas_countries>
+<admin_businesszones_datas_parentzones>Zones de travail parentes</admin_businesszones_datas_parentzones>
+<admin_businesszones_datas_businesszones_name>Nom</admin_businesszones_datas_businesszones_name>
+<admin_businesszones_datas_businesszones_continents>Continents</admin_businesszones_datas_businesszones_continents>
+<admin_businesszones_datas_businesszones_subcontinents>Sous-continents</admin_businesszones_datas_businesszones_subcontinents>
+<admin_businesszones_datas_businesszones_countries># pays</admin_businesszones_datas_businesszones_countries>
+<admin_businesszones_datas_businesszones_locations># localisations</admin_businesszones_datas_businesszones_locations>
+<admin_businesszones_datas_businesszones_add>Ajouter une zone de travail</admin_businesszones_datas_businesszones_add>
+<admin_businesszones_datas_locations_name>Localisations</admin_businesszones_datas_locations_name>
+<admin_businesszones_datas_locations_company>Entreprises</admin_businesszones_datas_locations_company>
+<admin_businesszones_datas_locations_country>Pays</admin_businesszones_datas_locations_country>
+<admin_businesszones_datas_locations_add>Editer les localisations de la zone</admin_businesszones_datas_locations_add>
+<admin_businesszones_datas_zones_name>Zones incluses</admin_businesszones_datas_zones_name>
+<admin_businesszones_datas_zones_add>Inclure des zones de travail</admin_businesszones_datas_zones_add>
+<admin_businesszones_error_locationnotremovable_title>Localisation non supprimable</admin_businesszones_error_locationnotremovable_title>
+<admin_businesszones_error_locationnotremovable_text>La localisation $1 ne peut pas être supprimée de la zone de travail car elle est liée à une sous-zone.</admin_businesszones_error_locationnotremovable_text>
+<admin_businesszones_error_zonenotremovable_title>Zone de travail non supprimable</admin_businesszones_error_zonenotremovable_title>
+<admin_businesszones_error_zonenotremovable_text>La zone de travail $1 ne peut pas être supprimée de la zone de travail principale car elle est liée à une sous-zone.</admin_businesszones_error_zonenotremovable_text>
+<admin_businesszones_error_departmentnotremovable_title>Département non supprimable</admin_businesszones_error_departmentnotremovable_title>
+<admin_businesszones_error_departmentnotremovable_text>Le département $1 ne peut pas être supprimé de la zone de travail principale car il est lié à une sous-zone.</admin_businesszones_error_departmentnotremovable_text>
+
+<!-- Modules -->
+<admin_modules_title><![CDATA[Administration & Configuration<br />Gestion des modules]]></admin_modules_title>
+<admin_modules_active>Activés</admin_modules_active>
+<admin_modules_registered>Enregistrés</admin_modules_registered>
+<admin_modules_all>Tous</admin_modules_all>
+<admin_modules_datas_modules_modulename>Nom</admin_modules_datas_modules_modulename>
+<admin_modules_datas_modules_version>Version</admin_modules_datas_modules_version>
+<admin_modules_datas_modules_license>Validité de la licence</admin_modules_datas_modules_license>
+<admin_modules_datas_modules_active>Activé</admin_modules_datas_modules_active>
+<admin_modules_datas_modules_users># parties prenantes</admin_modules_datas_modules_users>
+<admin_modules_datas_details>Détails du module</admin_modules_datas_details>
+<admin_modules_datas_details_modulename>Nom</admin_modules_datas_details_modulename>
+<admin_modules_datas_details_version>Version</admin_modules_datas_details_version>
+<admin_modules_datas_details_license>Validité de la licence</admin_modules_datas_details_license>
+<admin_modules_datas_details_active>Activé</admin_modules_datas_details_active>
+<admin_modules_datas_details_users># parties prenantes</admin_modules_datas_details_users>
+<admin_modules_datas_raci>RACI du module</admin_modules_datas_raci>
+<admin_modules_datas_details_description>Description</admin_modules_datas_details_description>
+<admin_modules_datas_raci_add>Editer le RACI du module</admin_modules_datas_raci_add>
+<admin_modules_datas_prefs>Préférences du module</admin_modules_datas_prefs>
+<admin_modules_datas_prefs_add>Editer les préférences du module</admin_modules_datas_prefs_add>
+<admin_modules_preferences>Préfs générales</admin_modules_preferences>
+
+<!-- Global Preferences -->
+<admin_preferences_title><![CDATA[Administration & Configuration<br />Préférences générales]]></admin_preferences_title>
+<admin_preferences_return>Retour modules</admin_preferences_return>
+<admin_preferences_commands>Utiliser les lignes de commandes ESIS pour éditer ces préférences.</admin_preferences_commands>
+<admin_preferences_datas_prefs_parameter>Paramètres</admin_preferences_datas_prefs_parameter>
+<admin_preferences_datas_prefs_value>Valeurs</admin_preferences_datas_prefs_value>
+<admin_preferences_datas_prefs_defaultvalue>Valeurs par défaut</admin_preferences_datas_prefs_defaultvalue>
+<admin_preferences_description>Description</admin_preferences_description>
+<admin_preferences_datas_prefhistory_value>Valeur</admin_preferences_datas_prefhistory_value>
+<admin_preferences_datas_prefhistory_modifier>Modifié par</admin_preferences_datas_prefhistory_modifier>
+<admin_preferences_datas_prefhistory_date>Date</admin_preferences_datas_prefhistory_date>
+
+<!-- Racis -->
+<admin_racis_title><![CDATA[Administration & Configuration<br />Gestion des RACI]]></admin_racis_title>
+<admin_racis_datas_modules>Modules</admin_racis_datas_modules>
+<admin_racis_datas_users>Parties prenantes</admin_racis_datas_users>
+<admin_racis_datas_users_disabled>Désactivés</admin_racis_datas_users_disabled>
+<admin_racis_datas_raci_modules>Modules</admin_racis_datas_raci_modules>
+<admin_racis_datas_raci_users>Parties prenantes</admin_racis_datas_raci_users>
+<admin_racis_datas_raci_items>Objets</admin_racis_datas_raci_items>
+<admin_racis_datas_raci_r>R</admin_racis_datas_raci_r>
+<admin_racis_datas_raci_a>A</admin_racis_datas_raci_a>
+<admin_racis_datas_raci_c>C</admin_racis_datas_raci_c>
+<admin_racis_datas_raci_i>I</admin_racis_datas_raci_i>
+<admin_racis_datas_raci_rfilter>R</admin_racis_datas_raci_rfilter>
+<admin_racis_datas_raci_afilter>A</admin_racis_datas_raci_afilter>
+<admin_racis_datas_raci_cfilter>C</admin_racis_datas_raci_cfilter>
+<admin_racis_datas_raci_ifilter>I</admin_racis_datas_raci_ifilter>
+<admin_racis_pages>page $1 sur $2 ( $3 objets )</admin_racis_pages>
+<!-- first # : current page / second # : nb pages / third # : nb items - always in this order -->
+<admin_racis_pageempty>0 objet</admin_racis_pageempty>
+
+<!-- Probes -->
+<admin_probes_title><![CDATA[Administration & Configuration<br />Gestion des sondes]]></admin_probes_title>
+<admin_probes_active>Activées</admin_probes_active>
+<admin_probes_registered>Enregistrées</admin_probes_registered>
+<admin_probes_all>Toutes</admin_probes_all>
+<admin_probes_datas_probes_probename>Nom de la sonde</admin_probes_datas_probes_probename>
+<admin_probes_datas_probes_rundate>Date d'exécution</admin_probes_datas_probes_rundate>
+<admin_probes_datas_probes_duration>Durée d'exécution</admin_probes_datas_probes_duration>
+<admin_probes_datas_probes_status>Statut</admin_probes_datas_probes_status>
+<admin_probes_datas_probes_message>Message</admin_probes_datas_probes_message>
+<admin_probes_datas_preferences>Préférences initiales de la sonde</admin_probes_datas_preferences>
+<admin_probes_datas_details>Détails de la sonde</admin_probes_datas_details>
+<admin_probes_datas_details_lastrun>Dernière exécution</admin_probes_datas_details_lastrun>
+<admin_probes_datas_details_firstrun>Première exécution</admin_probes_datas_details_firstrun>
+<admin_probes_datas_details_totalrun>Nombre d'exécutions</admin_probes_datas_details_totalrun>
+<admin_probes_datas_details_lastrunduration>Durée de la dernière exécution</admin_probes_datas_details_lastrunduration>
+<admin_probes_datas_details_averagerunduration>Durée moyenne d'exécution</admin_probes_datas_details_averagerunduration>
+<admin_probes_datas_details_lastsuccess>Dernier succès</admin_probes_datas_details_lastsuccess>
+<admin_probes_datas_details_totalsuccess>Nombre de succès</admin_probes_datas_details_totalsuccess>
+<admin_probes_datas_details_lasterror>Dernière erreur</admin_probes_datas_details_lasterror>
+<admin_probes_datas_details_totalerror>Nombre d'erreurs</admin_probes_datas_details_totalerror>
+<admin_probes_datas_details_lastfailure>Dernier échec</admin_probes_datas_details_lastfailure>
+<admin_probes_datas_details_totalfailure>Nombre d'échecs</admin_probes_datas_details_totalfailure>
+<admin_probes_datas_details_lastabort>Dernière annulation</admin_probes_datas_details_lastabort>
+<admin_probes_datas_details_totalabort>Nombre d'annulations</admin_probes_datas_details_totalabort>
+<admin_probes_datas_details_totalnodata>Nombre d'exécutions sans données</admin_probes_datas_details_totalnodata>
+<admin_probes_datas_details_lastnodata>Dernière exécution sans données</admin_probes_datas_details_lastnodata>
+<admin_probes_datas_history>Derniers historiques de la sonde</admin_probes_datas_history>
+<admin_probes_datas_history_add>Voir l'historique</admin_probes_datas_history_add>
+<admin_probes_history>Historique</admin_probes_history>
+<admin_probes_performance>Performance</admin_probes_performance>
+
+<!-- Incidents -->
+<admin_incidents_title><![CDATA[Administration & Configuration<br />Gestion des incidents]]></admin_incidents_title>
+<admin_incidents_all>Tous</admin_incidents_all>
+<admin_incidents_sent>Envoyés</admin_incidents_sent>
+<admin_incidents_notsent>Non envoyés</admin_incidents_notsent>
+<admin_incidents_clipboard>Presse-papiers</admin_incidents_clipboard>
+<admin_incidents_resend>Renvoyer</admin_incidents_resend>
+<admin_incidents_delete>Supprimer</admin_incidents_delete>
+<admin_incidents_senterror_title>Erreur lors de l'envoi de l'incident</admin_incidents_senterror_title>
+<admin_incidents_senterror_text>Une erreur est survenue lors de l'envoi de l'incident au support technique. Essayez de renvoyer l'incident à nouveau.</admin_incidents_senterror_text>
+<admin_incidents_datas_details>Informations sur l'incident</admin_incidents_datas_details>
+<admin_incidents_datas_error>Description de l'incident</admin_incidents_datas_error>
+<admin_incidents_datas_incidents_probe>Sonde liée</admin_incidents_datas_incidents_probe>
+<admin_incidents_datas_stacktrace>Message d'exception</admin_incidents_datas_stacktrace>
+<admin_incidents_datas_incidents_date>Date</admin_incidents_datas_incidents_date>
+<admin_incidents_datas_incidents_user>Utilisateur</admin_incidents_datas_incidents_user>
+<admin_incidents_datas_incidents_error>Résumé de l'erreur</admin_incidents_datas_incidents_error>
+<admin_incidents_datas_incidents_email>Déjà notifé</admin_incidents_datas_incidents_email>
+<admin_incidents_datas_details_date>Date</admin_incidents_datas_details_date>
+<admin_incidents_datas_details_user>Utilisateur</admin_incidents_datas_details_user>
+<admin_incidents_datas_details_ip>IP du client</admin_incidents_datas_details_ip>
+<admin_incidents_datas_details_os>Système</admin_incidents_datas_details_os>
+<admin_incidents_datas_details_agent>Navigateur client</admin_incidents_datas_details_agent>
+<admin_incidents_datas_details_flash>Version flash</admin_incidents_datas_details_flash>
+<admin_incidents_datas_details_probe>Sonde liée</admin_incidents_datas_details_probe>
+<admin_incidents_datas_details_error>Résumé de l'erreur</admin_incidents_datas_details_error>
+<admin_incidents_datas_details_comment>Commentaires utilisateur</admin_incidents_datas_details_comment>
+<admin_incidents_datas_details_email>Déjà notifé</admin_incidents_datas_details_email>
+
+<!-- Standards -->
+<admin_standards_title><![CDATA[Administration & Configuration<br />Gestion des normes]]></admin_standards_title>
+<admin_standards_active>Actives</admin_standards_active>
+<admin_standards_obsoleted>Obsolètes</admin_standards_obsoleted>
+<admin_standards_all>Toutes</admin_standards_all>
+<admin_standards_datas_details>Informations sur la norme</admin_standards_datas_details>
+<admin_standards_datas_topics>Sujets de la norme</admin_standards_datas_topics>
+<admin_standards_datas_various>Alias de la norme</admin_standards_datas_various>
+<admin_standards_sources>Source normalisée</admin_standards_sources>
+<admin_standards_datas_standards_reference>Référence</admin_standards_datas_standards_reference>
+<admin_standards_datas_standards_title>Titre</admin_standards_datas_standards_title>
+<admin_standards_datas_standards_category>Catégorie</admin_standards_datas_standards_category>
+<admin_standards_datas_standards_add>Ajouter une nouvelle norme</admin_standards_datas_standards_add>
+<admin_standards_datas_details_reference>Référence</admin_standards_datas_details_reference>
+<admin_standards_datas_details_title>Titre</admin_standards_datas_details_title>
+<admin_standards_datas_details_category>Catégorie</admin_standards_datas_details_category>
+<admin_standards_datas_details_classification>Index de classification</admin_standards_datas_details_classification>
+<admin_standards_datas_details_source>Source</admin_standards_datas_details_source>
+<admin_standards_datas_details_published>Date publication</admin_standards_datas_details_published>
+<admin_standards_datas_details_nbtopics># sujets</admin_standards_datas_details_nbtopics>
+<admin_standards_datas_details_active>Active</admin_standards_datas_details_active>
+<admin_standards_datas_details_obsoleted>Obsolète</admin_standards_datas_details_obsoleted>
+<admin_standards_datas_details_alias>Alias</admin_standards_datas_details_alias>
+<admin_standards_datas_details_obsolete>Alias obsolètes</admin_standards_datas_details_obsolete>
+<admin_standards_sources_view>Sources</admin_standards_sources_view>
+<admin_standards_categories_view>Catégories</admin_standards_categories_view>
+
+<!-- Monitoring -->
+<admin_monitoring_title><![CDATA[Administration & Configuration<br />Suivi des sondes]]></admin_monitoring_title>
+<admin_monitoring_datas_details>Détails de $1</admin_monitoring_datas_details>
+<admin_monitoring_datas_preferences>Préférences actuelles de $1</admin_monitoring_datas_preferences>
+<admin_monitoring_datas_messages>Messages de $1</admin_monitoring_datas_messages>
+<admin_monitoring_datas_details_default>Détails de la sonde</admin_monitoring_datas_details_default>
+<admin_monitoring_datas_preferences_default>Préférences actuelles de la sonde</admin_monitoring_datas_preferences_default>
+<admin_monitoring_datas_messages_default>Messages de la sonde</admin_monitoring_datas_messages_default>
+<admin_monitoring_datas_noprobe>Aucune sonde sélectionnée.</admin_monitoring_datas_noprobe>
+<admin_monitoring_datas_messages_nomessage>Aucun message d'erreur renvoyé par la sonde.</admin_monitoring_datas_messages_nomessage>
+<admin_monitoring_categories>Toutes les catégories</admin_monitoring_categories>
+<admin_monitoring_legend_success>Succès</admin_monitoring_legend_success>
+<admin_monitoring_legend_nodata>Pas de données</admin_monitoring_legend_nodata>
+<admin_monitoring_legend_abort>Abandon</admin_monitoring_legend_abort>
+<admin_monitoring_legend_failure>Echec</admin_monitoring_legend_failure>
+<admin_monitoring_legend_error>Erreur</admin_monitoring_legend_error>
+<admin_monitoring_legend_noexecution>Pas d'exécution</admin_monitoring_legend_noexecution>
+<admin_monitoring_probes_error>Erreur</admin_monitoring_probes_error>
+<admin_monitoring_probes_failure>Echec</admin_monitoring_probes_failure>
+<admin_monitoring_probes_abort>Abandon</admin_monitoring_probes_abort>
+<admin_monitoring_probes_nodata>Pas de données</admin_monitoring_probes_nodata>
+<admin_monitoring_probes_success>Succès</admin_monitoring_probes_success>
+<admin_monitoring_logs_data_name>Fichier</admin_monitoring_logs_data_name>
+<admin_monitoring_logs_data_size>Taille</admin_monitoring_logs_data_size>
+<admin_monitoring_logs_data_date>Date</admin_monitoring_logs_data_date>
+<admin_monitoring_logs_maindirectory>Répertoire des logs</admin_monitoring_logs_maindirectory>
+<admin_monitoring_logs_download>Téléchargement</admin_monitoring_logs_download>
+<admin_monitoring_logs_email>Envoi au support</admin_monitoring_logs_email>
+<admin_monitoring_probesxml_text>Export du XML des sondes</admin_monitoring_probesxml_text>
+<admin_monitoring_probesxml_download>Téléchargement</admin_monitoring_probesxml_download>
+<admin_monitoring_probesxml_email>Envoi au support</admin_monitoring_probesxml_email>
+<admin_monitoring_senterror_title>Erreur lors de l'envoi du fichier</admin_monitoring_senterror_title>
+<admin_monitoring_senterror_text>Une erreur est apparue lors de l'envoi du fichier. Essayez de renvoyer de le fichier à nouveau.</admin_monitoring_senterror_text>
+
+<!-- Reports -->
+<admin_reports_title><![CDATA[Administration & Configuration<br />Gestion des rapports]]></admin_reports_title>
+<admin_reports_datas_reports_name>Rapports</admin_reports_datas_reports_name>
+<admin_reports_datas_reports_description>Descriptions</admin_reports_datas_reports_description>
+<admin_reports_datas_reports_class>Noms de classes</admin_reports_datas_reports_class>
+<admin_reports_datas_reports_module>Modules</admin_reports_datas_reports_module>
+<admin_reports_pageempty>0 rapport</admin_reports_pageempty>
+<admin_reports_pages>page $1 sur $2 ( $3 rapports )</admin_reports_pages>
+
+<!-- Group -->
+<admin_group_update_title>Voir/Mettre à jour un groupe</admin_group_update_title>
+<admin_group_add_title>Nouveau groupe</admin_group_add_title>
+<admin_group_groupname>Nom groupe</admin_group_groupname>
+<admin_group_description>Description</admin_group_description>
+<admin_group_company>Entreprise</admin_group_company>
+<admin_group_department>Département de l'entreprise</admin_group_department>
+<admin_group_error>Le 'nom du groupe' doit être saisi</admin_group_error>
+<admin_group_add>Créer</admin_group_add>
+<admin_group_update>Mettre à jour</admin_group_update>
+<admin_group_cancel>Annuler</admin_group_cancel>
+<admin_group_domains>Domaines</admin_group_domains>
+
+<!-- User -->
+<admin_user_add_title>Nouvel utilisateur</admin_user_add_title>
+<admin_user_update_title>Voir/Mettre à jour un utilisateur</admin_user_update_title>
+<admin_user_username>Utilisateur</admin_user_username>
+<admin_user_firstname>Prénom</admin_user_firstname>
+<admin_user_lastname>Nom</admin_user_lastname>
+<admin_user_phone>Téléphone</admin_user_phone>
+<admin_user_email>E-mail</admin_user_email>
+<admin_user_company>Entreprise</admin_user_company>
+<admin_user_password>Mot passe</admin_user_password>
+<admin_user_confirmpassword>Confirmer</admin_user_confirmpassword>
+<admin_user_privileges>Privilèges</admin_user_privileges>
+<admin_user_administration>Administration</admin_user_administration>
+<admin_user_status>Etat</admin_user_status>
+<admin_user_disabled>Désactivé</admin_user_disabled>
+<admin_user_locked>Accès verrouillé</admin_user_locked>
+<admin_user_location>Localisation</admin_user_location>
+<admin_user_nolocation>Pas de localisation</admin_user_nolocation>
+<admin_user_timezone>Fuseau horaire</admin_user_timezone>
+<admin_user_notimezone>pas de fuseau horaire</admin_user_notimezone>
+<admin_user_error_username>Le 'nom d'utilisateur' doit être saisi</admin_user_error_username>
+<admin_user_password_error_empty>Tous les mots de passe doivent être remplis</admin_user_password_error_empty>
+<admin_user_password_error_notconfirmed>Le mot de passe n'est pas confirmé</admin_user_password_error_notconfirmed>
+<admin_user_password_error_minlength>Le mot de passe doit faire au moins $1 caractères</admin_user_password_error_minlength>
+<admin_user_password_error_notauthorized>Au moins un caractère non autorisé</admin_user_password_error_notauthorized>
+<admin_user_password_error_complexityrules>Mot de passe non-conforme aux règles de sécurité</admin_user_password_error_complexityrules>
+<admin_user_error_password_error_username>Le nom d'utilisateur est dans le mot de passe</admin_user_error_password_error_username>
+<admin_user_error_password_error_company>L'entreprise est dans le mot de passe</admin_user_error_password_error_company>
+<admin_user_infos_title>Complexité des mots de passe</admin_user_infos_title>
+<admin_user_infos_explanations>Un mot de passe doit faire au moins $1 caractères et répondre à au moins 3 règles:</admin_user_infos_explanations>
+<admin_user_infos_case1>- utiliser des miniscules</admin_user_infos_case1>
+<admin_user_infos_case2>- utiliser des majuscules</admin_user_infos_case2>
+<admin_user_infos_case3>- utiliser des nombres</admin_user_infos_case3>
+<admin_user_infos_case4>- utiliser des caractères spéciaux</admin_user_infos_case4>
+<admin_user_add>Créer</admin_user_add>
+<admin_user_update>Mettre à jour</admin_user_update>
+<admin_user_cancel>Annuler</admin_user_cancel>
+<admin_user_history>Historique</admin_user_history>
+<admin_user_loginhistory>Connexions</admin_user_loginhistory>
+
+<!-- User History & Login History -->
+<admin_userhistory_title>Historique de l'utilisateur</admin_userhistory_title>
+<admin_userhistory_datas_date>Date modification</admin_userhistory_datas_date>
+<admin_userhistory_datas_modifier>Modifié par</admin_userhistory_datas_modifier>
+<admin_userhistory_datas_user>Utilisateur</admin_userhistory_datas_user>
+<admin_userhistory_datas_location>Localisation</admin_userhistory_datas_location>
+<admin_userhistory_datas_company>Entreprise</admin_userhistory_datas_company>
+<admin_userhistory_datas_admin>Administrateur</admin_userhistory_datas_admin>
+<admin_userhistory_datas_disabled>Désactivé</admin_userhistory_datas_disabled>
+<admin_userhistory_datas_locked>Verrouillé</admin_userhistory_datas_locked>
+<admin_userloginhistory_title>Historique des dernières connexions de l'utilisateur</admin_userloginhistory_title>
+<admin_userloginhistory_datas_date>Date de connexion</admin_userloginhistory_datas_date>
+<admin_userloginhistory_datas_success>Succès</admin_userloginhistory_datas_success>
+<admin_userloginhistory_datas_remoteip>IP distante</admin_userloginhistory_datas_remoteip>
+
+<!-- User Groups -->
+<admin_usergroups_title>Groupes de l'utilisateur $1</admin_usergroups_title>
+<admin_usergroups_datas_groups>Groupes</admin_usergroups_datas_groups>
+<admin_usergroups_datas_membership>Membre de</admin_usergroups_datas_membership>
+<admin_usergroups_remove>tout enlever</admin_usergroups_remove>
+
+<!-- Group Users -->
+<admin_groupusers_title>Membres du groupe $1</admin_groupusers_title>
+<admin_groupusers_datas_users>Utilisateurs</admin_groupusers_datas_users>
+<admin_groupusers_datas_members>Membres</admin_groupusers_datas_members>
+<admin_groupusers_remove>tout enlever</admin_groupusers_remove>
+
+<!-- User Expertises -->
+<admin_userexpertises_title>Expertises de l'utilisateur $1</admin_userexpertises_title>
+<admin_userexpertises_search>Trouver un produit ou un vendeur</admin_userexpertises_search>
+<admin_userexpertises_reset>réinitialiser</admin_userexpertises_reset>
+<admin_userexpertises_find>OK</admin_userexpertises_find>
+<admin_userexpertises_remove>tout enlever</admin_userexpertises_remove>
+<admin_userexpertises_datas_products>Vendeurs / Produits</admin_userexpertises_datas_products>
+<admin_userexpertises_datas_expertises>Expertises de l'utilisateur</admin_userexpertises_datas_expertises>
+
+<!-- Group Expertises -->
+<admin_groupexpertises_title>Expertises du groupe $1</admin_groupexpertises_title>
+<admin_groupexpertises_search>Trouver un produit ou un vendeur</admin_groupexpertises_search>
+<admin_groupexpertises_reset>réinitialiser</admin_groupexpertises_reset>
+<admin_groupexpertises_find>OK</admin_groupexpertises_find>
+<admin_groupexpertises_remove>tout enlever</admin_groupexpertises_remove>
+<admin_groupexpertises_datas_products>Vendeurs / Produits</admin_groupexpertises_datas_products>
+<admin_groupexpertises_datas_expertises>Expertises du groupe</admin_groupexpertises_datas_expertises>
+
+<!-- Group Locations -->
+<admin_grouplocations_title>Localisations du département $1</admin_grouplocations_title>
+<admin_grouplocations_remove>tout enlever</admin_grouplocations_remove>
+<admin_grouplocations_datas_locations>Localisations</admin_grouplocations_datas_locations>
+<admin_grouplocations_datas_membership>Localisations du département</admin_grouplocations_datas_membership>
+
+<!-- Group Business Zones -->
+<admin_groupbusinesszones_title>Zones de travail du département $1</admin_groupbusinesszones_title>
+<admin_groupbusinesszones_datas_businesszones>Zones de travail</admin_groupbusinesszones_datas_businesszones>
+<admin_groupbusinesszones_datas_membership>Zones de travail liées</admin_groupbusinesszones_datas_membership>
+<admin_groupbusinesszones_remove>enlever toutes les zones dépendantes</admin_groupbusinesszones_remove>
+<admin_groupbusinesszones_error_notremovable>La zone de travail sélectionnée ne peut pas être supprimée car elle n'est pas directement liée au département.</admin_groupbusinesszones_error_notremovable>
+
+<!-- Company -->
+<admin_company_add_title>Nouvelle entreprise</admin_company_add_title>
+<admin_company_update_title>Voir/Mettre à jour une entreprise</admin_company_update_title>
+<admin_company_name>Nom de l'entreprise</admin_company_name>
+<admin_company_shortname>Nom court</admin_company_shortname>
+<admin_company_databaseurl>URL base de données</admin_company_databaseurl>
+<admin_company_databaseusername>Nom d'utilisateur base de données</admin_company_databaseusername>
+<admin_company_databasepassword>Mot de passe base de données</admin_company_databasepassword>
+<admin_company_add>Créer</admin_company_add>
+<admin_company_update>Mettre à jour</admin_company_update>
+<admin_company_cancel>Annuler</admin_company_cancel>
+<admin_company_logo>Modifier logo</admin_company_logo>
+<admin_company_error_name>Saisir un nom d'entreprise</admin_company_error_name>
+<admin_company_error_shortname>Saisir un nom court</admin_company_error_shortname>
+<admin_company_error_databaseurl>Une base de données doit être séectionnée</admin_company_error_databaseurl>
+<admin_company_error_databaseusername>Un nom d'utilisateur doit être renseigné</admin_company_error_databaseusername>
+<admin_company_error_databasepassword>Un mot de passe doit être renseigné</admin_company_error_databasepassword>
+
+<!-- Company Logo -->
+<admin_companylogo_title>Modifier le logo de l'entreprise</admin_companylogo_title>
+<admin_companylogo_files>Fichiers logo (*.JPEG,*.GIF,*.PNG,*.SWF)</admin_companylogo_files>
+<admin_companylogo_upload>Sélectionnez le logo à ajouter</admin_companylogo_upload>
+<admin_companylogo_close>Fermer</admin_companylogo_close>
+<admin_companylogo_upload_uploading>Enregistrement du fichier $1 en cours.</admin_companylogo_upload_uploading>
+<admin_companylogo_upload_finished>Enregistrement du fichier $1 terminé.</admin_companylogo_upload_finished>
+<admin_companylogo_upload_select>Préparation de l'enregistrement du fichier $1.</admin_companylogo_upload_select>
+<admin_companylogo_upload_maxsize>Le fichier $1 a dépassé la taille maximale autorisée ($2 octets).</admin_companylogo_upload_maxsize>
+<admin_companylogo_upload_httperror>Erreur HTTP $1 lors de l'enregistrement du fichier.</admin_companylogo_upload_httperror>
+<admin_companylogo_upload_ioerror>Erreur en entrée/sortie lors de l'enregistrement du fichier $1.</admin_companylogo_upload_ioerror>
+<admin_companylogo_upload_securityerror>Erreur de sécurité ($1) lors de l'enregistrement du fichier $2.</admin_companylogo_upload_securityerror>
+
+<!-- Location -->
+<admin_location_add_title>Nouvelle localisation</admin_location_add_title>
+<admin_location_update_title>Voir/Mettre à jour une localisation</admin_location_update_title>
+<admin_location_location>Localisation</admin_location_location>
+<admin_location_building>Bâtiment</admin_location_building>
+<admin_location_site>Site</admin_location_site>
+<admin_location_zipcode>Code postal</admin_location_zipcode>
+<admin_location_city>Ville</admin_location_city>
+<admin_location_timezone>Fuseau horaire</admin_location_timezone>
+<admin_location_company>Entreprise</admin_location_company>
+<admin_location_disabled>Désactivé</admin_location_disabled>
+<admin_location_alias>Liste d'alias</admin_location_alias>
+<admin_location_add>Créer</admin_location_add>
+<admin_location_update>Mettre à jour</admin_location_update>
+<admin_location_cancel>Annuler</admin_location_cancel>
+<admin_location_notimezone>pas de fuseau horaire</admin_location_notimezone>
+<admin_location_continents>Continents</admin_location_continents>
+<admin_location_subcontinents>Sous-continents</admin_location_subcontinents>
+<admin_location_countries>Pays</admin_location_countries>
+<admin_location_regions>Régions</admin_location_regions>
+<admin_location_regions_empty>pas de région.</admin_location_regions_empty>
+<admin_location_error_location>Saisissez un nom de localisation</admin_location_error_location>
+<admin_location_error_country>Sélectionnez un pays</admin_location_error_country>
+<admin_location_networks>Réseaux</admin_location_networks>
+<admin_location_domains>Domaines</admin_location_domains>
+
+<!-- Location Groups and Users -->
+<admin_locationgroups_title>Départements de la localisation $1</admin_locationgroups_title>
+<admin_locationgroups_remove>tout enlever</admin_locationgroups_remove>
+<admin_locationgroups_datas_groups>Départements</admin_locationgroups_datas_groups>
+<admin_locationgroups_datas_membership>Départements de la localisation</admin_locationgroups_datas_membership>
+<admin_locationusers_title>Utilisateurs de la localisation $1</admin_locationusers_title>
+<admin_locationusers_remove>tout enlever</admin_locationusers_remove>
+<admin_locationusers_datas_users>Utilisateurs</admin_locationusers_datas_users>
+<admin_locationusers_datas_membership>Utilisateurs de la localisation</admin_locationusers_datas_membership>
+
+<!-- Location Business Zones -->
+<admin_locationbusinesszones_title>Zones de travail de la localisation $1</admin_locationbusinesszones_title>
+<admin_locationbusinesszones_datas_businesszones>Zones de travail</admin_locationbusinesszones_datas_businesszones>
+<admin_locationbusinesszones_datas_membership>Zones de travail liées</admin_locationbusinesszones_datas_membership>
+<admin_locationbusinesszones_remove>enlever toutes les zones dépendantes</admin_locationbusinesszones_remove>
+<admin_locationbusinesszones_error_notremovable>La zone de travail sélectionnée ne peut pas être supprimée car elle n'est pas directement liée à la localisation.</admin_locationbusinesszones_error_notremovable>
+
+<!-- Location Aliases -->
+<admin_locationalias_title>Liste des alias</admin_locationalias_title>
+<admin_locationalias_add>Ajouter</admin_locationalias_add>
+<admin_locationalias_cancel>Annuler</admin_locationalias_cancel>
+<admin_locationalias_add_title>Ajouter un alias</admin_locationalias_add_title>
+<admin_locationalias_add_text>Ajouter un alias à la localisation</admin_locationalias_add_text>
+<admin_locationalias_data_alias>Alias</admin_locationalias_data_alias>
+<admin_locationalias_data_alias_add>Ajouter un alias à la localisation</admin_locationalias_data_alias_add>
+<admin_locationalias_update>Mettre à jour</admin_locationalias_update>
+<admin_locationalias_update_title>Mise à jour d'un alias</admin_locationalias_update_title>
+<admin_locationalias_update_text>Mise à jour de l'alias de la localisation</admin_locationalias_update_text>
+
+<!-- Location Networks -->
+<admin_locationnetworks_title>Réseaux de la localisation</admin_locationnetworks_title>
+<admin_locationnetworks_addnetworktitle>Ajouter un réseau</admin_locationnetworks_addnetworktitle>
+<admin_locationnetworks_updatenetworktitle>Mettre à jour le réseau</admin_locationnetworks_updatenetworktitle>
+<admin_locationnetworks_updatenetwork>Mettre à jour le réseau</admin_locationnetworks_updatenetwork>
+<admin_locationnetworks_addnetwork>Ajouter un réseau</admin_locationnetworks_addnetwork>
+<admin_locationnetworks_add>Ajouter</admin_locationnetworks_add>
+<admin_locationnetworks_update>Mettre à jour</admin_locationnetworks_update>
+<admin_locationnetworks_cancel>Annuler</admin_locationnetworks_cancel>
+<admin_locationnetworks_datas_networks>Réseaux/Sous-réseaux</admin_locationnetworks_datas_networks>
+<admin_locationnetworks_datas_networks_add>Ajouter un réseau/sous-réseau</admin_locationnetworks_datas_networks_add>
+
+<!-- Business Zone -->
+<admin_businesszone_add_title>Nouvelle zone de travail</admin_businesszone_add_title>
+<admin_businesszone_update_title>Voir/Mettre à jour une zone de travail</admin_businesszone_update_title>
+<admin_businesszone_name>Zone de travail</admin_businesszone_name>
+<admin_businesszone_disabled>Zone désactivée</admin_businesszone_disabled>
+<admin_businesszone_add>Créer</admin_businesszone_add>
+<admin_businesszone_update>Mettre à jour</admin_businesszone_update>
+<admin_businesszone_cancel>Annuler</admin_businesszone_cancel>
+<admin_businesszone_error_name>Veuillez saisir le nom de la zone</admin_businesszone_error_name>
+<admin_businesszone_domains>Domaines</admin_businesszone_domains>
+
+<!-- Business Zone Locations -->
+<admin_businesszonelocations_title>Localisations de la zone de travail $1</admin_businesszonelocations_title>
+<admin_businesszonelocations_datas_locations>Localisations</admin_businesszonelocations_datas_locations>
+<admin_businesszonelocations_datas_membership>Localisations incluses</admin_businesszonelocations_datas_membership>
+<admin_businesszonelocations_remove>enlever toutes les localisations dépendantes</admin_businesszonelocations_remove>
+<admin_businesszonelocations_error_notremovable>La localisation sélectionnée ne peut pas être suprimée car elle ne dépend pas de la zone de travail actuelle.</admin_businesszonelocations_error_notremovable>
+
+<!-- Business Zone Departments -->
+<admin_businesszonedepartments_title>Départements de la zone de travail $1</admin_businesszonedepartments_title>
+<admin_businesszonedepartments_datas_departments>Départements</admin_businesszonedepartments_datas_departments>
+<admin_businesszonedepartments_datas_membership>Départements inclus</admin_businesszonedepartments_datas_membership>
+<admin_businesszonedepartments_remove>enlever toutes les départements dépendants</admin_businesszonedepartments_remove>
+<admin_businesszonedepartments_error_notremovable>Le département sélectionné ne peut pas être suprimé car il ne dépend pas de la zone de travail actuelle.</admin_businesszonedepartments_error_notremovable>
+
+<!-- Business Zone Zones -->
+<admin_businesszonezones_title>Zones de la zone de travail $1</admin_businesszonezones_title>
+<admin_businesszonezones_datas_zones>Zones de travail</admin_businesszonezones_datas_zones>
+<admin_businesszonezones_datas_membership>Zones de travail incluses</admin_businesszonezones_datas_membership>
+<admin_businesszonezones_remove>enlever toutes les zones dépendantes</admin_businesszonezones_remove>
+<admin_businesszonezones_error_notremovable>La zone sélectionnée ne peut pas être suprimée car elle ne dépend pas de la zone de travail actuelle.</admin_businesszonezones_error_notremovable>
+
+<!-- Domains for Locations, Business zones, Departments -->
+<admin_domains_department>Domaines du département</admin_domains_department>
+<admin_domains_businesszone>Domaines de la zone de travail</admin_domains_businesszone>
+<admin_domains_location>Domaines pour la localisation</admin_domains_location>
+<admin_domains_datas_domains>Domaines</admin_domains_datas_domains>
+<admin_domains_datas_domains_add>Ajouter un nouveau domaine</admin_domains_datas_domains_add>
+<admin_domains_add_text>Ajouter un domaine</admin_domains_add_text>
+<admin_domains_add_title>Domaine</admin_domains_add_title>
+<admin_domains_add>Ajouter</admin_domains_add>
+<admin_domains_cancel>Annuler</admin_domains_cancel>
+
+<!-- Module Informations -->
+<admin_moduledetails_title>Informations sur le module</admin_moduledetails_title>
+<admin_moduledetails_module>Module</admin_moduledetails_module>
+<admin_moduledetails_version>Version</admin_moduledetails_version>
+<admin_moduledetails_nbusers>parties prenantes</admin_moduledetails_nbusers>
+<admin_moduledetails_validity>Validité</admin_moduledetails_validity>
+<admin_moduledetails_active>Actif</admin_moduledetails_active>
+<admin_moduledetails_registered>Enregistré</admin_moduledetails_registered>
+
+<!-- Module Preferences -->
+<admin_moduleprefs_title>Préférences du module: $1</admin_moduleprefs_title>
+<admin_moduleprefs_currentvalue>Valeur actuelle</admin_moduleprefs_currentvalue>
+<admin_moduleprefs_newvalue>Nouvelle valeur</admin_moduleprefs_newvalue>
+<admin_moduleprefs_datas_preferences>Préférences du module</admin_moduleprefs_datas_preferences>
+<admin_moduleprefs_datas_description>Informations</admin_moduleprefs_datas_description>
+<admin_moduleprefs_datas_nodescription>Aucune description disponible pour cette préférence.</admin_moduleprefs_datas_nodescription>
+<admin_moduleprefs_edit>Mettre à jour</admin_moduleprefs_edit>
+<admin_moduleprefs_error>Aucune préférence n'est sélectionnée</admin_moduleprefs_error>
+<admin_moduleprefs_display>Préf. d'affichage</admin_moduleprefs_display>
+
+<!-- Module Preference Edit -->
+<admin_moduleprefs_edit_title>Modifier une préférence</admin_moduleprefs_edit_title>
+<admin_moduleprefs_edit_name>Préférence</admin_moduleprefs_edit_name>
+<admin_moduleprefs_edit_currentvalue>Valeur actuelle</admin_moduleprefs_edit_currentvalue>
+<admin_moduleprefs_edit_newvalue>Nouvelle valeur</admin_moduleprefs_edit_newvalue>
+<admin_moduleprefs_edit_edit>Mettre à jour</admin_moduleprefs_edit_edit>
+
+<!-- Module Display Preferences -->
+<admin_moduleprefsdisplay_title>Préférences d'affichage du module</admin_moduleprefsdisplay_title>
+<admin_moduleprefsdisplay_newvalue>Nouvelle valeur</admin_moduleprefsdisplay_newvalue>
+<admin_moduleprefsdisplay_edit>Editer</admin_moduleprefsdisplay_edit>
+<admin_moduleprefsdisplay_datas_display_components>Composant</admin_moduleprefsdisplay_datas_display_components>
+<admin_moduleprefsdisplay_datas_display_parameters>Paramètre</admin_moduleprefsdisplay_datas_display_parameters>
+<admin_moduleprefsdisplay_datas_display_values>Valeur actuelle</admin_moduleprefsdisplay_datas_display_values>
+<admin_moduleprefsdisplay_datas_display_nodisplay>Auncune préférence d'affichage disponible.</admin_moduleprefsdisplay_datas_display_nodisplay>
+<admin_moduleprefsdisplay_datas_description>Description</admin_moduleprefsdisplay_datas_description>
+
+<!-- Module RACI -->
+<admin_moduleraci_title>RACI du module: $1</admin_moduleraci_title>
+<admin_moduleraci_r>R</admin_moduleraci_r>
+<admin_moduleraci_a>A</admin_moduleraci_a>
+<admin_moduleraci_c>C</admin_moduleraci_c>
+<admin_moduleraci_i>I</admin_moduleraci_i>
+<admin_moduleraci_add>Ajouter</admin_moduleraci_add>
+<admin_moduleraci_update>Mettre à jour</admin_moduleraci_update>
+<admin_moduleraci_cancel>Annuler</admin_moduleraci_cancel>
+<admin_moduleraci_datas_racis_users>Parties prenantes</admin_moduleraci_datas_racis_users>
+<admin_moduleraci_datas_racis_add>Ajouter une partie prenante</admin_moduleraci_datas_racis_add>
+<admin_moduleraci_update_title>RACI pour $1</admin_moduleraci_update_title>
+<admin_moduleraci_add_title>Ajouter une partie prenante</admin_moduleraci_add_title>
+<admin_moduleraci_update_user>Partie prenante</admin_moduleraci_update_user>
+<admin_moduleraci_update_currentraci>RACI actuel</admin_moduleraci_update_currentraci>
+<admin_moduleraci_update_newraci>Nouveau RACI</admin_moduleraci_update_newraci>
+<admin_moduleraci_add_newraci>RACI</admin_moduleraci_add_newraci>
+<admin_moduleraci_add_datas_users>Parties prenantes</admin_moduleraci_add_datas_users>
+<admin_moduleraci_add_datas_nousers>Aucune partie prenante disponible.</admin_moduleraci_add_datas_nousers>
+<admin_moduleraci_update_error>Une partie prenante doit être sélectionnée</admin_moduleraci_update_error>
+<admin_moduleraci_update_error_add>Au moins un droit RACI doit être sélectionné.</admin_moduleraci_update_error_add>
+<admin_moduleraci_infos_raci>RACI</admin_moduleraci_infos_raci>
+<admin_moduleraci_infos_r>R : responsabilité</admin_moduleraci_infos_r>
+<admin_moduleraci_infos_a>A : autorité</admin_moduleraci_infos_a>
+<admin_moduleraci_infos_c>C : consulté</admin_moduleraci_infos_c>
+<admin_moduleraci_infos_i>I : informé</admin_moduleraci_infos_i>
+<admin_moduleraci_history>Historique</admin_moduleraci_history>
+<admin_moduleraci_delaychange_title>Délai pour la modification du Raci sur $1</admin_moduleraci_delaychange_title>
+<admin_moduleraci_delaychange_text>La modification du Raci concernant le module $1 a été mise en attente. Un responsable ou une autorité doit valider ce changement avant qu'il ne soit appliqué au module.</admin_moduleraci_delaychange_text>
+
+<!-- Module RACI history -->
+<admin_moduleracihistory_title>Historique du RACI</admin_moduleracihistory_title>
+<admin_moduleracihistory_close>Fermer</admin_moduleracihistory_close>
+<admin_moduleracihistory_matrix_title>RACI actuel</admin_moduleracihistory_matrix_title>
+<admin_moduleracihistory_datas_user>Partie prenante</admin_moduleracihistory_datas_user>
+<admin_moduleracihistory_datas_modifier>Modifié par</admin_moduleracihistory_datas_modifier>
+<admin_moduleracihistory_datas_modificationdate>Date modification</admin_moduleracihistory_datas_modificationdate>
+<admin_moduleracihistory_pageempty>0 modification</admin_moduleracihistory_pageempty>
+<admin_moduleracihistory_pages>page $1 sur $2 ( $3 modifications )</admin_moduleracihistory_pages>
+
+<!-- Probe details -->
+<admin_probedetails_title>Informations sur la sonde</admin_probedetails_title>
+<admin_probedetails_probename>Nom de la sonde</admin_probedetails_probename>
+<admin_probedetails_fileprobe>Sonde sur fichiers</admin_probedetails_fileprobe>
+<admin_probedetails_databaseprobe>Sonde sur base de données</admin_probedetails_databaseprobe>
+<admin_probedetails_laststartdate>Début d'exécution</admin_probedetails_laststartdate>
+<admin_probedetails_lastenddate>Fin d'exécution</admin_probedetails_lastenddate>
+<admin_probedetails_duration>Durée</admin_probedetails_duration>
+<admin_probedetails_status>Statut de la sonde</admin_probedetails_status>
+<admin_probedetails_errormessage>Message de la sonde</admin_probedetails_errormessage>
+<admin_probedetails_stacktrace>Message du processus de la sonde</admin_probedetails_stacktrace>
+<admin_probedetails_license>Informations de licence</admin_probedetails_license>
+<admin_probedetails_active>Sonde activée</admin_probedetails_active>
+<admin_probedetails_registered>Sonde enregistrée</admin_probedetails_registered>
+<admin_probedetails_validity>Date de validité</admin_probedetails_validity>
+<admin_probedetails_notify>Notifier au support</admin_probedetails_notify>
+<admin_probedetails_activate>Activer</admin_probedetails_activate>
+<admin_probedetails_deactivate>Désactiver</admin_probedetails_deactivate>
+<admin_probedetails_register>Enregistrer</admin_probedetails_register>
+<admin_probedetails_unregister>Désenregister</admin_probedetails_unregister>
+<admin_probedetails_history>Historique</admin_probedetails_history>
+<admin_probedetails_performance>Performance</admin_probedetails_performance>
+
+<!-- Probe History -->
+<admin_probehistory_title>Historique de la sonde</admin_probehistory_title>
+<admin_probehistory_title_database>Historique de la sonde (base de données)</admin_probehistory_title_database>
+<admin_probehistory_title_file>Historique de la sonde (fichiers)</admin_probehistory_title_file>
+<admin_probehistory_pages>page $1 sur $2 ( $3 exécutions )</admin_probehistory_pages>
+<admin_probehistory_pageempty>0 exécution</admin_probehistory_pageempty>
+<admin_probehistory_datas_history_rundate>Date exécution</admin_probehistory_datas_history_rundate>
+<admin_probehistory_datas_history_status>Statut</admin_probehistory_datas_history_status>
+<admin_probehistory_datas_history_message>Message</admin_probehistory_datas_history_message>
+<admin_probehistory_datas_history_filename>Fichier</admin_probehistory_datas_history_filename>
+<admin_probehistory_datas_history_filesize>Taille</admin_probehistory_datas_history_filesize>
+<admin_probehistory_datas_history_databasename>Nom table</admin_probehistory_datas_history_databasename>
+<admin_probehistory_datas_history_databaseid>Dernier id</admin_probehistory_datas_history_databaseid>
+<admin_probehistory_datas_history_jdbcurl>Url JDBC</admin_probehistory_datas_history_jdbcurl>
+<admin_probehistory_datas_history_databasedate>Dernière date</admin_probehistory_datas_history_databasedate>
+<admin_probehistory_datas_history_parameters>Paramètres</admin_probehistory_datas_history_parameters>
+<admin_probehistory_datas_history_elements># données</admin_probehistory_datas_history_elements>
+
+<!-- Probe performance -->
+<admin_probeperformance_title>Performance de la sonde</admin_probeperformance_title>
+<admin_probeperformance_xaxis>Date d'exécution</admin_probeperformance_xaxis>
+<admin_probeperformance_yaxis>Durée d'exécution</admin_probeperformance_yaxis>
+
+<!-- Probe Registration -->
+<admin_proberegistration_title>Ajouter un fichier de licence à la sonde</admin_proberegistration_title>
+<admin_proberegistration_files>Fichiers de licence</admin_proberegistration_files>
+<admin_proberegistration_upload>Sélectionnez le fichier de licence à ajouter</admin_proberegistration_upload>
+<admin_proberegistration_notify>Notifier au support</admin_proberegistration_notify>
+<admin_proberegistration_upload_uploading>Enregistrement du fichier $1 en cours.</admin_proberegistration_upload_uploading>
+<admin_proberegistration_upload_finished>Enregistrement du fichier $1 terminé.</admin_proberegistration_upload_finished>
+<admin_proberegistration_upload_select>Préparation de l'enregistrement du fichier $1.</admin_proberegistration_upload_select>
+<admin_proberegistration_upload_maxsize>Le fichier $1 a dépassé la taille maximale autorisée ($2 octets).</admin_proberegistration_upload_maxsize>
+<admin_proberegistration_upload_httperror>Erreur HTTP $1 lors de l'enregistrement du fichier. Vérifiez que le fichier de licence est bien un fichier de licence ESIS valide et que sa date de validité est conforme et réessayez.</admin_proberegistration_upload_httperror>
+<admin_proberegistration_upload_ioerror>Erreur en entrée/sortie lors de l'enregistrement du fichier $1. Vérifiez que le fichier n'est pas vide et réessayez.</admin_proberegistration_upload_ioerror>
+<admin_proberegistration_upload_securityerror>Erreur de sécurité ($1) lors de l'enregistrement du fichier $2.</admin_proberegistration_upload_securityerror>
+
+<!-- Incident -->
+<admin_incident_title>Informations sur l'incident</admin_incident_title>
+<admin_incident_clipboard>Presse-papiers</admin_incident_clipboard>
+<admin_incident_resend>Renvoyer</admin_incident_resend>
+<admin_incident_delete>Supprimer</admin_incident_delete>
+<admin_incident_data_error>Description de l'incident</admin_incident_data_error>
+<admin_incident_data_stacktrace>Message d'exception</admin_incident_data_stacktrace>
+<admin_incident_date>Date de l'incident</admin_incident_date>
+<admin_incident_user>Utilisateur</admin_incident_user>
+<admin_incident_error>Résumé d'erreur</admin_incident_error>
+<admin_incident_notified>Déjà notifé</admin_incident_notified>
+<admin_incident_ip>IP du client: </admin_incident_ip>
+<admin_incident_os>Système: </admin_incident_os>
+<admin_incident_agent>Navigateur client: </admin_incident_agent>
+<admin_incident_flash>Version flash: </admin_incident_flash>
+<admin_incident_probe>Sonde liée</admin_incident_probe>
+<admin_incident_comment>Commentaires</admin_incident_comment>
+<admin_incident_userinfos>Informations</admin_incident_userinfos>
+
+<!-- Report -->
+<admin_report_senterror_title>Erreur lors de l'envoi du fichier</admin_report_senterror_title>
+<admin_report_senterror_text>Une erreur est apparue lors de l'envoi du fichier. Essayez de renvoyer de le fichier à nouveau.</admin_report_senterror_text>
+<admin_report_download>Télécharger</admin_report_download>
+<admin_report_sendemail>Envoi email</admin_report_sendemail>
+<admin_report_title>Informations sur le rapport</admin_report_title>
+<admin_report_name>Rapport</admin_report_name>
+<admin_report_description>Description</admin_report_description>
+<admin_report_class>Classe (rapport)</admin_report_class>
+<admin_report_module>Module</admin_report_module>
+<admin_report_moduleclass>Classe (module)</admin_report_moduleclass>
+<admin_report_email>Envoyer par email</admin_report_email>
+<admin_report_data_files_name>Fichier de rapport</admin_report_data_files_name>
+<admin_report_data_files_date>Date</admin_report_data_files_date>
+<admin_report_error_email>Un email doit être sélectionné.</admin_report_error_email>
+<admin_report_files_pages>page $1 sur $2 ( $3 fichiers )</admin_report_files_pages>
+<admin_report_files_pageempty>0 fichier</admin_report_files_pageempty>
+
+<!-- Standard -->
+<admin_standard_add_title>Ajouter une nouvelle norme</admin_standard_add_title>
+<admin_standard_update_title>Mettre à jour une norme</admin_standard_update_title>
+<admin_standard_stdtitle>Titre</admin_standard_stdtitle>
+<admin_standard_reference>Référence</admin_standard_reference>
+<admin_standard_classification>Classification</admin_standard_classification>
+<admin_standard_category>Catégorie</admin_standard_category>
+<admin_standard_category_none>Pas de catégorie définie</admin_standard_category_none>
+<admin_standard_source>Source</admin_standard_source>
+<admin_standard_publication>Publication</admin_standard_publication>
+<admin_standard_active>Active</admin_standard_active>
+<admin_standard_obsolete>Obsolète</admin_standard_obsolete>
+<admin_standard_add>Ajouter</admin_standard_add>
+<admin_standard_update>Mettre à jour</admin_standard_update>
+<admin_standard_cancel>Annuler</admin_standard_cancel>
+<admin_standard_topics>Sujets</admin_standard_topics>
+<admin_standard_error_title>Le titre doit être saisi.</admin_standard_error_title>
+<admin_standard_error_reference>La réference doit être saisie.</admin_standard_error_reference>
+<admin_standard_error_source>La source doit être sélectionnée.</admin_standard_error_source>
+
+<!-- Standard Topics -->
+<admin_standardtopics_title>Gérer les sujets de la norme</admin_standardtopics_title>
+<admin_standardtopics_topictitle>Sujet</admin_standardtopics_topictitle>
+<admin_standardtopics_reference>Référence</admin_standardtopics_reference>
+<admin_standardtopics_content>Contenu</admin_standardtopics_content>
+<admin_standardtopics_category>Catégorie</admin_standardtopics_category>
+<admin_standardtopics_add>Ajouter</admin_standardtopics_add>
+<admin_standardtopics_update>Mettre à jour</admin_standardtopics_update>
+<admin_standardtopics_cancel>Annuler</admin_standardtopics_cancel>
+<admin_standardtopics_error_update>Pas de mise à jour possible, utilisez 'Ajouter'</admin_standardtopics_error_update>
+<admin_standardtopics_error_title>Le sujet doit être saisi</admin_standardtopics_error_title>
+<admin_standardtopics_error_reference>La référence doit être saisie</admin_standardtopics_error_reference>
+<admin_standardtopics_error_referenceformat>Le format de référence doit être numérique: NN.xx.nn</admin_standardtopics_error_referenceformat>
+<admin_standardtopics_error_category>Une catégorie doit être sélectionnée</admin_standardtopics_error_category>
+<admin_standardtopics_categories>Catégories</admin_standardtopics_categories>
+<admin_standardtopics_topics>Sujets</admin_standardtopics_topics>
+
+<!-- Standard Sources -->
+<admin_standardsources_title>Sources des normes</admin_standardsources_title>
+<admin_standardsources_add>Ajouter</admin_standardsources_add>
+<admin_standardsources_update>Mettre à jour</admin_standardsources_update>
+<admin_standardsources_cancel>Annuler</admin_standardsources_cancel>
+<admin_standardsources_add_source_title>Ajouter une source</admin_standardsources_add_source_title>
+<admin_standardsources_update_source_title>Mettre à jour une source</admin_standardsources_update_source_title>
+<admin_standardsources_add_source>Ajouter une nouvelle source</admin_standardsources_add_source>
+<admin_standardsources_update_source>Mettre à jour la source</admin_standardsources_update_source>
+<admin_standardsources_sources>Sources</admin_standardsources_sources>
+<admin_standardsources_datas_sources_add>Ajouter une nouvelle source</admin_standardsources_datas_sources_add>
+
+<!-- Standard Categories -->
+<admin_standardcategories_title>Catégories pour les normes</admin_standardcategories_title>
+<admin_standardcategories_add>Ajouter</admin_standardcategories_add>
+<admin_standardcategories_update>Mettre à jour</admin_standardcategories_update>
+<admin_standardcategories_cancel>Annuler</admin_standardcategories_cancel>
+<admin_standardcategories_add_category_title>Ajouter une catégorie</admin_standardcategories_add_category_title>
+<admin_standardcategories_update_category_title>Mettre à jour une catégorie</admin_standardcategories_update_category_title>
+<admin_standardcategories_add_category>Ajouter une nouvelle catégorie</admin_standardcategories_add_category>
+<admin_standardcategories_update_category>Mettre à jour une catégorie</admin_standardcategories_update_category>
+<admin_standardcategories_categories>Catégories</admin_standardcategories_categories>
+<admin_standardcategories_datas_categories_add>Ajouter une nouvelle catégorie</admin_standardcategories_datas_categories_add>
+
+<!-- Standard Topics Categories -->
+<admin_standardtopiccategories_title>Catégories des sujets des normes</admin_standardtopiccategories_title>
+<admin_standardtopiccategories_add>Ajouter</admin_standardtopiccategories_add>
+<admin_standardtopiccategories_update>Mettre à jour</admin_standardtopiccategories_update>
+<admin_standardtopiccategories_cancel>Annuler</admin_standardtopiccategories_cancel>
+<admin_standardtopiccategories_add_category_title>Ajouter une catégorie de sujet</admin_standardtopiccategories_add_category_title>
+<admin_standardtopiccategories_update_category_title>Mettre à jour une catégorie de sujet</admin_standardtopiccategories_update_category_title>
+<admin_standardtopiccategories_add_category>Ajouter une nouvelle catégorie de sujet</admin_standardtopiccategories_add_category>
+<admin_standardtopiccategories_update_category>Mettre à jour la catégorie de sujet</admin_standardtopiccategories_update_category>
+<admin_standardtopiccategories_categories>Catégories de sujets</admin_standardtopiccategories_categories>
+<admin_standardtopiccategories_datas_categories_add>Ajouter une nouvelle catégorie de sujet</admin_standardtopiccategories_datas_categories_add>
+
+<!-- Validation -->
+<admin_validation_title>Validation des changements</admin_validation_title>
+<admin_validation_titlelocations>Localisations de départements non utilisées</admin_validation_titlelocations>
+<admin_validation_text>Voulez-vous sauvegarder vos changements ?</admin_validation_text>
+<admin_validation_userlocation_text>Supprimer cet utilisateur de cette localisation peut provoquer l'apparition de départements dont certaines localisations ne correspondent plus à aucun de leur membres. Voulez-vous supprimer ces localisations inutilisées des différents départements ?</admin_validation_userlocation_text>
+<admin_validation_userslocation_text>Supprimer tous les utilisateurs de cette localisation peut provoquer l'apparition de départements dont certaines localisations ne correspondent plus à aucun de leur membres. Voulez-vous supprimer ces localisations inutilisées des différents départements ?</admin_validation_userslocation_text>
+<admin_validation_usergroup_text>Supprimer la relation entre cet utilisateur et ce département peut provoquer l'appartition de localisations ne correspondent plus à aucun des membres du département. Voulez-vous supprimer ces localisations inutilisées du département ?</admin_validation_usergroup_text>
+<admin_validation_usersgroup_text>Supprimer tous les utilisateurs de ce département peut provoquer l'appartition de localisations ne correspondent plus à aucun des membres du département. Voulez-vous supprimer ces localisations inutilisées du département ?</admin_validation_usersgroup_text>
+<admin_validation_groupsuser_text>Supprimer l'appartenance de cet utilisateur de tous les départements peut provoquer l'appartition de localisations ne correspondent plus à aucun des membres des différents départements. Voulez-vous supprimer ces localisations inutilisées des différents départements ?</admin_validation_groupsuser_text>
+<admin_validation_user_text>Supprimer cet utilisateur peut provoquer l'appartition de départements dont certaines localisations ne correspondent plus à aucun de leurs membres. Voulez-vous supprimer ces localisations inutilisées des différents départements ?</admin_validation_user_text>
+<admin_validation_userupdate_text>Mettre à jour cet utilisateur peut provoquer l'appartition de départements dont certaines localisations ne correspondent plus à aucun de leurs membres. Voulez-vous supprimer ces localisations inutilisées des différents départements ?</admin_validation_userupdate_text>
+<admin_validation_userupdatedisabled_text>Le fait de désactiver cet utilisateur ne prendra pas en compte les autres modifications. Voulez-vous supprimer cet utilisateur ?</admin_validation_userupdatedisabled_text>
+<admin_validation_probe_title>Validation du désenregistrement</admin_validation_probe_title>
+<admin_validation_probe_text>En désenregistrant cette sonde, la licence liée à la sonde sera supprimée ! Etes-vous sûr de vouloir désenregistrer cette sonde ?</admin_validation_probe_text>
+<admin_validation_yes>Oui</admin_validation_yes>
+<admin_validation_no>Non</admin_validation_no>
+
+<!-- Error -->
+<admin_error_title>Erreur</admin_error_title>
+<admin_error_ok>Ok</admin_error_ok>
+<admin_error_notify>Notifier au support</admin_error_notify>
+
+<!-- Menu -->
+<admin_menu_home>Accueil</admin_menu_home>
+<admin_menu_home_esis>Accueil ESIS</admin_menu_home_esis>
+<admin_menu_home_title>Sélection du module</admin_menu_home_title>
+<admin_menu_logout>Quitter</admin_menu_logout>
+<admin_menu_prefs>Préfs</admin_menu_prefs>
+<admin_menu_print>Imprimer</admin_menu_print>
+<admin_menu_printselect_title>Imprimer</admin_menu_printselect_title>
+<admin_menu_printselect_screen>les données de l'écran</admin_menu_printselect_screen>
+<admin_menu_printselect_probe>la sonde sélectionnée</admin_menu_printselect_probe>
+<admin_menu_printselect_standard>la norme sélectionnée</admin_menu_printselect_standard>
+<admin_menu_printselect_submit>OK</admin_menu_printselect_submit>
+<admin_menu_excel>Excel</admin_menu_excel>
+<admin_menu_msproject>MsProject</admin_menu_msproject>
+<admin_menu_mail>E-mail</admin_menu_mail>
+<admin_menu_calendar>Calendrier</admin_menu_calendar>
+<admin_menu_find>Trouver</admin_menu_find>
+<admin_menu_votes_my>mes votes</admin_menu_votes_my>
+<admin_menu_votes_all>tous votes</admin_menu_votes_all>
+<admin_menu_tasks_my>mes tâches</admin_menu_tasks_my>
+<admin_menu_tasks_raci>RACI tâches</admin_menu_tasks_raci>
+<admin_menu_filter_my>MON</admin_menu_filter_my>
+<admin_menu_filter_raci>RACI</admin_menu_filter_raci>
+<admin_menu_filter_all>TOUT</admin_menu_filter_all>
+<admin_menu_filter_interval_all>tout l'historique</admin_menu_filter_interval_all>
+<admin_menu_filter_interval_twelvemonths>sur 12 mois</admin_menu_filter_interval_twelvemonths>
+<admin_menu_filter_interval_from>depuis le</admin_menu_filter_interval_from>
+<admin_menu_filter_interval_title>Période de temps</admin_menu_filter_interval_title>
+<admin_menu_filter_interval_submit>OK</admin_menu_filter_interval_submit>
+</entity>
+</esis>

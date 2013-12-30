@@ -1,0 +1,58 @@
+--- catalina.sh.orig	2005-09-07 20:57:42.000000000 +0200
++++ catalina.sh	2005-09-07 21:00:17.000000000 +0200
+@@ -165,6 +165,7 @@
+         -Dcatalina.base="$CATALINA_BASE" \
+         -Dcatalina.home="$CATALINA_HOME" \
+         -Djava.io.tmpdir="$CATALINA_TMPDIR" \
++		-Desis.properties="$ESIS_HOME/share/ESIS/esis.properties" \
+         org.apache.catalina.startup.Bootstrap "$@" start
+     else
+       exec "$_RUNJDB" $JAVA_OPTS $CATALINA_OPTS \
+@@ -173,6 +174,7 @@
+         -Dcatalina.base="$CATALINA_BASE" \
+         -Dcatalina.home="$CATALINA_HOME" \
+         -Djava.io.tmpdir="$CATALINA_TMPDIR" \
++		-Desis.properties="$ESIS_HOME/share/ESIS/esis.properties" \
+         org.apache.catalina.startup.Bootstrap "$@" start
+     fi
+   fi
+@@ -190,6 +192,7 @@
+       -Dcatalina.base="$CATALINA_BASE" \
+       -Dcatalina.home="$CATALINA_HOME" \
+       -Djava.io.tmpdir="$CATALINA_TMPDIR" \
++	  -Desis.properties="$ESIS_HOME/share/ESIS/esis.properties" \
+       org.apache.catalina.startup.Bootstrap "$@" start
+   else
+     exec "$_RUNJAVA" $JAVA_OPTS $CATALINA_OPTS \
+@@ -197,6 +200,7 @@
+       -Dcatalina.base="$CATALINA_BASE" \
+       -Dcatalina.home="$CATALINA_HOME" \
+       -Djava.io.tmpdir="$CATALINA_TMPDIR" \
++	  -Desis.properties="$ESIS_HOME/share/ESIS/esis.properties" \
+       org.apache.catalina.startup.Bootstrap "$@" start
+   fi
+ 
+@@ -214,6 +218,7 @@
+       -Dcatalina.base="$CATALINA_BASE" \
+       -Dcatalina.home="$CATALINA_HOME" \
+       -Djava.io.tmpdir="$CATALINA_TMPDIR" \
++	  -Desis.properties="$ESIS_HOME/share/ESIS/esis.properties" \
+       org.apache.catalina.startup.Bootstrap "$@" start \
+       >> "$CATALINA_BASE"/logs/catalina.out 2>&1 &
+ 
+@@ -226,6 +231,7 @@
+       -Dcatalina.base="$CATALINA_BASE" \
+       -Dcatalina.home="$CATALINA_HOME" \
+       -Djava.io.tmpdir="$CATALINA_TMPDIR" \
++	  -Desis.properties="$ESIS_HOME/share/ESIS/esis.properties" \
+       org.apache.catalina.startup.Bootstrap "$@" start \
+       >> "$CATALINA_BASE"/logs/catalina.out 2>&1 &
+ 
+@@ -248,6 +254,7 @@
+     -Dcatalina.base="$CATALINA_BASE" \
+     -Dcatalina.home="$CATALINA_HOME" \
+     -Djava.io.tmpdir="$CATALINA_TMPDIR" \
++	-Desis.properties="$ESIS_HOME/share/ESIS/esis.properties" \
+     org.apache.catalina.startup.Bootstrap "$@" stop
+ 
+   if [ $FORCE -eq 1 ]; then

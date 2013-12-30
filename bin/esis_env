@@ -1,0 +1,97 @@
+#!/bin/sh
+#   
+#  ESIS
+#  
+#  Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+#  
+#  Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+#                          Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+#  
+#  
+#  This file is part of ESIS.
+#  
+#  ESIS is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation version 3 of the License.
+#  
+#  ESIS is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+#  
+#  $Id: esis_env 13 2009-07-07 15:15:32Z tburdairon $
+#
+
+#
+# Setup ESIS environment vars
+#
+
+if [ "X$CODE_LINE" = "X" ]; then
+
+# change ESIS_HOME if installed in another directory
+ESIS_HOME=/opt/ESIS; export ESIS_HOME
+
+# setup PGDATA and CATALINA_HOME according to install points.
+
+umask 022
+
+PGDATA=${ESIS_HOME}/pgdata; export PGDATA
+TOMCAT_VERSION=5.5.26; export TOMCAT_VERSION
+CATALINA_HOME=${ESIS_HOME}/appsvr/apache-tomcat-$TOMCAT_VERSION; export CATALINA_HOME
+CATALINA_PID=${ESIS_HOME}/var/run/tomcat; export CATALINA_PID
+
+LIGHTTPD_PID=${ESIS_HOME}/var/run/lighttpd.pid; export LIGHTTPD_PID
+
+ESIS_CLASSPATH=${ESIS_HOME}/libexec/esis-external-lib.jar:${ESIS_HOME}/libexec/esis-commons.jar:${ESIS_HOME}/libexec/esis-probes.jar:${ESIS_HOME}/libexec/esis-web.jar:${ESIS_HOME}/libexec/esis-customer.jar; export ESIS_CLASSPATH
+
+# set JAVA_HOME to /usr if unset
+#
+if [ "X$JAVA_HOME" = "X" ]; then
+    JAVA_HOME=/usr; export JAVA_HOME
+    #echo "Set: JAVA_HOME=$JAVA_HOME"
+fi;
+
+# get the system's uname and do per-system configuration according
+# to this.
+#
+UNAME=`uname -s`; export UNAME
+
+if [ "$UNAME" = "SunOS" ]; then
+	#echo "SunOS configuration"
+
+	PATH=${ESIS_HOME}/usr/local/bin:$PATH; export PATH
+
+	LD_LIBRARY_PATH=${ESIS_HOME}/lib:${ESIS_HOME}/usr/local/lib/sparcv9:${ESIS_HOME}/usr/local/lib:${ESIS_HOME}/usr/local/ssl/lib:$LD_LIBRARY_PATH; export LD_LIBRARY_PATH
+	#echo "Set: LD_LIBRARY_PATH=$LD_LIBRARY_PATH"
+
+	# this doesn't help
+	#CATALINA_SH="/usr/bin/ksh $CATALINA_HOME/bin/catalina.sh"; export CATALINA_SH
+
+fi;
+
+PATH=${ESIS_HOME}/bin:$PATH; export PATH
+
+# JVM memory parameters for the application server.
+#  WS calls do not take many memory, but binary (PDF, XLS) export require some memory
+#  Note these memory parameters must be set adapted (set higher) if the number of concurrent users increases
+APPSVR_MEMORY_OPTIONS="-server -Xms256M -Xmx512M"; export APPSVR_MEMORY_OPTIONS
+
+# JVM memory parameters for command line tools (probes,...)
+# Some probes requires a lot of memory in certain cases (full import from a distant database)
+# but even in these cases, we would theorically never need to augment the max memory
+CLI_MEMORY_OPTIONS="-server -Xms256M -Xmx512M"; export CLI_MEMORY_OPTIONS
+
+TAR=`which tar`; export TAR
+GUNZIP=`which gunzip`; export GUNZIP
+CATALINA_SH="$CATALINA_HOME/bin/catalina.sh"; export CATALINA_SH
+PERL=`which perl`; export PERL
+
+else # CODE_LINE already set
+
+echo "Cannot run ESIS from development environment.  Try 'esis_dev' script instead."
+exit -1; # ERROR
+
+fi;

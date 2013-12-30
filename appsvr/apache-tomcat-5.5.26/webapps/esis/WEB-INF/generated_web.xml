@@ -1,0 +1,672 @@
+
+<!--
+Automatically created by Apache Jakarta Tomcat JspC.
+Place this fragment in the web.xml before all icon, display-name,
+description, distributable, and context-param elements.
+-->
+
+    <servlet>
+        <servlet-name>org.apache.jsp.reports_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.reports_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.module_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.module_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.icon_inc_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.icon_inc_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.page_005ffooter_inc_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.page_005ffooter_inc_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.always_005ferror_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.always_005ferror_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.copyright_inc_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.copyright_inc_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.style_inc_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.style_inc_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.page_005fheader_inc_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.page_005fheader_inc_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.find_005freports_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.find_005freports_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.find_005factions_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.find_005factions_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.report_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.report_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.list_005faudits_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.list_005faudits_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.recom_005fcomment_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.recom_005fcomment_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.find_005faudits_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.find_005faudits_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.list_005finterviews_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.list_005finterviews_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.action_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.action_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.recommendation_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.recommendation_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.find_005frecommendations_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.find_005frecommendations_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.list_005freports_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.list_005freports_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.interview_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.interview_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.list_005factions_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.list_005factions_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.list_005frecommendations_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.list_005frecommendations_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.audit.audit_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.audit.audit_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.portal.portal_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.portal.portal_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.portal.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.portal.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.admin.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.admin.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.admin.generic_005fmetrics_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.admin.generic_005fmetrics_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.metrics_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.metrics_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.vuln_005fcomment_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.vuln_005fcomment_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.voted_005fvulnerabilities_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.voted_005fvulnerabilities_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.mav_005fvulnerabilities_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.mav_005fvulnerabilities_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.new_005fvulnerabilities_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.new_005fvulnerabilities_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.vuln_005fanalysis_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.vuln_005fanalysis_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.targets_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.targets_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.vuln_005femail_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.vuln_005femail_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.vulnerability_005fsearch_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.vulnerability_005fsearch_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.vrt_005fvulnerabilities_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.vrt_005fvulnerabilities_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.vrt.inv_005fvulnerabilities_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.vrt.inv_005fvulnerabilities_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.mim.print_005fuser_005fdetails_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.mim.print_005fuser_005fdetails_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.mim.probe_005fhistory_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.mim.probe_005fhistory_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.mim.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.mim.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.mim.anomalies_005fusers_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.mim.anomalies_005fusers_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.mim.print_005fasls_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.mim.print_005fasls_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.mim.print_005fsnail_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.mim.print_005fsnail_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.mim.print_005fusers_005ffor_005fasl_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.mim.print_005fusers_005ffor_005fasl_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005fcriteria_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005fcriteria_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005fevents_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005fevents_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005fcauses_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005fcauses_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005fimpacts_005friskcontrols_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005fimpacts_005friskcontrols_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005fconsequences_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005fconsequences_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005fgroups_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005fgroups_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005friskreviews_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005friskreviews_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005frisks_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005frisks_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.risk.list_005factions_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.risk.list_005factions_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.asset.compositesProducts_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.asset.compositesProducts_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.asset.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.asset.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.asset.show_005fvpv_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.asset.show_005fvpv_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.downloads.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.downloads.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.html.downloads.images.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.html.downloads.images.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.soap.i18nLib_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.soap.i18nLib_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.soap.happyaxis_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.soap.happyaxis_jsp</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.reports_jsp</servlet-name>
+        <url-pattern>/reports.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.index_jsp</servlet-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.module_jsp</servlet-name>
+        <url-pattern>/module.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.icon_inc_jsp</servlet-name>
+        <url-pattern>/html/icon.inc.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.page_005ffooter_inc_jsp</servlet-name>
+        <url-pattern>/html/page_footer.inc.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.always_005ferror_jsp</servlet-name>
+        <url-pattern>/html/always_error.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.copyright_inc_jsp</servlet-name>
+        <url-pattern>/html/copyright.inc.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.index_jsp</servlet-name>
+        <url-pattern>/html/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.style_inc_jsp</servlet-name>
+        <url-pattern>/html/style.inc.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.page_005fheader_inc_jsp</servlet-name>
+        <url-pattern>/html/page_header.inc.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.find_005freports_jsp</servlet-name>
+        <url-pattern>/html/audit/find_reports.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.find_005factions_jsp</servlet-name>
+        <url-pattern>/html/audit/find_actions.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.report_jsp</servlet-name>
+        <url-pattern>/html/audit/report.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.list_005faudits_jsp</servlet-name>
+        <url-pattern>/html/audit/list_audits.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.recom_005fcomment_jsp</servlet-name>
+        <url-pattern>/html/audit/recom_comment.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.find_005faudits_jsp</servlet-name>
+        <url-pattern>/html/audit/find_audits.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.list_005finterviews_jsp</servlet-name>
+        <url-pattern>/html/audit/list_interviews.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.action_jsp</servlet-name>
+        <url-pattern>/html/audit/action.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.index_jsp</servlet-name>
+        <url-pattern>/html/audit/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.recommendation_jsp</servlet-name>
+        <url-pattern>/html/audit/recommendation.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.find_005frecommendations_jsp</servlet-name>
+        <url-pattern>/html/audit/find_recommendations.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.list_005freports_jsp</servlet-name>
+        <url-pattern>/html/audit/list_reports.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.interview_jsp</servlet-name>
+        <url-pattern>/html/audit/interview.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.list_005factions_jsp</servlet-name>
+        <url-pattern>/html/audit/list_actions.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.list_005frecommendations_jsp</servlet-name>
+        <url-pattern>/html/audit/list_recommendations.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.audit.audit_jsp</servlet-name>
+        <url-pattern>/html/audit/audit.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.portal.portal_jsp</servlet-name>
+        <url-pattern>/html/portal/portal.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.portal.index_jsp</servlet-name>
+        <url-pattern>/html/portal/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.admin.index_jsp</servlet-name>
+        <url-pattern>/html/admin/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.admin.generic_005fmetrics_jsp</servlet-name>
+        <url-pattern>/html/admin/generic_metrics.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.metrics_jsp</servlet-name>
+        <url-pattern>/html/vrt/metrics.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.vuln_005fcomment_jsp</servlet-name>
+        <url-pattern>/html/vrt/vuln_comment.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.voted_005fvulnerabilities_jsp</servlet-name>
+        <url-pattern>/html/vrt/voted_vulnerabilities.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.mav_005fvulnerabilities_jsp</servlet-name>
+        <url-pattern>/html/vrt/mav_vulnerabilities.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.new_005fvulnerabilities_jsp</servlet-name>
+        <url-pattern>/html/vrt/new_vulnerabilities.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.vuln_005fanalysis_jsp</servlet-name>
+        <url-pattern>/html/vrt/vuln_analysis.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.targets_jsp</servlet-name>
+        <url-pattern>/html/vrt/targets.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.vuln_005femail_jsp</servlet-name>
+        <url-pattern>/html/vrt/vuln_email.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.vulnerability_005fsearch_jsp</servlet-name>
+        <url-pattern>/html/vrt/vulnerability_search.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.index_jsp</servlet-name>
+        <url-pattern>/html/vrt/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.vrt_005fvulnerabilities_jsp</servlet-name>
+        <url-pattern>/html/vrt/vrt_vulnerabilities.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.vrt.inv_005fvulnerabilities_jsp</servlet-name>
+        <url-pattern>/html/vrt/inv_vulnerabilities.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.mim.print_005fuser_005fdetails_jsp</servlet-name>
+        <url-pattern>/html/mim/print_user_details.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.mim.probe_005fhistory_jsp</servlet-name>
+        <url-pattern>/html/mim/probe_history.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.mim.index_jsp</servlet-name>
+        <url-pattern>/html/mim/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.mim.anomalies_005fusers_jsp</servlet-name>
+        <url-pattern>/html/mim/anomalies_users.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.mim.print_005fasls_jsp</servlet-name>
+        <url-pattern>/html/mim/print_asls.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.mim.print_005fsnail_jsp</servlet-name>
+        <url-pattern>/html/mim/print_snail.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.mim.print_005fusers_005ffor_005fasl_jsp</servlet-name>
+        <url-pattern>/html/mim/print_users_for_asl.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005fcriteria_jsp</servlet-name>
+        <url-pattern>/html/risk/list_criteria.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005fevents_jsp</servlet-name>
+        <url-pattern>/html/risk/list_events.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005fcauses_jsp</servlet-name>
+        <url-pattern>/html/risk/list_causes.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005fimpacts_005friskcontrols_jsp</servlet-name>
+        <url-pattern>/html/risk/list_impacts_riskcontrols.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005fconsequences_jsp</servlet-name>
+        <url-pattern>/html/risk/list_consequences.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005fgroups_jsp</servlet-name>
+        <url-pattern>/html/risk/list_groups.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005friskreviews_jsp</servlet-name>
+        <url-pattern>/html/risk/list_riskreviews.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.index_jsp</servlet-name>
+        <url-pattern>/html/risk/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005frisks_jsp</servlet-name>
+        <url-pattern>/html/risk/list_risks.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.risk.list_005factions_jsp</servlet-name>
+        <url-pattern>/html/risk/list_actions.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.asset.compositesProducts_jsp</servlet-name>
+        <url-pattern>/html/asset/compositesProducts.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.asset.index_jsp</servlet-name>
+        <url-pattern>/html/asset/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.asset.show_005fvpv_jsp</servlet-name>
+        <url-pattern>/html/asset/show_vpv.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.downloads.index_jsp</servlet-name>
+        <url-pattern>/html/downloads/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.html.downloads.images.index_jsp</servlet-name>
+        <url-pattern>/html/downloads/images/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.soap.i18nLib_jsp</servlet-name>
+        <url-pattern>/soap/i18nLib.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.soap.happyaxis_jsp</servlet-name>
+        <url-pattern>/soap/happyaxis.jsp</url-pattern>
+    </servlet-mapping>
+
+<!--
+All session-config, mime-mapping, welcome-file-list, error-page, taglib,
+resource-ref, security-constraint, login-config, security-role,
+env-entry, and ejb-ref elements should follow this fragment.
+-->

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="esis" lang="fr">
+<!-- FILE *** lang_esis_fr.xml *** -->
+
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<!-- Errors texts -->
+<esis_errors_wsnotexist_text>Le service web '$1' n'existe pas. Merci de contacter votre administrateur pour résoudre ce problème.</esis_errors_wsnotexist_text><!-- html -->
+<esis_errors_xmlimport_text><![CDATA[Le fichier de configuration XML du module '$1' n'a pas pu être chargé. Essayez de recharger l'application.]]></esis_errors_xmlimport_text><!-- html -->
+<esis_errors_swfimport_text><![CDATA[Le fichier du module '$1' n'a paspu être chargé. Essayez de recharger l'application.<br />Si le problème persiste, veuillez contacter un administrateur.]]></esis_errors_swfimport_text><!-- html -->
+
+<!-- Preferences -->
+<esis_prefs_password_minlength>Le mot de passe doit faire au moins $1 caractères</esis_prefs_password_minlength>
+<esis_prefs_raci_pages>page $1 sur $2 ( $3 objets )</esis_prefs_raci_pages>
+</changed>
+<!-- ******************** ADDED ******************** -->
+
+<!-- ******************** REMOVED ******************** -->
+</entity>
+</esis>

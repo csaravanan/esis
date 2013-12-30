@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_admin_fr.xml *** -->
+<entity name="admin" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<admin_navigation_probes>Sondes</admin_navigation_probes>
+<admin_users_datas_details_passwordexpiration>Validité du mot de passe</admin_users_datas_details_passwordexpiration>
+<admin_user_infos_title>Complexité des mots de passe</admin_user_infos_title>
+<admin_user_infos_explanations>Un mot de passe doit faire au moins $1 caractères et répondre à au moins 3 règles:</admin_user_infos_explanations>
+<admin_user_infos_case1>- utiliser des miniscules</admin_user_infos_case1>
+<admin_user_infos_case2>- utiliser des majuscules</admin_user_infos_case2>
+<admin_user_infos_case3>- utiliser des nombres</admin_user_infos_case3>
+<admin_user_infos_case4>- utiliser des caractères spéciaux</admin_user_infos_case4>
+<admin_menu_calendar>Calendrier</admin_menu_calendar>
+<admin_menu_tasks_my>mes tâches</admin_menu_tasks_my>
+<admin_menu_tasks_raci>RACI tâches</admin_menu_tasks_raci>
+<admin_menu_printselect_title>Imprimer</admin_menu_printselect_title>
+<admin_menu_printselect_screen>les données de l'écran</admin_menu_printselect_screen>
+<admin_menu_printselect_probe>la sonde sélectionnée</admin_menu_printselect_probe>
+<admin_menu_printselect_submit>OK</admin_menu_printselect_submit>
+<admin_moduleraci_update_user>Partie prenante</admin_moduleraci_update_user>
+<admin_menu_filter_interval_all>tout l'historique</admin_menu_filter_interval_all>
+<admin_menu_filter_interval_twelvemonths>sur 12 mois</admin_menu_filter_interval_twelvemonths>
+<admin_menu_filter_interval_from>depuis le</admin_menu_filter_interval_from>
+<admin_menu_filter_interval_title>Période de temps</admin_menu_filter_interval_title>
+<admin_menu_filter_interval_submit>OK</admin_menu_filter_interval_submit>
+<!-- Probes -->
+<admin_probes_title><![CDATA[Administration<br />Management des sondes]]></admin_probes_title><!-- html -->
+<admin_probes_active>Activées</admin_probes_active>
+<admin_probes_registered>Enregistrées</admin_probes_registered>
+<admin_probes_all>Toutes</admin_probes_all>
+<admin_probes_datas_probes_probename>Nom de la sonde</admin_probes_datas_probes_probename>
+<admin_probes_datas_probes_rundate>Date d'exécution</admin_probes_datas_probes_rundate>
+<admin_probes_datas_probes_duration>Durée d'exécution</admin_probes_datas_probes_duration>
+<admin_probes_datas_probes_status>Statut</admin_probes_datas_probes_status>
+<admin_probes_datas_probes_message>Message</admin_probes_datas_probes_message>
+<admin_probes_datas_preferences>Préférences initiales de la sonde</admin_probes_datas_preferences>
+<admin_probes_datas_details>Détails de la sonde</admin_probes_datas_details>
+<admin_probes_datas_details_lastrun>Dernière exécution</admin_probes_datas_details_lastrun>
+<admin_probes_datas_details_firstrun>Première exécution</admin_probes_datas_details_firstrun>
+<admin_probes_datas_details_totalrun>Nombre d'exécutions</admin_probes_datas_details_totalrun>
+<admin_probes_datas_details_lastrunduration>Durée de la dernière exécution</admin_probes_datas_details_lastrunduration>
+<admin_probes_datas_details_averagerunduration>Durée moyenne d'exécution</admin_probes_datas_details_averagerunduration>
+<admin_probes_datas_details_lastsuccess>Dernier succès</admin_probes_datas_details_lastsuccess>
+<admin_probes_datas_details_totalsuccess>Nombre de succès</admin_probes_datas_details_totalsuccess>
+<admin_probes_datas_details_lasterror>Dernière erreur</admin_probes_datas_details_lasterror>
+<admin_probes_datas_details_totalerror>Nombre d'erreurs</admin_probes_datas_details_totalerror>
+<admin_probes_datas_details_lastfailure>Dernier échec</admin_probes_datas_details_lastfailure>
+<admin_probes_datas_details_totalfailure>Nombre d'échecs</admin_probes_datas_details_totalfailure>
+<admin_probes_datas_details_lastabort>Dernière annulation</admin_probes_datas_details_lastabort>
+<admin_probes_datas_details_totalabort>Nombre d'annulations</admin_probes_datas_details_totalabort>
+<admin_probes_datas_history>Derniers historiques de la sonde</admin_probes_datas_history>
+<admin_probes_datas_history_add>Voir l'historique</admin_probes_datas_history_add>
+<admin_probes_history>Historique</admin_probes_history>
+<admin_probes_performance>Performance</admin_probes_performance>
+<!-- Probe History -->
+<admin_probehistory_title>Historique de la sonde</admin_probehistory_title>
+<admin_probehistory_title_database>Historique de la sonde (base de données)</admin_probehistory_title_database>
+<admin_probehistory_title_file>Historique de la sonde (fichiers)</admin_probehistory_title_file>
+<admin_probehistory_pages>page $1 sur $2 ( $3 exécutions )</admin_probehistory_pages>
+<admin_probehistory_pageempty>0 execution</admin_probehistory_pageempty>
+<admin_probehistory_datas_history_rundate>Date exécution</admin_probehistory_datas_history_rundate>
+<admin_probehistory_datas_history_status>Statut</admin_probehistory_datas_history_status>
+<admin_probehistory_datas_history_message>Message</admin_probehistory_datas_history_message>
+<admin_probehistory_datas_history_filename>Fichier</admin_probehistory_datas_history_filename>
+<admin_probehistory_datas_history_filesize>Taille</admin_probehistory_datas_history_filesize>
+<admin_probehistory_datas_history_databasename>Nom table</admin_probehistory_datas_history_databasename>
+<admin_probehistory_datas_history_databaseid>Dernier id</admin_probehistory_datas_history_databaseid>
+<admin_probehistory_datas_history_databasedate>Dernière date</admin_probehistory_datas_history_databasedate>
+<!-- Probe details -->
+<admin_probedetails_title>Informations sur la sonde</admin_probedetails_title>
+<admin_probedetails_probename>Nom sonde</admin_probedetails_probename>
+<admin_probedetails_fileprobe>Sonde sur fichiers</admin_probedetails_fileprobe>
+<admin_probedetails_databaseprobe>Sonde sur base de données</admin_probedetails_databaseprobe>
+<admin_probedetails_laststartdate>Dernier début d'exécution</admin_probedetails_laststartdate>
+<admin_probedetails_lastenddate>Dernière fin d'exécution</admin_probedetails_lastenddate>
+<admin_probedetails_duration>Durée</admin_probedetails_duration>
+<admin_probedetails_status>Statut de la sonde</admin_probedetails_status>
+<admin_probedetails_errormessage>Message de la sonde</admin_probedetails_errormessage>
+<admin_probedetails_stacktrace>Message du processus de la sonde</admin_probedetails_stacktrace>
+<admin_probedetails_license>Informations de licence</admin_probedetails_license>
+<admin_probedetails_active>Probe activée</admin_probedetails_active>
+<admin_probedetails_registered>Probe enregistrée</admin_probedetails_registered>
+<admin_probedetails_validity>Date de validité</admin_probedetails_validity>
+<admin_probedetails_statusneverrun>Jamais exécutée</admin_probedetails_statusneverrun>
+<admin_probedetails_statusstillrunning>En cours d'exécution</admin_probedetails_statusstillrunning>
+<admin_probedetails_statuserror>Erreur</admin_probedetails_statuserror>
+<admin_probedetails_statusfailure>Echéc</admin_probedetails_statusfailure>
+<admin_probedetails_statusabort>Annulation</admin_probedetails_statusabort>
+<admin_probedetails_statussuccess>Succès</admin_probedetails_statussuccess>
+<admin_probedetails_nostatus>-</admin_probedetails_nostatus>
+<!-- Probe performance -->
+<admin_probeperformance_title>Performance de la sonde</admin_probeperformance_title>
+<admin_probeperformance_xaxis>Date d'exécution</admin_probeperformance_xaxis>
+<admin_probeperformance_yaxis>Durée d'exécution</admin_probeperformance_yaxis>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<admin_menu_filter_intervalraci_all>tout l'historique</admin_menu_filter_intervalraci_all>
+<admin_menu_filter_intervalraci_twelvemonths>sur 12 mois</admin_menu_filter_intervalraci_twelvemonths>
+<admin_menu_filter_intervalraci_from>depuis le</admin_menu_filter_intervalraci_from>
+<admin_menu_filter_intervalraci_title>Période de temps</admin_menu_filter_intervalraci_title>
+<admin_menu_filter_intervalraci_submit>OK</admin_menu_filter_intervalraci_submit>
+</removed>
+
+</entity>
+</esis>

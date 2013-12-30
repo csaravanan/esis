@@ -1,0 +1,14 @@
+UPDATE virus.e_alert_level SET alert_name = 'Normal' WHERE e_alert_level_id = 1;
+UPDATE virus.e_alert_level SET alert_name = 'Elevé' WHERE e_alert_level_id = 2;
+UPDATE virus.e_alert_level SET alert_name = 'Très élevé' WHERE e_alert_level_id = 3;
+UPDATE virus.e_alert_level SET alert_name = 'Extrême' WHERE e_alert_level_id = 4;
+UPDATE virus.t_virus_origin SET origin = 'Fichier' WHERE t_virus_origin_id = 1;
+UPDATE virus.t_virus_origin SET origin = 'Email' WHERE t_virus_origin_id = 2;
+UPDATE virus.t_virus_origin SET origin = 'Web' WHERE t_virus_origin_id = 3;
+UPDATE virus.t_virus_origin_detail SET detail = 'Lecteur local' WHERE t_virus_origin_detail_id = 1;
+UPDATE virus.t_virus_origin_detail SET detail = 'Lecteur mobile' WHERE t_virus_origin_detail_id = 2;
+UPDATE virus.t_virus_origin_detail SET detail = 'Lecteur reseau' WHERE t_virus_origin_detail_id = 3;
+UPDATE virus.t_virus_origin_detail SET detail = 'Email interne' WHERE t_virus_origin_detail_id = 4;
+UPDATE virus.t_virus_origin_detail SET detail = 'Email entrant' WHERE t_virus_origin_detail_id = 5;
+UPDATE virus.t_virus_origin_detail SET detail = 'Email sortant' WHERE t_virus_origin_detail_id = 6;
+UPDATE virus.t_virus_origin_detail SET detail = 'Web' WHERE t_virus_origin_detail_id = 7;

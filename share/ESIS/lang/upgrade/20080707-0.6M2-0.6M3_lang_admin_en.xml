@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="admin" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<admin_users_title><![CDATA[Administration & Configuration<br />Users management]]></admin_users_title>
+<admin_groups_title><![CDATA[Administration & Configuration<br />Groups management]]></admin_groups_title>
+<admin_companies_title><![CDATA[Administration & Configuration<br />Companies management]]></admin_companies_title>
+<admin_locations_title><![CDATA[Administration & Configuration<br />Locations management]]></admin_locations_title>
+<admin_businesszones_title><![CDATA[Administration & Configuration<br />Business geography zones management]]></admin_businesszones_title>
+<admin_modules_title><![CDATA[Administration & Configuration<br />Modules management]]></admin_modules_title>
+<admin_racis_title><![CDATA[Administration & Configuration<br />RACI management]]></admin_racis_title>
+<admin_probes_title><![CDATA[Administration & Configuration<br />Probes management]]></admin_probes_title>
+<admin_incidents_title><![CDATA[Administration & Configuration<br />Incidents management]]></admin_incidents_title>
+<admin_standards_title><![CDATA[Administration & Configuration<br />Standards management]]></admin_standards_title>
+<admin_menu_filter_my>MY</admin_menu_filter_my>
+<admin_menu_filter_all>ALL</admin_menu_filter_all>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<admin_probedetails_activate>Activate</admin_probedetails_activate>
+<admin_probedetails_deactivate>Deactivate</admin_probedetails_deactivate>
+<admin_probedetails_register>Register</admin_probedetails_register>
+<admin_probedetails_unregister>Unregister</admin_probedetails_unregister>
+<admin_probehistory_datas_history_parameters>Parameters</admin_probehistory_datas_history_parameters>
+<admin_navigation_monitoring>Monitoring</admin_navigation_monitoring>
+<admin_monitoring_title><![CDATA[Administration & Configuration<br />Monitoring probes]]></admin_monitoring_title>
+<admin_monitoring_datas_details>$1 details</admin_monitoring_datas_details>
+<admin_monitoring_datas_preferences>$1 preferences</admin_monitoring_datas_preferences>
+<admin_monitoring_datas_messages>$1 messages</admin_monitoring_datas_messages>
+<admin_monitoring_datas_details_default>Probe details</admin_monitoring_datas_details_default>
+<admin_monitoring_datas_preferences_default>Probe preferences</admin_monitoring_datas_preferences_default>
+<admin_monitoring_datas_messages_default>Probe messages</admin_monitoring_datas_messages_default>
+<admin_monitoring_datas_noprobe>No selected probe.</admin_monitoring_datas_noprobe>
+<admin_monitoring_datas_messages_nomessage>The probe hasn't returned an error message.</admin_monitoring_datas_messages_nomessage>
+<admin_monitoring_categories>All categories</admin_monitoring_categories>
+<admin_monitoring_legend_success>Success</admin_monitoring_legend_success>
+<admin_monitoring_legend_abort>Abort / No data</admin_monitoring_legend_abort>
+<admin_monitoring_legend_failure>Failure</admin_monitoring_legend_failure>
+<admin_monitoring_legend_error>Error</admin_monitoring_legend_error>
+<admin_monitoring_probes_error>Error</admin_monitoring_probes_error>
+<admin_monitoring_probes_failure>Failure</admin_monitoring_probes_failure>
+<admin_monitoring_probes_abort>Abort</admin_monitoring_probes_abort>
+<admin_monitoring_probes_nodata>No data</admin_monitoring_probes_nodata>
+<admin_monitoring_probes_success>Success</admin_monitoring_probes_success>
+<admin_incidents_datas_incidents_probe>Probe linked</admin_incidents_datas_incidents_probe>
+<admin_incidents_datas_details_probe>Probe linked</admin_incidents_datas_details_probe>
+<admin_probedetails_history>History</admin_probedetails_history>
+<admin_probedetails_performance>Performance</admin_probedetails_performance>
+<admin_probehistory_datas_history_elements># data</admin_probehistory_datas_history_elements>
+<admin_incident_title>Incident informations</admin_incident_title>
+<admin_incident_clipboard>To clipboard</admin_incident_clipboard>
+<admin_incident_resend>Resend</admin_incident_resend>
+<admin_incident_delete>Delete</admin_incident_delete>
+<admin_incident_data_error>Incident description</admin_incident_data_error>
+<admin_incident_data_stacktrace>Exception stacktrace</admin_incident_data_stacktrace>
+<admin_incident_date>Incident date</admin_incident_date>
+<admin_incident_user>User concerned</admin_incident_user>
+<admin_incident_error>Error summary</admin_incident_error>
+<admin_incident_notified>Notified</admin_incident_notified>
+<admin_incident_ip>Client IP: </admin_incident_ip>
+<admin_incident_os>OS: </admin_incident_os>
+<admin_incident_agent>User agent: </admin_incident_agent>
+<admin_incident_flash>Flash version: </admin_incident_flash>
+<admin_incident_probe>Probe concerned</admin_incident_probe>
+<admin_incident_comment>User comment</admin_incident_comment>
+<admin_incident_userinfos>User infos</admin_incident_userinfos>
+<admin_locations_datas_details_alias>Aliases</admin_locations_datas_details_alias>
+<admin_location_alias>Aliases</admin_location_alias>
+<admin_locationalias_title>Liste des alias</admin_locationalias_title>
+<admin_locationalias_add>Ajouter</admin_locationalias_add>
+<admin_locationalias_cancel>Annuler</admin_locationalias_cancel>
+<admin_locationalias_add_title>Ajouter un alias</admin_locationalias_add_title>
+<admin_locationalias_add_text>Ajouter un alias à la localisation</admin_locationalias_add_text>
+<admin_locationalias_data_alias>Alias</admin_locationalias_data_alias>
+<admin_locationalias_data_alias_add>Ajouter un alias à la localisation</admin_locationalias_data_alias_add>
+<admin_locationalias_update>Update</admin_locationalias_update>
+<admin_locationalias_update_title>Update an alias</admin_locationalias_update_title>
+<admin_locationalias_update_text>Update alias for this location</admin_locationalias_update_text>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<admin_probedetails_statusneverrun>Never run</admin_probedetails_statusneverrun>
+<admin_probedetails_statusstillrunning>Still running</admin_probedetails_statusstillrunning>
+<admin_probedetails_statuserror>Error</admin_probedetails_statuserror>
+<admin_probedetails_statusfailure>Failure</admin_probedetails_statusfailure>
+<admin_probedetails_statusabort>Abort</admin_probedetails_statusabort>
+<admin_probedetails_statussuccess>Success</admin_probedetails_statussuccess>
+<admin_probedetails_statusnodata>No data</admin_probedetails_statusnodata>
+<admin_probedetails_nostatus>-</admin_probedetails_nostatus>
+</removed>
+
+</entity>
+</esis>

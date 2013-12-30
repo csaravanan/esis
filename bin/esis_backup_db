@@ -1,0 +1,135 @@
+#!/bin/sh
+#   
+#  ESIS
+#  
+#  Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+#  
+#  Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+#                          Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+#  
+#  
+#  This file is part of ESIS.
+#  
+#  ESIS is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation version 3 of the License.
+#  
+#  ESIS is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+#  
+#  $Id: esis_backup_db 13 2009-07-07 15:15:32Z tburdairon $
+#
+
+#
+# Create a backup of the database in the backups directory
+#
+#
+. `dirname $0`/esis_env
+
+# saves are rolled
+KEEP_AT_MOST=10
+BACKUP_DIR=${ESIS_HOME}/backups
+
+#
+# If you want to push the newly created backup file to a distant FTP server,
+#  set BACKUP_WITH_FTP to 1 and fill the host/port/user/passwd/path
+# 
+#
+BACKUP_WITH_FTP=0
+FTP_HOST=backupserver
+FTP_PORT=21
+FTP_PATH=backups/
+FTP_USER=user
+FTP_PASSWD=passwd
+
+#
+# If you want to push the newly created backup file to a distant server by SSH,
+#  set BACKUP_WITH_SSH to 1 and fill the host/user/path
+# 
+# To use this option you need to generate a RSA or DSA keypair on the ESIS server, 
+#  and integrate it in the authorized_keys on the backup server, cf any good documentation on the web
+#  for example http://waelchatila.com/2005/06/06/1118124232757.html or http://www.csua.berkeley.edu/~ranga/notes/ssh_nopass.html
+#
+BACKUP_WITH_SSH=0
+SSH_HOST=backupserver
+SSH_USER=user
+SSH_PATH=backups/
+
+
+
+( test -d $BACKUP_DIR && (
+
+	echo "Running backup for database."
+	echo ""
+	BACKUP_FILENAME="db.`/bin/date +%Y%m%d-%H%M%S`"
+	BACKUP_FILE="$BACKUP_DIR/$BACKUP_FILENAME"
+	echo "Creating... $BACKUP_FILE"
+
+	( pg_dump -Fc --blobs --encoding=UTF8 -U esis_user --file=$BACKUP_FILE esis_sdw && (
+		echo "Success."
+		chmod 400 $BACKUP_FILE
+		if [ $BACKUP_WITH_FTP -eq 1 ]
+                then
+                        echo "Sending $BACKUP_FILENAME to $SSH_HOST by FTP"
+                        cd $BACKUP_DIR
+                        ( ftp -u "ftp://$FTP_USER:$FTP_PASSWD@$FTP_HOST:$FTP_PORT/$FTP_PATH" $BACKUP_FILENAME &&
+                          echo "$BACKUP_FILENAME successfully sent to $FTP_HOST by FTP") || (
+                          echo "Error during FTP transfer" 
+                        )
+                fi
+                if [ $BACKUP_WITH_SSH -eq 1 ]
+                then
+                        echo "Sending $BACKUP_FILENAME to $SSH_HOST by SCP"
+                        cd $BACKUP_DIR
+                        ( scp $BACKUP_FILENAME $SSH_USER@$SSH_HOST:$SSH_PATH &&
+                          echo "$BACKUP_FILENAME successfully sent to $SSH_HOST by SCP") || (
+                          echo "Error during SCP transfer" 
+                        )
+                fi
+	) || (
+		echo "Error reported."
+		rm -f $BACKUP_FILE
+	) )
+
+
+	echo ""
+	echo "Backups present:"
+	ls -l $BACKUP_DIR
+
+	( test -f $BACKUP_FILE && (
+
+		echo ""
+		echo "Removing old files :"
+		nb_files=`find $BACKUP_DIR -name "db.*" | wc -l`;
+                if [ $nb_files -le $KEEP_AT_MOST ]
+                then
+                        echo "No backup files will be deleted : $nb_files presents, and KEEP_AT_MOST set at $KEEP_AT_MOST";
+                else
+                        nb_files_to_delete=`expr $nb_files - $KEEP_AT_MOST`;
+                        echo "Deleting the $nb_files_to_delete oldest file(s) to keep $KEEP_AT_MOST files";
+                        find $BACKUP_DIR -name "db.*" | sort | head -n $nb_files_to_delete
+                        find $BACKUP_DIR -name "db.*" | sort | head -n $nb_files_to_delete | xargs rm -rf;
+                fi
+	
+	) || (
+
+		echo ""
+		echo "Nothing done."
+
+	));
+	# only remove backups on successful backup file creation
+) || (
+	
+	echo "Backups directory not present."
+	echo ""
+	echo "Consider running:"
+	echo "	mkdir -p $BACKUP_DIR"
+	echo "	chmod 700 $BACKUP_DIR"
+	
+));
+# create directory for backup files

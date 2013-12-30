@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="riskregister" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<risks_risklevels_datas_risklevels_likelihood>Probabilités</risks_risklevels_datas_risklevels_likelihood>
+<risks_risklevels_datas_risklevels_consequence>Conséquences</risks_risklevels_datas_risklevels_consequence>
+<risks_risklevels_titleupdate>Modifier le niveau du risque</risks_risklevels_titleupdate>
+<risks_errors_raci_text>La matrice RACI assignée à l'objet $1 ne vous permet pas d'effectuer cette action.</risks_errors_raci_text>
+<risks_errors_raci_persons>Merci de contacter le ou les responsables et/ou autorités de l'objet $1.</risks_errors_raci_persons>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<risks_raci_edit>Editer les privilèges</risks_raci_edit>
+<risks_risklevels_benefic>Bénéfiques</risks_risklevels_benefic>
+<risks_risklevels_negative>Négatifs</risks_risklevels_negative>
+<risks_cause_error_occurencesnumber>Les répetitions doivent être un nombre.</risks_cause_error_occurencesnumber>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<risks_risklevels_datas_risklevels_level>Niveau du risque</risks_risklevels_datas_risklevels_level>
+<risks_raci_risk_edit>Editer</risks_raci_risk_edit>
+</removed>
+
+</entity>
+</esis>

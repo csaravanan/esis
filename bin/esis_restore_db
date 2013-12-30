@@ -1,0 +1,96 @@
+#!/bin/sh
+#   
+#  ESIS
+#  
+#  Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+#  
+#  Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+#                          Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+#  
+#  
+#  This file is part of ESIS.
+#  
+#  ESIS is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation version 3 of the License.
+#  
+#  ESIS is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+#  
+#  $Id: esis_restore_db 13 2009-07-07 15:15:32Z tburdairon $
+#
+
+#
+# Restore a database backup file
+#
+. `dirname $0`/esis_env
+
+( test -d ${ESIS_HOME}/backups && (
+
+	cd ${ESIS_HOME}/backups
+
+	echo "Backups present:"
+	ls . | grep -v schema
+
+	echo ""
+	echo "This procedure will stop and restart the db server,"
+	echo "drop and recreate the database.  Press ^C to exit."
+	echo ""
+	echo "Enter backup file to restore:"
+	read BACKUP_FILE
+
+	( test -f $BACKUP_FILE && (
+
+		echo "Starting database server."
+		pg_ctl stop -m fast -w -l ${ESIS_HOME}/var/log/psql.log
+		pg_ctl start -w -l ${ESIS_HOME}/var/log/psql.log
+
+		echo "Recreate database."
+		echo "Please enter the password of the database superuser"
+	
+		psql postgres <<EOF
+DROP DATABASE esis_sdw;
+CREATE DATABASE esis_sdw WITH ENCODING 'UTF8' OWNER esis_user;
+GRANT ALL ON DATABASE esis_sdw TO esis_user;
+\c esis_sdw
+ALTER SCHEMA public OWNER TO esis_user;
+EOF
+
+
+		echo "Restoring... $BACKUP_FILE"
+		PGCLIENTENCODING=UTF8
+		export PGCLIENTENCODING
+		( pg_restore --format=c --dbname=esis_sdw --no-owner --no-acl -U esis_user $BACKUP_FILE && (
+			echo "Success."
+		) || (
+			echo "Warning."
+		));
+
+		echo "Restarting database server."
+		pg_ctl stop -m fast -w -l ${ESIS_HOME}/var/log/psql.log
+		pg_ctl start -w -l ${ESIS_HOME}/var/log/psql.log
+
+		echo ""
+		echo "Notes:"
+		echo ""
+		echo "Consider running esis_shutdown and then esis_startup to restart"
+		echo "the application server.  Did you see Success or Warning above?"
+		echo ""
+	) || (
+		echo "$BACKUP_FILE not found."
+	));
+
+) || (
+	
+	echo "Backups directory not present."
+	echo ""
+	echo "Consider running:"
+	echo "\tmkdir -p ${ESIS_HOME}/backups"
+	echo "\tchmod 700 ${ESIS_HOME}/backups"
+	
+)); # create directory for backup files

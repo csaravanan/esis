@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_vulnerabilities_fr.xml *** -->
+<entity name="vulnerabilities" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<vuln_vulnerability_title>Informations sur la vulnérabilité</vuln_vulnerability_title>
+<vuln_vulnerability_datas_references>Références et alias</vuln_vulnerability_datas_references>
+<vuln_vulnerability_details>Plus de détails</vuln_vulnerability_details>
+<vuln_alias_text>Ajouter ou fusionner l'alias à la vulnérabilité :</vuln_alias_text>
+<vuln_action_changereference>Référence</vuln_action_changereference>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<vuln_vulnerability_description>Description</vuln_vulnerability_description>
+<vuln_vulnerability_links>Liens</vuln_vulnerability_links>
+<vuln_vulnerability_datas_comments_comment>Commentaire</vuln_vulnerability_datas_comments_comment>
+<vuln_vulnerability_datas_comments_author>Auteur</vuln_vulnerability_datas_comments_author>
+<vuln_vulnerability_datas_comments_add>Ajouter un commentaire</vuln_vulnerability_datas_comments_add>
+<vuln_vulnerability_datas_actions_filter>Tout voir</vuln_vulnerability_datas_actions_filter>
+<vuln_vulnerability_datas_actions_status>Statut</vuln_vulnerability_datas_actions_status>
+<vuln_vulnerability_datas_actions_owner>Responsable</vuln_vulnerability_datas_actions_owner>
+<vuln_vulnerability_datas_actions_targetdate>Date prévue</vuln_vulnerability_datas_actions_targetdate>
+<vuln_vulnerability_datas_actions_add>Ajouter une action</vuln_vulnerability_datas_actions_add>
+<vuln_vulnerability_manage>Gérer vuln.</vuln_vulnerability_manage>
+<vuln_vulnerability_analysis>Analyse</vuln_vulnerability_analysis>
+<vuln_vulnerability_decision>Décision</vuln_vulnerability_decision>
+<vuln_vulnerability_priority>Priorité</vuln_vulnerability_priority>
+<vuln_vulnerability_status>Statut correction</vuln_vulnerability_status>
+<vuln_vulnerability_targetdate>Date prévue</vuln_vulnerability_targetdate>
+<vuln_email_failure_email>Avant l'envoi, sélectionnez un utilisateur</vuln_email_failure_email>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<vuln_vulnerability_references>Références</vuln_vulnerability_references>
+<vuln_vulnerability_actions>Actions</vuln_vulnerability_actions>
+<vuln_actions_title>Liste des actions de la vulnérabilité</vuln_actions_title>
+<vuln_actions_viewall>Voir cachés</vuln_actions_viewall>
+<vuln_actions_vulnerabilityname>Vuln. Id</vuln_actions_vulnerabilityname>
+<vuln_actions_vulnerabilitytargetdate>Date prévue</vuln_actions_vulnerabilitytargetdate>
+<vuln_actions_vulnerabilityseverity>Sévérité</vuln_actions_vulnerabilityseverity>
+<vuln_actions_datas_actions_changeref>Réf. changement</vuln_actions_datas_actions_changeref>
+<vuln_actions_datas_actions_description>Description</vuln_actions_datas_actions_description>
+<vuln_actions_datas_actions_status>Statut</vuln_actions_datas_actions_status>
+<vuln_actions_datas_actions_owner>Responsable</vuln_actions_datas_actions_owner>
+<vuln_actions_datas_actions_priority>Priorité</vuln_actions_datas_actions_priority>
+<vuln_actions_datas_actions_targetdate>Date prévue</vuln_actions_datas_actions_targetdate>
+</removed>
+
+</entity>
+</esis>

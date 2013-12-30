@@ -1,0 +1,643 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>pg_freespacemap</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 8.3.10 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Additional Supplied Modules"
+HREF="contrib.html"><LINK
+REL="PREVIOUS"
+TITLE="pgcrypto"
+HREF="pgcrypto.html"><LINK
+REL="NEXT"
+TITLE="pgrowlocks"
+HREF="pgrowlocks.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2010-03-12T04:15:17"></HEAD
+><BODY
+CLASS="SECT1"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="5"
+ALIGN="center"
+VALIGN="bottom"
+>PostgreSQL 8.3.10 Documentation</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="pgcrypto.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="contrib.html"
+>Fast Backward</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+>Appendix F. Additional Supplied Modules</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="contrib.html"
+>Fast Forward</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="pgrowlocks.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="PGFREESPACEMAP"
+>F.21. pg_freespacemap</A
+></H1
+><A
+NAME="AEN104546"
+></A
+><P
+>  The <TT
+CLASS="FILENAME"
+>pg_freespacemap</TT
+> module provides a means for examining the
+  free space map (FSM). It provides two C functions:
+  <CODE
+CLASS="FUNCTION"
+>pg_freespacemap_relations</CODE
+> and
+  <CODE
+CLASS="FUNCTION"
+>pg_freespacemap_pages</CODE
+> that each return a set of
+  records, plus two views <TT
+CLASS="STRUCTNAME"
+>pg_freespacemap_relations</TT
+>
+  and <TT
+CLASS="STRUCTNAME"
+>pg_freespacemap_pages</TT
+> that wrap the functions
+  for convenient use.
+ </P
+><P
+>  By default public access is revoked from the functions and views, just in
+  case there are security issues lurking.
+ </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN104555"
+>F.21.1. The <TT
+CLASS="FILENAME"
+>pg_freespacemap</TT
+> views</A
+></H2
+><P
+>   The definitions of the columns exposed by the views are:
+  </P
+><DIV
+CLASS="TABLE"
+><A
+NAME="AEN104559"
+></A
+><P
+><B
+>Table F-23. <TT
+CLASS="STRUCTNAME"
+>pg_freespacemap_relations</TT
+> Columns</B
+></P
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><COL><COL><COL><COL><THEAD
+><TR
+><TH
+>Name</TH
+><TH
+>Type</TH
+><TH
+>References</TH
+><TH
+>Description</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>reltablespace</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>oid</TT
+></TD
+><TD
+><TT
+CLASS="LITERAL"
+>pg_tablespace.oid</TT
+></TD
+><TD
+>Tablespace OID of the relation</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>reldatabase</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>oid</TT
+></TD
+><TD
+><TT
+CLASS="LITERAL"
+>pg_database.oid</TT
+></TD
+><TD
+>Database OID of the relation</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>relfilenode</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>oid</TT
+></TD
+><TD
+><TT
+CLASS="LITERAL"
+>pg_class.relfilenode</TT
+></TD
+><TD
+>Relfilenode of the relation</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>avgrequest</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>integer</TT
+></TD
+><TD
+>&nbsp;</TD
+><TD
+>Moving average of free space requests (NULL for indexes)</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>interestingpages</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>integer</TT
+></TD
+><TD
+>&nbsp;</TD
+><TD
+>Count of pages last reported as containing useful free space</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>storedpages</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>integer</TT
+></TD
+><TD
+>&nbsp;</TD
+><TD
+>Count of pages actually stored in free space map</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>nextpage</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>integer</TT
+></TD
+><TD
+>&nbsp;</TD
+><TD
+>Page index (from 0) to start next search at</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><DIV
+CLASS="TABLE"
+><A
+NAME="AEN104622"
+></A
+><P
+><B
+>Table F-24. <TT
+CLASS="STRUCTNAME"
+>pg_freespacemap_pages</TT
+> Columns</B
+></P
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><COL><COL><COL><COL><THEAD
+><TR
+><TH
+>Name</TH
+><TH
+>Type</TH
+><TH
+>References</TH
+><TH
+>Description</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>reltablespace</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>oid</TT
+></TD
+><TD
+><TT
+CLASS="LITERAL"
+>pg_tablespace.oid</TT
+></TD
+><TD
+>Tablespace OID of the relation</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>reldatabase</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>oid</TT
+></TD
+><TD
+><TT
+CLASS="LITERAL"
+>pg_database.oid</TT
+></TD
+><TD
+>Database OID of the relation</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>relfilenode</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>oid</TT
+></TD
+><TD
+><TT
+CLASS="LITERAL"
+>pg_class.relfilenode</TT
+></TD
+><TD
+>Relfilenode of the relation</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>relblocknumber</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>bigint</TT
+></TD
+><TD
+>&nbsp;</TD
+><TD
+>Page number within the relation</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>bytes</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>integer</TT
+></TD
+><TD
+>&nbsp;</TD
+><TD
+>Free bytes in the page, or NULL for an index page (see below)</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><P
+>   For <TT
+CLASS="STRUCTNAME"
+>pg_freespacemap_relations</TT
+>, there is one row
+   for each relation in the free space map.
+   <TT
+CLASS="STRUCTFIELD"
+>storedpages</TT
+> is the number of pages actually
+   stored in the map, while <TT
+CLASS="STRUCTFIELD"
+>interestingpages</TT
+> is the
+   number of pages the last <TT
+CLASS="COMMAND"
+>VACUUM</TT
+> thought had useful amounts of
+   free space.
+  </P
+><P
+>   If <TT
+CLASS="STRUCTFIELD"
+>storedpages</TT
+> is consistently less than
+   <TT
+CLASS="STRUCTFIELD"
+>interestingpages</TT
+> then it'd be a good idea to increase
+   <TT
+CLASS="VARNAME"
+>max_fsm_pages</TT
+>.  Also, if the number of rows in
+   <TT
+CLASS="STRUCTNAME"
+>pg_freespacemap_relations</TT
+> is close to
+   <TT
+CLASS="VARNAME"
+>max_fsm_relations</TT
+>, then you should consider increasing
+   <TT
+CLASS="VARNAME"
+>max_fsm_relations</TT
+>.
+  </P
+><P
+>   For <TT
+CLASS="STRUCTNAME"
+>pg_freespacemap_pages</TT
+>, there is one row for
+   each page in the free space map. The number of rows for a relation will
+   match the <TT
+CLASS="STRUCTFIELD"
+>storedpages</TT
+> column in
+   <TT
+CLASS="STRUCTNAME"
+>pg_freespacemap_relations</TT
+>.
+  </P
+><P
+>   For indexes, what is tracked is entirely-unused pages, rather than free
+   space within pages.  Therefore, the average request size and free bytes
+   within a page are not meaningful, and are shown as NULL.
+  </P
+><P
+>   Because the map is shared by all the databases, there will normally be
+   entries for relations not belonging to the current database.  This means
+   that there may not be matching join rows in <TT
+CLASS="STRUCTNAME"
+>pg_class</TT
+> for
+   some rows, or that there could even be incorrect joins.  If you are
+   trying to join against <TT
+CLASS="STRUCTNAME"
+>pg_class</TT
+>, it's a good idea to
+   restrict the join to rows having <TT
+CLASS="STRUCTFIELD"
+>reldatabase</TT
+> equal to
+   the current database's OID or zero.
+  </P
+><P
+>   When either of the views is accessed, internal free space map locks are
+   taken for long enough to copy all the state data that the view will display.
+   This ensures that the views produce a consistent set of results, while not
+   blocking normal activity longer than necessary.  Nonetheless there
+   could be some impact on database performance if they are read often.
+  </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN104693"
+>F.21.2. Sample output</A
+></H2
+><PRE
+CLASS="PROGRAMLISTING"
+>regression=# SELECT c.relname, r.avgrequest, r.interestingpages, r.storedpages
+             FROM pg_freespacemap_relations r INNER JOIN pg_class c
+             ON r.relfilenode = c.relfilenode AND
+                r.reldatabase IN (0, (SELECT oid FROM pg_database
+                                      WHERE datname = current_database()))
+             ORDER BY r.storedpages DESC LIMIT 10;
+             relname             | avgrequest | interestingpages | storedpages
+---------------------------------+------------+------------------+-------------
+ onek                            |        256 |              109 |         109
+ pg_attribute                    |        167 |               93 |          93
+ pg_class                        |        191 |               49 |          49
+ pg_attribute_relid_attnam_index |            |               48 |          48
+ onek2                           |        256 |               37 |          37
+ pg_depend                       |         95 |               26 |          26
+ pg_type                         |        199 |               16 |          16
+ pg_rewrite                      |       1011 |               13 |          13
+ pg_class_relname_nsp_index      |            |               10 |          10
+ pg_proc                         |        302 |                8 |           8
+(10 rows)
+
+regression=# SELECT c.relname, p.relblocknumber, p.bytes
+             FROM pg_freespacemap_pages p INNER JOIN pg_class c
+             ON p.relfilenode = c.relfilenode AND
+                p.reldatabase IN (0, (SELECT oid FROM pg_database
+                                      WHERE datname = current_database()))
+             ORDER BY c.relname LIMIT 10;
+   relname    | relblocknumber | bytes
+--------------+----------------+-------
+ a_star       |              0 |  8040
+ abstime_tbl  |              0 |  7908
+ aggtest      |              0 |  8008
+ altinhoid    |              0 |  8128
+ altstartwith |              0 |  8128
+ arrtest      |              0 |  7172
+ b_star       |              0 |  7976
+ box_tbl      |              0 |  7912
+ bt_f8_heap   |             54 |  7728
+ bt_i4_heap   |             49 |  8008
+(10 rows)
+  </PRE
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN104696"
+>F.21.3. Author</A
+></H2
+><P
+>   Mark Kirkwood <CODE
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:markir@paradise.net.nz"
+>markir@paradise.net.nz</A
+>&#62;</CODE
+>
+  </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="pgcrypto.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="pgrowlocks.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>pgcrypto</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="contrib.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>pgrowlocks</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

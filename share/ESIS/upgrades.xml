@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- $Id: upgrades.xml 409 2010-04-13 07:54:53Z pleberre $ -->
+<!--
+ tag explanations : each milestone contains files and views that need to be used to upgrade the database
+ a file must be used in any case
+ a view need to be imported only at the end of the process
+ so if an upgrade must be done for several milestones at once, 
+ the view need to be imported once in the process (at the end)
+ "esis sqlupdate generate ..." does this right.
+ any other automated tool / human process should do the same
+-->
+<esis>
+        <milestone name="6M4" release-date="2009-06-05">
+        	<file location="sql/upgrade/20090320-0.6M4dev.sql"/>
+                <view location="sql/views/raci_views.sql"/>
+                <view location="sql/views/assets_views.sql"/>
+                <view location="sql/views/expertises_views.sql"/>
+                <view location="sql/views/identity_views.sql"/>
+                <view location="sql/views/vuln_views.sql"/>
+                <view location="sql/views/business_views.sql"/>
+        </milestone>
+        <milestone name="1.0" release-date="2009-06-05">
+        	<file location="sql/upgrade/20090320-0.6M4dev.sql"/>
+                <view location="sql/views/raci_views.sql"/>
+                <view location="sql/views/assets_views.sql"/>
+                <view location="sql/views/expertises_views.sql"/>
+                <view location="sql/views/identity_views.sql"/>
+                <view location="sql/views/vuln_views.sql"/>
+                <view location="sql/views/business_views.sql"/>
+        </milestone>
+        <milestone name="1.0.1" release-date="2010-04-16">
+        	<file location="sql/upgrade/20100416-1.0.1.sql"/>
+                <view location="sql/views/raci_views.sql"/>
+                <view location="sql/views/assets_views.sql"/>
+                <view location="sql/views/expertises_views.sql"/>
+                <view location="sql/views/identity_views.sql"/>
+                <view location="sql/views/vuln_views.sql"/>
+                <view location="sql/views/business_views.sql"/>
+        </milestone>
+</esis>

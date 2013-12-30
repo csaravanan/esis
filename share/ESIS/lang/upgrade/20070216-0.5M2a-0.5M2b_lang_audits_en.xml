@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="audits" lang="en">
+<!-- FILE *** lang_audits_en.xml *** -->
+
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<audit_default_yes>Yes</audit_default_yes>
+<audit_default_no>No</audit_default_no>
+</changed>
+
+<!-- ******************** ADDED ******************** -->
+<added>
+<!-- Validation -->
+<audit_validation_title>Validate changes</audit_validation_title>
+<audit_validation_text>Do you want to save the changes you made ?</audit_validation_text>
+<audit_validation_yes>Yes</audit_validation_yes>
+<audit_validation_no>No</audit_validation_no>
+<audit_validation_cancel>Cancel</audit_validation_cancel>
+
+<!-- Recommendation -->
+<audit_recommendation_auditor_statusduplicate>Closed duplicate recommendation</audit_recommendation_auditor_statusduplicate>
+<audit_recommendation_dependency>Dependency</audit_recommendation_dependency>
+<audit_recommendation_dependency_title>Title</audit_recommendation_dependency_title>
+<audit_recommendation_dependency_dependents>Dependents</audit_recommendation_dependency_dependents>
+<audit_recommendation_dependency_blocking>Blocking</audit_recommendation_dependency_blocking>
+<audit_recommendation_dependency_duplicates>Duplicates</audit_recommendation_dependency_duplicates>
+<audit_recommendation_dependency_references>References</audit_recommendation_dependency_references>
+<audit_recommendation_dependency_dependentstext>Dependents recommendations</audit_recommendation_dependency_dependentstext>
+<audit_recommendation_dependency_blockingtext>Blocking recommendations</audit_recommendation_dependency_blockingtext>
+<audit_recommendation_dependency_duplicatestext>Duplicates recommendations</audit_recommendation_dependency_duplicatestext>
+<audit_recommendation_dependency_referencestext>Referring recommendations</audit_recommendation_dependency_referencestext>
+<audit_recommendation_dependency_datas_duplicates_add>Add a duplicate recom.</audit_recommendation_dependency_datas_duplicates_add>
+<audit_recommendation_dependency_datas_references_add>Add a reference recom.</audit_recommendation_dependency_datas_references_add>
+<audit_recommendation_dependency_datas_dependents_add>Add a dependent recom.</audit_recommendation_dependency_datas_dependents_add>
+<audit_recommendation_dependency_datas_blocking_add>Add a blocking recom.</audit_recommendation_dependency_datas_blocking_add>
+
+<!-- Recommendation Dependency Add -->
+<audit_recommendationdependency_dependent_title>Add a dependent recommendation</audit_recommendationdependency_dependent_title>
+<audit_recommendationdependency_blocking_title>Add a blocking recommendation</audit_recommendationdependency_blocking_title>
+<audit_recommendationdependency_duplicate_title>Add a duplicate recommendation</audit_recommendationdependency_duplicate_title>
+<audit_recommendationdependency_reference_title>Add a referring recommendation</audit_recommendationdependency_reference_title>
+<audit_recommendationdependency_add>Add</audit_recommendationdependency_add>
+<audit_recommendationdependency_datas_dependency_title>Title</audit_recommendationdependency_datas_dependency_title>
+<audit_recommendationdependency_datas_dependency_reference>Reference</audit_recommendationdependency_datas_dependency_reference>
+<audit_recommendationdependency_datas_dependency_status>Status</audit_recommendationdependency_datas_dependency_status>
+</added>
+<!-- ******************** REMOVED ******************** -->
+</entity>
+</esis>

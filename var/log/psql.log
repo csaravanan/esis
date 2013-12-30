@@ -1,0 +1,26 @@
+[2013-04-23 12:56:36 GMT] < on > FATAL:  lock file "postmaster.pid" already exists
+[2013-04-23 12:56:36 GMT] < on > HINT:  Is another postmaster (PID 20185) running in data directory "/opt/ESIS/pgdata"?
+[2013-04-23 13:07:44 GMT] < on > FATAL:  lock file "postmaster.pid" already exists
+[2013-04-23 13:07:44 GMT] < on > HINT:  Is another postmaster (PID 20185) running in data directory "/opt/ESIS/pgdata"?
+[2013-04-23 13:24:22 GMT] < on > FATAL:  lock file "postmaster.pid" already exists
+[2013-04-23 13:24:22 GMT] < on > HINT:  Is another postmaster (PID 20185) running in data directory "/opt/ESIS/pgdata"?
+[2013-04-24 13:10:52 GMT] < on > FATAL:  lock file "postmaster.pid" already exists
+[2013-04-24 13:10:52 GMT] < on > HINT:  Is another postmaster (PID 27427) running in data directory "/opt/ESIS/pgdata"?
+[2013-05-03 03:49:38 UTC] < on > FATAL:  could not create shared memory segment: Cannot allocate memory
+[2013-05-03 03:49:38 UTC] < on > DETAIL:  Failed system call was shmget(key=5432001, size=282656768, 03600).
+[2013-05-03 03:49:38 UTC] < on > HINT:  This error usually means that PostgreSQL's request for a shared memory segment exceeded available memory or swap space. To reduce the request size (currently 282656768 bytes), reduce PostgreSQL's shared_buffers parameter (currently 32768) and/or its max_connections parameter (currently 103).
+	The PostgreSQL documentation contains more information about shared memory configuration.
+[2013-05-03 03:50:17 UTC] < on > FATAL:  could not create shared memory segment: Cannot allocate memory
+[2013-05-03 03:50:17 UTC] < on > DETAIL:  Failed system call was shmget(key=5432001, size=282656768, 03600).
+[2013-05-03 03:50:17 UTC] < on > HINT:  This error usually means that PostgreSQL's request for a shared memory segment exceeded available memory or swap space. To reduce the request size (currently 282656768 bytes), reduce PostgreSQL's shared_buffers parameter (currently 32768) and/or its max_connections parameter (currently 103).
+	The PostgreSQL documentation contains more information about shared memory configuration.
+[2013-05-03 03:51:50 UTC] < on > FATAL:  could not create shared memory segment: Cannot allocate memory
+[2013-05-03 03:51:50 UTC] < on > DETAIL:  Failed system call was shmget(key=5432001, size=282656768, 03600).
+[2013-05-03 03:51:50 UTC] < on > HINT:  This error usually means that PostgreSQL's request for a shared memory segment exceeded available memory or swap space. To reduce the request size (currently 282656768 bytes), reduce PostgreSQL's shared_buffers parameter (currently 32768) and/or its max_connections parameter (currently 103).
+	The PostgreSQL documentation contains more information about shared memory configuration.
+[2013-06-07 05:08:09 GMT] < on > FATAL:  lock file "postmaster.pid" already exists
+[2013-06-07 05:08:09 GMT] < on > HINT:  Is another postmaster (PID 5024) running in data directory "/opt/ESIS/pgdata"?
+[2013-08-12 12:17:11 GMT] < on > FATAL:  lock file "postmaster.pid" already exists
+[2013-08-12 12:17:11 GMT] < on > HINT:  Is another postmaster (PID 5024) running in data directory "/opt/ESIS/pgdata"?
+[2013-10-08 14:34:22 GMT] < on > FATAL:  lock file "postmaster.pid" already exists
+[2013-10-08 14:34:22 GMT] < on > HINT:  Is another postmaster (PID 5024) running in data directory "/opt/ESIS/pgdata"?

@@ -1,0 +1,16 @@
+UPDATE public.e_raci_object_type SET description = 'Avis de vulnérabilité' WHERE e_raci_object_type_id = 1;
+UPDATE public.e_raci_object_type SET description = 'Action pour avis de vulnérabilité' WHERE e_raci_object_type_id = 2;
+UPDATE public.e_raci_object_type SET description = 'Réunion VRT' WHERE e_raci_object_type_id = 3;
+UPDATE public.e_raci_object_type SET description = 'Module' WHERE e_raci_object_type_id = 4;
+UPDATE public.e_raci_object_type SET description = 'Audit' WHERE e_raci_object_type_id = 5;
+UPDATE public.e_raci_object_type SET description = 'Interview d''audit' WHERE e_raci_object_type_id = 6;
+UPDATE public.e_raci_object_type SET description = 'Document d''audit' WHERE e_raci_object_type_id = 7;
+UPDATE public.e_raci_object_type SET description = 'Recommandation d''audit (auditeur)' WHERE e_raci_object_type_id = 8;
+UPDATE public.e_raci_object_type SET description = 'Recommandation d''audit (audité)' WHERE e_raci_object_type_id = 9;
+UPDATE public.e_raci_object_type SET description = 'Action d''audit' WHERE e_raci_object_type_id = 10;
+UPDATE public.e_raci_object_type SET description = 'Rapport d''audit' WHERE e_raci_object_type_id = 11;
+UPDATE public.e_raci_object_type SET description = 'Produit composé' WHERE e_raci_object_type_id = 12;
+UPDATE public.e_raci_object_type SET description = 'Risque' WHERE e_raci_object_type_id = 13;
+UPDATE public.e_raci_object_type SET description = 'Revue de risque' WHERE e_raci_object_type_id = 14;
+UPDATE public.e_raci_object_type SET description = 'Contrôle sur un risque' WHERE e_raci_object_type_id = 15;
+UPDATE public.e_raci_object_type SET description = 'Action sur un risque' WHERE e_raci_object_type_id = 16;

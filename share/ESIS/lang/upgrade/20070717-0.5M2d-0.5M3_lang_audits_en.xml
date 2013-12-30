@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_audits_en.xml *** -->
+<entity name="audits" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<audit_recommendations_datas_infos_targetdate>Target date</audit_recommendations_datas_infos_targetdate>
+<audit_recommendation_auditor_targetdate>Target date</audit_recommendation_auditor_targetdate>
+<audit_recommendation_auditee_targetdate>Target date</audit_recommendation_auditee_targetdate>
+<audit_recommendation_auditee_error_targetdate>The target date must be filled.</audit_recommendation_auditee_error_targetdate>
+<audit_recommendationhistory_datas_history_targetdate>Target date</audit_recommendationhistory_datas_history_targetdate>
+<audit_recommendation_auditee_targetdate_resetescalade>Reset the pushed back target date marker</audit_recommendation_auditee_targetdate_resetescalade>
+<audit_action_duedate_resetescalade>Reset the pushed back target date marker</audit_action_duedate_resetescalade>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+</removed>
+
+</entity>
+</esis>

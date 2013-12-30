@@ -1,0 +1,65 @@
+#!/bin/sh
+#   
+#  ESIS
+#  
+#  Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+#  
+#  Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+#                          Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+#  
+#  
+#  This file is part of ESIS.
+#  
+#  ESIS is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation version 3 of the License.
+#  
+#  ESIS is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+#  
+#  $Id: esis_install 13 2009-07-07 15:15:32Z tburdairon $
+#
+
+#
+# ESIS install script
+#
+. `dirname $0`/esis_env
+
+( test -d ${ESIS_HOME}/pgdata || test -d ${ESIS_HOME}/appsvr ) && echo "Cannot re-install manually." && exit 1;
+#( test -d ${ESIS_HOME}/var/openldap-data ) && echo "Skipping openldap install."
+
+${ESIS_HOME}/bin/esis_install_db || exit 1
+
+${ESIS_HOME}/bin/esis_install_web || exit 1
+
+${ESIS_HOME}/bin/esis_extract_webapp || exit 1
+
+${ESIS_HOME}/bin/esis_update_symlinks || exit 1
+
+# ${ESIS_HOME}/bin/esis_install_ldap
+
+echo "Congratulations.  Installation complete."
+
+echo "Next steps:"
+echo ""
+echo "1)  ${ESIS_HOME}/bin/esis_startup"
+echo "2)  ${ESIS_HOME}/bin/esis_integrate_lang ${ESIS_HOME}/share/ESIS/lang"
+echo "3)  ${ESIS_HOME}/bin/esis companies add <company name>"
+echo "4)  ${ESIS_HOME}/bin/esis users add <username> <password> <company name> <email>"
+echo "    - create a user account"
+echo "5)  ${ESIS_HOME}/bin/esis prefs"
+echo "    - set preferences, eg. http proxy"
+echo "6)  ${ESIS_HOME}/bin/configure_keystore <pkcs12file> <pkcs12 password> <root certificate> <root certificate alias>"
+echo "    - eventually configure a java keystore by importing a PKCS12 certificate and a root certificate for HTTPS connections"
+echo "7)  ${ESIS_HOME}/bin/esis probes"
+echo "    - register then activate probes to use"
+echo "8)  ${ESIS_HOME}/bin/esis modules"
+echo "    - register then activate modules to use"
+echo "9)  ${ESIS_HOME}/bin/esis_daily"
+echo "    - edit this script, run_all probes"
+echo "    - ideally it should be run once a day via cron"

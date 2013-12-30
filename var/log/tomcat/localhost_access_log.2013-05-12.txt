@@ -1,0 +1,16 @@
+27.63.18.107 - - [12/May/2013:03:34:54 +0000] "GET /esis/?utm_source=wellwisher+list&utm_campaign=ad76ad12aa-Newsletter5_11_2013&utm_medium=email&utm_term=0_6e94f3c1a8-ad76ad12aa-36663601 HTTP/1.1" 200 896
+27.63.18.107 - - [12/May/2013:03:34:54 +0000] "GET /esis/detection.js HTTP/1.1" 200 1072
+27.63.18.107 - - [12/May/2013:03:34:54 +0000] "GET /esis/js/swfobject.js HTTP/1.1" 200 6880
+27.63.18.107 - - [12/May/2013:03:34:58 +0000] "GET /esis/html/downloads/download_only_player.html HTTP/1.1" 200 4592
+27.63.18.107 - - [12/May/2013:03:34:58 +0000] "GET /esis/html/downloads/AC_OETags.js HTTP/1.1" 404 1051
+27.63.18.107 - - [12/May/2013:03:34:58 +0000] "GET /esis/html/downloads/images/background.jpg HTTP/1.1" 200 10344
+27.63.18.107 - - [12/May/2013:03:34:58 +0000] "GET /esis/html/downloads/images/logo_flash_player_mx_120x120.gif HTTP/1.1" 200 1575
+50.132.40.172 - - [12/May/2013:06:25:50 +0000] "GET /esis/?utm_source=wellwisher+list&utm_campaign=ad76ad12aa-Newsletter5_11_2013&utm_medium=email&utm_term=0_6e94f3c1a8-ad76ad12aa-36665889 HTTP/1.1" 200 896
+50.132.40.172 - - [12/May/2013:06:25:50 +0000] "GET /esis/detection.js HTTP/1.1" 200 1072
+50.132.40.172 - - [12/May/2013:06:25:50 +0000] "GET /esis/js/swfobject.js HTTP/1.1" 200 6880
+50.132.40.172 - - [12/May/2013:06:25:50 +0000] "GET /esis/flash_detection.swf HTTP/1.1" 200 491
+50.132.40.172 - - [12/May/2013:06:25:50 +0000] "GET /esis/module.jsp HTTP/1.1" 200 1290
+50.132.40.172 - - [12/May/2013:06:25:54 +0000] "GET /esis/ESIS.swf HTTP/1.1" 200 1266544
+50.132.40.172 - - [12/May/2013:06:25:54 +0000] "GET /esis/module.jsp HTTP/1.1" 200 1290
+50.132.40.172 - - [12/May/2013:06:25:55 +0000] "GET /esis/js/swfobject.js HTTP/1.1" 304 -
+50.132.40.172 - - [12/May/2013:06:25:55 +0000] "GET /esis/detection.js HTTP/1.1" 304 -

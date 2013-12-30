@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<project name="entelience" default="all" basedir=".">
+  <!--
+   
+   ESIS
+   
+   Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+   
+   Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+                           Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+   
+   
+   This file is part of ESIS.
+   
+   ESIS is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation version 3 of the License.
+   
+   ESIS is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+   
+   $Id$
+   
+  -->
+  <description>ESIS customer build</description>
+  <!-- set global properties for this build -->
+  <property name="src" 			location="classes"/>			<!-- source files -->
+  <property name="xml-reports" 		location="reports"/>			<!-- report files -->
+  <property name="lib"  		location="jars"/> 			<!-- jar files -->
+  <property name="temp" 		location="temp"/>			<!-- temp compilation files -->
+  <property name="temp-reports" 	location="tempreports"/>
+  <property name="dist" 		location="dist"/>			<!-- build output -->
+  <property name="dist-reports"		location="dist/reports"/>		<!-- reports output -->
+  
+  <!-- check that required files are present -->
+  <available file="esis.properties" property="esis.properties.present"/>
+  <fail unless="esis.properties.present" message="Please add an esis.properties file in the main directory"/>
+
+  <!-- build classpath -->
+  <path id="main.classpath">
+    <fileset dir="jars">
+      <include name="**/*.jar"/>
+    </fileset>
+  </path>
+  
+  <!-- classpath for the jrc task -->
+  <taskdef classpathref="main.classpath" name="jrc" classname="net.sf.jasperreports.ant.JRAntCompileTask"/> 
+
+  <target name="all" depends="dist,reports" description="compile reports and java files, and generate ready-to-distribute files" />
+
+  <!-- Init and clean-->
+  <target name="clean" description="Clean directory structure">
+    <!-- Clean the build directory structure used by compile -->
+    <delete dir="${dist-reports}"/>
+    <delete dir="${temp-reports}"/>
+    <delete dir="${temp}"/>
+    <delete dir="${dist}"/>
+    <!-- do not delete lib, src and xml-reports as they contain important files -->
+  </target>
+  <target name="init" description="Create directories">
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${dist}"/>
+    <mkdir dir="${temp}"/>
+    <mkdir dir="${temp-reports}"/>
+    <mkdir dir="${dist-reports}"/>
+    <mkdir dir="${src}"/>
+    <mkdir dir="${xml-reports}"/>
+  </target>
+  
+  <!-- Java compilation and packaging-->
+  <target name="compile" description="compile the source">
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac source="1.5" target="1.5" srcdir="${src}" destdir="${temp}" optimize="on">
+      <!-- no need for deprecation messages, we get these from the debug build -->
+      <classpath refid="main.classpath"/>
+    </javac>
+  </target>
+  <target name="dist" depends="compile" description="generate the distribution from compiled source" >
+    <jar jarfile="${dist}/esis-customer.jar" update="true" basedir="${temp}" includes="**" />
+  </target>
+  
+  <!-- Jasper Reports part-->
+  <target name="reports" depends="reports-clean, reports-compile" description="clean and compile reports from Jasper"/>
+  <target name ="reports-compile" depends="dist" description="compile reports xml file to .jasper files">
+    <echo>Compiling reports</echo>
+    <jrc srcdir="${xml-reports}"
+	 destdir="${dist-reports}"
+	 tempdir="${temp-reports}"
+	 keepjava="false"
+	 xmlvalidation="true">
+	<classpath refid="main.classpath"/>
+	<include name="**/*.jrxml"/>
+    </jrc>
+  </target>
+
+  <!-- Cleaning -->
+  <target name ="reports-clean" description="clean reports">
+    <echo>Cleaning reports</echo>
+    <delete dir="${dist-reports}"/>
+    <delete dir="${temp-reports}"/>
+    <mkdir dir="${dist-reports}"/>     	
+    <mkdir dir="${temp-reports}"/>
+  </target>
+</project>

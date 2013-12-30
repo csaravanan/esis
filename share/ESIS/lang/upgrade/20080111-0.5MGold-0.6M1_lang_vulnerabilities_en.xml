@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_vulnerabilities_en.xml *** -->
+<entity name="vulnerabilities" lang="en">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<vuln_vulnerability_title>Vulnerability informations</vuln_vulnerability_title>
+<vuln_vulnerability_details>More details</vuln_vulnerability_details>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<vuln_vulnerability_description>Description</vuln_vulnerability_description>
+<vuln_vulnerability_links>Links</vuln_vulnerability_links>
+<vuln_vulnerability_datas_comments_comment>Comment</vuln_vulnerability_datas_comments_comment>
+<vuln_vulnerability_datas_comments_author>Author</vuln_vulnerability_datas_comments_author>
+<vuln_vulnerability_datas_comments_add>Add a new comment</vuln_vulnerability_datas_comments_add>
+<vuln_vulnerability_datas_actions_filter>View all</vuln_vulnerability_datas_actions_filter>
+<vuln_vulnerability_datas_actions_status>Status</vuln_vulnerability_datas_actions_status>
+<vuln_vulnerability_datas_actions_owner>Responsible</vuln_vulnerability_datas_actions_owner>
+<vuln_vulnerability_datas_actions_targetdate>Target date</vuln_vulnerability_datas_actions_targetdate>
+<vuln_vulnerability_datas_actions_add>Add a new action</vuln_vulnerability_datas_actions_add>
+<vuln_vulnerability_manage>Manage vuln.</vuln_vulnerability_manage>
+<vuln_vulnerability_analysis>Analysis</vuln_vulnerability_analysis>
+<vuln_vulnerability_decision>Decision</vuln_vulnerability_decision>
+<vuln_vulnerability_priority>Priority</vuln_vulnerability_priority>
+<vuln_vulnerability_status>Correction status</vuln_vulnerability_status>
+<vuln_vulnerability_targetdate>Target date</vuln_vulnerability_targetdate>
+<vuln_email_failure_email>Prior to sending, select an user</vuln_email_failure_email>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<vuln_vulnerability_references>References</vuln_vulnerability_references>
+<vuln_vulnerability_actions>Actions</vuln_vulnerability_actions>
+<vuln_actions_title>Vulnerability action list</vuln_actions_title>
+<vuln_actions_viewall>View all</vuln_actions_viewall>
+<vuln_actions_vulnerabilityname>Vuln. Id</vuln_actions_vulnerabilityname>
+<vuln_actions_vulnerabilitytargetdate>Target date</vuln_actions_vulnerabilitytargetdate>
+<vuln_actions_vulnerabilityseverity>Severity</vuln_actions_vulnerabilityseverity>
+<vuln_actions_datas_actions_changeref>Change ref.</vuln_actions_datas_actions_changeref>
+<vuln_actions_datas_actions_description>Description</vuln_actions_datas_actions_description>
+<vuln_actions_datas_actions_status>Status</vuln_actions_datas_actions_status>
+<vuln_actions_datas_actions_owner>Responsible</vuln_actions_datas_actions_owner>
+<vuln_actions_datas_actions_priority>Priority</vuln_actions_datas_actions_priority>
+<vuln_actions_datas_actions_targetdate>Target date</vuln_actions_datas_actions_targetdate>
+</removed>
+
+</entity>
+</esis>

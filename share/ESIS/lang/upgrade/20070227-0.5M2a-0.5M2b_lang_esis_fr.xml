@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<!-- FILE *** lang_esis_fr.xml *** -->
+<entity name="esis" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<!-- Errors texts -->
+<esis_errors_xmlimport_text><![CDATA[Le fichier de configuration XML du module '#' n'a pas pu être chargé. Essayez de recharger l'application.]]></esis_errors_xmlimport_text><!-- html -->
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<!-- Errors texts -->
+<esis_errors_xmlimport_status1>Le fichier XML n'a pas pu être chargé ou n'existe pas.</esis_errors_xmlimport_status1>
+<esis_errors_xmlimport_status2>Une section CDATA n'est pas correctement finalisée.</esis_errors_xmlimport_status2>
+<esis_errors_xmlimport_status3>La déclaration XML n'est pas correctement finalisée.</esis_errors_xmlimport_status3>
+<esis_errors_xmlimport_status4>La déclaration DOCTYPE n'est pas correctement finalisée.</esis_errors_xmlimport_status4>
+<esis_errors_xmlimport_status5>Un commentaire n'est pas correctement finalisé.</esis_errors_xmlimport_status5>
+<esis_errors_xmlimport_status6>Un élément XML est malformé.</esis_errors_xmlimport_status6>
+<esis_errors_xmlimport_status7>Problème de mémoire (insuffisance).</esis_errors_xmlimport_status7>
+<esis_errors_xmlimport_status8>Une valeur d'attribut est mal renseignée ou finalisée.</esis_errors_xmlimport_status8>
+<esis_errors_xmlimport_status9>Une balise d'ouverture ne correspond pas à sa balise de fermeture.</esis_errors_xmlimport_status9>
+<esis_errors_xmlimport_status10>Une balise de fermeture a été trouvé sans balise d'ouverture correspondante.</esis_errors_xmlimport_status10>
+<esis_errors_swfimport_title>Erreur à l'import du module Flash</esis_errors_swfimport_title>
+<esis_errors_swfimport_text><![CDATA[Le fichier du module '#' n'a paspu être chargé. Essayez de recharger l'application.<br />Si le problème persiste, veuillez contacter un administrateur.]]></esis_errors_swfimport_text><!-- html -->
+</added>
+<!-- ******************** REMOVED ******************** -->
+</entity>
+</esis>

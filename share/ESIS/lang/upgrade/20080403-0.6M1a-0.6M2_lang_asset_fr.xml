@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esis>
+<!--
+/*
+ *
+ * ESIS
+ *
+ * Copyright (c) 2004-2008 Entelience SARL,  Copyright (c) 2008-2009 Equity SA
+ *
+ * Projects contributors : Philippe Le Berre, Thomas Burdairon, Benjamin Baudel,
+ *                         Benjamin S. Gould, Diego Patinos Ramos, Constantin Cornelie
+ * 
+ * 
+ * This file is part of ESIS.
+ * 
+ * ESIS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ * 
+ * ESIS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with ESIS.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * $Id$
+ *
+ */
+-->
+<entity name="asset" lang="fr">
+<!-- ******************** CHANGED ******************** -->
+<changed>
+<asset_title>Management des systèmes et des produits</asset_title>
+<asset_errors_raci_text>La matrice RACI assignée à l'objet $1 ne vous permet pas d'effectuer cette action.</asset_errors_raci_text>
+<asset_errors_raci_persons>Merci de contacter le ou les responsables et/ou l'autorités de l'objet $1.</asset_errors_raci_persons>
+<asset_errors_concurrency_text><![CDATA[L'opération a été annulée car $1 a été mis à jour par un autre utilisateur.<br />Rafraichissez l'écran principal pour mettre à jour l'objet sélectionné avant de relancer l'opération.]]></asset_errors_concurrency_text>
+</changed>
+<!-- ******************** ADDED ******************** -->
+<added>
+<asset_searchresults_title>Résultats de la recherche pour $1</asset_searchresults_title>
+<asset_searchresults_pageempty>0 résultat</asset_searchresults_pageempty>
+<asset_searchresults_pages>page $1 sur $2 ( $3 résultats )</asset_searchresults_pages>
+<asset_searchresults_datas_vendors>Vendeurs</asset_searchresults_datas_vendors>
+<asset_searchresults_datas_products>Produits</asset_searchresults_datas_products>
+<asset_searchresults_datas_versions>Versions</asset_searchresults_datas_versions>
+<asset_searchresults_datas_noresult>Il n'y a pas de résultat pour $1.</asset_searchresults_datas_noresult>
+<asset_search_vendors>Vendeurs</asset_search_vendors>
+<asset_search_products>Produits</asset_search_products>
+<asset_search_versions>Versions</asset_search_versions>
+<asset_search_find>Ok</asset_search_find>
+<asset_search_error_text>La recherche doit comporter au moins 2 caractères.</asset_search_error_text>
+<asset_search_error_selection>Au moins un filtre doit être sélectionné.</asset_search_error_selection>
+<asset_vendors_add>Ajouter un vendeur</asset_vendors_add>
+<asset_products_add>Ajouter un produit</asset_products_add>
+<asset_versions_add>Ajouter une version</asset_versions_add>
+<asset_errors_vendors_novendortext>Un nom de vendeur doit être saisi.</asset_errors_vendors_novendortext>
+<asset_errors_products_noproducttext>Un nom de produit doit être saisi.</asset_errors_products_noproducttext>
+<asset_errors_versions_noversiontext>Un nom de version doit être saisi.</asset_errors_versions_noversiontext>
+<asset_errors_compositeapplications_title>Mise à jour de l'application composée</asset_errors_compositeapplications_title>
+<asset_errors_compositeapplications_noapplication>Aucune application composée n'est selectionnée.</asset_errors_compositeapplications_noapplication>
+<asset_errors_compositeapplications_cascademin>La mise à jour de $1 nécessite la modification de son vendeur et de ses versions. Poursuivre ?</asset_errors_compositeapplications_cascademin>
+<asset_errors_compositeapplications_active>Mise à jour impossible car $1 est utilisé sur au moins un système actif.</asset_errors_compositeapplications_active>
+<asset_errors_compositeapplications_cascademax>Voulez-vous mettre à jour toutes les versions de $1 en même temps ?</asset_errors_compositeapplications_cascademax>
+<asset_errors_compositeapplicationversions_title>Mise à jour de la version</asset_errors_compositeapplicationversions_title>
+<asset_errors_compositeapplicationversions_noversion>Aucune version de l'application composée n'est selectionnée.</asset_errors_compositeapplicationversions_noversion>
+<asset_errors_compositeapplicationversions_cascademin>La mise à jour de $1 nécessite la modification de son application composée. Poursuivre ?</asset_errors_compositeapplicationversions_cascademin>
+<asset_errors_compositeapplicationversions_active>Mise à jour impossible car $1 est utilisé sur au moins un système actif.</asset_errors_compositeapplicationversions_active>
+<asset_errors_concurrency_textgeneric><![CDATA[L'opération a été annulée car l'objet sélectionné a été mis à jour par un autre utilisateur.<br />Rafraichissez l'écran principal pour mettre à jour l'objet sélectionné avant de relancer l'opération.]]></asset_errors_concurrency_textgeneric>
+<asset_vendors_history>Historique</asset_vendors_history>
+<asset_history_vendor>Historique vendeur</asset_history_vendor>
+<asset_history_product>Historique produit</asset_history_product>
+<asset_history_version>Historique version</asset_history_version>
+<asset_raci_compositeapplicationtitle>RACI de $1</asset_raci_compositeapplicationtitle>
+<asset_raci_composite_application_title>RACI de l'application composée</asset_raci_composite_application_title>
+<asset_raci_edit>Editer les privilèges</asset_raci_edit>
+<asset_composites_applications_title>Applications composées utilisées dans l'entreprise $1</asset_composites_applications_title>
+<asset_composites_applications_name>Nom</asset_composites_applications_name>
+<asset_composites_applications_update>Mettre à jour</asset_composites_applications_update>
+<asset_composites_applications_datas_vendors>Vendeurs</asset_composites_applications_datas_vendors>
+<asset_composites_applications_datas_applications>Applications composées</asset_composites_applications_datas_applications>
+<asset_composites_applications_datas_applications_add>Ajouter une application composée</asset_composites_applications_datas_applications_add>
+<asset_composites_applications_noactive>Aucune application composée active.</asset_composites_applications_noactive>
+<asset_composites_applications_noapplication>Aucune application composée disponible.</asset_composites_applications_noapplication>
+<asset_composites_applications_history>Historique</asset_composites_applications_history>
+<asset_composites_applications_experts>Experts</asset_composites_applications_experts>
+<asset_composite_application_versions_name>Nom</asset_composite_application_versions_name>
+<asset_composite_application_versions_update>Mettre à jour</asset_composite_application_versions_update>
+<asset_composite_application_versions_datas_compappversions>Versions</asset_composite_application_versions_datas_compappversions>
+<asset_composite_application_versions_datas_compappversions_add>Ajouter une version</asset_composite_application_versions_datas_compappversions_add>
+<asset_composite_application_versions_latest>Dernière version</asset_composite_application_versions_latest>
+<asset_composite_application_versions_noactive>Aucune version active.</asset_composite_application_versions_noactive>
+<asset_composite_application_versions_noversion>Aucune version disponible.</asset_composite_application_versions_noversion>
+<asset_composite_application_version_products_datas_compappversionproducts_vendor>Vendeurs</asset_composite_application_version_products_datas_compappversionproducts_vendor>
+<asset_composite_application_version_products_datas_compappversionproducts_product>Produits</asset_composite_application_version_products_datas_compappversionproducts_product>
+<asset_composite_application_version_products_datas_compappversionproducts_version>Versions</asset_composite_application_version_products_datas_compappversionproducts_version>
+<asset_composite_application_version_products_datas_compappversionproducts_add>Ajouter un produit, une version</asset_composite_application_version_products_datas_compappversionproducts_add>
+<asset_composite_application_version_products_noproducts>Pas de produit ou version affecté.</asset_composite_application_version_products_noproducts>
+<asset_compositeapplication_latestversion>Dernière version</asset_compositeapplication_latestversion>
+<asset_compositeapplication_copyfromlatestversion>Copier la dernière version</asset_compositeapplication_copyfromlatestversion>
+<asset_expertises_vendor>Expertises vendeur</asset_expertises_vendor>
+<asset_expertises_product>Expertises produit</asset_expertises_product>
+<asset_history_datas_vendors_name>Vendeur</asset_history_datas_vendors_name>
+<asset_history_datas_products_name>Produit</asset_history_datas_products_name>
+<asset_history_datas_versions_name>Version</asset_history_datas_versions_name>
+<asset_addvendorproductversion_title_vendor>Ajout d'un nouveau vendeur</asset_addvendorproductversion_title_vendor>
+<asset_addvendorproductversion_title_product>Ajout d'un nouveau produit</asset_addvendorproductversion_title_product>
+<asset_addvendorproductversion_title_version>Ajout d'une nouvelle version</asset_addvendorproductversion_title_version>
+<asset_addvendorproductversion_name>Nom</asset_addvendorproductversion_name>
+<asset_addvendorproductversion_active>Activer</asset_addvendorproductversion_active>
+<asset_addvendorproductversion_add>Créer</asset_addvendorproductversion_add>
+<asset_addvendorproductversion_cancel>Annuler</asset_addvendorproductversion_cancel>
+<asset_addvendorproductversion_error_name>Le nom doit être rempli.</asset_addvendorproductversion_error_name>
+<asset_validation_title>Validation des changements</asset_validation_title>
+<asset_validation_text>Voulez-vous sauvegarder vos changements ?</asset_validation_text>
+<asset_validation_yes>Oui</asset_validation_yes>
+<asset_validation_no>Non</asset_validation_no>
+</added>
+<!-- ******************** REMOVED ******************** -->
+<removed>
+<asset_products_experts>Experts</asset_products_experts>
+<asset_compositelinks_title_product>Ajouter un produit/version lié à l'application</asset_compositelinks_title_product>
+<asset_vendors_composite>Voir les applications composées</asset_vendors_composite>
+<asset_raci_composite_edit>Editer</asset_raci_composite_edit>
+<asset_raci_compositetitle>RACI de l'application composée $1</asset_raci_compositetitle>
+<asset_raci_composite_title>RACI de l'application composée</asset_raci_composite_title>
+<asset_composite_title>Management des systèmes - Applications composées</asset_composite_title>
+<asset_composite_return>Liste des systèmes</asset_composite_return>
+<asset_composite_datas_composites>Applications composées</asset_composite_datas_composites>
+<asset_composite_datas_composites_add>Ajouter une application composée</asset_composite_datas_composites_add>
+<asset_composite_datas_compositeversions>Versions des applications composées</asset_composite_datas_compositeversions>
+<asset_composite_datas_compositeversions_add>Ajouter une version à une application composée</asset_composite_datas_compositeversions_add>
+<asset_composite_datas_composite_links>Produits liés à l'application composée</asset_composite_datas_composite_links>
+<asset_composite_datas_composite_links_add>Ajouter un produit lié à l'application composée</asset_composite_datas_composite_links_add>
+<asset_composite_datas_composite_versionlinks>Versions liées à la version de l'application composée</asset_composite_datas_composite_versionlinks>
+<asset_composite_datas_composite_versionlinks_add>Ajouter une version liée à la version de l'application composée</asset_composite_datas_composite_versionlinks_add>
+</removed>
+
+</entity>
+</esis>
